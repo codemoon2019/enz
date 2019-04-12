@@ -1,0 +1,290 @@
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-title">
+                {{ __('menus.backend.sidebar.general') }}
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/dashboard')) }}"
+                   href="{{ route('admin.dashboard') }}"><i
+                            class="nav-icon icon-speedometer"></i> {{ __('menus.backend.sidebar.dashboard') }}</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/inquiries')) }}"
+                   href="{{ route('admin.inquiries.index') }}"><i class="nav-icon fa fa-envelope"></i>Inquiries</a>
+            </li>
+
+
+            @if(is_has_any_permission([
+                app(App\Models\Category\Category::class)::permission('index'),
+                app(App\Models\Core\Inquiry::class)::permission('index'),
+            ]))
+                <li class="nav-title">
+                    {{ __('menus.backend.sidebar.system') }}
+                </li>
+            @endif
+
+{{--             @can(app(App\Models\Article\Article::class)::permission('index'))
+                <li class="nav-item">
+                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/articles*')) }}"
+                       href="{{ route(app(App\Models\Article\Article::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                        <i class="nav-icon fa fa-newspaper-o"></i> Articles
+                    </a>
+                </li>
+            @endcan --}}
+
+{{--             @can(app(App\Models\Category\Category::class)::permission('index'))
+                <li class="nav-item">
+                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/categories*')) }}"
+                       href="{{ route(app(App\Models\Category\Category::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                        <i class="nav-icon fa fa-sitemap"></i> {{ __('core_category.label.singular') }}
+                    </a>
+                </li>
+            @endcan --}}
+
+{{--             @can(app(App\Models\FrequentlyAskedQuestion\FrequentlyAskedQuestion::class)::permission('index'))
+                <li class="nav-item">
+                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/frequently-asked-questions*')) }}"
+                       href="{{ route(app(App\Models\FrequentlyAskedQuestion\FrequentlyAskedQuestion::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                        <i class="nav-icon icon-question"></i> FAQs
+                    </a>
+                </li>
+            @endcan --}}
+
+{{--             @can(app(App\Models\Core\Inquiry::class)::permission('index'))
+                <li class="nav-item">
+                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/inquiries*')) }}"
+                       href="{{ route(app(App\Models\Core\Inquiry::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                        <i class="nav-icon icon-speech"></i> Inquiries
+                    </a>
+                </li>
+            @endcan --}}
+
+            @php
+                $isCanAccessManagement = $logged_in_user->isAdminOrSystem();
+
+                $isCanCMS = is_has_any_permission([
+                    app(App\Models\Core\Page\Page::class)::permission('index'),
+                    app(App\Models\Core\Block\Block::class)::permission('index'),
+                    app(App\Models\Core\Slide\Slide::class)::permission('index'),
+                    app(App\Models\Core\Menu\Menu::class)::permission('index'),
+                    config('access.users.default_permissions.media_permission'),
+                    config('access.users.default_permissions.site_map_permission'),
+                    config('access.users.default_permissions.setting_permission'),
+                ]);
+
+                $isCanLogView = $logged_in_user->isSystem();
+            @endphp
+
+            {{-- <li class="nav-title">
+                MICRO SITES
+            </li>
+            @foreach($domains as $domain)
+                @include('backend.includes.microsite',['domain'=>$domain])
+            @endforeach --}}
+
+{{--             @if ($isCanAccessManagement || $isCanCMS || $isCanLogView)
+                <li class="nav-title">
+                    SETTINGS
+                </li>
+            @endif --}}
+
+                        @if ($isCanCMS)
+                <li class="nav-item nav-dropdown
+                {{ active_class(Active::checkUriPattern(
+                    [
+                        'admin/pages*', 
+                        'admin/media*', 
+                        'admin/blocks*', 
+                        'admin/menus*', 
+                        'admin/settings*', 
+                        'admin/sitemap*', 
+                        'admin/slides*',
+                        'admin/villas*',
+                        'admin/investments*',
+                        'admin/amenities*',
+                        'admin/news*',
+                        'admin/locations*',
+                        'admin/properties*',
+                    ]), 'open') }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="nav-icon fa fa-book"></i> CMS
+                    </a>
+                    <ul class="nav-dropdown-items">
+                        @can(app(App\Models\Core\Page\Page::class)::permission('index'))
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/pages*')) }}"
+                                   href="{{ route(app(App\Models\Core\Page\Page::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> {{ __('core_page.label.plural') }}
+                                </a>
+                            </li>
+                        @endcan
+
+                        @can(app(App\Models\Core\Block\Block::class)::permission('index'))
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/blocks*')) }}"
+                                   href="{{ route(app(App\Models\Core\Block\Block::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Blocks
+                                </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\Course\Course::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/courses*')) }}"
+                                   href="{{ route(app(App\Models\Course\Course::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Courses
+                                </a>
+                            </li>
+
+                        @endcan
+      
+{{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/more-lives*')) }}"
+                                   href="{{ route(app(App\Models\MoreLife\MoreLife::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> More Life
+                                </a>
+                            </li>
+
+                        @endcan --}}
+      
+{{--                         @can(app(App\Models\SampleModule\SampleModule::class)::permission('index'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/sample-modules*')) }}"
+                                   href="{{ route(app(App\Models\SampleModule\SampleModule::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Sample Module
+                                </a>
+                            </li>
+
+                        @endcan --}}
+                        
+                        @can(app(App\Models\Core\Slide\Slide::class)::permission('index'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/slides*')) }}"
+                                   href="{{ route(app(App\Models\Core\Slide\Slide::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Slides
+                                </a>
+                            </li>
+
+                        @endcan
+                        @can(app(App\Models\Core\Menu\Menu::class)::permission('index'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/menus*') && if_query('domain-name', 'main')) }}"
+                                   href="{{ route(app(App\Models\Core\Menu\Menu::class)::ROUTE_ADMIN_PATH.'.index') }}?domain-name=main">
+                                    <i class="nav-icon fa fa-circle-o"></i> Menu
+                                </a>
+                            </li>
+
+                        @endcan
+                        {{-- @can(config('access.users.default_permissions.media_permission'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/media*')) }}"
+                                   href="{{ route('admin.media.index') }}">
+                                    <i class="nav-icon fa fa-image"></i> Media
+                                </a>
+                            </li>
+
+                        @endcan --}}
+                        @can(config('access.users.default_permissions.site_map_permission'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/sitemap*')) }}"
+                                   href="{{ route('admin.sitemap.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Sitemap
+                                </a>
+                            </li>
+
+                        @endcan
+                        @can(config('access.users.default_permissions.setting_permission'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/settings*') && if_query('domain-name', 'main')) }}"
+                                   href="{{ route('admin.settings.index') }}?domain-name=main">
+                                    <i class="nav-icon fa fa-circle-o"></i> Settings
+                                </a>
+                            </li>
+                        @endcan
+                    </ul>
+                </li>
+            @endif
+
+            @if ($isCanAccessManagement)
+                <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/auth*'), 'open') }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="nav-icon icon-user"></i> {{ __('menus.backend.access.title') }}
+
+                        @if ($pending_approval > 0)
+                            <span class="badge badge-danger">{{ $pending_approval }}</span>
+                        @endif
+                    </a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/auth/user*')) }}"
+                               href="{{ route('admin.auth.users.index') }}">
+                                <i class="nav-icon icon-list"></i> {{ __('labels.backend.access.users.management') }}
+
+                                @if ($pending_approval > 0)
+                                    <span class="badge badge-danger">{{ $pending_approval }}</span>
+                                @endif
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/auth/role*')) }}"
+                               href="{{ route('admin.auth.roles.index') }}">
+                                <i class="nav-icon icon-list"></i> {{ __('labels.backend.access.roles.management') }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
+            @if($isCanLogView)
+                <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/debug-log-viewer*'), 'open') }}">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                        <i class="nav-icon icon-list"></i> {{ __('menus.backend.log-viewer.main') }}
+                    </a>
+
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/debug-log-viewer')) }}"
+                               href="{{ route('log-viewer::dashboard') }}">
+                                <i class="nav-icon icon-list"></i> {{ __('menus.backend.log-viewer.dashboard') }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/debug-log-viewer/logs*')) }}"
+                               href="{{ route('log-viewer::logs.list') }}">
+                                <i class="nav-icon icon-list"></i> {{ __('menus.backend.log-viewer.logs') }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
+            {{-- @php
+                $isDocs = $logged_in_user->isSystem();
+            @endphp
+
+            @if($isDocs)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('admin/docs') }}">
+                        <i class="nav-icon fa fa-book"></i> Docs
+                    </a>
+                </li>
+            @endif --}}
+        </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>
+<!--sidebar-->

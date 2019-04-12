@@ -1,0 +1,84 @@
+@import '_loader';
+@import '_error';
+@import '_iframe';
+@import '_tabs';
+@import '_image';
+
+
+.plr20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.w25 {
+  width: 25%;
+}
+
+/* dropdown */
+.dropdown-item {
+  padding: 0;
+  display: inline-block;
+
+  > a {
+    padding: 10px 20px;
+    display: block;
+
+    &.dropdown-item {
+      padding: 10px 20px;
+      display: block;
+    }
+  }
+}
+
+a {
+  &.dropdown-item {
+    padding: 7px 15px;
+  }
+}
+
+.navbar-nav {
+  .dropdown-menu {
+    .dropdown-item {
+      padding: 7px 15px;
+    }
+  }
+}
+
+td {
+  > .permissions {
+    max-height: 600px;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0 5px;
+
+    > checkbox {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+/* cursor */
+.dd3-handle {
+  cursor: move;
+}
+
+/* table */
+.dataTables_scrollFootInner > .table, .dataTables_scrollHeadInner > .table, .dataTables_scrollHeadInner, .dataTables_scrollFootInner {
+  width: 100% !important;
+}
+
+
+@media (max-width: 1199px) {
+  .w25 {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .w25 {
+    width: 25%;
+  }
+  .table-responsive {
+    overflow-x: visible;
+  }
+}

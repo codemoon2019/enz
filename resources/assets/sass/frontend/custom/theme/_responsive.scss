@@ -1,0 +1,113 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .user-menu {
+        padding: 0;
+        img {
+            padding-left: 8px;
+            max-height: 50px;
+        }
+    } 
+    .wrapper.px83 {
+        padding: 0 !important;
+    }
+    .fixed .user-menu {
+        padding: 0;
+    }
+    #navbarResponsive {
+        background-color: $white;
+        overflow: auto;
+        .nav-link {
+            padding: 18px 0 !important;
+        }
+    }
+    .connect-social.mobile {
+        display: flex;
+        position: fixed;
+        top: 18px;
+        right: 15%;
+        .fa {
+            margin-left: 10px;
+        }
+    }
+    .connect-social.desktop {
+        display: none;
+    }
+    .subtitle {
+        margin-bottom: 20px;
+    }
+    .basic {
+        font-size: 14px;
+    }
+    .mb150 {
+        margin-bottom: 100px !important;
+    }
+    .px83,
+    .pl83 {
+        padding: 0 15px !important;
+    }
+    .banner-subcaption {
+        width: 100% !important;
+        padding: 15px 0;
+        margin: 0;
+    }
+    .block-banner {
+        padding: 0 !important;
+        img {
+            height: 60vh;
+        }
+    }
+    .intro-block {
+        .banner-subcaption {
+            margin: 0;
+            box-shadow: none;
+        }
+    }
+    .banner-text {
+        img {
+            height: 25vh;
+            object-fit: cover;
+        }
+        .row > div {
+            padding-right: 40%;
+        }
+        .banner-subcaption {
+            padding: 20px;
+        }
+    }
+    .mycustom-slick .slick-list {
+        height: auto;
+    }
+    .page .title-large {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .divider {
+        width: auto;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+    .connect-social.mobile {
+        display: none;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    
+}
+@media only screen and (min-width: 1920px) {
+    .page .section-villas .banner-subcaption,
+    .location-type .item .banner-subcaption {
+        width: 612px;
+    }
+}

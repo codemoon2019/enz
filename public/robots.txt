@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: /admin/*
+Disallow: /admin-login
+Disallow: /admin-login/*
+Disallow: /login/*
+Disallow: /logout
+Disallow: /logout-as
+Disallow: /account/*
+Disallow: /password/*
+Disallow: /profile/update

@@ -1,0 +1,38 @@
+
+// page-auth is the default class for all authentication pages. 
+.auth-page {
+    .alert-danger {
+        margin-top: 20px;
+    }
+    }
+    
+    .auth-page {
+    .block-title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .main-content {
+        background: transparent;
+    }
+    
+    .login-block {
+        margin: 0 auto;
+        small a {
+        font-size: 12px;
+        padding: 0;
+        }
+    }
+    .form-control,
+    .btnauth {
+        height: 50px;
+        border-radius: 0;
+    }
+    .btnauth {
+        @include btn-default()
+    }
+    small a {
+        color: $black__off;
+        text-decoration: none;
+    }
+}

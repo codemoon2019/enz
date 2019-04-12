@@ -1,0 +1,57 @@
+#### Core Boilerplate - v1.0.0
+
+# Changing Assets
+	Backend Core JS/CSS - set on production
+	Frontend Core JS/CSS 
+		- change bootstrap version
+		- set on production
+## Created css helpers in _global.scss
+## Summary
+	Backend
+		- Bootstrap 4 JS
+		- Bootstrap 4 CSS
+
+	Frontend
+		- Bootstrap 3 JS
+		- Bootstrap 3 CSS
+
+	Views - affected inputs
+		Frontend
+			* layouts
+				- app.blade.php
+			* includes
+			 	- nav.blade.php
+			* auth
+				- login.blade.php
+				- register.blade.php
+				* password
+					- email.blade.php
+					- expired.blade.php
+					- reset.blade.php
+			* user 
+				* account 
+					* tabs
+						- change-password.blade.php
+						- edit.blade.php
+						- profile.blade.php
+				- account.blade.php
+				- dashboard.blade.php
+
+#User Table Seeder
+ - System
+ 	- email : system@system.com
+ 	- password: 1234
+
+ - Admin
+ 	- email : admin@admin.com
+ 	- password: 1234
+
+ - Anonymous
+ 	- email : user@user.com
+ 	- password: 1234
+
+# Throttle Request 
+	>> Having maximum attempts when logging in.
+	- ThrottleRequest.php
+	- middleware
+

@@ -1,0 +1,282 @@
+// Your custom utility classes will be placed here, you can add your own.
+
+//Margins and paddings
+.mb150 {
+    margin-bottom: 150px;
+}
+.mb200 {
+    margin-bottom: 200px;
+}
+.mb-150 {
+    margin-bottom: 150px !important;
+}
+.mb-200 {
+    margin-bottom: 200px !important;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+.pl83 {
+    padding-left: 83px;
+}
+.pr83 {
+    padding-right: 83px;
+}
+.pr35 {
+    padding-right: 35px;
+}
+
+.pl10p {
+    padding-left: 10%;
+}
+.pr10p {
+    padding-right: 10%;
+}
+
+//Style
+.w-70 {
+    width: 70%;
+}
+.mw-960 {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.mw-1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.relative {
+    position: relative;
+}
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,.2);
+    height: 100%;
+    width: 100%;
+}
+.banner-subcaption {
+    margin: -5% auto 150px;
+    padding: 50px 35px;
+    background-color: $white;
+    position: relative;
+    // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 9px 2px hsla(0,0%,60%,.2);
+    z-index: 1;
+}
+.divider {
+    border-top: 1px solid #ccc;
+    width: 370px;
+}
+//Text
+h1,
+h2,
+h3,
+h4,
+.title {
+    font-family: 'Optima';
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.basic {
+    font-size: 18px;
+    color: $black;
+}
+.basic.note {
+    font-family: 'Optima';
+}
+
+.text-black,
+a.text-black {
+    color: $black;
+}
+.text-orange,
+a.text-orange {
+    color: $orange;
+}
+.text-green,
+a.text-green {
+    color: $green;
+}
+.text-grey,
+a.text-grey {
+    color: $grey;
+}
+.connect-social.desktop {
+    position: fixed;
+    top: 35%;
+    text-align: center;
+    width: 60px;
+    background-color: $white;
+    padding: 10px 0;
+    z-index: 1;
+    .basic {
+        font-size: 14px;
+        font-family: 'Optima';
+        transform: rotate(-90deg);
+        padding-left: 25px;
+        letter-spacing: 2px;
+    }
+    .social-links {
+        margin-bottom: 30px;
+    }
+} 
+
+//Button
+.btngreen {
+    width: 230px;
+    height: 67px;
+    padding: 20px 44px;
+    border-radius: 0;
+    border: 1px solid $green;
+    font-size: 14px;
+    color: $green;
+    font-family: 'Optima';
+    background-color: transparent;
+    line-height: 27px;
+    transition: all ease 300ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: $green;
+        transition: all ease 300ms;
+        svg {
+            fill: $white;
+            transition: all ease 300ms;
+        }
+    }
+    svg {
+        height: 5px;
+        fill: $green;
+        transition: all ease 300ms;
+    }
+}
+.btngreen-custom {
+    color: $green;
+    position: relative;
+    padding: 0;
+    font-family: 'Optima';
+    &:before {
+        content: "";
+        height: 1px;
+        background: #085e05;
+        width: 30px;
+        position: absolute;
+        top: 35%;
+        left: 110%;
+        transition: all ease .3s;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $green;
+        &:before {
+            width: 60px;
+            transition: all ease .3s;
+        }
+    }
+}
+.btngreen-custom.small {
+    font-size: 14px;
+}
+
+.btngreen-action {
+    position: relative;
+    width: 230px;
+    height: 67px;
+    padding: 20px 44px;
+    border-radius: 0;
+    border: 1px solid $green;
+    font-size: 14px;
+    color: $green;
+    font-family: 'Optima';
+    text-align: left;
+    line-height: 27px;
+    background-color: transparent;
+    transition: all ease 300ms;
+    &:before {
+        content: "";
+        height: 1px;
+        background: #085e05;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transition: all ease .3s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: $green;
+        transition: all ease 300ms;
+        &:before {
+            width: 60px;
+            background-color: $white;
+            transition: all ease .3s;
+        }
+    }
+}
+
+
+// FONT SIZES default from 0 to 100
+
+@for $i from 0 through 100 {
+    .fs#{$i} {font-size: #{$i}px!important; }
+    // RESPONSIVE PATTERN .fs(value)-(breakpoint)
+    // fontsizeclass(value/number)-(breakpoint)
+    @each $breakpoint, $value in $min-breakpoints {
+        @media (min-width : #{$value}) {
+            .fs#{$i}-#{$breakpoint} { font-size: #{$i}px !important; }
+        }
+    }
+}
+
+// END FONT SIZES
+
+// PADDING AND MARGIN default from 0 to 100
+@for $y from 0 through 100 {
+    $sides: (top, bottom, left, right);
+    .mx#{$y} {
+        margin-left: #{$y}px!important;
+        margin-right: #{$y}px!important;
+    }
+    .my#{$y} {
+        margin-top: #{$y}px!important;
+        margin-bottom: #{$y}px!important;
+    }
+    .m#{$y} { margin: #{$y}px!important;}
+    .p#{$y} { padding: #{$y}px!important;}
+    .px#{$y} {
+        padding-left: #{$y}px!important;
+        padding-right: #{$y}px!important;
+    }
+    .py#{$y} {
+        padding-top: #{$y}px!important;
+        padding-bottom: #{$y}px!important;
+    }
+    .mb#{$y} {
+        margin-bottom: #{$y}px!important;
+    }
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}#{$y} { margin-#{$side}: #{$y}px!important; }
+        .p#{str-slice($side, 0, 1)}#{$y} { padding-#{$side}: #{$y}px!important; }
+    }
+
+    // RESPONSIVE PATTERN
+    @each $breakpoint, $value in $min-breakpoints {
+
+    }
+}

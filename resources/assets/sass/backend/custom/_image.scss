@@ -1,0 +1,41 @@
+.image-dropzone {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  [type="file"] {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-indent: -100px;
+  }
+}
+
+.dropzone-image {
+  position: relative;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 200px;
+  width: 100%;
+
+  [name="btn_remove"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: .15s all ease;
+  }
+
+  img {
+    object-fit: cover;
+    max-height: 200px;
+    max-width: 200px;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+}

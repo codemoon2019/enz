@@ -1,0 +1,54 @@
+$white: #ffffff;
+
+// Flat UI Colors: https://flatuicolors.com/palette/defo
+$blue-green: #1abc9c;
+$blue-green-dark: #16a085;
+
+$green: #2ecc71;
+$green-dark: #27ae60;
+
+$blue: #3498db;
+$blue-dark: #2980b9;
+
+$purple: #9b59b6;
+$purple-dark: #8e44ad;
+
+$navy-blue: #34495e;
+$navy-blue-dark: #2c3e50;
+
+$yellow: #f1c40f;
+$yellow-dark: #f39c12;
+
+$orange: #e67e22;
+$orange-dark: #d35400;
+
+$red: #e74c3c;
+$red-dark: #c0392b;
+
+$silver: #ecf0f1;
+$silver-dark: #bdc3c7;
+
+$grey: #95a5a6;
+$grey-dark: #7f8c8d;
+
+// Bootstrap
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: ($font-size-base * .875) !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+
+// Dropzone
+$dropzone-primary-color: $blue;
+$dropzone-success-color: $green;
+$dropzone-error-color: $red;
+
+$dropzone-font-size-sm: $font-size-sm;
+$dropzone-font-size-xs: $font-size-sm - .125;
+
+$dropzone-border-radius: $border-radius;
+$dropzone-border-radius-sm: $border-radius-sm;
+$dropzone-border-radius-lg: $border-radius-lg;
+
+$dropzone-svg-icon: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z";
+$dropzone-svg-icon-size: 2.5rem;

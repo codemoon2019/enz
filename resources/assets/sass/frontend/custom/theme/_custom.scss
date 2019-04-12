@@ -1,0 +1,158 @@
+// Custom CSS or also known as Overrides, if you want to override some bootstrap classes like "form-control" then place your css here.
+html {
+    position: relative;
+    min-height: 100%;
+    body {
+      font-family: $karla;
+    }
+}
+
+.scrollTop {
+  position: fixed;
+  z-index: 500;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: .5;
+  outline: none !important;
+  display: none;
+  cursor: pointer;
+
+  &.scrollTop{
+    bottom: 30px;
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+
+  i {
+    color: #fff;
+  }
+}
+
+.processing-page-load {
+  overflow: hidden;
+  background-color: #fff;
+  pointer-events: none;
+
+  .main-wrapper, .main-footer {
+    opacity: 0;
+  }
+}
+
+.page-loading {
+  display: none;
+  opacity: 0;
+
+  &.page-loading-fixed {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+  }
+
+  &.page-loading-absolute {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+  }
+
+  p {
+    letter-spacing: .05ex;
+    font-weight: 300;
+    color: #676767;
+    margin: 10px 0;
+  }
+
+  &.page-loading-show {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.mycustom-slick {
+  .slick-custom-nav {
+    padding-right: 10px;
+    svg {
+        cursor: pointer;
+        height: 25px;
+        fill: #999;
+        transition: all ease 300ms;
+        &:hover,
+        &:focus,
+        &:active {
+            fill: $green;
+            transition: all ease 300ms;
+        }
+    }
+    .right svg {
+        margin-bottom: 13px;
+    }
+    .left svg {
+        transform: rotate(180deg);
+    }
+  }
+  .amenities-list {
+      li {
+          color: #ccc;
+          transition: all ease 300ms;
+      }
+      li.active {
+          color: $green;
+          transition: all ease 300ms;
+      }
+  }
+  .left-content {
+      .description {
+          margin-top: 50px;
+          margin-bottom: 30px;
+      }
+  }
+  .slick-controller {
+      align-self: flex-end;
+      .basic {
+          font-size: 14px;
+      }
+  }
+  .divider-vertical {
+      height: 146px;
+      // border-right: 1px solid #999;
+      text-align: right;
+      margin-top: 20px;
+      margin-bottom: 16px;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 1px;
+        background-color: #999;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+  }
+  .my-slick {
+      .slick-arrow {
+          display: none !important;
+      }
+  }
+}
+.mycustom-slick.right-slick {
+  .slick-custom-nav {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+}

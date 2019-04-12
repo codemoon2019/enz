@@ -1,0 +1,23 @@
+// Your mixin's here.
+
+//Pallete
+@mixin theme-colors__primary {
+    background-color: themeColors(primary);
+}
+
+
+//Buttons
+@mixin btn-default {
+    margin-bottom: 5px;
+    background-color: buttonColor(primary);
+    border: 1px solid buttonColor(primary);
+    color: $white;
+    transition: all ease 300ms;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: buttonColor(primary);
+        transition: all ease 300ms;
+    }
+}

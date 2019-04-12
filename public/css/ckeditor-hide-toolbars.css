@@ -1,0 +1,18 @@
+.cke_toolbar_separator, .cke_button__save, .cke_button__newpage, 
+.cke_button__preview, .cke_button__print, .cke_button__templates, .cke_button__cut, 
+.cke_button__copy, .cke_button__paste, .cke_button__pastetext, .cke_button__pastefromword, 
+.cke_button__undo, .cke_button__redo, .cke_button__find, .cke_button__replace, 
+.cke_button__selectall, .cke_button__scayt, .cke_button__form, .cke_button__checkbox, 
+.cke_button__radio, .cke_button__textfield, .cke_button__textarea, .cke_button__select, .cke_button__button, 
+/*.cke_button__imagebutton, */
+.cke_button__hiddenfield, .cke_button__strike, .cke_button__subscript, .cke_button__superscript, 
+.cke_button__copyformatting, .cke_button__removeformat, .cke_button__outdent, .cke_button__indent, .cke_button__blockquote, 
+.cke_button__creatediv, .cke_button__bidiltr, .cke_button__bidirtl, .cke_button__language,
+.cke_button__anchor, .cke_button__flash, .cke_button__table, .cke_button__smiley, .cke_button__specialchar, 
+.cke_button__pagebreak, .cke_button__iframe, .cke_button__maximize, .cke_button__showblocks, .cke_button__about{
+    display: none !important;
+}
+
+.cke_toolbar_break{
+    display: inherit !important;
+}

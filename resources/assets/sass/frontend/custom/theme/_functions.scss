@@ -1,0 +1,13 @@
+//Functions
+
+//Colors
+
+//Pallete
+@function themeColors($color-name) {
+    @return map-get($theme-colors, $color-name);
+}
+
+//Buttons
+@function buttonColor($color-name) {
+    @return map-get($button-colors,$color-name);
+}

@@ -1,0 +1,7 @@
+.page-commerce {
+    .table-cart,
+    .table-orders {
+        @include theme-colors__primary();
+        color: $white;
+    }
+}

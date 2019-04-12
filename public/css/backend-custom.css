@@ -1,0 +1,173 @@
+body {
+    font-family: "Lato","Helvetica","Tahoma","Geneva","Arial",sans-serif;
+    line-height: 1.7;
+    color: #3c4c54;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;  
+    color: #314D5B;
+} 
+.range-filter{
+    width: 100%;
+    margin-top: 5px;
+}
+.plr20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+/* dropdown */
+.dropdown-item {
+    padding: 0;
+    display: inline-block;
+}
+
+.dropdown-item > a, a.dropdown-item {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* edit user permissions */
+td > .permissions {
+    max-height: 600px;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0 5px;
+} 
+
+.permissions > checkbox {
+    padding-bottom: 5px;
+}
+
+.w25 {
+    width: 25%;
+}
+
+/* table */
+.dataTables_scrollFootInner > .table, .dataTables_scrollHeadInner > .table, .dataTables_scrollHeadInner, .dataTables_scrollFootInner {
+    width: 100% !important;
+}
+
+
+
+
+@media (max-width:1199px) {
+    .w25 {
+        width: 30%;
+    }
+}
+@media (min-width: 1201px) {
+    .w25 {
+        width: 25%;
+    }
+    .table-responsive {
+        overflow-x: visible;
+    }
+}
+
+div.dataTables_scrollBody table tbody tr:first-child th, div.dataTables_scrollBody table tbody tr:first-child td{
+    border-top: 1px solid #a4b7c1;
+}
+
+.dropdown-item-custom{
+    padding: 5px 20px !important;
+    color: #3c5b6b !important;
+}
+.dropdown-item-custom i{
+    color: #404040 !important;
+}
+.dropdown-toggle-custom{
+    margin-top: -5px !important;
+    padding: 3px 20px !important;
+    /*position: absolute !important;*/
+}
+
+.switch{
+    margin-bottom: 0px;
+}
+
+.dataTables_scrollBody{
+    height: auto !important;
+    margin-top: -6px;
+}
+
+.sorting_disabled{
+    width: 112px !important;
+}
+
+.dataTables_length > label > select{
+    width: 90px !important;
+    display: inline-block !important;
+    height: 30px !important;
+    border-radius: 5px !important;
+}
+
+.dataTables_filter > label > input{
+    width: 250px !important;
+    border-radius: 5px !important;
+    height: 32px !important;
+}
+
+.dataTables_scrollHeadInner table thead tr td{
+    background-color: #495e6f;
+    padding: 9px 10px 7px;
+    font-weight: bold;
+    color: white;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{
+    position: absolute;
+    bottom: 9px;
+    display: block;
+    opacity: 0.3;
+}
+.dataTables_scrollBody table tbody tr td{
+    padding: 15px 10px 7px;
+    border-top: 1px solid #a4b7c1;
+}
+
+.dataTables_scroll{
+    margin-bottom: 15px;
+}
+.main .container-fluid{
+    padding: 0px 15px;
+}
+
+.breadcrumb{
+    margin-bottom: 15px;
+}
+
+table tbody tr td{
+    vertical-align: top;
+}
+
+td > .btn-group-sm{
+    margin-top: -2px;
+}
+
+
+
+
+
+
+
+.overlay-container{
+    display: none !important;
+}
+
+.custom-file{
+    margin-bottom: 15px;
+}
+
+.text-column{
+    margin-top: 10px;
+}
+
+.text-column-label{
+    font-weight: bold;
+}
+
+.status-div{
+    position: absolute;
+    right: 120px;
+    margin-top: -20px;
+}

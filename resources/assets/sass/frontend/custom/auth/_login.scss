@@ -1,0 +1,17 @@
+.login-block {
+    .form-control {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        margin-bottom: 40px;
+        padding-left: 0;
+        transition: all ease 300ms;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            padding-left: 12px;
+            border-bottom: 1px solid $green;
+            transition: all ease 300ms;
+        }
+    }
+}

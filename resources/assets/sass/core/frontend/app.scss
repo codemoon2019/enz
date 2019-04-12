@@ -1,0 +1,29 @@
+// Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+
+@import "../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../../../node_modules/font-awesome/scss/font-awesome";
+
+// Global
+@import "global";
+
+// Partials
+@import "partials/nav_admin";
+
+// Pages
+@import "pages/dashboard";
+
+// Fancybox
+@import "../../../../../node_modules/fancybox/dist/scss/jquery.fancybox.scss";
+
+//
+@import "../../../../../public/libraries/fullPage.js/dist/fullpage.scss";
+
+// AOS
+@import "../../../../../node_modules/aos/dist/aos.css";
+// Animate CSS
+// @import "../../../../../public/libraries/wow/animate.scss";
+
+// Bootstrap Overrides
+@import "custom";
