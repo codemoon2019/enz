@@ -47,9 +47,9 @@
     </div>
     <div class="container-fluid main-content">
         <section class="teacher">
-            <h2 class="title text-">Choose the Best Courses</h2>
             <div class="row">
                 <div class="col-sm-6 left-content" style="background: url('img/teacher-bg.png') no-repeat center;">
+                    <h2 class="title text-">Choose the Best Courses</h2>
                 <img src="{{asset('img/teacher-plane.png')}}" class="img-fluid floating" alt="">
                 <img src="{{asset('img/teacher.png')}}" class="img-fluid floating-rev" alt="">
                 </div>
