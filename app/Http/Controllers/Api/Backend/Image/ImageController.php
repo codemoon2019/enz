@@ -11,6 +11,7 @@ use App\Models\Core\Slide\Slide;
 use App\Models\Content\Content;
 use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
+use App\Models\Event\Event;
 use App\Models\MetaTag;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
@@ -32,6 +33,7 @@ class ImageController extends Controller
         'content'   => Content::class,
         'more-life' => MoreLife::class,
         'course'    => Course::class,
+        'event'     => Event::class,
     ];
 
     /**
