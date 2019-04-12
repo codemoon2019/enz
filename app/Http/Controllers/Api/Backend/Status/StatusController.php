@@ -10,6 +10,10 @@ use App\Models\SampleModule\SampleModule;
 
 use App\Models\Course\Course;
 
+use App\Models\Event\Event;
+
+use App\Models\News\News;
+
 class StatusController extends Controller
 {
     public function status(Request $request, $model, $id)
@@ -19,6 +23,10 @@ class StatusController extends Controller
             case 'SampleModule': $model = new SampleModule; break;
 
             case 'Course': $model = new Course; break;
+
+            case 'Event': $model = new Event; break;
+            
+            case 'News': $model = new News; break;
 
             default: break;
         }

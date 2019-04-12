@@ -5,9 +5,9 @@
 
         @slot('url', route($routePath . '.table'))
         @slot('form_data', json_encode([  ]))
-        @slot('table_name', 'event-table')
-        @slot('title', 'Event List')
-        @slot('secondary_title', 'Event Management')
+        @slot('table_name', 'news-table')
+        @slot('title', 'News List')
+        @slot('secondary_title', 'News Management')
 
         @slot('links')
             @include($viewPath . '.partials.links')

@@ -1,36 +1,36 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Event;
+namespace App\Http\Controllers\Backend\News;
 
 use DataTables;
-use App\Repositories\Event\EventRepository;
+use App\Repositories\News\NewsRepository;
 use HalcyonLaravel\Base\Controllers\BaseController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Http\Request;
 
 /**
- * Class EventTableController
+ * Class NewsTableController
  *
- * @package App\Http\Controllers\Backend\Event
+ * @package App\Http\Controllers\Backend\News
  */
-class EventTableController extends BaseController
+class NewsTableController extends BaseController
 {
     /**
-     * @var \App\Repositories\Event\EventRepository
+     * @var \App\Repositories\News\NewsRepository
      */
-    protected $eventRepository;
+    protected $newsRepository;
 
     /**
-     * EventTableController constructor.
+     * NewsTableController constructor.
      *
-     * @param \App\Repositories\Event\EventRepository $eventRepository
+     * @param \App\Repositories\News\NewsRepository $newsRepository
      *
      * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
-    public function __construct(EventRepository $eventRepository)
+    public function __construct(NewsRepository $newsRepository)
     {
-        $this->eventRepository = $eventRepository;
-        $model = $eventRepository->makeModel();
+        $this->newsRepository = $newsRepository;
+        $model = $newsRepository->makeModel();
 
         $this->middleware('permission:' . $model::permission('index'), ['only' => ['__invoke']]);
     }
@@ -62,6 +62,6 @@ class EventTableController extends BaseController
      */
     public function repository(): BaseRepository
     {
-        return $this->eventRepository;
+        return $this->newsRepository;
     }
 }

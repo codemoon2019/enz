@@ -21,12 +21,12 @@
         </div>
     
         <div class="form-group row">
-
-            <label class="col-md-2 form-control-label">Event Date</label>
+    
+            <label class="col-md-2 form-control-label">Published At</label>
         
             <div class="col-md-10">
 
-                <input type="date" name="event_date" class="form-control" value="{{ isset($model) ? $model->event_date->format('Y-m-d') : old('event_date') }}">
+                <input type="date" name="published_at" class="form-control" value="{{ isset($model) ? $model->published_at->format('Y-m-d') : old('published_at') }}">
     
             </div>
     

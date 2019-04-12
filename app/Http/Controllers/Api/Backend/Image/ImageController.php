@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Api\Backend\Image;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category\Category;
+use App\Models\MetaTag;
+use Illuminate\Http\Request;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\Models\Media;
 use App\Models\Core\Page\Page;
 use App\Models\Core\Block\Block;
 use App\Models\Core\Setting;
@@ -12,10 +16,7 @@ use App\Models\Content\Content;
 use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
 use App\Models\Event\Event;
-use App\Models\MetaTag;
-use Illuminate\Http\Request;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
-use Spatie\MediaLibrary\Models\Media;
+use App\Models\News\News;
 
 /**
  * Class ImageController
@@ -34,6 +35,7 @@ class ImageController extends Controller
         'more-life' => MoreLife::class,
         'course'    => Course::class,
         'event'     => Event::class,
+        'news'      => News::class,
     ];
 
     /**
