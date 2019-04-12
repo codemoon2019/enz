@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Course;
+namespace App\Models\Event;
 
-use App\Models\Course\Traits\CourseAttributes;
-use App\Models\Course\Traits\CourseRegularFunctions;
-use App\Models\Course\Traits\CourseRelations;
-use App\Models\Course\Traits\CourseScopes;
-use App\Models\Course\Traits\CourseStaticFunctions;
+use App\Models\Event\Traits\EventAttributes;
+use App\Models\Event\Traits\EventRegularFunctions;
+use App\Models\Event\Traits\EventRelations;
+use App\Models\Event\Traits\EventScopes;
+use App\Models\Event\Traits\EventStaticFunctions;
 use HalcyonLaravel\Base\Models\Model;
 use HalcyonLaravel\Base\Models\Traits\ModelDefaultTraits;
 use Spatie\Sluggable\HasSlug;
@@ -21,27 +21,27 @@ use Spatie\Image\Manipulations;
 use App\Models\Traits\CustomAttributes;
 
 /**
- * Class Course
- * @package App\Models\Course
+ * Class Event
+ * @package App\Models\Event
  */
-class Course extends Model implements HasMedia
+class Event extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
     use ModelDefaultTraits;
-    use CourseAttributes;
-    use CourseRegularFunctions;
-    use CourseRelations;
-    use CourseScopes;
-    use CourseStaticFunctions;
+    use EventAttributes;
+    use EventRegularFunctions;
+    use EventRelations;
+    use EventScopes;
+    use EventStaticFunctions;
     use HasImageMediaTrait;
     use CustomAttributes;
 
-    public const MODULE_NAME = 'course';
-    public const VIEW_BACKEND_PATH = 'backend.course';
-    public const VIEW_FRONTEND_PATH = 'frontend.course';
-    public const ROUTE_ADMIN_PATH = 'admin.courses';
-    public const ROUTE_FRONTEND_PATH = 'frontend.courses';
+    public const MODULE_NAME = 'event';
+    public const VIEW_BACKEND_PATH = 'backend.event';
+    public const VIEW_FRONTEND_PATH = 'frontend.event';
+    public const ROUTE_ADMIN_PATH = 'admin.events';
+    public const ROUTE_FRONTEND_PATH = 'frontend.events';
 
     /**
      * Declared Fillables
@@ -51,8 +51,10 @@ class Course extends Model implements HasMedia
         'slug',
         'description',
         'status',
-        'order',
+        'event_date',
     ];
+
+    protected $dates = ['event_date'];
 
     /**
      * Return the permissions related to this model.
@@ -118,7 +120,7 @@ class Course extends Model implements HasMedia
             'backend' => [
                 'index' => [
                     'type' => 'custom',
-                    'label' => 'Courses',
+                    'label' => 'Events',
                     'permission' => self::permission('index'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.index'],
                 ],

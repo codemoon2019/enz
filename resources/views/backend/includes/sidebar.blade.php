@@ -142,6 +142,28 @@
                             </li>
 
                         @endcan
+
+                        @can(app(App\Models\Event\Event::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/events*')) }}"
+                                   href="{{ route(app(App\Models\Event\Event::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Events
+                                </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\News\News::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/news*')) }}"
+                                   href="{{ route(app(App\Models\News\News::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> News
+                                </a>
+                            </li>
+
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 

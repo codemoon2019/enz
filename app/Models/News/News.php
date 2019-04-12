@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Course;
+namespace App\Models\News;
 
-use App\Models\Course\Traits\CourseAttributes;
-use App\Models\Course\Traits\CourseRegularFunctions;
-use App\Models\Course\Traits\CourseRelations;
-use App\Models\Course\Traits\CourseScopes;
-use App\Models\Course\Traits\CourseStaticFunctions;
+use App\Models\News\Traits\NewsAttributes;
+use App\Models\News\Traits\NewsRegularFunctions;
+use App\Models\News\Traits\NewsRelations;
+use App\Models\News\Traits\NewsScopes;
+use App\Models\News\Traits\NewsStaticFunctions;
 use HalcyonLaravel\Base\Models\Model;
 use HalcyonLaravel\Base\Models\Traits\ModelDefaultTraits;
 use Spatie\Sluggable\HasSlug;
@@ -21,38 +21,41 @@ use Spatie\Image\Manipulations;
 use App\Models\Traits\CustomAttributes;
 
 /**
- * Class Course
- * @package App\Models\Course
+ * Class News
+ * @package App\Models\News
  */
-class Course extends Model implements HasMedia
+class News extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
     use ModelDefaultTraits;
-    use CourseAttributes;
-    use CourseRegularFunctions;
-    use CourseRelations;
-    use CourseScopes;
-    use CourseStaticFunctions;
+    use NewsAttributes;
+    use NewsRegularFunctions;
+    use NewsRelations;
+    use NewsScopes;
+    use NewsStaticFunctions;
     use HasImageMediaTrait;
     use CustomAttributes;
 
-    public const MODULE_NAME = 'course';
-    public const VIEW_BACKEND_PATH = 'backend.course';
-    public const VIEW_FRONTEND_PATH = 'frontend.course';
-    public const ROUTE_ADMIN_PATH = 'admin.courses';
-    public const ROUTE_FRONTEND_PATH = 'frontend.courses';
+    public const MODULE_NAME = 'news';
+    public const VIEW_BACKEND_PATH = 'backend.news';
+    public const VIEW_FRONTEND_PATH = 'frontend.news';
+    public const ROUTE_ADMIN_PATH = 'admin.news';
+    public const ROUTE_FRONTEND_PATH = 'frontend.news';
 
     /**
      * Declared Fillables
      */
     protected $fillable = [
         'title',
-        'slug',
-        'description',
         'status',
-        'order',
+        'featured',
+        'description',
+        'published_at',
+        'slug',
     ];
+
+    protected $dates = ['published_at'];
 
     /**
      * Return the permissions related to this model.
@@ -118,7 +121,7 @@ class Course extends Model implements HasMedia
             'backend' => [
                 'index' => [
                     'type' => 'custom',
-                    'label' => 'Courses',
+                    'label' => 'News',
                     'permission' => self::permission('index'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.index'],
                 ],
@@ -158,6 +161,5 @@ class Course extends Model implements HasMedia
                 ->format(Manipulations::FORMAT_JPG)
                 ->fit(Manipulations::FIT_CROP, 175, 175);
         });
-
     }
 }
