@@ -3,6 +3,7 @@
 @section('page_class', "front")
 
 @section('content')
+<h1 class="d-none">{{app_name()}}</h1>
 
 	<div class="block-banner banner container-fluid px83">
 
@@ -26,7 +27,6 @@
                         
                             <img class="img-fluid w-100" src="{{ $slide->source }}" alt="">
                         
-                            <div class="overlay"></div>
                         
                         </div>
                         
@@ -44,6 +44,20 @@
 
         </div>
 
+    </div>
+    <div class="container-fluid main-content">
+        <section class="teacher">
+            <h2 class="title text-">Choose the Best Courses</h2>
+            <div class="row">
+                <div class="col-sm-6 left-content" style="background: url('img/teacher-bg.png') no-repeat center;">
+                <img src="{{asset('img/teacher-plane.png')}}" class="img-fluid floating" alt="">
+                <img src="{{asset('img/teacher.png')}}" class="img-fluid floating-rev" alt="">
+                </div>
+                <div class="col-sm-6 right-content">
+                    <h3 class="title text-capitalize">Community Services</h3>
+                </div>
+            </div>
+        </section>
     </div>
 
 @endsection

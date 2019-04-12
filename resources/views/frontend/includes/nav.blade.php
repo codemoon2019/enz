@@ -68,7 +68,7 @@
                         
                         <li class="nav-item px18 {{ $active }}">
                             <div class="dropdown show">
-                                <a class="nav-link py50 px0"
+                                <a class="nav-link"
                                     href="#" 
                                     role="button" 
                                     id="dropdownMenuLink" 
@@ -91,7 +91,7 @@
                     
                         <li class="nav-item px18 {{ strpos($url, $node->url) !== false ? 'active' : ''  }}">
 
-                            <a href="{{ $node->url }}" target="_self" class="nav-link py50 px0">
+                            <a href="{{ $node->url }}" target="_self" class="nav-link">
                             
                                 {{ $node->name }}
                             

@@ -3,7 +3,7 @@ html {
     position: relative;
     min-height: 100%;
     body {
-      font-family: $karla;
+      font-family: $Quicksand;
     }
 }
 
@@ -82,77 +82,4 @@ html {
   }
 }
 
-.mycustom-slick {
-  .slick-custom-nav {
-    padding-right: 10px;
-    svg {
-        cursor: pointer;
-        height: 25px;
-        fill: #999;
-        transition: all ease 300ms;
-        &:hover,
-        &:focus,
-        &:active {
-            fill: $green;
-            transition: all ease 300ms;
-        }
-    }
-    .right svg {
-        margin-bottom: 13px;
-    }
-    .left svg {
-        transform: rotate(180deg);
-    }
-  }
-  .amenities-list {
-      li {
-          color: #ccc;
-          transition: all ease 300ms;
-      }
-      li.active {
-          color: $green;
-          transition: all ease 300ms;
-      }
-  }
-  .left-content {
-      .description {
-          margin-top: 50px;
-          margin-bottom: 30px;
-      }
-  }
-  .slick-controller {
-      align-self: flex-end;
-      .basic {
-          font-size: 14px;
-      }
-  }
-  .divider-vertical {
-      height: 146px;
-      // border-right: 1px solid #999;
-      text-align: right;
-      margin-top: 20px;
-      margin-bottom: 16px;
-      position: relative;
-      &:before {
-        position: absolute;
-        content: "";
-        height: 100%;
-        width: 1px;
-        background-color: #999;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-      }
-  }
-  .my-slick {
-      .slick-arrow {
-          display: none !important;
-      }
-  }
-}
-.mycustom-slick.right-slick {
-  .slick-custom-nav {
-    padding-left: 10px;
-    padding-right: 0;
-  }
-}
+
