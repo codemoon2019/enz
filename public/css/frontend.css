@@ -10534,7 +10534,7 @@ html body {
   background: url("/img/events.jpg") no-repeat;
 }
 
-.events-block svg {
+.events-block .plant {
   position: absolute;
   top: 43%;
   left: 6%;
