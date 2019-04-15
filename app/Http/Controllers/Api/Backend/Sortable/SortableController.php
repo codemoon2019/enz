@@ -14,6 +14,8 @@ use App\Models\Course\Course;
 
 use App\Models\Why\Why;
 
+use App\Models\Service\Service;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -29,6 +31,8 @@ class SortableController extends Controller
             case 'Course': $model   = new Course; break;
 
             case 'Why': $model   = new Why; break;
+
+            case 'Service': $model   = new Service; break;
 
             default: break;
         }

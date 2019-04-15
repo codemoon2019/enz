@@ -8,6 +8,7 @@ use App\Models\Core\Menu\Menu;
 use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
 use App\Models\Why\Why;
+use App\Models\Service\Service;
 
 /*
  * Application version name
@@ -441,11 +442,26 @@ if (!function_exists('home_cms')) {
     }
 }
 
+if (!function_exists('Block')) {
+    function Block()
+    {
+        return Block::all();
+    }
+}
+
 
 if (!function_exists('MoreLife')) {
     function MoreLife()
     {
         return MoreLife::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('Service')) {
+    function Service()
+    {
+        return Service::orderBy('order')->get();
     }
 }
 
