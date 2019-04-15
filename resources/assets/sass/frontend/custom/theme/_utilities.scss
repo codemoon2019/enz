@@ -21,6 +21,7 @@
 .pl20 {
     padding-left: 20px;
 }
+
 .pl83 {
     padding-left: 83px;
 }
@@ -30,12 +31,18 @@
 .pr35 {
     padding-right: 35px;
 }
+.pl5p {
+    padding-left: 5%;
+}
 
 .pl10p {
     padding-left: 10%;
 }
 .pr10p {
     padding-right: 10%;
+}
+.pr5p {
+    padding-right: 5%;
 }
 
 //Style
@@ -93,6 +100,10 @@ h3,
 h4,
 .title {
     font-family: 'Jelle';
+}
+
+.text-nblue {
+    color: $navyblue;
 }
 
 .subtitle {
