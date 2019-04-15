@@ -12,6 +12,12 @@ use App\Models\MoreLife\MoreLife;
 
 use App\Models\Course\Course;
 
+use App\Models\Why\Why;
+
+use App\Models\Service\Service;
+
+use App\Models\OurTeam\OurTeam;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -25,6 +31,12 @@ class SortableController extends Controller
             case 'MoreLife': $model   = new MoreLife; break;
 
             case 'Course': $model   = new Course; break;
+
+            case 'Why': $model   = new Why; break;
+
+            case 'Service': $model   = new Service; break;
+
+            case 'OurTeam': $model   = new OurTeam; break;
 
             default: break;
         }

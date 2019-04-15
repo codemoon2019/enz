@@ -7,6 +7,9 @@ use App\Models\Core\Block\Block;
 use App\Models\Core\Menu\Menu;
 use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
+use App\Models\Why\Why;
+use App\Models\Service\Service;
+use App\Models\OurTeam\OurTeam;
 
 /*
  * Application version name
@@ -440,11 +443,26 @@ if (!function_exists('home_cms')) {
     }
 }
 
+if (!function_exists('Block')) {
+    function Block()
+    {
+        return Block::all();
+    }
+}
+
 
 if (!function_exists('MoreLife')) {
     function MoreLife()
     {
         return MoreLife::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('Service')) {
+    function Service()
+    {
+        return Service::orderBy('order')->get();
     }
 }
 
@@ -456,7 +474,19 @@ if (!function_exists('Course')) {
     }
 }
 
+if (!function_exists('Whies')) {
+    function Whies()
+    {
+        return Why::orderBy('order')->get();
+    }
+}
 
+if (!function_exists('OurTeam')) {
+    function OurTeam()
+    {
+        return OurTeam::orderBy('order')->get();
+    }
+}
 
 if (!function_exists('getModelList')) {
     function getModelList($model_name)

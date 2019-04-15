@@ -164,6 +164,39 @@
                             </li>
 
                         @endcan
+
+                        @can(app(App\Models\Why\Why::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/whies*')) }}"
+                                   href="{{ route(app(App\Models\Why\Why::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Why
+                                </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\Service\Service::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/services*')) }}"
+                                   href="{{ route(app(App\Models\Service\Service::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Services
+                                </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\OurTeam\OurTeam::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/our-teams*')) }}"
+                                   href="{{ route(app(App\Models\OurTeam\OurTeam::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Our Team
+                                </a>
+                            </li>
+
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 

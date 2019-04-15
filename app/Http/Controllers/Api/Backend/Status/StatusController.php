@@ -14,6 +14,10 @@ use App\Models\Event\Event;
 
 use App\Models\News\News;
 
+use App\Models\Service\Service;
+
+use App\Models\OurTeam\OurTeam;
+
 class StatusController extends Controller
 {
     public function status(Request $request, $model, $id)
@@ -27,6 +31,10 @@ class StatusController extends Controller
             case 'Event': $model = new Event; break;
             
             case 'News': $model = new News; break;
+            
+            case 'Service': $model = new Service; break;
+            
+            case 'OurTeam': $model = new OurTeam; break;
 
             default: break;
         }
