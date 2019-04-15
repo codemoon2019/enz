@@ -7,6 +7,7 @@ use App\Models\Core\Block\Block;
 use App\Models\Core\Menu\Menu;
 use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
+use App\Models\Why\Why;
 
 /*
  * Application version name
@@ -453,6 +454,14 @@ if (!function_exists('Course')) {
     function Course()
     {
         return Course::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('Whies')) {
+    function Whies()
+    {
+        return Why::orderBy('order')->get();
     }
 }
 

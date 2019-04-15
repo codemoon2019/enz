@@ -164,6 +164,17 @@
                             </li>
 
                         @endcan
+
+                        @can(app(App\Models\Why\Why::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/whies*')) }}"
+                                   href="{{ route(app(App\Models\Why\Why::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Why
+                                </a>
+                            </li>
+
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 

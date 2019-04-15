@@ -29,25 +29,21 @@ class DataSeeder extends Seeder
 
     	$menus = [
 
-    		['name' => 'Villas', 'url' => '#', 'order' => 0],
+    		['name' => 'Home', 'url' => '/', 'order' => 0],
 
-            ['name' => 'The Site', 'url' => '/the-site', 'order' => 0, 'parent_id' => 1],
+            ['name' => 'Services', 'url' => '/services', 'order' => 1],
 
-    		['name' => 'Musella', 'url' => '/properties/musella', 'order' => 1, 'parent_id' => 1],
+    		['name' => 'About', 'url' => '/about', 'order' => 2],
 
-    		['name' => 'Lilac', 'url' => '/properties/lilac', 'order' => 2, 'parent_id' => 1],
+    		['name' => 'Courses', 'url' => '/courses', 'order' => 3],
 
-    		['name' => 'Choose Your Villa', 'url' => '/choose-your-villa', 'order' => 3, 'parent_id' => 1],
+    		['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
     		
-    		['name' => 'Investment', 'url' => '/investments', 'order' => 1],
+    		['name' => 'Apply', 'url' => '/apply', 'order' => 5],
     		
-    		['name' => 'Location', 'url' => '/locations', 'order' => 2],
+    		['name' => 'Students', 'url' => '/students', 'order' => 6],
     		
-    		['name' => 'Lifestyle and Amenities', 'url' => '/amenities', 'order' => 3],
-    		
-    		['name' => 'Blog and News', 'url' => '/news', 'order' => 4],
-
-    		['name' => 'Contact Us', 'url' => '/contact-us', 'order' => 5],
+    		['name' => 'Contact Us', 'url' => '/contact-us', 'order' => 7],
 
     	];
 
