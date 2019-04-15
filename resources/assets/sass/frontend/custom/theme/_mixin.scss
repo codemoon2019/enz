@@ -12,12 +12,36 @@
     background-color: buttonColor(primary);
     border: 1px solid buttonColor(primary);
     color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 18px;
     transition: all ease 300ms;
     &:hover,
     &:active,
     &:focus {
+        box-shadow: none;
+        outline: none;
         background-color: transparent;
         color: buttonColor(primary);
+        transition: all ease 300ms;
+    }
+}
+@mixin btn-secondary {
+    margin-bottom: 5px;
+    background-color: buttonColor(secondary);
+    border: 1px solid buttonColor(secondary);
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 18px;
+    transition: all ease 300ms;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        color: buttonColor(secondary);
         transition: all ease 300ms;
     }
 }
