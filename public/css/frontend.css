@@ -245,12 +245,20 @@
   padding-right: 35px;
 }
 
+.pl5p {
+  padding-left: 5%;
+}
+
 .pl10p {
   padding-left: 10%;
 }
 
 .pr10p {
   padding-right: 10%;
+}
+
+.pr5p {
+  padding-right: 5%;
 }
 
 .w-70 {
@@ -312,6 +320,10 @@ h3,
 h4,
 .title {
   font-family: "Jelle";
+}
+
+.text-nblue {
+  color: #243e6f;
 }
 
 .subtitle {
@@ -10571,6 +10583,43 @@ html body {
 .events-block .item .basic {
   color: #243e6f;
   line-height: 27px;
+}
+
+.courses-block {
+  position: relative;
+}
+
+.courses-block .comm-service .left-content {
+  background: url("/img/cs-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 33% 0;
+}
+
+.courses-block .plane {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 6%;
+}
+
+.courses-block .teacher {
+  position: absolute;
+  top: 24%;
+  left: 9%;
+}
+
+.courses-block .bus-service .right-content {
+  background: url("/img/bs-bg.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 33% 0;
+}
+
+.courses-block .bman {
+  position: absolute;
+  right: 0;
+  top: 35%;
 }
 
 /* Custom, iPhone Retina */

@@ -17,5 +17,6 @@
         </div>
     </div>
     @include('frontend.core.block.templates.events')
+    @include('frontend.core.block.templates.courses')
     
 @endsection

@@ -51,3 +51,36 @@
         }
     }
 }
+
+.courses-block {
+    position: relative;
+    .comm-service .left-content {
+        background: url('/img/cs-bg.jpg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 33% 0;
+    }
+    .plane {
+        position: absolute;
+        z-index: 1;
+        top: 3%;
+        left: 6%;
+    }
+    .teacher {
+        position: absolute;
+        top: 24%;
+        left: 9%;
+    }
+
+    .bus-service .right-content {
+        background: url('/img/bs-bg.jpg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 33% 0;
+    }
+    .bman {
+        position: absolute;
+        right: 0;
+        top: 35%;
+    }
+}
