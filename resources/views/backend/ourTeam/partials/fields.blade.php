@@ -83,7 +83,7 @@
                         :api-mode="true"
                         :multiple="false"
                         :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
-                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'news', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
+                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'our-team', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
                     ></image-uploader>
 
                 @else

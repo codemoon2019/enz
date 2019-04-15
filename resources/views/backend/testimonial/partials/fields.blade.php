@@ -10,11 +10,35 @@
     
         <div class="form-group row">
     
-            <label class="col-md-2 form-control-label">Title <i class="text-danger">*</i></label>
+            <label class="col-md-2 form-control-label">Name <i class="text-danger">*</i></label>
     
             <div class="col-md-10">
     
                 <input type="text" name="title" class="form-control" value="{{ isset($model) ? $model->title : old('title') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Position</label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="position" id="position" class="form-control" value="{{ isset($model) ? $model->position : old('old') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Address</label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="address" id="address" class="form-control" value="{{ isset($model) ? $model->address : old('old') }}">
     
             </div>
     
@@ -44,7 +68,7 @@
                         :api-mode="true"
                         :multiple="false"
                         :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
-                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'service', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
+                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'testimonial', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
                     ></image-uploader>
 
                 @else

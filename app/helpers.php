@@ -10,6 +10,7 @@ use App\Models\Course\Course;
 use App\Models\Why\Why;
 use App\Models\Service\Service;
 use App\Models\OurTeam\OurTeam;
+use App\Models\Testimonial\Testimonial;
 
 /*
  * Application version name
@@ -485,6 +486,13 @@ if (!function_exists('OurTeam')) {
     function OurTeam()
     {
         return OurTeam::orderBy('order')->get();
+    }
+}
+
+if (!function_exists('Testimonial')) {
+    function Testimonial()
+    {
+        return Testimonial::orderBy('order')->get();
     }
 }
 

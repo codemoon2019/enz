@@ -197,6 +197,17 @@
                             </li>
 
                         @endcan
+
+                        @can(app(App\Models\Testimonial\Testimonial::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/testimonials*')) }}"
+                                   href="{{ route(app(App\Models\Testimonial\Testimonial::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Testimonials
+                                </a>
+                            </li>
+
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 

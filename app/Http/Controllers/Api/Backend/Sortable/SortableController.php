@@ -18,6 +18,8 @@ use App\Models\Service\Service;
 
 use App\Models\OurTeam\OurTeam;
 
+use App\Models\Testimonial\Testimonial;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -37,6 +39,8 @@ class SortableController extends Controller
             case 'Service': $model   = new Service; break;
 
             case 'OurTeam': $model   = new OurTeam; break;
+
+            case 'Testimonial': $model   = new Testimonial; break;
 
             default: break;
         }
