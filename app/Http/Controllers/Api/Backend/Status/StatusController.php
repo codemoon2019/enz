@@ -18,6 +18,8 @@ use App\Models\Service\Service;
 
 use App\Models\OurTeam\OurTeam;
 
+use App\Models\Testimonial\Testimonial;
+
 class StatusController extends Controller
 {
     public function status(Request $request, $model, $id)
@@ -35,6 +37,8 @@ class StatusController extends Controller
             case 'Service': $model = new Service; break;
             
             case 'OurTeam': $model = new OurTeam; break;
+            
+            case 'Testimonial': $model = new Testimonial; break;
 
             default: break;
         }
