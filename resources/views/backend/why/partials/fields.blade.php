@@ -34,27 +34,14 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Featured Image<br/></label>
-            
-            <div class="col-md-10">
-            
-                @if(isset($model))
+            <label class="col-md-2 form-control-label">Featured Image (svg file)</label>
 
-                    <image-uploader
-                        :api-mode="true"
-                        :multiple="false"
-                        :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
-                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'why', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
-                    ></image-uploader>
+            <div class="col-md-10 image-div">
 
-                @else
-            
-                    <image-uploader></image-uploader>
-            
-                @endif
-            
+                <input type="file" name="icon">
+
             </div>
-        
+
         </div>
 
     </div>
