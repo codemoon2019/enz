@@ -17,6 +17,10 @@ use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
 use App\Models\Event\Event;
 use App\Models\News\News;
+use App\Models\OurTeam\OurTeam;
+use App\Models\Service\Service;
+use App\Models\Testimonial\Testimonial;
+use App\Models\Why\Why;
 
 /**
  * Class ImageController
@@ -26,16 +30,20 @@ use App\Models\News\News;
 class ImageController extends Controller
 {
     protected const MODELS = [
-        'slide'     => Slide::class,
-        'page'      => Page::class,
-        'setting'   => Setting::class,
-        'meta'      => MetaTag::class,
-        'blocks'    => Block::class,
-        'content'   => Content::class,
-        'more-life' => MoreLife::class,
-        'course'    => Course::class,
-        'event'     => Event::class,
-        'news'      => News::class,
+        'slide'       => Slide::class,
+        'page'        => Page::class,
+        'setting'     => Setting::class,
+        'meta'        => MetaTag::class,
+        'blocks'      => Block::class,
+        'content'     => Content::class,
+        'more-life'   => MoreLife::class,
+        'course'      => Course::class,
+        'event'       => Event::class,
+        'news'        => News::class,
+        'our-team'    => OurTeam::class,
+        'service'     => Service::class,
+        'testimonial' => Testimonial::class,
+        'why'         => Why::class,
     ];
 
     /**

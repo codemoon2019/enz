@@ -47,7 +47,7 @@ class TestimonialTableSeeder extends Seeder
 
             $model = Testimonial::create($value);
 
-            $this->seederUploader($model, 'testimonial/person.png', null, 'featured');
+            $this->seederUploader($model, 'testimonial/person.jpg', null, 'featured');
 
             $model->metaTag()->create([
                 'title' => $model->title,
