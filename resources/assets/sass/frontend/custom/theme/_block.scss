@@ -8,7 +8,7 @@
     background: url('/img/events.jpg') no-repeat;
     svg {
         position: absolute;
-        top: 45%;
+        top: 43%;
         left: 6%;
     }
     .row {
@@ -30,6 +30,7 @@
         .month {
             font-size: 44px;
             font-weight: 700;
+            line-height: 2px;
         }
         .details {
             padding: 60px 15px 40px;
@@ -46,6 +47,7 @@
         }
         .basic {
             color: $navyblue;
+            line-height: 27px;
         }
     }
 }

@@ -10524,7 +10524,7 @@ html body {
 
 .events-block svg {
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 6%;
 }
 
@@ -10550,6 +10550,7 @@ html body {
 .events-block .item .month {
   font-size: 44px;
   font-weight: 700;
+  line-height: 2px;
 }
 
 .events-block .item .details {
@@ -10569,6 +10570,7 @@ html body {
 
 .events-block .item .basic {
   color: #243e6f;
+  line-height: 27px;
 }
 
 /* Custom, iPhone Retina */
