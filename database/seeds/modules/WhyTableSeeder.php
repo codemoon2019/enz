@@ -3,6 +3,7 @@
 use App\Models\Why\Why;
 use Illuminate\Database\Seeder;
 use HalcyonLaravel\Base\Database\Traits\SeederHelper;
+use Illuminate\Http\UploadedFile;
 
 /**
  * Class WhyTableSeeder
@@ -61,7 +62,23 @@ class WhyTableSeeder extends Seeder
 
             $model = Why::create($value);
 
-            $this->seederUploader($model, 'why/featured.png', null, 'featured');
+            if (!$key) {
+
+                // return new UploadedFile(storage_path('app/public'. $filenameOriginal), $filenameOriginal, $mimeType);
+
+
+                // $file_content = new UploadedFile(base_path('test_default_files/why/featured.png'), 'featured', 'png');
+
+                // dd($file_content);
+
+                // $file_content->move('./uploads/why', 'featured');
+
+                    // dd($file_content);
+            }
+
+
+
+            // $this->seederUploader($model, 'why/featured.png', null, 'featured');
 
             $model->metaTag()->create([
                 'title' => $model->title,

@@ -50,6 +50,7 @@ class Why extends Model implements HasMedia
         'title',
         'slug',
         'description',
+        'file',
         'status',
         'order',
     ];

@@ -21,6 +21,7 @@ class CreateWhiesTable extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
+            $table->string('file')->nullable();
             $table->enum('status', ['enable', 'disabled'])->default('disabled');
             $table->integer('order')->default(0);
             $table->timestamps();
