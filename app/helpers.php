@@ -9,6 +9,7 @@ use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
 use App\Models\Why\Why;
 use App\Models\Service\Service;
+use App\Models\OurTeam\OurTeam;
 
 /*
  * Application version name
@@ -473,7 +474,6 @@ if (!function_exists('Course')) {
     }
 }
 
-
 if (!function_exists('Whies')) {
     function Whies()
     {
@@ -481,7 +481,12 @@ if (!function_exists('Whies')) {
     }
 }
 
-
+if (!function_exists('OurTeam')) {
+    function OurTeam()
+    {
+        return OurTeam::orderBy('order')->get();
+    }
+}
 
 if (!function_exists('getModelList')) {
     function getModelList($model_name)
