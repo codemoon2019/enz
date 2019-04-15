@@ -4,60 +4,18 @@
 
 @section('content')
 <h1 class="d-none">{{app_name()}}</h1>
-
-	<div class="block-banner banner container-fluid px83">
-
-        <div id="carouselId" class="carousel slide carousel-fade" data-ride="carousel">
-
-            <div class="carousel-inner" role="listbox">
-
-                @php
-
-                    $home_banner = slider('home-banner');
-                
-                @endphp
-            
-                @foreach ($home_banner->getUploaderImages('banner', 'large') as $key => $slide)
-
-                    @php $tag_line = $slide->properties->title; @endphp
-
-                    <div class="carousel-item {{ !$key ? 'active' : '' }}">
-
-                        <div class="relative">
-                        
-                            <img class="img-fluid w-100" src="{{ $slide->source }}" alt="">
-                        
-                        
-                        </div>
-                        
-                        <div class="carousel-caption d-none d-md-block">
-                        
-                            <h2 class="title">{{ $tag_line != null ? $tag_line : '' }}</h2>
-                        
-                        </div>
-                   
-                    </div>
-                
-                @endforeach
-
+	<div class="block-banner banner container-fluid px180 mt60">
+        <div class="row">
+            <div class="col-sm-5 for-text align-self-center">
+                <h2 class="title fs40 mb30">Welcome to ENZ Education Consultancy Services</h2>
+                <p class="basic">With the outstanding services and assistance being extended to our clients, ENZ Education Consultancy Services is extremely honored and a proud recipient of two major awards: The National Customers’ Choice Annual Awards for Business Excellence 2016</p>
+                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
             </div>
-
+            <div class="col-sm-7 for-video">
+            <img src="{{asset('img/temp.png')}}" class="img-fluid" alt="">
+            </div>
         </div>
-
     </div>
-    <div class="container-fluid main-content">
-        <section class="teacher">
-            <div class="row">
-                <div class="col-sm-6 left-content" style="background: url('img/teacher-bg.png') no-repeat center;">
-                    <h2 class="title text-">Choose the Best Courses</h2>
-                <img src="{{asset('img/teacher-plane.png')}}" class="img-fluid floating" alt="">
-                <img src="{{asset('img/teacher.png')}}" class="img-fluid floating-rev" alt="">
-                </div>
-                <div class="col-sm-6 right-content">
-                    <h3 class="title text-capitalize">Community Services</h3>
-                </div>
-            </div>
-        </section>
-    </div>
-
+    @include('frontend.core.block.templates.events')
+    
 @endsection

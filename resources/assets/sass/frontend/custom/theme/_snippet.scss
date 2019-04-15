@@ -1,4 +1,13 @@
 // You can paste your snippets here.
+.linear-gradient-yellow {
+    background-image:linear-gradient(#fadb5d, #f08e28);
+}
+.linear-gradient-red {
+    background-image:linear-gradient(#ff7878, #eb5959);
+}
+.linear-gradient-orange {
+    background-image:linear-gradient(#ffbd8a, #f09a59);
+}
 .floating {
     transform: translatey(0px);
 	animation: float 3s ease-in-out infinite;

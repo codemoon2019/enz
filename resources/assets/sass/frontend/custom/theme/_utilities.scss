@@ -14,6 +14,10 @@
     margin-bottom: 200px !important;
 }
 
+.px180 {
+    padding: 0 180px;
+}
+
 .pl20 {
     padding-left: 20px;
 }
@@ -45,6 +49,15 @@
 .mw-1200 {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.text-blue {
+    color: #3fb1e5;
+}
+
+//Fonts 
+.fs40 {
+    font-size: 40px;
 }
 .relative {
     position: relative;
@@ -88,7 +101,7 @@ h4,
 }
 
 .basic {
-    font-size: 18px;
+    font-size: 24px;
     color: $black;
 }
 .basic.note {
@@ -116,6 +129,18 @@ h4,
 } 
 
 //Button
+.btnread-more {
+    @include  btn-secondary();
+    width: 147px;
+    height: 44px;
+    line-height: 30px;
+}
+.btnview-more {
+    @include  btn-default();
+    width: 147px;
+    height: 44px;
+    line-height: 30px;
+}
 
 
 
