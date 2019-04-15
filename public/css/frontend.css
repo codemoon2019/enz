@@ -10340,7 +10340,6 @@ html body {
 
 .user-menu {
   background-color: #fff;
-  border-bottom: 1px solid #ccc;
   padding: 0 15px;
   transition: all ease 300ms;
 }
@@ -10445,7 +10444,7 @@ html body {
 }
 
 .teacher .left-content {
-  padding: 10%;
+  padding-top: 10%;
   background-size: contain;
 }
 
