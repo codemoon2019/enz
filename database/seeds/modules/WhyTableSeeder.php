@@ -62,22 +62,6 @@ class WhyTableSeeder extends Seeder
 
             $model = Why::create($value);
 
-            if (!$key) {
-
-                // return new UploadedFile(storage_path('app/public'. $filenameOriginal), $filenameOriginal, $mimeType);
-
-
-                // $file_content = new UploadedFile(base_path('test_default_files/why/featured.png'), 'featured', 'png');
-
-                // dd($file_content);
-
-                // $file_content->move('./uploads/why', 'featured');
-
-                    // dd($file_content);
-            }
-
-
-
             // $this->seederUploader($model, 'why/featured.png', null, 'featured');
 
             $model->metaTag()->create([
