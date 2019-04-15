@@ -79,7 +79,7 @@ h2,
 h3,
 h4,
 .title {
-    font-family: 'Optima';
+    font-family: 'Jelle';
 }
 
 .subtitle {
@@ -92,25 +92,9 @@ h4,
     color: $black;
 }
 .basic.note {
-    font-family: 'Optima';
+    font-family: 'Jelle';
 }
 
-.text-black,
-a.text-black {
-    color: $black;
-}
-.text-orange,
-a.text-orange {
-    color: $orange;
-}
-.text-green,
-a.text-green {
-    color: $green;
-}
-.text-grey,
-a.text-grey {
-    color: $grey;
-}
 .connect-social.desktop {
     position: fixed;
     top: 35%;
@@ -121,7 +105,7 @@ a.text-grey {
     z-index: 1;
     .basic {
         font-size: 14px;
-        font-family: 'Optima';
+        font-family: 'Jelle';
         transform: rotate(-90deg);
         padding-left: 25px;
         letter-spacing: 2px;
@@ -132,103 +116,7 @@ a.text-grey {
 } 
 
 //Button
-.btngreen {
-    width: 230px;
-    height: 67px;
-    padding: 20px 44px;
-    border-radius: 0;
-    border: 1px solid $green;
-    font-size: 14px;
-    color: $green;
-    font-family: 'Optima';
-    background-color: transparent;
-    line-height: 27px;
-    transition: all ease 300ms;
 
-    &:hover,
-    &:focus,
-    &:active {
-        color: $white;
-        background-color: $green;
-        transition: all ease 300ms;
-        svg {
-            fill: $white;
-            transition: all ease 300ms;
-        }
-    }
-    svg {
-        height: 5px;
-        fill: $green;
-        transition: all ease 300ms;
-    }
-}
-.btngreen-custom {
-    color: $green;
-    position: relative;
-    padding: 0;
-    font-family: 'Optima';
-    &:before {
-        content: "";
-        height: 1px;
-        background: #085e05;
-        width: 30px;
-        position: absolute;
-        top: 35%;
-        left: 110%;
-        transition: all ease .3s;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-        color: $green;
-        &:before {
-            width: 60px;
-            transition: all ease .3s;
-        }
-    }
-}
-.btngreen-custom.small {
-    font-size: 14px;
-}
-
-.btngreen-action {
-    position: relative;
-    width: 230px;
-    height: 67px;
-    padding: 20px 44px;
-    border-radius: 0;
-    border: 1px solid $green;
-    font-size: 14px;
-    color: $green;
-    font-family: 'Optima';
-    text-align: left;
-    line-height: 27px;
-    background-color: transparent;
-    transition: all ease 300ms;
-    &:before {
-        content: "";
-        height: 1px;
-        background: #085e05;
-        width: 30px;
-        position: absolute;
-        top: 50%;
-        left: 65%;
-        transition: all ease .3s;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $white;
-        background-color: $green;
-        transition: all ease 300ms;
-        &:before {
-            width: 60px;
-            background-color: $white;
-            transition: all ease .3s;
-        }
-    }
-}
 
 
 // FONT SIZES default from 0 to 100

@@ -33,30 +33,20 @@
     }
 
     .nav-item .nav-link {
-        color: $black;
-        font-family: 'Optima';
-        position: relative;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: $black;
-            height: 2px;
-            width: 0;
-            transition: width .2s;
-        }
+        font-size: 18px;
+        font-weight: 700;
+        color: $blue;
+        font-family: $Quicksand;
+        text-transform: uppercase;
+        transition: all ease 300ms;
+
+        
         &:hover,
         &:focus,
         &:active {
-            background-color: transparent;
-            outline: none;
-            box-shadow: none;
+            color: $yellow;
             transition: all ease 300ms;
-            &:after {
-                opacity: 1;
-                width: 20px;
-            }
+            
         }
     }
     .nav-item.active .nav-link {
@@ -65,7 +55,7 @@
             width: 20px;
         }
         svg {
-            fill: $green;
+            fill: $blue;
         }
     }
     .navbar-toggler:focus,
@@ -75,7 +65,7 @@
 
     .navbar-toggler span {
         display: block;
-        background-color: $green;
+        background-color: $blue;
         height: 1px;
         width: 25px;
         margin-top: 8px;

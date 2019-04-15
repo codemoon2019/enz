@@ -1,1 +1,31 @@
 // You can paste your snippets here.
+.floating {
+    transform: translatey(0px);
+	animation: float 3s ease-in-out infinite;
+}
+.floating-rev {
+    transform: translatey(0px);
+	animation: float-rev 4s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+@keyframes float-rev {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
