@@ -1,11 +1,17 @@
 // All blocks will be placed here. If you want to target a specific block, just go to _page.scss
 // Recommended sample section class "block block-$block-name", you should always add block as default to specify that it's block.
 
+//Banner
+.banner-block {
+    z-index: 1;
+}
+//EVENTS
 .events-block {
     position: relative;
     padding-top: 450px;
     padding-bottom: 295px;
-    background: url('/img/events.jpg') no-repeat;
+    background: url('/img/events.png') no-repeat;
+    margin-top: -18%;
     .plant {
         position: absolute;
         top: 43%;
@@ -52,9 +58,10 @@
     }
 }
 
+//COURSE
 .courses-block {
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 30px;
     .padded {
         padding: 28% 15px;
         background-size: contain;
@@ -66,7 +73,7 @@
     }
     .plane {
         position: absolute;
-        top: 8%;
+        top: 0;
         left: 5%;
     }
     .teacher {
@@ -93,8 +100,8 @@
     }
     .pan {
         position: absolute;
-        top: 20%;
-        right: 15%;
+        top: 15%;
+        right: 10%;
     }
     .it-service .right-content {
         background-image: url('/img/it-bg.jpg');
@@ -134,5 +141,52 @@
         position: absolute;
         top: 10%;
         right: -15%;
+    }
+}
+
+//NEWS
+.news-block {
+    position: relative;
+    padding-top: 260px;
+    padding-bottom: 295px;
+    background: url('/img/mid.png') no-repeat;
+
+    .title {
+        display: inline-block;
+    }
+
+    .slick-list {
+        padding: 0 20% 0 0;
+    }
+    .slick-slide {
+        padding-left:  55px;
+        &:first-child {
+            padding: 0;
+        }
+    }
+    .slick-arrow {
+        display: none !important;
+    }
+    .btn {
+        background: $blue;
+        width: 50px;
+        height: 28px;
+        border-radius: 18px;
+        padding: 0px;
+        line-height: 16px;
+        opacity: .5;
+        transition: all ease 300ms;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 1;
+            transition: all ease 300ms;
+        }
+    }
+    .btn.left img {
+        transform: rotate(180deg)
+    }
+    .card {
+        border-radius: 24px;
     }
 }

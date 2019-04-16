@@ -1,4 +1,4 @@
-<div class="block events-block pt400">
+<div class="block events-block">
     <div class="container-fluid px180">
         <h2 class="title fs40 text-white mb30">Events</h2>   
         <div class="row">

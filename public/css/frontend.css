@@ -225,6 +225,10 @@
   margin-bottom: 200px !important;
 }
 
+.mb20p {
+  margin-bottom: 20%;
+}
+
 .px180 {
   padding: 0 180px;
 }
@@ -259,6 +263,10 @@
 
 .pr5p {
   padding-right: 5%;
+}
+
+.pb10p {
+  padding-bottom: 10%;
 }
 
 .w-70 {
@@ -10527,11 +10535,16 @@ html body {
   display: none;
 }
 
+.banner-block {
+  z-index: 1;
+}
+
 .events-block {
   position: relative;
   padding-top: 450px;
   padding-bottom: 295px;
-  background: url("/img/events.jpg") no-repeat;
+  background: url("/img/events.png") no-repeat;
+  margin-top: -18%;
 }
 
 .events-block .plant {
@@ -10587,7 +10600,7 @@ html body {
 
 .courses-block {
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 30px;
 }
 
 .courses-block .padded {
@@ -10603,7 +10616,7 @@ html body {
 
 .courses-block .plane {
   position: absolute;
-  top: 8%;
+  top: 0;
   left: 5%;
 }
 
@@ -10635,8 +10648,8 @@ html body {
 
 .courses-block .pan {
   position: absolute;
-  top: 20%;
-  right: 15%;
+  top: 15%;
+  right: 10%;
 }
 
 .courses-block .it-service .right-content {
@@ -10685,6 +10698,60 @@ html body {
   position: absolute;
   top: 10%;
   right: -15%;
+}
+
+.news-block {
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 295px;
+  background: url("/img/mid.png") no-repeat;
+}
+
+.news-block .title {
+  display: inline-block;
+}
+
+.news-block .slick-list {
+  padding: 0 20% 0 0;
+}
+
+.news-block .slick-slide {
+  padding-left: 55px;
+}
+
+.news-block .slick-slide:first-child {
+  padding: 0;
+}
+
+.news-block .slick-arrow {
+  display: none !important;
+}
+
+.news-block .btn {
+  background: #3fb1e5;
+  width: 50px;
+  height: 28px;
+  border-radius: 18px;
+  padding: 0px;
+  line-height: 16px;
+  opacity: 0.5;
+  transition: all ease 300ms;
+}
+
+.news-block .btn:hover,
+.news-block .btn:focus,
+.news-block .btn:active {
+  opacity: 1;
+  transition: all ease 300ms;
+}
+
+.news-block .btn.left img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.news-block .card {
+  border-radius: 24px;
 }
 
 /* Custom, iPhone Retina */
