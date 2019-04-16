@@ -10587,39 +10587,104 @@ html body {
 
 .courses-block {
   position: relative;
+  margin-bottom: 200px;
+}
+
+.courses-block .padded {
+  padding: 28% 15px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .courses-block .comm-service .left-content {
-  background: url("/img/cs-bg.jpg") no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 33% 0;
+  background-image: url("/img/cs-bg.jpg");
 }
 
 .courses-block .plane {
   position: absolute;
-  z-index: 1;
-  top: 3%;
-  left: 6%;
+  top: 8%;
+  left: 5%;
 }
 
 .courses-block .teacher {
   position: absolute;
-  top: 24%;
-  left: 9%;
+  top: 25%;
+  left: 5%;
 }
 
 .courses-block .bus-service .right-content {
-  background: url("/img/bs-bg.jpg") no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 33% 0;
+  background-image: url("/img/bs-bg.jpg");
 }
 
 .courses-block .bman {
   position: absolute;
   right: 0;
   top: 35%;
+}
+
+.courses-block .hosp-service .left-content {
+  background-image: url("/img/hc-bg.jpg");
+}
+
+.courses-block .cook {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+.courses-block .pan {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+}
+
+.courses-block .it-service .right-content {
+  background-image: url("/img/it-bg.jpg");
+}
+
+.courses-block .it {
+  position: absolute;
+  right: -7%;
+  top: 25%;
+}
+
+.courses-block .nurse-service .left-content {
+  background-image: url("/img/nurse-bg.jpg");
+}
+
+.courses-block .stetos {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+}
+
+.courses-block .nurse {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+
+.courses-block .other-service .right-content {
+  background-image: url("/img/other-bg.jpg");
+}
+
+.courses-block .other-service .right-content .plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.courses-block .tooth {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+}
+
+.courses-block .driller {
+  position: absolute;
+  top: 10%;
+  right: -15%;
 }
 
 /* Custom, iPhone Retina */

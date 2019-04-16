@@ -54,33 +54,85 @@
 
 .courses-block {
     position: relative;
-    .comm-service .left-content {
-        background: url('/img/cs-bg.jpg') no-repeat;
+    margin-bottom: 200px;
+    .padded {
+        padding: 28% 15px;
         background-size: contain;
         background-position: center;
-        padding: 33% 0;
+        background-repeat: no-repeat;
+    }
+    .comm-service .left-content {
+        background-image: url('/img/cs-bg.jpg');
     }
     .plane {
         position: absolute;
-        z-index: 1;
-        top: 3%;
-        left: 6%;
+        top: 8%;
+        left: 5%;
     }
     .teacher {
         position: absolute;
-        top: 24%;
-        left: 9%;
+        top: 25%;
+        left: 5%;
     }
 
     .bus-service .right-content {
-        background: url('/img/bs-bg.jpg') no-repeat;
-        background-size: contain;
-        background-position: center;
-        padding: 33% 0;
+        background-image: url('/img/bs-bg.jpg');
     }
     .bman {
         position: absolute;
         right: 0;
         top: 35%;
+    }
+    .hosp-service .left-content {
+        background-image: url('/img/hc-bg.jpg');
+    }
+    .cook {
+        position: absolute;
+        top: 20%;
+        left: 0; 
+    }
+    .pan {
+        position: absolute;
+        top: 20%;
+        right: 15%;
+    }
+    .it-service .right-content {
+        background-image: url('/img/it-bg.jpg');
+    }
+    .it {
+        position: absolute;
+        right: -7%;
+        top: 25%;
+    }
+    .nurse-service .left-content {
+        background-image: url('/img/nurse-bg.jpg');
+    }
+    .stetos {
+        position: absolute;
+        top: -10%;
+        left: 20%;
+    }
+    .nurse {
+        position: absolute;
+        top: 30%;
+        left: 0;
+    }
+    .other-service .right-content {
+        background-image: url('/img/other-bg.jpg');
+        .plane {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .tooth {
+        position: absolute;
+        left: 25%;
+        top: 40%;
+    }
+    .driller {
+        position: absolute;
+        top: 10%;
+        right: -15%;
     }
 }
