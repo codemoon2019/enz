@@ -251,6 +251,14 @@
                             </li>
 
                         @endcan
+
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/website-information*')) }}"
+                               href="{{ route('admin.information.index') }}">
+                                <i class="nav-icon fa fa-circle-o"></i> Website Informations
+                            </a>
+                        </li>
+
                         {{-- @can(config('access.users.default_permissions.media_permission'))
 
                             <li class="nav-item">

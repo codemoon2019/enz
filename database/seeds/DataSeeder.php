@@ -6,6 +6,8 @@ use App\Models\Core\Menu\Menu;
 
 use App\Models\Core\Block\Block;
 
+use App\Models\Core\Setting;
+
 use App\Models\Content\Content;
 
 use App\Models\Core\Menu\MenuNode;
@@ -52,6 +54,18 @@ class DataSeeder extends Seeder
     		Menu::find(1)->nodes()->save(new MenuNode($menu));
     	
     	}
+
+        Setting::create([
+            'group' => 'information',
+            'label' => 'Home Banner content',
+            'machine_name' => 'home-banner-content',
+            'value' => '<h2>Welcome to ENZ Education Consultancy Services</h2>
+            
+            <p>With the outstanding services and assistance being extended to our clients, ENZ Education Consultancy Services is extremely honored and a proud recipient of two major awards: The National Customers&rsquo; Choice Annual Awards for Business Excellence 2016</p>',
+            'type' => 'text',
+            'input_type' => 'textarea',
+            'rules' => 'required',
+        ]);
 
     }
 }
