@@ -348,6 +348,7 @@ h4,
   margin-bottom: 30px;
 }
 
+p,
 .basic {
   font-size: 24px;
   color: #000;
@@ -10810,6 +10811,19 @@ html body {
 
 .why-choose-block .item .basic {
   font-size: 18px;
+}
+
+.questions {
+  background-image: linear-gradient(#fce1c9, #fef1e5);
+}
+
+.footer .form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer .form .form-control {
+  height: 44px;
 }
 
 /* Custom, iPhone Retina */
