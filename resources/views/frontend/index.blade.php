@@ -19,4 +19,5 @@
     @include('frontend.core.block.templates.events')
     @include('frontend.core.block.templates.courses')
     @include('frontend.core.block.templates.news')    
+    @include('frontend.core.block.templates.choose')    
 @endsection

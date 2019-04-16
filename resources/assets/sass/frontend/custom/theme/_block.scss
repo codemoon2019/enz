@@ -24,6 +24,7 @@
         }
     }
     .item {
+        
         .date {
             font-family: 'Jelle';
             border-top-left-radius: 35px;
@@ -148,7 +149,6 @@
 .news-block {
     position: relative;
     padding-top: 260px;
-    padding-bottom: 295px;
     background: url('/img/mid.png') no-repeat;
 
     .title {
@@ -167,7 +167,7 @@
     .slick-arrow {
         display: none !important;
     }
-    .btn {
+    .testimonials .btn {
         background: $blue;
         width: 50px;
         height: 28px;
@@ -186,7 +186,57 @@
     .btn.left img {
         transform: rotate(180deg)
     }
-    .card {
+    .testimonials .card {
         border-radius: 24px;
     }
+    .news-svg {
+        position: absolute;
+        top: -35%;
+        left: -1%
+    }
+    .news {
+        .card {
+            border: none;
+            border-radius: 14px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+            img {
+                border-top-left-radius: 14px;
+                border-top-right-radius: 14px;
+            }
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: $black;
+            font-family: 'Jelle';
+            margin-bottom: 0;
+        }
+        .card-text {
+            font-size: 12px;
+            font-weight: normal;
+            color: #807d7d;
+        }
+    }
+}
+
+//WHY
+.why-choose-block {
+    .svg-holder {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        background: #f2f2f2;
+        margin-bottom: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+    }
+    .item {
+        .title {
+            font-size: 18px;
+        }
+        .basic {
+            font-size: 18px;
+        }
+    } 
 }

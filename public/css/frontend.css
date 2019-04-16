@@ -269,6 +269,15 @@
   padding-bottom: 10%;
 }
 
+.pt20p {
+  padding-top: 20%;
+}
+
+.px475 {
+  padding-left: 475px;
+  padding-right: 475px;
+}
+
 .w-70 {
   width: 70%;
 }
@@ -10703,7 +10712,6 @@ html body {
 .news-block {
   position: relative;
   padding-top: 260px;
-  padding-bottom: 295px;
   background: url("/img/mid.png") no-repeat;
 }
 
@@ -10727,7 +10735,7 @@ html body {
   display: none !important;
 }
 
-.news-block .btn {
+.news-block .testimonials .btn {
   background: #3fb1e5;
   width: 50px;
   height: 28px;
@@ -10738,9 +10746,9 @@ html body {
   transition: all ease 300ms;
 }
 
-.news-block .btn:hover,
-.news-block .btn:focus,
-.news-block .btn:active {
+.news-block .testimonials .btn:hover,
+.news-block .testimonials .btn:focus,
+.news-block .testimonials .btn:active {
   opacity: 1;
   transition: all ease 300ms;
 }
@@ -10750,8 +10758,58 @@ html body {
           transform: rotate(180deg);
 }
 
-.news-block .card {
+.news-block .testimonials .card {
   border-radius: 24px;
+}
+
+.news-block .news-svg {
+  position: absolute;
+  top: -35%;
+  left: -1%;
+}
+
+.news-block .news .card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+}
+
+.news-block .news .card img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.news-block .news .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Jelle";
+  margin-bottom: 0;
+}
+
+.news-block .news .card-text {
+  font-size: 12px;
+  font-weight: normal;
+  color: #807d7d;
+}
+
+.why-choose-block .svg-holder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  background: #f2f2f2;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+}
+
+.why-choose-block .item .title {
+  font-size: 18px;
+}
+
+.why-choose-block .item .basic {
+  font-size: 18px;
 }
 
 /* Custom, iPhone Retina */
