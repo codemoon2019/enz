@@ -62,14 +62,31 @@ class WhyTableSeeder extends Seeder
 
             $model = Why::create($value);
 
-            // $this->seederUploader($model, 'why/featured.png', null, 'featured');
-
             $model->metaTag()->create([
                 'title' => $model->title,
                 'description' => $model->title,
                 'keywords' => str_replace('-', ',', $model->slug),
             ]);
 
+        }
+
+        $filePath = base_path('public/uploads/why');
+        
+        $files = scandir($filePath);
+
+        foreach (array_slice($files, 2) as $key => $value) {
+
+            $filePathInner = $filePath . '/' . $value;
+
+            if (is_dir($filePathInner)) {
+
+                $this->findDir($filePathInner);
+
+            }else{
+
+                unlink($filePathInner);
+
+            }
         }
 
         $this->enableForeignKeys();

@@ -66,8 +66,6 @@ class WhyObserver extends BaseObserverContract
     public static function updated($model, array $data, array $oldModel)
     {
 
-        dd($data['icon']);
-
         if (array_key_exists('icon', $data) && $data['icon'] != null) {
 
             if ($model->file != null) {

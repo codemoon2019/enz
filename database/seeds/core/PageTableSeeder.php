@@ -34,12 +34,27 @@ class PageTableSeeder extends Seeder
     {
         $user = User::skip(1)->first();
 
-        // End
-
         $model = Page::create([
             'title'       => 'Contact Us',
-            'description' => '<h2>Thank you for your interest in Riviera Villas</h2><p>Riviera Villas is a quality project of Wyndhamm Realty Development Corp. We provide quality homes built with passion and at par with international standards. Wyndhamm’s projects range from single detached homes – Master Homes at the Riviera and serviced residences.
-            </p>',
+            'description' => '',
+            'template'    => 'default'
+        ]);
+
+        $model->domains()->sync([1]);
+
+        
+        $model = Page::create([
+            'title'       => 'Our Company',
+            'description' => '',
+            'template'    => 'default'
+        ]);
+
+        $model->domains()->sync([1]);
+
+        
+        $model = Page::create([
+            'title'       => 'Vision and Mission',
+            'description' => '',
             'template'    => 'default'
         ]);
 
