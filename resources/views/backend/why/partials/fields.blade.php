@@ -44,6 +44,19 @@
 
         </div>
 
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label"></label>
+
+            <div class="col-md-10 image-div">
+
+                {!! $model->featured_icon !!}
+
+            </div>
+
+        </div>
+
+
     </div>
 
 </div>
