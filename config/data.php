@@ -23,8 +23,10 @@ return [
 		'text_by_culumn' => ['title' => 'Text by Column', 'disabled' => false],
 		'more_choice' => ['title' => 'More Choice List', 'disabled' => false],
 		'blocks' => ['title' => 'BLOCKS', 'disabled' => true],
-	]
+	],
 
+
+	'information' => ['home-banner-content']
 
 
 

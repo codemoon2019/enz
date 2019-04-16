@@ -18,7 +18,7 @@ class CreateSettingsTable extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->enum('group', ['site', 'social', 'contact']);
+            $table->enum('group', ['site', 'social', 'contact', 'information']);
 
             $table->string('label');
             $table->string('machine_name');

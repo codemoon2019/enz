@@ -11,6 +11,7 @@ use App\Models\Why\Why;
 use App\Models\Service\Service;
 use App\Models\OurTeam\OurTeam;
 use App\Models\Testimonial\Testimonial;
+use App\Models\Core\Setting;
 
 /*
  * Application version name
@@ -271,6 +272,8 @@ if (!function_exists('setting')) {
     }
 }
 
+
+
 if (!function_exists('history')) {
     /**
      * @return History|\Illuminate\Foundation\Application|mixed|history
@@ -493,6 +496,20 @@ if (!function_exists('Testimonial')) {
     function Testimonial()
     {
         return Testimonial::orderBy('order')->get();
+    }
+}
+
+if (!function_exists('findInformation')) {
+    function findInformation($key)
+    {
+        return Setting::where('machine_name', $key)->first();
+    }
+}
+
+if (!function_exists('getInformation')) {
+    function getInformation($keys)
+    {
+        return Setting::whereIn('machine_name', $keys)->get();
     }
 }
 
