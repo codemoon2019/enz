@@ -1,100 +1,84 @@
-@extends('frontend.layouts.app')
+<div class="block events-block">
 
-@section('page_class', "front")
+    <div class="container-fluid px180">
+    
+        <h2 class="title fs40 text-white mb30">Events</h2>   
+    
+        <div class="row">
 
-@section('content')
-
-	{{-- <div class="block-banner banner container-fluid px83">
-
-        <div id="carouselId" class="carousel slide carousel-fade" data-ride="carousel">
-
-            <div class="carousel-inner" role="listbox">
+            @push('after-scripts')
+            
+                <script>var heights = [];</script>
+            
+            @endpush
+            
+            @foreach (Events()->slice(0, 3) as $key => $event)
 
                 @php
+                   
+                    switch ($key) {
 
-                    $home_banner = slider('home-banner');
+                        case 0: $bgColor = 'linear-gradient-yellow'; break;
+
+                        case 1: $bgColor = 'linear-gradient-red'; break;
+                        
+                        default: $bgColor = 'linear-gradient-orange'; break;
+                    }
                 
                 @endphp
-            
-                @foreach ($home_banner->getUploaderImages('banner', 'large') as $key => $slide)
 
-                    @php $tag_line = $slide->properties->title; @endphp
+                <div class="col-sm-4 item mb30">
 
-                    <div class="carousel-item {{ !$key ? 'active' : '' }}">
-
-                        <div class="relative">
-                        
-                            <img class="img-fluid w-100" src="{{ $slide->source }}" alt="">
-                        
-                            <div class="overlay"></div>
-                        
+                    <div class="d-flex event-div event-{{ $key }}">
+                    
+                        <div class="col-sm-4 date text-center py38 text-white {{ $bgColor }}">
+                    
+                            <span class="num">{{ $event->event_date->format('d') }}</span>
+                    
+                            <span class="month">{{ $event->event_date->format('M') }}</span>
+                    
                         </div>
-                        
-                        <div class="carousel-caption d-none d-md-block">
-                        
-                            <h2 class="title">{{ $tag_line != null ? $tag_line : '' }}</h2>
-                        
+                    
+                        <div class="col-sm-8 details">
+                    
+                            <p class="basic">{{ $event->title }}</p>
+                    
+                            <a href="{{ route('frontend.events.show', $event->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
+                    
                         </div>
-                   
+                    
                     </div>
-                
-                @endforeach
 
-            </div>
+                </div>
+                    
+                @push('after-scripts')
 
+                    <script>heights.push($(".event-{{ $key }}").height());</script>
+
+                @endpush
+
+            @endforeach
+
+        </div>  
+
+        <div class="text-center">
+        
+            <a href="{{ route('frontend.events.index') }}" class="btn btnview-more text-uppercase">View more</a>
+        
         </div>
+        
+        <img class="plant" src="{{asset('svg/plant.svg')}}" alt="">
+    
+    </div>
 
-    </div> --}}
-
-
-    <svg width="100%" height="1000px">
-        <g transform="scale(1)">
-            <circle cx="100" cy="100" r="40" fill="blue" id="bluecircle" />
-        </g>
-    </svg>
-
-@endsection
+</div>
 
 @push('after-scripts')
+
 <script>
-
-    function moveSection(idStr, xOffset, yOffset) {
-        
-        var domElemnt = document.getElementById(idStr);
-        
-        if (domElemnt) {
-
-            domElemnt.setAttribute('cx', xOffset);
-        }
-    }
-
-    var cx = 100;
-
-    var right = true;
-
-    setInterval(function(){ 
-
-        if (cx < 1700 && right) {
-            
-            moveSection("bluecircle", cx++);
-
-        }else{
-
-            right = false;
-
-            if (cx >= 100) {
-
-                moveSection("bluecircle", cx--);
-                
-            }else{
-
-                right = true;
-            
-            }
-        }
-
-    }, 5);
-
+    
+    $('.event-div').css('height', Math.max(...heights));
 
 </script>
+
 @endpush

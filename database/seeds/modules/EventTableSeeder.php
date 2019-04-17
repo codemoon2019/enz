@@ -47,7 +47,7 @@ class EventTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Information & Technology',
+                'title' => 'Free Career Orientation in Candon City!',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
@@ -61,7 +61,7 @@ class EventTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Other Courses',
+                'title' => 'Free Event: Biggest Education Expo in Ilocos Norte!',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),

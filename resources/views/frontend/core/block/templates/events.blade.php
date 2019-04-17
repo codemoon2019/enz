@@ -1,47 +1,62 @@
 <div class="block events-block">
+
     <div class="container-fluid px180">
+    
         <h2 class="title fs40 text-white mb30">Events</h2>   
+    
         <div class="row">
-            <div class="col-sm-4 item mb30">
-                <div class="d-flex">
-                    <div class="col-sm-4 date text-center py38 text-white linear-gradient-yellow">
-                        <span class="num">30</span>
-                        <span class="month">MAR</span>
+            
+            @foreach (Events()->slice(0, 3) as $key => $event)
+
+                @php
+                   
+                    switch ($key) {
+
+                        case 0: $bgColor = 'linear-gradient-yellow'; break;
+
+                        case 1: $bgColor = 'linear-gradient-red'; break;
+                        
+                        default: $bgColor = 'linear-gradient-orange'; break;
+                    }
+                
+                @endphp
+
+                <div class="col-sm-4 item mb30">
+
+                    <div class="d-flex">
+                    
+                        <div class="col-sm-4 date text-center py38 text-white {{ $bgColor }}">
+                    
+                            <span class="num">{{ $event->event_date->format('d') }}</span>
+                    
+                            <span class="month">{{ $event->event_date->format('M') }}</span>
+                    
+                        </div>
+                    
+                        <div class="col-sm-8 details">
+                    
+                            <p class="basic">{{ $event->title }}</p>
+                    
+                            <a href="{{ route('frontend.events.show', $event->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
+                    
+                        </div>
+                    
                     </div>
-                    <div class="col-sm-8 details">
-                        <p class="basic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, iste!</p>
-                        <a href="#" class="read-more text-blue text-uppercase">Read more</a>
-                    </div>
+
                 </div>
-            </div>
-            <div class="col-sm-4 item mb30">
-                <div class="d-flex">
-                    <div class="col-sm-4 date text-center py38 text-white linear-gradient-red">
-                        <span class="num">30</span>
-                        <span class="month">MAR</span>
-                    </div>
-                    <div class="col-sm-8 details">
-                        <p class="basic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, iste!</p>
-                        <a href="#" class="read-more text-blue text-uppercase">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 item mb30">
-                <div class="d-flex">
-                    <div class="col-sm-4 date text-center py38 text-white linear-gradient-orange">
-                        <span class="num">30</span>
-                        <span class="month">MAR</span>
-                    </div>
-                    <div class="col-sm-8 details">
-                        <p class="basic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, iste!</p>
-                        <a href="#" class="read-more text-blue text-uppercase">Read more</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>  
+
         <div class="text-center">
-            <a href="#" class="btn btnview-more text-uppercase">View more</a>
+        
+            <a href="{{ route('frontend.events.index') }}" class="btn btnview-more text-uppercase">View more</a>
+        
         </div>
+        
         <img class="plant" src="{{asset('svg/plant.svg')}}" alt="">
+    
     </div>
+
 </div>

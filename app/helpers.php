@@ -9,9 +9,11 @@ use App\Models\MoreLife\MoreLife;
 use App\Models\Course\Course;
 use App\Models\Why\Why;
 use App\Models\Service\Service;
-use App\Models\OurTeam\OurTeam;
 use App\Models\Testimonial\Testimonial;
 use App\Models\Core\Setting;
+use App\Models\OurTeam\OurTeam;
+use App\Models\Event\Event;
+use App\Models\News\News;
 
 /*
  * Application version name
@@ -489,6 +491,20 @@ if (!function_exists('OurTeam')) {
     function OurTeam()
     {
         return OurTeam::orderBy('order')->get();
+    }
+}
+
+if (!function_exists('Events')) {
+    function Events()
+    {
+        return Event::orderBy('id','desc')->get();
+    }
+}
+
+if (!function_exists('News')) {
+    function News()
+    {
+        return News::orderBy('published_at','desc')->get();
     }
 }
 

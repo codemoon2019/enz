@@ -154,7 +154,7 @@ class News extends Model implements HasMedia
             $this->addMediaConversion('main')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 550, 370);
+                ->fit(Manipulations::FIT_CROP, 364, 235);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

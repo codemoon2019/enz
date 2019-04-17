@@ -28,27 +28,19 @@ class NewsTableSeeder extends Seeder
 
         $data = [
             [
-                'title' => 'Sample News 1',
+                'title' => 'The best jobs in Australia for 2018',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'published_at' => now(),
             ],
             [
-                'title' => 'Sample News 2',
+                'title' => 'Nursing in Australia vs. UK',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'published_at' => now(),
             ],
             [
-                'title' => 'Sample News 3',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
-                'status' => 'enable',
-                'published_at' => now(),
-                'featured' => 'enable',
-
-            ],
-            [
-                'title' => 'Sample News 4',
+                'title' => 'Why Study in Australia?',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'published_at' => now(),
@@ -56,7 +48,7 @@ class NewsTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Sample News 5',
+                'title' => '3 Australian Cities in Top 10 Most Livable Cities in the World',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'published_at' => now(),
@@ -70,7 +62,7 @@ class NewsTableSeeder extends Seeder
 
             $model = News::create($value);
 
-            $this->seederUploader($model, 'news/featured.jpg', null, 'featured');
+            $this->seederUploader($model, 'news/news'.($key+1).'.jpg', null, 'featured');
 
             $model->metaTag()->create([
 
