@@ -24,7 +24,7 @@
     
             <div class="clearfix"></div>
     
-            <div class="slick-slider">
+            <div class="slick-slider" data-aos="zoom-in">
     
                 <div class="item">
                     <div class="card">

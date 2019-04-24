@@ -12,7 +12,7 @@
     
         <div class="row comm-service">
     
-            <div class="col-sm-6 left-content padded">
+            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
     
                 <img class="floating plane" src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
     
@@ -20,7 +20,7 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content pl10p align-self-center">
+            <div class="col-sm-6 right-content pl10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[0]->title }}</h3>
     
@@ -34,7 +34,7 @@
     
         <div class="row bus-service">
     
-            <div class="col-sm-6 left-content pr10p align-self-center">
+            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[1]->title }}</h3>
     
@@ -44,7 +44,7 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content padded">
+            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
     
                 <img class="floating bman" src="{{asset('svg/bman.svg')}}" alt="">
     
@@ -54,7 +54,7 @@
     
         <div class="row hosp-service">
     
-            <div class="col-sm-6 left-content padded">
+            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
     
                 <img class="floating-rev cook" src="{{asset('svg/HospitalityandCookery.svg')}}" alt="">
     
@@ -62,7 +62,7 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content pl10p align-self-center">
+            <div class="col-sm-6 right-content pl10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[2]->title }}</h3>
     
@@ -76,7 +76,7 @@
     
         <div class="row it-service">
     
-            <div class="col-sm-6 left-content pr10p align-self-center">
+            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[3]->title }}</h3>
     
@@ -86,7 +86,7 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content padded">
+            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
     
                 <img class="floating it" src="{{asset('svg/it.svg')}}" alt="">
     
@@ -96,7 +96,7 @@
      
         <div class="row nurse-service">
      
-            <div class="col-sm-6 left-content padded">
+            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
      
                 <img class="floating-rev stetos" src="{{asset('svg/stethoscope.svg')}}" alt="">
      
@@ -104,7 +104,7 @@
      
             </div>  
      
-            <div class="col-sm-6 right-content pl10p align-self-center">
+            <div class="col-sm-6 right-content pl10p align-self-center" data-aos="zoom-in">
      
                 <h3 class="title fs40 mb30">{{ $course[4]->title }}</h3>
      
@@ -118,7 +118,7 @@
      
         <div class="row other-service">
      
-            <div class="col-sm-6 left-content pr10p align-self-center">
+            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
      
                 <h3 class="title fs40 mb30">{{ $course[5]->title }}</h3>
      
@@ -128,7 +128,7 @@
      
             </div>  
      
-            <div class="col-sm-6 right-content padded">
+            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
      
                 <img class="floating plane" src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
      
