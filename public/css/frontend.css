@@ -10851,7 +10851,7 @@ html body {
 .footer .flags img {
   z-index: 0;
   position: absolute;
-  top: 30%;
+  top: 31%;
 }
 
 .footer .right-content {
@@ -10959,6 +10959,11 @@ html body {
   /* "hand" cursor */
 }
 
+.footer .form .btnview-more {
+  position: relative;
+  z-index: 2;
+}
+
 .footer .know-more {
   background: url("/img/footer.png") no-repeat;
   padding-top: 10%;
@@ -10994,11 +10999,11 @@ html body {
   margin-left: -15px;
   padding: 0;
   background: transparent;
-  border-color: transparent;
+  border: none;
 }
 
 .footer .subscribe .input-group-text .btnread-more:hover {
-  background: #ffca30;
+  background: #f1a92d;
   color: #fff;
 }
 

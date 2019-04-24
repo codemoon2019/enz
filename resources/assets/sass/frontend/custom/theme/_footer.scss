@@ -2,7 +2,7 @@
     .flags img {
         z-index: 0;
         position: absolute;
-        top: 30%;
+        top: 31%;
     }
     .right-content {
         padding-left: 80px;
@@ -94,6 +94,10 @@
         .inputfile + label {
             cursor: pointer; /* "hand" cursor */
         }
+        .btnview-more {
+            position: relative;
+            z-index: 2;
+        }
     }
 
     .know-more {
@@ -127,10 +131,10 @@
             margin-left: -15px;
             padding: 0;
             background: transparent;
-            border-color: transparent;
+            border: none;
             .btnread-more {
                 &:hover {
-                    background: $yellow;
+                    background: #f1a92d;
                     color: $white;
                 }
             }
