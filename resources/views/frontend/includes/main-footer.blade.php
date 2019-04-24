@@ -3,7 +3,7 @@
 	    <div class="container-fluid relative">
         <div class="row">
             <div class="col-sm-3 left-content flags">
-                <img class="img-fluid" src="{{asset('svg/flags.svg')}}" alt="">
+                <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="">
             </div>
             <div class="col-sm-9 right-content px180">
                 <h2 class="title fs40 text-nblue mb30">Got a Question?</h2>
@@ -102,31 +102,31 @@
           <ul class="list-inline">
             <li class="list-inline-item">
               <a href="#">
-                  <img src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
+                  <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
               </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <img src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
+                  <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
               </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <img src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
+                  <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
               </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <img src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
+                  <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
               </a>
             </li>
           </ul>
         </div>
         <div class="col-sm-2 text-center">
-          <img src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="">          
+          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="">          
         </div>
         <div class="col-sm-2 text-center">
-          <img src="{{asset('img/PIER.png')}}" class="img-fluid" alt="">          
+          <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="">          
         </div>
       </div>
       <div class="copyright text-center">

@@ -10,13 +10,13 @@
     
                 <button class="btn left myarrow">
     
-                    <img class="" src="{{asset('svg/arrow.svg')}}" alt="">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
     
                 </button>
     
                 <button class="btn right myarrow">
     
-                    <img class="" src="{{asset('svg/arrow.svg')}}" alt="">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
     
                 </button>
     
@@ -72,7 +72,7 @@
     
         <div class="container-fluid px180 relative">
     
-            <img class="news-svg" src="{{asset('svg/news.svg')}}" alt="">
+            <img class="news-svg" data-src="{{asset('svg/news.svg')}}" alt="">
     
             <h2 class="title fs40 text-white mb80">News</h2>   
     
@@ -86,7 +86,7 @@
     
                             <div class="card-header p0">
     
-                                <img class="img-fluid" src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="">
+                                <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="">
     
                             </div>
     

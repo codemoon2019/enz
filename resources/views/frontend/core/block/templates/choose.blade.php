@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-4 item mb30">
                 <div class="svg-holder mx-auto">
-                    <img class="img-fluid" src="{{asset('svg/linkages.svg')}}" alt="">
+                    <img class="img-fluid" data-src="{{asset('svg/linkages.svg')}}" alt="">
                 </div>
                 <h3 class="title basic text-black">Linkages</h3>
                 <p class="basic">We have also established sound connections with our local partners for an ease assistance to our...</p>
@@ -12,7 +12,7 @@
             </div>
             <div class="col-sm-4 item mb30">
                 <div class="svg-holder mx-auto">
-                    <img class="img-fluid" src="{{asset('svg/linkages.svg')}}" alt="">
+                    <img class="img-fluid" data-src="{{asset('svg/linkages.svg')}}" alt="">
                 </div>
                 <h3 class="title basic text-black">Linkages</h3>
                 <p class="basic">We have also established sound connections with our local partners for an ease assistance to our...</p>
@@ -20,7 +20,7 @@
             </div>
             <div class="col-sm-4 item mb30">
                 <div class="svg-holder mx-auto">
-                    <img class="img-fluid" src="{{asset('svg/linkages.svg')}}" alt="">
+                    <img class="img-fluid" data-src="{{asset('svg/linkages.svg')}}" alt="">
                 </div>
                 <h3 class="title basic text-black">Linkages</h3>
                 <p class="basic">We have also established sound connections with our local partners for an ease assistance to our...</p>
