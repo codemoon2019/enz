@@ -11,21 +11,20 @@ html {
   position: fixed;
   z-index: 500;
   right: 20px;
-  background-color: #000;
+  background-image:linear-gradient(#ff7878, #eb5959);
   color: #fff;
-  border-radius: 50%;
+  border-radius: 35%;
   border: none;
-  height: 40px;
-  width: 40px;
-  -webkit-transition: .3s;
+  height: 50px;
+  width: 50px;
   transition: .3s;
-  opacity: .5;
+  opacity: 1;
   outline: none !important;
   display: none;
   cursor: pointer;
 
   &.scrollTop{
-    bottom: 30px;
+    bottom: 15%;
   }
 
   &:hover {
@@ -34,6 +33,9 @@ html {
 
   i {
     color: #fff;
+  }
+  img {
+    transform: rotate(-90deg);
   }
 }
 

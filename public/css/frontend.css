@@ -10340,21 +10340,21 @@ html body {
   position: fixed;
   z-index: 500;
   right: 20px;
-  background-color: #000;
+  background-image: linear-gradient(#ff7878, #eb5959);
   color: #fff;
-  border-radius: 50%;
+  border-radius: 35%;
   border: none;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   transition: 0.3s;
-  opacity: 0.5;
+  opacity: 1;
   outline: none !important;
   display: none;
   cursor: pointer;
 }
 
 .scrollTop.scrollTop {
-  bottom: 30px;
+  bottom: 15%;
 }
 
 .scrollTop:hover {
@@ -10363,6 +10363,11 @@ html body {
 
 .scrollTop i {
   color: #fff;
+}
+
+.scrollTop img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .processing-page-load {
@@ -10772,7 +10777,7 @@ html body {
 .news-block .news .card {
   border: none;
   border-radius: 14px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
 }
 
 .news-block .news .card img {
@@ -10786,12 +10791,14 @@ html body {
   color: #000;
   font-family: "Jelle";
   margin-bottom: 0;
+  min-height: 42px;
 }
 
 .news-block .news .card-text {
   font-size: 12px;
   font-weight: normal;
   color: #807d7d;
+  margin-bottom: 0;
 }
 
 .why-choose-block .svg-holder {
@@ -10802,7 +10809,7 @@ html body {
   justify-content: center;
   background: #f2f2f2;
   margin-bottom: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
 }
 
 .why-choose-block .item .title {
@@ -10817,13 +10824,220 @@ html body {
   background-image: linear-gradient(#fce1c9, #fef1e5);
 }
 
+.mag-download {
+  padding: 10px;
+  background-image: linear-gradient(to right, #fadb5d, #f08e28);
+}
+
+.mag-download p {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.mag-download .btnview-more {
+  font-size: 18px;
+  width: 235px;
+  height: 54px;
+  line-height: 40px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.mag-download .btnview-more:hover {
+  background: #1a8bbf;
+  color: #fff;
+}
+
+.footer .flags img {
+  z-index: 0;
+  position: absolute;
+  top: 30%;
+}
+
+.footer .right-content {
+  padding-left: 80px;
+}
+
 .footer .form label {
   font-size: 14px;
   font-weight: 700;
 }
 
 .footer .form .form-control {
+  font-size: 14px;
+  font-weight: 700;
   height: 44px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.footer .form textarea.form-control {
+  height: 129px;
+  resize: none;
+}
+
+.footer .form .control {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.footer .form .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.footer .form .control--radio .control__indicator {
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.footer .form .control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+}
+
+.footer .form .control input:checked ~ .control__indicator {
+  background: #3fb1e5;
+}
+
+.footer .form .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.footer .form .control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.footer .form .control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.footer .form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.footer .form .inputfile + label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ffca30;
+  display: inline-block;
+  transition: all ease 300ms;
+}
+
+.footer .form .inputfile:focus + label,
+.footer .form .inputfile + label:hover {
+  background-color: transparent;
+  color: #ffca30;
+  transition: all ease 300ms;
+}
+
+.footer .form .inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
+.footer .know-more {
+  background: url("/img/footer.png") no-repeat;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  margin-top: -6%;
+  z-index: 1;
+  position: relative;
+}
+
+.footer .subscribe .basic {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer .subscribe .form-control {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d6d2d2;
+  height: 44px;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.footer .subscribe .form-control:focus {
+  z-index: 1;
+}
+
+.footer .subscribe .input-group {
+  max-width: 426px;
+  margin: 0 auto;
+}
+
+.footer .subscribe .input-group-text {
+  margin-left: -15px;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+}
+
+.footer .subscribe .input-group-text .btnread-more:hover {
+  background: #ffca30;
+  color: #fff;
+}
+
+.footer .footer-links a {
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all ease 300ms;
+}
+
+.footer .footer-links a:hover,
+.footer .footer-links a:focus,
+.footer .footer-links a:active {
+  color: #ffca30 !important;
+}
+
+.footer .footer-info li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-info li:before {
+  margin-right: 8px;
+  content: "";
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  background-image: url("/svg/maps-and-flags.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.footer .footer-info .loc:before {
+  background-image: url("/svg/maps-and-flags.svg");
+}
+
+.footer .footer-info .tel:before {
+  background-image: url("/svg/call-answer.svg");
 }
 
 /* Custom, iPhone Retina */

@@ -198,7 +198,8 @@
         .card {
             border: none;
             border-radius: 14px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+            box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
+            
             img {
                 border-top-left-radius: 14px;
                 border-top-right-radius: 14px;
@@ -210,11 +211,13 @@
             color: $black;
             font-family: 'Jelle';
             margin-bottom: 0;
+            min-height: 42px;
         }
         .card-text {
             font-size: 12px;
             font-weight: normal;
             color: #807d7d;
+            margin-bottom: 0;
         }
     }
 }
@@ -229,7 +232,8 @@
         justify-content: center;
         background: #f2f2f2;
         margin-bottom: 10px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19);
+        box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
+        
     }
     .item {
         .title {
@@ -244,4 +248,26 @@
 //Questions
 .questions {
     background-image:linear-gradient(#fce1c9, #fef1e5);
+}
+
+//Download
+.mag-download {
+    padding: 10px;
+    background-image:linear-gradient(to right, #fadb5d, #f08e28);
+    p {
+        display: inline-block;
+        font-weight: 700;
+    }
+    .btnview-more {
+        font-size: 18px;
+        width: 235px;
+        height: 54px;
+        line-height: 40px;
+        margin-left: 10px;
+        margin-bottom: 0;
+        &:hover {
+            background: #1a8bbf;
+            color: $white;
+        }
+    }
 }

@@ -1,11 +1,176 @@
 .footer {
+    .flags img {
+        z-index: 0;
+        position: absolute;
+        top: 30%;
+    }
+    .right-content {
+        padding-left: 80px;
+    }
     .form {
         label {
             font-size: 14px;
             font-weight: 700;
         }
         .form-control {
+            font-size: 14px;
+            font-weight: 700;
             height: 44px;
+            border-radius: 12px;
+            box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
+        }
+        textarea.form-control {
+            height: 129px;
+            resize: none;
+        }
+        .control {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            margin-right: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: normal;
+            input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+        }
+        .control--radio .control__indicator {
+            border-radius: 50%;
+            box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
+        }
+        .control__indicator {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #fff;
+        }
+        .control input:checked ~ .control__indicator {
+            background: #3fb1e5;
+        }
+        .control input:checked ~ .control__indicator:after {
+            display: block;
+        }
+        .control--radio .control__indicator:after {
+            left: 7px;
+            top: 7px;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .control__indicator:after {
+            content: '';
+            position: absolute;
+            display: none;
+        }
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        .inputfile + label {
+            font-size: 14px;
+            font-weight: 700;
+            color: $white;
+            background-color: $yellow;
+            display: inline-block;
+            transition: all ease 300ms;
+        }
+        
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            background-color: transparent;
+            color: $yellow;
+            transition: all ease 300ms;
+        }
+        .inputfile + label {
+            cursor: pointer; /* "hand" cursor */
+        }
+    }
+
+    .know-more {
+        background: url('/img/footer.png') no-repeat;
+        padding-top: 10%;
+        padding-bottom: 5%;
+        margin-top: -6%;
+        z-index: 1;
+        position: relative;
+    }
+    .subscribe {
+        .basic {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .form-control {
+            font-size: 14px;
+            font-weight: 700;
+            color: #d6d2d2;
+            height: 44px;
+            box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
+            &:focus {
+                z-index: 1;
+            }
+        }
+        .input-group {
+            max-width: 426px;
+            margin: 0 auto;
+        }
+        .input-group-text {
+            margin-left: -15px;
+            padding: 0;
+            background: transparent;
+            border-color: transparent;
+            .btnread-more {
+                &:hover {
+                    background: $yellow;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .footer-links {
+        a {
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all ease 300ms;
+            &:hover,
+            &:focus,
+            &:active {
+                color: $yellow !important;
+            }
+        }
+    }
+    .footer-info {
+        li {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        li:before {
+            margin-right: 8px;
+            content: '';
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            background-image: url('/svg/maps-and-flags.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+        }
+        .loc:before {
+            background-image: url('/svg/maps-and-flags.svg');
+            
+        }
+        .tel:before {
+            background-image: url('/svg/call-answer.svg');
         }
     }
 }
