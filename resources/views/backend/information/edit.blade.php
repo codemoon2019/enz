@@ -31,13 +31,11 @@
                 <div class="row" style="margin: 0px 25px;">
 
 
-                    <form action="{{ route('admin.information.update', $model->machine_name) }}" method="post">
+                    <form action="{{ route('admin.information.update', $model->machine_name) }}" method="post" style="width: 100%;">
 
                         {{ csrf_field() }}
-                        <div class="table-responsive">
                             
                           <div class="row mt-4 mb-4">
-
 
                                 <div class="col">
                                 
@@ -47,7 +45,7 @@
                                 
                                         <div class="col-md-10">
                                 
-                                            <input type="text" disabled class="form-control" value="{{ isset($model) ? $model->label : old('label') }}">
+                                            <input type="text" disabled class="form-control" value="{{ $model->label }}">
                                 
                                         </div>
                                 
@@ -58,23 +56,30 @@
                                         <label class="col-md-2 form-control-label">Value</label>
                                 
                                         <div class="col-md-10">
-                                
-                                            <textarea name="value" id="value" class="form-control">{!! isset($model) ? $model->value : old('old') !!}</textarea>
+                                            
+                                            @if ($model->input_type == 'textarea')
+                                                
+                                                <textarea name="value" id="value" class="form-control">{{ $model->value }}</textarea>
+                                            
+                                            @else
+            
+                                                <input type="text" class="form-control" value="{{ $model->value }}" name="value">
+
+                                            @endif
+
                                 
                                         </div>
                                 
                                     </div>
                          
-
-                                
                                 </div>
 
                             </div>
 
                             <button class="btn btn-primary pull-right">save</button>
+                            
                             <br><br>
 
-                        </div>
                     </form>
                 </div>
             </div>
@@ -88,10 +93,13 @@
 
     @include('backend.includes.ckeditor')
 
-    <script>
+    @if ($model->input_type == 'textarea')
+        <script>
 
-        CKEDITOR.replace('value', options);
-        
-    </script>
+            CKEDITOR.replace('value', options);
+            
+        </script>
+    @endif
+
 
 @endpush

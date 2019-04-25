@@ -52,6 +52,11 @@
                         <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                         <label class="btn btnread-more text-uppercase" for="file"><span>Choose file</span></label>
                       </div>
+                      <div class="form-group">
+
+                        {!! Captcha::display() !!}
+
+                      </div>
                     </div>
                   </div>
                   <div class="text-center mt30">
@@ -83,43 +88,78 @@
         </div>
         <div class="col-sm-2 footer-links">
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-uppercase">Services</a></li>
-            <li><a href="#" class="text-white text-uppercase">About</a></li>
-            <li><a href="#" class="text-white text-uppercase">Courses</a></li>
-            <li><a href="#" class="text-white text-uppercase">Destinations</a></li>
-            <li><a href="#" class="text-white text-uppercase">Careers</a></li>
-            <li><a href="#" class="text-white text-uppercase">Students</a></li>
+            @foreach (Menu('footer-menu')->nodes as $menu)
+              <li><a href="{{ $menu->link }}" class="text-white text-uppercase">{{ $menu->name }}</a></li>
+            @endforeach
           </ul>
         </div>
         <div class="col-sm-2 footer-info">
           <ul class="list-unstyled">
-            <li class="text-white loc">2/F Door 2B Natividad Bldg. II Ablan Ave. cor. Primo Lazaro St. Brgy. 4, Laoag City, Ilocos Norte 2900</li>
-            <li class="text-white tel">+63 77 600 4200</li>
+            <li class="text-white loc">{{ findSetting('location')->value }}</li>
+            <li class="text-white tel">{{ findSetting('contact-number')->value }}</li>
           </ul>
         </div>
         <div class="col-sm-2 footer-social text-center">
           <h3 class="basic fs18 text-white">Follow Us</h3>
           <ul class="list-inline">
-            <li class="list-inline-item">
-              <a href="#">
-                  <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                  <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                  <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                  <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
-              </a>
-            </li>
+
+            @foreach (getSetting('social') as $key => $social)
+  
+              @if ($social->value)
+
+                @switch($social->machine_name)
+                
+                    @case('social-fb')
+
+                      <li class="list-inline-item">
+                        <a href="{{ $social->value }}">
+                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
+                        </a>
+                      </li>
+                      @break
+                
+                    @case('social-instagram')
+
+                      <li class="list-inline-item">
+                        <a href="{{ $social->value }}">
+                            <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
+                        </a>
+                      </li>
+                      @break
+                
+                    @case('social-youtube')
+
+                      <li class="list-inline-item">
+                        <a href="{{ $social->value }}">
+                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
+                        </a>
+                      </li>
+                      @break
+                
+                    @case('social-twitter')
+
+                      <li class="list-inline-item">
+                        <a href="{{ $social->value }}">
+                            <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
+                        </a>
+                      </li>
+                      @break
+                
+                    @case('social-skype')
+
+                      <li class="list-inline-item">
+                        <a href="{{ $social->value }}">
+                            <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
+                        </a>
+                      </li>
+                      @break
+                
+                @endswitch
+
+              @endif
+
+            @endforeach
+
           </ul>
         </div>
         <div class="col-sm-2 text-center">

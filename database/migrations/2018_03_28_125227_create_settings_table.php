@@ -28,7 +28,7 @@ class CreateSettingsTable extends Migration
             $table->enum('input_type', ['text', 'file', 'textarea', 'email'])->default('text');
 
             $table->string('collection_name')->nullable()->comment('for media library');
-            $table->string('rules')->comment('for laravel validation');
+            $table->string('rules')->comment('for laravel validation')->nullable();
             $table->{$this->jsonable()}('mime_type')->nullable()->comment('for upload validation');
             $table->timestamps();
 

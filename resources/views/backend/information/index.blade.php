@@ -2,12 +2,6 @@
 
 @section('content')
 
-@php
-
-    $keys = config('data.information');
-
-@endphp
-
 <div class="row">
     <div class="col">
         <div class="card card-table">
@@ -38,7 +32,7 @@
                             </thead>
                             <tbody>
 
-                                @foreach (getInformation($keys) as $information)
+                                @foreach (getSetting('information') as $information)
                                     <tr>
                                         <td>{{ $information->label }}</td>
                                         <td>
