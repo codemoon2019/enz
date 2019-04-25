@@ -21,7 +21,7 @@
                 
                 @endphp
 
-                <div class="col-sm-4 item mb30">
+                <div class="col-sm-4 item mb30" data-aos="fade-up">
 
                     <div class="d-flex">
                     

@@ -10619,7 +10619,7 @@ html body {
 
 .events-block .plant {
   position: absolute;
-  top: 43%;
+  top: 40%;
   left: 6%;
 }
 
@@ -10911,10 +10911,7 @@ html body {
 }
 
 .mag-download .btnview-more {
-  font-size: 18px;
-  width: 235px;
-  height: 54px;
-  line-height: 40px;
+  font-size: 12px;
   margin-left: 10px;
   margin-bottom: 0;
 }
