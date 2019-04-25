@@ -56,6 +56,31 @@
             max-width: 50%;
         }
     }
+    .events-block {
+        padding-bottom: 40px;
+        .item .num {
+            font-size: 60px;
+        }
+    } 
+    .courses-block {
+        padding-top: 40px;
+    }
+    .testimonials {
+        iframe {
+            height: auto !important;
+        }
+    }
+
+    .news-block {
+        margin-top: -14%;
+    }
+    .footer .know-more {
+        margin-top: -10%;
+        padding-bottom: 7%;
+    }
+    .footer .form .btnview-more {
+        z-index: 1;
+    }
     
 }
 @media only screen and (min-width: 1920px) {

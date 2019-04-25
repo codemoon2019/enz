@@ -1,75 +1,5 @@
 <div class="block news-block">
-
-    <section class="testimonials mb20p">
-    
-        <div class="container-fluid px180">
-    
-            <h2 class="title fs40 text-blue mb30">Student Testimonials</h2>   
-    
-            <div class="pull-right">
-    
-                <button class="btn left myarrow">
-    
-                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-    
-                </button>
-    
-                <button class="btn right myarrow">
-    
-                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-    
-                </button>
-    
-            </div>
-    
-            <div class="clearfix"></div>
-    
-            <div class="slick-slider" data-aos="zoom-in">
-    
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/siIep9LHtNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/b7ffmtnuSGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/_b_YVrex0yI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/siIep9LHtNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/siIep9LHtNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div>
-    
-    </section>
-
     <section class="news pb40">
-    
         <div class="container-fluid px180 relative">
     
             <img class="news-svg" data-src="{{asset('svg/news.svg')}}" alt="">
@@ -115,7 +45,6 @@
             </div>
     
         </div>
-   
+    
     </section>
-
 </div>

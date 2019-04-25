@@ -10,6 +10,8 @@ use HalcyonLaravel\Base\Controllers\Backend\Traits\CRUDTrait;
 use Illuminate\Http\Request;
 use Prettus\Repository\Helpers\CacheKeys;
 
+use App\Models\Core\Setting;
+
 /**
  * Class SettingsController
  *
@@ -61,17 +63,21 @@ class SettingsController extends Controller
      */
     public function show($groupKey)
     {
-        $settings = app('query.cache')->queryCache(function () use ($groupKey) {
-            return $this->domainRepository
-                ->getInstanceByBaseUrl(app('request')->get('domain-name'))
-                ->settings()
-                ->where([
-                    'group' => $groupKey,
-                ])->get();
-        }, [
-            $groupKey,
-            app('request')->get('domain-name'),
-        ]);
+
+        // $settings = app('query.cache')->queryCache(function () use ($groupKey) {
+        //     return $this->domainRepository
+        //         ->getInstanceByBaseUrl(app('request')->get('domain-name'))
+        //         ->settings()
+        //         ->where([
+        //             'group' => $groupKey,
+        //         ])->get();
+        // }, [
+        //     $groupKey,
+        //     app('request')->get('domain-name'),
+        // ]);
+
+
+        $settings = Setting::whereGroup($groupKey)->get();
 
         return view(self::VIEW_PATH . 'show')->with([
             'settings' => $settings,

@@ -153,11 +153,12 @@
     }
 }
 
-//NEWS
-.news-block {
+//TESTIMONIAL
+.testimonials-block {
     position: relative;
-    padding-top: 260px;
-    background: url('/img/mid.png') no-repeat;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background: url('/img/testi.png') no-repeat;
 
     .title {
         display: inline-block;
@@ -196,6 +197,17 @@
     }
     .testimonials .card {
         border-radius: 24px;
+    }
+}
+.news-block {
+    background: url('/img/news.png') no-repeat;
+    padding-top: 14.5%;
+    margin-top: -10%;
+    position: relative;
+    padding-bottom: 3%;
+
+    .title {
+        display: inline-block;
     }
     .news-svg {
         position: absolute;

@@ -32,6 +32,8 @@
 
     @include('frontend.core.block.templates.courses')
 
+    @include('frontend.core.block.templates.testimonials') 
+       
     @include('frontend.core.block.templates.news')    
 
     @include('frontend.core.block.templates.choose')    

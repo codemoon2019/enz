@@ -275,6 +275,19 @@ if (!function_exists('setting')) {
 }
 
 
+if (!function_exists('getSetting')) {
+    function getSetting($key)
+    {
+        return Setting::whereGroup($key)->get();
+    }
+}
+
+if (!function_exists('findSetting')) {
+    function findSetting($key)
+    {
+        return Setting::where('machine_name', $key)->first();
+    }
+}
 
 if (!function_exists('history')) {
     /**
