@@ -273,11 +273,6 @@
   padding-top: 20%;
 }
 
-.px475 {
-  padding-left: 475px;
-  padding-right: 475px;
-}
-
 .w-70 {
   width: 70%;
 }
@@ -10433,11 +10428,12 @@ html body {
 }
 
 .fixed .user-menu img {
-  max-height: 50px;
+  max-height: 40px;
   transition: max-height 0.4s 0.1s;
 }
 
 .fixed .user-menu .nav-item .nav-link {
+  font-size: 14px;
   padding: 18px 0 !important;
 }
 
@@ -10556,8 +10552,8 @@ html body {
 
 .events-block {
   position: relative;
-  padding-top: 450px;
-  padding-bottom: 295px;
+  padding-top: 23%;
+  padding-bottom: 15.5%;
   background: url("/img/events.png") no-repeat;
   margin-top: -18%;
 }
@@ -10613,6 +10609,10 @@ html body {
   line-height: 27px;
 }
 
+.courses-block img {
+  height: 75%;
+}
+
 .courses-block {
   position: relative;
   margin-bottom: 30px;
@@ -10633,6 +10633,7 @@ html body {
   position: absolute;
   top: 0;
   left: 5%;
+  height: 25%;
 }
 
 .courses-block .teacher {
@@ -10665,6 +10666,7 @@ html body {
   position: absolute;
   top: 15%;
   right: 10%;
+  height: 25%;
 }
 
 .courses-block .it-service .right-content {
@@ -10685,6 +10687,7 @@ html body {
   position: absolute;
   top: -10%;
   left: 20%;
+  height: 25%;
 }
 
 .courses-block .nurse {
@@ -10701,12 +10704,14 @@ html body {
   position: absolute;
   top: 0;
   left: 0;
+  height: 25%;
 }
 
 .courses-block .tooth {
   position: absolute;
   left: 25%;
   top: 40%;
+  height: 25%;
 }
 
 .courses-block .driller {
@@ -11073,79 +11078,6 @@ html body {
   #navbarResponsive .nav-link {
     padding: 18px 0 !important;
   }
-
-  .connect-social.mobile {
-    display: flex;
-    position: fixed;
-    top: 18px;
-    right: 15%;
-  }
-
-  .connect-social.mobile .fa {
-    margin-left: 10px;
-  }
-
-  .connect-social.desktop {
-    display: none;
-  }
-
-  .subtitle {
-    margin-bottom: 20px;
-  }
-
-  .basic {
-    font-size: 14px;
-  }
-
-  .mb150 {
-    margin-bottom: 100px !important;
-  }
-
-  .px83,
-  .pl83 {
-    padding: 0 15px !important;
-  }
-
-  .banner-subcaption {
-    width: 100% !important;
-    padding: 15px 0;
-    margin: 0;
-  }
-
-  .block-banner {
-    padding: 0 !important;
-  }
-
-  .block-banner img {
-    height: 60vh;
-  }
-
-  .intro-block .banner-subcaption {
-    margin: 0;
-    box-shadow: none;
-  }
-
-  .banner-text img {
-    height: 25vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .banner-text .row > div {
-    padding-right: 40%;
-  }
-
-  .banner-text .banner-subcaption {
-    padding: 20px;
-  }
-
-  .mycustom-slick .slick-list {
-    height: auto;
-  }
-
-  .page .title-large {
-    margin-top: 20px;
-  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -11160,18 +11092,31 @@ html body {
 
 /* Medium Devices, Desktops */
 
-@media only screen and (min-width: 992px) {
-  .connect-social.mobile {
-    display: none;
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .user-menu .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .user-menu .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  .banner-block .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
-/* Large Devices, Wide Screens */
-
 @media only screen and (min-width: 1920px) {
-  .page .section-villas .banner-subcaption,
-  .location-type .item .banner-subcaption {
-    width: 612px;
+  .px475 {
+    padding-left: 475px;
+    padding-right: 475px;
+  }
+
+  .courses-block img {
+    height: auto;
   }
 }
 

@@ -13,18 +13,6 @@
             <img class="img-fluid" src="{{ asset('img/logo.png') }}" alt="{{ $current_domain->title }}">
         
         </a>
-
-        <div class="connect-social mobile">
-
-            <div class="basic text-green text-uppercase"><b>Links</b></div>
-            
-            <div class="social-links">
-            
-                <a href="#" class="text-green"><i class="fa fa-facebook-f text-green"></i></a>
-            
-            </div>
-        
-        </div>
         
         <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         

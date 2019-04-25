@@ -11,10 +11,11 @@
         padding: 0 83px;
         transition: all ease 300ms;
         img {
-            max-height: 50px;
+            max-height: 40px;
             transition: max-height .4s .1s;
         }
         .nav-item .nav-link {
+            font-size: 14px;
             padding: 18px 0 !important;
         }
         .dropdown-menu .nav-link {

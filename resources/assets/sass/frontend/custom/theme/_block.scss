@@ -8,8 +8,8 @@
 //EVENTS
 .events-block {
     position: relative;
-    padding-top: 450px;
-    padding-bottom: 295px;
+    padding-top: 23%;
+    padding-bottom: 15.5%;
     background: url('/img/events.png') no-repeat;
     margin-top: -18%;
     .plant {
@@ -60,6 +60,9 @@
 }
 
 //COURSE
+.courses-block img {
+    height: 75%;
+}
 .courses-block {
     position: relative;
     margin-bottom: 30px;
@@ -76,6 +79,7 @@
         position: absolute;
         top: 0;
         left: 5%;
+        height: 25%;
     }
     .teacher {
         position: absolute;
@@ -103,6 +107,7 @@
         position: absolute;
         top: 15%;
         right: 10%;
+        height: 25%;
     }
     .it-service .right-content {
         background-image: url('/img/it-bg.jpg');
@@ -119,6 +124,7 @@
         position: absolute;
         top: -10%;
         left: 20%;
+        height: 25%;
     }
     .nurse {
         position: absolute;
@@ -131,12 +137,14 @@
             position: absolute;
             top: 0;
             left: 0;
+            height: 25%;
         }
     }
     .tooth {
         position: absolute;
         left: 25%;
         top: 40%;
+        height: 25%;
     }
     .driller {
         position: absolute;
