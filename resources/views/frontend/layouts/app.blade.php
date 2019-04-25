@@ -88,6 +88,7 @@
         @stack('after-styles')
 
     </head>
+
     <body class="processing-page-load @yield('page_class')  @can(config('access.users.default_permissions.back_end_view_permission')) logged-in @endcan @cannot(config('access.users.default_permissions.back_end_view_permission')) not-logged-in @endcannot">
         <noscript class="ns-message">
          <?xml version="1.0" encoding="UTF-8"?>

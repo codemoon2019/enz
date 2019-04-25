@@ -62,7 +62,7 @@
 </div>
 
 
-@push('after-scripts')
+{{-- @push('after-scripts')
 
     @include('backend.includes.ckeditor')
 
@@ -72,4 +72,4 @@
         
     </script>
 
-@endpush
+@endpush --}}

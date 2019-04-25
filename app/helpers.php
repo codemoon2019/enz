@@ -514,10 +514,24 @@ if (!function_exists('Events')) {
     }
 }
 
+if (!function_exists('homeEvents')) {
+    function homeEvents()
+    {
+        return Event::orderBy('id', 'desc')->limit(3)->get();
+    }
+}
+
 if (!function_exists('News')) {
     function News()
     {
         return News::orderBy('published_at','desc')->get();
+    }
+}
+
+if (!function_exists('homeNews')) {
+    function homeNews()
+    {
+        return News::orderBy('published_at','desc')->limit(4)->get();
     }
 }
 
