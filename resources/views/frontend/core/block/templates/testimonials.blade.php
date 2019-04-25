@@ -1,30 +1,17 @@
 <div class="block testimonials-block">
     <section class="testimonials">
-
         <div class="container-fluid px180">
-    
             <h2 class="title fs40 text-blue mb30">Student Testimonials</h2>   
-    
             <div class="pull-right">
-                
                 <button class="btn left myarrow">
-    
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-    
                 </button>
-    
                 <button class="btn right myarrow">
-    
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-    
                 </button>
-    
             </div>
-    
             <div class="clearfix"></div>
-    
-            <div class="slick-slider" data-aos="zoom-in">
-    
+            <div class="row slick-slider">
                 <div class="item">
                     <div class="card">
                         <div class="card-body">
@@ -72,8 +59,7 @@
                 </div>
                 
             </div>
-
+            <div class="clearfix"></div>
         </div>
-    
     </section>
 </div>

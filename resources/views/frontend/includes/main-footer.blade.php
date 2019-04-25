@@ -54,7 +54,7 @@
                       </div>
                       <div class="form-group">
 
-                        {!! Captcha::display() !!}
+                        {{-- {!! Captcha::display() !!} --}}
 
                       </div>
                     </div>
@@ -111,7 +111,7 @@
                 
                     @case('social-fb')
 
-                      <li class="list-inline-item">
+                      <li class="list-inline-item mb10">
                         <a href="{{ $social->value }}">
                             <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
                         </a>
@@ -120,7 +120,7 @@
                 
                     @case('social-instagram')
 
-                      <li class="list-inline-item">
+                      <li class="list-inline-item mb10">
                         <a href="{{ $social->value }}">
                             <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
                         </a>
@@ -129,7 +129,7 @@
                 
                     @case('social-youtube')
 
-                      <li class="list-inline-item">
+                      <li class="list-inline-item mb10">
                         <a href="{{ $social->value }}">
                             <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
                         </a>
@@ -138,7 +138,7 @@
                 
                     @case('social-twitter')
 
-                      <li class="list-inline-item">
+                      <li class="list-inline-item mb10">
                         <a href="{{ $social->value }}">
                             <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
                         </a>
@@ -147,7 +147,7 @@
                 
                     @case('social-skype')
 
-                      <li class="list-inline-item">
+                      <li class="list-inline-item mb10">
                         <a href="{{ $social->value }}">
                             <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
                         </a>

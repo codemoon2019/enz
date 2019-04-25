@@ -1,5 +1,6 @@
 $('document').ready(function(){
 
+
 	//Scroll to top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() >= 30) {

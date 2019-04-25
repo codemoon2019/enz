@@ -55,7 +55,7 @@
         
         </div>
         
-        <img class="plant" data-src="{{asset('svg/plant.svg')}}" alt="">
+        <img class="plant" data-src="{{asset('svg/plant.svg')}}" alt="" data-aos="fade-right">
     
     </div>
 
