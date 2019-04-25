@@ -21,7 +21,7 @@
                 
                 @endphp
 
-                <div class="col-sm-4 item mb30" data-aos="fade-up">
+                <div class="col-sm-4 item mb30">
 
                     <div class="d-flex">
                     
@@ -55,7 +55,7 @@
         
         </div>
         
-        <img class="plant" data-src="{{asset('svg/plant.svg')}}" alt="">
+        <img class="plant" data-src="{{asset('svg/plant.svg')}}" alt="" data-aos="fade-right">
     
     </div>
 
