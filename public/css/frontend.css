@@ -10335,7 +10335,7 @@ html body {
   position: fixed;
   z-index: 500;
   right: 20px;
-  background-image: linear-gradient(#ff7878, #eb5959);
+  background-image: linear-gradient(#fadb5d, #f08e28);
   color: #fff;
   border-radius: 35%;
   border: none;
@@ -10906,6 +10906,7 @@ html body {
 }
 
 .mag-download {
+  display: none;
   padding-top: 10px;
   background-image: linear-gradient(to right, #fadb5d, #f08e28);
 }
@@ -11141,6 +11142,10 @@ html body {
   opacity: 0;
 }
 
+#phplive_widget_embed_iframe_wrapper textarea#vquestion {
+  resize: none;
+}
+
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -11186,6 +11191,14 @@ html body {
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .banner-block .for-text {
+    top: 5%;
+  }
+
+  .banner-block .for-text p {
+    font-size: 21px;
+  }
+
   .user-menu .navbar-brand img {
     max-height: 40px;
   }
@@ -11205,6 +11218,10 @@ html body {
 
   .events-block .item .num {
     font-size: 60px;
+  }
+
+  .events-block .basic {
+    font-size: 21px;
   }
 
   .courses-block {

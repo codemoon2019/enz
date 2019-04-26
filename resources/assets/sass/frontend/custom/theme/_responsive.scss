@@ -40,6 +40,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    .banner-block .for-text {
+        top: 5%;
+        p {
+            font-size: 21px;
+        }
+    }
     .user-menu {
         .navbar-brand {
             img {
@@ -60,6 +66,9 @@
         padding-bottom: 40px;
         .item .num {
             font-size: 60px;
+        }
+        .basic {
+            font-size: 21px;
         }
     } 
     .courses-block {

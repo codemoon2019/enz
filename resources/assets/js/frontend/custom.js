@@ -3,12 +3,14 @@ $('document').ready(function(){
 
 	//Scroll to top
 	$(window).scroll(function () {
-		if ($(this).scrollTop() >= 30) {
+		if ($(this).scrollTop() >= 400) {
 		  // If page is scrolled more than 50px
 			$(".scrollTop").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
+			$(".mag-download").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
 			$('.user-menu').parent().addClass('fixed');
 		} else {
 			$(".scrollTop").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
+			$(".mag-download").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
 			$('.user-menu').parent().removeClass('fixed');
 		}
 	  });
