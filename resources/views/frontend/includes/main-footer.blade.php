@@ -54,7 +54,7 @@
                       </div>
                       <div class="form-group">
 
-                        {{-- {!! Captcha::display() !!} --}}
+                        {!! Captcha::display() !!}
 
                       </div>
                     </div>
@@ -181,3 +181,4 @@
         </ul>
     </div> --}}
 </footer>
+
