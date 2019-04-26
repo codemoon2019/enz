@@ -133,7 +133,9 @@
             background: transparent;
             border: none;
             .btnread-more {
-                &:hover {
+                &:hover,
+                &:focus,
+                &:active {
                     background: #f1a92d;
                     color: $white;
                 }

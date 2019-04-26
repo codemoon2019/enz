@@ -11075,7 +11075,9 @@ html body {
   border: none;
 }
 
-.footer .subscribe .input-group-text .btnread-more:hover {
+.footer .subscribe .input-group-text .btnread-more:hover,
+.footer .subscribe .input-group-text .btnread-more:focus,
+.footer .subscribe .input-group-text .btnread-more:active {
   background: #f1a92d;
   color: #fff;
 }
