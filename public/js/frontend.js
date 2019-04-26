@@ -13053,21 +13053,24 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 $('document').ready(function () {
-  //Scroll to top
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) {
+      $('.user-menu').parent().addClass('fixed');
+    } else {
+      $('.user-menu').parent().removeClass('fixed');
+    }
+  }); //Scroll to top
+
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 400) {
       // If page is scrolled more than 50px
       $(".scrollTop").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
 
       $(".mag-download").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
-
-      $('.user-menu').parent().addClass('fixed');
     } else {
       $(".scrollTop").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
 
       $(".mag-download").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
-
-      $('.user-menu').parent().removeClass('fixed');
     }
   });
   $(".scrollTop").click(function () {

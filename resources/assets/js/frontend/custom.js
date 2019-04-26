@@ -1,5 +1,13 @@
 $('document').ready(function(){
 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() >= 50) {
+			$('.user-menu').parent().addClass('fixed');
+		} else {
+			$('.user-menu').parent().removeClass('fixed');
+		}
+	});
+
 
 	//Scroll to top
 	$(window).scroll(function () {
@@ -7,11 +15,9 @@ $('document').ready(function(){
 		  // If page is scrolled more than 50px
 			$(".scrollTop").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
 			$(".mag-download").fadeIn(100).addClass("fadeInUp").removeClass("fadeOutDown"); // Fade in the arrow
-			$('.user-menu').parent().addClass('fixed');
 		} else {
 			$(".scrollTop").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
 			$(".mag-download").fadeOut(200).addClass("fadeOutDown").removeClass("fadeInUp"); // Else fade out the arrow
-			$('.user-menu').parent().removeClass('fixed');
 		}
 	  });
 	  
@@ -20,7 +26,7 @@ $('document').ready(function(){
 		$("body,html").animate({
 		  scrollTop: 0 // Scroll to top of body
 		}, 1000);
-	  });
+	});
 
 	//SLICK
 
