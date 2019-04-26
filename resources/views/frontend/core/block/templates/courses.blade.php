@@ -18,7 +18,7 @@
     
                 <h3 class="title fs40 mb30">{{ $course[0]->title }}</h3>
     
-                <div class="basic mb30">{!! str_limit($course[0]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[0]->description, 250) !!}</div>
     
                 <a href="{{ route('frontend.courses.show', $course[0]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
     
@@ -32,7 +32,7 @@
     
                 <h3 class="title fs40 mb30">{{ $course[1]->title }}</h3>
     
-                <div class="basic mb30">{!! str_limit($course[1]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[1]->description, 250) !!}</div>
     
                 <a href="{{ route('frontend.courses.show', $course[1]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
     
@@ -60,7 +60,7 @@
     
                 <h3 class="title fs40 mb30">{{ $course[2]->title }}</h3>
     
-                <div class="basic mb30">{!! str_limit($course[2]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[2]->description, 250) !!}</div>
     
                 <a href="{{ route('frontend.courses.show', $course[2]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
     
@@ -74,7 +74,7 @@
     
                 <h3 class="title fs40 mb30">{{ $course[3]->title }}</h3>
     
-                <div class="basic mb30">{!! str_limit($course[3]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[3]->description, 250) !!}</div>
     
                 <a href="{{ route('frontend.courses.show', $course[3]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
     
@@ -102,7 +102,7 @@
      
                 <h3 class="title fs40 mb30">{{ $course[4]->title }}</h3>
      
-                <div class="basic mb30">{!! str_limit($course[4]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[4]->description, 250) !!}</div>
      
                 <a href="{{ route('frontend.courses.show', $course[4]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
      
@@ -116,7 +116,7 @@
      
                 <h3 class="title fs40 mb30">{{ $course[5]->title }}</h3>
      
-                <div class="basic mb30">{!! str_limit($course[5]->description, 300) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[5]->description, 250) !!}</div>
      
                 <a href="{{ route('frontend.courses.show', $course[5]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
      
