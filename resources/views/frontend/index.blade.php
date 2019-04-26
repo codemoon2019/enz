@@ -7,7 +7,7 @@
 <h1 class="d-none">{{app_name()}}</h1>
 
 <div class="banner-block banner relative">
-        <img src="{{asset('img/enz.gif')}}" class="img-fluid" alt="">
+        <img data-src="{{asset('img/enz.gif')}}" class="img-fluid" alt="">
         <div class="col-sm-4 for-text">
             {!! findInformation('home-banner-content')->value !!}
             <a href="#" class="btn btnread-more text-uppercase">Read more</a>
