@@ -180,3 +180,17 @@
         }
     }
 }
+#phplive_btn_1480051776 {
+    img {
+        opacity: 0;
+    }
+    height: 80px;
+    width: 80px;
+    background-image: url('/svg/chat.svg'), linear-gradient(#ff7878, #eb5959);
+    background-repeat: no-repeat;
+    background-size: auto;
+    bottom: 10px !important;
+    background-position: center;
+    border-radius: 50%;
+    right: 35px !important;
+}
