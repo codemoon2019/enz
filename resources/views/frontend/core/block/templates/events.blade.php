@@ -6,7 +6,7 @@
     
         <div class="row">
             
-            @foreach (Events()->slice(0, 3) as $key => $event)
+            @foreach ($homeEvents as $key => $event)
 
                 @php
                    
@@ -35,7 +35,7 @@
                     
                         <div class="col-sm-8 details">
                     
-                            <p class="basic">{{ $event->title }}</p>
+                            <p class="basic">{{ str_limit($event->title, 40) }}</p>
                     
                             <a href="{{ route('frontend.events.show', $event->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
                     

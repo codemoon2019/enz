@@ -15,15 +15,15 @@ trait WhyAttributes
 
 			switch ($this->title) {
 				
-				case 'Linkages': return file_get_contents(asset('img/why/linkages.svg')); break;
+				case 'Linkages': return asset('img/why/linkages.svg'); break;
 				
-				case 'Awards': return file_get_contents(asset('img/why/awards.svg')); break;
+				case 'Awards': return asset('img/why/awards.svg'); break;
 				
-				case 'Expertise': return file_get_contents(asset('img/why/expertise.svg')); break;
+				case 'Expertise': return asset('img/why/expertise.svg'); break;
 				
-				case 'Customer Service': return file_get_contents(asset('img/why/customer-service.svg')); break;
+				case 'Customer Service': return asset('img/why/customer-service.svg'); break;
 				
-				case 'Payment Scheme': return file_get_contents(asset('img/why/payment-scheme.svg')); break;
+				case 'Payment Scheme': return asset('img/why/payment-scheme.svg'); break;
 				
 				default:
 
@@ -31,7 +31,7 @@ trait WhyAttributes
 
 		}
 
-		return file_get_contents(asset('uploads/why/' . $this->file));
+		return asset('uploads/why/' . $this->file);
 
 	}
 }

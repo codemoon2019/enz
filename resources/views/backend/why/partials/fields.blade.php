@@ -50,7 +50,9 @@
 
             <div class="col-md-10 image-div">
 
-                {!! $model->featured_icon !!}
+                <img src="{{ $model->featured_icon }}" alt="">
+
+                {{-- {!! $model->featured_icon !!} --}}
 
             </div>
 
@@ -62,7 +64,7 @@
 </div>
 
 
-@push('after-scripts')
+{{-- @push('after-scripts')
 
     @include('backend.includes.ckeditor')
 
@@ -72,4 +74,4 @@
         
     </script>
 
-@endpush
+@endpush --}}

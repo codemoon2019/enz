@@ -1,5 +1,7 @@
 <div class="block news-block">
+
     <section class="news pb40">
+    
         <div class="container-fluid px180 relative">
     
             <img class="news-svg" data-src="{{asset('svg/news.svg')}}" alt="">
@@ -8,7 +10,7 @@
     
             <div class="row">
 
-                @foreach (News()->slice(0, 4) as $key => $news)
+                @foreach ($homeNews as $key => $news)
     
                     <div class="col-sm-3 item mb40">
     
@@ -22,7 +24,7 @@
     
                             <div class="card-body">
     
-                                <h3 class="card-title">{{ $news->title }}</h3>
+                                <h3 class="card-title">{{ str_limit($news->title, 50) }}</h3>
     
                                 <p class="card-text">{{ $news->published_at->format('M d, Y') }}</p>
     
@@ -47,4 +49,5 @@
         </div>
     
     </section>
+
 </div>

@@ -17,19 +17,15 @@ class HomeController extends Controller
      */
     public function index(DomainRepository $domainRepository)
     {
-//        if ($domainRepository->getInstanceByBaseUrl()->machine_name == 'main') {
-//            return $this->main($domainRepository);
-//        }
+    	$homeEvents = homeEvents();
 
-        return view('frontend.index');
+        $whies = Whies()->chunk(3);
+
+    	$course = Course();
+
+    	$homeNews = homeNews();
+
+        return view('frontend.index', compact('whies', 'homeEvents', 'course', 'homeNews'));
     }
 
-//    private function main(DomainRepository $domainRepository)
-//    {
-//        $portfolios = [];
-//
-//        return view('frontend.index')->with([
-//            'portfolios' => $portfolios,
-//        ]);
-//    }
 }

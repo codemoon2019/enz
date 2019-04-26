@@ -30,29 +30,29 @@ class WhyTableSeeder extends Seeder
         $data = [
             [
                 'title' => 'Linkages',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
+                'description' => 'We have also established sound connections with our local partners for an ease assistance to our',
                 'status' => 'enable',
             ],
             [
                 'title' => 'Awards',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
+                'description' => 'With the outstanding service and assistance being extended to our clients, ENZ Education Consultancy Services is extremely honored and a proud recipient of two major awards.',
                 'status' => 'enable',
             ],
             [
                 'title' => 'Expertise',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
+                'description' => 'ENZ Education Consultancy Services is committed to provide tailored and unique services in assisting our International Students. What makes our services special is the dedication of the professional and experienced staff to assure quality results.',
                 'status' => 'enable',
 
             ],
             [
                 'title' => 'Customer Service',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
+                'description' => 'ENZ Education Consultancy Services gives priority in the development of the best customer service. Our staffs are trained with good communication and marketing skills. We always believe that Customer Service plays a vital role in customer retention and in account growth by developing trust with customers over problem issues.',
                 'status' => 'enable',
 
             ],
             [
                 'title' => 'Payment Scheme',
-                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
+                'description' => 'Different to other firms and agencies, ENZ Education Consultancy Services has its own system of payment. We prefer PAY-AS-YOU-GO to ensure transparency and clearness of financial/monetary transactions.',
                 'status' => 'enable',
 
             ],
