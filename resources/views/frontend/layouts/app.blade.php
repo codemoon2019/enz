@@ -119,7 +119,7 @@
             <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">Brand New 2019 Overseas Students Guide</p> 
             <a href="#" class="btn btnview-more text-uppercase">Download now!</a>
         </div>
-        <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"><img src="//support.enz.com.ph/pics/icons/icon_offline.gif" border="0" alt="" title=""></span>
+        <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)">asdasdas</span>
     </div>
 
     <button id="top" class="scrollTop btn"><img class="img-fluid" data-src="{{asset('svg/arrow.svg')}}" alt=""></button>

@@ -10350,6 +10350,7 @@ html body {
 
 .scrollTop.scrollTop {
   bottom: 15%;
+  right: 50px;
 }
 
 .scrollTop:hover {
@@ -11122,6 +11123,22 @@ html body {
 
 .footer .footer-info .tel:before {
   background-image: url("/svg/call-answer.svg");
+}
+
+#phplive_btn_1480051776 {
+  height: 80px;
+  width: 80px;
+  background-image: url("/svg/chat.svg"), linear-gradient(#ff7878, #eb5959);
+  background-repeat: no-repeat;
+  background-size: auto;
+  bottom: 10px !important;
+  background-position: center;
+  border-radius: 50%;
+  right: 35px !important;
+}
+
+#phplive_btn_1480051776 img {
+  opacity: 0;
 }
 
 /* Custom, iPhone Retina */
