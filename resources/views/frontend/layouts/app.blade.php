@@ -119,6 +119,7 @@
             <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">Brand New 2019 Overseas Students Guide</p> 
             <a href="#" class="btn btnview-more text-uppercase">Download now!</a>
         </div>
+        <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"><img src="//support.enz.com.ph/pics/icons/icon_offline.gif" border="0" alt="" title=""></span>
     </div>
 
     <button id="top" class="scrollTop btn"><img class="img-fluid" data-src="{{asset('svg/arrow.svg')}}" alt=""></button>
@@ -138,6 +139,15 @@
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script>
     {!! script(mix('js/frontend.js')) !!}
     @stack('after-scripts')
+    <script type="text/javascript">
+    (function() {
+    var phplive_e_1480051776 = document.createElement("script") ;
+    phplive_e_1480051776.type = "text/javascript" ;
+    phplive_e_1480051776.async = true ;
+    phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
+    document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
+    })() ;
+    </script>
     @include('includes.partials.ga')
     </body>
     </html>
