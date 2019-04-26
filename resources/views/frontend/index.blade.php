@@ -6,25 +6,19 @@
 
 <h1 class="d-none">{{app_name()}}</h1>
 
-	<div class="banner-block banner container-fluid px180 mt20 relative">
+<div class="banner-block banner relative">
+        <img src="{{asset('img/enz.gif')}}" class="img-fluid" alt="">
+        <div class="col-sm-4 for-text">
+            {!! findInformation('home-banner-content')->value !!}
+            <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+        </div>
 
-        <div class="row">
-
-            <div class="col-sm-5 for-text align-self-center pb10p">
-
-                {!! findInformation('home-banner-content')->value !!}
-               
-                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
-
-            </div>
-
-            <div class="col-sm-7 for-video">
+            {{-- <div class="col-sm-7 for-video">
 
                 <img src="{{asset('img/temp.png')}}" class="img-fluid" alt="">
 
-            </div>
+            </div> --}}
 
-        </div>
 
     </div>
 

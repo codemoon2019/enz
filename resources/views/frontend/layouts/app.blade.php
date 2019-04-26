@@ -116,7 +116,7 @@
             Back to top
         </button> --}}
         <div class="mag-download fixed-bottom text-center">
-            <img class="img-fluid" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">Brand New 2019 Overseas Students Guide</p> 
+            <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">Brand New 2019 Overseas Students Guide</p> 
             <a href="#" class="btn btnview-more text-uppercase">Download now!</a>
         </div>
     </div>

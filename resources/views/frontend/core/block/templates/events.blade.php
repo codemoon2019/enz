@@ -2,7 +2,7 @@
 
     <div class="container-fluid px180">
     
-        <h2 class="title fs40 text-white mb30">Events</h2>   
+        <h2 class="title fs40 text-white mb80">Events</h2>   
     
         <div class="row">
             

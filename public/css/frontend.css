@@ -10609,17 +10609,21 @@ html body {
   z-index: 1;
 }
 
+.banner-block .for-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
 .events-block {
   position: relative;
-  padding-top: 23%;
-  padding-bottom: 15.5%;
+  padding-bottom: 20%;
   background: url("/img/events.png") no-repeat;
-  margin-top: -18%;
 }
 
 .events-block .plant {
   position: absolute;
-  top: 40%;
+  top: 5%;
   left: 6%;
 }
 
@@ -10901,7 +10905,7 @@ html body {
 }
 
 .mag-download {
-  padding: 10px;
+  padding-top: 10px;
   background-image: linear-gradient(to right, #fadb5d, #f08e28);
 }
 
