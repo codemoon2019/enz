@@ -10607,8 +10607,9 @@ html body {
 }
 
 .banner-block {
-  z-index: 1;
+  z-index: -1;
   display: flex;
+  margin-top: -8%;
 }
 
 .banner-block video {
@@ -10617,7 +10618,7 @@ html body {
 
 .banner-block .for-text {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 10%;
 }
 
