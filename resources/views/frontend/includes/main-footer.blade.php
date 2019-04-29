@@ -50,7 +50,7 @@
                       <div class="form-group">
                         <label for="">Resume / Curriculum Vitae</label><br />
                         <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                        <label class="btn btnread-more text-uppercase" for="file"><span>Choose file</span></label>
+                        <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
                       </div>
                       <div class="form-group">
 
@@ -83,23 +83,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-2 align-self-center text-center">
           <img data-src="{{asset('img/footer-logo.png')}}" class="img-fluid" alt="">
         </div>
-        <div class="col-sm-2 footer-links">
+        <div class="col-sm-2 align-self-center footer-links">
           <ul class="list-unstyled">
             @foreach (Menu('footer-menu')->nodes as $menu)
               <li><a href="{{ $menu->link }}" class="text-white text-uppercase">{{ $menu->name }}</a></li>
             @endforeach
           </ul>
         </div>
-        <div class="col-sm-2 footer-info">
+        <div class="col-sm-2 align-self-center footer-info">
           <ul class="list-unstyled">
             <li class="text-white loc">{{ findSetting('location')->value }}</li>
             <li class="text-white tel">{{ findSetting('contact-number')->value }}</li>
           </ul>
         </div>
-        <div class="col-sm-2 footer-social text-center">
+        <div class="col-sm-2 align-self-center footer-social text-center">
           <h3 class="basic fs18 text-white">Follow Us</h3>
           <ul class="list-inline">
 
@@ -162,10 +162,10 @@
 
           </ul>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-2 align-self-center text-center">
           <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="">          
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-2 align-self-center text-center">
           <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="">          
         </div>
       </div>
@@ -173,12 +173,5 @@
         <small class="text-white">Copyright &copy; 2019 ENZ Education Consultancy Services</small>
       </div>
     </section>
-    {{-- <div class="container credits py24">
-        <ul class="list-unstyled list-inline my0">
-            <li class="list-inline-item basic text-black m0">&copy; Copyright 2019 Riviera Villas</li>
-            <li class="list-inline-item basic m0"><a class="text-green" href="#">Privacy Policy</a></li>
-            <li class="list-inline-item basic m0"><a class="text-green" href="#">Terms of use</a></li>
-        </ul>
-    </div> --}}
 </footer>
 

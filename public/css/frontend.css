@@ -10608,6 +10608,11 @@ html body {
 
 .banner-block {
   z-index: 1;
+  display: flex;
+}
+
+.banner-block video {
+  height: 100%;
 }
 
 .banner-block .for-text {
@@ -10618,13 +10623,14 @@ html body {
 
 .events-block {
   position: relative;
-  padding-bottom: 20%;
+  padding-bottom: 15%;
+  padding-top: 5%;
   background: url("/img/events.png") no-repeat;
 }
 
 .events-block .plant {
   position: absolute;
-  top: 5%;
+  top: 18%;
   left: 6%;
 }
 

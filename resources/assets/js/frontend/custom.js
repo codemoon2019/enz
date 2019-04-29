@@ -103,4 +103,8 @@ $('document').ready(function(){
 			this.appendChild(iframe);
 		});
 	};
+
+	$('.testimonials-block').scroll(function(){
+		alert('hey!');
+	});
 });

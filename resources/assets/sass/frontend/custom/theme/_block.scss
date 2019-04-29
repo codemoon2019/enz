@@ -4,6 +4,10 @@
 //Banner
 .banner-block {
     z-index: 1;
+    display: flex;
+    video {
+        height: 100%;
+    }
     .for-text {
         position: absolute;
         top: 20%;
@@ -13,11 +17,12 @@
 //EVENTS
 .events-block {
     position: relative;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
+    padding-top: 5%;
     background: url('/img/events.png') no-repeat;
     .plant {
         position: absolute;
-        top: 5%;
+        top: 18%;
         left: 6%;
     }
     .row {
