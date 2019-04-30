@@ -13,6 +13,7 @@
         position: absolute;
         top: 30%;
         left: 10%;
+        text-align: justify;
     }
 }
 //EVENTS
@@ -75,6 +76,9 @@
 .courses-block {
     position: relative;
     margin-bottom: 30px;
+    .basic {
+        text-align: justify;
+    }
     .padded {
         padding: 28% 15px;
         background-size: contain;

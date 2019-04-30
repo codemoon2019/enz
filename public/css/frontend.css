@@ -10620,6 +10620,7 @@ html body {
   position: absolute;
   top: 30%;
   left: 10%;
+  text-align: justify;
 }
 
 .events-block {
@@ -10687,6 +10688,10 @@ html body {
 .courses-block {
   position: relative;
   margin-bottom: 30px;
+}
+
+.courses-block .basic {
+  text-align: justify;
 }
 
 .courses-block .padded {
@@ -11111,6 +11116,7 @@ html body {
 .footer .footer-info li {
   font-size: 14px;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .footer .footer-info li:before {
@@ -11241,6 +11247,10 @@ html body {
 
   .news-block {
     margin-top: -14%;
+  }
+
+  .news-block .news .card-title {
+    font-size: 16px;
   }
 
   .footer .know-more {
