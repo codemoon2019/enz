@@ -13,7 +13,9 @@
         position: absolute;
         top: 30%;
         left: 10%;
-        text-align: justify;
+        p {
+            text-align: justify;
+        }
     }
 }
 //EVENTS

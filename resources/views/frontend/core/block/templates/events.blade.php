@@ -35,7 +35,7 @@
                     
                         <div class="col-sm-8 details">
                     
-                            <p class="basic">{{ str_limit($event->title, 40) }}</p>
+                            <p class="basic">{{ str_limit($event->title, 30) }}</p>
                     
                             <a href="{{ route('frontend.events.show', $event->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
                     

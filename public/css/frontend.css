@@ -10620,6 +10620,9 @@ html body {
   position: absolute;
   top: 30%;
   left: 10%;
+}
+
+.banner-block .for-text p {
   text-align: justify;
 }
 
@@ -11230,15 +11233,27 @@ html body {
   }
 
   .events-block .item .num {
-    font-size: 60px;
+    font-size: 44px;
+  }
+
+  .events-block .item .month {
+    font-size: 36px;
   }
 
   .events-block .basic {
     font-size: 21px;
   }
 
+  .events-block .plant {
+    left: 8%;
+  }
+
   .courses-block {
     padding-top: 40px;
+  }
+
+  .courses-block .bman {
+    top: 25%;
   }
 
   .testimonials iframe {
@@ -11250,7 +11265,11 @@ html body {
   }
 
   .news-block .news .card-title {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .news-block .read-more {
+    font-size: 12px;
   }
 
   .footer .know-more {

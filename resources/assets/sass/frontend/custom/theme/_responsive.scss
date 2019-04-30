@@ -65,14 +65,23 @@
     .events-block {
         padding-bottom: 40px;
         .item .num {
-            font-size: 60px;
+            font-size: 44px;
+        }
+        .item .month {
+            font-size: 36px; 
         }
         .basic {
             font-size: 21px;
         }
+        .plant {
+            left: 8%;
+        }
     } 
     .courses-block {
         padding-top: 40px;
+        .bman {
+            top: 25%;
+        }
     }
     .testimonials {
         iframe {
@@ -83,14 +92,16 @@
     .news-block {
         margin-top: -14%;
         .news .card-title {
-            font-size: 16px;
+            font-size: 14px;
+        }
+        .read-more {
+            font-size: 12px;
         }
     }
     .footer .know-more {
         margin-top: -10%;
         padding-bottom: 7%;
     }
-    
 }
 @media only screen and (min-width: 1920px) {
     .px475 {
@@ -100,5 +111,4 @@
     .courses-block img {
         height: auto;
     }
-
 }
