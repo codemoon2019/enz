@@ -48,13 +48,43 @@ class DataSeeder extends Seeder
 
             ['name' => 'About', 'url' => '/about', 'order' => 2],
 
+            ['name' => 'Company', 'url' => '/company', 'order' => 0, 'parent_id' => 3],
+
+            ['name' => 'Vision and Mission', 'url' => '/visson-and-mission', 'order' => 1, 'parent_id' => 3],
+
+            ['name' => 'Core Values', 'url' => '/core-values', 'order' => 2, 'parent_id' => 3],
+
+            ['name' => 'Our Team', 'url' => '/our-teams', 'order' => 3, 'parent_id' => 3],
+
+            ['name' => 'Linkages', 'url' => '/linkages', 'order' => 4, 'parent_id' => 3],
+
             ['name' => 'Courses', 'url' => '/courses', 'order' => 3],
+
+            ['name' => 'Community Services', 'url' => '/community-services', 'order' => 0, 'parent_id' => 9],
+
+            ['name' => 'Business, Management & Marketing', 'url' => '/business-management-marketing', 'order' => 1, 'parent_id' => 9],
+
+            ['name' => 'Hospitality and Cookery', 'url' => '/hospitality-and-cookery', 'order' => 2, 'parent_id' => 9],
+
+            ['name' => 'Information and Technology', 'url' => '/information-and-technology', 'order' => 3, 'parent_id' => 9],
+
+            ['name' => 'Initial Registration for Overseas Nurses', 'url' => '/initail-registration-for-overseas-nurses', 'order' => 4, 'parent_id' => 9],
+
+            ['name' => 'Other Courses', 'url' => '/other-courses', 'order' => 5, 'parent_id' => 9],
 
             ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
             
             ['name' => 'Apply', 'url' => '/apply', 'order' => 5],
+
+            ['name' => 'Become Our Client', 'url' => '/become-our-client', 'order' => 0, 'parent_id' => 17],
+
+            ['name' => 'Be Part of Our Team', 'url' => '/be-part-of-our-team', 'order' => 1, 'parent_id' => 17],
             
             ['name' => 'Students', 'url' => '/students', 'order' => 6],
+
+            ['name' => 'Testimonials', 'url' => '/testimonilas', 'order' => 0, 'parent_id' => 20],
+            
+            ['name' => 'Gallery', 'url' => '/gallery', 'order' => 1, 'parent_id' => 20],
             
             ['name' => 'Contact Us', 'url' => '/contact-us', 'order' => 7],
 

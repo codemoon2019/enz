@@ -73,7 +73,7 @@ class EventTableSeeder extends Seeder
 
             $model = Event::create($value);
 
-            $this->seederUploader($model, 'event/featured.jpg', null, 'featured');
+            // $this->seederUploader($model, 'event/featured.jpg', null, 'featured');
 
             $model->metaTag()->create([
                 'title' => $model->title,

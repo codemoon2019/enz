@@ -53,7 +53,8 @@ class OurTeamController extends Controller
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->paginate(12);
+        // $models = $this->repository()->paginate(12);
+        $models = $Model->all();
 
         return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
     }
