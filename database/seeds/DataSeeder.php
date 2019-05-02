@@ -68,7 +68,7 @@ class DataSeeder extends Seeder
 
             ['name' => 'Information and Technology', 'url' => '/information-and-technology', 'order' => 3, 'parent_id' => 9],
 
-            ['name' => 'Initial Registration for Overseas Nurses', 'url' => '/initail-registration-for-overseas-nurses', 'order' => 4, 'parent_id' => 9],
+            ['name' => 'Healthcare', 'url' => '/healthcare', 'order' => 4, 'parent_id' => 9],
 
             ['name' => 'Other Courses', 'url' => '/other-courses', 'order' => 5, 'parent_id' => 9],
 
@@ -134,7 +134,7 @@ class DataSeeder extends Seeder
             'group' => 'information',
             'label' => 'Location',
             'machine_name' => 'location',
-            'value' => '2/F Door 2B Natividad Bldg. II Ablan Ave. cor. Primo Lazaro St. Brgy. 4, Laoag City, Ilocos Norte 2900',
+            'value' => 'Laoag - HEAD OFFICE: G/F Natividad Bldg. II, Ablan Ave. cor. P. Lazaro St. Brgy. 4, Laoag City, Ilocos Norte',
             'type' => 'text',
             'input_type' => 'text',
         ]);

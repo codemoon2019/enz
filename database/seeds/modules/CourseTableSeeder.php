@@ -50,7 +50,7 @@ class CourseTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Initial Registration for Overseas Nurses',
+                'title' => 'Healthcare',
                 'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
                 'status' => 'enable',
 

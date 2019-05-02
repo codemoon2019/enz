@@ -22,7 +22,7 @@
     
                             </div>
     
-                            <div class="card-body">
+                            <div class="card-body news-details">
     
                                 <h3 class="card-title">{{ str_limit($news->title, 40) }}</h3>
     
@@ -51,3 +51,5 @@
     </section>
 
 </div>
+
+@include('frontend.includes.script.matcheight', ['element' => '.news-details', 'plus_number' => 40])
