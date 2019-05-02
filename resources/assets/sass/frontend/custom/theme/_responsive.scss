@@ -1,5 +1,12 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .px180 {
+        padding: 0 15px;
+    }
+    .pl10p,
+    .pr10p {
+        padding-left: 15px;
+    }
     .user-menu {
         padding: 0;
         img {
@@ -20,6 +27,49 @@
             padding: 18px 0 !important;
         }
     }
+    .banner-block {
+        display: block;
+        .for-text {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            top: auto;
+            left: auto;
+            text-align: center;
+        }
+    }
+    .events-block {
+        background-size: cover;
+        .plant {
+            display: none !important;
+        }
+    }
+    .courses-block {
+        .row {
+            margin-bottom: 30px;
+        }
+    }
+    .news-block {
+        background-size: cover;
+    }
+    .footer{
+        .mb80 {
+            margin: 0 !important;
+        }
+        .right-content {
+            padding-left: 15px;
+        }
+        .know-more {
+            background-size: cover;
+            padding-bottom: 25%;
+            margin-top: -20%;
+        }
+        .footer-links li {
+            display: inline-block;
+            float: left;
+            margin: 0 1%;
+        }
+    } 
 }
 
 @media only screen and (max-width: 320px) {
