@@ -34,7 +34,7 @@ class ServiceController extends Controller
     public function __construct(ServiceRepository $servicesRepository, PageRepository $pageRepository)
     {
         $model = $servicesRepository->makeModel();
-        $this->middleware('page_status:' . get_class($model));
+        // $this->middleware('page_status:' . get_class($model));
 
         $this->servicesRepository = $servicesRepository;
         $this->pageRepository = $pageRepository;
