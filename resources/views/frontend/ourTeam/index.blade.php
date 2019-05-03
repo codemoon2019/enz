@@ -1,23 +1,27 @@
-@extends('frontend.includes.page')
+@extends('frontend.layouts.app')
 
-@section('page-action')
-    @can($Model::permission('index'))
-        <li><a href="{{ $Model->actions('backend', 'index', true) }}">Our Teams</a></li>
-    @endcan
-    @can($page::permission('edit'))
-        <li><a href="{{ $page->actions('backend', 'edit', true) }}">Edit Page</a></li>
-    @endcan
-@endsection
+@section('content')
+  
+  <div class="container">
+	  	
+	  <div class="row">
 
-@section('page-body')
-    @if(count($models))
-        <div class="row">
-            @foreach($models as $a => $model)
-                <div class="col-sm-3">
-                    @include($model::VIEW_FRONTEND_PATH. ".partials.node", ['model' => $model])
-                </div>
-            @endforeach
-        </div>
-    @endif
-    {{ $models->links() }}
+	  	@foreach ($models as $key => $person)
+		
+			<div class="col-md-4">
+
+				<img data-src="{{ $person->getFirstMediaUrl('featured', 'main') }}" alt="" class="img-fluid">
+				
+				<p>{{ $person->title }}</p>
+				
+				<p>{{ $person->position }}</p>
+
+			</div>
+
+	  	@endforeach
+
+	  </div>  
+
+  </div>
+
 @endsection

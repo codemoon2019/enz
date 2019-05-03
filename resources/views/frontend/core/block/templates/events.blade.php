@@ -23,7 +23,7 @@
 
                 <div class="col-sm-4 item mb30" data-aos="fade-up">
 
-                    <div class="d-flex">
+                    <div class="d-flex event-details">
                     
                         <div class="col-sm-4 date text-center py38 text-white {{ $bgColor }}">
                     
@@ -35,7 +35,7 @@
                     
                         <div class="col-sm-8 details">
                     
-                            <p class="basic">{{ str_limit($event->title, 40) }}</p>
+                            <p class="basic">{{ str_limit($event->title, 30) }}</p>
                     
                             <a href="{{ route('frontend.events.show', $event->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
                     
@@ -60,3 +60,5 @@
     </div>
 
 </div>
+
+@include('frontend.includes.script.matcheight', ['element' => '.event-details', 'plus_number' => 0])

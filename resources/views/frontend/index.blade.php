@@ -4,25 +4,25 @@
 
 @section('content')
 
-<h1 class="d-none">{{app_name()}}</h1>
+    <h1 class="d-none">{{app_name()}}</h1>
 
-<div class="banner-block banner relative">
-        {{-- <img data-src="{{asset('img/enz.gif')}}" class="img-fluid" alt=""> --}}
-        <video width="100%" loop autoplay muted>
-            <source src="{{asset('img/enz.mp4')}}" type="video/mp4">
-            <source src="{{asset('img/enz.mp4')}}" type="video/ogg">
-        </video>
-        <div class="col-sm-4 for-text">
-            {!! findInformation('home-banner-content')->value !!}
-            <a href="#" class="btn btnread-more text-uppercase">Read more</a>
-        </div>
+    <div class="banner-block banner relative">
 
-            {{-- <div class="col-sm-7 for-video">
+            <video width="100%" loop autoplay muted>
 
-                <img src="{{asset('img/temp.png')}}" class="img-fluid" alt="">
-
-            </div> --}}
-
+                <source src="{{asset('img/enz.mp4')}}" type="video/mp4">
+            
+                <source src="{{asset('img/enz.mp4')}}" type="video/ogg">
+            
+            </video>
+            
+            <div class="col-sm-4 for-text">
+            
+                {!! findInformation('home-banner-content')->value !!}
+            
+                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+            
+            </div>
 
     </div>
 

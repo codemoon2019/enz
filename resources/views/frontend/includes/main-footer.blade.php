@@ -54,7 +54,7 @@
                       </div>
                       <div class="form-group">
 
-                        {!! Captcha::display() !!}
+                        {{-- {!! Captcha::display() !!} --}}
 
                       </div>
                     </div>
@@ -69,7 +69,7 @@
     </section>
     <section class="know-more px180">
       <div class="row justify-content-center mb80">
-        <div class="col-sm-6 subscribe text-center">
+        <div class="col subscribe text-center">
           <h2 class="title fs40 text-white mb10">Want to know more?</h2>
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
           <div class="input-group mb-3">
