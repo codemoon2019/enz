@@ -23,7 +23,7 @@
 
             <div class="row">
                 <div class="col-sm-4" data-aos="zoom-in">
-                    <h2 class="title title-large text-yellow text-capitalize fs40">Our Company</h2>
+                    <h2 class="title text-yellow text-capitalize fs40">Our Company</h2>
                 </div>
                 <div class="col-sm-8" data-aos="zoom-in">
                     <p class="basic text-white fs18">ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
@@ -33,7 +33,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4" data-aos="fade-right">
-                    <h3 class="title title-large text-yellow text-capitalize fs24">Registration</h3>
+                    <h3 class="title text-yellow text-capitalize fs24">Registration</h3>
                 </div>
                 <div class="col-sm-8" data-aos="fade-left">
                     <ul>
@@ -46,7 +46,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4" data-aos="fade-right">
-                    <h3 class="title title-large text-yellow text-capitalize fs24">Professional Membership</h3>
+                    <h3 class="title text-yellow text-capitalize fs24">Professional Membership</h3>
                 </div>
                 <div class="col-sm-8" data-aos="fade-left">
                     <ul>
@@ -56,5 +56,25 @@
             </div>
         </div>
         <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="" data-aos="fade-right">
+    </div>
+    <div class="block mv-block">
+        <div class="container-fluid px180 py80 text-center">
+            <div id="carouselId" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <h2 class="title text-yellow text-capitalize fs40 mb30">Vision</h2>
+                        <h3 class="title text-nblue text-capitalize fs40 mb0">"To become one of the leading educational consultancy firm in the country in providing high-quality service and assistance to genuine international students."</h3>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="title text-yellow text-capitalize fs40 mb30">Mission</h2>
+                        <h3 class="title text-nblue text-capitalize fs40 mb0">"Our mission is to provide meaningful accomplishments of International Students aiming for an Australian Education and Qualifications through a goal-driven and service-oriented assistance"</h3>                       
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselId" data-slide-to="1"></li>
+                </ol>
+            </div>
+        </div>
     </div>
 @endsection

@@ -3,7 +3,7 @@
     .content-block {
         margin-top: -17%;
         position: relative;
-        padding-bottom: 15%;
+        padding-bottom: 10%;
         padding-top: 5%;
         background: url(/img/about/our-company-bg.png) no-repeat;
         .container-fluid {
@@ -16,6 +16,27 @@
         }
         ul {
             padding-left: 20px;
+        }
+    }
+    .mv-block {
+        margin-top: -10%;
+        background-color: #eff1f5;
+        padding-bottom: 200px !important;
+
+        .carousel-indicators {
+            bottom: -50%;
+            li {
+                width: 12px;
+                height: 13px;
+                border-radius: 100%;
+                background-color: transparent;
+                border: 1px solid $red;
+                border-top: none;
+                border-bottom: none;
+            }
+            li.active {
+                background-color: $red;
+            }
         }
     }
 }
