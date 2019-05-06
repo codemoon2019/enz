@@ -30,6 +30,8 @@
 
     svg {
         height: 5px;
+        fill: $blue;
+        transition: all ease 300ms;
     }
 
     .nav-item .nav-link {
@@ -46,6 +48,10 @@
         &:active {
             color: $yellow;
             transition: all ease 300ms;
+            svg {
+                fill: $yellow;
+                transition: all ease 300ms;
+            }
             
         }
     }

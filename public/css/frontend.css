@@ -10509,6 +10509,8 @@ html body {
 
 .user-menu svg {
   height: 5px;
+  fill: #3fb1e5;
+  transition: all ease 300ms;
 }
 
 .user-menu .nav-item .nav-link {
@@ -10524,6 +10526,13 @@ html body {
 .user-menu .nav-item .nav-link:focus,
 .user-menu .nav-item .nav-link:active {
   color: #ffca30;
+  transition: all ease 300ms;
+}
+
+.user-menu .nav-item .nav-link:hover svg,
+.user-menu .nav-item .nav-link:focus svg,
+.user-menu .nav-item .nav-link:active svg {
+  fill: #ffca30;
   transition: all ease 300ms;
 }
 
