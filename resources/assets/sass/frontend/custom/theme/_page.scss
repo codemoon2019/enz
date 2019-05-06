@@ -1,1 +1,21 @@
 // This page will be used for Main pages like "Services", recommended body class will be ".page-$page-name"
+.page-about-company {
+    .content-block {
+        margin-top: -17%;
+        position: relative;
+        padding-bottom: 15%;
+        padding-top: 5%;
+        background: url(/img/about/our-company-bg.png) no-repeat;
+        .container-fluid {
+            padding-top: 20% !important;
+        }
+        .plane {
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    }
+}

@@ -233,6 +233,10 @@
   padding: 0 180px;
 }
 
+.px420 {
+  padding: 0 420px;
+}
+
 .pl20 {
   padding-left: 20px;
 }
@@ -289,6 +293,10 @@
 
 .text-blue {
   color: #3fb1e5;
+}
+
+.text-yellow {
+  color: #ffca30;
 }
 
 .fs40 {
@@ -10615,23 +10623,23 @@ html body {
   display: none;
 }
 
-.banner-block {
+.front .banner-block {
   z-index: -1;
   display: flex;
   margin-top: -8%;
 }
 
-.banner-block video {
+.front .banner-block video {
   height: 100%;
 }
 
-.banner-block .for-text {
+.front .banner-block .for-text {
   position: absolute;
   top: 30%;
   left: 10%;
 }
 
-.banner-block .for-text p {
+.front .banner-block .for-text p {
   text-align: justify;
 }
 
@@ -10949,6 +10957,28 @@ html body {
 .mag-download .btnview-more:hover {
   background: #1a8bbf;
   color: #fff;
+}
+
+.page-about-company .content-block {
+  margin-top: -17%;
+  position: relative;
+  padding-bottom: 15%;
+  padding-top: 5%;
+  background: url(/img/about/our-company-bg.png) no-repeat;
+}
+
+.page-about-company .content-block .container-fluid {
+  padding-top: 20% !important;
+}
+
+.page-about-company .content-block .plane {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+.page-about-company .content-block ul {
+  padding-left: 20px;
 }
 
 .footer .flags img {

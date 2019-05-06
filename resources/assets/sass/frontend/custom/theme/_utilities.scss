@@ -21,6 +21,9 @@
 .px180 {
     padding: 0 180px;
 }
+.px420 {
+    padding: 0 420px;
+}
 
 .pl20 {
     padding-left: 20px;
@@ -69,7 +72,10 @@
 }
 
 .text-blue {
-    color: #3fb1e5;
+    color: $blue;
+}
+.text-yellow {
+    color: $yellow;
 }
 
 //Fonts 
