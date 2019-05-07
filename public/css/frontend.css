@@ -11184,6 +11184,23 @@ html body {
   right: 10%;
 }
 
+.page-apply .content-block {
+  margin-top: -14.5%;
+  position: relative;
+  padding-top: 30%;
+  background: url(/img/apply/bg.png) no-repeat;
+}
+
+.page-apply .jobs .card-body .btnread-more {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.page-apply .jobs .card-body ul {
+  padding-left: 20px;
+}
+
 .footer .flags img {
   z-index: 0;
   position: absolute;

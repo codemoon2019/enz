@@ -170,3 +170,22 @@
         }
     }
 }
+
+.page-apply {
+    .content-block {
+        margin-top: -14.5%;
+        position: relative;
+        padding-top: 30%;
+        background: url(/img/apply/bg.png) no-repeat;
+    }
+    .jobs .card-body {
+        .btnread-more {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    }
+}

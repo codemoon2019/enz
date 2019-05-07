@@ -28,6 +28,12 @@ Route::get('/linkages',function(){
 Route::get('/community-services',function(){
     return view('frontend.courses');
 });
+Route::get('/become-our-client',function(){
+    return view('frontend.become-our-client');
+});
+Route::get('/testimonilas',function(){
+    return view('frontend.testimonials');
+});
 // Route::get('the-site',function(){
 //     return view('frontend.the-site');
 // });
