@@ -44,7 +44,7 @@ class SubCoursesTableSeeder extends Seeder
             }
 
             $data = [
-                'course_id'   => 1,
+                'course_id'   => $id,
                 'title'       => 'Course ' . $i,
                 'description' => 'Description',
             ];
@@ -57,12 +57,6 @@ class SubCoursesTableSeeder extends Seeder
                 'keywords' => str_replace('-', ',', $model->slug),
             ]);
         }
-
-
-
-        foreach (factory(SubCourses::class, 30)->create() as $model) {
-        }
-
         $this->enableForeignKeys();
     }
 }

@@ -18,9 +18,9 @@ class CreateSubCoursesTable extends Migration
     {
         Schema::create('sub_courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('course_id')->nullable();
+            $table->integer('course_id');
             $table->string('title')->unique();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
             
