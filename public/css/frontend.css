@@ -245,10 +245,6 @@
   padding: 0 180px;
 }
 
-.px420 {
-  padding: 0 420px;
-}
-
 .pl20 {
   padding-left: 20px;
 }
@@ -291,6 +287,10 @@
 
 .pt20p {
   padding-top: 20%;
+}
+
+.pb17p {
+  padding-bottom: 17%;
 }
 
 .w-70 {
@@ -11113,11 +11113,11 @@ html body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.services-visa .banner-block {
+.page-services .banner-block {
   z-index: 1;
 }
 
-.services-visa .banner-block .container-fluid {
+.page-services .banner-block .container-fluid {
   padding-left: 135px;
 }
 
@@ -11126,6 +11126,62 @@ html body {
   position: relative;
   padding-top: 30%;
   background: url(/img/services/visa-bg.png) no-repeat;
+}
+
+.tourist-visa .content-block {
+  margin-top: -14.5%;
+  position: relative;
+  padding-top: 20%;
+  background: url(/img/services/tour-bg.png) no-repeat;
+}
+
+.tourist-visa .content-block .card {
+  background: transparent;
+  border: none;
+}
+
+.tourist-visa .content-block .card img {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+.tourist-visa .content-block .card .card-footer {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+}
+
+.tourist-visa .content-block .row {
+  margin: 0 -7.5px;
+}
+
+.tourist-visa .content-block .row > div {
+  padding: 0 7.5px;
+}
+
+.page-courses .search-courses {
+  background: url(/img/courses/bg.png) no-repeat;
+  background-position: bottom;
+  height: 94vh;
+  display: flex;
+  align-items: center;
+  padding-top: 15%;
+}
+
+.page-courses .search-courses .form-control {
+  height: 56px;
+  border-radius: 35px;
+  font-size: 18px;
+  background: #fff;
+}
+
+.page-courses .search-courses .intro {
+  padding-left: 192px;
+}
+
+.page-courses .search-courses .intro img {
+  position: absolute;
+  top: 8%;
+  right: 10%;
 }
 
 .footer .flags img {
@@ -11463,8 +11519,16 @@ html body {
     max-height: 40px;
   }
 
+  .user-menu .nav-item {
+    padding: 0 5px !important;
+  }
+
   .user-menu .nav-item .nav-link {
     font-size: 14px;
+  }
+
+  .fixed .user-menu .nav-item {
+    padding: 0 18px !important;
   }
 
   .banner-block .row > div {
@@ -11523,6 +11587,10 @@ html body {
 }
 
 @media only screen and (min-width: 1920px) {
+  .px420 {
+    padding: 0 420px;
+  }
+
   .px475 {
     padding-left: 475px;
     padding-right: 475px;

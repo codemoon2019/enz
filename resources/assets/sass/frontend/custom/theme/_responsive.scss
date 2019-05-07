@@ -101,10 +101,18 @@
                 max-height: 40px;
             }
         }
+        .nav-item {
+            padding: 0 5px !important;
+        }
         .nav-item .nav-link {
             font-size: 14px;
         }
     } 
+    .fixed .user-menu{
+        .nav-item {
+            padding: 0 18px !important;
+        }
+    }
     .banner-block {
         .row > div {
             flex: 0 0 50%;
@@ -153,6 +161,9 @@
     }
 }
 @media only screen and (min-width: 1920px) {
+    .px420 {
+        padding: 0 420px;
+    }
     .px475 {
         padding-left: 475px;
         padding-right: 475px;

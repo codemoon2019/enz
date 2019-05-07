@@ -103,17 +103,70 @@
     }
 }
 
-.services-visa {
+.page-services {
     .banner-block {
         z-index: 1;
         .container-fluid {
             padding-left: 135px;
         }
     }
+}
+.services-visa {
     .content-block {
         margin-top: -14.5%;
         position: relative;
         padding-top: 30%;
         background: url(/img/services/visa-bg.png) no-repeat;
+    }
+}
+.tourist-visa {
+    .content-block {
+        margin-top: -14.5%;
+        position: relative;
+        padding-top: 20%;
+        background: url(/img/services/tour-bg.png) no-repeat;
+        .card {
+            background: transparent;
+            border: none;
+            img {
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+            }
+            .card-footer {
+                border-bottom-left-radius: 35px !important;
+                border-bottom-right-radius: 35px !important;
+            }
+        }
+        .row {
+            margin: 0 -7.5px;
+            > div {
+                padding: 0 7.5px;
+            }
+        }
+    }
+}
+
+.page-courses {
+    .search-courses {
+        background: url(/img/courses/bg.png) no-repeat;
+        background-position: bottom;
+        height: 94vh;
+        display: flex;
+        align-items: center;
+        padding-top: 15%;
+        .form-control {
+            height: 56px;
+            border-radius: 35px;
+            font-size: 18px;
+            background: $white;
+        }
+        .intro {
+            padding-left: 192px;
+            img {
+                position: absolute;
+                top: 8%;
+                right: 10%
+            }
+        }
     }
 }

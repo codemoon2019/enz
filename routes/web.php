@@ -19,8 +19,14 @@ Route::get('/company',function(){
 Route::get('/student-visa',function(){
     return view('frontend.student-visa');
 });
+Route::get('/tourist-visa',function(){
+    return view('frontend.tourist-visa');
+});
 Route::get('/linkages',function(){
     return view('frontend.linkages');
+});
+Route::get('/community-services',function(){
+    return view('frontend.courses');
 });
 // Route::get('the-site',function(){
 //     return view('frontend.the-site');
