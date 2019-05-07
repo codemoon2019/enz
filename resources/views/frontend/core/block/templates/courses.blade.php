@@ -28,7 +28,7 @@
     
         <div class="row bus-service">
     
-            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
+            <div class="col-sm-6 left-content pr10p align-self-center col-sm-push-8" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[1]->title }}</h3>
     
@@ -38,7 +38,7 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 right-content padded col-sm-pull-4" data-aos="zoom-in">
     
                 <img class="floating bman" data-src="{{asset('svg/bman.svg')}}" alt="">
     

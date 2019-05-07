@@ -1,1 +1,104 @@
 // This page will be used for Main pages like "Services", recommended body class will be ".page-$page-name"
+.page-about-company {
+    .content-block {
+        margin-top: -17%;
+        position: relative;
+        padding-bottom: 10%;
+        padding-top: 5%;
+        background: url(/img/about/our-company-bg.png) no-repeat;
+        .container-fluid {
+            padding-top: 20% !important;
+        }
+        .plane {
+            position: absolute;
+            top: 20%;
+            left: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    }
+    .mv-block {
+        margin-top: -10%;
+        background-color: #eff1f5;
+        padding-bottom: 200px !important;
+
+        .carousel-indicators {
+            bottom: -50%;
+            li {
+                width: 12px;
+                height: 13px;
+                border-radius: 100%;
+                background-color: transparent;
+                border: 1px solid $red;
+                border-top: none;
+                border-bottom: none;
+            }
+            li.active {
+                background-color: $red;
+            }
+        }
+    }
+    .values-block {
+        .circle {
+            padding: 5%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    }
+}
+.page-about-linkages {
+    .card {
+        border: none;
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+        
+        background: transparent;
+    }
+    .card-header {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        cursor: pointer;
+        .title {
+            display: inline-block;
+            margin-top: 3px;
+        }
+        .img-arrow {
+            margin-top: 5px;
+            transform: rotate(90deg);
+            transition: transform .8s ease-in-out;
+        }
+        .img-arrow.rotateme {
+            transform: rotate(-90deg);
+            transition: transform .8s ease-in-out;
+        }
+    }
+    .card-body {
+        border-bottom-left-radius: 35px !important;
+        border-bottom-right-radius: 35px !important;
+    }
+    .link-aus {
+        background: url(/img/about/aust.png) no-repeat;
+        background-repeat: no-repeat;
+        background-position: top;
+        padding-bottom: 20px;
+        .container-fluid {
+            background: url(/svg/about/aus.svg) no-repeat;
+            background-repeat: no-repeat;
+            background-position: 88% 35%;
+            background-attachment: fixed;
+        }
+    }
+    .item {
+        .card-body {
+            padding: 12%;
+            background: $white;
+            border-radius: 25px !important;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+}

@@ -30,6 +30,8 @@
 
     svg {
         height: 5px;
+        fill: $blue;
+        transition: all ease 300ms;
     }
 
     .nav-item .nav-link {
@@ -46,17 +48,25 @@
         &:active {
             color: $yellow;
             transition: all ease 300ms;
+            svg {
+                fill: $yellow;
+                transition: all ease 300ms;
+            }
             
         }
     }
     .nav-item.active .nav-link {
+        color: $yellow;
         &:after {
             opacity: 1;
             width: 20px;
         }
         svg {
-            fill: $blue;
+            fill: $yellow;
         }
+    }
+    .nav-item.active .dropdown-menu .nav-link {
+        color: $blue;
     }
     .navbar-toggler:focus,
     .navbar-toggler:active {
@@ -103,12 +113,13 @@
     .dropdown:hover>.dropdown-menu {
         display: block;
         margin-top: 0;
-        a {
+        .nav-link {
             transition: all ease 300ms;
             &:hover,
             &:focus,
             &:active {
-                background-color: transparent;
+                background: $blue;
+                color: $white;
                 outline: none;
                 box-shadow: none;
                 transition: all ease 300ms;
@@ -117,5 +128,13 @@
                 display: none;
             }
         }
-    }    
+        
+    }  
+    .dropdown-menu {
+        padding: 0;
+        .nav-link {
+            font-size: 14px;
+            padding: 2px 8px;
+        }
+    }  
 }

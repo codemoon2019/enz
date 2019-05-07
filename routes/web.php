@@ -13,9 +13,12 @@ Route::get('lang/{lang}', 'LanguageController');
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_files(__DIR__ . '/frontend/');
 });
-// Route::get('villas',function(){
-//     return view('frontend.villas');
-// });
+Route::get('/company',function(){
+    return view('frontend.about-company');
+});
+Route::get('/linkages',function(){
+    return view('frontend.linkages');
+});
 // Route::get('the-site',function(){
 //     return view('frontend.the-site');
 // });
