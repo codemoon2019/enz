@@ -18,7 +18,7 @@
                 <h3 class="title text-white fs18">Melbourne</h3>
                 <img data-src="{{asset('svg/arrow.svg')}}" class="img-fluid img-arrow pull-right" alt="">
                 </div>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
+                <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
                     <div class="card-body linear-gradient-grey">
                         <div class="row">
                             <div class="col-sm-3 item mb30">
@@ -56,12 +56,12 @@
                 </div>
             </div>
             <div class="card mb30">
-                <div class="card-header linear-gradient-teal" id="headingOne"  data-toggle="collapse" data-target="#collapseOne">
+                <div class="card-header linear-gradient-teal" id="headingTwo"  data-toggle="collapse" data-target="#collapseTwo">
                 <img data-src="{{asset('svg/maps-and-flags.svg')}}" class="img-fluid pull-left mr10" alt="">
                 <h3 class="title text-white fs18">Sydney</h3>
                 <img data-src="{{asset('svg/arrow.svg')}}" class="img-fluid img-arrow pull-right" alt="">
                 </div>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
+                <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo" data-parent="#myAccordion">
                     <div class="card-body linear-gradient-grey">
                         <div class="row">
                             <div class="col-sm-3 item mb30">

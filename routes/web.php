@@ -16,6 +16,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 Route::get('/company',function(){
     return view('frontend.about-company');
 });
+Route::get('/student-visa',function(){
+    return view('frontend.student-visa');
+});
 Route::get('/linkages',function(){
     return view('frontend.linkages');
 });
