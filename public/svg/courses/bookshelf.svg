@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="461" height="373.92" viewBox="0 0 461 373.92">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.166" stop-color="#ff7878"/>
+      <stop offset="0.78" stop-color="#eb5959"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.106" stop-color="#00bacf"/>
+      <stop offset="0.809" stop-color="#008db0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.23" stop-color="#fadb5d"/>
+      <stop offset="0.97" stop-color="#f08e28"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.092" stop-color="#ffbd8a"/>
+      <stop offset="0.844" stop-color="#f09a59"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-10" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3e569c"/>
+      <stop offset="1" stop-color="#3fb1e5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-11" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#64ffbd"/>
+      <stop offset="1" stop-color="#08b96e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-14" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e6e6e6"/>
+    </linearGradient>
+  </defs>
+  <g id="bookshelf" transform="translate(0.5 -43.021)">
+    <path id="Union_115" data-name="Union 115" d="M9511,13349.591l1.853-25.71,52.4,1.729-1.729,23.981Zm2.649-36.743,9.713-136.77h52.522l-9.84,138.516Zm11.763-160.976,2.678-36.313h52.522l-2.677,36.313Z" transform="translate(-9448.789 -12973.149)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
+    <path id="Path_4985" data-name="Path 4985" d="M64.064,350.686l52.4,1.745.8-10.986L64.86,339.7Z" stroke="#000" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    <path id="Path_4988" data-name="Path 4988" d="M74.574,202.93H127.1l2.051-24.206H76.625Z" stroke="#000" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    <path id="Union_114" data-name="Union 114" d="M9511,13446.43v-217.893h72.635v217.893Zm0-290.518v-40.354h72.635v40.354Z" transform="translate(-9377.837 -13069.988)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    <rect id="Rectangle_960" data-name="Rectangle 960" width="72.635" height="72.629" transform="translate(133.163 85.923)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-5)"/>
+    <rect id="Rectangle_961" data-name="Rectangle 961" width="52.463" height="44.379" transform="translate(213.857 194.869)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    <path id="Union_113" data-name="Union 113" d="M9511,13410.113V13373.8h52.461v36.313Zm0-52.461v-84.733h52.461v84.733Zm0-129.11v-60.535h52.461v60.535Zm0-72.638v-40.346h52.461v40.346Z" transform="translate(-9297.143 -13033.672)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-5)"/>
+    <rect id="Rectangle_964" data-name="Rectangle 964" width="52.463" height="16.146" transform="translate(213.857 323.981)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-8)"/>
+    <rect id="Rectangle_967" data-name="Rectangle 967" width="52.463" height="12.1" transform="translate(213.857 122.234)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-8)"/>
+    <path id="Path_4989" data-name="Path 4989" d="M293.736,72.751l-25.325,1.762L269.5,88.276l25.312-1.768Z" stroke="#000" stroke-width="1" fill="url(#linear-gradient-10)"/>
+    <path id="Union_116" data-name="Union 116" d="M9537.079,13448.443l-2.524-31.791,25.209-3.253,2.774,35.044Zm-22.778-288.168,25.311-1.769,18.33,231.783-25.206,3.233Zm-3.3-42.705,25.31-2.012,2.225,29.191-25.327,1.762Z" transform="translate(-9244.798 -13072)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-11)"/>
+    <path id="Path_4993" data-name="Path 4993" d="M287.938,321.523l1.821,23.08,25.207-3.234-1.821-23.08Z" stroke="#000" stroke-width="1" fill="url(#linear-gradient-10)"/>
+    <path id="Union_117" data-name="Union 117" d="M9511,13385.91v-52.461h72.637v52.461Zm0-112.981v-157.368h72.637v157.368Z" transform="translate(-9188.2 -13009.467)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-10)"/>
+    <rect id="Rectangle_970" data-name="Rectangle 970" width="72.635" height="60.519" transform="translate(322.8 263.462)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-14)"/>
+    <rect id="Rectangle_971" data-name="Rectangle 971" width="460" height="40" transform="translate(0 376.441)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-8)"/>
+  </g>
+</svg>

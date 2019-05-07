@@ -133,9 +133,30 @@ $('document').ready(function(){
 		alert('hey!');
 	});
 
-	$('.accordion .card-header').each(function() {
-		$(this).on('click',function() {
-			$(this).find('.img-arrow').toggleClass('rotateme')
-		});
+	// $('.accordion .card-header').each(function() {
+	// 	$(this).on('click',function() {
+	// 		// $('.img-arrow').removeClass('rotateme')
+	// 		// $(this).find('.img-arrow').toggleClass('rotateme')
+	// 		$(this).find('.img-arrow').removeClass('rotateme')
+	// 		if($('.img-arrow').hasClass('rotateme')) {
+	// 			$(this).find('.img-arrow').removeClass('rotateme')
+	// 		}else {
+	// 			$(this).find('.img-arrow').addClass('rotateme')
+	// 		}
+
+	// 	});
+	// });
+
+	$('.panel-collapse').on('shown.bs.collapse', function (e) {
+		console.log(e)
+		var $panel = $(this).closest('.card');
+		$panel.find('.img-arrow').addClass('rotateme')
+		$('html,body').animate({
+			scrollTop: $panel.offset().top - 140
+		}, 800);
+	});
+	$('.panel-collapse').on('hidden.bs.collapse', function (e) {
+		var $panel = $(this).closest('.card');
+		$panel.find('.img-arrow').removeClass('rotateme')		
 	});
 });

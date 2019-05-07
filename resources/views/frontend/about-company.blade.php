@@ -10,7 +10,7 @@
                 <img data-src="{{asset('img/about/banner.png')}}" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-5 pt80">
-                    <h1 class="title title-large text-black text-capitalize">Our Company</h1>
+                    <h1 class="title title-large mb30 text-black text-capitalize">Our Company</h1>
                     <p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
                     <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>
                     <a href="#" class="btn btnread-more text-uppercase">Read more</a>
@@ -58,7 +58,7 @@
         <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="" data-aos="fade-right">
     </div>
     <div class="block mv-block">
-        <div class="container-fluid px180 py80 text-center">
+        <div class="container-fluid px180 pt10p text-center">
             <div id="carouselId" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">

@@ -16,8 +16,23 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 Route::get('/company',function(){
     return view('frontend.about-company');
 });
+Route::get('/student-visa',function(){
+    return view('frontend.student-visa');
+});
+Route::get('/tourist-visa',function(){
+    return view('frontend.tourist-visa');
+});
 Route::get('/linkages',function(){
     return view('frontend.linkages');
+});
+Route::get('/community-services',function(){
+    return view('frontend.courses');
+});
+Route::get('/become-our-client',function(){
+    return view('frontend.become-our-client');
+});
+Route::get('/testimonilas',function(){
+    return view('frontend.testimonials');
 });
 // Route::get('the-site',function(){
 //     return view('frontend.the-site');
