@@ -11,6 +11,12 @@
 .linear-gradient-green {
     background-image:linear-gradient(#64ffbd, #08b96e);
 }
+.linear-gradient-teal {
+    background-image:linear-gradient(#00bacf, #008db0);
+}
+.linear-gradient-grey {
+    background-image:linear-gradient(#fff, #e6e6e6);
+}
 .floating {
     transform: translatey(0px);
 	animation: float 3s ease-in-out infinite;

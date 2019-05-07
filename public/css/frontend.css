@@ -131,6 +131,14 @@
   background-image: linear-gradient(#64ffbd, #08b96e);
 }
 
+.linear-gradient-teal {
+  background-image: linear-gradient(#00bacf, #008db0);
+}
+
+.linear-gradient-grey {
+  background-image: linear-gradient(#fff, #e6e6e6);
+}
+
 .floating {
   -webkit-transform: translatey(0px);
           transform: translatey(0px);
@@ -275,6 +283,10 @@
 
 .pb10p {
   padding-bottom: 10%;
+}
+
+.pt10p {
+  padding-top: 10%;
 }
 
 .pt20p {
@@ -10636,8 +10648,13 @@ html body {
   display: none;
 }
 
+.user-menu .dropdown-menu {
+  padding: 0;
+}
+
 .user-menu .dropdown-menu .nav-link {
   font-size: 14px;
+  padding: 2px 8px;
 }
 
 .front .banner-block {
@@ -11030,6 +11047,67 @@ html body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.page-about-linkages .card {
+  border: none;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  background: transparent;
+}
+
+.page-about-linkages .card-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+}
+
+.page-about-linkages .card-header .title {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.page-about-linkages .card-header .img-arrow {
+  margin-top: 5px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.page-about-linkages .card-header .img-arrow.rotateme {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.page-about-linkages .card-body {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+}
+
+.page-about-linkages .link-aus {
+  background: url(/img/about/aust.png) no-repeat;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-bottom: 20px;
+}
+
+.page-about-linkages .link-aus .container-fluid {
+  background: url(/svg/about/aus.svg) no-repeat;
+  background-repeat: no-repeat;
+  background-position: 88% 35%;
+  background-attachment: fixed;
+}
+
+.page-about-linkages .item .card-body {
+  padding: 12%;
+  background: #fff;
+  border-radius: 25px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .footer .flags img {

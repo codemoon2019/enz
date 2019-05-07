@@ -77,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="block values-block">
+    <div class="block values-block"  data-aos="zoom-in">
         <div class="container-fluid py80 px475 text-center">
             <div class="row">
                 <div class="col-sm-4 item">

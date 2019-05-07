@@ -132,4 +132,10 @@ $('document').ready(function(){
 	$('.testimonials-block').scroll(function(){
 		alert('hey!');
 	});
+
+	$('.accordion .card-header').each(function() {
+		$(this).on('click',function() {
+			$(this).find('.img-arrow').toggleClass('rotateme')
+		});
+	});
 });
