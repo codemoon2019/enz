@@ -76,8 +76,16 @@
                         </li>
 
                     @else
-                    
-                        <li class="nav-item px18 {{ strpos($url, $node->url) !== false ? 'active' : ''  }}">
+
+                        @if ($node->url == '/' && $url == env('APP_URL'))
+
+                            <li class="nav-item px18 active">
+
+                        @else
+                            
+                            <li class="nav-item px18 {{ (strpos($url, $node->url) !== false && $node->url != '/') ? 'active' : ''  }}">
+                        
+                        @endif
 
                             <a href="{{ $node->url }}" target="_self" class="nav-link">
                             
@@ -89,9 +97,7 @@
                     
                     @endif
 
-                
                 @endforeach
-
     
             </ul>
     
