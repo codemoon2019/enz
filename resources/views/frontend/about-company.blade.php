@@ -9,7 +9,7 @@
                 <div class="col-sm-7">
                 <img data-src="{{asset('img/about/banner.png')}}" class="img-fluid" alt="">
                 </div>
-                <div class="col-sm-5 align-self-center">
+                <div class="col-sm-5 pt80">
                     <h1 class="title title-large text-black text-capitalize">Our Company</h1>
                     <p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
                     <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>
@@ -74,6 +74,33 @@
                     <li data-target="#carouselId" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselId" data-slide-to="1"></li>
                 </ol>
+            </div>
+        </div>
+    </div>
+    <div class="block values-block">
+        <div class="container-fluid py80 px475 text-center">
+            <div class="row">
+                <div class="col-sm-4 item">
+                    <div class="circle linear-gradient-red mx-auto mb30">
+                        <img data-src="{{asset('img/about/integrity.png')}}" class="img-fluid" alt="">
+                    </div>
+                    <p class="title fs18 mb30">Integrity</p>
+                    <p class="basic fs18">We do the right thing</p>
+                </div>
+                <div class="col-sm-4 item">
+                    <div class="circle linear-gradient-yellow mx-auto mb30">
+                        <img data-src="{{asset('img/about/teamwork.png')}}" class="img-fluid" alt="">
+                    </div>
+                    <p class="title fs18 mb30">Integrity</p>
+                    <p class="basic fs18">We do the right thing</p>
+                </div>
+                <div class="col-sm-4 item">
+                    <div class="circle linear-gradient-green mx-auto mb30">
+                        <img data-src="{{asset('img/about/honesty.png')}}" class="img-fluid" alt="">
+                    </div>
+                    <p class="title fs18 mb30">Integrity</p>
+                    <p class="basic fs18">We do the right thing</p>
+                </div>
             </div>
         </div>
     </div>

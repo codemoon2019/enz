@@ -127,6 +127,10 @@
   background-image: linear-gradient(#ffbd8a, #f09a59);
 }
 
+.linear-gradient-green {
+  background-image: linear-gradient(#64ffbd, #08b96e);
+}
+
 .floating {
   -webkit-transform: translatey(0px);
           transform: translatey(0px);
@@ -10544,13 +10548,21 @@ html body {
   transition: all ease 300ms;
 }
 
+.user-menu .nav-item.active .nav-link {
+  color: #ffca30;
+}
+
 .user-menu .nav-item.active .nav-link:after {
   opacity: 1;
   width: 20px;
 }
 
 .user-menu .nav-item.active .nav-link svg {
-  fill: #3fb1e5;
+  fill: #ffca30;
+}
+
+.user-menu .nav-item.active .dropdown-menu .nav-link {
+  color: #3fb1e5;
 }
 
 .user-menu .navbar-toggler:focus,
@@ -10606,21 +10618,26 @@ html body {
   margin-top: 0;
 }
 
-.user-menu .dropdown:hover > .dropdown-menu a {
+.user-menu .dropdown:hover > .dropdown-menu .nav-link {
   transition: all ease 300ms;
 }
 
-.user-menu .dropdown:hover > .dropdown-menu a:hover,
-.user-menu .dropdown:hover > .dropdown-menu a:focus,
-.user-menu .dropdown:hover > .dropdown-menu a:active {
-  background-color: transparent;
+.user-menu .dropdown:hover > .dropdown-menu .nav-link:hover,
+.user-menu .dropdown:hover > .dropdown-menu .nav-link:focus,
+.user-menu .dropdown:hover > .dropdown-menu .nav-link:active {
+  background: #3fb1e5;
+  color: #fff;
   outline: none;
   box-shadow: none;
   transition: all ease 300ms;
 }
 
-.user-menu .dropdown:hover > .dropdown-menu a:after {
+.user-menu .dropdown:hover > .dropdown-menu .nav-link:after {
   display: none;
+}
+
+.user-menu .dropdown-menu .nav-link {
+  font-size: 14px;
 }
 
 .front .banner-block {
@@ -11003,6 +11020,16 @@ html body {
 
 .page-about-company .mv-block .carousel-indicators li.active {
   background-color: #eb5959;
+}
+
+.page-about-company .values-block .circle {
+  padding: 5%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .flags img {
