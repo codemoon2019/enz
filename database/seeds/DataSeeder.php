@@ -46,45 +46,39 @@ class DataSeeder extends Seeder
 
             ['name' => 'Services', 'url' => '/services', 'order' => 1],
 
+                ['name' => 'Student Visa', 'url' => '/student-visa', 'order' => 0, 'parent_id' => 2],
+            
+                ['name' => 'Tourist Visa', 'url' => '/tourist-visa', 'order' => 1, 'parent_id' => 2],
+
             ['name' => 'About', 'url' => '/about', 'order' => 2],
 
-            ['name' => 'Company', 'url' => '/company', 'order' => 0, 'parent_id' => 3],
+                ['name' => 'Company', 'url' => '/company', 'order' => 0, 'parent_id' => 5],
 
-            ['name' => 'Vision and Mission', 'url' => '/visson-and-mission', 'order' => 1, 'parent_id' => 3],
+                ['name' => 'Our Team', 'url' => '/our-teams', 'order' => 1, 'parent_id' => 5],
 
-            ['name' => 'Core Values', 'url' => '/core-values', 'order' => 2, 'parent_id' => 3],
-
-            ['name' => 'Our Team', 'url' => '/our-teams', 'order' => 3, 'parent_id' => 3],
-
-            ['name' => 'Linkages', 'url' => '/linkages', 'order' => 4, 'parent_id' => 3],
+                ['name' => 'Linkages', 'url' => '/linkages', 'order' => 2, 'parent_id' => 5],
 
             ['name' => 'Courses', 'url' => '/courses', 'order' => 3],
 
-            ['name' => 'Community Services', 'url' => '/community-services', 'order' => 0, 'parent_id' => 9],
-
-            ['name' => 'Business, Management & Marketing', 'url' => '/business-management-marketing', 'order' => 1, 'parent_id' => 9],
-
-            ['name' => 'Hospitality and Cookery', 'url' => '/hospitality-and-cookery', 'order' => 2, 'parent_id' => 9],
-
-            ['name' => 'Information and Technology', 'url' => '/information-and-technology', 'order' => 3, 'parent_id' => 9],
-
-            ['name' => 'Healthcare', 'url' => '/healthcare', 'order' => 4, 'parent_id' => 9],
-
-            ['name' => 'Other Courses', 'url' => '/other-courses', 'order' => 5, 'parent_id' => 9],
-
             ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
+
+                ['name' => 'Australia', 'url' => '/australia', 'order' => 0, 'parent_id' => 10],
             
+                ['name' => 'New Zealand', 'url' => '/new-zealand', 'order' => 1, 'parent_id' => 10],
+            
+                ['name' => 'Canada', 'url' => '/canada', 'order' => 2, 'parent_id' => 10],
+
             ['name' => 'Apply', 'url' => '/apply', 'order' => 5],
 
-            ['name' => 'Become Our Client', 'url' => '/become-our-client', 'order' => 0, 'parent_id' => 17],
+                ['name' => 'Become Our Client', 'url' => '/become-our-client', 'order' => 0, 'parent_id' => 14],
 
-            ['name' => 'Be Part of Our Team', 'url' => '/be-part-of-our-team', 'order' => 1, 'parent_id' => 17],
+                ['name' => 'Be Part of Our Team', 'url' => '/be-part-of-our-team', 'order' => 1, 'parent_id' => 14],
             
             ['name' => 'Students', 'url' => '/students', 'order' => 6],
 
-            ['name' => 'Testimonials', 'url' => '/testimonilas', 'order' => 0, 'parent_id' => 20],
+                ['name' => 'Testimonials', 'url' => '/testimonilas', 'order' => 0, 'parent_id' => 17],
             
-            ['name' => 'Gallery', 'url' => '/gallery', 'order' => 1, 'parent_id' => 20],
+                ['name' => 'Gallery', 'url' => '/gallery', 'order' => 1, 'parent_id' => 17],
             
             ['name' => 'Contact Us', 'url' => '/contact-us', 'order' => 7],
 
@@ -134,7 +128,7 @@ class DataSeeder extends Seeder
             'group' => 'information',
             'label' => 'Location',
             'machine_name' => 'location',
-            'value' => 'Laoag - HEAD OFFICE: G/F Natividad Bldg. II, Ablan Ave. cor. P. Lazaro St. Brgy. 4, Laoag City, Ilocos Norte',
+            'value' => 'HEAD OFFICE: G/F Natividad Bldg. II, Ablan Ave. cor. P. Lazaro St. Brgy. 4, Laoag City, Ilocos Norte',
             'type' => 'text',
             'input_type' => 'text',
         ]);
