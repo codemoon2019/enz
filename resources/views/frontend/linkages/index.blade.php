@@ -16,7 +16,20 @@
 
 @foreach ($country as $key => $country)
 
-    <div class="linkages link-{{ $country->title }}">
+@php
+switch ($country->title) {
+    case 'Australia':
+    $country_image = 'australia.svg';
+    break;
+    case 'Canada':
+    $country_image = 'canada.svg';
+    break;
+    default:
+    $country_image = 'newzealand.svg';
+}
+@endphp
+
+    <div class="linkages link-{{ $country->title }} relative">
 
         <div class="container-fluid px180 pt10p relative">
 
@@ -117,8 +130,9 @@
             </div>
 
         </div>
-
+        <img data-src="{{asset('svg/about/' . $country_image)}}" class="img-fluid for-image" alt="">
     </div>
+
 
 @endforeach
     

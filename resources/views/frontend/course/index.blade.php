@@ -3,9 +3,9 @@
 
 @section('content')
 
-<Search courses="{{ $models }}"></Search>
+{{-- <Search courses="{{ $models }}"></Search> --}}
 
-<Course></Course>
+{{-- <Course></Course> --}}
 
 
 @endsection

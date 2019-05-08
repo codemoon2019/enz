@@ -34,6 +34,9 @@ Route::get('/become-our-client',function(){
 Route::get('/testimonilas',function(){
     return view('frontend.testimonials');
 });
+Route::get('/australia',function(){
+    return view('frontend.australia');
+});
 // Route::get('the-site',function(){
 //     return view('frontend.the-site');
 // });
