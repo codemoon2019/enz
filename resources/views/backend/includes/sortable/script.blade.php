@@ -16,14 +16,14 @@
                 output = list.data('output');
 
                 if (window.JSON) {
-                    output.val(window.JSON.stringify(list.nestable('serialize')));
+                    output.val(window.JSON.stringify(list.nestable("serialize")));
                 } else {
                     output.val('JSON browser support required for this demo.');
                 }
 
                 if (commit) {
                     swalLoader();
-                    $('#serialize-form').ajaxForm(function () {
+                    $("#{{ $id }}-serialize-form").ajaxForm(function () {
                         swal.close();
                     }).submit();
                 }
@@ -32,10 +32,9 @@
 
             };
 
-
-            $('#nestable3').nestable({ maxDepth: "{{ $depth }}"}).on('change', updateOutput);
+            $("#nestable-{{ $id }}").nestable({ maxDepth: "{{ $depth }}"}).on('change', updateOutput);
             
-            updateOutput($('#nestable3').data('output', $('#serialize')));
+            updateOutput($("#nestable-{{ $id }}").data('output', $("#{{ $id }}-serialize")));
 
         });
 

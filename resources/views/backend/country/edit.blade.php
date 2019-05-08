@@ -33,6 +33,12 @@
                         'args' => [ 'model' => $model ]
                     ],
                     [
+                        'name'     => 'Other Details',
+                        'template' => 'backend.country.partials.other_details',
+                        'icon' => 'fa fa-cart-arrow-down',
+                        'args'     => [ 'model' => $model ]
+                    ],
+                    [
                         'name'     => 'Linkages',
                         'template' => 'backend.country.partials.linkages',
                         'icon' => 'fa fa-cart-arrow-down',

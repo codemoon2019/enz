@@ -70,7 +70,7 @@
 
                     @if ($courses->count())
 
-                        @include('backend.includes.sortable.form', ['model' => $model])
+                        @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'course'])
                         
                     @endif
 
@@ -84,6 +84,6 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => 1])
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'course'])
 
 @endsection

@@ -14,7 +14,7 @@
     
         </div>
     
-        <div class="form-group row" >
+        <div class="form-group row" style="display: none;">
     
             <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
     
@@ -24,7 +24,7 @@
                     $url = explode('/', url()->current());
                 @endphp
 
-                <input type="text" name="property" class="form-control" value="{{ $url[count($url) - 1] }}">
+                <input type="text" name="country_id" class="form-control" value="{{ $url[count($url) - 1] }}">
     
             </div>
     

@@ -60,9 +60,9 @@ class LinkagesController extends CRUDController
 
         $request = $request->all();
 
-        $request['country_id'] = Country::whereSlug($request['country'])->first()->id;
+        $request['country_id'] = Country::whereSlug($request['country_id'])->first()->id;
 
-        return array_merge($request->only($model->getFillable()), $data);
+        return array_merge($request, $data);
     }
 
     /**
@@ -100,4 +100,30 @@ class LinkagesController extends CRUDController
                 'title.required' => 'The title field is required.',
             ]);
     }
+
+    public function store(Request $request)
+    {
+        $baseableOptions = $this->crudRules($request);
+        $this->validate($request, $baseableOptions->storeRules, $baseableOptions->storeRuleMessages);
+
+        $data = $this->generateStub($request);
+        $model = $this->repository()->create($data);
+
+        return redirect()->route('admin.countries.edit', $model->country->slug)->withFlashSuccess('Success');
+
+
+    }
+    public function update(Request $request, String $routeKeyName)
+    {
+        $model = $this->getModel($routeKeyName);
+
+        $baseableOptions = $this->crudRules($request, $model);
+        $this->validate($request, $baseableOptions->updateRules, $baseableOptions->updateRuleMessages);
+
+        $data = $this->generateStub($request, $model);
+        $model = $this->repository()->update($data, $model->id);
+
+        return redirect()->route('admin.countries.edit', $model->country->slug)->withFlashSuccess('Success');
+    }
+    
 }

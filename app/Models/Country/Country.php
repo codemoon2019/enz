@@ -13,11 +13,18 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use App\Models\Traits\HasImageMediaTrait;
+use Spatie\MediaLibrary\Models\Media;
+use Spatie\Image\Manipulations;
+use App\Models\Traits\CustomAttributes;
+
 /**
  * Class Country
  * @package App\Models\Country
  */
-class Country extends Model
+class Country extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
@@ -27,6 +34,8 @@ class Country extends Model
     use CountryRelations;
     use CountryScopes;
     use CountryStaticFunctions;
+    use HasImageMediaTrait;
+    use CustomAttributes;
 
     public const MODULE_NAME = 'country';
     public const VIEW_BACKEND_PATH = 'backend.country';
@@ -39,6 +48,7 @@ class Country extends Model
      */
     protected $fillable = [
         'title',
+        'description',
         'slug',
     ];
 
@@ -130,5 +140,22 @@ class Country extends Model
             ]
         ];
         return $links;
+    }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
+
+            $this->addMediaConversion('main')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 550, 370);
+
+            $this->addMediaConversion('thumbnail')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 175, 175);
+        });
+
     }
 }

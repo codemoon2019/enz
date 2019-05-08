@@ -14,7 +14,6 @@
 
 </div>
 
-
 @foreach ($country as $key => $country)
 
 @php
