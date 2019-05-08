@@ -10526,6 +10526,7 @@ html body {
 }
 
 .user-menu {
+  z-index: 1;
   background-color: #fff;
   padding: 0 15px;
   transition: all ease 300ms;
@@ -10658,7 +10659,6 @@ html body {
 }
 
 .front .banner-block {
-  z-index: -1;
   display: flex;
   margin-top: -8%;
 }
@@ -11206,6 +11206,86 @@ html body {
   position: absolute;
   top: 8%;
   right: 10%;
+}
+
+.page-destination .banner-block {
+  z-index: 1;
+}
+
+.page-destination .content-block {
+  margin-top: -14%;
+  position: relative;
+  padding-top: 10%;
+  background: url(/img/destination/australia/bg.png) no-repeat;
+  padding-bottom: 5%;
+}
+
+.page-destination .content-block .item {
+  background-color: #fff;
+  padding: 2%;
+  border-radius: 35px;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+  max-width: 300px;
+}
+
+.page-destination .for-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.page-destination .slider-block img {
+  width: 100%;
+  max-height: 925px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-destination .more-info {
+  background-color: #eff1f5;
+}
+
+.page-destination .more-info .card {
+  border: none;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  z-index: 1;
+  background: transparent;
+}
+
+.page-destination .more-info .card-header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  cursor: pointer;
+}
+
+.page-destination .more-info .card-header .title {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.page-destination .more-info .card-header .img-arrow {
+  margin-top: 5px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.page-destination .more-info .card-header .img-arrow.rotateme {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.page-destination .more-info .card-body {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+  background-color: #fff;
+  padding: 30px;
 }
 
 .page-apply .content-block {

@@ -193,6 +193,72 @@
     }
 }
 
+.page-destination {
+    .banner-block {
+        z-index: 1;
+    }
+    .content-block {
+        margin-top: -14%;
+        position: relative;
+        padding-top: 10%;
+        background: url(/img/destination/australia/bg.png) no-repeat;
+        padding-bottom: 5%;
+        .item {
+            background-color: $white;
+            padding: 2%;
+            border-radius: 35px;
+            box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+            max-width: 300px;
+        }
+    }
+    .for-text {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    .slider-block {
+        img {
+            width: 100%;
+            max-height: 925px;
+            object-fit: cover;
+        }
+    }
+    .more-info {
+        background-color: #eff1f5;
+        .card {
+            border: none;
+            border-top-left-radius: 12px !important;
+            border-top-right-radius: 12px !important;
+            z-index: 1;
+            background: transparent;
+        }
+        .card-header {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            cursor: pointer;
+            .title {
+                display: inline-block;
+                margin-top: 3px;
+            }
+            .img-arrow {
+                margin-top: 5px;
+                transform: rotate(90deg);
+                transition: transform .8s ease-in-out;
+            }
+            .img-arrow.rotateme {
+                transform: rotate(-90deg);
+                transition: transform .8s ease-in-out;
+            }
+        }
+        .card-body {
+            border-bottom-left-radius: 35px !important;
+            border-bottom-right-radius: 35px !important;
+            background-color: $white;
+            padding: 30px;
+        }
+    }
+}
+
 .page-apply {
     .content-block {
         margin-top: -14.5%;

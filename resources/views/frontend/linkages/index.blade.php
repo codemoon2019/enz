@@ -130,7 +130,7 @@ switch ($country->title) {
             </div>
 
         </div>
-        <img src="{{asset('svg/about/' . $country_image)}}" class="img-fluid for-image" alt="">
+        <img data-src="{{asset('svg/about/' . $country_image)}}" class="img-fluid for-image" alt="">
     </div>
 
 
