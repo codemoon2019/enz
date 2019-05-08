@@ -1,10 +1,22 @@
 <template>
 
-    <div class="container">
-        
-        <input type="text" class="form-control" v-model="key">
+	<div class="search-courses">
 
-    </div>
+	    <div class="container-fluid intro px180">
+
+	        <div class="clearfix"></div>
+
+	        <h1 class="title text-white fs40 mb30">Search Courses</h1>
+
+	        <div class="form-group w-100">
+
+	          <input type="text" class="form-control" aria-describedby="helpId" v-model="key">
+
+	        </div>
+
+	    </div>
+
+	</div>
 
 </template>
 
