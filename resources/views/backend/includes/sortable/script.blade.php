@@ -32,9 +32,9 @@
 
             };
 
-            $('#nestable3').nestable({ maxDepth: "{{ $depth }}"}).on('change', updateOutput);
+            $("#nestable-{{ $id }}").nestable({ maxDepth: "{{ $depth }}"}).on('change', updateOutput);
             
-            updateOutput($('#nestable3').data('output', $("#{{ $id }}-serialize")));
+            updateOutput($("#nestable-{{ $id }}").data('output', $("#{{ $id }}-serialize")));
 
         });
 

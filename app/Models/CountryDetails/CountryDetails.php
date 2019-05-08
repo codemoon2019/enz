@@ -1,55 +1,48 @@
 <?php
 
-namespace App\Models\Country;
+namespace App\Models\CountryDetails;
 
-use App\Models\Country\Traits\CountryAttributes;
-use App\Models\Country\Traits\CountryRegularFunctions;
-use App\Models\Country\Traits\CountryRelations;
-use App\Models\Country\Traits\CountryScopes;
-use App\Models\Country\Traits\CountryStaticFunctions;
+use App\Models\CountryDetails\Traits\CountryDetailsAttributes;
+use App\Models\CountryDetails\Traits\CountryDetailsRegularFunctions;
+use App\Models\CountryDetails\Traits\CountryDetailsRelations;
+use App\Models\CountryDetails\Traits\CountryDetailsScopes;
+use App\Models\CountryDetails\Traits\CountryDetailsStaticFunctions;
 use HalcyonLaravel\Base\Models\Model;
 use HalcyonLaravel\Base\Models\Traits\ModelDefaultTraits;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
-use Spatie\MediaLibrary\HasMedia\HasMedia;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use App\Models\Traits\HasImageMediaTrait;
-use Spatie\MediaLibrary\Models\Media;
-use Spatie\Image\Manipulations;
-use App\Models\Traits\CustomAttributes;
-
 /**
- * Class Country
- * @package App\Models\Country
+ * Class CountryDetails
+ * @package App\Models\CountryDetails
  */
-class Country extends Model implements HasMedia
+class CountryDetails extends Model
 {
     use Metatagable;
     use HasSlug;
     use ModelDefaultTraits;
-    use CountryAttributes;
-    use CountryRegularFunctions;
-    use CountryRelations;
-    use CountryScopes;
-    use CountryStaticFunctions;
-    use HasImageMediaTrait;
-    use CustomAttributes;
+    use CountryDetailsAttributes;
+    use CountryDetailsRegularFunctions;
+    use CountryDetailsRelations;
+    use CountryDetailsScopes;
+    use CountryDetailsStaticFunctions;
 
-    public const MODULE_NAME = 'country';
-    public const VIEW_BACKEND_PATH = 'backend.country';
-    public const VIEW_FRONTEND_PATH = 'frontend.country';
-    public const ROUTE_ADMIN_PATH = 'admin.countries';
-    public const ROUTE_FRONTEND_PATH = 'frontend.countries';
+    public const MODULE_NAME = 'country details';
+    public const VIEW_BACKEND_PATH = 'backend.countryDetails';
+    public const VIEW_FRONTEND_PATH = 'frontend.countryDetails';
+    public const ROUTE_ADMIN_PATH = 'admin.country-details';
+    public const ROUTE_FRONTEND_PATH = 'frontend.country-details';
 
     /**
      * Declared Fillables
      */
     protected $fillable = [
+        'country_id',
         'title',
         'description',
         'slug',
+        'order',
     ];
 
     /**
@@ -116,7 +109,7 @@ class Country extends Model implements HasMedia
             'backend' => [
                 'index' => [
                     'type' => 'custom',
-                    'label' => 'Countries',
+                    'label' => 'Country Details',
                     'permission' => self::permission('index'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.index'],
                 ],
@@ -140,22 +133,5 @@ class Country extends Model implements HasMedia
             ]
         ];
         return $links;
-    }
-
-    public function registerMediaCollections()
-    {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
-
-            $this->addMediaConversion('main')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 550, 370);
-
-            $this->addMediaConversion('thumbnail')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 175, 175);
-        });
-
     }
 }

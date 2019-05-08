@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Linkages;
+namespace App\Http\Controllers\Backend\CountryDetails;
 
-use App\Repositories\Linkages\LinkagesRepository;
+use App\Repositories\CountryDetails\CountryDetailsRepository;
 use HalcyonLaravel\Base\BaseableOptions;
 use HalcyonLaravel\Base\Controllers\Backend\CRUDController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
@@ -11,30 +11,30 @@ use Illuminate\Http\Request;
 use App\Models\Country\Country;
 
 /**
- * Class LinkagesController
+ * Class CountryDetailsController
  *
- * @package App\Http\Controllers\Backend\Linkages
+ * @package App\Http\Controllers\Backend\CountryDetails
  */
-class LinkagesController extends CRUDController
+class CountryDetailsController extends CRUDController
 {
     /**
-     * @var \App\Repositories\Linkages\LinkagesRepository
+     * @var \App\Repositories\CountryDetails\CountryDetailsRepository
      */
-    protected $linkagesRepository;
+    protected $countryDetailsRepository;
 
     /**
-     * LinkagesController constructor.
+     * CountryDetailsController constructor.
      *
-     * @param \App\Repositories\Linkages\LinkagesRepository $linkagesRepository
+     * @param \App\Repositories\CountryDetails\CountryDetailsRepository $countryDetailsRepository
      *
      * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
-    public function __construct(LinkagesRepository $linkagesRepository)
+    public function __construct(CountryDetailsRepository $countryDetailsRepository)
     {
-        $this->linkagesRepository = $linkagesRepository;
+        $this->countryDetailsRepository = $countryDetailsRepository;
         parent::__construct();
 
-        $model = $linkagesRepository->makeModel();
+        $model = $countryDetailsRepository->makeModel();
 
         $this->middleware('permission:' . $model::permission('index'), ['only' => ['index']]);
         $this->middleware('permission:' . $model::permission('show'), ['only' => ['show']]);
@@ -63,6 +63,7 @@ class LinkagesController extends CRUDController
         $request['country_id'] = Country::whereSlug($request['country_id'])->first()->id;
 
         return array_merge($request, $data);
+
     }
 
     /**
@@ -70,7 +71,7 @@ class LinkagesController extends CRUDController
      */
     public function repository(): BaseRepository
     {
-        return $this->linkagesRepository;
+        return $this->countryDetailsRepository;
     }
 
     /**
@@ -100,7 +101,6 @@ class LinkagesController extends CRUDController
                 'title.required' => 'The title field is required.',
             ]);
     }
-
     public function store(Request $request)
     {
         $baseableOptions = $this->crudRules($request);
@@ -125,5 +125,4 @@ class LinkagesController extends CRUDController
 
         return redirect()->route('admin.countries.edit', $model->country->slug)->withFlashSuccess('Success');
     }
-    
 }

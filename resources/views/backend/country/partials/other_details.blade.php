@@ -6,17 +6,17 @@
 
             <div class="col-md-12">
 
-                <a href="{{ route('admin.linkages.create', $model->slug) }}">
+                <a href="{{ route('admin.country-details.create', $model->slug) }}">
 
                     <button class="pull-right btn btn-primary" style="margin: 10px 0px;" data-toggle="modal" data-target="#modal-create">Add Item</button>
 
                 </a>
 
-                <div class="dd" id="nestable-linkages">
+                <div class="dd" id="nestable-country-details">
                     
                     <ol class="dd-list">
 
-                        @foreach ($model->linkages as $key => $item)
+                        @foreach ($model->details as $key => $item)
 
                             @include('backend.includes.sortable.list', [
 
@@ -24,9 +24,9 @@
 
                                 'label' => 'title',
                                 
-                                'edit_route' => route('admin.linkages.edit', [$item->slug, $model->slug]),
+                                'edit_route' => route('admin.country-details.edit', [$item->slug, $model->slug]),
                                 
-                                'delete_route' => route('admin.linkages.destroy', $item->slug)
+                                'delete_route' => route('admin.country-details.destroy', $item->slug)
                             
                             ])
 
@@ -36,15 +36,15 @@
 
                 </div>
 
-                @if ($model->linkages->count())
+                @if ($model->details->count())
                     
                     @php
 
-                        $model = class_basename($model->linkages[0]);
+                        $model = class_basename($model->details[0]);
                     
                     @endphp
                         
-                    @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'linkages'])
+                    @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'country-details'])
 
                 @endif
 
@@ -56,5 +56,5 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'linkages'])
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'country-details'])
 
