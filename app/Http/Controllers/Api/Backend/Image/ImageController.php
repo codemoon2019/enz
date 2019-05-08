@@ -21,6 +21,7 @@ use App\Models\OurTeam\OurTeam;
 use App\Models\Service\Service;
 use App\Models\Testimonial\Testimonial;
 use App\Models\Why\Why;
+use App\Models\Linkages\Linkages;
 
 /**
  * Class ImageController
@@ -44,6 +45,7 @@ class ImageController extends Controller
         'service'     => Service::class,
         'testimonial' => Testimonial::class,
         'why'         => Why::class,
+        'linkages'    => Linkages::class,
     ];
 
     /**

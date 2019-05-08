@@ -219,6 +219,17 @@
                             </li>
 
                         @endcan
+
+                        @can(app(App\Models\Country\Country::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/countries*')) }}"
+                                   href="{{ route(app(App\Models\Country\Country::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Country
+                                </a>
+                            </li>
+
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 

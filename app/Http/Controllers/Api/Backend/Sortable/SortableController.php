@@ -20,6 +20,8 @@ use App\Models\OurTeam\OurTeam;
 
 use App\Models\Testimonial\Testimonial;
 
+use App\Models\Linkages\Linkages;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -28,19 +30,21 @@ class SortableController extends Controller
 
         switch ($model) {
 
-            case 'MenuNode': $model = new MenuNode; break;
-
-            case 'MoreLife': $model   = new MoreLife; break;
-
-            case 'Course': $model   = new Course; break;
-
-            case 'Why': $model   = new Why; break;
-
-            case 'Service': $model   = new Service; break;
-
-            case 'OurTeam': $model   = new OurTeam; break;
-
-            case 'Testimonial': $model   = new Testimonial; break;
+            case 'MenuNode': $model    = new MenuNode; break;
+            
+            case 'MoreLife': $model    = new MoreLife; break;
+            
+            case 'Course': $model      = new Course; break;
+            
+            case 'Why': $model         = new Why; break;
+            
+            case 'Service': $model     = new Service; break;
+            
+            case 'OurTeam': $model     = new OurTeam; break;
+            
+            case 'Testimonial': $model = new Testimonial; break;
+            
+            case 'Linkages': $model    = new Linkages; break;
 
             default: break;
         }

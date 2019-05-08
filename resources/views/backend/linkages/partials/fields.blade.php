@@ -1,9 +1,3 @@
-{{-- @push('after-styles')
-
-    <link rel="stylesheet" href="{{ asset('css/ckeditor-hide-toolbars.css') }}">
-
-@endpush --}}
-
 <div class="row mt-4 mb-4">
 
     <div class="col">
@@ -20,13 +14,17 @@
     
         </div>
     
-        <div class="form-group row">
+        <div class="form-group row" >
     
-            <label class="col-md-2 form-control-label">Description</label>
+            <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
     
             <div class="col-md-10">
-    
-                <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('old') !!}</textarea>
+            
+                @php
+                    $url = explode('/', url()->current());
+                @endphp
+
+                <input type="text" name="property" class="form-control" value="{{ $url[count($url) - 1] }}">
     
             </div>
     
@@ -34,7 +32,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Featured Image<br/></label>
+            <label class="col-md-2 form-control-label">Featured Images<br/></label>
             
             <div class="col-md-10">
             
@@ -44,7 +42,7 @@
                         :api-mode="true"
                         :multiple="false"
                         :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
-                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'course', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
+                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'linkages', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
                     ></image-uploader>
 
                 @else
@@ -60,16 +58,3 @@
     </div>
 
 </div>
-
-
-{{-- @push('after-scripts')
-
-    @include('backend.includes.ckeditor')
-
-    <script>
-
-        CKEDITOR.replace('description', options);
-        
-    </script>
-
-@endpush --}}

@@ -22,9 +22,9 @@ Route::get('/student-visa',function(){
 Route::get('/tourist-visa',function(){
     return view('frontend.tourist-visa');
 });
-Route::get('/linkages',function(){
-    return view('frontend.linkages');
-});
+// Route::get('/linkages',function(){
+//     return view('frontend.linkages');
+// });
 Route::get('/community-services',function(){
     return view('frontend.courses');
 });
