@@ -143,17 +143,6 @@
 
                         @endcan
 
-                        @can(app(App\Models\Course\Course::class)::permission('index'))
-                        
-                            <li class="nav-item">
-                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/sub-courses*')) }}"
-                                   href="{{ route(app(App\Models\Course\Course::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                                    <i class="nav-icon fa fa-circle-o"></i> Courses
-                                </a>
-                            </li>
-
-                        @endcan
-
                         @can(app(App\Models\Event\Event::class)::permission('index'))
                         
                             <li class="nav-item">

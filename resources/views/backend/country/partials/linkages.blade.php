@@ -44,7 +44,7 @@
                     
                     @endphp
                         
-                    @include('backend.includes.sortable.form', ['model' => $model])
+                    @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'linkages'])
 
                 @endif
 
@@ -56,5 +56,5 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => 1])
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'linkages'])
 
