@@ -11052,10 +11052,19 @@ html body {
   justify-content: center;
 }
 
+.page-about-team .content-block {
+  margin-top: -15%;
+  position: relative;
+  padding-bottom: 10%;
+  padding-top: 30%;
+  background: url(/img/about/aust.png) no-repeat;
+}
+
 .page-about-linkages .card {
   border: none;
   border-top-left-radius: 12px !important;
   border-top-right-radius: 12px !important;
+  z-index: 1;
   background: transparent;
 }
 
@@ -11092,18 +11101,33 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
-.page-about-linkages .link-aus {
-  background: url(/img/about/aust.png) no-repeat;
+.page-about-linkages .linkages {
   background-repeat: no-repeat;
   background-position: top;
   padding-bottom: 20px;
 }
 
-.page-about-linkages .link-aus .container-fluid {
-  background: url(/svg/about/aus.svg) no-repeat;
-  background-repeat: no-repeat;
-  background-position: 88% 35%;
-  background-attachment: fixed;
+.page-about-linkages .linkages .for-image {
+  position: absolute;
+  top: 7%;
+  right: 10%;
+}
+
+.page-about-linkages .link-Australia {
+  background: url(/img/about/aust.png) no-repeat;
+}
+
+.page-about-linkages .link-Canada {
+  background: url(/img/about/canada.png) no-repeat;
+}
+
+.page-about-linkages .link-Canada .for-image {
+  top: 6%;
+  right: 8%;
+}
+
+.page-about-linkages .link-New {
+  background: url(/img/about/new-zea.png) no-repeat;
 }
 
 .page-about-linkages .item .card-body {
@@ -11199,6 +11223,13 @@ html body {
 
 .page-apply .jobs .card-body ul {
   padding-left: 20px;
+}
+
+.page-students .content-block {
+  margin-top: -17%;
+  position: relative;
+  padding-top: 20%;
+  background: url(/img/students/bg.png) no-repeat;
 }
 
 .footer .flags img {

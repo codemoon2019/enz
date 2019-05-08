@@ -51,12 +51,23 @@
         }
     }
 }
+
+.page-about-team {
+    .content-block {
+        margin-top: -15%;
+        position: relative;
+        padding-bottom: 10%;
+        padding-top: 30%;
+        background: url(/img/about/aust.png) no-repeat;
+    }
+}
+
 .page-about-linkages {
     .card {
         border: none;
         border-top-left-radius: 12px !important;
         border-top-right-radius: 12px !important;
-        
+        z-index: 1;
         background: transparent;
     }
     .card-header {
@@ -81,17 +92,28 @@
         border-bottom-left-radius: 35px !important;
         border-bottom-right-radius: 35px !important;
     }
-    .link-aus {
-        background: url(/img/about/aust.png) no-repeat;
+    .linkages {
         background-repeat: no-repeat;
         background-position: top;
         padding-bottom: 20px;
-        .container-fluid {
-            background: url(/svg/about/aus.svg) no-repeat;
-            background-repeat: no-repeat;
-            background-position: 88% 35%;
-            background-attachment: fixed;
+        .for-image {
+            position: absolute;
+            top: 7%;
+            right: 10%;
         }
+    }
+    .link-Australia {
+        background: url(/img/about/aust.png) no-repeat;
+    }
+    .link-Canada {
+        background: url(/img/about/canada.png) no-repeat;
+        .for-image {
+            top: 6%;
+            right: 8%;  
+        }
+    }
+    .link-New {
+        background: url(/img/about/new-zea.png) no-repeat;
     }
     .item {
         .card-body {
@@ -187,5 +209,14 @@
         ul {
             padding-left: 20px;
         }
+    }
+}
+
+.page-students {
+    .content-block {
+        margin-top: -17%;
+        position: relative;
+        padding-top: 20%;
+        background: url(/img/students/bg.png) no-repeat;
     }
 }
