@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models\Course\Traits;
+
 use App\Models\SubCourses\SubCourses;
 
 /**

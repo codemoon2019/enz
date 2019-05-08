@@ -49,13 +49,12 @@ class CourseController extends Controller
     {
         $model = $this->repository()->makeModel();
         $page = $this->pageRepository->indexPage($this->repository()->model());
-        $Model = $model;
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->paginate(12);
+        $models = $this->repository()->get()->load('subCourses');
 
-        return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
+        return view("{$this->viewFrontendPath}.index", compact('page', 'models'));
     }
 
     /**

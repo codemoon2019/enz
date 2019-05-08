@@ -2,6 +2,10 @@
 
 
 @section('content')
-  
+
+<Search courses="{{ $models }}"></Search>
+
+<Course></Course>
+
 
 @endsection
