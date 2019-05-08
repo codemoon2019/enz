@@ -10526,7 +10526,7 @@ html body {
 }
 
 .user-menu {
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
   padding: 0 15px;
   transition: all ease 300ms;
@@ -11289,7 +11289,7 @@ html body {
 }
 
 .page-apply .content-block {
-  margin-top: -14.5%;
+  margin-top: -15%;
   position: relative;
   padding-top: 30%;
   background: url(/img/apply/bg.png) no-repeat;
