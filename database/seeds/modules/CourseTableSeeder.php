@@ -67,7 +67,7 @@ class CourseTableSeeder extends Seeder
 
             $model = Course::create($value);
 
-            // $this->seederUploader($model, 'course/course1.jpg', null, 'featured');
+            $this->seederUploader($model, 'course/' . $model->slug . '.png', null, 'featured');
 
             $model->metaTag()->create([
                 'title' => $model->title,
