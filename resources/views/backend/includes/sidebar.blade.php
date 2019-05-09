@@ -220,6 +220,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\StudentVisa\StudentVisa::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/student-visas*')) }}"
+                                   href="{{ route(app(App\Models\StudentVisa\StudentVisa::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Student Visa
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">
