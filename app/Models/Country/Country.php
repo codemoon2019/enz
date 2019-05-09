@@ -157,5 +157,18 @@ class Country extends Model implements HasMedia
                 ->fit(Manipulations::FIT_CROP, 175, 175);
         });
 
+        $this->addMediaCollection('slider')->registerMediaConversions(function (Media $media) {
+
+            $this->addMediaConversion('main')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 550, 370);
+
+            $this->addMediaConversion('thumbnail')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 175, 175);
+        });
+
     }
 }

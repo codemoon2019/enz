@@ -31,18 +31,18 @@ class SlideTableSeeder extends Seeder
 
         $sliders = ['banner.jpg'];
 
-        foreach ($sliders as $key => $slider) {
+        // foreach ($sliders as $key => $slider) {
             
-            $this->seederUploader($homeSlide, 'banner/' . $slider, null, 'banner');
+        //     $this->seederUploader($homeSlide, 'banner/' . $slider, null, 'banner');
 
-        }
+        // }
 
         // foreach ($this->imagesData($homeSlide->title) as $imageData) {
         //     $this->seederUploader($homeSlide, "core/slider/{$imageData['file']}", $imageData['custom'],
         //         $homeSlide->collection_name);
         // }
 
-        History::created($homeSlide, $user);
+        // History::created($homeSlide, $user);
 
         $mainDomain = Domain::where('machine_name', 'main')->first();
 

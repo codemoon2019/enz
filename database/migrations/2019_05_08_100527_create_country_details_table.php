@@ -19,7 +19,7 @@ class CreateCountryDetailsTable extends Migration
         Schema::create('country_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('country_id');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->text('description')->nullable();
             $table->string('slug')->unique();
             $table->integer('order')->default(0);

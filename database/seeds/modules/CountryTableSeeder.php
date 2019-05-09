@@ -29,7 +29,7 @@ class CountryTableSeeder extends Seeder
         $data = [
             [
                 'title' => 'Australia',
-                'description' => '',
+                'description' => '<p>Did you know Australia has the third highest number of international students in the world behind only the United Kingdom and the United States despite having a population of only 23 million? This isn\'t surprising when you consider Australia has seven of the top 100 universities in the world! In fact, with over 22,000 courses across 1,100 institutions, Australia sits above the likes of Germany, the Netherlands and Japan, ranking eighth in the Universitas 2012 U21 Ranking of National Higher Education Systems.</p>',
             ],
             [
                 'title' => 'Canada',
@@ -41,9 +41,13 @@ class CountryTableSeeder extends Seeder
             ],
         ];
 
+        $images = ['australia.jpg', 'canada.jpg', 'newzealand.jpg'];
+
         foreach ($data as $key => $value) {
 
             $model = Country::create($value);
+
+            $this->seederUploader($model, 'country/' . $images[$key], null, 'slider');
             
             $model->metaTag()->create([
                 'title' => $model->title,
