@@ -801,28 +801,36 @@ var render = function() {
                     _vm._v(" "),
                     _vm._l(_vm.courseDisplay, function(course, index) {
                       return _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-sm-12 item mb30" }, [
-                          _c("div", { staticClass: "card text-left" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "card-header linear-gradient-teal"
-                              },
-                              [
-                                _c(
-                                  "h2",
-                                  {
-                                    staticClass:
-                                      "card-title fs18 text-white mb0"
-                                  },
-                                  [_vm._v(_vm._s(course.title))]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _vm._m(0, true)
-                          ])
-                        ])
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-sm-12 item mb30",
+                            attrs: { "data-aos": "fade-up" }
+                          },
+                          [
+                            _c("div", { staticClass: "card text-left" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "card-header linear-gradient-teal"
+                                },
+                                [
+                                  _c(
+                                    "h2",
+                                    {
+                                      staticClass:
+                                        "card-title fs18 text-white mb0"
+                                    },
+                                    [_vm._v(_vm._s(course.title))]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(0, true)
+                            ])
+                          ]
+                        )
                       ])
                     })
                   ],
