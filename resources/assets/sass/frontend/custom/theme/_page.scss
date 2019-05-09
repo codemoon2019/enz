@@ -295,4 +295,82 @@
         padding-top: 20%;
         background: url(/img/students/bg.png) no-repeat;
     }
+    .testimonials-block {
+        .py80 {
+            padding-bottom: 0 !important;
+        }
+        .btn {
+            background: $yellow;
+            width: 50px;
+            height: 28px;
+            border-radius: 18px;
+            padding: 0px;
+            line-height: 16px;
+            opacity: 0.5;
+            transition: all ease 300ms;
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: 1;
+                transition: all ease 300ms;
+            }
+        }
+        .item {
+            max-height: 310px;
+            overflow: hidden;
+            border-radius: 35px;
+        }
+        .details {
+            background-color: $white;
+            padding: 10% 3%;
+        }
+        .profile-pic {
+            padding: 0;
+        }
+    }
+    .custom-slider-wrapper {
+        padding-left: 10%;
+    }
+    .gallery-block {
+        .title {
+            display: inline-block;
+        }
+        .slick-arrow {
+            display: none !important;
+        }
+        .btn.left img {
+            transform: rotate(180deg);
+        }
+        .btn {
+            background: $blue;
+            width: 50px;
+            height: 28px;
+            border-radius: 18px;
+            padding: 0px;
+            line-height: 16px;
+            opacity: 0.5;
+            transition: all ease 300ms;
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: 1;
+                transition: all ease 300ms;
+            }
+        }
+        .slick-list {
+            padding: 0 20% 0 0;
+        }
+        .slick-slide {
+            padding-left: 55px;
+            &:first-child {
+                padding: 0;
+            }
+            img {
+                max-height: 490px;
+                height: 490px;
+                object-fit: cover;
+                border-radius: 35px;
+            }
+        }
+    }
 }
