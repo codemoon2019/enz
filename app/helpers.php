@@ -14,6 +14,7 @@ use App\Models\Core\Setting;
 use App\Models\OurTeam\OurTeam;
 use App\Models\Event\Event;
 use App\Models\News\News;
+use App\Models\StudentVisa\StudentVisa;
 
 /*
  * Application version name
@@ -553,6 +554,13 @@ if (!function_exists('getInformation')) {
     function getInformation($keys)
     {
         return Setting::whereIn('machine_name', $keys)->get();
+    }
+}
+
+if (!function_exists('StudentVisa')) {
+    function StudentVisa()
+    {
+        return StudentVisa::orderBy('order')->get();
     }
 }
 

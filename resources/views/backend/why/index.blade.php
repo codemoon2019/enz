@@ -18,7 +18,7 @@
     
                         Why Choose ENZ?
     
-                        <a href="{{ route('admin.courses.create') }}">
+                        <a href="{{ route('admin.whies.create') }}">
     
                             <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
     
@@ -32,7 +32,7 @@
 
                 <div class="col-md-12">
 
-                    <div class="dd" id="nestable3">
+                    <div class="dd" id="nestable-why">
                         
                         <ol class="dd-list">
 
