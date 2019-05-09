@@ -73,7 +73,6 @@
 
 </div>
 
-
 @push('after-scripts')
 
     @include('backend.includes.ckeditor')

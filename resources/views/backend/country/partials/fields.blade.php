@@ -34,7 +34,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Images<br/></label>
+            <label class="col-md-2 form-control-label">slider<br/></label>
             
             <div class="col-md-10">
             
@@ -43,8 +43,8 @@
                     <image-uploader
                         :api-mode="true"
                         :multiple="false"
-                        :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
-                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'country', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
+                        :uploads="{{ json_encode($model->getUploaderImages('slider', 'thumbnail')) }}"
+                        :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'country', 'routeKeyValue' => $model->slug, 'collection' => 'slider'])) }}"
                     ></image-uploader>
 
                 @else
