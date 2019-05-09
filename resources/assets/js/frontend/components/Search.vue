@@ -5,15 +5,18 @@
 	    <div class="container-fluid intro px180">
 
 	        <div class="clearfix"></div>
+			<img data-src="svg/courses/papers.svg" class="img-fluid img-papers" alt="">
+
 
 	        <h1 class="title text-white fs40 mb30">Search Courses</h1>
 
 	        <div class="form-group w-100">
 
-	          <input type="text" class="form-control" aria-describedby="helpId" v-model="key">
+	          <input type="text" class="form-control course-search" aria-describedby="helpId" v-model="key">
 
 	        </div>
 
+			<img data-src="svg/courses/bookshelf.svg" class="img-fluid img-book" alt="">
 	    </div>
 
 	</div>
@@ -57,5 +60,4 @@ export default {
    
 
 };
-
 </script>

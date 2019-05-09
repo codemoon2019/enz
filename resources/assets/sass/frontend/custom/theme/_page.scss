@@ -183,10 +183,16 @@
             background: $white;
         }
         .intro {
-            padding-left: 192px;
-            img {
+            padding: 0 300px;
+            position: relative;
+            .img-papers {
                 position: absolute;
-                top: 8%;
+                top: -180%;
+                left: 5%;
+            }
+            .img-book {
+                position: absolute;
+                top: -260%;
                 right: 10%
             }
         }
