@@ -11199,12 +11199,19 @@ html body {
 }
 
 .page-courses .search-courses .intro {
-  padding-left: 192px;
+  padding: 0 300px;
+  position: relative;
 }
 
-.page-courses .search-courses .intro img {
+.page-courses .search-courses .intro .img-papers {
   position: absolute;
-  top: 8%;
+  top: -180%;
+  left: 5%;
+}
+
+.page-courses .search-courses .intro .img-book {
+  position: absolute;
+  top: -260%;
   right: 10%;
 }
 

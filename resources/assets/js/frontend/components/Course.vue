@@ -4,13 +4,13 @@
 
         <div class="block content-block search-results" data-aos="zoom-in" v-if="courses.length">
 
-            <div class="container-fluid jobs py80 px475 text-center">
+            <div class="container-fluid jobs px475 text-center">
                 
                 <h2 class="title text-nblue fs40 mb60 text-center">Search Results</h2>
                 
                 <div class="row" v-for="(course, index) in courseDisplay">
                 
-                    <div class="col-sm-12 item">
+                    <div class="col-sm-12 item mb30">
 
                         <div class="card text-left">
                         
@@ -50,15 +50,20 @@
 
         </div>
 
-        <div v-else>
+        <div class="text-center" v-else>
+                    
+            <p class="basic text-muted">No result</p>
 
-            <p>No Result</p>
-        
         </div>
 
-        <div v-if="count < courses.length">
+        <div class="text-center" v-if="count < courses.length">
                     
-            <button @click="count += 6">View more</button>
+            <button class="btn btnview-more text-uppercase mb30" @click="count += 6">View more</button>
+
+        </div>
+        <div class="text-center" v-else-if="count = courses.length">
+                    
+            <p class="basic text-muted">End of result</p>
 
         </div>
 

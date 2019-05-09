@@ -159,4 +159,10 @@ $('document').ready(function(){
 		var $panel = $(this).closest('.card');
 		$panel.find('.img-arrow').removeClass('rotateme')		
 	});
+
+	$('.course-search').on('click',function(){
+		$('html,body').animate({
+			scrollTop: 400
+		}, 800);
+	})
 });

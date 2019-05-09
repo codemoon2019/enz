@@ -164,6 +164,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -246,6 +251,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
 //
 //
 //
@@ -783,9 +791,7 @@ var render = function() {
               [
                 _c(
                   "div",
-                  {
-                    staticClass: "container-fluid jobs py80 px475 text-center"
-                  },
+                  { staticClass: "container-fluid jobs px475 text-center" },
                   [
                     _c(
                       "h2",
@@ -795,7 +801,7 @@ var render = function() {
                     _vm._v(" "),
                     _vm._l(_vm.courseDisplay, function(course, index) {
                       return _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-sm-12 item" }, [
+                        _c("div", { staticClass: "col-sm-12 item mb30" }, [
                           _c("div", { staticClass: "card text-left" }, [
                             _c(
                               "div",
@@ -824,13 +830,18 @@ var render = function() {
                 )
               ]
             )
-          : _c("div", [_c("p", [_vm._v("No Result")])]),
+          : _c("div", { staticClass: "text-center" }, [
+              _c("p", { staticClass: "basic text-muted" }, [
+                _vm._v("No result")
+              ])
+            ]),
         _vm._v(" "),
         _vm.count < _vm.courses.length
-          ? _c("div", [
+          ? _c("div", { staticClass: "text-center" }, [
               _c(
                 "button",
                 {
+                  staticClass: "btn btnview-more text-uppercase mb30",
                   on: {
                     click: function($event) {
                       _vm.count += 6
@@ -839,6 +850,12 @@ var render = function() {
                 },
                 [_vm._v("View more")]
               )
+            ])
+          : (_vm.count = _vm.courses.length)
+          ? _c("div", { staticClass: "text-center" }, [
+              _c("p", { staticClass: "basic text-muted" }, [
+                _vm._v("End of result")
+              ])
             ])
           : _vm._e()
       ])
@@ -941,6 +958,11 @@ var render = function() {
     _c("div", { staticClass: "container-fluid intro px180" }, [
       _c("div", { staticClass: "clearfix" }),
       _vm._v(" "),
+      _c("img", {
+        staticClass: "img-fluid img-papers",
+        attrs: { "data-src": "svg/courses/papers.svg", alt: "" }
+      }),
+      _vm._v(" "),
       _c("h1", { staticClass: "title text-white fs40 mb30" }, [
         _vm._v("Search Courses")
       ]),
@@ -955,7 +977,7 @@ var render = function() {
               expression: "key"
             }
           ],
-          staticClass: "form-control",
+          staticClass: "form-control course-search",
           attrs: { type: "text", "aria-describedby": "helpId" },
           domProps: { value: _vm.key },
           on: {
@@ -967,7 +989,12 @@ var render = function() {
             }
           }
         })
-      ])
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "img-fluid img-book",
+        attrs: { "data-src": "svg/courses/bookshelf.svg", alt: "" }
+      })
     ])
   ])
 }
@@ -14503,6 +14530,11 @@ $('document').ready(function () {
   $('.panel-collapse').on('hidden.bs.collapse', function (e) {
     var $panel = $(this).closest('.card');
     $panel.find('.img-arrow').removeClass('rotateme');
+  });
+  $('.course-search').on('click', function () {
+    $('html,body').animate({
+      scrollTop: 400
+    }, 800);
   });
 });
 
