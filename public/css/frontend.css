@@ -11196,6 +11196,7 @@ html body {
   border-radius: 35px;
   font-size: 18px;
   background: #fff;
+  position: relative;
 }
 
 .page-courses .search-courses .intro {
@@ -11213,6 +11214,10 @@ html body {
   position: absolute;
   top: -260%;
   right: 10%;
+}
+
+.page-courses .search-results {
+  margin-top: -5%;
 }
 
 .page-destination .banner-block {

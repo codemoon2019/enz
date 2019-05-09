@@ -10,7 +10,7 @@
                 
                 <div class="row" v-for="(course, index) in courseDisplay">
                 
-                    <div class="col-sm-12 item mb30">
+                    <div class="col-sm-12 item mb30" data-aos="fade-up">
 
                         <div class="card text-left">
                         

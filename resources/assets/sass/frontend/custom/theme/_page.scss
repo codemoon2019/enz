@@ -181,6 +181,7 @@
             border-radius: 35px;
             font-size: 18px;
             background: $white;
+            position: relative;
         }
         .intro {
             padding: 0 300px;
@@ -196,6 +197,9 @@
                 right: 10%
             }
         }
+    }
+    .search-results {
+        margin-top: -5%;
     }
 }
 
