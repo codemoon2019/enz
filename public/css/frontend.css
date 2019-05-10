@@ -241,42 +241,6 @@
   margin-bottom: 20%;
 }
 
-.px180 {
-  padding: 0 180px;
-}
-
-.pl20 {
-  padding-left: 20px;
-}
-
-.pl83 {
-  padding-left: 83px;
-}
-
-.pr83 {
-  padding-right: 83px;
-}
-
-.pr35 {
-  padding-right: 35px;
-}
-
-.pl5p {
-  padding-left: 5%;
-}
-
-.pl10p {
-  padding-left: 10%;
-}
-
-.pr10p {
-  padding-right: 10%;
-}
-
-.pr5p {
-  padding-right: 5%;
-}
-
 .pb10p {
   padding-bottom: 10%;
 }
@@ -10495,6 +10459,30 @@ html body {
   left: 0;
 }
 
+.ns-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #3fb1e5;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ns-message svg {
+  margin-right: 20px;
+}
+
+.ns-message svg path {
+  fill: #3fb1e5;
+}
+
 .fixed {
   position: fixed;
   top: 0;
@@ -11840,32 +11828,6 @@ html body {
 }
 
 @media (min-width: 640px) {
-  .user-menu {
-    padding: 0;
-  }
-
-  .user-menu img {
-    padding-left: 8px;
-    max-height: 50px;
-  }
-
-  .fixed .user-menu {
-    padding: 0;
-  }
-
-  .banner-block {
-    display: block;
-  }
-
-  .banner-block .for-text {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    position: relative;
-    top: auto;
-    left: auto;
-    text-align: center;
-  }
-
   .events-block {
     background-size: cover;
   }
@@ -11877,31 +11839,9 @@ html body {
   .news-block .news-svg {
     display: none !important;
   }
-
-  .courses-block .row {
-    margin-bottom: 30px;
-  }
-
-  .news-block {
-    background-size: cover;
-  }
-
-  .footer .mb80 {
-    margin: 0 !important;
-  }
-
-  .footer .right-content {
-    padding-left: 15px;
-  }
-
-  .footer .footer-links li {
-    display: inline-block;
-    float: left;
-    margin: 0 1%;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .px83,
   .px180,
   .pl10p,
@@ -11914,11 +11854,21 @@ html body {
     padding: 0 !important;
   }
 
+  .fs40 {
+    font-size: 4vw !important;
+  }
+
+  p,
+  .basic {
+    font-size: 2vw;
+  }
+
   .banner-block {
     margin-bottom: 30px;
   }
 
   .banner-block video {
+    margin-bottom: 30px;
     -webkit-transform: translateX(-15%);
             transform: translateX(-15%);
     -o-object-fit: cover;
@@ -11962,6 +11912,27 @@ html body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+  .user-menu .px14 {
+    padding: 0 7px !important;
+  }
+
+  .user-menu .px14 .nav-link {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .banner-block video {
+    height: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  .events-block .item .month {
+    font-size: 40px;
+  }
+}
+
 @media (min-width: 1024px) {
   .user-menu {
     box-shadow: none;
@@ -11969,12 +11940,44 @@ html body {
 }
 
 @media (min-width: 1200px) {
-  #navbarResponsive {
-    background-color: #fff;
+  .px180 {
+    padding: 0 180px;
   }
 
-  #navbarResponsive .nav-link {
-    padding: 18px 0 !important;
+  .pl20 {
+    padding-left: 20px;
+  }
+
+  .pl83 {
+    padding-left: 83px;
+  }
+
+  .pr83 {
+    padding-right: 83px;
+  }
+
+  .pr35 {
+    padding-right: 35px;
+  }
+
+  .pl5p {
+    padding-left: 5%;
+  }
+
+  .pl10p {
+    padding-left: 10%;
+  }
+
+  .pr10p {
+    padding-right: 10%;
+  }
+
+  .pr5p {
+    padding-right: 5%;
+  }
+
+  #navbarResponsive {
+    background-color: #fff;
   }
 
   .front .banner-block {
