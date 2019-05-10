@@ -21,6 +21,7 @@ class CreateCountriesTable extends Migration
             $table->string('title')->unique();
             $table->text('description')->nullable();
             $table->string('slug')->unique();
+            $table->enum('color', ['teal', 'red', 'orange'])->default('teal');
             $table->timestamps();
         });
     }

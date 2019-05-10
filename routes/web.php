@@ -13,15 +13,15 @@ Route::get('lang/{lang}', 'LanguageController');
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_files(__DIR__ . '/frontend/');
 });
-Route::get('/company',function(){
-    return view('frontend.about-company');
-});
+// Route::get('/company',function(){
+//     return view('frontend.about-company');
+// });
 // Route::get('/student-visa',function(){
 //     return view('frontend.student-visa');
 // });
-Route::get('/tourist-visa',function(){
-    return view('frontend.tourist-visa');
-});
+// Route::get('/tourist-visa',function(){
+//     return view('frontend.tourist-visa');
+// });
 // Route::get('/linkages',function(){
 //     return view('frontend.linkages');
 // });
