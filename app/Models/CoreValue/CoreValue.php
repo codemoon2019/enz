@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\News;
+namespace App\Models\CoreValue;
 
-use App\Models\News\Traits\NewsAttributes;
-use App\Models\News\Traits\NewsRegularFunctions;
-use App\Models\News\Traits\NewsRelations;
-use App\Models\News\Traits\NewsScopes;
-use App\Models\News\Traits\NewsStaticFunctions;
+use App\Models\CoreValue\Traits\CoreValueAttributes;
+use App\Models\CoreValue\Traits\CoreValueRegularFunctions;
+use App\Models\CoreValue\Traits\CoreValueRelations;
+use App\Models\CoreValue\Traits\CoreValueScopes;
+use App\Models\CoreValue\Traits\CoreValueStaticFunctions;
 use HalcyonLaravel\Base\Models\Model;
 use HalcyonLaravel\Base\Models\Traits\ModelDefaultTraits;
 use Spatie\Sluggable\HasSlug;
@@ -21,41 +21,38 @@ use Spatie\Image\Manipulations;
 use App\Models\Traits\CustomAttributes;
 
 /**
- * Class News
- * @package App\Models\News
+ * Class CoreValue
+ * @package App\Models\CoreValue
  */
-class News extends Model implements HasMedia
+class CoreValue extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
     use ModelDefaultTraits;
-    use NewsAttributes;
-    use NewsRegularFunctions;
-    use NewsRelations;
-    use NewsScopes;
-    use NewsStaticFunctions;
+    use CoreValueAttributes;
+    use CoreValueRegularFunctions;
+    use CoreValueRelations;
+    use CoreValueScopes;
+    use CoreValueStaticFunctions;
     use HasImageMediaTrait;
     use CustomAttributes;
 
-    public const MODULE_NAME = 'news';
-    public const VIEW_BACKEND_PATH = 'backend.news';
-    public const VIEW_FRONTEND_PATH = 'frontend.news';
-    public const ROUTE_ADMIN_PATH = 'admin.news';
-    public const ROUTE_FRONTEND_PATH = 'frontend.news';
+    public const MODULE_NAME = 'core value';
+    public const VIEW_BACKEND_PATH = 'backend.coreValue';
+    public const VIEW_FRONTEND_PATH = 'frontend.coreValue';
+    public const ROUTE_ADMIN_PATH = 'admin.core-values';
+    public const ROUTE_FRONTEND_PATH = 'frontend.core-values';
 
     /**
      * Declared Fillables
      */
     protected $fillable = [
         'title',
-        'status',
-        'featured',
         'description',
-        'published_at',
+        'color',
         'slug',
+        'order',
     ];
-
-    protected $dates = ['published_at'];
 
     /**
      * Return the permissions related to this model.
@@ -121,7 +118,7 @@ class News extends Model implements HasMedia
             'backend' => [
                 'index' => [
                     'type' => 'custom',
-                    'label' => 'News',
+                    'label' => 'Core Values',
                     'permission' => self::permission('index'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.index'],
                 ],
@@ -150,11 +147,6 @@ class News extends Model implements HasMedia
     public function registerMediaCollections()
     {
         $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
-
-            $this->addMediaConversion('main')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 364, 235);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

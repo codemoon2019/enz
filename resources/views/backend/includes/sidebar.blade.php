@@ -242,6 +242,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\CoreValue\CoreValue::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/core-values*')) }}"
+                                   href="{{ route(app(App\Models\CoreValue\CoreValue::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Core Values
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">

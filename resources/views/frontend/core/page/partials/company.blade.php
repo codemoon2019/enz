@@ -64,52 +64,69 @@
     </div>
     <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="" data-aos="fade-right">
 </div>
+
 <div class="block mv-block">
+
     <div class="container-fluid px180 pt10p text-center">
+
         <div id="carouselId" class="carousel slide" data-ride="carousel">
+
             <div class="carousel-inner" role="listbox">
 
                 @foreach (missionVision() as $key => $element)
 
                     <div class="carousel-item {{ !$key ? 'active' : '' }}">
+
                         <h2 class="title text-yellow text-capitalize fs40 mb30">{{ $element->title }}</h2>
+
                         <h3 class="title text-nblue text-capitalize fs40 mb0">{!! $element->description !!}</h3>
+
                     </div>
 
                 @endforeach
          
             </div>
+
             <ol class="carousel-indicators">
+
                 <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+
                 <li data-target="#carouselId" data-slide-to="1"></li>
+
             </ol>
+
         </div>
+
     </div>
+
 </div>
+
 <div class="block values-block"  data-aos="zoom-in">
+
     <div class="container-fluid py80 px475 text-center">
+
         <div class="row">
-            <div class="col-sm-4 item">
-                <div class="circle linear-gradient-red mx-auto mb30">
-                    <img data-src="{{asset('img/about/integrity.png')}}" class="img-fluid" alt="">
+    
+            @foreach (CoreValue() as $key => $core)
+
+                <div class="col-sm-4 item">
+
+                    <div class="circle linear-gradient-{{ $core->color }} mx-auto mb30">
+
+                        <img data-src="{{ $core->getFirstMediaUrl('featured') }}" class="img-fluid" alt="">
+
+                    </div>
+
+                    <p class="title fs18 mb30">{{ $core->title }}</p>
+
+                    <p class="basic fs18">{!! $core->description !!}</p>
+
                 </div>
-                <p class="title fs18 mb30">Integrity</p>
-                <p class="basic fs18">We do the right thing</p>
-            </div>
-            <div class="col-sm-4 item">
-                <div class="circle linear-gradient-yellow mx-auto mb30">
-                    <img data-src="{{asset('img/about/teamwork.png')}}" class="img-fluid" alt="">
-                </div>
-                <p class="title fs18 mb30">Integrity</p>
-                <p class="basic fs18">We do the right thing</p>
-            </div>
-            <div class="col-sm-4 item">
-                <div class="circle linear-gradient-green mx-auto mb30">
-                    <img data-src="{{asset('img/about/honesty.png')}}" class="img-fluid" alt="">
-                </div>
-                <p class="title fs18 mb30">Integrity</p>
-                <p class="basic fs18">We do the right thing</p>
-            </div>
+
+            @endforeach
+
         </div>
+
     </div>
+
 </div>

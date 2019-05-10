@@ -17,6 +17,7 @@ use App\Models\News\News;
 use App\Models\StudentVisa\StudentVisa;
 use App\Models\Country\Country;
 use App\Models\Details\Details;
+use App\Models\CoreValue\CoreValue;
 
 /*
  * Application version name
@@ -617,4 +618,11 @@ if (!function_exists('menu')) {
 
 function customRequestCaptcha(){
     return new \ReCaptcha\RequestMethod\Post();
+}
+
+if (!function_exists('CoreValue')) {
+    function CoreValue()
+    {
+        return CoreValue::orderBy('order')->get();
+    }
 }

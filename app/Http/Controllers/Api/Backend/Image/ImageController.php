@@ -23,6 +23,7 @@ use App\Models\Testimonial\Testimonial;
 use App\Models\Why\Why;
 use App\Models\Linkages\Linkages;
 use App\Models\Country\Country;
+use App\Models\CoreValue\CoreValue;
 
 /**
  * Class ImageController
@@ -48,6 +49,7 @@ class ImageController extends Controller
         'why'         => Why::class,
         'linkages'    => Linkages::class,
         'country'     => Country::class,
+        'core-values' => CoreValue::class,
     ];
 
     /**
