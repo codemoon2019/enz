@@ -52,12 +52,9 @@
 
                 <img src="{{ $model->featured_icon }}" alt="">
 
-                {{-- {!! $model->featured_icon !!} --}}
-
             </div>
 
         </div>
-
 
     </div>
 

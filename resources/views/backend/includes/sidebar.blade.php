@@ -220,6 +220,39 @@
 
                         @endcan
       
+                        @can(app(App\Models\StudentVisa\StudentVisa::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/student-visas*')) }}"
+                                   href="{{ route(app(App\Models\StudentVisa\StudentVisa::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Student Visa
+                                </a>
+                            </li>
+
+                        @endcan
+      
+                        @can(app(App\Models\Details\Details::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/details*')) }}"
+                                   href="{{ route(app(App\Models\Details\Details::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Web Details
+                                </a>
+                            </li>
+
+                        @endcan
+      
+                        @can(app(App\Models\CoreValue\CoreValue::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/core-values*')) }}"
+                                   href="{{ route(app(App\Models\CoreValue\CoreValue::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Core Values
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">
@@ -262,13 +295,6 @@
                             </li>
 
                         @endcan
-
-                        <li class="nav-item">
-                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/website-information*')) }}"
-                               href="{{ route('admin.information.index') }}">
-                                <i class="nav-icon fa fa-circle-o"></i> Website Informations
-                            </a>
-                        </li>
 
                         {{-- @can(config('access.users.default_permissions.media_permission'))
 

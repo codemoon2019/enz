@@ -24,6 +24,10 @@ use App\Models\Linkages\Linkages;
 
 use App\Models\CountryDetails\CountryDetails;
 
+use App\Models\StudentVisa\StudentVisa;
+
+use App\Models\CoreValue\CoreValue;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -49,6 +53,10 @@ class SortableController extends Controller
             case 'Linkages': $model       = new Linkages; break;
             
             case 'CountryDetails': $model = new CountryDetails; break;
+            
+            case 'StudentVisa': $model = new StudentVisa; break;
+            
+            case 'CoreValue': $model = new CoreValue; break;
 
             default: break;
         }

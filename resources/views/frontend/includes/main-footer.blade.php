@@ -95,8 +95,11 @@
         </div>
         <div class="col-lg-2 col-md-6 align-self-center footer-info">
           <ul class="list-unstyled">
-            <li class="text-white loc">{{ findSetting('location')->value }}</li>
-            <li class="text-white tel">{{ findSetting('contact-number')->value }}</li>
+            @php
+              $footer_details = footerDetails();
+            @endphp
+            <li class="text-white loc">{{ $footer_details[0]->description }}</li>
+            <li class="text-white tel">{{ $footer_details[1]->description }}</li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-4 col-4 align-self-center footer-social text-center">

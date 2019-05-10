@@ -8,7 +8,6 @@ namespace App\Models\Why\Traits;
  */
 trait WhyAttributes
 {
-
 	public function getFeaturedIconAttribute()
 	{
 		if ($this->file == null) {

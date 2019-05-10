@@ -50,6 +50,7 @@ class Country extends Model implements HasMedia
         'title',
         'description',
         'slug',
+        'color',
     ];
 
     /**
@@ -144,12 +145,12 @@ class Country extends Model implements HasMedia
 
     public function registerMediaCollections()
     {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
+        $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
 
             $this->addMediaConversion('main')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 550, 370);
+                ->fit(Manipulations::FIT_CROP, 505, 340);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

@@ -18,7 +18,7 @@
     
                         Why Choose ENZ?
     
-                        <a href="{{ route('admin.courses.create') }}">
+                        <a href="{{ route('admin.whies.create') }}">
     
                             <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
     
@@ -32,7 +32,7 @@
 
                 <div class="col-md-12">
 
-                    <div class="dd" id="nestable3">
+                    <div class="dd" id="nestable-why">
                         
                         <ol class="dd-list">
 
@@ -70,7 +70,7 @@
 
                     @if ($whies->count())
 
-                        @include('backend.includes.sortable.form', ['model' => $model])
+                        @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'why'])
                         
                     @endif
 
@@ -84,6 +84,6 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => 1])
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'why'])
 
 @endsection
