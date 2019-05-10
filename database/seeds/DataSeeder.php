@@ -76,9 +76,7 @@ class DataSeeder extends Seeder
             
             ['name' => 'Students', 'url' => '/students', 'order' => 6],
 
-                ['name' => 'Testimonials', 'url' => '/testimonilas', 'order' => 0, 'parent_id' => 17],
-            
-                ['name' => 'Gallery', 'url' => '/gallery', 'order' => 1, 'parent_id' => 17],
+                ['name' => 'Testimonials', 'url' => '/testimonials', 'order' => 0, 'parent_id' => 17],
             
             ['name' => 'Contact Us', 'url' => '/contact-us', 'order' => 7],
 

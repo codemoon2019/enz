@@ -31,9 +31,9 @@ Route::get('/community-services',function(){
 Route::get('/become-our-client',function(){
     return view('frontend.become-our-client');
 });
-Route::get('/testimonilas',function(){
-    return view('frontend.testimonials');
-});
+// Route::get('/testimonilas',function(){
+//     return view('frontend.testimonials');
+// });
 Route::get('/australia',function(){
     return view('frontend.australia');
 });

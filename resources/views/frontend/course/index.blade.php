@@ -22,7 +22,7 @@
         
                     <p class="basic fs15">{!! str_limit($course->description, 250) !!}</p>
         
-                    <a href="#" class="btn btnview-more text-uppercase">{{ route('frontend.courses.show', $course->slug) }}</a>
+                    <a href="{{ route('frontend.courses.show', $course->slug) }}" class="btn btnview-more text-uppercase">Read More</a>
         
                 </div>
         
