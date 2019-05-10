@@ -1,9 +1,3 @@
-@push('after-styles')
-
-    <link rel="stylesheet" href="{{ asset('css/ckeditor-hide-toolbars.css') }}">
-
-@endpush
-
 <div class="row mt-4 mb-4">
 
     <div class="col">
@@ -30,20 +24,32 @@
     
             </div>
     
+        </div>       
+
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label">Featured Image (svg file)</label>
+
+            <div class="col-md-10 image-div">
+
+                <input type="file" name="icon">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label"></label>
+
+            <div class="col-md-10 image-div">
+
+                <img src="{{ $model->featured_icon }}" alt="">
+
+            </div>
+
         </div>
 
     </div>
 
 </div>
-
-@push('after-scripts')
-
-    @include('backend.includes.ckeditor')
-
-    <script>
-
-        CKEDITOR.replace('description', options);
-        
-    </script>
-
-@endpush

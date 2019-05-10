@@ -21,6 +21,7 @@ class CreateStudentVisasTable extends Migration
             $table->string('title')->unique();
             $table->text('description')->nullable();
             $table->string('slug')->unique();
+            $table->string('file')->nullable();
             $table->integer('order')->default(1);
             $table->timestamps();
         });

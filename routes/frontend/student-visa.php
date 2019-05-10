@@ -5,7 +5,7 @@
  */
 Route::group([
     'namespace' => 'StudentVisa',
-    'prefix' => 'student-visas',
+    'prefix' => 'student-visa',
     'as' => 'student-visas.',
 ], function () {
     Route::get('', 'StudentVisaController@index')->name('index');

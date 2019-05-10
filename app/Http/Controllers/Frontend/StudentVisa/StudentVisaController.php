@@ -53,7 +53,7 @@ class StudentVisaController extends Controller
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->paginate(12);
+        $models = $Model->orderBy('order')->get();
 
         return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
     }

@@ -51,13 +51,9 @@ class StudentVisaController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
+        $data = $request->except(['_token', '_method', '_submission']);
 
-        $model = $this->repository()->makeModel();
-
-        return array_merge($request->only($model->getFillable()), $data);
+        return $data;
     }
 
     /**

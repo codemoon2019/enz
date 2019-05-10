@@ -24,37 +24,42 @@ class StudentVisaTableSeeder extends Seeder
 
         $page = $this->modelPageSeeder(new StudentVisa);
 
+        $page->update([
+            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
+                    <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>'
+        ]);
+
         $this->seedToDomainables($page, 'main');
 
         $data = [
             [
                 'title' => 'Orientation',
-                'description' => '<p>ENZ provides FREE Orientation to all students.</p>',
+                'description' => 'ENZ provides FREE Orientation to all students.',
                 'order' => 0
             ],
             [
                 'title' => 'Consultation',
-                'description' => '<p>Via Skype, Face-to-face or Group.</p>',
+                'description' => 'Via Skype, Face-to-face or Group.',
                 'order' => 0
             ],
             [
                 'title' => 'Assesment',
-                'description' => '<p>ENZ provides FREE assessment to determine the best study options.</p>',
+                'description' => 'ENZ provides FREE assessment to determine the best study options.',
                 'order' => 0
             ],
             [
                 'title' => 'Admissions',
-                'description' => '<p>We organize your admission process and secure for your letter of offer.</p>',
+                'description' => 'We organize your admission process and secure for your letter of offer.',
                 'order' => 0
             ],
             [
                 'title' => 'Enrollment',
-                'description' => '<p>We assist you in arranging your documents for enrolment and getting your confirmation of enrollment.</p>',
+                'description' => 'We assist you in arranging your documents for enrolment and getting your confirmation of enrollment.',
                 'order' => 0
             ],
             [
                 'title' => 'Visa Application',
-                'description' => '<p>We will assist you in gathering all necessary documents needed on your student visa application and lodging.</p>',
+                'description' => 'We will assist you in gathering all necessary documents needed on your student visa application and lodging.',
                 'order' => 0
             ],
         ];

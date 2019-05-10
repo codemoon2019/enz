@@ -30,6 +30,16 @@ class StudentVisaObserver extends BaseObserverContract
      */
     public static function stored($model, array $data)
     {
+        if (array_key_exists('icon', $data) && $data['icon'] != null) {
+
+            $filename = $data['icon']->getClientOriginalName();
+
+            $data['icon']->move('./uploads/student_visa', $filename);
+
+            $model->update(['file' => $filename]);
+
+        }
+
         self::meta('create', $model, $data);
         return $model;
     }
@@ -54,6 +64,27 @@ class StudentVisaObserver extends BaseObserverContract
      */
     public static function updated($model, array $data, array $oldModel)
     {
+
+        if (array_key_exists('icon', $data) && $data['icon'] != null) {
+
+            if ($model->file != null) {
+
+                unlink(public_path('uploads/student_visa') . '/' . $model->file);
+            
+            }
+
+            $filename = $data['icon']->getClientOriginalName();
+
+            $data['icon']->move('./uploads/student_visa', $filename);
+
+            $model->update(['file' => $filename]);
+
+        }
+        
+        cache()->flush();
+        
+        return $model;
+
         self::meta('update', $model, $data);
         return $model;
     }

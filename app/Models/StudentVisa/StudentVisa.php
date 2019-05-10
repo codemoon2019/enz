@@ -41,6 +41,7 @@ class StudentVisa extends Model
         'title',
         'description',
         'slug',
+        'file',
         'order',
     ];
 
