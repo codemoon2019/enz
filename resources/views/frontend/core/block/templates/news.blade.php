@@ -12,7 +12,7 @@
 
                 @foreach ($homeNews as $key => $news)
     
-                    <div class="col-sm-3 item mb40">
+                    <div class="col-lg-3 col-md-6 item mb40">
     
                         <div class="card">
     

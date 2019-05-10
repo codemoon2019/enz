@@ -25,7 +25,7 @@
 
                     <div class="d-flex event-details">
                     
-                        <div class="col-sm-4 date text-center py38 text-white {{ $bgColor }}">
+                        <div class="col-lg-4 col-md-6 date text-center py38 text-white {{ $bgColor }}">
                     
                             <span class="num">{{ $event->event_date->format('d') }}</span>
                     
@@ -33,7 +33,7 @@
                     
                         </div>
                     
-                        <div class="col-sm-8 details">
+                        <div class="col-lg-8 col-md-6 details">
                     
                             <p class="basic">{{ str_limit($event->title, 30) }}</p>
                     

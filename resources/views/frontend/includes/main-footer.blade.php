@@ -83,23 +83,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 align-self-center text-center">
+        <div class="col-lg-2 col-md-4 align-self-center text-center">
           <img data-src="{{asset('img/footer-logo.png')}}" class="img-fluid" alt="">
         </div>
-        <div class="col-sm-2 align-self-center footer-links">
+        <div class="col-lg-2 col-md-2 align-self-center footer-links">
           <ul class="list-unstyled">
             @foreach (Menu('footer-menu')->nodes as $menu)
               <li><a href="{{ $menu->link }}" class="text-white text-uppercase">{{ $menu->name }}</a></li>
             @endforeach
           </ul>
         </div>
-        <div class="col-sm-2 align-self-center footer-info">
+        <div class="col-lg-2 col-md-6 align-self-center footer-info">
           <ul class="list-unstyled">
             <li class="text-white loc">{{ findSetting('location')->value }}</li>
             <li class="text-white tel">{{ findSetting('contact-number')->value }}</li>
           </ul>
         </div>
-        <div class="col-sm-2 align-self-center footer-social text-center">
+        <div class="col-lg-2 col-md-4 col-4 align-self-center footer-social text-center">
           <h3 class="basic fs18 text-white">Follow Us</h3>
           <ul class="list-inline">
 
@@ -162,10 +162,10 @@
 
           </ul>
         </div>
-        <div class="col-sm-2 align-self-center text-center">
+        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
           <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="">          
         </div>
-        <div class="col-sm-2 align-self-center text-center">
+        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
           <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="">          
         </div>
       </div>

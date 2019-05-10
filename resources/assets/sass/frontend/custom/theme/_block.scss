@@ -2,24 +2,10 @@
 // Recommended sample section class "block block-$block-name", you should always add block as default to specify that it's block.
 
 //Banner
-.front .banner-block {
-    display: flex;
-    margin-top: -8%;
-    video {
-        height: 100%;
-    }
-    .for-text {
-        position: absolute;
-        top: 30%;
-        left: 10%;
-        p {
-            text-align: justify;
-        }
-    }
-}
+
 .banner-block {
     text-align: justify;
-    .basic {
+    p {
         font-size: 18px;
     }
 }

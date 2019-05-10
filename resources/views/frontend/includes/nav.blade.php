@@ -54,7 +54,7 @@
 
                         @endphp
                         
-                        <li class="nav-item px18 {{ $active }}">
+                        <li class="nav-item px14 {{ $active }}">
                             <div class="dropdown show">
                                 <a class="nav-link"
                                     href="#" 
@@ -79,11 +79,11 @@
 
                         @if ($node->url == '/' && $url == env('APP_URL'))
 
-                            <li class="nav-item px18 active">
+                            <li class="nav-item px14 active">
 
                         @else
                             
-                            <li class="nav-item px18 {{ (strpos($url, $node->url) !== false && $node->url != '/') ? 'active' : ''  }}">
+                            <li class="nav-item px14 {{ (strpos($url, $node->url) !== false && $node->url != '/') ? 'active' : ''  }}">
                         
                         @endif
 

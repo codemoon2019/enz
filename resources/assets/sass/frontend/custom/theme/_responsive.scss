@@ -1,78 +1,12 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-    .px180 {
-        padding: 0 15px;
-    }
-    .pl10p,
-    .pr10p {
-        padding-left: 15px;
-    }
-    .user-menu {
-        padding: 0;
-        img {
-            padding-left: 8px;
-            max-height: 50px;
-        }
-    } 
-    .wrapper.px83 {
-        padding: 0 !important;
-    }
-    .fixed .user-menu {
-        padding: 0;
-    }
-    #navbarResponsive {
-        background-color: $white;
-        overflow: auto;
-        .nav-link {
-            padding: 18px 0 !important;
-        }
-    }
-    .banner-block {
-        display: block;
-        .for-text {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            position: relative;
-            top: auto;
-            left: auto;
-            text-align: center;
-        }
-    }
-    .events-block {
-        background-size: cover;
-        .plant {
-            display: none !important;
-        }
-    }
-    .courses-block {
-        .row {
-            margin-bottom: 30px;
-        }
-    }
-    .news-block {
-        background-size: cover;
-    }
-    .footer{
-        .mb80 {
-            margin: 0 !important;
-        }
-        .right-content {
-            padding-left: 15px;
-        }
-        .know-more {
-            background-size: cover;
-            padding-bottom: 25%;
-            margin-top: -20%;
-        }
-        .footer-links li {
-            display: inline-block;
-            float: left;
-            margin: 0 1%;
-        }
-    } 
+    
 }
 
 @media only screen and (max-width: 320px) {
+    .user-menu img {
+        max-height: 40px;
+    }
     .divider {
         width: auto;
     }
@@ -170,5 +104,241 @@
     }
     .courses-block img {
         height: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .px83,
+    .px180,
+    .pl10p,
+    .pr10p,
+    .fixed .user-menu {
+        padding: 0 15px !important;
+    }
+    .fs40 {
+        font-size: 6vw !important;
+    }
+    p, .basic {
+        font-size: 4vw;
+    }
+    .banner-block {
+        margin-bottom: 30px;
+        video {
+            margin-bottom: 30px;
+            transform: translateX(-35%);
+            object-fit: cover;
+            height: 55vh;
+        }
+        .for-text h2 {
+            font-size: 6vw;
+        }
+    }
+    .wrapper.px83 {
+        padding: 0 !important;
+    }
+    .events-block .plant {
+        display: none !important;
+        .item .num {
+            font-size: 60px;
+        }
+    } 
+    .courses-block {
+        .container-fluid > .row > div  {
+            margin-bottom: 50px;
+        }
+        .plane,
+        .cook,
+        .nurse,
+        .other-service .right-content .plane {
+            left: 20%;
+        }
+        .teacher {
+            top: 20%;
+            left: 30%;
+        }
+        .bman,
+        .pan,
+        .it,
+        .driller {
+            right: 20%;;
+        }
+        .stetos {
+            top: -10%;
+            left: 30%;
+        }
+        .tooth {
+            left: 35%;
+        }
+         
+    }   
+    .news-block .news-svg {
+        display: none !important;
+    }
+    .footer .know-more {
+        background-size: cover;
+        padding-bottom: 30% !important;
+    }
+    .scrollTop.scrollTop {
+        bottom: 25%;
+        right: 2%;
+    }
+    #phplive_btn_1480051776 {
+        height: 60px;
+        width: 60px;
+        right: 2% !important;
+        bottom: 0 !important;
+    }
+}
+
+@media (min-width: 640px){    
+    .user-menu {
+        padding: 0;
+        img {
+            padding-left: 8px;
+            max-height: 50px;
+        }
+    } 
+    .fixed .user-menu {
+        padding: 0;
+    }
+    
+    
+    .banner-block {
+        display: block;
+        .for-text {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            top: auto;
+            left: auto;
+            text-align: center;
+        }
+    }
+    .events-block {
+        background-size: cover;
+        .plant {
+            display: none !important;
+        }
+    }
+    .news-block .news-svg {
+        display: none !important;
+    }
+    .courses-block {
+        .row {
+            margin-bottom: 30px;
+        }
+    }
+    .news-block {
+        background-size: cover;
+    }
+    .footer{
+        .mb80 {
+            margin: 0 !important;
+        }
+        .right-content {
+            padding-left: 15px;
+        }
+        
+        .footer-links li {
+            display: inline-block;
+            float: left;
+            margin: 0 1%;
+        }
+    } 
+}
+    
+@media (min-width: 768px) and (max-width: 1023px){   
+    .px83,
+    .px180,
+    .pl10p,
+    .pr10p,
+    .fixed .user-menu {
+        padding: 0 15px !important;
+    }
+    .wrapper.px83 {
+        padding: 0 !important;
+    }
+    .banner-block {
+        margin-bottom: 30px;
+        video {
+            transform: translateX(-15%);
+            object-fit: cover;
+            height: 55vh;
+        }
+        .for-text  {
+            max-width: 100%;
+        }
+    } 
+    .events-block .item {
+        .num {
+            font-size: 60px;
+        }
+        .basic {
+           font-size: 16px;
+       }
+    }
+    .courses-block {
+        .it,
+        .driller {
+            right: 0;
+        }
+    }
+    .footer .know-more {
+        background-size: cover;
+        padding-bottom: 25%;
+        margin-top: -15%;
+        padding-bottom: 10% !important;
+        padding-top: 15% !important;
+    
+    }
+    .scrollTop.scrollTop {
+        right: 2%;
+    }
+    #phplive_btn_1480051776 {
+        height: 60px;
+        width: 60px;
+        right: 2% !important;
+    }
+    
+
+}
+    
+@media (min-width: 1024px){   
+    .user-menu {
+        box-shadow: none; 
+    }
+    
+}
+    
+@media (min-width: 1200px){   
+    #navbarResponsive {
+        background-color: $white;
+        // overflow: auto;
+        .nav-link {
+            padding: 18px 0 !important;
+        }
+    } 
+    .front .banner-block {
+        display: flex;
+        margin-top: -8%;
+        video {
+            height: 100%;
+        }
+        .for-text {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            p {
+                text-align: justify;
+            }
+        }
+    }
+    .events-block {
+        .plant {
+            display: block !important;
+        }
+    }
+    .news-block .news-svg {
+        display: block !important;
     }
 }
