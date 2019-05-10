@@ -42,7 +42,6 @@ class PageTableSeeder extends Seeder
 
         $model->domains()->sync([1]);
 
-        
         $model = Page::create([
             'title'       => 'Company',
             'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
@@ -52,7 +51,6 @@ class PageTableSeeder extends Seeder
 
         $model->domains()->sync([1]);
 
-        
         $model = Page::create([
             'title'       => 'Tourist Visa',
             'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
