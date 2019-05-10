@@ -231,6 +231,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\Details\Details::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/details*')) }}"
+                                   href="{{ route(app(App\Models\Details\Details::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Web Details
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">

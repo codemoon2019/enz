@@ -68,14 +68,16 @@
     <div class="container-fluid px180 pt10p text-center">
         <div id="carouselId" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <h2 class="title text-yellow text-capitalize fs40 mb30">Vision</h2>
-                    <h3 class="title text-nblue text-capitalize fs40 mb0">"To become one of the leading educational consultancy firm in the country in providing high-quality service and assistance to genuine international students."</h3>
-                </div>
-                <div class="carousel-item">
-                    <h2 class="title text-yellow text-capitalize fs40 mb30">Mission</h2>
-                    <h3 class="title text-nblue text-capitalize fs40 mb0">"Our mission is to provide meaningful accomplishments of International Students aiming for an Australian Education and Qualifications through a goal-driven and service-oriented assistance"</h3>                       
-                </div>
+
+                @foreach (missionVision() as $key => $element)
+
+                    <div class="carousel-item {{ !$key ? 'active' : '' }}">
+                        <h2 class="title text-yellow text-capitalize fs40 mb30">{{ $element->title }}</h2>
+                        <h3 class="title text-nblue text-capitalize fs40 mb0">{!! $element->description !!}</h3>
+                    </div>
+
+                @endforeach
+         
             </div>
             <ol class="carousel-indicators">
                 <li data-target="#carouselId" data-slide-to="0" class="active"></li>

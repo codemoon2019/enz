@@ -16,6 +16,7 @@ use App\Models\Event\Event;
 use App\Models\News\News;
 use App\Models\StudentVisa\StudentVisa;
 use App\Models\Country\Country;
+use App\Models\Details\Details;
 
 /*
  * Application version name
@@ -284,10 +285,10 @@ if (!function_exists('getSetting')) {
     }
 }
 
-if (!function_exists('findSetting')) {
-    function findSetting($key)
+if (!function_exists('findDetails')) {
+    function findDetails($key)
     {
-        return Setting::where('machine_name', $key)->first();
+        return Details::whereSlug($key)->first();
     }
 }
 
@@ -583,6 +584,26 @@ if (!function_exists('getModelList')) {
         }
 
     }
+}
+
+if (!function_exists('missionVision')) {
+
+    function missionVision()
+    {
+        return Details::whereIn('slug', ['vision', 'mission'])->get();
+
+    }
+
+}
+
+if (!function_exists('footerDetails')) {
+
+    function footerDetails()
+    {
+        return Details::whereIn('slug', ['location', 'contact'])->get();
+
+    }
+
 }
 
 if (!function_exists('menu')) {

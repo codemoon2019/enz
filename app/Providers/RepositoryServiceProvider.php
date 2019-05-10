@@ -78,6 +78,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Country\CountryRepository::class, \App\Repositories\Country\CountryRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\CountryDetails\CountryDetailsRepository::class, \App\Repositories\CountryDetails\CountryDetailsRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\StudentVisa\StudentVisaRepository::class, \App\Repositories\StudentVisa\StudentVisaRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\Details\DetailsRepository::class, \App\Repositories\Details\DetailsRepositoryEloquent::class);
         //:end-bindings:
     }
 }
