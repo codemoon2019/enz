@@ -10640,7 +10640,51 @@ html body {
 }
 
 .user-menu .dropdown-menu {
+  border: none;
   padding: 0;
+}
+
+.user-menu .dropdown-menu .nav-link {
+  font-size: 14px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.for-mobile {
+  display: none;
 }
 
 .banner-block {
@@ -11533,6 +11577,11 @@ html body {
   z-index: 1;
 }
 
+.footer .subscribe .txtemail {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+
 .footer .subscribe .input-group {
   max-width: 426px;
   margin: 0 auto;
@@ -11612,16 +11661,6 @@ html body {
 }
 
 /* Custom, iPhone Retina */
-
-@media only screen and (max-width: 320px) {
-  .user-menu img {
-    max-height: 40px;
-  }
-
-  .divider {
-    width: auto;
-  }
-}
 
 /* Extra Small Devices, Phones */
 
@@ -11727,6 +11766,20 @@ html body {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .for-desktop {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
+  }
+
+  .for-mobile .dropdown-menu {
+    background: #f2f2f2;
+    display: block;
+    text-align: center;
+  }
+
   .px83,
   .px180,
   .pl10p,
@@ -11765,6 +11818,15 @@ html body {
     padding: 0 !important;
   }
 
+  .events-block {
+    padding: 30px 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .events-block .title {
+    margin-bottom: 30px !important;
+  }
+
   .events-block .plant {
     display: none !important;
   }
@@ -11773,8 +11835,21 @@ html body {
     font-size: 60px;
   }
 
+  .courses-block {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .courses-block .title {
+    text-align: left;
+  }
+
   .courses-block .container-fluid > .row > div {
     margin-bottom: 50px;
+  }
+
+  .courses-block .container-fluid > .row > div .title {
+    text-align: center;
   }
 
   .courses-block .plane,
@@ -11805,13 +11880,36 @@ html body {
     left: 35%;
   }
 
+  .testimonials-block {
+    background: #eff1f5;
+  }
+
+  .news-block {
+    margin-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .news-block .title {
+    margin-bottom: 30px !important;
+  }
+
   .news-block .news-svg {
     display: none !important;
   }
 
+  .why-choose-block .title.nblue {
+    margin-bottom: 30px !important;
+  }
+
   .footer .know-more {
-    background-size: cover;
+    padding-top: 30px !important;
+    background-image: linear-gradient(#00bacf, #008db0);
+    margin-top: 0;
     padding-bottom: 30% !important;
+  }
+
+  .footer .know-more > .row {
+    margin-bottom: 30px !important;
   }
 
   .scrollTop.scrollTop {
@@ -11842,6 +11940,20 @@ html body {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .for-desktop {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
+  }
+
+  .for-mobile .dropdown-menu {
+    background: #f2f2f2;
+    display: block;
+    text-align: center;
+  }
+
   .px83,
   .px180,
   .pl10p,
@@ -11880,6 +11992,15 @@ html body {
     max-width: 100%;
   }
 
+  .events-block {
+    padding: 30px 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .events-block .title {
+    margin-bottom: 30px !important;
+  }
+
   .events-block .item .num {
     font-size: 60px;
   }
@@ -11888,9 +12009,31 @@ html body {
     font-size: 16px;
   }
 
+  .courses-block {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .courses-block .container-fluid > .row > div {
+    margin-bottom: 50px;
+  }
+
   .courses-block .it,
   .courses-block .driller {
     right: 0;
+  }
+
+  .testimonials-block {
+    background: #eff1f5;
+  }
+
+  .news-block {
+    margin-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .news-block .title {
+    margin-bottom: 30px !important;
   }
 
   .footer .know-more {
@@ -12005,6 +12148,20 @@ html body {
 
   .news-block .news-svg {
     display: block !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .user-menu img {
+    max-height: 40px;
+  }
+
+  .divider {
+    width: auto;
+  }
+
+  .footer .know-more {
+    padding-bottom: 45% !important;
   }
 }
 

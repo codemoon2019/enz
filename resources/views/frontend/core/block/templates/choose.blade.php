@@ -10,7 +10,7 @@
 
                 <div class="col-sm-4 item mb30">
 
-                    <div class="svg-holder mx-auto">
+                    <div class="svg-holder mb20 mx-auto">
                     
                         <img class="img-fluid" data-src="{{ $why->featured_icon }}" alt="">
                     

@@ -28,7 +28,12 @@
     
         <div class="row bus-service">
     
-            <div class="col-sm-6 left-content pr10p align-self-center col-sm-push-8" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+    
+                <img class="floating bman" data-src="{{asset('svg/bman.svg')}}" alt="">
+    
+            </div> 
+            <div class="col-sm-6 order-sm-1 left-content pr10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[1]->title }}</h3>
     
@@ -38,11 +43,6 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content padded col-sm-pull-4" data-aos="zoom-in">
-    
-                <img class="floating bman" data-src="{{asset('svg/bman.svg')}}" alt="">
-    
-            </div> 
     
         </div>  
     
@@ -70,7 +70,12 @@
     
         <div class="row it-service">
     
-            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+    
+                <img class="floating it" data-src="{{asset('svg/it.svg')}}" alt="">
+    
+            </div> 
+            <div class="col-sm-6 order-sm-1 left-content pr10p align-self-center" data-aos="zoom-in">
     
                 <h3 class="title fs40 mb30">{{ $course[3]->title }}</h3>
     
@@ -80,11 +85,6 @@
     
             </div>  
     
-            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
-    
-                <img class="floating it" data-src="{{asset('svg/it.svg')}}" alt="">
-    
-            </div> 
     
         </div> 
      
@@ -112,7 +112,16 @@
      
         <div class="row other-service">
      
-            <div class="col-sm-6 left-content pr10p align-self-center" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+     
+                <img class="floating plane" data-src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
+     
+                <img class="floating tooth" data-src="{{asset('svg/tooth.svg')}}" alt="">
+     
+                <img class="floating-rev driller" data-src="{{asset('svg/OtherCourses.svg')}}" alt="">
+     
+            </div> 
+            <div class="col-sm-6 order-sm-1 left-content pr10p align-self-center" data-aos="zoom-in">
      
                 <h3 class="title fs40 mb30">{{ $course[5]->title }}</h3>
      
@@ -122,15 +131,6 @@
      
             </div>  
      
-            <div class="col-sm-6 right-content padded" data-aos="zoom-in">
-     
-                <img class="floating plane" data-src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
-     
-                <img class="floating tooth" data-src="{{asset('svg/tooth.svg')}}" alt="">
-     
-                <img class="floating-rev driller" data-src="{{asset('svg/OtherCourses.svg')}}" alt="">
-     
-            </div> 
      
         </div> 
     
