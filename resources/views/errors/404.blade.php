@@ -95,6 +95,7 @@
 
       .img-404 {
           max-height: 600px;
+          width: 100%;
       }
 
       @media screen and (min-width: 320px) and (max-width: 767px) {

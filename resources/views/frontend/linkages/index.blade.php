@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-about-linkages")
+@section('page_class', "page page-about page-about-linkages")
 
 @section('content')
 

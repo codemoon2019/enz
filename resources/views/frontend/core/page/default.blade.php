@@ -14,7 +14,7 @@
 
 	    @case('Company')
 
-			@section('page_class', "page page-about-company")
+			@section('page_class', "page page-about page-about-company")
 
 			@include('frontend.core.page.partials.company')	
 
