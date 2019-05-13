@@ -4,13 +4,13 @@
     
         <div class="row">
     
-            <div class="col-sm-7">
+            <div class="col-lg-7">
         
                 <img data-src="{{asset('img/about/banner.png')}}" class="img-fluid" alt="">
         
             </div>
         
-            <div class="col-sm-5 pt80">
+            <div class="col-lg-5 pt80">
         
                 <h1 class="title title-large mb30 text-black text-capitalize">Our Company</h1>
         

@@ -16,9 +16,7 @@
     font-weight: 700;
     border-radius: 18px;
     transition: all ease 300ms;
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
         box-shadow: none;
         outline: none;
         background-color: transparent;
@@ -35,9 +33,7 @@
     font-weight: 700;
     border-radius: 18px;
     transition: all ease 300ms;
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
         box-shadow: none;
         outline: none;
         background-color: transparent;

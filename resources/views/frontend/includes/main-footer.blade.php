@@ -73,7 +73,7 @@
           <h2 class="title fs40 text-white mb10">Want to know more?</h2>
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input type="email" class="txtemail form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <div class="input-group-append">
               <span class="input-group-text" id="basic-addon2">
                   <button class="btn btnread-more">Subscribe</button>

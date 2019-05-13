@@ -40,7 +40,7 @@
 			    	<li class="nav-item {{ active_class(route_path_is_active($node->link ?? request()->path()), 'leaf active', 'leaf') }}"><a class="nav-link tc-lightgreen p-0 text-uppercase" href="{{ $node->link }}" {{ strpos( $node->link, url('/')) !== false ? '' : "target='_blank'" }}>{{ $node->getTrans('name') }}</a></li>
 	            @endif
 			@endforeach
-			<li class="nav-item "><a class="nav-link tc-lightgreen p-0 text-uppercase" href="#block--contact" >Contact Us </a></li>
+			<li class="nav-item "><a class="nav-link tc-lightgreen p-0 text-uppercase" href="#block--contact" >Contact Us ss</a></li>
 
 		</ul>
 	@endif

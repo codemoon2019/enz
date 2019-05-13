@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-about-company")
+@section('page_class', "page page-about page-about-company")
 
 @section('content')
     <div class="banner-block banner relative">

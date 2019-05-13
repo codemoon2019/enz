@@ -3,15 +3,6 @@
     
 }
 
-@media only screen and (max-width: 320px) {
-    .user-menu img {
-        max-height: 40px;
-    }
-    .divider {
-        width: auto;
-    }
-}
-
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {}
 
@@ -108,6 +99,17 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+    .for-desktop {
+        display: none;
+    }
+    .for-mobile {
+        display: block;
+        .dropdown-menu  {
+            background: #f2f2f2;
+            display: block;
+            text-align: center;
+        }
+    }
     .px83,
     .px180,
     .pl10p,
@@ -129,12 +131,22 @@
             object-fit: cover;
             height: 55vh;
         }
-        .for-text h2 {
-            font-size: 6vw;
-        }
+        .for-text {
+            text-align: center;
+            h2 {
+                font-size: 6vw;
+            }
+        } 
     }
     .wrapper.px83 {
         padding: 0 !important;
+    }
+    .events-block {
+        padding: 30px 0;
+        background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        .title {
+            margin-bottom: 30px !important;
+        }
     }
     .events-block .plant {
         display: none !important;
@@ -143,8 +155,16 @@
         }
     } 
     .courses-block {
+        padding: 30px 0;
+        text-align: center;
+        .title{
+            text-align: left;
+        }
         .container-fluid > .row > div  {
             margin-bottom: 50px;
+            .title{
+                text-align: center;
+            }
         }
         .plane,
         .cook,
@@ -170,13 +190,33 @@
             left: 35%;
         }
          
-    }   
+    }  
+    .testimonials-block {
+        background: #eff1f5;
+    } 
+    .news-block {
+        margin-top: 0;
+        background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        .title {
+            margin-bottom: 30px !important;
+        }
+    }
     .news-block .news-svg {
         display: none !important;
     }
+    .why-choose-block {
+        .title.nblue {
+            margin-bottom: 30px !important;
+        }
+    }
     .footer .know-more {
-        background-size: cover;
+        padding-top: 30px !important;
+        background-image:linear-gradient(#00bacf, #008db0);
+        margin-top: 0;
         padding-bottom: 30% !important;
+        > .row {
+            margin-bottom: 30px !important;
+        }
     }
     .scrollTop.scrollTop {
         bottom: 25%;
@@ -188,32 +228,130 @@
         right: 2% !important;
         bottom: 0 !important;
     }
+
+    //INNER PAGES
+    .page-services {
+        .title {
+            text-align: center;
+        }
+        .content-block {
+            padding: 30px 0;
+            margin: 0;
+            background-image:linear-gradient(#fadb5d, #f08e28);
+        }
+    }
+
+    .page-about {
+        .banner-block {
+            text-align: center;
+        }        
+        .content-block {
+            padding: 30px 0;
+            margin: 0;
+            background-image:linear-gradient(#00bacf, #008db0);
+            overflow: hidden;
+            .floating {
+                display: none !important;
+            }
+        }
+        .mv-block {
+            padding: 30px 0;
+            margin: 0;
+        }
+    }
+    .page-about.page-about-team {
+        .content-block {
+            margin: 0;
+            background: $white;
+        }
+    }
+    .page-about-linkages {
+        .banner-block {
+            padding-top: 30px !important;
+        }
+        .for-image{
+            display: none !important;
+        }
+        .linkages {
+            marigin-bottom: 30px;
+        }
+        .link-Australia {
+            padding: 30px 0;
+            background-image:linear-gradient(#00bacf, #008db0);
+        }
+        .link-Canada {
+            padding: 30px 0;
+            background-image:linear-gradient(#fadb5d, #f08e28);
+        }
+        .link-New {
+            padding: 30px 0;
+            background-image:linear-gradient(#ff7878, #eb5959);
+        }
+    } 
+
+    .page-courses {
+        .search-courses {
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+            align-items: flex-start;
+            height: auto;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .img-papers,
+        .img-book {
+            display: none !important;
+        }
+        .search-results {
+            padding-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .page-destination {
+        .for-text {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .content-block {
+            margin: 0;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+        .intro-block{
+            padding: 30px 0;
+            text-align: center;
+        }
+        .more-info {
+            padding: 30px 0;
+        }
+    }
+
+    .page-apply {
+        .banner-block{
+            text-align: center;
+        }
+        .content-block {
+            margin: 0;
+            padding: 0;
+            background-image:linear-gradient(#ff7878, #eb5959);
+        }
+    }
+
 }
 
 @media (min-width: 640px){    
-    .user-menu {
-        padding: 0;
-        img {
-            padding-left: 8px;
-            max-height: 50px;
-        }
-    } 
-    .fixed .user-menu {
-        padding: 0;
-    }
-    
-    
-    .banner-block {
-        display: block;
-        .for-text {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            position: relative;
-            top: auto;
-            left: auto;
-            text-align: center;
-        }
-    }
+    // .user-menu {
+    //     padding: 0;
+    //     img {
+    //         padding-left: 8px;
+    //         max-height: 50px;
+    //     }
+    // } 
+    // .fixed .user-menu {
+    //     padding: 0;
+    // }
     .events-block {
         background-size: cover;
         .plant {
@@ -223,31 +361,64 @@
     .news-block .news-svg {
         display: none !important;
     }
-    .courses-block {
-        .row {
-            margin-bottom: 30px;
-        }
-    }
-    .news-block {
-        background-size: cover;
-    }
-    .footer{
-        .mb80 {
-            margin: 0 !important;
-        }
-        .right-content {
-            padding-left: 15px;
-        }
+    
+    
+    // .banner-block {
+    //     display: block;
+    //     .for-text {
+    //         margin-top: 30px;
+    //         margin-bottom: 30px;
+    //         position: relative;
+    //         top: auto;
+    //         left: auto;
+    //         text-align: center;
+    //     }
+    // }
+    // .events-block {
+    //     background-size: cover;
+    //     .plant {
+    //         display: none !important;
+    //     }
+    // }
+    // .news-block .news-svg {
+    //     display: none !important;
+    // }
+    // .courses-block {
+    //     .row {
+    //         margin-bottom: 30px;
+    //     }
+    // }
+    // .news-block {
+    //     background-size: cover;
+    // }
+    // .footer{
+    //     .mb80 {
+    //         margin: 0 !important;
+    //     }
+    //     .right-content {
+    //         padding-left: 15px;
+    //     }
         
-        .footer-links li {
-            display: inline-block;
-            float: left;
-            margin: 0 1%;
-        }
-    } 
+    //     .footer-links li {
+    //         display: inline-block;
+    //         float: left;
+    //         margin: 0 1%;
+    //     }
+    // } 
 }
     
-@media (min-width: 768px) and (max-width: 1023px){   
+@media (min-width: 768px) and (max-width: 1199px){   
+    .for-desktop {
+        display: none;
+    }
+    .for-mobile {
+        display: block;
+        .dropdown-menu  {
+            background: #f2f2f2;
+            display: block;
+            text-align: center;
+        }
+    }
     .px83,
     .px180,
     .pl10p,
@@ -258,17 +429,32 @@
     .wrapper.px83 {
         padding: 0 !important;
     }
+    .fs40 {
+        font-size: 4vw !important;
+    }
+    p, .basic {
+        font-size: 2vw;
+    }
     .banner-block {
         margin-bottom: 30px;
         video {
+            margin-bottom: 30px;
             transform: translateX(-15%);
             object-fit: cover;
             height: 55vh;
         }
         .for-text  {
+            text-align: center;
             max-width: 100%;
         }
     } 
+    .events-block {
+        padding: 30px 0;
+        background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        .title {
+            margin-bottom: 30px !important;
+        }
+    }
     .events-block .item {
         .num {
             font-size: 60px;
@@ -278,9 +464,24 @@
        }
     }
     .courses-block {
+        padding: 30px 0;
+        text-align: center;
+        .container-fluid > .row > div  {
+            margin-bottom: 50px;
+        }
         .it,
         .driller {
             right: 0;
+        }
+    }
+    .testimonials-block {
+        background: #eff1f5;
+    } 
+    .news-block {
+        margin-top: 0;
+        background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        .title {
+            margin-bottom: 30px !important;
         }
     }
     .footer .know-more {
@@ -299,8 +500,157 @@
         width: 60px;
         right: 2% !important;
     }
-    
 
+    //INNER PAGES
+
+    .page-services {
+        .banner-block {
+            text-align: center;
+        }
+        .content-block {
+            padding: 30px 0;
+            margin: 0;
+            background-image:linear-gradient(#fadb5d, #f08e28);
+        }
+    }
+    .page-about {
+        .banner-block {
+            text-align: center;
+        }
+        .content-block {
+            padding: 30px 0;
+            margin: 0;
+            background-image:linear-gradient(#00bacf, #008db0);
+            overflow: hidden;
+            .container-fluid {
+                padding: 0 15px !important;
+            }
+        }
+    }
+
+    .page-about-company {
+
+        .floating {
+            display: none !important;
+        }
+        .mv-block {
+            padding: 30px 0;
+            margin: 0;
+        }
+    }
+
+    .page-about.page-about-team {
+        .content-block {
+            margin: 0;
+            background: $white;
+        }
+    }
+
+    .page-about-linkages {
+        .banner-block {
+            padding-top: 30px !important;
+        }
+        .for-image{
+            display: none !important;
+        }
+        .linkages {
+            marigin-bottom: 30px;
+        }
+        .link-Australia {
+            padding: 30px 0;
+            background-image:linear-gradient(#00bacf, #008db0);
+        }
+        .link-Canada {
+            padding: 30px 0;
+            background-image:linear-gradient(#fadb5d, #f08e28);
+        }
+        .link-New {
+            padding: 30px 0;
+            background-image:linear-gradient(#ff7878, #eb5959);
+        }
+    } 
+
+    .page-courses {
+        .search-courses {
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+            align-items: flex-start;
+            height: auto;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .img-papers,
+        .img-book {
+            display: none !important;
+        }
+        .search-results {
+            padding-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .page-destination {
+        .for-text {
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-top: 30px;
+            text-align: center;
+            max-width: 100%;
+            flex: 1;
+        }
+        .content-block {
+            margin: 0;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+        .intro-block{
+            padding: 30px 0;
+            text-align: center;
+        }
+        .more-info {
+            padding: 30px 0;
+        }
+    }
+
+    .page-apply {
+        .banner-block{
+            text-align: center;
+        }
+        .content-block {
+            margin: 0;
+            padding: 0;
+            background-image:linear-gradient(#ff7878, #eb5959);
+        }
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    .for-desktop {
+        display: block;
+    }
+    .for-mobile {
+        display: none;
+        .dropdown-menu  {
+            background: #f2f2f2;
+            display: block;
+            text-align: center;
+        }
+    }
+    .user-menu .px14 {
+        padding: 0 7px !important;
+        .nav-link {
+            padding: 0;
+            font-size: 14px;
+        }
+    }
+    .banner-block {
+        video {
+            height: auto;
+            transform: translateX(0);
+        }
+    }
+    .events-block .item .month {
+        font-size: 40px;
+    }
 }
     
 @media (min-width: 1024px){   
@@ -311,6 +661,36 @@
 }
     
 @media (min-width: 1200px){   
+    .px180 {
+        padding: 0 180px;
+    }
+    
+    .pl20 {
+        padding-left: 20px;
+    }
+    
+    .pl83 {
+        padding-left: 83px;
+    }
+    .pr83 {
+        padding-right: 83px;
+    }
+    .pr35 {
+        padding-right: 35px;
+    }
+    .pl5p {
+        padding-left: 5%;
+    }
+    
+    .pl10p {
+        padding-left: 10%;
+    }
+    .pr10p {
+        padding-right: 10%;
+    }
+    .pr5p {
+        padding-right: 5%;
+    }
     #navbarResponsive {
         background-color: $white;
         // overflow: auto;
@@ -340,5 +720,16 @@
     }
     .news-block .news-svg {
         display: block !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .user-menu img {
+        max-height: 40px;
+    }
+    .divider {
+        width: auto;
+    }
+    .footer .know-more {
+        padding-bottom: 45% !important;
     }
 }

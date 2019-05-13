@@ -15,6 +15,9 @@
     padding-bottom: 15%;
     padding-top: 5%;
     background: url('/img/events.png') no-repeat;
+    .btnview-more:hover {
+        background-color: $white;
+    }
     .plant {
         position: absolute;
         top: 18%;
@@ -211,6 +214,10 @@
     position: relative;
     padding-bottom: 3%;
 
+    .btnview-more:hover {
+        background-color: $white;
+    }
+
     .title {
         display: inline-block;
     }
@@ -280,6 +287,7 @@
 .mag-download {
     display: none;
     padding-top: 10px;
+    padding-bottom: 5px;
     background-image:linear-gradient(to right, #fadb5d, #f08e28);
     p {
         display: inline-block;

@@ -160,9 +160,20 @@ $('document').ready(function(){
 		$panel.find('.img-arrow').removeClass('rotateme')		
 	});
 
-	$('.course-search').on('click',function(){
+	if($(window).width()>=1200) {
+		$('.course-search').on('click',function(){
 		$('html,body').animate({
 			scrollTop: 400
-		}, 800);
-	})
+			}, 800);
+		})
+	}
+	// $(window).resize(function() {
+	// 	if($(this).width()>=768) {
+	// 		$('.course-search').on('click',function(){
+	// 		$('html,body').animate({
+	// 			scrollTop: 400
+	// 			}, 800);
+	// 		})
+	// 	}
+	// });
 });
