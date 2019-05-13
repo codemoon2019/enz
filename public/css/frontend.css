@@ -10698,6 +10698,10 @@ html body {
   background: url("/img/events.png") no-repeat;
 }
 
+.events-block .btnview-more:hover {
+  background-color: #fff;
+}
+
 .events-block .plant {
   position: absolute;
   top: 18%;
@@ -10923,6 +10927,10 @@ html body {
   margin-top: -10%;
   position: relative;
   padding-bottom: 3%;
+}
+
+.news-block .btnview-more:hover {
+  background-color: #fff;
 }
 
 .news-block .title {
@@ -11809,6 +11817,10 @@ html body {
     height: 55vh;
   }
 
+  .banner-block .for-text {
+    text-align: center;
+  }
+
   .banner-block .for-text h2 {
     font-size: 6vw;
   }
@@ -12100,6 +12112,7 @@ html body {
   }
 
   .banner-block .for-text {
+    text-align: center;
     max-width: 100%;
   }
 
@@ -12285,6 +12298,20 @@ html body {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+  .for-desktop {
+    display: block;
+  }
+
+  .for-mobile {
+    display: none;
+  }
+
+  .for-mobile .dropdown-menu {
+    background: #f2f2f2;
+    display: block;
+    text-align: center;
+  }
+
   .user-menu .px14 {
     padding: 0 7px !important;
   }

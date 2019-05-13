@@ -131,9 +131,12 @@
             object-fit: cover;
             height: 55vh;
         }
-        .for-text h2 {
-            font-size: 6vw;
-        }
+        .for-text {
+            text-align: center;
+            h2 {
+                font-size: 6vw;
+            }
+        } 
     }
     .wrapper.px83 {
         padding: 0 !important;
@@ -441,6 +444,7 @@
             height: 55vh;
         }
         .for-text  {
+            text-align: center;
             max-width: 100%;
         }
     } 
@@ -620,6 +624,17 @@
 
 }
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    .for-desktop {
+        display: block;
+    }
+    .for-mobile {
+        display: none;
+        .dropdown-menu  {
+            background: #f2f2f2;
+            display: block;
+            text-align: center;
+        }
+    }
     .user-menu .px14 {
         padding: 0 7px !important;
         .nav-link {
