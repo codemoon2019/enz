@@ -60,5 +60,23 @@ class PageTableSeeder extends Seeder
 
         $model->domains()->sync([1]);
 
+        $model = Page::create([
+            'title'       => 'Become Our Client',
+            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
+                <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
+            'template'    => 'default'
+        ]);
+
+        $model->domains()->sync([1]);
+
+        $model = Page::create([
+            'title'       => 'Be Part of Our Team',
+            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
+                <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
+            'template'    => 'default'
+        ]);
+
+        $model->domains()->sync([1]);
+
     }
 }

@@ -20,7 +20,7 @@
     
                     <h1 class="title title-large text-black mb30 text-capitalize">Student life</h1>
     
-                    {!! $testimonials->description !!}
+                    {!! $page->description !!}
     
                 </div>
     
@@ -31,18 +31,31 @@
     </div>
     
     <div class="block content-block testimonials-block" data-aos="zoom-in">
+
         <div class="container-fluid py80 px180">
+        
             <h2 class="title fs40 text-white mb30">Testimonials</h2>
+        
             <div class="pull-right">
+        
                 <button class="btn left myarrow">
+        
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+        
                 </button>
+        
                 <button class="btn right myarrow">
+        
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+        
                 </button>
+        
             </div>
+        
             <div class="clearfix"></div>
+        
         </div>
+        
         <div class="custom-slider-wrapper">
             <div class="slick-slider">
                 <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
@@ -102,40 +115,51 @@
             </div>
         </div>
     </div>
+
     <div class="block gallery-block">
+    
         <div class="container-fluid px180">
+    
             <h2 class="title fs40 text-nblue mb80">Gallery</h2>
+    
             <div class="pull-right">
+    
                 <button class="btn left myarrow">
+    
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+    
                 </button>
+    
                 <button class="btn right myarrow">
+    
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+    
                 </button>
+    
             </div>
+    
             <div class="clearfix"></div>
+    
         </div>
+    
         <div class="custom-slider-wrapper">
+    
             <div class="slick-slider">
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="item mx-auto mb30" data-aos="fade-up">
-                    <img data-src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
-                </div>
+    
+                @foreach (findDetails('gallery')->getUploaderImages('images') as $key => $image)
+
+                    <div class="item mx-auto mb30" data-aos="fade-up">
+
+                        <img data-src="{{ $image->source }}" class="img-fluid" alt="">
+                    
+                    </div>
+                
+                @endforeach
+
             </div>
+    
         </div>
+    
     </div>
+
 @endsection

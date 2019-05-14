@@ -25,12 +25,12 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 // Route::get('/linkages',function(){
 //     return view('frontend.linkages');
 // });
-Route::get('/community-services',function(){
-    return view('frontend.courses');
-});
-Route::get('/become-our-client',function(){
-    return view('frontend.become-our-client');
-});
+// Route::get('/community-services',function(){
+//     return view('frontend.courses');
+// });
+// Route::get('/become-our-client',function(){
+//     return view('frontend.become-our-client');
+// });
 // Route::get('/testimonilas',function(){
 //     return view('frontend.testimonials');
 // });

@@ -49,14 +49,28 @@ class DetailsTableSeeder extends Seeder
                 'title' => 'Mission',
                 'description' => 'Our mission is to provide meaningful accomplishments of International Students aiming for an Australian Education and Qualifications through a goal-driven and service-oriented assistance"',
             ],
+            [
+                'title' => 'Gallery',
+                'description' => '',
+            ],
         ];
 
         foreach ($data as $key => $value) {
 
             $model = Details::create($value);
 
+            if ($value['title'] == 'Gallery') {
 
-        
+                $images = ['samplegallery1.jpg', 'samplegallery2.jpg', 'samplegallery3.jpg'];
+
+                foreach ($images as $image) {
+                    
+                    $this->seederUploader($model, 'gallery/' . $image, null, 'images');
+
+                }
+
+            }
+
         }
 
         $this->enableForeignKeys();
