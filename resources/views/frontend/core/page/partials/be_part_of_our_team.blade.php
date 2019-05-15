@@ -9,7 +9,7 @@
                 
                 {!! $page->description !!}
 
-                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+                {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
         @foreach (Career() as $career)
 
             <div class="row">
-                <div class="col-sm-12 item">
+                <div class="col-sm-12 item mb30">
                     <div class="card text-left">
                       <div class="card-header linear-gradient-teal">
                         <h2 class="card-title fs18 text-white mb0">{{ $career->title }}</h2>

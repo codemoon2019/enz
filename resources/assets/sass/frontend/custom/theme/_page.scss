@@ -10,6 +10,7 @@
             padding-top: 20% !important;
         }
         .plane {
+            display: none !important;
             position: absolute;
             top: 20%;
             left: 0;
@@ -58,7 +59,7 @@
         margin-top: -15%;
         position: relative;
         padding-bottom: 10%;
-        padding-top: 30%;
+        padding-top: 40%;
         background: url(/img/about/aust.png) no-repeat;
     }
 }
@@ -98,10 +99,11 @@
         background-repeat: no-repeat;
         background-position: top;
         padding-bottom: 20px;
+        padding-top: 10%;
         .for-image {
             position: absolute;
             top: 7%;
-            right: 10%;
+            right: 1%;
         }
     }
     .link-Australia {
@@ -111,7 +113,6 @@
         background: url(/img/about/canada.png) no-repeat;
         .for-image {
             top: 6%;
-            right: 8%;  
         }
     }
     .link-New {
@@ -194,9 +195,10 @@
                 left: 5%;
             }
             .img-book {
+                width: 20%;
                 position: absolute;
-                top: -260%;
-                right: 10%
+                top: -195%;
+                right: 10%;
             }
         }
     }

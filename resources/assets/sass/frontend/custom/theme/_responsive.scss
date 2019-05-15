@@ -84,19 +84,36 @@
         margin-top: -10%;
         padding-bottom: 7%;
     }
+    .page-destination {
+        .for-text {
+            left: 0;
+        }
+        .banner-block {
+             .row {
+                >div:first-child {
+                    flex: 1;
+                    max-width: 100%;
+                    overflow: hidden;
+                    img {
+                        max-width: 60%;
+                        margin-right: -7%;
+                    }
+                }
+            }
+        }
+        .content-block {
+            margin-top: 0;
+            padding-top: 0;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
+    .page-students {
+        .gallery-block {
+            padding: 80px 0;
+        }
+    }
 }
-@media only screen and (min-width: 1920px) {
-    .px420 {
-        padding: 0 420px;
-    }
-    .px475 {
-        padding-left: 475px;
-        padding-right: 475px;
-    }
-    .courses-block img {
-        height: auto;
-    }
-}
+
 
 @media (min-width: 320px) and (max-width: 767px) {
     .for-desktop {
@@ -661,36 +678,6 @@
 }
     
 @media (min-width: 1200px){   
-    .px180 {
-        padding: 0 180px;
-    }
-    
-    .pl20 {
-        padding-left: 20px;
-    }
-    
-    .pl83 {
-        padding-left: 83px;
-    }
-    .pr83 {
-        padding-right: 83px;
-    }
-    .pr35 {
-        padding-right: 35px;
-    }
-    .pl5p {
-        padding-left: 5%;
-    }
-    
-    .pl10p {
-        padding-left: 10%;
-    }
-    .pr10p {
-        padding-right: 10%;
-    }
-    .pr5p {
-        padding-right: 5%;
-    }
     #navbarResponsive {
         background-color: $white;
         // overflow: auto;
@@ -722,6 +709,81 @@
         display: block !important;
     }
 }
+
+@media only screen and (min-width: 1920px) {
+    .px180 {
+        padding: 0 180px;
+    }
+    
+    .pl20 {
+        padding-left: 20px;
+    }
+    
+    .pl83 {
+        padding-left: 83px;
+    }
+    .pr83 {
+        padding-right: 83px;
+    }
+    .pr35 {
+        padding-right: 35px;
+    }
+    .pl5p {
+        padding-left: 5%;
+    }
+    
+    .pl10p {
+        padding-left: 10%;
+    }
+    .pr10p {
+        padding-right: 10%;
+    }
+    .pr5p {
+        padding-right: 5%;
+    }
+    .banner-block .pt80 {
+        padding-top: 80px !important;
+    }
+    .px420 {
+        padding: 0 420px;
+    }
+    .px475 {
+        padding-left: 475px;
+        padding-right: 475px;
+    }
+    .courses-block img {
+        height: auto;
+    }
+    .page-about-company .content-block .plane {
+        display: block;
+    }
+    .page-about-team .content-block {
+        padding-top: 30%;
+    }
+    .page-about-linkages {
+        .linkages {
+            .for-image {
+                right: 10%;
+            }
+        }
+        .link-Canada {
+            .for-image {
+                right: 8%;  
+            }
+        }
+    }
+    .page-courses {
+        .search-courses {
+            .intro {
+                .img-book {
+                    width: auto;
+                    top: -260%;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 320px) {
     .user-menu img {
         max-height: 40px;

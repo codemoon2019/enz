@@ -16,7 +16,7 @@
         
                 {!! $page->description !!}
         
-                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+                {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
         
             </div>
         
@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="col-sm-4" data-aos="zoom-in">
-                <h2 class="title text-yellow text-capitalize fs40">Our Company</h2>
+                <h2 class="title text-yellow text-capitalize fs24">Our Company</h2>
             </div>
             <div class="col-sm-8" data-aos="zoom-in">
                 <div>
@@ -107,6 +107,7 @@
 <div class="block values-block"  data-aos="zoom-in">
 
     <div class="container-fluid py80 px475 text-center">
+        <h2 class="title text-yellow text-capitalize fs40 mb30">Our core values</h2>
 
         <div class="row">
     

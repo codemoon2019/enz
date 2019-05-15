@@ -274,9 +274,9 @@ window.DataTableRenderer = {
 
         default:
           if (link.group == "more") {
-            button = "<a class=\"".concat(link.class || "", "\" name=\"").concat(link.name || "", "\" href=\"").concat(link.url || "#", "\" ").concat(link.redirect ? "data-redirect='" + link.redirect + "'" : "", "><i class=\"").concat(link.icon || "", "\"></i> ").concat(link.label || "", "</a>");
+            button = "<a class=\"".concat(link["class"] || "", "\" name=\"").concat(link.name || "", "\" href=\"").concat(link.url || "#", "\" ").concat(link.redirect ? "data-redirect='" + link.redirect + "'" : "", "><i class=\"").concat(link.icon || "", "\"></i> ").concat(link.label || "", "</a>");
           } else {
-            button = "<a href=\"".concat(link.url || "#", "\" name=\"").concat(link.name || "", "\" ").concat(link.redirect ? "data-redirect='" + link.redirect + "'" : "", " class=\"").concat(link.class || "", "\"><i class=\"").concat(link.icon || "", "\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"").concat(link.label || "", "\"></i></a>");
+            button = "<a href=\"".concat(link.url || "#", "\" name=\"").concat(link.name || "", "\" ").concat(link.redirect ? "data-redirect='" + link.redirect + "'" : "", " class=\"").concat(link["class"] || "", "\"><i class=\"").concat(link.icon || "", "\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"").concat(link.label || "", "\"></i></a>");
           }
 
           break;
@@ -319,7 +319,7 @@ window.DataTableRenderer = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/nico/Code/enzeducation/resources/assets/js/backend/datatable/app.js */"./resources/assets/js/backend/datatable/app.js");
+module.exports = __webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/resources/assets/js/backend/datatable/app.js */"./resources/assets/js/backend/datatable/app.js");
 
 
 /***/ })
