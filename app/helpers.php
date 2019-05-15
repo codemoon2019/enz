@@ -20,6 +20,7 @@ use App\Models\Details\Details;
 use App\Models\CoreValue\CoreValue;
 use App\Models\Career\Career;
 use App\Models\Institution\Institution;
+use App\Models\AreaOfStudy\AreaOfStudy;
 
 /*
  * Application version name
@@ -647,5 +648,13 @@ if (!function_exists('Institution')) {
     function Institution()
     {
         return Institution::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('AreaOfStudy')) {
+    function AreaOfStudy()
+    {
+        return AreaOfStudy::orderBy('order')->get();
     }
 }

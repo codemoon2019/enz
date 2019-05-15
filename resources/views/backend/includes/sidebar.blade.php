@@ -275,6 +275,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\AreaOfStudy\AreaOfStudy::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/area-of-study*')) }}"
+                                   href="{{ route(app(App\Models\AreaOfStudy\AreaOfStudy::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Area of Study
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">
