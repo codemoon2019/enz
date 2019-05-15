@@ -24,6 +24,7 @@ use App\Models\Why\Why;
 use App\Models\Linkages\Linkages;
 use App\Models\Country\Country;
 use App\Models\CoreValue\CoreValue;
+use App\Models\Details\Details;
 
 /**
  * Class ImageController
@@ -50,6 +51,7 @@ class ImageController extends Controller
         'linkages'    => Linkages::class,
         'country'     => Country::class,
         'core-values' => CoreValue::class,
+        'details'     => Details::class,
     ];
 
     /**

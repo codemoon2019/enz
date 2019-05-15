@@ -20,6 +20,22 @@
 
 		    @break
 
+	    @case('Become Our Client')
+
+			@section('page_class', "page page-apply become-our-client")
+
+			@include('frontend.core.page.partials.become_our_client')	
+
+		    @break
+
+	    @case('Be Part of Our Team')
+
+			@section('page_class', "page page-apply be-part-of-our-team")
+
+			@include('frontend.core.page.partials.be_part_of_our_team')	
+
+		    @break
+
 	    @default
 
 	@endswitch

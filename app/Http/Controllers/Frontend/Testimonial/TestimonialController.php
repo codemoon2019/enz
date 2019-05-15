@@ -53,7 +53,7 @@ class TestimonialController extends Controller
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->paginate(12);
+        $models = $this->repository()->get();
 
         return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
     }

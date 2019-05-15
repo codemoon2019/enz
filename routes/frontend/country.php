@@ -5,7 +5,7 @@
  */
 Route::group([
     'namespace' => 'Country',
-    'prefix' => 'countries',
+    'prefix' => 'destination',
     'as' => 'countries.',
 ], function () {
     Route::get('', 'CountryController@index')->name('index');

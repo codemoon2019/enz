@@ -144,13 +144,7 @@ class Details extends Model implements HasMedia
 
     public function registerMediaCollections()
     {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
-
-            $this->addMediaConversion('main')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 364, 235);
-
+        $this->addMediaCollection('images')->registerMediaConversions(function (Media $media) {
             $this->addMediaConversion('thumbnail')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)

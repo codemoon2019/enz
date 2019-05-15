@@ -253,6 +253,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\Career\Career::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/career*')) }}"
+                                   href="{{ route(app(App\Models\Career\Career::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Career
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">

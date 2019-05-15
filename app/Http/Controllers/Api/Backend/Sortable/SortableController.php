@@ -28,6 +28,8 @@ use App\Models\StudentVisa\StudentVisa;
 
 use App\Models\CoreValue\CoreValue;
 
+use App\Models\Career\Career;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -57,6 +59,8 @@ class SortableController extends Controller
             case 'StudentVisa': $model = new StudentVisa; break;
             
             case 'CoreValue': $model = new CoreValue; break;
+            
+            case 'Career': $model = new Career; break;
 
             default: break;
         }

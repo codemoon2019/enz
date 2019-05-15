@@ -80,6 +80,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\StudentVisa\StudentVisaRepository::class, \App\Repositories\StudentVisa\StudentVisaRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Details\DetailsRepository::class, \App\Repositories\Details\DetailsRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\CoreValue\CoreValueRepository::class, \App\Repositories\CoreValue\CoreValueRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\Career\CareerRepository::class, \App\Repositories\Career\CareerRepositoryEloquent::class);
         //:end-bindings:
     }
 }
