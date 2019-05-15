@@ -11,32 +11,59 @@
         @include('frontend.includes.meta-tags')
         <link rel="icon" type="image/png" href="{{ asset(setting('site-fav-icon')) }}"/>
         <style>
-            /* latin-ext */
-            @font-face {
-            font-family: 'Karla';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Karla'), local('Karla-Regular'), url(https://fonts.gstatic.com/s/karla/v7/qkBbXvYC6trAT7RbLtyG5Q.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-            }
-            /* latin */
-            @font-face {
-            font-family: 'Karla';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Karla'), local('Karla-Regular'), url(https://fonts.gstatic.com/s/karla/v7/qkBbXvYC6trAT7RVLtw.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-            @font-face {
-            font-family: 'Optima';
-            src: url(/fonts/Optima-LT-Std-Roman_34091.ttf);
-            }
-            @font-face {
-            font-family: 'Optima Bold';
-            src: url(/fonts/Optima-LT-Std-Bold_34083.ttf);
-            }
-
-        </style>
+                /* vietnamese */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+                }
+                /* latin-ext */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+                }
+                /* latin */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+                /* vietnamese */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+                }
+                /* latin-ext */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+                }
+                /* latin */
+                @font-face {
+                font-family: 'Quicksand';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+                @font-face {
+                font-family: 'Jelle';
+                src: url(/fonts/Jellee-Roman.otf);
+                }
+            </style>
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
     <!-- Check if the language is set to RTL, so apply the RTL layouts -->

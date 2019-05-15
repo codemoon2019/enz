@@ -1,17 +1,6 @@
 <div class="banner-block banner relative">
-    <div class="container-fluid px180 pt50">
-        <div class="row">
-            <div class="col-lg-7">
-            <img data-src="{{asset('img/apply/banner.png')}}" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-5 pt80">
-                <h1 class="title title-large text-black mb30 text-capitalize">Be part of our team</h1>
-                
-                {!! $page->description !!}
-
-                {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
-            </div>
-        </div>
+    <div class="container-fluid px180 mb30 pt50">
+        <h1 class="title title-large text-black text-capitalize text-center">Be part of our team</h1>
     </div>
 </div>
 <div class="block content-block" data-aos="zoom-in">
