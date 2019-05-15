@@ -11042,8 +11042,18 @@ html body {
   left: 0;
 }
 
+.page-about-company .content-block p {
+  color: #fff;
+  font-size: 18px;
+}
+
 .page-about-company .content-block ul {
   padding-left: 20px;
+}
+
+.page-about-company .content-block ul li {
+  color: #fff;
+  font-size: 18px;
 }
 
 .page-about-company .mv-block {
@@ -11331,20 +11341,20 @@ html body {
   padding: 30px;
 }
 
-.page-apply .content-block {
+.be-part-of-our-team .content-block {
   margin-top: -15%;
   position: relative;
   padding-top: 30%;
   background: url(/img/apply/bg.png) no-repeat;
 }
 
-.page-apply .jobs .card-body .btnread-more {
+.be-part-of-our-team .jobs .card-body .btnread-more {
   position: absolute;
   top: 25px;
   right: 10px;
 }
 
-.page-apply .jobs .card-body ul {
+.be-part-of-our-team .jobs .card-body ul {
   padding-left: 20px;
 }
 

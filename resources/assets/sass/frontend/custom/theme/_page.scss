@@ -15,8 +15,16 @@
             top: 20%;
             left: 0;
         }
+        p {
+            color: $white;
+            font-size: 18px;
+        }
         ul {
             padding-left: 20px;
+            li {
+                color: $white;
+                font-size: 18px;
+            }
         }
     }
     .mv-block {
@@ -273,7 +281,7 @@
     }
 }
 
-.page-apply {
+.be-part-of-our-team {
     .content-block {
         margin-top: -15%;
         position: relative;
