@@ -62,17 +62,17 @@ class DataSeeder extends Seeder
 
             ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
 
-                ['name' => 'Australia', 'url' => '/australia', 'order' => 0, 'parent_id' => 10],
+                ['name' => 'Australia', 'url' => '/destination/australia', 'order' => 0, 'parent_id' => 10],
             
-                ['name' => 'New Zealand', 'url' => '/new-zealand', 'order' => 1, 'parent_id' => 10],
+                ['name' => 'New Zealand', 'url' => '/destination/new-zealand', 'order' => 1, 'parent_id' => 10],
             
-                ['name' => 'Canada', 'url' => '/canada', 'order' => 2, 'parent_id' => 10],
+                ['name' => 'Canada', 'url' => '/destination/canada', 'order' => 2, 'parent_id' => 10],
 
             ['name' => 'Apply', 'url' => '/apply', 'order' => 5],
 
-                ['name' => 'Become Our Client', 'url' => '/become-our-client', 'order' => 0, 'parent_id' => 14],
-
-                ['name' => 'Be Part of Our Team', 'url' => '/be-part-of-our-team', 'order' => 1, 'parent_id' => 14],
+                ['name' => 'Be Part of Our Team', 'url' => '/be-part-of-our-team', 'order' => 0, 'parent_id' => 14],
+                
+                ['name' => 'Become Our Client', 'url' => '/become-our-client', 'order' => 1, 'parent_id' => 14],
             
             ['name' => 'Students', 'url' => '/students', 'order' => 6],
 
