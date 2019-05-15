@@ -30,6 +30,8 @@ use App\Models\CoreValue\CoreValue;
 
 use App\Models\Career\Career;
 
+use App\Models\Institution\Institution;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -61,6 +63,8 @@ class SortableController extends Controller
             case 'CoreValue': $model = new CoreValue; break;
             
             case 'Career': $model = new Career; break;
+            
+            case 'Institution': $model = new Institution; break;
 
             default: break;
         }

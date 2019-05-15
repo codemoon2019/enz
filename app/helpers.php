@@ -19,6 +19,7 @@ use App\Models\Country\Country;
 use App\Models\Details\Details;
 use App\Models\CoreValue\CoreValue;
 use App\Models\Career\Career;
+use App\Models\Institution\Institution;
 
 /*
  * Application version name
@@ -635,10 +636,16 @@ if (!function_exists('CoreValue')) {
     }
 }
 
-
 if (!function_exists('Career')) {
     function Career()
     {
         return Career::orderBy('order')->get();
+    }
+}
+
+if (!function_exists('Institution')) {
+    function Institution()
+    {
+        return Institution::orderBy('order')->get();
     }
 }

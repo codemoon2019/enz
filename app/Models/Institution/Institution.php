@@ -13,11 +13,18 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use App\Models\Traits\HasImageMediaTrait;
+use Spatie\MediaLibrary\Models\Media;
+use Spatie\Image\Manipulations;
+use App\Models\Traits\CustomAttributes;
+
 /**
  * Class Institution
  * @package App\Models\Institution
  */
-class Institution extends Model
+class Institution extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
@@ -27,6 +34,8 @@ class Institution extends Model
     use InstitutionRelations;
     use InstitutionScopes;
     use InstitutionStaticFunctions;
+    use HasImageMediaTrait;
+    use CustomAttributes;
 
     public const MODULE_NAME = 'institution';
     public const VIEW_BACKEND_PATH = 'backend.institution';
@@ -133,5 +142,22 @@ class Institution extends Model
             ]
         ];
         return $links;
+    }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
+
+            $this->addMediaConversion('main')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 120, 100);
+
+            $this->addMediaConversion('thumbnail')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 175, 175);
+        });
+
     }
 }

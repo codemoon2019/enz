@@ -22,6 +22,8 @@ use App\Models\Testimonial\Testimonial;
 
 use App\Models\Why\Why;
 
+use App\Models\Institution\Institution;
+
 use App\Models\Career\Career;
 
 class StatusController extends Controller
@@ -47,6 +49,8 @@ class StatusController extends Controller
             case 'Why': $model = new Why; break;
 
             case 'Career': $model = new Career; break;
+
+            case 'Institution': $model = new Institution; break;
 
             default: break;
         }

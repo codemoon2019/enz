@@ -17,19 +17,6 @@
         @slot('link_submit', 'Save')
         @slot('link_submit_edit', 'Save & Continue')
 
-        @slot('custom')
-            @include('backend.includes.widgets.tab-actions', [ 
-                'name' => 'More Info',
-                'links' => [
-                    [
-                        'name' => 'Meta',
-                        'template' => 'backend.core.meta.form',
-                        'args' => ['meta' => $model->metaTag]
-                    ]
-                ]
-            ])
-        @endslot
-
     @endcomponent
 @endsection
 
