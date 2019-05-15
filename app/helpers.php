@@ -294,6 +294,13 @@ if (!function_exists('findDetails')) {
     }
 }
 
+if (!function_exists('ourCompanyDetails')) {
+    function ourCompanyDetails()
+    {
+        return Details::whereIn('slug', ['our-company', 'registration', 'professional-membership'])->get();
+    }
+}
+
 if (!function_exists('history')) {
     /**
      * @return History|\Illuminate\Foundation\Application|mixed|history

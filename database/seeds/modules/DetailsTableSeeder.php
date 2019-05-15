@@ -53,6 +53,29 @@ class DetailsTableSeeder extends Seeder
                 'title' => 'Gallery',
                 'description' => '',
             ],
+
+            [
+                'title'       => 'Our Company',
+                'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
+                <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>
+                <p>With sound connections to different Australian Educational Providers, our company has sent numbers of students and now they are able to achieve their dreams and aspirations. It is in our mandate to offer the best services and essentially deliver the quality assistance that our clients need.</p>',
+            ],
+
+            [
+                'title' => 'Registration',
+                'description' => '<ul>
+                <li>We are duly registered at the Department of Trade and Industry with License No. 03756207 with a validity until 05 October 2020.</li>
+                <li>We are duly registered at the Bereau of Internal Revenue with Certificate of Registration No. 4RC0000989406 with Tax Identification Number 400-257-392-000</li>
+                <li>We are duly registered at the City Government of Laoag to operate the business with Permit No. 2017-0000654.</li>
+                </ul>',
+            ],
+
+            [
+                'title' => 'Professional Membership',
+                'description' => '<ul>
+                <li>Professional International Education Resources - License No. L440&nbsp;<strong>(http://eatc.com/qualified_agents)</strong></li>
+                </ul>',
+            ],
         ];
 
         foreach ($data as $key => $value) {
