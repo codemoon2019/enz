@@ -11341,13 +11341,6 @@ html body {
   padding: 30px;
 }
 
-.be-part-of-our-team .content-block {
-  margin-top: -15%;
-  position: relative;
-  padding-top: 30%;
-  background: url(/img/apply/bg.png) no-repeat;
-}
-
 .be-part-of-our-team .jobs .card-body .btnread-more {
   position: absolute;
   top: 25px;
@@ -12181,7 +12174,6 @@ html body {
   .page-apply .content-block {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(#ff7878, #eb5959);
   }
 }
 
@@ -12430,7 +12422,6 @@ html body {
   .page-apply .content-block {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(#ff7878, #eb5959);
   }
 }
 
