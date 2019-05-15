@@ -264,6 +264,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\Institution\Institution::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/institutions*')) }}"
+                                   href="{{ route(app(App\Models\Institution\Institution::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Institutions
+                                </a>
+                            </li>
+
+                        @endcan
+      
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
                             <li class="nav-item">
