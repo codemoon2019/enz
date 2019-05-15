@@ -36,17 +36,20 @@
 
                 <div class="col-sm-4 item mb30">
 
-                    <div class="card">
+                    <a href="{{ route('frontend.countries.show', $country->slug) }}">
+                        
+                        <div class="card">
 
-                        <img class="img-fluid card-img-top" data-src="{{ $country->getFirstMediaUrl('featured', 'main') }}" alt="">
+                            <img class="img-fluid card-img-top" data-src="{{ $country->getFirstMediaUrl('featured', 'main') }}" alt="">
 
-                        <div class="card-footer linear-gradient-{{ $country->color }}">
+                            <div class="card-footer linear-gradient-{{ $country->color }}">
 
-                            <p class="card-title text-white text-uppercase fs24">{{ $country->title }}</p>
+                                <p class="card-title text-white text-uppercase fs24">{{ $country->title }}</p>
+
+                            </div>
 
                         </div>
-
-                    </div>
+                    </a>
 
                 </div>
 
