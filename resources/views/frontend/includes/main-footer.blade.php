@@ -67,7 +67,7 @@
         </div>
         </div>
     </section>
-    <section class="know-more px180">
+    <section class="container-fluid know-more px180">
       <div class="row justify-content-center mb80">
         <div class="col subscribe text-center">
           <h2 class="title fs40 text-white mb10">Want to know more?</h2>

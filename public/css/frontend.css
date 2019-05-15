@@ -10691,6 +10691,10 @@ html body {
   font-size: 18px;
 }
 
+.banner-block .pt80 {
+  padding: 0 15px !important;
+}
+
 .events-block {
   position: relative;
   padding-bottom: 15%;
@@ -11032,6 +11036,7 @@ html body {
 }
 
 .page-about-company .content-block .plane {
+  display: none !important;
   position: absolute;
   top: 20%;
   left: 0;
@@ -11080,7 +11085,7 @@ html body {
   margin-top: -15%;
   position: relative;
   padding-bottom: 10%;
-  padding-top: 30%;
+  padding-top: 40%;
   background: url(/img/about/aust.png) no-repeat;
 }
 
@@ -11136,7 +11141,7 @@ html body {
 .page-about-linkages .linkages .for-image {
   position: absolute;
   top: 7%;
-  right: 10%;
+  right: 1%;
 }
 
 .page-about-linkages .link-Australia {
@@ -11149,7 +11154,6 @@ html body {
 
 .page-about-linkages .link-Canada .for-image {
   top: 6%;
-  right: 8%;
 }
 
 .page-about-linkages .link-New {
@@ -11237,8 +11241,9 @@ html body {
 }
 
 .page-courses .search-courses .intro .img-book {
+  width: 20%;
   position: absolute;
-  top: -260%;
+  top: -195%;
   right: 10%;
 }
 
@@ -11756,20 +11761,30 @@ html body {
     margin-top: -10%;
     padding-bottom: 7%;
   }
-}
 
-@media only screen and (min-width: 1920px) {
-  .px420 {
-    padding: 0 420px;
+  .page-destination .for-text {
+    left: 0;
   }
 
-  .px475 {
-    padding-left: 475px;
-    padding-right: 475px;
+  .page-destination .banner-block .row > div:first-child {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
   }
 
-  .courses-block img {
-    height: auto;
+  .page-destination .banner-block .row > div:first-child img {
+    max-width: 60%;
+    margin-right: -7%;
+  }
+
+  .page-destination .content-block {
+    margin-top: 0;
+    padding-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .page-students .gallery-block {
+    padding: 80px 0;
   }
 }
 
@@ -12340,6 +12355,39 @@ html body {
 }
 
 @media (min-width: 1200px) {
+  #navbarResponsive {
+    background-color: #fff;
+  }
+
+  .front .banner-block {
+    display: flex;
+    margin-top: -8%;
+  }
+
+  .front .banner-block video {
+    height: 100%;
+  }
+
+  .front .banner-block .for-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .front .banner-block .for-text p {
+    text-align: justify;
+  }
+
+  .events-block .plant {
+    display: block !important;
+  }
+
+  .news-block .news-svg {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
   .px180 {
     padding: 0 180px;
   }
@@ -12376,35 +12424,42 @@ html body {
     padding-right: 5%;
   }
 
-  #navbarResponsive {
-    background-color: #fff;
+  .banner-block .pt80 {
+    padding-top: 80px !important;
   }
 
-  .front .banner-block {
-    display: flex;
-    margin-top: -8%;
+  .px420 {
+    padding: 0 420px;
   }
 
-  .front .banner-block video {
-    height: 100%;
+  .px475 {
+    padding-left: 475px;
+    padding-right: 475px;
   }
 
-  .front .banner-block .for-text {
-    position: absolute;
-    top: 30%;
-    left: 10%;
+  .courses-block img {
+    height: auto;
   }
 
-  .front .banner-block .for-text p {
-    text-align: justify;
+  .page-about-company .content-block .plane {
+    display: block;
   }
 
-  .events-block .plant {
-    display: block !important;
+  .page-about-team .content-block {
+    padding-top: 30%;
   }
 
-  .news-block .news-svg {
-    display: block !important;
+  .page-about-linkages .linkages .for-image {
+    right: 10%;
+  }
+
+  .page-about-linkages .link-Canada .for-image {
+    right: 8%;
+  }
+
+  .page-courses .search-courses .intro .img-book {
+    width: auto;
+    top: -260%;
   }
 }
 
