@@ -36,7 +36,7 @@
 
                 <div class="col-sm-4 item mb30">
 
-                    <a href="{{ route('frontend.countries.show', $country->slug) }}">
+                    <a href="{{ route('frontend.countries.show', $country->slug) }}" class="nav-link">
                         
                         <div class="card">
 
