@@ -611,7 +611,7 @@ if (!function_exists('footerDetails')) {
 
     function footerDetails()
     {
-        return Details::whereIn('slug', ['location', 'contact'])->get();
+        return Details::whereIn('slug', ['location', 'contact'])->orderBy('id')->get();
 
     }
 
