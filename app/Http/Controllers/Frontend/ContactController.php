@@ -15,6 +15,10 @@ use App\Models\Core\Inquiry;
 
 use App\Mail\Frontend\Contact\ContactEmail;
 
+use Illuminate\Support\Facades\Storage;
+use Uuid;
+
+
 
 /**
  * Class ContactController
@@ -41,19 +45,42 @@ class ContactController extends Controller
     public function send(SendContactRequest $request)
     {
 
+        $filename = null;
+
+        if ($request['resume'] != null) {
+
+            $file = $request['resume'];
+
+            $name = $file->getClientOriginalName();
+
+            $encrypt_name = Uuid::generate(4)->string;
+
+            $file->storeAs('public/inquiry', $encrypt_name);
+
+            $filename = json_encode([$name, $encrypt_name]);
+
+        }
+
         $model = Inquiry::create([
 
-            'full_name' => $request['full_name'],
+            'full_name'     => $request['full_name'],
             
-            'email'     => $request['email'],
+            'profession'    => $request['profession'],
             
-            'contact'   => $request['contact'],
+            'email_address' => $request['email_address'],
             
-            'message'   => $request['message'],
+            'mobile_number' => $request['mobile_number'],
             
-            'postcode'  => $request['postcode'],
+            'location'      => $request['location'],
+            
+            'inquiry'       => $request['inquiry'],
+            
+            'consultation'  => $request['consultation'],
+            
+            'resume'        => $filename,
         
         ]);
+
 
         // 0 = User / 1 = Admin
 

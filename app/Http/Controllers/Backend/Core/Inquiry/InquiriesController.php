@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Backend\Core\Inquiry;
 use App\Repositories\Core\Inquiry\InquiryRepository;
 use HalcyonLaravel\Base\Controllers\BaseController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
+use File;
+use Response;
+use App\Models\Core\Inquiry;
+use Storage;
 
 /**
  * Class InquiriesController.
@@ -54,4 +58,21 @@ class InquiriesController extends BaseController
             'model' => $this->getModel($routeKeyName),
         ]);
     }
+
+    public function download(string $routeKeyName)
+    {
+        $inquiry = Inquiry::whereSlug($routeKeyName)->first();
+
+        $resume = json_decode($inquiry->resume);
+
+        $path = storage_path('app/public/inquiry/' . $resume[1]);
+
+        if (!File::exists($path)) {
+            abort(404);
+        }
+
+        return response()->download($path, $resume[0]);
+       
+    }
+
 }

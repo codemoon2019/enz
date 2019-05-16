@@ -25,10 +25,14 @@ class Inquiry extends Model
         'slug',
         'user_id',
         'full_name',
-        'email',
-        'contact',
-        'postcode',
-        'message',
+        'profession',
+        'email_address',
+        'mobile_number',
+        'location',
+        'consultation',
+        'location',
+        'inquiry',
+        'resume',
     ];
 
     protected $dates = [
@@ -106,4 +110,20 @@ class Inquiry extends Model
     {
         return $this->updated_at->format(config('core.setting.formats.datetime_12'));
     }
+
+    public function getActionButtonsAttribute()
+    {
+
+        $action = '<a href="'.route('admin.inquiries.show', $this->slug).'"><i class="fa fa-search btn btn-primary btn-sm"></i></a>';
+
+        if ($this->resume != null) {
+
+            $action .= '<a target="_blank" href="'.route('admin.inquiries.download', $this->slug).'"><i class="fa fa-download btn btn-primary btn-sm"></i></a>';
+
+        }
+
+        return $action;
+
+    }
+
 }

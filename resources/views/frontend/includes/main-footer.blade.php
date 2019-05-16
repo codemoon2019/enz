@@ -7,62 +7,66 @@
             </div>
             <div class="col-sm-9 right-content px180">
                 <h2 class="title fs40 text-nblue mb30">Got a Question?</h2>
-                <div class="form">
-                  <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                          <label for="">Full Name</label>
-                          <input type="text" name="" id="" class="form-control" placeholder="" required />
+                <form action="{{ route('frontend.contact.send') }}" method="post" id="inquiry-form" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="form">
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                              <label for="">Full Name</label>
+                              <input type="text" name="full_name" id="full_name" class="form-control inquiry-field" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Profession</label>
+                              <input type="text" name="profession" id="profession" class="form-control inquiry-field" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Email Address</label>
+                              <input type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Mobile Number</label>
+                              <input type="text" name="mobile_number" id="mobile_number" class="form-control inquiry-field" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                              <label for="">Location</label>
+                              <input type="text" name="location" id="location" class="form-control inquiry-field" placeholder="" />
+                            </div>
                         </div>
-                        <div class="form-group">
-                          <label for="">Profession</label>
-                          <input type="text" name="" id="" class="form-control" placeholder="" required />
-                        </div>
-                        <div class="form-group">
-                          <label for="">Email Address</label>
-                          <input type="email" name="" id="" class="form-control" placeholder="" required />
-                        </div>
-                        <div class="form-group">
-                          <label for="">Mobile Number</label>
-                          <input type="text" name="" id="" class="form-control" placeholder="" required />
-                        </div>
-                        <div class="form-group">
-                          <label for="">Location</label>
-                          <input type="text" name="" id="" class="form-control" placeholder="" required />
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label for="">Inquiry</label>
-                        <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                      </div>
-                      <div class="form-group mb30">
-                        <label for="">Would you like to book for a free consultation?</label><br />
-                        <label class="control control--radio">Yes
-                          <input type="radio" name="radio" />
-                          <div class="control__indicator"></div>
-                        </label>
-                        <label class="control control--radio">No
-                          <input type="radio" name="radio" />
-                          <div class="control__indicator"></div>
-                        </label>
-                      </div>
-                      <div class="form-group">
-                        <label for="">Resume / Curriculum Vitae</label><br />
-                        <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                        <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
-                      </div>
-                      <div class="form-group">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="">Inquiry</label>
+                            <textarea name="inquiry" id="inquiry" cols="30" rows="10" class="form-control inquiry-field"></textarea>
+                          </div>
+                          <div class="form-group mb30">
+                            <label for="">Would you like to book for a free consultation?</label><br />
+                            <label class="control control--radio">Yes
+                              <input type="radio" name="consultation" checked value="1" />
+                              <div class="control__indicator"></div>
+                            </label>
+                            <label class="control control--radio">No
+                              <input type="radio" name="consultation" value="0" />
+                              <div class="control__indicator"></div>
+                            </label>
+                          </div>
+                          <div class="form-group">
+                            <label for="">Resume / Curriculum Vitae</label><br />
+                            <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                            <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
+                          </div>
+                          <div class="form-group">
 
-                        {{-- {!! Captcha::display() !!} --}}
+                            {{-- {!! Captcha::display() !!} --}}
 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center mt30">
+                        <button type="button" class="btn btnview-more text-uppercase inquiry-submit">Submit</button>
                       </div>
                     </div>
-                  </div>
-                  <div class="text-center mt30">
-                    <button class="btn btnview-more text-uppercase">Submit</button>
-                  </div>
-                </div>
+                    
+                </form>
             </div>
         </div>
         </div>
@@ -178,3 +182,56 @@
     </section>
 </footer>
 
+@push('after-scripts')
+
+<script>
+
+    $('.inquiry-submit').click(function(){
+
+        $('.inquiry-field').css('border', 'unset');
+
+        let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'inquiry'];
+
+        let submit = true;
+
+        $.each(fields, function(k, v){
+
+            el = $('#' + v);
+
+            if (el.val() == null || el.val() == '') {
+
+                el.css('border', '2px solid #d27070');
+
+                submit = false;
+
+            }
+
+            if (v == 'email_address') {
+
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                if (! re.test(String(el.val()).toLowerCase())) {
+                    
+                    el.css('border', '2px solid #d27070');
+
+                    submit = false;
+
+                }
+
+            }
+
+        });
+
+
+        if (submit) {
+
+            $('#inquiry-form').submit();
+            
+        }
+
+    });
+
+
+</script>
+
+@endpush

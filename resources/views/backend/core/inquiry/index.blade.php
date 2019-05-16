@@ -9,17 +9,23 @@
         @slot('secondary_title', 'Inquiry Management')
         @slot('headers')
             <td>Fullname</td>
-            <td>Email</td>
-            <td>Mobile No.</td>
-            <td>Last Modified</td>
+            <td>Profession</td>
+            <td>Email Address</td>
+            <td>Mobile Number</td>
+            <td>Location</td>
+            <td>Free Consultation</td>
+            <td>Date</td>
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
             [ 'data' => 'full_name' ],
-            [ 'data' => 'email' ],
-            [ 'data' => 'contact' ],
+            [ 'data' => 'profession' ],
+            [ 'data' => 'email_address' ],
+            [ 'data' => 'mobile_number' ],
+            [ 'data' => 'location' ],
+            [ 'data' => 'consultation' ],
         	[ 'data' => 'updated_at' ],
-        	[ 'data' => 'actions', 'type' => 'actions', 'sortable' => false, 'searchable' => false ],
+        	[ 'data' => 'actions',  'sortable' => false, 'searchable' => false ],
         ]))
         @slot('options', json_encode([
         	'order' => [ [1, 'desc'] ] 

@@ -37,8 +37,14 @@ class InquiryTableController extends Controller
     {
         return DataTables::of($this->inquiryRepository->table())
             ->escapeColumns(['id'])
+            ->editColumn('consultation', function ($model) {
+                return $model->consultation ? 'True' : 'False';
+            })
             ->addColumn('actions', function ($model) {
-                return $model->actions('backend');
+
+                return $model->action_buttons;
+
+                // return $model->actions('backend');
             })
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at_formatted;

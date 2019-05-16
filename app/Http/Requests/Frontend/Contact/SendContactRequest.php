@@ -29,15 +29,19 @@ class SendContactRequest extends FormRequest
     {
         $rules = [
 
-            'full_name'           => 'required|max:255',
+            'full_name'     => 'required|max:255',
             
-            'email'                => 'required|email|max:255',
+            'profession'    => 'required|max:255',
             
-            'contact'              => 'max:255',
+            'email_address' => 'required|email|max:255',
             
-            'postcode'              => 'required',
+            'mobile_number' => 'required',
             
-            'message'              => 'required|max:255',
+            'inquiry'       => 'required|max:255',
+            
+            'location'      => 'required|max:255',
+            
+            // 'consultaion'   => 'required',
             
             // 'g-recaptcha-response' => 'required|captcha'
         
