@@ -21,7 +21,7 @@ class HomeController extends Controller
 
         $whies = Whies()->chunk(3);
 
-    	$course = Course();
+    	$course = HomeAreaOfStudy();
 
     	$homeNews = homeNews();
 

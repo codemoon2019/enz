@@ -57,6 +57,8 @@
                                     'label' => 'title',
                                     
                                     'edit_route' => route('admin.institutions.edit', $item->slug),
+
+                                    'show_route' => route('admin.institutions.show', $item->slug),
                                     
                                     'delete_route' => route('admin.institutions.destroy', $item->slug)
                                 

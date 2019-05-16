@@ -21,6 +21,26 @@
         </div>
     
         <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+
+                <select name="country_id" id="" class="form-control">
+                    
+                    @foreach (Country() as $country)
+
+                        <option value="{{ $country->id }}" {{ isset($model) ? ($model->country_id == $country->id ? 'selected' : '') : '' }}>{{ $country->title }}</option>
+                    
+                    @endforeach
+
+                </select>
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
 
             <label class="col-md-2 form-control-label">Featured Image<br/></label>
             

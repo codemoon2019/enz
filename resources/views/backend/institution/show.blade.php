@@ -11,8 +11,8 @@
             @include('backend.includes.widgets.tabs', [
                'links' => [
                    [
-                       'name' => 'Overview',
-                       'template' => $viewPath . '.partials.overview',
+                       'name' => 'Courses',
+                       'template' => $viewPath . '.partials.courses',
                        'args' => [ 'model' => $model ]
                    ],
                ]

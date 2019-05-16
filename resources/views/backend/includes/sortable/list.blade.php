@@ -34,7 +34,13 @@
                         <i class="fa fa-pencil"></i> Edit
         
                     </a>
-        
+
+                    @isset ($show_route)
+                        <a class="dropdown-item dropdown-item-custom" href="{{ $show_route }}"> 
+                            <i class="fa fa-search"></i> Show
+                        </a>
+                    @endisset
+
                     <a class="dropdown-item dropdown-item-custom btn-action" 
                        data-slug="{{ $item->slug }}" 
                        name="btn-delete" 

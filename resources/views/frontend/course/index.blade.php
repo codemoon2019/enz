@@ -12,17 +12,16 @@
         
         <div class="row justify-content-center">
     
-            @foreach ($models as $key => $course)
+            @foreach (AreaOfStudy() as $key => $study)
         
                 <div class="col-sm-4 item text-center mb60">
 
-                    <img data-src="{{ $course->getFirstMediaUrl('featured') }}" class="img-fluid mb30" alt="">
+                    <img data-src="{{ asset('img/services/newzealand.jpg') }}" class="img-fluid mb30" alt="">
+                    {{-- <img data-src="{{ $study->getFirstMediaUrl('featured') }}" class="img-fluid mb30" alt=""> --}}
         
-                    <h3 class="title fs18 mb30">{{ $course->title }}</h3>
+                    <h3 class="title fs18 mb30">{{ $study->title }}</h3>
         
-                    <p class="basic fs15">{!! str_limit($course->description, 250) !!}</p>
-        
-                    <a href="{{ route('frontend.courses.show', $course->slug) }}" class="btn btnview-more text-uppercase">Read More</a>
+                    <a href="{{ route('frontend.area-of-studies.show', $study->slug) }}" class="btn btnview-more text-uppercase">Read More</a>
         
                 </div>
         
