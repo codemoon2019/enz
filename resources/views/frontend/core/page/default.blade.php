@@ -36,6 +36,14 @@
 
 		    @break
 
+	    @case('Contact Us')
+
+			@section('page_class', "page page-contact")
+
+			@include('frontend.core.page.partials.contact_us')	
+
+		    @break
+
 	    @default
 
 	@endswitch
