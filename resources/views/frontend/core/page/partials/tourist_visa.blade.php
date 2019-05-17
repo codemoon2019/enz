@@ -44,7 +44,7 @@
 
                             <div class="card-footer linear-gradient-{{ $country->color }}">
 
-                                <p class="card-title text-white text-uppercase fs24">{{ $country->title }}</p>
+                                <p class="card-title text-white text-uppercase mb0 fs24">{{ $country->title }}</p>
 
                             </div>
 
@@ -59,4 +59,46 @@
 
     </div>
 
+</div>
+<div class="block application-block">
+    <div class="container-fluid py80 px475">
+        <div class="item mb30">
+            <div class="card text-left">
+                <div class="card-header linear-gradient-teal">
+                    <h2 class="card-title fs18 text-white mb0">Sign up now</h2>
+                </div>
+                <div class="card-body relative linear-gradient-grey">
+                    <div class="form-group">
+                        <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="" id="" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="" id="" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" name="" id="" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="" id="" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="" id="" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
+                            <textarea class="form-control" name="" id="" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class=" text-center">
+                        <a href="#" class="btn btnread-more text-uppercase">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

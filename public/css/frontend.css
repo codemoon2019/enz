@@ -11222,6 +11222,10 @@ html body {
   padding: 0 7.5px;
 }
 
+.tourist-visa textarea {
+  resize: none;
+}
+
 .page-courses .search-courses {
   background: url(/img/courses/bg.png) no-repeat;
   background-position: bottom;
