@@ -48,13 +48,18 @@ class CourseController extends Controller
     public function index()
     {
         $model = $this->repository()->makeModel();
+
         $page = $this->pageRepository->indexPage($this->repository()->model());
 
         MetaTag::setEntity($page);
 
         $models = $this->repository()->get()->load('subCourses');
 
-        return view("{$this->viewFrontendPath}.index", compact('page', 'models'));
+        $institutions = Institution()->load('courses');
+
+        $areas = AreaOfStudy();
+
+        return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'institutions', 'areas'));
     }
 
     /**

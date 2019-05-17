@@ -1,12 +1,30 @@
 export default {
 
-	courses(state, courses) {
+	updateCourseName(state, course_name) {
 
-		let category = Object.values(JSON.parse(courses));
+		state.course_name = course_name;
 
-		category.forEach(function(element) {
+	},
 
-			element.sub_courses.forEach(function(course) {
+	updateInstitutionName(state, institution_name) {
+
+		state.institution_name = institution_name;
+
+	},
+
+	updateAreaName(state, area_name) {
+
+		state.area_name = area_name;
+
+	},
+
+	institutions(state, institutions) {
+
+		state.institutions = Object.values(JSON.parse(institutions));
+
+		state.institutions.forEach(function(element) {
+
+			element.courses.forEach(function(course) {
 			
 				state.courses.push(course);
 
@@ -16,9 +34,9 @@ export default {
 
 	},
 
-	updateKey(state, key) {
+	areas(state, areas) {
 
-		state.key = key;
+		state.areas = Object.values(JSON.parse(areas));
 
 	},
 

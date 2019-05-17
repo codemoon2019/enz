@@ -47,6 +47,8 @@ class Course extends Model implements HasMedia
      * Declared Fillables
      */
     protected $fillable = [
+        'institution_id',
+        'area_of_study_id',
         'title',
         'slug',
         'description',
