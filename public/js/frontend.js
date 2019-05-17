@@ -338,6 +338,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -346,15 +356,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
   },
   data: function data() {
-    return {};
+    return {
+      showSuggestions: true
+    };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['institutionsList', 'areasList']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['institutionsList', 'areasList', 'suggestions']), {
     course_name: {
       get: function get() {
         return this.$store.state.course_name;
       },
       set: function set(value) {
         this.$store.commit('updateCourseName', value);
+        this.showSuggestions = true;
       }
     },
     institution_name: {
@@ -374,6 +387,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }
   }),
+  methods: {
+    suggestionClick: function suggestionClick(course_name) {
+      this.course_name = course_name;
+      this.showSuggestions = false;
+    }
+  },
   mounted: function mounted() {
     // Remit institutions / courses data in store
     this.$store.commit('institutions', this.institutions); // Remit areas data in store
@@ -394,6 +413,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -453,7 +482,7 @@ __webpack_require__.r(__webpack_exports__);
       count: 6
     };
   },
-  computed: {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions']), {
     // Get Courses
     courses: function courses() {
       return this.$store.getters.filteredCourse;
@@ -462,7 +491,7 @@ __webpack_require__.r(__webpack_exports__);
     courseDisplay: function courseDisplay() {
       return this.courses.slice(0, this.count);
     }
-  }
+  })
 });
 
 /***/ }),
@@ -1256,7 +1285,29 @@ var render = function() {
           }
         }
       })
-    ])
+    ]),
+    _vm._v(" "),
+    _vm.course_name != "" && _vm.showSuggestions
+      ? _c("div", [
+          _c(
+            "ul",
+            _vm._l(_vm.suggestions, function(suggestion, key) {
+              return _c(
+                "li",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.suggestionClick(suggestion.title)
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(suggestion.title))]
+              )
+            }),
+            0
+          )
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -1332,7 +1383,7 @@ var render = function() {
           )
         ]
       )
-    : _vm._e()
+    : _c("div", [_vm._v("\n    \n    No Result\n\n")])
 }
 var staticRenderFns = [
   function() {
@@ -14536,6 +14587,9 @@ __webpack_require__.r(__webpack_exports__);
       });
     });
     return areas;
+  },
+  suggestions: function suggestions(state, getters) {
+    return getters.filteredCourse;
   }
 });
 
@@ -14621,7 +14675,8 @@ __webpack_require__.r(__webpack_exports__);
   institutions: [],
   institution_name: null,
   areas: [],
-  area_name: null
+  area_name: null,
+  suggestions: []
 });
 
 /***/ }),

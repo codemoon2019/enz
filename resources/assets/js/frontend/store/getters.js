@@ -74,6 +74,12 @@ export default {
 
 	},
 
+	suggestions: (state, getters) => {
+
+		return getters.filteredCourse;
+
+	},
+
 	
 
 }

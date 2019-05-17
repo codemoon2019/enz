@@ -12,4 +12,6 @@ export default {
 
 	area_name: null,
 
+	suggestions: [],
+
 }

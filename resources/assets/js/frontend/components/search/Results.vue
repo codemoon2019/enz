@@ -48,6 +48,12 @@
 
     </div>
 
+    <div v-else>
+        
+        No Result
+
+    </div>
+
 </template>
 
 <script>
@@ -67,6 +73,9 @@ export default {
     },
 
     computed: {
+        
+        ...mapGetters(['suggestions']),
+
 
         // Get Courses
         courses:  function(){
