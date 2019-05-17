@@ -16,6 +16,10 @@ import Search from './components/Search.vue';
 
 import Course from './components/Course.vue';
 
+import Fields from './components/search/Fields.vue';
+
+import Results from './components/search/Results.vue';
+
 const app = new Vue({
 
   el: "#app",
@@ -29,6 +33,10 @@ const app = new Vue({
     Search,
 
     Course,
+
+    Fields,
+
+    Results,
 
   }
 

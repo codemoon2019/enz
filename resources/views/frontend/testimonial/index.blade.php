@@ -57,63 +57,33 @@
         </div>
         
         <div class="custom-slider-wrapper">
+
             <div class="slick-slider">
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample1.jpg')}}" class="img-fluid" alt="">
+
+                @foreach (Testimonial() as $key => $testimony)
+                    
+                    <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
+                    
+                        <div class="col-sm-6 profile-pic text-center text-white">
+                    
+                            <img data-src="{{ $testimony->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                    
+                        </div>
+                    
+                        <div class="col-sm-6 details">
+                    
+                            <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>                    
+                    
+                        </div>
+                    
                     </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample2.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample3.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample1.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample2.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
-                <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
-                    <div class="col-sm-6 profile-pic text-center text-white">
-                        <img data-src="{{asset('img/students/sample3.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                
-                    <div class="col-sm-6 details">
-                        <p class="basic fs18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, exercitationem?</p>                    
-                    </div>
-                </div>
+
+                @endforeach
+
             </div>
+
         </div>
+        
     </div>
 
     <div class="block gallery-block">

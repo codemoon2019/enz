@@ -4,11 +4,23 @@
 
 @section('content')
 
-	<search courses="{{ $models }}"></search>
+    <fields institutions="{{ $institutions }}" areas="{{ $areas }}"></fields>
 
-	<course></course>
+    {{-- <course></course> --}}
 
-    <div class="container-fluid px180">
+
+	{{-- <search courses="{{ $models }}"></search> --}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<results></results>
+
+{{--     <div class="container-fluid px180">
         
         <div class="row justify-content-center">
     
@@ -17,7 +29,7 @@
                 <div class="col-sm-4 item text-center mb60">
 
                     <img data-src="{{ asset('img/services/newzealand.jpg') }}" class="img-fluid mb30" alt="">
-                    {{-- <img data-src="{{ $study->getFirstMediaUrl('featured') }}" class="img-fluid mb30" alt=""> --}}
+                    <img data-src="{{ $study->getFirstMediaUrl('featured') }}" class="img-fluid mb30" alt="">
         
                     <h3 class="title fs18 mb30">{{ $study->title }}</h3>
         
@@ -29,6 +41,6 @@
 
         </div>
 
-    </div>
+    </div> --}}
 
 @endsection
