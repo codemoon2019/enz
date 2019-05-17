@@ -11596,12 +11596,11 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
-.page-contact li {
+.page-contact .for-content li {
   margin-bottom: 10px;
-  margin-right: 20px !important;
 }
 
-.page-contact li:before {
+.page-contact .for-content li:before {
   margin-right: 8px;
   content: "";
   width: 18px;
@@ -11618,6 +11617,10 @@ html body {
 
 .page-contact .tel:before {
   background-image: url(/svg/call-answer.svg);
+}
+
+.page-contact .connect-block li {
+  margin-right: 20px;
 }
 
 .page-contact .connect-block img {
