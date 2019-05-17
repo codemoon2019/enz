@@ -11633,6 +11633,11 @@ html body {
   transition: all ease 300ms;
 }
 
+.footer .btnread-more {
+  min-width: 147px;
+  width: auto;
+}
+
 .footer .flags img {
   z-index: 0;
   position: absolute;
