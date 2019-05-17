@@ -16,7 +16,7 @@
         
                 {!! $page->description !!}
         
-                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+                {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
         
             </div>
         
