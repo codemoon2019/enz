@@ -11351,6 +11351,11 @@ html body {
   padding-left: 20px;
 }
 
+.become-our-client .btnread-more {
+  min-width: 147px;
+  width: auto;
+}
+
 .become-our-client .control {
   display: inline-block;
   position: relative;
