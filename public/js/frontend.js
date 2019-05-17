@@ -446,7 +446,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -14492,7 +14491,7 @@ if ($('.hasPageScroll').length > 0) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   filteredCourse: function filteredCourse(state) {
-    if (state.course_name == null && state.institution_name == null && state.area_name == null) {
+    if (state.course_name == '' && state.institution_name == null && state.area_name == null) {
       return state.courses;
     } else {
       return state.courses.filter(function (course) {
@@ -14618,7 +14617,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   courses: [],
-  course_name: null,
+  course_name: '',
   institutions: [],
   institution_name: null,
   areas: [],

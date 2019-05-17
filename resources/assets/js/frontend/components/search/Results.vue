@@ -1,6 +1,5 @@
 <template>
 
-
     <div class="block content-block search-results" data-aos="zoom-in" v-if="courses.length">
 
         <div class="container-fluid jobs px475 text-center">

@@ -2,7 +2,7 @@ export default {
 
 	courses:[], 
 
-	course_name: null,
+	course_name: '',
 
 	institutions: [],
 

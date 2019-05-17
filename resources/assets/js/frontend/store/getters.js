@@ -2,7 +2,7 @@ export default {
 
 	filteredCourse: state => {
 
-		if (state.course_name == null && state.institution_name == null && state.area_name == null)  {
+		if (state.course_name == '' && state.institution_name == null && state.area_name == null)  {
 
 			return state.courses;
 
