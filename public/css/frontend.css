@@ -11026,7 +11026,7 @@ html body {
 .page-about-company .content-block {
   margin-top: -17%;
   position: relative;
-  padding-bottom: 10%;
+  padding-bottom: 12%;
   padding-top: 5%;
   background: url(/img/about/our-company-bg.png) no-repeat;
 }
@@ -11222,6 +11222,10 @@ html body {
   padding: 0 7.5px;
 }
 
+.tourist-visa textarea {
+  resize: none;
+}
+
 .page-courses .search-courses {
   background: url(/img/courses/bg.png) no-repeat;
   background-position: bottom;
@@ -11349,6 +11353,11 @@ html body {
 
 .be-part-of-our-team .jobs .card-body ul {
   padding-left: 20px;
+}
+
+.become-our-client .btnread-more {
+  min-width: 147px;
+  width: auto;
 }
 
 .become-our-client .control {
@@ -11559,6 +11568,83 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+}
+
+.page-contact #main {
+  padding-top: 10%;
+}
+
+.page-contact .content-block .for-banner {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: url(/img/contact/bg.png) no-repeat;
+  padding-left: 135px;
+}
+
+.page-contact .content-block .for-banner .ph-flag {
+  position: absolute;
+  top: -2%;
+  left: 5%;
+  display: none;
+}
+
+.page-contact .item .card {
+  background: transparent;
+  border-color: transparent;
+}
+
+.page-contact .item .card img {
+  border-top-right-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+}
+
+.page-contact .item .card-footer {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+}
+
+.page-contact .for-content li {
+  margin-bottom: 10px;
+}
+
+.page-contact .for-content li:before {
+  margin-right: 8px;
+  content: "";
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.page-contact .loc:before {
+  background-image: url(/svg/maps-and-flags.svg);
+}
+
+.page-contact .tel:before {
+  background-image: url(/svg/call-answer.svg);
+}
+
+.page-contact .connect-block li {
+  margin-right: 20px;
+}
+
+.page-contact .connect-block img {
+  opacity: 0.5;
+  transition: all ease 300ms;
+}
+
+.page-contact .connect-block img:hover {
+  opacity: 1;
+  transition: all ease 300ms;
+}
+
+.footer .btnread-more {
+  min-width: 147px;
+  width: auto;
 }
 
 .footer .flags img {
@@ -11899,6 +11985,15 @@ html body {
 
   .page-students .gallery-block {
     padding: 80px 0;
+  }
+
+  .page-contact .content-block .for-banner {
+    min-height: 80vh;
+  }
+
+  .page-contact .content-block .for-banner .ph-flag {
+    top: -5%;
+    left: 0%;
   }
 }
 
@@ -12497,6 +12592,10 @@ html body {
   .news-block .news-svg {
     display: block !important;
   }
+
+  .page-contact .content-block .ph-flag {
+    display: block !important;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -12572,6 +12671,10 @@ html body {
   .page-courses .search-courses .intro .img-book {
     width: auto;
     top: -260%;
+  }
+
+  .page-contact .content-block .for-banner .title {
+    margin-left: 10%;
   }
 }
 

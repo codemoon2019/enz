@@ -112,6 +112,19 @@
             padding: 80px 0;
         }
     }
+    .page-contact {
+        .content-block .for-banner {
+            min-height: 80vh;
+
+            .ph-flag {
+                top: -5%;
+                left: 0%
+            }
+        }
+        .content-block .for-content {
+
+        }
+    }
 }
 
 
@@ -708,6 +721,13 @@
     .news-block .news-svg {
         display: block !important;
     }
+    .page-contact {
+        .content-block {
+            .ph-flag {
+                display: block !important;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -779,6 +799,13 @@
                     width: auto;
                     top: -260%;
                 }
+            }
+        }
+    }
+    .page-contact {
+        .content-block .for-banner {
+            .title {
+                margin-left: 10%;
             }
         }
     }

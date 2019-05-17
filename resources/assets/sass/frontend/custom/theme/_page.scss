@@ -3,7 +3,7 @@
     .content-block {
         margin-top: -17%;
         position: relative;
-        padding-bottom: 10%;
+        padding-bottom: 12%;
         padding-top: 5%;
         background: url(/img/about/our-company-bg.png) no-repeat;
         .container-fluid {
@@ -177,6 +177,9 @@
             }
         }
     }
+    textarea {
+        resize: none;
+    }
 }
 
 .page-courses {
@@ -301,6 +304,10 @@
 }
 
 .become-our-client {
+    .btnread-more {
+        min-width: 147px;
+        width: auto;
+    }
     .control {
         display: inline-block;
         position: relative;
@@ -478,6 +485,74 @@
                 height: 490px;
                 object-fit: cover;
                 border-radius: 35px;
+            }
+        }
+    }
+}
+
+.page-contact {
+    #main {
+        padding-top: 10%;
+    }
+    .content-block .for-banner {
+        position: relative;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        background: url(/img/contact/bg.png) no-repeat;
+        padding-left: 135px;
+        .ph-flag {
+            position: absolute;
+            top: -2%;
+            left: 5%;
+            display: none;
+        }
+    }
+    .item {
+        .card {
+            background: transparent;
+            border-color: transparent;
+            img {
+                border-top-right-radius: 12px !important;
+                border-top-left-radius: 12px !important;
+            }
+        }
+        .card-footer {
+            border-bottom-left-radius: 35px !important;
+            border-bottom-right-radius: 35px !important;
+        }
+    }
+    .for-content {
+        li {
+            margin-bottom: 10px;
+            &:before {
+                margin-right: 8px;
+                content: "";
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+        }
+    }
+    .loc:before {
+        background-image: url(/svg/maps-and-flags.svg);
+    }
+    .tel:before {
+        background-image: url(/svg/call-answer.svg);
+    }
+    .connect-block {
+        li {
+            margin-right: 20px;
+        }
+        img {
+            opacity: .5;
+            transition: all ease 300ms;
+            &:hover {
+                opacity: 1;
+                transition: all ease 300ms;
             }
         }
     }
