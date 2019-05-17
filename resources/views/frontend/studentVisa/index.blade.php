@@ -12,7 +12,7 @@
         
                 <div class="col-lg-7">
             
-                    <img data-src="{{asset('img/services/banner.png')}}" class="img-fluid" alt="">
+                    <img data-src="{{asset('img/services/student-visa.png')}}" class="img-fluid" alt="">
             
                 </div>
             
