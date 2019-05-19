@@ -2,7 +2,7 @@ export default {
 
 	courses:[], 
 
-	course_name: null,
+	course_name: '',
 
 	institutions: [],
 
@@ -11,5 +11,7 @@ export default {
 	areas: [],
 
 	area_name: null,
+
+	suggestions: [],
 
 }

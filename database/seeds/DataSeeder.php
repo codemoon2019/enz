@@ -58,7 +58,7 @@ class DataSeeder extends Seeder
 
                 ['name' => 'Linkages', 'url' => '/linkages', 'order' => 2, 'parent_id' => 5],
 
-            ['name' => 'Courses', 'url' => '/courses', 'order' => 3],
+            ['name' => 'Courses', 'url' => '#', 'order' => 3],
 
             ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
 

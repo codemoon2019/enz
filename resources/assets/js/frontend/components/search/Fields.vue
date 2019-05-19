@@ -3,21 +3,31 @@
 	<div>
 	    
 		<div>
-
+			<p>Institution</p>
             <v-select :options="institutionsList" v-model="institution_name" label="title"></v-select>
 
 		</div>
 
 		<div>
-
+			<p>Area of Study</p>
             <v-select :options="areasList" v-model="area_name" label="title"></v-select>
 
 		</div>
 		
 		<div>
-
+			<p>Course Title</p>
 			<input type="text" class="form-control" v-model="course_name">
 
+		</div>
+
+		<div v-if="course_name != '' && showSuggestions">
+
+			<ul>
+
+				<li v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
+			
+			</ul>
+			
 		</div>
 
 	</div>
@@ -44,13 +54,14 @@ export default {
 
         return {
 
-        	
+        	showSuggestions: true
+
         }
     
     },    
     computed: {
         
-        ...mapGetters(['institutionsList', 'areasList']),
+        ...mapGetters(['institutionsList', 'areasList', 'suggestions']),
 
 	    course_name: {
 	        
@@ -61,7 +72,9 @@ export default {
 	        },
 	        set (value){
 
-	            this.$store.commit('updateCourseName', value)
+	            this.$store.commit('updateCourseName', value);
+
+	            this.showSuggestions = true;
 
 	        }
 	    },
@@ -96,6 +109,18 @@ export default {
 
 	},
 
+	methods: {
+
+		suggestionClick(course_name){
+
+			this.course_name = course_name;
+
+			this.showSuggestions = false;
+
+		}
+
+	},
+
    	mounted() {
 
         // Remit institutions / courses data in store
@@ -104,7 +129,6 @@ export default {
         // Remit areas data in store
         this.$store.commit('areas', this.areas);
         
-
    	}
 
 };
