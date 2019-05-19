@@ -3,19 +3,19 @@
 	<div>
 	    
 		<div>
-
+			<p>Institution</p>
             <v-select :options="institutionsList" v-model="institution_name" label="title"></v-select>
 
 		</div>
 
 		<div>
-
+			<p>Area of Study</p>
             <v-select :options="areasList" v-model="area_name" label="title"></v-select>
 
 		</div>
 		
 		<div>
-
+			<p>Course Title</p>
 			<input type="text" class="form-control" v-model="course_name">
 
 		</div>
