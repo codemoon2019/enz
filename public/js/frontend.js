@@ -169,6 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -475,14 +476,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      count: 6
+      count: 5
     };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions', 'showResult']), {
     // Get Courses
     courses: function courses() {
       return this.$store.getters.filteredCourse;
@@ -1332,58 +1343,89 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.courses.length
-    ? _c(
-        "div",
-        {
-          staticClass: "block content-block search-results",
-          attrs: { "data-aos": "zoom-in" }
-        },
-        [
-          _c(
-            "div",
-            { staticClass: "container-fluid jobs px475 text-center" },
-            [
-              _c(
-                "h2",
-                { staticClass: "title text-nblue fs40 mb60 text-center" },
-                [_vm._v("Search Results")]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.courseDisplay, function(course, index) {
-                return _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "col-sm-12 item mb30",
-                      attrs: { "data-aos": "fade-up" }
-                    },
-                    [
-                      _c("div", { staticClass: "card text-left" }, [
+  return _vm.showResult
+    ? _c("div", [
+        _vm.courses.length
+          ? _c(
+              "div",
+              {
+                staticClass: "block content-block search-results",
+                attrs: { "data-aos": "zoom-in" }
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "container-fluid jobs px475 text-center" },
+                  [
+                    _c(
+                      "h2",
+                      { staticClass: "title text-nblue fs40 mb60 text-center" },
+                      [_vm._v("Search Results")]
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.courseDisplay, function(course, index) {
+                      return _c("div", { staticClass: "row" }, [
                         _c(
                           "div",
-                          { staticClass: "card-header linear-gradient-teal" },
+                          {
+                            staticClass: "col-sm-12 item mb30",
+                            attrs: { "data-aos": "fade-up" }
+                          },
                           [
-                            _c(
-                              "h2",
-                              { staticClass: "card-title fs18 text-white mb0" },
-                              [_vm._v(_vm._s(course.title))]
-                            )
+                            _c("div", { staticClass: "card text-left" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "card-header linear-gradient-teal"
+                                },
+                                [
+                                  _c(
+                                    "h2",
+                                    {
+                                      staticClass:
+                                        "card-title fs18 text-white mb0"
+                                    },
+                                    [_vm._v(_vm._s(course.title))]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm._m(0, true)
+                            ])
                           ]
-                        ),
-                        _vm._v(" "),
-                        _vm._m(0, true)
+                        )
                       ])
-                    ]
-                  )
-                ])
-              })
-            ],
-            2
-          )
-        ]
-      )
-    : _c("div", [_vm._v("\n    \n    No Result\n\n")])
+                    })
+                  ],
+                  2
+                )
+              ]
+            )
+          : _c("div", { staticClass: "text-center" }, [
+              _c("p", { staticClass: "basic text-muted" }, [
+                _vm._v("No result")
+              ])
+            ]),
+        _vm._v(" "),
+        _vm.count < _vm.courses.length
+          ? _c("div", { staticClass: "text-center" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btnview-more text-uppercase mb30",
+                  on: {
+                    click: function($event) {
+                      _vm.count += 5
+                    }
+                  }
+                },
+                [_vm._v("View more")]
+              )
+            ])
+          : _vm._e()
+      ])
+    : _vm._e()
 }
 var staticRenderFns = [
   function() {
@@ -14545,7 +14587,7 @@ __webpack_require__.r(__webpack_exports__);
     if (state.course_name == '' && state.institution_name == null && state.area_name == null) {
       return state.courses;
     } else {
-      return state.courses.filter(function (course) {
+      var courses = state.courses.filter(function (course) {
         var course_exist = true;
         var institution_exist = true;
         var area_exist = true;
@@ -14566,6 +14608,19 @@ __webpack_require__.r(__webpack_exports__);
 
         return course_exist && institution_exist && area_exist ? true : false;
       });
+      courses.sort(function (a, b) {
+        var titleA = a.title.toLowerCase();
+        var titleB = b.title.toLowerCase();
+
+        if (titleA < titleB) {
+          return -1;
+        } else if (titleA > titleB) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      return courses;
     }
   },
   institutionsList: function institutionsList(state) {
@@ -14589,7 +14644,10 @@ __webpack_require__.r(__webpack_exports__);
     return areas;
   },
   suggestions: function suggestions(state, getters) {
-    return getters.filteredCourse;
+    return getters.filteredCourse.slice(0, 10);
+  },
+  showResult: function showResult(state) {
+    return !(state.course_name == '' && state.institution_name == null && state.area_name == null);
   }
 });
 

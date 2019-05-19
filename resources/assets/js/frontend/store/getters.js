@@ -8,7 +8,7 @@ export default {
 
 		}else{
 
-			return state.courses.filter(function(course){
+			let courses = state.courses.filter(function(course){
 
 				let course_exist      = true;
 
@@ -41,6 +41,30 @@ export default {
 				return course_exist && institution_exist && area_exist ? true : false;
 
 			});
+
+			courses.sort(function(a, b) {
+				
+				var titleA = a.title.toLowerCase();
+				
+				var titleB = b.title.toLowerCase();
+				
+				if (titleA < titleB) {
+				
+					return -1;
+				
+				}else if (titleA > titleB) {
+				
+					return 1;
+				
+				}else{
+
+					return 0;
+					
+				}
+
+			});
+
+			return courses;
 		
 		}
 
@@ -76,10 +100,14 @@ export default {
 
 	suggestions: (state, getters) => {
 
-		return getters.filteredCourse;
+		return getters.filteredCourse.slice(0, 10);
 
 	},
 
-	
+	showResult: state => {
+
+		return ! (state.course_name == '' && state.institution_name == null && state.area_name == null);
+
+	}
 
 }

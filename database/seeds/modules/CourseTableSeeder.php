@@ -65,6 +65,46 @@ class CourseTableSeeder extends Seeder
                 'area_of_study_id' => 5,
 
             ],
+            [
+                'title' => 'Healthcare 1',
+                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'status' => 'enable',
+                'institution_id' => 2,
+                'area_of_study_id' => 6,
+
+            ],
+            [
+                'title' => 'Healthcare 2',
+                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'status' => 'enable',
+                'institution_id' => 3,
+                'area_of_study_id' => 4,
+
+            ],
+            [
+                'title' => 'Healthcare 3',
+                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'status' => 'enable',
+                'institution_id' => 1,
+                'area_of_study_id' => 2,
+
+            ],
+            [
+                'title' => 'Healthcare 4',
+                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'status' => 'enable',
+                'institution_id' => 1,
+                'area_of_study_id' => 2,
+
+            ],
+            [
+                'title' => 'Healthcare 5',
+                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'status' => 'enable',
+                'institution_id' => 1,
+                'area_of_study_id' => 2,
+
+            ],
         ];        
 
         foreach ($data as $key => $value) {

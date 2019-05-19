@@ -61,6 +61,7 @@
             <button class="btn btnview-more text-uppercase mb30" @click="count += 6">View more</button>
 
         </div>
+        
         <div class="text-center" v-else-if="count = courses.length">
                     
             <p class="basic text-muted">End of result</p>
