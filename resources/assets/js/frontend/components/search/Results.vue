@@ -4,7 +4,7 @@
         
         <div class="block content-block search-results" data-aos="zoom-in" v-if="courses.length">
 
-            <div class="container-fluid jobs px475 text-center">
+            <div class="container-fluid jobs px180 text-center">
                 
                 <h2 class="title text-nblue fs40 mb60 text-center">Search Results</h2>
                 
@@ -21,22 +21,33 @@
                             </div>
                         
                             <div class="card-body relative">
+                                <div class="row course-info">
+                                    <div class="col-sm-3 for-logo">
 
-                                <div class="qualifications">
-                                
-                                    <p class="title fs18 text-black">Qualifications</p>
-                                
-                                    <ul>
-                                    
-                                        <li class="basic fs15">College Graduate</li>
-                                    
-                                        <li class="basic fs15">With good written and verbal communication skills</li>
-                                    
-                                    </ul>
-                                
+                                    </div>
+                                    <div class="col-sm-8 for-desc">
+                                        <p class="title fs18 text-black">About the course</p>
+                                        <p class="basic fs15">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit cum ipsum quis ratione earum dolorem doloremque a perferendis eveniet.</p>
+                                        <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th class="title fs18 text-black">Carrer Opportunities</th>
+                                                    <th class="title fs18 text-black">Duration</th>
+                                                    <th class="title fs18 text-black">Availability</th>
+                                                    <th class="title fs18 text-black"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="basic fs15">Enrolled Nurse (DIV2)</td>
+                                                    <td class="basic fs15">58 Weeks</td>
+                                                    <td class="basic fs15">Melbourne, Perth, Sydney</td>
+                                                    <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-
-                                <a href="#" class="btn btnread-more text-uppercase">Apply</a>
 
                             </div>
 

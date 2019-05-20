@@ -221,25 +221,56 @@
             padding: 0 300px;
             position: relative;
         }
-        .suggestions {
+        .suggestions,
+        .vs__dropdown-menu {
             padding: 15px;
             border-radius: 18px;
+            box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+            border: 1px solid rgba(60, 60, 60, 0.26);
+
+            li {
+                line-height: 1.42857143;
+                display: block;
+                padding: 3px 20px;
+                clear: both;
+                color: #333;
+                white-space: nowrap;
+                transition: all ease 300ms;
+                &:hover {
+                    background: #5897fb;
+                    transition: all ease 300ms;
+                }
+            }
         }
     }
-    .card {
-        background: transparent;
-        border: none;
-        img {
-            border-top-left-radius: 35px;
-            border-top-right-radius: 35px;
-        }
-        .card-footer {
-            border-bottom-left-radius: 35px !important;
-            border-bottom-right-radius: 35px !important;
+    .area-of-study {
+        .card {
+            background: transparent;
+            border: none;
+            img {
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+            }
+            .card-footer {
+                border-bottom-left-radius: 35px !important;
+                border-bottom-right-radius: 35px !important;
+            }
         }
     }
     .search-results {
         margin-top: -5%;
+        .card {
+            border-bottom-left-radius: 35px !important;
+            border-bottom-right-radius: 35px !important;
+            .card-body {
+            }
+        }
+        .course-info {
+            th,td {
+                vertical-align: middle;
+                padding: 0;
+            }
+        }
     }
 }
 
