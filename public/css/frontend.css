@@ -11346,6 +11346,24 @@ html body {
   padding: 0;
 }
 
+.page-courses .search-results .filter .btn {
+  min-height: 80px;
+  color: #989898;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 35px;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.page-courses .search-results .filter .btn:first-child {
+  padding: 30px;
+}
+
+.page-courses .search-results .filter .btn.active {
+  border: 2px solid #3fb1e5;
+  color: #3fb1e5;
+}
+
 .page-destination .banner-block {
   z-index: 1;
 }

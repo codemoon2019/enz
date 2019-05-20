@@ -2,12 +2,36 @@
 
     <div v-if="showResult">
         
-        <div class="block content-block search-results" data-aos="zoom-in" v-if="courses.length">
+        <div class="block content-block search-results" data-aos="zoom-in" v-if="filteredCourse.length">
 
             <div class="container-fluid jobs px180 text-center">
                 
                 <h2 class="title text-nblue fs40 mb60 text-center">Search Results</h2>
+
                 
+                <div class="filter mb80">
+
+                    <a href="#" class="btn" @click.prevent="type = 'all'" :class="type == 'all' ? 'active' : ''">
+                        All
+                    </a>
+                    
+                    <a href="#" class="btn" @click.prevent="type = 'Australia'" :class="type == 'Australia' ? 'active' : ''">
+                        <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt="">
+                        Australia
+                    </a>
+                    
+                    <a href="#" class="btn" @click.prevent="type = 'Canada'" :class="type == 'Canada' ? 'active' : ''">
+                        <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt="">
+                        Canada
+                    </a>
+                    
+                    <a href="#" class="btn" @click.prevent="type = 'New Zealand'" :class="type == 'New Zealand' ? 'active' : ''">
+                        <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt="">
+                        New Zealand
+                    </a>
+                
+                </div>
+
                 <div class="row" v-for="(course, index) in courseDisplay">
                 
                     <div class="col-sm-12 item mb30" data-aos="fade-up">
@@ -67,7 +91,7 @@
 
         </div>
 
-        <div class="text-center" v-if="count < courses.length">
+        <div class="text-center" v-if="count < filteredCourse.length">
                     
             <button class="btn btnview-more text-uppercase mb30" @click="count += 5">View more</button>
 
@@ -87,7 +111,9 @@ export default {
 
         return {
 
-            count: 5
+            count: 5,
+
+            type: 'all'
 
         }
     
@@ -99,16 +125,64 @@ export default {
 
 
         // Get Courses
-        courses:  function(){
+        filteredCourse:  function(){
 
             return this.$store.getters.filteredCourse;
 
         },
 
+        // courses: function(){
+
+        //     if (this.type == 'Australia') {
+
+        //     }else if(this.type == 'Canada'){
+                
+        //     }else if(this.type == 'New Zealand'){
+                
+        //     }else{
+
+        //     }
+
+
+        // },
+
         // Course to be display
         courseDisplay: function(){
+
+            if (this.type == 'Australia') {
+
+                return this.filteredCourse.filter(function(course){
+
+                    return course.country == 'Australia';
+
+                });
+
+            }else if(this.type == 'Canada'){
+
+                return this.filteredCourse.filter(function(course){
+
+                    return course.country == 'Canada';
+
+                });
+                
+            }else if(this.type == 'New Zealand'){
+
+                return this.filteredCourse.filter(function(course){
+
+                    return course.country == 'New Zealand';
+
+                });
+                
+            }else{
+
+                return this.filteredCourse.slice(0, this.count);
+
+            }
+
+
+            // console.log(this.filteredCourse);
             
-            return this.courses.slice(0, this.count);
+            // return this.filteredCourse.slice(0, this.count);
 
         },
 

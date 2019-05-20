@@ -28,11 +28,11 @@ class InstitutionTableSeeder extends Seeder
 
         $data = [
             ['title' => 'ACFE', 'country_id' => 1 , 'order' => 0, 'status' => 'enable'],
-            ['title' => 'Australian IAS', 'country_id' => 1 , 'order' => 1, 'status' => 'enable'],
-            ['title' => 'CCEB', 'country_id' => 1 , 'order' => 2, 'status' => 'enable'],
-            ['title' => 'CQU', 'country_id' => 1 , 'order' => 3, 'status' => 'enable'],
+            ['title' => 'Australian IAS', 'country_id' => 2 , 'order' => 1, 'status' => 'enable'],
+            ['title' => 'CCEB', 'country_id' => 3 , 'order' => 2, 'status' => 'enable'],
+            ['title' => 'CQU', 'country_id' => 2 , 'order' => 3, 'status' => 'enable'],
             ['title' => 'Danford College', 'country_id' => 1 , 'order' => 4, 'status' => 'enable'],
-            ['title' => 'Elite Training IA', 'country_id' => 1 , 'order' => 5, 'status' => 'enable'],
+            ['title' => 'Elite Training IA', 'country_id' => 3 , 'order' => 5, 'status' => 'enable'],
         ];
 
         foreach($data as $key => $value){

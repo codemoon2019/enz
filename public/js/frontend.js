@@ -294,21 +294,69 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      count: 5
+      count: 5,
+      type: 'all'
     };
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions', 'showResult']), {
     // Get Courses
-    courses: function courses() {
+    filteredCourse: function filteredCourse() {
       return this.$store.getters.filteredCourse;
     },
+    // courses: function(){
+    //     if (this.type == 'Australia') {
+    //     }else if(this.type == 'Canada'){
+    //     }else if(this.type == 'New Zealand'){
+    //     }else{
+    //     }
+    // },
     // Course to be display
     courseDisplay: function courseDisplay() {
-      return this.courses.slice(0, this.count);
+      if (this.type == 'Australia') {
+        return this.filteredCourse.filter(function (course) {
+          return course.country == 'Australia';
+        });
+      } else if (this.type == 'Canada') {
+        return this.filteredCourse.filter(function (course) {
+          return course.country == 'Canada';
+        });
+      } else if (this.type == 'New Zealand') {
+        return this.filteredCourse.filter(function (course) {
+          return course.country == 'New Zealand';
+        });
+      } else {
+        return this.filteredCourse.slice(0, this.count);
+      } // console.log(this.filteredCourse);
+      // return this.filteredCourse.slice(0, this.count);
+
     }
   })
 });
@@ -936,7 +984,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.showResult
     ? _c("div", [
-        _vm.courses.length
+        _vm.filteredCourse.length
           ? _c(
               "div",
               {
@@ -953,6 +1001,96 @@ var render = function() {
                       { staticClass: "title text-nblue fs40 mb60 text-center" },
                       [_vm._v("Search Results")]
                     ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "filter mb80" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn",
+                          class: _vm.type == "all" ? "active" : "",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.type = "all"
+                            }
+                          }
+                        },
+                        [_vm._v("\n                    All\n                ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn",
+                          class: _vm.type == "Australia" ? "active" : "",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.type = "Australia"
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "img-fluid mr10",
+                            attrs: { src: "/svg/courses/aussie.svg", alt: "" }
+                          }),
+                          _vm._v(
+                            "\n                    Australia\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn",
+                          class: _vm.type == "Canada" ? "active" : "",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.type = "Canada"
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "img-fluid mr10",
+                            attrs: { src: "/svg/courses/canada.svg", alt: "" }
+                          }),
+                          _vm._v(
+                            "\n                    Canada\n                "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn",
+                          class: _vm.type == "New Zealand" ? "active" : "",
+                          attrs: { href: "#" },
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.type = "New Zealand"
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "img-fluid mr10",
+                            attrs: { src: "/svg/courses/NZ.svg", alt: "" }
+                          }),
+                          _vm._v(
+                            "\n                    New Zealand\n                "
+                          )
+                        ]
+                      )
+                    ]),
                     _vm._v(" "),
                     _vm._l(_vm.courseDisplay, function(course, index) {
                       return _c("div", { staticClass: "row" }, [
@@ -999,7 +1137,7 @@ var render = function() {
               ])
             ]),
         _vm._v(" "),
-        _vm.count < _vm.courses.length
+        _vm.count < _vm.filteredCourse.length
           ? _c("div", { staticClass: "text-center" }, [
               _c(
                 "button",
@@ -14453,6 +14591,7 @@ __webpack_require__.r(__webpack_exports__);
           return 0;
         }
       });
+      console.log(courses);
       return courses;
     }
   },
@@ -14540,6 +14679,7 @@ __webpack_require__.r(__webpack_exports__);
     state.institutions = Object.values(JSON.parse(_institutions));
     state.institutions.forEach(function (element) {
       element.courses.forEach(function (course) {
+        course.country = element.country.title;
         state.courses.push(course);
       });
     });

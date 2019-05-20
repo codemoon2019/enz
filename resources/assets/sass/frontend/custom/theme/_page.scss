@@ -286,6 +286,23 @@
                 padding: 0;
             }
         }
+        .filter {
+            .btn {
+                min-height: 80px;
+                color: #989898;
+                font-weight: 700;
+                padding: 15px 30px;
+                border-radius: 35px;
+                box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+                &:first-child {
+                    padding: 30px;
+                }
+            }
+            .btn.active {
+                border: 2px solid $blue;
+                color: $blue;
+            }
+        }
     }
 }
 
