@@ -21,6 +21,7 @@ use App\Models\CoreValue\CoreValue;
 use App\Models\Career\Career;
 use App\Models\Institution\Institution;
 use App\Models\AreaOfStudy\AreaOfStudy;
+use App\Models\Location\Location;
 
 /*
  * Application version name
@@ -663,5 +664,12 @@ if (!function_exists('HomeAreaOfStudy')) {
     function HomeAreaOfStudy()
     {
         return AreaOfStudy::orderBy('order')->limit(6)->get();
+    }
+}
+
+if (!function_exists('Location')) {
+    function Location()
+    {
+        return Location::orderBy('order')->get();
     }
 }
