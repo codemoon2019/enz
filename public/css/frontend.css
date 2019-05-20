@@ -10484,7 +10484,7 @@ html body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   padding: 0 !important;
   transition: all ease 300ms;
 }
@@ -11873,130 +11873,6 @@ html body {
   resize: none;
 }
 
-/* Custom, iPhone Retina */
-
-/* Extra Small Devices, Phones */
-
-/* Small Devices, Tablets */
-
-/* Medium Devices, Desktops */
-
-/* Large Devices, Wide Screens */
-
-@media only screen and (min-width: 1200px) and (max-width: 1366px) {
-  .banner-block .for-text {
-    top: 5%;
-  }
-
-  .banner-block .for-text p {
-    font-size: 21px;
-  }
-
-  .user-menu .navbar-brand img {
-    max-height: 40px;
-  }
-
-  .user-menu .nav-item {
-    padding: 0 5px !important;
-  }
-
-  .user-menu .nav-item .nav-link {
-    font-size: 14px;
-  }
-
-  .fixed .user-menu .nav-item {
-    padding: 0 18px !important;
-  }
-
-  .banner-block .row > div {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .events-block {
-    padding-bottom: 40px;
-  }
-
-  .events-block .item .num {
-    font-size: 44px;
-  }
-
-  .events-block .item .month {
-    font-size: 36px;
-  }
-
-  .events-block .basic {
-    font-size: 21px;
-  }
-
-  .events-block .plant {
-    left: 8%;
-  }
-
-  .courses-block {
-    padding-top: 40px;
-  }
-
-  .courses-block .bman {
-    top: 25%;
-  }
-
-  .testimonials iframe {
-    height: auto !important;
-  }
-
-  .news-block {
-    margin-top: -14%;
-  }
-
-  .news-block .news .card-title {
-    font-size: 14px;
-  }
-
-  .news-block .read-more {
-    font-size: 12px;
-  }
-
-  .footer .know-more {
-    margin-top: -10%;
-    padding-bottom: 7%;
-  }
-
-  .page-destination .for-text {
-    left: 0;
-  }
-
-  .page-destination .banner-block .row > div:first-child {
-    flex: 1;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .page-destination .banner-block .row > div:first-child img {
-    max-width: 60%;
-    margin-right: -7%;
-  }
-
-  .page-destination .content-block {
-    margin-top: 0;
-    padding-top: 0;
-    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
-  }
-
-  .page-students .gallery-block {
-    padding: 80px 0;
-  }
-
-  .page-contact .content-block .for-banner {
-    min-height: 80vh;
-  }
-
-  .page-contact .content-block .for-banner .ph-flag {
-    top: -5%;
-    left: 0%;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 767px) {
   .for-desktop {
     display: none;
@@ -12561,44 +12437,148 @@ html body {
   }
 }
 
-@media (min-width: 1200px) {
-  #navbarResponsive {
-    background-color: #fff;
-  }
+/* Large Devices, Wide Screens */
 
-  .front .banner-block {
-    display: flex;
-    margin-top: -8%;
-  }
-
-  .front .banner-block video {
-    height: 100%;
-  }
-
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
   .front .banner-block .for-text {
     position: absolute;
-    top: 30%;
-    left: 10%;
+    top: 5%;
+    left: 7%;
   }
 
   .front .banner-block .for-text p {
-    text-align: justify;
+    font-size: 21px;
+  }
+
+  .front .banner-block video {
+    display: flex;
+    height: 100%;
+  }
+
+  .user-menu .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .user-menu .nav-item {
+    padding: 0 5px !important;
+  }
+
+  .user-menu .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  .fixed .user-menu .nav-item {
+    padding: 0 18px !important;
+  }
+
+  .banner-block .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .banner-block .row div {
+    padding: 0 5% !important;
+  }
+
+  .courses-block .padded {
+    background-size: 85%;
+  }
+
+  .courses-block .align-self-center {
+    padding: 0 5%;
+  }
+
+  .courses-block .it,
+  .courses-block .driller {
+    right: 0;
+  }
+
+  .events-block {
+    padding-top: 0;
+    padding-bottom: 10%;
+  }
+
+  .events-block .item .num {
+    font-size: 44px;
+  }
+
+  .events-block .item .month {
+    font-size: 36px;
+  }
+
+  .events-block .basic {
+    font-size: 21px;
   }
 
   .events-block .plant {
-    display: block !important;
+    left: 8%;
   }
 
-  .news-block .news-svg {
-    display: block !important;
+  .courses-block {
+    padding-top: 40px;
   }
 
-  .page-contact .content-block .ph-flag {
-    display: block !important;
+  .courses-block .bman {
+    top: 25%;
+  }
+
+  .testimonials iframe {
+    height: auto !important;
+  }
+
+  .news-block {
+    margin-top: -14%;
+  }
+
+  .news-block .news .card-title {
+    font-size: 14px;
+  }
+
+  .news-block .read-more {
+    font-size: 12px;
+  }
+
+  .footer .know-more {
+    margin-top: -10%;
+    padding-bottom: 7%;
+  }
+
+  .page-destination .for-text {
+    left: 0;
+  }
+
+  .page-destination .banner-block .row > div:first-child {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .page-destination .banner-block .row > div:first-child img {
+    max-width: 60%;
+    margin-right: -7%;
+  }
+
+  .page-destination .content-block {
+    margin-top: 0;
+    padding-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .page-students .gallery-block {
+    padding: 80px 0;
+  }
+
+  .page-contact .content-block .for-banner {
+    min-height: 80vh;
+  }
+
+  .page-contact .content-block .for-banner .ph-flag {
+    top: -5%;
+    left: 0%;
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1600px) {
   .px180 {
     padding: 0 180px;
   }
@@ -12648,6 +12628,37 @@ html body {
     padding-right: 475px;
   }
 
+  .front .banner-block {
+    display: flex;
+    margin-top: -8%;
+  }
+
+  .front .banner-block video {
+    height: 100%;
+  }
+
+  .front .banner-block .for-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+
+  .front .banner-block .for-text p {
+    text-align: justify;
+  }
+
+  .events-block .plant {
+    display: block !important;
+  }
+
+  .news-block .news-svg {
+    display: block !important;
+  }
+
+  .page-contact .content-block .ph-flag {
+    display: block !important;
+  }
+
   .courses-block img {
     height: auto;
   }
@@ -12675,6 +12686,10 @@ html body {
 
   .page-contact .content-block .for-banner .title {
     margin-left: 10%;
+  }
+
+  .footer .form .btnview-more {
+    z-index: 2;
   }
 }
 
