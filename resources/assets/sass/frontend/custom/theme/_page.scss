@@ -187,9 +187,7 @@
 }
 
 .page-courses {
-    .vs__dropdown-toggle {
-        height: 38px;
-    }
+    
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
         background-position: bottom;
@@ -197,27 +195,35 @@
         display: flex;
         align-items: center;
         padding-top: 15%;
-        .form-control {
+        .form-control,
+        .vs__dropdown-toggle {
             height: 56px;
             border-radius: 35px;
             font-size: 18px;
             background: $white;
             position: relative;
+            svg {
+                margin-right: 15px;
+            }
+        }
+        .img-papers {
+            position: absolute;
+            top: -85%;
+            left: 0%;
+        }
+        .img-book {
+            width: 20%;
+            position: absolute;
+            top: -145%;
+            right: 10%;
         }
         .intro {
             padding: 0 300px;
             position: relative;
-            .img-papers {
-                position: absolute;
-                top: -180%;
-                left: 5%;
-            }
-            .img-book {
-                width: 20%;
-                position: absolute;
-                top: -195%;
-                right: 10%;
-            }
+        }
+        .suggestions {
+            padding: 15px;
+            border-radius: 18px;
         }
     }
     .search-results {

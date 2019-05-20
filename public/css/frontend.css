@@ -11235,10 +11235,6 @@ html body {
   resize: none;
 }
 
-.page-courses .vs__dropdown-toggle {
-  height: 38px;
-}
-
 .page-courses .search-courses {
   background: url(/img/courses/bg.png) no-repeat;
   background-position: bottom;
@@ -11248,7 +11244,8 @@ html body {
   padding-top: 15%;
 }
 
-.page-courses .search-courses .form-control {
+.page-courses .search-courses .form-control,
+.page-courses .search-courses .vs__dropdown-toggle {
   height: 56px;
   border-radius: 35px;
   font-size: 18px;
@@ -11256,22 +11253,32 @@ html body {
   position: relative;
 }
 
+.page-courses .search-courses .form-control svg,
+.page-courses .search-courses .vs__dropdown-toggle svg {
+  margin-right: 15px;
+}
+
+.page-courses .search-courses .img-papers {
+  position: absolute;
+  top: -85%;
+  left: 0%;
+}
+
+.page-courses .search-courses .img-book {
+  width: 20%;
+  position: absolute;
+  top: -145%;
+  right: 10%;
+}
+
 .page-courses .search-courses .intro {
   padding: 0 300px;
   position: relative;
 }
 
-.page-courses .search-courses .intro .img-papers {
-  position: absolute;
-  top: -180%;
-  left: 5%;
-}
-
-.page-courses .search-courses .intro .img-book {
-  width: 20%;
-  position: absolute;
-  top: -195%;
-  right: 10%;
+.page-courses .search-courses .suggestions {
+  padding: 15px;
+  border-radius: 18px;
 }
 
 .page-courses .search-results {
@@ -12558,6 +12565,14 @@ html body {
 
   .page-about-company .mv-block {
     padding-top: 10%;
+  }
+
+  .page-courses .img-papers {
+    display: none !important;
+  }
+
+  .page-courses .search-courses .img-book {
+    top: -120%;
   }
 
   .page-destination .for-text {

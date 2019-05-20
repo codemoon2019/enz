@@ -161,7 +161,7 @@ $('document').ready(function(){
   });
 
   if($(window).width()>=1200) {
-    $('.course-search').on('click',function(){
+    $('.course-search, .vs__dropdown-toggle').one('click',function(){
     $('html,body').animate({
       scrollTop: 400
       }, 800);

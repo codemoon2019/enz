@@ -142,6 +142,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -783,98 +787,116 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid px180 pt30 mb80" }, [
-    _c("h1", { staticClass: "title text-nblue mb30" }, [_vm._v("Courses")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "div",
-        { staticClass: "col-sm-4" },
-        [
-          _c("h2", { staticClass: "title fs18" }, [_vm._v("Institution")]),
-          _vm._v(" "),
-          _c("v-select", {
-            attrs: { options: _vm.institutionsList, label: "title" },
-            model: {
-              value: _vm.institution_name,
-              callback: function($$v) {
-                _vm.institution_name = $$v
-              },
-              expression: "institution_name"
-            }
-          })
-        ],
-        1
-      ),
+  return _c("div", { staticClass: "search-courses" }, [
+    _c("div", { staticClass: "container-fluid px180 pt30 mb80 relative" }, [
+      _c("img", {
+        staticClass: "img-fluid img-papers",
+        attrs: { "data-src": "svg/courses/papers.svg", alt: "" }
+      }),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-sm-4" },
-        [
-          _c("h2", { staticClass: "title fs18" }, [_vm._v("Area of Study")]),
-          _vm._v(" "),
-          _c("v-select", {
-            attrs: { options: _vm.areasList, label: "title" },
-            model: {
-              value: _vm.area_name,
-              callback: function($$v) {
-                _vm.area_name = $$v
-              },
-              expression: "area_name"
-            }
-          })
-        ],
-        1
-      ),
+      _c("h1", { staticClass: "title text-white mb30" }, [_vm._v("Courses")]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-sm-4" }, [
-        _c("h2", { staticClass: "title fs18" }, [_vm._v("Course Title")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.course_name,
-              expression: "course_name"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text" },
-          domProps: { value: _vm.course_name },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+      _c("img", {
+        staticClass: "img-fluid img-book",
+        attrs: { "data-src": "svg/courses/bookshelf.svg", alt: "" }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          { staticClass: "col-sm-4" },
+          [
+            _c("h2", { staticClass: "title text-white fs18" }, [
+              _vm._v("Institution")
+            ]),
+            _vm._v(" "),
+            _c("v-select", {
+              attrs: { options: _vm.institutionsList, label: "title" },
+              model: {
+                value: _vm.institution_name,
+                callback: function($$v) {
+                  _vm.institution_name = $$v
+                },
+                expression: "institution_name"
               }
-              _vm.course_name = $event.target.value
-            }
-          }
-        }),
+            })
+          ],
+          1
+        ),
         _vm._v(" "),
-        _vm.course_name != "" && _vm.showSuggestions
-          ? _c("div", { staticClass: "mt20" }, [
-              _c(
-                "ul",
-                { staticClass: "list-unstyled" },
-                _vm._l(_vm.suggestions, function(suggestion, key) {
-                  return _c(
-                    "li",
-                    {
-                      staticClass: "cursor-pointer",
-                      on: {
-                        click: function($event) {
-                          return _vm.suggestionClick(suggestion.title)
+        _c(
+          "div",
+          { staticClass: "col-sm-4" },
+          [
+            _c("h2", { staticClass: "title text-white fs18" }, [
+              _vm._v("Area of Study")
+            ]),
+            _vm._v(" "),
+            _c("v-select", {
+              attrs: { options: _vm.areasList, label: "title" },
+              model: {
+                value: _vm.area_name,
+                callback: function($$v) {
+                  _vm.area_name = $$v
+                },
+                expression: "area_name"
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("h2", { staticClass: "title text-white fs18" }, [
+            _vm._v("Course Title")
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.course_name,
+                expression: "course_name"
+              }
+            ],
+            staticClass: "form-control course-search",
+            attrs: { type: "text" },
+            domProps: { value: _vm.course_name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.course_name = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _vm.course_name != "" && _vm.showSuggestions
+            ? _c("div", { staticClass: "suggestions bg-white" }, [
+                _c(
+                  "ul",
+                  { staticClass: "list-unstyled" },
+                  _vm._l(_vm.suggestions, function(suggestion, key) {
+                    return _c(
+                      "li",
+                      {
+                        staticClass: "cursor-pointer",
+                        on: {
+                          click: function($event) {
+                            return _vm.suggestionClick(suggestion.title)
+                          }
                         }
-                      }
-                    },
-                    [_vm._v(_vm._s(suggestion.title))]
-                  )
-                }),
-                0
-              )
-            ])
-          : _vm._e()
+                      },
+                      [_vm._v(_vm._s(suggestion.title))]
+                    )
+                  }),
+                  0
+                )
+              ])
+            : _vm._e()
+        ])
       ])
     ])
   ])

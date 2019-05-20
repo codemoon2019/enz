@@ -1,39 +1,43 @@
 <template>
+	<div class="search-courses">
+		<div class="container-fluid px180 pt30 mb80 relative">
+        	<img data-src="svg/courses/papers.svg" class="img-fluid img-papers" alt="">
+			<h1 class="title text-white mb30">Courses</h1>
+        	<img data-src="svg/courses/bookshelf.svg" class="img-fluid img-book" alt="">
 
-	<div class="container-fluid px180 pt30 mb80">
-		<h1 class="title text-nblue mb30">Courses</h1>
-		<div class="row">
-			<div class="col-sm-4">
-				<h2 class="title fs18">Institution</h2>
-				<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
+			<div class="row">
+				<div class="col-sm-4">
+					<h2 class="title text-white fs18">Institution</h2>
+					<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
 
-			</div>
+				</div>
 
-			<div class="col-sm-4">
-				<h2 class="title fs18">Area of Study</h2>
-				<v-select class="" :options="areasList" v-model="area_name" label="title"></v-select>
+				<div class="col-sm-4">
+					<h2 class="title text-white fs18">Area of Study</h2>
+					<v-select class="" :options="areasList" v-model="area_name" label="title"></v-select>
+
+				</div>
+				
+				<div class="col-sm-4">
+					<h2 class="title text-white fs18">Course Title</h2>
+					<input type="text" class="form-control course-search" v-model="course_name">
+
+					<div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
+
+						<ul class="list-unstyled">
+
+							<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
+						
+						</ul>
+						
+					</div>
+				</div>
+
 
 			</div>
 			
-			<div class="col-sm-4">
-				<h2 class="title fs18">Course Title</h2>
-				<input type="text" class="form-control" v-model="course_name">
-
-				<div class="mt20" v-if="course_name != '' && showSuggestions">
-
-					<ul class="list-unstyled">
-
-						<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
-					
-					</ul>
-					
-				</div>
-			</div>
-
 
 		</div>
-	    
-
 	</div>
 
 </template>
