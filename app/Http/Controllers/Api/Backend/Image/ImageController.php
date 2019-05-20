@@ -26,6 +26,7 @@ use App\Models\Country\Country;
 use App\Models\CoreValue\CoreValue;
 use App\Models\Details\Details;
 use App\Models\Institution\Institution;
+use App\Models\Location\Location;
 
 /**
  * Class ImageController
@@ -54,6 +55,7 @@ class ImageController extends Controller
         'core-values' => CoreValue::class,
         'details'     => Details::class,
         'institution' => Institution::class,
+        'location' => Location::class,
     ];
 
     /**

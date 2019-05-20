@@ -34,6 +34,8 @@ use App\Models\Institution\Institution;
 
 use App\Models\AreaOfStudy\AreaOfStudy;
 
+use App\Models\Location\Location;
+
 class SortableController extends Controller
 {
     public function __invoke(Request $request, $model)
@@ -69,6 +71,8 @@ class SortableController extends Controller
             case 'Institution': $model = new Institution; break;
             
             case 'AreaOfStudy': $model = new AreaOfStudy; break;
+            
+            case 'Location': $model = new Location; break;
 
             default: break;
         }
