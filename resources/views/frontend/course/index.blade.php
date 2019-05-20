@@ -5,13 +5,6 @@
 @section('content')
 
     <fields institutions="{{ $institutions }}" areas="{{ $areas }}"></fields>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 	<results></results>
 
     <div class="container-fluid px180">

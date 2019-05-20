@@ -48,7 +48,7 @@
                         
                         </div>
                         
-                        <p class="title fs18 mb10">{{ $visa->title }}</p>
+                        <h2 class="title fs18 mb10">{{ $visa->title }}</h2>
                         
                         <p class="basic fs18">{!! $visa->description !!}</p>
                     
