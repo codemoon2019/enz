@@ -11281,6 +11281,21 @@ html body {
   border-radius: 18px;
 }
 
+.page-courses .card {
+  background: transparent;
+  border: none;
+}
+
+.page-courses .card img {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+.page-courses .card .card-footer {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+}
+
 .page-courses .search-results {
   margin-top: -5%;
 }
