@@ -85,28 +85,24 @@ class TouristVisaInquiryController extends Controller
 
     public function inquiry(Request $request)
     {
-
         $model = TouristVisaInquiry::create([
 
-            'full_name'     => $request['full_name'],
+            'first_name'     => $request['first_name'],
             
-            'profession'    => $request['profession'],
+            'last_name'    => $request['last_name'],
             
             'email_address' => $request['email_address'],
             
             'mobile_number' => $request['mobile_number'],
             
-            'location'      => $request['location'],
+            'country_to_visit'      => $request['country_to_visit'],
             
             'inquiry'       => $request['inquiry'],
             
-            'consultation'  => $request['consultation'],
-            
-            'resume'        => $filename,
-        
         ]);
 
-        dd($request->all());
+        return redirect()->back()->withFlashSuccess('Inquiry Submitted');
+
     }
 
 }
