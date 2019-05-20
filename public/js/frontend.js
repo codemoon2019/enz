@@ -296,6 +296,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -972,7 +983,7 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "container-fluid jobs px475 text-center" },
+                  { staticClass: "container-fluid jobs px180 text-center" },
                   [
                     _c(
                       "h2",
@@ -1104,28 +1115,66 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body relative" }, [
-      _c("div", { staticClass: "qualifications" }, [
-        _c("p", { staticClass: "title fs18 text-black" }, [
-          _vm._v("Qualifications")
-        ]),
+      _c("div", { staticClass: "row course-info" }, [
+        _c("div", { staticClass: "col-sm-3 for-logo" }),
         _vm._v(" "),
-        _c("ul", [
-          _c("li", { staticClass: "basic fs15" }, [_vm._v("College Graduate")]),
+        _c("div", { staticClass: "col-sm-8 for-desc" }, [
+          _c("p", { staticClass: "title fs18 text-black" }, [
+            _vm._v("About the course")
+          ]),
           _vm._v(" "),
-          _c("li", { staticClass: "basic fs15" }, [
-            _vm._v("With good written and verbal communication skills")
+          _c("p", { staticClass: "basic fs15" }, [
+            _vm._v(
+              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit cum ipsum quis ratione earum dolorem doloremque a perferendis eveniet."
+            )
+          ]),
+          _vm._v(" "),
+          _c("table", { staticClass: "table table-borderless" }, [
+            _c("thead", [
+              _c("tr", [
+                _c("th", { staticClass: "title fs18 text-black" }, [
+                  _vm._v("Carrer Opportunities")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "title fs18 text-black" }, [
+                  _vm._v("Duration")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "title fs18 text-black" }, [
+                  _vm._v("Availability")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "title fs18 text-black" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", { staticClass: "basic fs15" }, [
+                  _vm._v("Enrolled Nurse (DIV2)")
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "basic fs15" }, [_vm._v("58 Weeks")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "basic fs15" }, [
+                  _vm._v("Melbourne, Perth, Sydney")
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "basic fs15" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btnread-more text-uppercase",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Inquire now")]
+                  )
+                ])
+              ])
+            ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btnread-more text-uppercase",
-          attrs: { href: "#" }
-        },
-        [_vm._v("Apply")]
-      )
+      ])
     ])
   }
 ]

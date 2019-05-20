@@ -10,19 +10,20 @@
 
     <div class="container-fluid px180">
         
-        <div class="row justify-content-center">
+        <h2 class="title text-nblue fs40 text-center mb80">Area of Study</h2>
+        <div class="row justify-content-center area-of-study">
     
             @foreach (AreaOfStudy() as $key => $study)
         
-                <div class="col-sm-4 item text-center mb60">
-
-                    <img data-src="{{ asset('img/services/newzealand.jpg') }}" class="img-fluid mb30" alt="">
-                    {{-- <img data-src="{{ $study->getFirstMediaUrl('featured') }}" class="img-fluid mb30" alt=""> --}}
-        
-                    <h3 class="title fs18 mb30">{{ $study->title }}</h3>
-        
-                    <a href="{{ route('frontend.area-of-studies.show', $study->slug) }}" class="btn btnview-more text-uppercase">Read More</a>
-        
+                <div class="col-lg-3 col-md-6 item text-center mb60">
+                    <div class="card">
+                        <img data-src="{{ asset('img/services/newzealand.jpg') }}" class="img-fluid" alt="">
+                        <div class="card-footer linear-gradient-teal">
+                            <p class="card-title text-uppercase fs18">
+                                <a href="{{ route('frontend.area-of-studies.show', $study->slug) }}" class="btn text-white">{{ $study->title }}</a>
+                            </p>
+                        </div>
+                    </div>        
                 </div>
         
             @endforeach
