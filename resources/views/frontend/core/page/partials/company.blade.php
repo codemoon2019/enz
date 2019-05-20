@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="col-sm-4" data-aos="zoom-in">
-                <h2 class="title text-yellow text-capitalize fs40">Our Company</h2>
+                <h2 class="title text-yellow text-capitalize fs24">Our Company</h2>
             </div>
             <div class="col-sm-8" data-aos="zoom-in">
 

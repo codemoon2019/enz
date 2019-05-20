@@ -408,6 +408,10 @@ p,
   transition: all ease 300ms;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .fs0 {
   font-size: 0px !important;
 }
@@ -11059,11 +11063,11 @@ html body {
 .page-about-company .mv-block {
   margin-top: -10%;
   background-color: #eff1f5;
-  padding-top: 10%;
   padding-bottom: 200px !important;
 }
 
 .page-about-company .mv-block .carousel-indicators {
+  z-index: 2;
   bottom: -50%;
 }
 
@@ -11214,6 +11218,11 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
+.tourist-visa .content-block .card .card-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
 .tourist-visa .content-block .row {
   margin: 0 -7.5px;
 }
@@ -11224,6 +11233,10 @@ html body {
 
 .tourist-visa textarea {
   resize: none;
+}
+
+.page-courses .vs__dropdown-toggle {
+  height: 38px;
 }
 
 .page-courses .search-courses {
@@ -12543,6 +12556,10 @@ html body {
     padding-bottom: 7%;
   }
 
+  .page-about-company .mv-block {
+    padding-top: 10%;
+  }
+
   .page-destination .for-text {
     left: 0;
   }
@@ -12580,7 +12597,8 @@ html body {
 
 @media only screen and (min-width: 1600px) {
   .px180 {
-    padding: 0 180px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
 
   .pl20 {

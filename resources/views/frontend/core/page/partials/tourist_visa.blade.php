@@ -44,7 +44,7 @@
 
                             <div class="card-footer linear-gradient-{{ $country->color }}">
 
-                                <p class="card-title text-white text-uppercase mb0 fs24">{{ $country->title }}</p>
+                                <h2 class="card-title text-white text-uppercase mb0 fs24">{{ $country->title }}</h2>
 
                             </div>
 

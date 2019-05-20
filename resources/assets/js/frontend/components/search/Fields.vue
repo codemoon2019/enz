@@ -1,34 +1,38 @@
 <template>
 
-	<div>
+	<div class="container-fluid px180 pt30 mb80">
+		<h1 class="title text-nblue mb30">Courses</h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<h2 class="title fs18">Institution</h2>
+				<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
+
+			</div>
+
+			<div class="col-sm-4">
+				<h2 class="title fs18">Area of Study</h2>
+				<v-select class="" :options="areasList" v-model="area_name" label="title"></v-select>
+
+			</div>
+			
+			<div class="col-sm-4">
+				<h2 class="title fs18">Course Title</h2>
+				<input type="text" class="form-control" v-model="course_name">
+
+				<div class="mt20" v-if="course_name != '' && showSuggestions">
+
+					<ul class="list-unstyled">
+
+						<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
+					
+					</ul>
+					
+				</div>
+			</div>
+
+
+		</div>
 	    
-		<div>
-			<p>Institution</p>
-            <v-select :options="institutionsList" v-model="institution_name" label="title"></v-select>
-
-		</div>
-
-		<div>
-			<p>Area of Study</p>
-            <v-select :options="areasList" v-model="area_name" label="title"></v-select>
-
-		</div>
-		
-		<div>
-			<p>Course Title</p>
-			<input type="text" class="form-control" v-model="course_name">
-
-		</div>
-
-		<div v-if="course_name != '' && showSuggestions">
-
-			<ul>
-
-				<li v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
-			
-			</ul>
-			
-		</div>
 
 	</div>
 

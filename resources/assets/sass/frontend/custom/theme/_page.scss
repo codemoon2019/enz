@@ -30,10 +30,10 @@
     .mv-block {
         margin-top: -10%;
         background-color: #eff1f5;
-        padding-top: 10%;
         padding-bottom: 200px !important;
 
         .carousel-indicators {
+            z-index: 2;
             bottom: -50%;
             li {
                 width: 12px;
@@ -169,6 +169,10 @@
                 border-bottom-left-radius: 35px !important;
                 border-bottom-right-radius: 35px !important;
             }
+            .card-title {
+                font-family: $Quicksand;
+                font-weight: 500;
+            }
         }
         .row {
             margin: 0 -7.5px;
@@ -183,6 +187,9 @@
 }
 
 .page-courses {
+    .vs__dropdown-toggle {
+        height: 38px;
+    }
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
         background-position: bottom;

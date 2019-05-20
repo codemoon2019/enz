@@ -14,7 +14,7 @@
                     <div class="card">
                         <img class="img-fluid card-img-top" data-src="{{asset('img/services/aus.jpg')}}" alt="">
                         <div class="card-footer linear-gradient-green text-center">
-                            <p class="title text-white text-uppercase fs24 mb0">Laoag</p>
+                            <h2 class="title text-white text-uppercase fs24 mb0">Laoag</h2>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="card">
                         <img class="img-fluid card-img-top" data-src="{{asset('img/services/canada.jpg')}}" alt="">
                         <div class="card-footer linear-gradient-orange text-center">
-                            <p class="title text-white text-uppercase fs24 mb0">Vigan</p>
+                            <h2 class="title text-white text-uppercase fs24 mb0">Vigan</h2>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="card">
                         <img class="img-fluid card-img-top" data-src="{{asset('img/services/newzealand.jpg')}}" alt="">
                         <div class="card-footer linear-gradient-red text-center">
-                            <p class="title text-white text-uppercase fs24 mb0">Manila</p>
+                            <h2 class="title text-white text-uppercase fs24 mb0">Manila</h2>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="card">
                         <img class="img-fluid card-img-top" data-src="{{asset('img/services/newzealand.jpg')}}" alt="">
                         <div class="card-footer linear-gradient-yellow text-center">
-                            <p class="title text-white text-uppercase fs24 mb0">Dumaguete</p>
+                            <h2 class="title text-white text-uppercase fs24 mb0">Dumaguete</h2>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 <div class="col-sm-6 left-content">
                     <div class="row mb30">
                         <div class="col-sm-6">
-                            <h2 class="title text-black fs24">Laoag Office</h2>
+                            <h3 class="title text-black fs24">Laoag Office</h3>
                         </div>
                         <div class="col-sm-6">
                                 <ul class="list-unstyled">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="row mb30">
                         <div class="col-sm-6">
-                            <h2 class="title text-black fs24">Vigan Office</h2>
+                            <h3 class="title text-black fs24">Vigan Office</h3>
                         </div>
                         <div class="col-sm-6">
                                 <ul class="list-unstyled">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="row mb30">
                         <div class="col-sm-6">
-                            <h2 class="title text-black fs24">Manila Office</h2>
+                            <h3 class="title text-black fs24">Manila Office</h3>
                         </div>
                         <div class="col-sm-6">
                                 <ul class="list-unstyled">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="row mb30">
                         <div class="col-sm-6">
-                            <h2 class="title text-black fs24">Dumaguete Office</h2>
+                            <h3 class="title text-black fs24">Dumaguete Office</h3>
                         </div>
                         <div class="col-sm-6">
                                 <ul class="list-unstyled">

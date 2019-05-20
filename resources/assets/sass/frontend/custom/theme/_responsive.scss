@@ -657,6 +657,11 @@
         margin-top: -10%;
         padding-bottom: 7%;
     }
+    .page-about-company {
+        .mv-block {
+            padding-top: 10%;
+        }
+    }
     .page-destination {
         .for-text {
             left: 0;
@@ -713,7 +718,8 @@
 
 @media only screen and (min-width: 1600px) {
     .px180 {
-        padding: 0 180px;
+        padding-left: 180px;
+        padding-right: 180px;
     }
     
     .pl20 {
