@@ -60,45 +60,146 @@
     </div>
 
 </div>
+
 <div class="block application-block">
+
     <div class="container-fluid py80 px475">
+
         <div class="item mb30">
+
             <div class="card text-left">
+
                 <div class="card-header linear-gradient-teal">
+
                     <h2 class="card-title fs18 text-white mb0">Sign up now</h2>
+
                 </div>
+
                 <div class="card-body relative linear-gradient-grey">
-                    <div class="form-group">
-                        <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="" id="" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="" id="" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" name="" id="" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="" id="" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="" id="" placeholder="" required>
-                    </div>
-                    <div class="form-group">
+
+                    <form action="{{ route('frontend.tourist-visa-inquiries.inquiry') }}" method="post" id="tourist-inquiry-form">
+                        
+                        {{ csrf_field() }}
+
                         <div class="form-group">
-                            <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
-                            <textarea class="form-control" name="" id="" rows="3" required></textarea>
+
+                            <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
+
+                            <input type="text" class="form-control tourist-inquiry-field" name="first_name" id="tourist_first_name" placeholder="">
+
                         </div>
-                    </div>
-                    <div class=" text-center">
-                        <a href="#" class="btn btnread-more text-uppercase">Submit</a>
-                    </div>
+
+                        <div class="form-group">
+
+                            <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
+
+                            <input type="text" class="form-control tourist-inquiry-field" name="last_name" id="tourist_last_name" placeholder="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
+
+                            <input type="email" class="form-control tourist-inquiry-field" name="email_address" id="tourist_email_address" placeholder="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
+
+                            <input type="text" class="form-control tourist-inquiry-field" name="mobile_number" id="tourist_mobile_number" placeholder="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
+
+                            <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="form-group">
+
+                                <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
+
+                                <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
+
+                            </div>
+                        </div>
+ 
+                        <div class=" text-center">
+ 
+                            <a href="javascript:;" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</a>
+ 
+                        </div>
+
+                    </form>
+ 
                 </div>
+ 
             </div>
+ 
         </div>
+ 
     </div>
+
 </div>
+
+@push('after-scripts')
+
+<script>
+    
+    $('.tourist-inquiry-submit').click(function(){
+
+        $('.tourist-inquiry-field').css('border', 'unset');
+
+        let fields = ['tourist_first_name', 'tourist_last_name', 'tourist_email_address', 'tourist_mobile_number', 'tourist_country_to_visit', 'tourist_inquiry'];
+
+        let submit = true;
+
+        $.each(fields, function(k, v){
+
+            el = $('#' + v);
+
+            if (el.val() == null || el.val() == '') {
+
+                el.css('border', '2px solid #d27070');
+
+                submit = false;
+
+            }
+
+            if (v == 'tourist_email_address') {
+
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                if (! re.test(String(el.val()).toLowerCase())) {
+                    
+                    el.css('border', '2px solid #d27070');
+
+                    submit = false;
+
+                }
+
+            }
+
+        });
+
+
+        if (submit) {
+
+            $('#tourist-inquiry-form').submit();
+            
+        }
+
+    });
+
+</script>
+
+
+@endpush

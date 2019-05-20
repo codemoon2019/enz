@@ -13285,9 +13285,6 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: "#app",
   store: _store_index__WEBPACK_IMPORTED_MODULE_1__["default"],
   components: {
-    News: News,
-    Search: Search,
-    Course: Course,
     Fields: _components_search_Fields_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     Results: _components_search_Results_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }

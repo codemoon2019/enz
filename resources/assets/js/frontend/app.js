@@ -14,12 +14,6 @@ const app = new Vue({
   
   components: {
 
-    News,
-
-    Search,
-
-    Course,
-
     Fields,
 
     Results,
