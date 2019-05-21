@@ -337,7 +337,7 @@
 
 .page-destination {
     .banner-block {
-        z-index: 1;
+        // z-index: 1;
     }
     .content-block {
         margin-top: -14%;
@@ -558,6 +558,10 @@
         }
         .profile-pic {
             padding: 0;
+            display: flex;
+            img {
+                object-fit: cover;
+            }
         }
     }
     .custom-slider-wrapper {

@@ -11400,10 +11400,6 @@ html body {
   border-bottom: 1px solid #ddd;
 }
 
-.page-destination .banner-block {
-  z-index: 1;
-}
-
 .page-destination .content-block {
   margin-top: -14%;
   position: relative;
@@ -11648,6 +11644,12 @@ html body {
 
 .page-students .testimonials-block .profile-pic {
   padding: 0;
+  display: flex;
+}
+
+.page-students .testimonials-block .profile-pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page-students .custom-slider-wrapper {
@@ -12575,9 +12577,13 @@ html body {
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .front .banner-block {
+    margin-top: -8%;
+  }
+
   .front .banner-block .for-text {
     position: absolute;
-    top: 15%;
+    top: 18%;
     left: 7%;
   }
 
@@ -12707,7 +12713,7 @@ html body {
 
   .page-destination .content-block {
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 10%;
     background-image: linear-gradient(to right, #3e99d2, #3e70b1);
   }
 

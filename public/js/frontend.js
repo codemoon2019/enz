@@ -1151,7 +1151,7 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _c(
           "div",
-          { staticClass: "col-sm-4" },
+          { staticClass: "col-sm-4 mb30" },
           [
             _c("h2", { staticClass: "title text-white fs18" }, [
               _vm._v("Institution")
@@ -1173,7 +1173,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-sm-4" },
+          { staticClass: "col-sm-4 mb30" },
           [
             _c("h2", { staticClass: "title text-white fs18" }, [
               _vm._v("Area of Study")
@@ -1193,7 +1193,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-4" }, [
+        _c("div", { staticClass: "col-sm-4 mb30" }, [
           _c("h2", { staticClass: "title text-white fs18" }, [
             _vm._v("Course Title")
           ]),
