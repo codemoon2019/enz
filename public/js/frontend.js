@@ -536,9 +536,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           case 'Canada':
             canada.push(element);
             break;
-            new_zealand.push(element);
 
           default:
+            new_zealand.push(element);
         }
       });
     }

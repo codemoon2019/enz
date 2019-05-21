@@ -206,10 +206,10 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/resources/assets/js/backend/ckeditor/bootstrap.js */"./resources/assets/js/backend/ckeditor/bootstrap.js");
-__webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/public/js/plugins/ckeditor/ckeditor.js */"./public/js/plugins/ckeditor/ckeditor.js");
-__webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/public/js/plugins/ckeditor/config.js */"./public/js/plugins/ckeditor/config.js");
-module.exports = __webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/resources/assets/js/backend/ckeditor/ckeditor.js */"./resources/assets/js/backend/ckeditor/ckeditor.js");
+__webpack_require__(/*! /home/nico/Code/enzeducation/resources/assets/js/backend/ckeditor/bootstrap.js */"./resources/assets/js/backend/ckeditor/bootstrap.js");
+__webpack_require__(/*! /home/nico/Code/enzeducation/public/js/plugins/ckeditor/ckeditor.js */"./public/js/plugins/ckeditor/ckeditor.js");
+__webpack_require__(/*! /home/nico/Code/enzeducation/public/js/plugins/ckeditor/config.js */"./public/js/plugins/ckeditor/config.js");
+module.exports = __webpack_require__(/*! /home/nico/Code/enzeducation/resources/assets/js/backend/ckeditor/ckeditor.js */"./resources/assets/js/backend/ckeditor/ckeditor.js");
 
 
 /***/ })
