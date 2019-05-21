@@ -59,6 +59,38 @@ class InstitutionController extends CRUDController
 
         return array_merge($request->only($model->getFillable()), $data);
     }
+    public function update(Request $request, String $routeKeyName)
+    {
+        $model = $this->getModel($routeKeyName);
+
+        $baseableOptions = $this->crudRules($request, $model);
+        
+        $this->validate($request, $baseableOptions->updateRules, $baseableOptions->updateRuleMessages);
+
+        $data = $this->generateStub($request, $model);
+
+        $model = $this->repository()->update($data, $model->id);
+
+        return redirect()->back()->withFlashSuccess('Update Success');
+
+        // return $this->response('update', $request->ajax(), $model,
+        //     $this->_redirectAfterAction($request->_submission, $model));
+    }
+
+
+    public function store(Request $request)
+    {
+        $baseableOptions = $this->crudRules($request);
+
+        $this->validate($request, $baseableOptions->storeRules, $baseableOptions->storeRuleMessages);
+
+        $data = $this->generateStub($request);
+
+        $model = $this->repository()->create($data);
+
+        return redirect()->route('admin.institutions.edit', [$model->slug, $model->country->slug])->withFlashSuccess('Success');
+
+    }
 
     /**
      * @return \HalcyonLaravel\Base\Repository\BaseRepository

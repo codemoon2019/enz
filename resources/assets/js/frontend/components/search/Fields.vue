@@ -36,9 +36,15 @@
 
 					<div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
 
-						<ul class="list-unstyled">
+						<ul class="list-unstyled" v-if="filteredCourse.length">
 
 							<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
+						
+						</ul>
+
+						<ul class="list-unstyled" v-else>
+
+							<li class="not-allowed">Invalid course name</li>
 						
 						</ul>
 						
@@ -80,7 +86,7 @@ export default {
     },    
     computed: {
         
-        ...mapGetters(['institutionsList', 'areasList', 'suggestions']),
+        ...mapGetters(['institutionsList', 'areasList', 'suggestions', 'filteredCourse']),
 
 	    course_name: {
 	        

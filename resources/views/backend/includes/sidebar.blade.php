@@ -137,7 +137,7 @@
 
                         @endcan
 
-                        @can(app(App\Models\Course\Course::class)::permission('index'))
+{{--                         @can(app(App\Models\Course\Course::class)::permission('index'))
                         
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/courses*')) }}"
@@ -146,7 +146,7 @@
                                 </a>
                             </li>
 
-                        @endcan
+                        @endcan --}}
 
                         @can(app(App\Models\Event\Event::class)::permission('index'))
                         

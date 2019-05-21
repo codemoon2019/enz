@@ -51,13 +51,25 @@ class CourseController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        // $model = $this->repository()->makeModel();
+
+        // dd($data);
+
+        // return array_merge($request->only($model->getFillable()), $data);
+
         $data = [
             'meta' => $request->meta,
         ];
 
         $model = $this->repository()->makeModel();
 
-        return array_merge($request->only($model->getFillable()), $data);
+        $request = $request->all();
+
+        return array_merge($request, $data);
     }
 
     /**
@@ -95,4 +107,18 @@ class CourseController extends CRUDController
                 'title.required' => 'The title field is required.',
             ]);
     }
+
+
+    // public function store(Request $request)
+    // {
+    //     $baseableOptions = $this->crudRules($request);
+    //     $this->validate($request, $baseableOptions->storeRules, $baseableOptions->storeRuleMessages);
+
+    //     $data = $this->generateStub($request);
+    //     $model = $this->repository()->create($data);
+
+    //     return redirect()->route('admin.courses.edit', $model->slug)->withFlashSuccess('Success');
+    //     // return $this->response('store', $request->ajax(), $model,
+    //         // $this->_redirectAfterAction($request->_submission, $model));
+    // }
 }

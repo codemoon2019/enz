@@ -6,7 +6,7 @@
 
         <h4 class="card-title mb-0" style="padding-top: 10px;">
 
-            <a href="{{ route('admin.courses.create') }}">
+            <a href="{{ route('admin.courses.create', $model->slug) }}">
 
                 <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
 
@@ -46,8 +46,6 @@
                         
                         'edit_route' => route('admin.courses.edit', $item->slug),
 
-                        'show_route' => route('admin.courses.show', $item->slug),
-                        
                         'delete_route' => route('admin.courses.destroy', $item->slug)
                     
                     ])

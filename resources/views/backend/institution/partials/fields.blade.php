@@ -20,21 +20,26 @@
     
         </div>
     
-        <div class="form-group row">
+        <div class="form-group row" style="display: none;">
     
             <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
     
             <div class="col-md-10">
+    
+                @if (isset($model))
 
-                <select name="country_id" id="" class="form-control">
-                    
-                    @foreach (Country() as $country)
+                    <input type="text" name="country_id" class="form-control" value="{{ $model->country->id }}">
+                
+                @else
 
-                        <option value="{{ $country->id }}" {{ isset($model) ? ($model->country_id == $country->id ? 'selected' : '') : '' }}>{{ $country->title }}</option>
-                    
-                    @endforeach
+                    @php
+                        $url = explode('/', url()->current());
+                        $country = findCountry($url[count($url) - 1]);
+                    @endphp
 
-                </select>
+                    <input type="text" name="country_id" class="form-control" value="{{ $country->id }}">
+
+                @endif
     
             </div>
     

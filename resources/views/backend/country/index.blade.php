@@ -9,9 +9,10 @@
         @slot('title', 'Country List')
         @slot('secondary_title', 'Country Management')
 
-        @slot('links')
+{{--         @slot('links')
             @include($viewPath . '.partials.links')
-        @endslot
+        @endslot --}}
+        
         @slot('headers')
             <td>Title</td>
             <td>Last Modified</td>

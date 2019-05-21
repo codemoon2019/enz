@@ -14,7 +14,7 @@
     
             <div class="col-md-10">
     
-                <input type="text" name="title" class="form-control" value="{{ isset($model) ? $model->title : old('title') }}">
+                <input type="text" readonly name="title" class="form-control" value="{{ isset($model) ? $model->title : old('title') }}">
     
             </div>
     

@@ -121,23 +121,23 @@ class Country extends Model implements HasMedia
                     'permission' => self::permission('index'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.index'],
                 ],
-                'show' => [
-                    'type' => 'show',
-                    'permission' => self::permission('show'),
-                    'url' => [self::ROUTE_ADMIN_PATH . '.show', $this],
-                ],
+                // 'show' => [
+                //     'type' => 'show',
+                //     'permission' => self::permission('show'),
+                //     'url' => [self::ROUTE_ADMIN_PATH . '.show', $this],
+                // ],
                 'edit' => [
                     'type' => 'edit',
                     'permission' => self::permission('edit'),
                     'url' => [self::ROUTE_ADMIN_PATH . '.edit', $this],
                 ],
-                'destroy' => [
-                    'type' => 'destroy',
-                    'permission' => self::permission('destroy'),
-                    'url' => [self::ROUTE_ADMIN_PATH . '.destroy', $this],
-                    'group' => 'more',
-                    'redirect' => [self::ROUTE_ADMIN_PATH . '.index'],
-                ],
+                // 'destroy' => [
+                //     'type' => 'destroy',
+                //     'permission' => self::permission('destroy'),
+                //     'url' => [self::ROUTE_ADMIN_PATH . '.destroy', $this],
+                //     'group' => 'more',
+                //     'redirect' => [self::ROUTE_ADMIN_PATH . '.index'],
+                // ],
             ]
         ];
         return $links;

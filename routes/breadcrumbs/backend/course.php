@@ -9,7 +9,7 @@ Breadcrumbs::register($routePath . '.index', function ($breadcrumbs) use ($route
 
 Breadcrumbs::register($routePath . '.create', function ($breadcrumbs) use ($routePath) {
     $breadcrumbs->parent($routePath . '.index');
-    $breadcrumbs->push('Create', route($routePath . '.create'));
+    $breadcrumbs->push('Create', route($routePath . '.create', 'asd'));
 });
 
 Breadcrumbs::register($routePath . '.show', function ($breadcrumbs, $model) use ($routePath) {
@@ -18,7 +18,11 @@ Breadcrumbs::register($routePath . '.show', function ($breadcrumbs, $model) use 
 });
 
 Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use ($routePath) {
-    $breadcrumbs->parent($routePath . '.show', $model);
+
+	// dd(findCourse($model)->institution);
+
+    $breadcrumbs->parent('admin.institutions.show', findCourse($model)->institution->slug);
+
     $breadcrumbs->push('Edit', route($routePath . '.edit', $model));
 });
 

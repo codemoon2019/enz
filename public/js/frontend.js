@@ -251,6 +251,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -263,7 +269,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       showSuggestions: true
     };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['institutionsList', 'areasList', 'suggestions']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['institutionsList', 'areasList', 'suggestions', 'filteredCourse']), {
     course_name: {
       get: function get() {
         return this.$store.state.course_name;
@@ -500,10 +506,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       new_zealand: []
     };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions', 'showResult']), {
-    filteredCourse: function filteredCourse() {
-      return this.$store.getters.filteredCourse;
-    },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(['suggestions', 'showResult', 'filteredCourse']), {
     all_courses: function all_courses() {
       return this.filteredCourse.slice(0, this.count_all);
     },
@@ -1222,25 +1225,31 @@ var render = function() {
           _vm._v(" "),
           _vm.course_name != "" && _vm.showSuggestions
             ? _c("div", { staticClass: "suggestions bg-white" }, [
-                _c(
-                  "ul",
-                  { staticClass: "list-unstyled" },
-                  _vm._l(_vm.suggestions, function(suggestion, key) {
-                    return _c(
-                      "li",
-                      {
-                        staticClass: "cursor-pointer",
-                        on: {
-                          click: function($event) {
-                            _vm.suggestionClick(suggestion.title)
-                          }
-                        }
-                      },
-                      [_vm._v(_vm._s(suggestion.title))]
+                _vm.filteredCourse.length
+                  ? _c(
+                      "ul",
+                      { staticClass: "list-unstyled" },
+                      _vm._l(_vm.suggestions, function(suggestion, key) {
+                        return _c(
+                          "li",
+                          {
+                            staticClass: "cursor-pointer",
+                            on: {
+                              click: function($event) {
+                                _vm.suggestionClick(suggestion.title)
+                              }
+                            }
+                          },
+                          [_vm._v(_vm._s(suggestion.title))]
+                        )
+                      }),
+                      0
                     )
-                  }),
-                  0
-                )
+                  : _c("ul", { staticClass: "list-unstyled" }, [
+                      _c("li", { staticClass: "not-allowed" }, [
+                        _vm._v("Invalid course name")
+                      ])
+                    ])
               ])
             : _vm._e()
         ])

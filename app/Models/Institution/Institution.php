@@ -130,7 +130,7 @@ class Institution extends Model implements HasMedia
                 'edit' => [
                     'type' => 'edit',
                     'permission' => self::permission('edit'),
-                    'url' => [self::ROUTE_ADMIN_PATH . '.edit', $this],
+                    'url' => [self::ROUTE_ADMIN_PATH . '.edit', [$this, 'asd']],
                 ],
                 'destroy' => [
                     'type' => 'destroy',

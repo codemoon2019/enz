@@ -508,6 +508,13 @@ if (!function_exists('Course')) {
     }
 }
 
+if (!function_exists('findCourse')) {
+    function findCourse($slug)
+    {
+        return Course::whereSlug($slug)->first();
+    }
+}
+
 if (!function_exists('Whies')) {
     function Whies()
     {
@@ -585,6 +592,13 @@ if (!function_exists('Country')) {
     }
 }
 
+if (!function_exists('findCountry')) {
+    function findCountry($slug)
+    {
+        return Country::whereSlug($slug)->first();
+    }
+}
+
 if (!function_exists('getModelList')) {
     function getModelList($model_name)
     {
@@ -649,6 +663,14 @@ if (!function_exists('Institution')) {
     function Institution()
     {
         return Institution::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('findInstitution')) {
+    function findInstitution($slug)
+    {
+        return Institution::whereSlug($slug)->first();
     }
 }
 

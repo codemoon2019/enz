@@ -194,13 +194,7 @@ export default {
 
     computed: {
         
-        ...mapGetters(['suggestions', 'showResult']),
-
-        filteredCourse:  function(){
-
-            return this.$store.getters.filteredCourse;
-
-        },
+        ...mapGetters(['suggestions', 'showResult', 'filteredCourse']),
 
         all_courses: function(){
 
