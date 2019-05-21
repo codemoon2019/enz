@@ -275,16 +275,24 @@
                 min-height: 100px;
                 border-bottom-left-radius: 35px !important;
                 border-bottom-right-radius: 35px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
             }
         }
     }
     .search-results {
         margin-top: -5%;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #ddd;
         .card {
             border-bottom-left-radius: 35px !important;
             border-bottom-right-radius: 35px !important;
-            .card-body {
-            }
         }
         .course-info {
             th,td {
@@ -321,11 +329,15 @@
             }
         }
     }
+    .noresult {
+        margin-bottom: 50px;
+        border-bottom: 1px solid #ddd;
+    }
 }
 
 .page-destination {
     .banner-block {
-        z-index: 1;
+        // z-index: 1;
     }
     .content-block {
         margin-top: -14%;
@@ -546,6 +558,10 @@
         }
         .profile-pic {
             padding: 0;
+            display: flex;
+            img {
+                object-fit: cover;
+            }
         }
     }
     .custom-slider-wrapper {

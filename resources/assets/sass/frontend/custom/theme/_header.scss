@@ -153,6 +153,7 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    padding-bottom: 100px;
     text-align:center;
   }
   
@@ -163,7 +164,11 @@
     color: #818181;
     display: block;
     transition: 0.3s;
-  
+  }
+
+  .user-menu .sidenav .nav-item .nav-link {
+    font-size: 14px;
+    padding: 18px 0 !important;
   }
   
   .sidenav a:hover{

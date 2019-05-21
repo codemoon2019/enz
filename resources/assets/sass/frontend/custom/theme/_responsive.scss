@@ -566,9 +566,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
     .front .banner-block {
+        margin-top: -8%;
         .for-text {
             position: absolute;
-            top: 15%;
+            top: 18%;
             left: 7%;
             p {
                 font-size: 21px;
@@ -668,7 +669,7 @@
             display: none !important;
         }
         .search-courses .img-book {
-            top: -120%;
+            top: -100%;
         }
 
     }
@@ -691,7 +692,7 @@
         }
         .content-block {
             margin-top: 0;
-            padding-top: 0;
+            padding-top: 10%;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
     }
@@ -850,5 +851,8 @@
     }
     .footer .know-more {
         padding-bottom: 45% !important;
+    }
+    .mag-download p {
+        font-size: 12px !important;
     }
 }

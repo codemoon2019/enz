@@ -32,13 +32,13 @@
 
     <div class="block content-block" data-aos="zoom-in">
 
-        <div class="container-fluid pt10p px180">
+        <div class="container-fluid px180">
         
             <div class="row">
     
                 @foreach (config('data.countries.' . $model->slug ) as $data)
 
-                    <div class="col-sm-3 item text-center mx-auto mb30">
+                    <div class="col-md-6 item text-center mx-auto mb30">
 
                         <div class="svg-holder">
 

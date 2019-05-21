@@ -86,7 +86,7 @@
 
                         </div>
 
-                        <div class="text-center" v-if="! australia_courses.length">
+                        <div class="noresult text-center" v-if="! australia_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
@@ -108,7 +108,7 @@
 
                         </div>
 
-                        <div class="text-center" v-if="! canada_courses.length">
+                        <div class="noresult text-center" v-if="! canada_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
@@ -130,7 +130,7 @@
 
                         </div>
 
-                        <div class="text-center" v-if="! new_zealand_courses.length">
+                        <div class="noresult text-center" v-if="! new_zealand_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
@@ -150,7 +150,7 @@
 
         </div>
 
-        <div class="text-center" v-else>
+        <div class="noresult text-center" v-else>
             
             <p class="basic text-muted">No result</p>
 

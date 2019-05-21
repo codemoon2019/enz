@@ -42,20 +42,32 @@
 				
 					<div class="col-md-4 text-center mb30">
 		
-						<img data-src="{{ $person->getFirstMediaUrl('featured') }}" alt="" class="img-fluid mb20">
+						<img data-src="{{ $person->getFirstMediaUrl('featured') }}" alt="" class="img-fluid mb20" data-toggle="modal" data-target="#myModal">
 						
 						<h2 class="title fs18 text-black">{{ $person->title }}</h2>
 						
 						<p class="basic fs18 text-black">{{ $person->position }}</p>
 		
-					</div>
-		
-				@endforeach
+                    </div>
+                    
+                    @endforeach
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                            <!-- Modal body -->
+                            <div class="modal-body text-center">
+						        <img data-src="{{ $person->getFirstMediaUrl('featured') }}" alt="" class="img-fluid mb20">
+                                <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com">{{ $person->position }}</a></p>
+						        <p class="basic fs18 text-black">Contact Number: <br />{{ $person->position }}</p>
+                            </div>
+                        </div>
+                    </div>
 		
 			</div>  
 
 		</div>
 
-	</div>
+    </div>
+    
 
 @endsection
