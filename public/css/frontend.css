@@ -11276,7 +11276,7 @@ html body {
   position: relative;
 }
 
-.page-courses .search-courses .suggestions,
+.page-courses .search-courses .suggestions ul,
 .page-courses .search-courses .vs__dropdown-menu {
   padding: 15px;
   border-radius: 18px;
@@ -11299,7 +11299,7 @@ html body {
   background: #fff;
 }
 
-.page-courses .search-courses .suggestions li,
+.page-courses .search-courses .suggestions ul li,
 .page-courses .search-courses .vs__dropdown-menu li {
   line-height: 1.42857143;
   display: block;
@@ -11310,10 +11310,16 @@ html body {
   transition: all ease 300ms;
 }
 
-.page-courses .search-courses .suggestions li:hover,
+.page-courses .search-courses .suggestions ul li:hover,
 .page-courses .search-courses .vs__dropdown-menu li:hover {
   background: #5897fb;
   transition: all ease 300ms;
+}
+
+.page-courses .search-courses .suggestions {
+  position: relative;
+  width: 100%;
+  margin: 0;
 }
 
 .page-courses .area-of-study .card {
@@ -11346,6 +11352,15 @@ html body {
   padding: 0;
 }
 
+.page-courses .search-results .filter {
+  justify-content: center;
+  border: none;
+}
+
+.page-courses .search-results .filter li {
+  margin: 0 0.5%;
+}
+
 .page-courses .search-results .filter .btn {
   min-height: 80px;
   color: #989898;
@@ -11362,6 +11377,11 @@ html body {
 .page-courses .search-results .filter .btn.active {
   border: 2px solid #3fb1e5;
   color: #3fb1e5;
+}
+
+.page-courses .search-results .filter .btn.default {
+  height: 100%;
+  line-height: 42px;
 }
 
 .page-destination .banner-block {
@@ -12541,7 +12561,7 @@ html body {
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
   .front .banner-block .for-text {
     position: absolute;
-    top: 5%;
+    top: 15%;
     left: 7%;
   }
 

@@ -10,7 +10,7 @@
 
                 <ul class="nav nav-tabs filter mb80">
 
-                    <li><a data-toggle="tab" href="#all" class="btn active show">All</a></li>
+                    <li><a data-toggle="tab" href="#all" class="btn default active show">All</a></li>
 
                     <li>
 

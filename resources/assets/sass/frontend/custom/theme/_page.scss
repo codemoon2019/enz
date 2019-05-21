@@ -221,7 +221,7 @@
             padding: 0 300px;
             position: relative;
         }
-        .suggestions,
+        .suggestions ul,
         .vs__dropdown-menu {
             padding: 15px;
             border-radius: 18px;
@@ -257,6 +257,11 @@
                 }
             }
         }
+        .suggestions {
+            position: relative;
+            width: 100%;
+            margin: 0;
+        }
     }
     .area-of-study {
         .card {
@@ -287,6 +292,12 @@
             }
         }
         .filter {
+            justify-content: center;
+            border: none;
+            
+            li {
+                margin: 0 .5%;
+            }
             .btn {
                 min-height: 80px;
                 color: #989898;
@@ -301,6 +312,10 @@
             .btn.active {
                 border: 2px solid $blue;
                 color: $blue;
+            }
+            .btn.default {
+                height: 100%;
+                line-height: 42px;
             }
         }
     }
