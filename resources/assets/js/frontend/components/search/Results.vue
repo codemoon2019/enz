@@ -257,18 +257,17 @@ export default {
 
                         australia.push(element);
 
-                    break;
+                        break;
                     
                     case 'Canada':
                     
                         canada.push(element);
                     
-                    break;
-                    
-                        new_zealand.push(element);
+                        break;
                     
                     default:
                 
+                        new_zealand.push(element);
                 }
             
             });
