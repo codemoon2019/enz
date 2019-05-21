@@ -8,79 +8,128 @@
                 
                 <h2 class="title text-nblue fs40 mb60 text-center">Search Results</h2>
 
-                
-                <div class="filter mb80">
+                <ul class="nav nav-tabs filter mb80">
 
-                    <a href="#" class="btn" @click.prevent="type = 'all'" :class="type == 'all' ? 'active' : ''">
-                        All
-                    </a>
+                    <li><a data-toggle="tab" href="#all" class="btn active show">All</a></li>
+
+                    <li>
+
+                        <a data-toggle="tab" href="#australia" class="btn">
+                        
+                            <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt=""> Australia
+                        
+                        </a>
                     
-                    <a href="#" class="btn" @click.prevent="type = 'Australia'" :class="type == 'Australia' ? 'active' : ''">
-                        <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt="">
-                        Australia
-                    </a>
+                    </li>
+
+                    <li>
                     
-                    <a href="#" class="btn" @click.prevent="type = 'Canada'" :class="type == 'Canada' ? 'active' : ''">
-                        <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt="">
-                        Canada
-                    </a>
+                        <a data-toggle="tab" href="#canada" class="btn">
                     
-                    <a href="#" class="btn" @click.prevent="type = 'New Zealand'" :class="type == 'New Zealand' ? 'active' : ''">
-                        <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt="">
-                        New Zealand
-                    </a>
-                
-                </div>
+                            <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt=""> Canada
+                    
+                        </a>
+                    
+                    </li>
 
-                <div class="row" v-for="(course, index) in courseDisplay">
-                
-                    <div class="col-sm-12 item mb30" data-aos="fade-up">
+                    <li>
+                    
+                        <a data-toggle="tab" href="#new_zealand" class="btn">
+                    
+                            <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt=""> New Zealand
+                    
+                        </a>
+                    
+                    </li>
 
-                        <div class="card text-left">
-                        
-                            <div class="card-header linear-gradient-teal">
-                        
-                                <h2 class="card-title fs18 text-white mb0">{{ course.title }}</h2>
-                        
-                            </div>
-                        
-                            <div class="card-body relative">
-                                <div class="row course-info">
-                                    <div class="col-sm-3 for-logo">
+                </ul>
 
-                                    </div>
-                                    <div class="col-sm-8 for-desc">
-                                        <p class="title fs18 text-black">About the course</p>
-                                        <p class="basic fs15">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit cum ipsum quis ratione earum dolorem doloremque a perferendis eveniet.</p>
-                                        <table class="table table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th class="title fs18 text-black">Carrer Opportunities</th>
-                                                    <th class="title fs18 text-black">Duration</th>
-                                                    <th class="title fs18 text-black">Availability</th>
-                                                    <th class="title fs18 text-black"></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="basic fs15">Enrolled Nurse (DIV2)</td>
-                                                    <td class="basic fs15">58 Weeks</td>
-                                                    <td class="basic fs15">Melbourne, Perth, Sydney</td>
-                                                    <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                <div class="tab-content">
+                    
+                    <div id="all" class="tab-pane fade in active show">
 
-                            </div>
+                        <div class="row" v-for="(course, index) in all_courses">
+
+                            <course-details :course="course"></course-details>
+
+                        </div>
+
+                        <div class="text-center" v-if="count_all < filteredCourse.length">
+                                    
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_all += 5">View more</button>
 
                         </div>
 
                     </div>
 
-                </div>
+                    <div id="australia" class="tab-pane fade">
+                    
+                        <div class="row" v-for="(course, index) in australia_courses">
 
+                            <course-details :course="course"></course-details>
+
+                        </div>
+
+                        <div class="text-center" v-if="! australia_courses.length">
+            
+                            <p class="basic text-muted">No result</p>
+
+                        </div>
+
+                        <div class="text-center" v-if="count_australia < australia.length">
+                                    
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_australia += 5">View more</button>
+
+                        </div>
+
+                    </div>
+                    
+                    <div id="canada" class="tab-pane fade">
+
+                        <div class="row" v-for="(course, index) in canada_courses">
+
+                            <course-details :course="course"></course-details>
+
+                        </div>
+
+                        <div class="text-center" v-if="! canada_courses.length">
+            
+                            <p class="basic text-muted">No result</p>
+
+                        </div>
+
+                        <div class="text-center" v-if="count_canada < canada.length">
+                                    
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_canada += 5">View more</button>
+
+                        </div>
+
+                    </div>
+                    
+                    <div id="new_zealand" class="tab-pane fade">
+
+                        <div class="row" v-for="(course, index) in new_zealand_courses">
+
+                            <course-details :course="course"></course-details>
+
+                        </div>
+
+                        <div class="text-center" v-if="! new_zealand_courses.length">
+            
+                            <p class="basic text-muted">No result</p>
+
+                        </div>
+
+                        <div class="text-center" v-if="count_new_zealand < new_zealand.length">
+                                    
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_new_zealand += 5">View more</button>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                
             </div>
 
         </div>
@@ -88,12 +137,6 @@
         <div class="text-center" v-else>
             
             <p class="basic text-muted">No result</p>
-
-        </div>
-
-        <div class="text-center" v-if="count < filteredCourse.length">
-                    
-            <button class="btn btnview-more text-uppercase mb30" @click="count += 5">View more</button>
 
         </div>
 
@@ -105,15 +148,29 @@
 
 import { mapGetters } from 'vuex';
 
+import courseDetails from './CourseDetails.vue';
+
 export default {
+
+    components: { courseDetails },
 
     data() {
 
         return {
 
-            count: 5,
+            count_all: 5,
 
-            type: 'all'
+            count_australia: 5,
+            
+            count_canada: 5,
+            
+            count_new_zealand: 5,
+
+            australia : [],
+
+            canada : [],
+
+            new_zealand : [],
 
         }
     
@@ -123,71 +180,86 @@ export default {
         
         ...mapGetters(['suggestions', 'showResult']),
 
-
-        // Get Courses
         filteredCourse:  function(){
 
             return this.$store.getters.filteredCourse;
 
         },
 
-        // courses: function(){
+        all_courses: function(){
 
-        //     if (this.type == 'Australia') {
-
-        //     }else if(this.type == 'Canada'){
-                
-        //     }else if(this.type == 'New Zealand'){
-                
-        //     }else{
-
-        //     }
-
-
-        // },
-
-        // Course to be display
-        courseDisplay: function(){
-
-            if (this.type == 'Australia') {
-
-                return this.filteredCourse.filter(function(course){
-
-                    return course.country == 'Australia';
-
-                });
-
-            }else if(this.type == 'Canada'){
-
-                return this.filteredCourse.filter(function(course){
-
-                    return course.country == 'Canada';
-
-                });
-                
-            }else if(this.type == 'New Zealand'){
-
-                return this.filteredCourse.filter(function(course){
-
-                    return course.country == 'New Zealand';
-
-                });
-                
-            }else{
-
-                return this.filteredCourse.slice(0, this.count);
-
-            }
-
-
-            // console.log(this.filteredCourse);
-            
-            // return this.filteredCourse.slice(0, this.count);
+            return this.filteredCourse.slice(0, this.count_all);
 
         },
 
+        australia_courses: function(){
+
+            return this.australia.slice(0, this.count_australia);
+
+        },
+
+        canada_courses: function(){
+
+            return this.canada.slice(0, this.count_canada);
+
+        },
+
+        new_zealand_courses: function(){
+
+            return this.new_zealand.slice(0, this.count_new_zealand);
+
+        },
+
+
     },
 
+    methods: {
+
+        limit_text(data){
+           
+            return data.length > 400 ? data.substr(0, 400) + '...' : data;
+       
+        }
+
+    },
+
+    watch: {
+
+        filteredCourse(value){
+
+            let australia   = this.australia = [];
+            
+            let canada      = this.canada = [];
+            
+            let new_zealand = this.new_zealand = [];
+
+            value.forEach(function(element) {
+
+                switch(element.country) {
+                    
+                    case 'Australia':
+
+                        australia.push(element);
+
+                    break;
+                    
+                    case 'Canada':
+                    
+                        canada.push(element);
+                    
+                    break;
+                    
+                        new_zealand.push(element);
+                    
+                    default:
+                
+                }
+            
+            });
+
+        }
+
+    }
 
 };
 
