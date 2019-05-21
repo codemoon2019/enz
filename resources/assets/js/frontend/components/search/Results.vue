@@ -10,14 +10,26 @@
 
                 <ul class="nav nav-tabs filter mb80">
 
-                    <li><a data-toggle="tab" href="#all" class="btn default active show">All</a></li>
+                    <li>
+                        
+                        <a data-toggle="tab" href="#all" class="btn default active show">
+                            
+                            All
+                            <br>
+                            <span>({{ filteredCourse.length }})</span>
+
+                        </a>
+                        
+                    </li>
 
                     <li>
 
                         <a data-toggle="tab" href="#australia" class="btn">
                         
                             <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt=""> Australia
-                        
+                            <br>
+                            <span>({{ australia.length }})</span>
+
                         </a>
                     
                     </li>
@@ -27,6 +39,8 @@
                         <a data-toggle="tab" href="#canada" class="btn">
                     
                             <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt=""> Canada
+                            <br>
+                            <span>({{ canada.length }})</span>
                     
                         </a>
                     
@@ -37,6 +51,8 @@
                         <a data-toggle="tab" href="#new_zealand" class="btn">
                     
                             <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt=""> New Zealand
+                            <br>
+                            <span>({{ new_zealand.length }})</span>
                     
                         </a>
                     

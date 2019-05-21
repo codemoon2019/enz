@@ -11333,6 +11333,7 @@ html body {
 }
 
 .page-courses .area-of-study .card .card-footer {
+  min-height: 100px;
   border-bottom-left-radius: 35px !important;
   border-bottom-right-radius: 35px !important;
 }
@@ -11381,6 +11382,7 @@ html body {
 
 .page-courses .search-results .filter .btn.default {
   height: 100%;
+  max-height: 134px;
   line-height: 42px;
 }
 

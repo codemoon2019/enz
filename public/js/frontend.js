@@ -467,6 +467,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1274,7 +1290,98 @@ var render = function() {
                       [_vm._v("Search Results")]
                     ),
                     _vm._v(" "),
-                    _vm._m(0),
+                    _c("ul", { staticClass: "nav nav-tabs filter mb80" }, [
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn default active show",
+                            attrs: { "data-toggle": "tab", href: "#all" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                        \n                        All\n                        "
+                            ),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v(
+                                "(" + _vm._s(_vm.filteredCourse.length) + ")"
+                              )
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn",
+                            attrs: { "data-toggle": "tab", href: "#australia" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "img-fluid mr10",
+                              attrs: { src: "/svg/courses/aussie.svg", alt: "" }
+                            }),
+                            _vm._v(" Australia\n                        "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v("(" + _vm._s(_vm.australia.length) + ")")
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn",
+                            attrs: { "data-toggle": "tab", href: "#canada" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "img-fluid mr10",
+                              attrs: { src: "/svg/courses/canada.svg", alt: "" }
+                            }),
+                            _vm._v(" Canada\n                        "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v("(" + _vm._s(_vm.canada.length) + ")")
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#new_zealand"
+                            }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "img-fluid mr10",
+                              attrs: { src: "/svg/courses/NZ.svg", alt: "" }
+                            }),
+                            _vm._v(" New Zealand\n                        "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("span", [
+                              _vm._v("(" + _vm._s(_vm.new_zealand.length) + ")")
+                            ])
+                          ]
+                        )
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "tab-content" }, [
                       _c(
@@ -1483,76 +1590,7 @@ var render = function() {
       ])
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "nav nav-tabs filter mb80" }, [
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "btn default active show",
-            attrs: { "data-toggle": "tab", href: "#all" }
-          },
-          [_vm._v("All")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "btn",
-            attrs: { "data-toggle": "tab", href: "#australia" }
-          },
-          [
-            _c("img", {
-              staticClass: "img-fluid mr10",
-              attrs: { src: "/svg/courses/aussie.svg", alt: "" }
-            }),
-            _vm._v(" Australia\n                    \n                    ")
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "btn",
-            attrs: { "data-toggle": "tab", href: "#canada" }
-          },
-          [
-            _c("img", {
-              staticClass: "img-fluid mr10",
-              attrs: { src: "/svg/courses/canada.svg", alt: "" }
-            }),
-            _vm._v(" Canada\n                \n                    ")
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            staticClass: "btn",
-            attrs: { "data-toggle": "tab", href: "#new_zealand" }
-          },
-          [
-            _c("img", {
-              staticClass: "img-fluid mr10",
-              attrs: { src: "/svg/courses/NZ.svg", alt: "" }
-            }),
-            _vm._v(" New Zealand\n                \n                    ")
-          ]
-        )
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
