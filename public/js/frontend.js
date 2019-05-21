@@ -1449,11 +1449,15 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.australia_courses.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c("p", { staticClass: "basic text-muted" }, [
-                                  _vm._v("No result")
-                                ])
-                              ])
+                            ? _c(
+                                "div",
+                                { staticClass: "noresult text-center" },
+                                [
+                                  _c("p", { staticClass: "basic text-muted" }, [
+                                    _vm._v("No result")
+                                  ])
+                                ]
+                              )
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_australia < _vm.australia.length
@@ -1498,11 +1502,15 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.canada_courses.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c("p", { staticClass: "basic text-muted" }, [
-                                  _vm._v("No result")
-                                ])
-                              ])
+                            ? _c(
+                                "div",
+                                { staticClass: "noresult text-center" },
+                                [
+                                  _c("p", { staticClass: "basic text-muted" }, [
+                                    _vm._v("No result")
+                                  ])
+                                ]
+                              )
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_canada < _vm.canada.length
@@ -1550,11 +1558,15 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.new_zealand_courses.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c("p", { staticClass: "basic text-muted" }, [
-                                  _vm._v("No result")
-                                ])
-                              ])
+                            ? _c(
+                                "div",
+                                { staticClass: "noresult text-center" },
+                                [
+                                  _c("p", { staticClass: "basic text-muted" }, [
+                                    _vm._v("No result")
+                                  ])
+                                ]
+                              )
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_new_zealand < _vm.new_zealand.length
@@ -1582,7 +1594,7 @@ var render = function() {
                 )
               ]
             )
-          : _c("div", { staticClass: "text-center" }, [
+          : _c("div", { staticClass: "noresult text-center" }, [
               _c("p", { staticClass: "basic text-muted" }, [
                 _vm._v("No result")
               ])

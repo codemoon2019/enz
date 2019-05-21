@@ -1,7 +1,7 @@
 {
     "/js/backend.js": "/js/backend.js?id=4ebc9414da9072293c17",
     "/js/backend-core.js": "/js/backend-core.js?id=b290fa1a58d523e30a7a",
-    "/js/frontend.js": "/js/frontend.js?id=ca9f3742d08d05764e85",
+    "/js/frontend.js": "/js/frontend.js?id=3b119792ab56c217c42f",
     "/js/frontend-core.js": "/js/frontend-core.js?id=d5c8e5901529010cd9b7",
     "/css/frontend-core.css": "/css/frontend-core.css?id=81f4716207585879fdf7",
     "/css/frontend-logged.css": "/css/frontend-logged.css?id=d41d8cd98f00b204e980",
@@ -10,5 +10,5 @@
     "/js/plugins/ckeditor/app.js": "/js/plugins/ckeditor/app.js?id=67dc54a3c7c339a3e471",
     "/js/plugins/datatable/app.js": "/js/plugins/datatable/app.js?id=bc92e6850d4792b9054e",
     "/js/plugins/menu/app.js": "/js/plugins/menu/app.js?id=a13ba415ceeb61fcbb1e",
-    "/css/frontend.css": "/css/frontend.css?id=c1c08b652def527c0bc6"
+    "/css/frontend.css": "/css/frontend.css?id=5cb2474e49701c4aa6de"
 }

@@ -11336,10 +11336,19 @@ html body {
   min-height: 100px;
   border-bottom-left-radius: 35px !important;
   border-bottom-right-radius: 35px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-courses .area-of-study .card .card-footer a:focus {
+  box-shadow: none;
 }
 
 .page-courses .search-results {
   margin-top: -5%;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ddd;
 }
 
 .page-courses .search-results .card {
@@ -11384,6 +11393,11 @@ html body {
   height: 100%;
   max-height: 134px;
   line-height: 42px;
+}
+
+.page-courses .noresult {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ddd;
 }
 
 .page-destination .banner-block {
