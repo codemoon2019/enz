@@ -15,7 +15,7 @@
         <div class="row justify-content-center area-of-study">
     
             @foreach (AreaOfStudy() as $key => $study)
-        
+                @if($key <= 9)
                 <div class="col-lg-3 col-md-6 item text-center mb60">
         
                     <div class="card">
@@ -35,6 +35,7 @@
                     </div>        
         
                 </div>
+                @endif
         
             @endforeach
 
