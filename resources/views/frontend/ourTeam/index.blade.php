@@ -22,8 +22,6 @@
 
                     {!! $page->description !!}
 
-                    {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
-
                 </div>
 
             </div>
@@ -41,8 +39,22 @@
 				@foreach ($models as $key => $person)
 				
 					<div class="col-md-4 text-center mb30">
-		
-						<img data-src="{{ $person->getFirstMediaUrl('featured') }}" alt="" class="img-fluid mb20" data-toggle="modal" data-target="#myModal">
+		              
+                        @php
+
+                            $image = $person->getFirstMediaUrl('featured');
+
+                        @endphp
+
+						<img data-src="{{ $image }}" 
+                             
+                             alt="" class="img-fluid mb20 person-modal" 
+                             
+                             data-image="{{ $image }}" 
+                             
+                             data-email="{{ $person->email }}" 
+                             
+                             data-contact="{{ $person->contact }}">
 						
 						<h2 class="title fs18 text-black">{{ $person->title }}</h2>
 						
@@ -50,24 +62,56 @@
 		
                     </div>
                     
-                    @endforeach
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                            <!-- Modal body -->
-                            <div class="modal-body text-center">
-						        <img data-src="{{ $person->getFirstMediaUrl('featured') }}" alt="" class="img-fluid mb20">
-                                <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com">{{ $person->position }}</a></p>
-						        <p class="basic fs18 text-black">Contact Number: <br />{{ $person->position }}</p>
-                            </div>
-                        </div>
-                    </div>
-		
-			</div>  
+                @endforeach
 
-		</div>
+                <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
+
+                <div class="modal fade" id="myModal">
+
+                    <div class="modal-dialog modal-sm">
+                    
+                        <div class="modal-content">
+
+                        <div class="modal-body text-center">
+
+                            <img src="" id="person-image" alt="" class="img-fluid mb20">
+
+                            <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" id="person-email"></a></p>
+
+                            <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    
+            </div>  
+
+        </div>
 
     </div>
-    
 
 @endsection
+
+@push('after-scripts')
+
+<script>
+    
+    $('.person-modal').click(function(){
+
+        let el = $(this);
+
+        $('#person-image').attr('src', el.attr('data-image'));
+
+        $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
+
+        $('#person-contact').html(el.attr('data-contact'));
+
+        $('.modal-trigger').trigger('click');
+
+    });
+
+</script>
+
+@endpush
