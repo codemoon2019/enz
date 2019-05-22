@@ -47,7 +47,7 @@
     
             <div class="col-md-10">
 
-                @if ($model)
+                @if (isset($model))
                 
                     <select name="area_of_study_id" id="area_of_study_id" class="form-control">
                         @foreach (AreaOfStudy() as $area)

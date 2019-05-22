@@ -31,41 +31,6 @@
                 </li>
             @endif
 
-{{--             @can(app(App\Models\Article\Article::class)::permission('index'))
-                <li class="nav-item">
-                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/articles*')) }}"
-                       href="{{ route(app(App\Models\Article\Article::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                        <i class="nav-icon fa fa-newspaper-o"></i> Articles
-                    </a>
-                </li>
-            @endcan --}}
-
-{{--             @can(app(App\Models\Category\Category::class)::permission('index'))
-                <li class="nav-item">
-                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/categories*')) }}"
-                       href="{{ route(app(App\Models\Category\Category::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                        <i class="nav-icon fa fa-sitemap"></i> {{ __('core_category.label.singular') }}
-                    </a>
-                </li>
-            @endcan --}}
-
-{{--             @can(app(App\Models\FrequentlyAskedQuestion\FrequentlyAskedQuestion::class)::permission('index'))
-                <li class="nav-item">
-                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/frequently-asked-questions*')) }}"
-                       href="{{ route(app(App\Models\FrequentlyAskedQuestion\FrequentlyAskedQuestion::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                        <i class="nav-icon icon-question"></i> FAQs
-                    </a>
-                </li>
-            @endcan --}}
-
-{{--             @can(app(App\Models\Core\Inquiry::class)::permission('index'))
-                <li class="nav-item">
-                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/inquiries*')) }}"
-                       href="{{ route(app(App\Models\Core\Inquiry::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                        <i class="nav-icon icon-speech"></i> Inquiries
-                    </a>
-                </li>
-            @endcan --}}
 
             @php
                 $isCanAccessManagement = $logged_in_user->isAdminOrSystem();
@@ -83,18 +48,6 @@
                 $isCanLogView = $logged_in_user->isSystem();
             @endphp
 
-            {{-- <li class="nav-title">
-                MICRO SITES
-            </li>
-            @foreach($domains as $domain)
-                @include('backend.includes.microsite',['domain'=>$domain])
-            @endforeach --}}
-
-{{--             @if ($isCanAccessManagement || $isCanCMS || $isCanLogView)
-                <li class="nav-title">
-                    SETTINGS
-                </li>
-            @endif --}}
 
                         @if ($isCanCMS)
                 <li class="nav-item nav-dropdown
@@ -117,17 +70,36 @@
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="nav-icon fa fa-book"></i> CMS
                     </a>
+
                     <ul class="nav-dropdown-items">
-                        @can(app(App\Models\Core\Page\Page::class)::permission('index'))
+
+                        @can(app(App\Models\Country\Country::class)::permission('index'))
+                        
                             <li class="nav-item">
-                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/pages*')) }}"
-                                   href="{{ route(app(App\Models\Core\Page\Page::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                                    <i class="nav-icon fa fa-circle-o"></i> {{ __('core_page.label.plural') }}
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/countries*')) }}"
+                                   href="{{ route(app(App\Models\Country\Country::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Country
                                 </a>
                             </li>
+
                         @endcan
 
-                        @can(app(App\Models\Core\Block\Block::class)::permission('index'))
+                        @can(app(App\Models\Institution\Institution::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/institutions*')) }}"
+                                   href="{{ route(app(App\Models\Institution\Institution::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Institutions
+                                </a>
+                            </li>
+
+                        @endcan
+      
+
+
+
+
+{{--                         @can(app(App\Models\Core\Block\Block::class)::permission('index'))
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/blocks*')) }}"
                                    href="{{ route(app(App\Models\Core\Block\Block::class)::ROUTE_ADMIN_PATH.'.index') }}">
@@ -135,7 +107,7 @@
                                 </a>
                             </li>
 
-                        @endcan
+                        @endcan --}}
 
 {{--                         @can(app(App\Models\Course\Course::class)::permission('index'))
                         
@@ -214,34 +186,13 @@
 
                         @endcan
 
-                        @can(app(App\Models\Country\Country::class)::permission('index'))
-                        
-                            <li class="nav-item">
-                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/countries*')) }}"
-                                   href="{{ route(app(App\Models\Country\Country::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                                    <i class="nav-icon fa fa-circle-o"></i> Country
-                                </a>
-                            </li>
 
-                        @endcan
-      
                         @can(app(App\Models\StudentVisa\StudentVisa::class)::permission('index'))
                         
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/student-visas*')) }}"
                                    href="{{ route(app(App\Models\StudentVisa\StudentVisa::class)::ROUTE_ADMIN_PATH.'.index') }}">
                                     <i class="nav-icon fa fa-circle-o"></i> Student Visa
-                                </a>
-                            </li>
-
-                        @endcan
-      
-                        @can(app(App\Models\Details\Details::class)::permission('index'))
-                        
-                            <li class="nav-item">
-                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/details*')) }}"
-                                   href="{{ route(app(App\Models\Details\Details::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                                    <i class="nav-icon fa fa-circle-o"></i> Web Details
                                 </a>
                             </li>
 
@@ -269,17 +220,6 @@
 
                         @endcan
       
-                        @can(app(App\Models\Institution\Institution::class)::permission('index'))
-                        
-                            <li class="nav-item">
-                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/institutions*')) }}"
-                                   href="{{ route(app(App\Models\Institution\Institution::class)::ROUTE_ADMIN_PATH.'.index') }}">
-                                    <i class="nav-icon fa fa-circle-o"></i> Institutions
-                                </a>
-                            </li>
-
-                        @endcan
-      
                         @can(app(App\Models\AreaOfStudy\AreaOfStudy::class)::permission('index'))
                         
                             <li class="nav-item">
@@ -300,6 +240,26 @@
                                 </a>
                             </li>
 
+                        @endcan
+      
+                        @can(app(App\Models\Details\Details::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/details*')) }}"
+                                   href="{{ route(app(App\Models\Details\Details::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Web Details
+                                </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\Core\Page\Page::class)::permission('index'))
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/pages*')) }}"
+                                   href="{{ route(app(App\Models\Core\Page\Page::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> {{ __('core_page.label.plural') }}
+                                </a>
+                            </li>
                         @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))

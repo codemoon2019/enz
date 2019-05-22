@@ -26,126 +26,93 @@
 
                 <div class="col-md-12">
 
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
 
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="australia-tab" data-toggle="tab" href="#australia" role="tab" aria-controls="australia" aria-expanded="true">Australia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="canada-tab" data-toggle="tab" href="#canada" role="tab" aria-controls="canada">Canada</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="new-zealand-tab" data-toggle="tab" href="#new-zealand" role="tab" aria-controls="new-zealand">New Zealand</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content" id="myTabContent">
-    
-                    @foreach (Country() as $key => $country)
+                        <li class="nav-item">
+                       
+                            <a class="nav-link active" id="australia-tab" data-toggle="tab" href="#australia" role="tab" aria-controls="australia" aria-expanded="true">Australia</a>
+                       
+                        </li>
+                       
+                        <li class="nav-item">
+                       
+                            <a class="nav-link" id="canada-tab" data-toggle="tab" href="#canada" role="tab" aria-controls="canada">Canada</a>
+                       
+                        </li>
+                       
+                        <li class="nav-item">
+                       
+                            <a class="nav-link" id="new-zealand-tab" data-toggle="tab" href="#new-zealand" role="tab" aria-controls="new-zealand">New Zealand</a>
+                       
+                        </li>
                     
-                        <div class="tab-pane fade show {{ !$key ? 'active' : '' }}" id="{{ $country->slug }}" role="tabpanel" aria-labelledby="{{ $country->slug }}-tab">
+                    </ul>
 
-                            <h4 class="card-title mb-0" style="padding-top: 10px;">
-    
-                                <a href="{{ route('admin.institutions.create', $country->slug) }}">
-            
-                                    <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
-            
-                                </a>
-            
-                            </h4>
+                    <div class="tab-content" id="myTabContent">
+        
+                        @foreach (Country() as $key => $country)
+                        
+                            <div class="tab-pane fade show {{ !$key ? 'active' : '' }}" id="{{ $country->slug }}" role="tabpanel" aria-labelledby="{{ $country->slug }}-tab">
 
-                            <br><br>
+                                <h4 class="card-title mb-0" style="padding-top: 10px;">
+        
+                                    <a href="{{ route('admin.institutions.create', $country->slug) }}">
+                
+                                        <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
+                
+                                    </a>
+                
+                                </h4>
 
-                            <div class="dd" style="float: unset;" id="nestable-institution">
-                                
-                                <ol class="dd-list" >
+                                <br><br>
 
-                                    @foreach ($country->institutions as $key => $item)
+                                <div class="dd" style="float: unset;" id="nestable-institution-{{ $country->id }}">
+                                    
+                                    <ol class="dd-list" >
 
-                                        @php
+                                        @php $institutions = $country->institutions; @endphp
 
-                                            if (! $key) { $model = class_basename($item); }
-                                        
-                                        @endphp
-                                        
-                                        @include('backend.includes.sortable.list', [
+                                        @foreach ($institutions as $key => $item)
 
-                                            'item' => $item, 
+                                            @php
 
-                                            'label' => 'title',
+                                                if (! $key) { $model = class_basename($item); }
                                             
-                                            'edit_route' => route('admin.institutions.edit', [$item->slug, $country->slug]),
-
-                                            'show_route' => route('admin.institutions.show', $item->slug),
+                                            @endphp
                                             
-                                            'delete_route' => route('admin.institutions.destroy', $item->slug)
-                                        
-                                        ])
+                                            @include('backend.includes.sortable.list', [
 
-                                    @endforeach
+                                                'item' => $item, 
 
-                                </ol>
+                                                'label' => 'title',
+                                                
+                                                'edit_route' => route('admin.institutions.edit', [$item->slug, $country->slug]),
+
+                                                'show_route' => route('admin.institutions.show', $item->slug),
+                                                
+                                                'delete_route' => route('admin.institutions.destroy', $item->slug)
+                                            
+                                            ])
+
+                                        @endforeach
+
+                                    </ol>
+
+                                </div>
+
+                                @if ($institutions->count())
+
+                                    @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'institution-' . $country->id])
+                                    
+                                @endif
 
                             </div>
 
+                            @include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'institution-' . $country->id])
 
-                        </div>
-
-                    @endforeach
-
-                </div>
-
-
-
-
-
-
-
-
-{{--                     <div class="dd" id="nestable-institution">
-                        
-                        <ol class="dd-list">
-
-                            @php
-
-                                $institutions = Institution();
-                            
-                            @endphp
-
-                            @foreach ($institutions as $key => $item)
-
-                                @php
-
-                                    if (! $key) { $model = class_basename($item); }
-                                
-                                @endphp
-                                
-                                @include('backend.includes.sortable.list', [
-
-                                    'item' => $item, 
-
-                                    'label' => 'title',
-                                    
-                                    'edit_route' => route('admin.institutions.edit', $item->slug),
-
-                                    'show_route' => route('admin.institutions.show', $item->slug),
-                                    
-                                    'delete_route' => route('admin.institutions.destroy', $item->slug)
-                                
-                                ])
-
-                            @endforeach
-
-                        </ol>
+                        @endforeach
 
                     </div>
-
-                    @if ($institutions->count())
-
-                        @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'institution'])
-                        
-                    @endif --}}
 
                 </div>
 
@@ -156,7 +123,5 @@
     </div>
 
 </div>
-
-{{-- @include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'institution']) --}}
 
 @endsection

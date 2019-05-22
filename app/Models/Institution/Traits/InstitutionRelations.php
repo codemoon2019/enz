@@ -15,7 +15,7 @@ trait InstitutionRelations
 
 	public function courses()
 	{
-		return $this->hasMany(Course::class);
+		return $this->hasMany(Course::class)->orderBy('order');
 	}
 
 	public function country()

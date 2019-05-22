@@ -7,9 +7,10 @@ Breadcrumbs::register($routePath . '.index', function ($breadcrumbs) use ($route
     $breadcrumbs->push('Course', route($routePath . '.index'));
 });
 
-Breadcrumbs::register($routePath . '.create', function ($breadcrumbs) use ($routePath) {
-    $breadcrumbs->parent($routePath . '.index');
-    $breadcrumbs->push('Create', route($routePath . '.create', 'asd'));
+Breadcrumbs::register($routePath . '.create', function ($breadcrumbs, $model) use ($routePath) {
+    $breadcrumbs->parent('admin.institutions.show', $model);
+
+    $breadcrumbs->push('Create', route($routePath . '.create', $model));
 });
 
 Breadcrumbs::register($routePath . '.show', function ($breadcrumbs, $model) use ($routePath) {

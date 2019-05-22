@@ -71,7 +71,7 @@ class InstitutionController extends CRUDController
 
         $model = $this->repository()->update($data, $model->id);
 
-        return redirect()->back()->withFlashSuccess('Update Success');
+        return redirect()->route('admin.institutions.edit', [$model, $model->country->slug])->withFlashSuccess('Update Success');
 
         // return $this->response('update', $request->ajax(), $model,
         //     $this->_redirectAfterAction($request->_submission, $model));

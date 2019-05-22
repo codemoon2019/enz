@@ -7,19 +7,21 @@ Breadcrumbs::register($routePath . '.index', function ($breadcrumbs) use ($route
     $breadcrumbs->push('Institution', route($routePath . '.index'));
 });
 
-Breadcrumbs::register($routePath . '.create', function ($breadcrumbs) use ($routePath) {
+Breadcrumbs::register($routePath . '.create', function ($breadcrumbs, $model) use ($routePath) {
     $breadcrumbs->parent($routePath . '.index');
-    $breadcrumbs->push('Create', route($routePath . '.create', 'asd'));
+    $breadcrumbs->push('Create', route($routePath . '.create', $model));
 });
 
 Breadcrumbs::register($routePath . '.show', function ($breadcrumbs, $model) use ($routePath) {
     $breadcrumbs->parent($routePath . '.index');
-    $breadcrumbs->push('Show', route($routePath . '.show', [$model. 'asd']));
+
+    $breadcrumbs->push('Show', route($routePath . '.show', $model));
 });
 
-Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use ($routePath) {
+Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model, $country) use ($routePath) {
     $breadcrumbs->parent($routePath . '.index');
-    $breadcrumbs->push('Edit', route($routePath . '.edit', [$model, 'asd']));
+
+    $breadcrumbs->push('Edit', route($routePath . '.edit', [$model, $country]));
 });
 
 unset($routePath);
