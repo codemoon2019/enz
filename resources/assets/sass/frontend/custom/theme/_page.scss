@@ -177,8 +177,11 @@
     }
 }
 .page-news {
+    .banner-block {
+        z-index: 1;
+    }
     .content-block {
-        margin-top: -17.5%;
+        margin-top: -13%;
         position: relative;
         padding-top: 30%;
         background: url(/img/news/bg.png) no-repeat;

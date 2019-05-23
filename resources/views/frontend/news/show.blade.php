@@ -67,7 +67,7 @@
 
                         <div class="card-header p0">
 
-                            <img class="img-fluid" data-src="{{ asset('img/news/news1.jpg') }}" alt="">
+                            <img class="img-fluid" data-src="{{ asset('img/news/news2.jpg') }}" alt="">
 
                         </div>
 
@@ -90,7 +90,7 @@
 
                         <div class="card-header p0">
 
-                            <img class="img-fluid" data-src="{{ asset('img/news/news1.jpg') }}" alt="">
+                            <img class="img-fluid" data-src="{{ asset('img/news/news3.jpg') }}" alt="">
 
                         </div>
 
@@ -113,7 +113,7 @@
 
                         <div class="card-header p0">
 
-                            <img class="img-fluid" data-src="{{ asset('img/news/news1.jpg') }}" alt="">
+                            <img class="img-fluid" data-src="{{ asset('img/news/news4.jpg') }}" alt="">
 
                         </div>
 
