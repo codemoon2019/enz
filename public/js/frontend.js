@@ -191,8 +191,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-click-outside */ "./node_modules/vue-click-outside/index.js");
-/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_click_outside__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-click-outside */ "./node_modules/vue-click-outside/index.js");
+/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_click_outside__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
@@ -312,7 +312,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   },
   directives: {
-    ClickOutside: vue_click_outside__WEBPACK_IMPORTED_MODULE_3___default.a
+    ClickOutside: vue_click_outside__WEBPACK_IMPORTED_MODULE_0___default.a
   },
   mounted: function mounted() {
     // Remit institutions / courses data in store
@@ -339,6 +339,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
 //
 //
 //
@@ -1514,7 +1518,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.filteredCourse.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1559,7 +1568,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.australia_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1604,7 +1618,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.canada_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1649,7 +1668,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.new_zealand_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])

@@ -72,7 +72,8 @@
 
                         <div class="text-center mt50" v-if="! filteredCourse.length">
             
-                            <p class="basic text-muted">No result</p>
+                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <p class="title text-nblue fs24">No result</p>
 
                         </div>
 
@@ -94,7 +95,8 @@
 
                         <div class="text-center mt50" v-if="! australia_courses.length">
             
-                            <p class="basic text-muted">No result</p>
+                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <p class="title text-nblue fs24">No result</p>
 
                         </div>
 
@@ -116,7 +118,8 @@
 
                         <div class="text-center mt50" v-if="! canada_courses.length">
             
-                            <p class="basic text-muted">No result</p>
+                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <p class="title text-nblue fs24">No result</p>
 
                         </div>
 
@@ -138,7 +141,8 @@
 
                         <div class="text-center mt50" v-if="! new_zealand_courses.length">
             
-                            <p class="basic text-muted">No result</p>
+                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <p class="title text-nblue fs24">No result</p>
 
                         </div>
 

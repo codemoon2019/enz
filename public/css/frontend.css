@@ -11381,6 +11381,10 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
+.page-courses .search-results .card .for-logo img {
+  max-height: 120px;
+}
+
 .page-courses .search-results .course-info th,
 .page-courses .search-results .course-info td {
   vertical-align: middle;
@@ -11405,10 +11409,6 @@ html body {
   box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
 }
 
-.page-courses .search-results .filter .btn:first-child {
-  padding: 30px;
-}
-
 .page-courses .search-results .filter .btn.active {
   border: 2px solid #3fb1e5;
   color: #3fb1e5;
@@ -11418,11 +11418,16 @@ html body {
   height: 100%;
   max-height: 134px;
   line-height: 42px;
+  padding: 10px 30px;
 }
 
 .page-courses .noresult {
   margin-bottom: 50px;
   border-bottom: 1px solid #ddd;
+}
+
+.page-courses .no-result-image {
+  max-height: 280px;
 }
 
 .page-destination .content-block {
@@ -11678,7 +11683,7 @@ html body {
 }
 
 .page-students .custom-slider-wrapper {
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 .page-students .gallery-block .title {
@@ -11730,6 +11735,23 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+}
+
+.page-students .gallery-block .overlay {
+  opacity: 0;
+  transition: all ease 300ms;
+  border-radius: 35px;
+}
+
+.page-students .gallery-block .overlay .album-title {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.page-students .gallery-block .overlay:hover {
+  opacity: 1;
+  transition: all ease 300ms;
 }
 
 .page-contact #main {

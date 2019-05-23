@@ -62,7 +62,7 @@
 
                 @foreach (Testimonial() as $key => $testimony)
                     
-                    <div class="row d-flex item mx-auto mb30" data-aos="fade-up">
+                    <div class="row d-flex item mx-auto mb30">
                     
                         <div class="col-sm-6 profile-pic text-center text-white">
                     

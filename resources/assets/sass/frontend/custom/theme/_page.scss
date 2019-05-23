@@ -309,6 +309,9 @@
         .card {
             border-bottom-left-radius: 35px !important;
             border-bottom-right-radius: 35px !important;
+            .for-logo img {
+                max-height: 120px;
+            }
         }
         .course-info {
             th,td {
@@ -330,9 +333,6 @@
                 padding: 15px 30px;
                 border-radius: 35px;
                 box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
-                &:first-child {
-                    padding: 30px;
-                }
             }
             .btn.active {
                 border: 2px solid $blue;
@@ -342,12 +342,16 @@
                 height: 100%;
                 max-height: 134px;
                 line-height: 42px;
+                padding: 10px 30px;
             }
         }
     }
     .noresult {
         margin-bottom: 50px;
         border-bottom: 1px solid #ddd;
+    }
+    .no-result-image {
+        max-height: 280px;
     }
 }
 
@@ -581,7 +585,7 @@
         }
     }
     .custom-slider-wrapper {
-        padding-left: 10%;
+        padding-left: 5%;
     }
     .gallery-block {
         .title {
@@ -622,6 +626,20 @@
                 height: 490px;
                 object-fit: cover;
                 border-radius: 35px;
+            }
+        }
+        .overlay {
+            opacity: 0;
+            transition: all ease 300ms;
+            border-radius: 35px;
+            .album-title {
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            &:hover {
+                opacity: 1;
+                transition: all ease 300ms;
             }
         }
     }
