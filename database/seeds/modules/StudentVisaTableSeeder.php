@@ -62,6 +62,26 @@ class StudentVisaTableSeeder extends Seeder
                 'description' => 'We will assist you in gathering all necessary documents needed on your student visa application and lodging.',
                 'order' => 0
             ],
+            [
+                'title' => 'Pre-departure Orientation',
+                'description' => 'We provide orientation to students prior to thier departures.',
+                'order' => 0
+            ],
+            [
+                'title' => 'Accommodation',
+                'description' => 'We arrange accommodation.',
+                'order' => 0
+            ],
+            [
+                'title' => 'Airport Pickup',
+                'description' => 'We organize Airport-pick up.',
+                'order' => 0
+            ],
+            [
+                'title' => 'Showmoney Assistance Program',
+                'description' => 'We assist you with your evidence of fund requirement with our showmoney assistance program.',
+                'order' => 0
+            ],
         ];
 
         foreach ($data as $key => $value) {

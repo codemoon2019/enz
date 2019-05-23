@@ -28,7 +28,7 @@ class AreaOfStudyTableSeeder extends Seeder
 
                 $data = [
             [
-                'title' => 'Creative Arts and Design',
+                'title' => 'Agriculture and Environmental',
                 'description' => 'This course provides responsibilities involved in engaging children individually and in groups. The Certificate III in Early Childhood Education and Care addresses the skills and knowledge required to provide care for individuals and groups of children, and to plan activities facilitating their leisure and play, enabling them to achieve their developmental outcomes.',
                 'order' => 0,
 
@@ -58,50 +58,56 @@ class AreaOfStudyTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Sciences',
+                'title' => 'Creative Arts and Design',
                 'description' => 'This program is designed for international students wanting to gain the qualification required to work in the Dental Technology industry. This qualification reflect the role of a dental technician responsible for construction and repair of dentures and other dental appliances including crowns, bridges, partial dentures, pre- and post-oral and maxillofacial surgical devices and orthodontic appliances.',
                 'order' => 0,
 
             ],
             [
-                'title' => 'Agriculture and Environmental',
-                'description' => '',
-                'order' => 0,
-            ],
-            [
-                'title' => 'Architecture and Building',
-                'description' => '',
-                'order' => 0,
-            ],
-            [
                 'title' => 'Education and Language',
                 'description' => '',
                 'order' => 0,
-
             ],
             [
-                'title' => 'Engineering and Technology',
+                'title' => 'Engineering and Architecture',
+                'description' => '',
+                'order' => 0,
+            ],
+            [
+                'title' => 'Higher Education Degrees',
                 'description' => '',
                 'order' => 0,
 
             ],
             [
-                'title' => 'Mixed Field Programmes',
+                'title' => 'Other Courses',
                 'description' => '',
                 'order' => 0,
 
             ],
-            [
-                'title' => 'Society and Culture',
-                'description' => '',
-                'order' => 0,
 
-            ],
+        ];
+
+        $images = [
+
+            'Agriculture_and_Environmental.jpg',
+            'business_and_management_0.jpg',
+            'Hospitality_and_Cookery.jpg',
+            'Information_Technology_&_Digital_media.jpg',
+            'Healthcare.jpg',
+            'Creative_Arts_and_Design.jpg',
+            'Education_and_Language.jpg',
+            'Engineering_and_Architecture.jpg',
+            'Higher_Education_Degrees.jpg',
+            'Other_courses.jpg',
+
         ];  
 
         foreach ($data as $key => $value) {
 
             $model = AreaOfStudy::create($value);
+            
+            $this->seederUploader($model, 'area_of_study/' . $images[$key], null, 'featured');
 
             $model->metaTag()->create([
                 'title' => $model->title,

@@ -14,17 +14,17 @@
 	
 				<div class="col-sm-4 mb30">
 	
-					<h2 class="title text-white fs18">Institution</h2>
-	
-					<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
-
-				</div>
-
-				<div class="col-sm-4 mb30">
-	
 					<h2 class="title text-white fs18">Area of Study</h2>
 	
 					<v-select class="" :options="areasList" v-model="area_name" label="title"></v-select>
+
+				</div>
+				
+				<div class="col-sm-4 mb30">
+	
+					<h2 class="title text-white fs18">Institution</h2>
+	
+					<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
 
 				</div>
 				

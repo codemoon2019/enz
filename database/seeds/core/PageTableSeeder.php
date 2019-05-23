@@ -40,6 +40,12 @@ class PageTableSeeder extends Seeder
             'template'    => 'default'
         ]);
 
+        $model->metaTag()->create([
+            'title' => 'Contact Us',
+            'description' => 'Contact Us',
+            'keywords' => 'Contact Us',
+        ]);
+
         $model->domains()->sync([1]);
 
         $model = Page::create([
@@ -47,6 +53,12 @@ class PageTableSeeder extends Seeder
             'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
                     <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
             'template'    => 'default'
+        ]);
+
+        $model->metaTag()->create([
+            'title' => 'Company',
+            'description' => 'Company',
+            'keywords' => 'Company',
         ]);
 
         $model->domains()->sync([1]);
@@ -58,13 +70,25 @@ class PageTableSeeder extends Seeder
             'template'    => 'default'
         ]);
 
+        $model->metaTag()->create([
+            'title' => 'Tourist Visa',
+            'description' => 'Tourist Visa',
+            'keywords' => 'Tourist Visa',
+        ]);
+
         $model->domains()->sync([1]);
 
-        $model = Page::create([
-            'title'       => 'Become Our Client',
-            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
-                <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
-            'template'    => 'default'
+        // $model = Page::create([
+        //     'title'       => 'Become Our Client',
+        //     'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
+        //         <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
+        //     'template'    => 'default'
+        // ]);
+
+        $model->metaTag()->create([
+            'title' => 'Become Our Client',
+            'description' => 'Become Our Client',
+            'keywords' => 'Become Our Client',
         ]);
 
         $model->domains()->sync([1]);
@@ -74,6 +98,12 @@ class PageTableSeeder extends Seeder
             'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
                 <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
             'template'    => 'default'
+        ]);
+
+        $model->metaTag()->create([
+            'title' => 'Be Part of Our Team',
+            'description' => 'Be Part of Our Team',
+            'keywords' => 'Be Part of Our Team',
         ]);
 
         $model->domains()->sync([1]);
