@@ -64,8 +64,6 @@ export default {
 
 			});
 
-			console.log(courses);
-
 			return courses;
 		
 		}

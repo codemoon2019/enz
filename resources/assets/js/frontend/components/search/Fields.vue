@@ -1,7 +1,7 @@
 <template>
 
 	<div class="search-courses">
-	
+
 		<div class="container-fluid px180 pt30 mb80 relative">
     
         	<img data-src="svg/courses/papers.svg" class="img-fluid img-papers" alt="">
@@ -32,7 +32,7 @@
 	
 					<h2 class="title text-white fs18">Course Title</h2>
 	
-					<input type="text" class="form-control course-search" v-model="course_name">
+					<input type="text" v-click-outside="hide" class="form-control course-search" v-model="course_name">
 
 					<div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
 
@@ -49,6 +49,7 @@
 						</ul>
 						
 					</div>
+
 				</div>
 
 			</div>
@@ -60,6 +61,8 @@
 </template>
 
 <script>
+
+import ClickOutside from 'vue-click-outside'
 
 import vSelect from 'vue-select'
 
@@ -142,8 +145,20 @@ export default {
 
 			this.showSuggestions = false;
 
-		}
+		},
+	 
+	    hide () {
+	    	this.showSuggestions = false;
+	    	// alert('close');
+	    }
 
+
+	},
+
+	directives: {
+	
+		ClickOutside
+	
 	},
 
    	mounted() {
@@ -154,7 +169,7 @@ export default {
         // Remit areas data in store
         this.$store.commit('areas', this.areas);
         
-   	}
+   	},  
 
 };
 
