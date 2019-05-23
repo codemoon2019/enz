@@ -169,6 +169,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['course'],
   methods: {
@@ -1136,7 +1138,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "card-body relative" }, [
           _c("div", { staticClass: "row course-info" }, [
-            _c("div", { staticClass: "col-sm-3 for-logo" }),
+            _c(
+              "div",
+              {
+                staticClass: "col-sm-3 for-logo text-center align-self-center"
+              },
+              [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: _vm.course.institution_logo, alt: "" }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm-8 for-desc" }, [
               _c("p", { staticClass: "title fs18 text-black" }, [

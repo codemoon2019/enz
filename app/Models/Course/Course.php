@@ -56,6 +56,9 @@ class Course extends Model implements HasMedia
         'order',
     ];
 
+    protected $appends = ['institution_logo'];
+
+
     /**
      * Return the permissions related to this model.
      *

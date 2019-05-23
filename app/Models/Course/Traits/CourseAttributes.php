@@ -8,4 +8,11 @@ namespace App\Models\Course\Traits;
  */
 trait CourseAttributes
 {
+
+
+	public function getInstitutionLogoAttribute()
+	{
+		return $this->institution->getFirstMediaUrl('featured');
+	}
+
 }
