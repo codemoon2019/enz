@@ -86,7 +86,7 @@
 
                         </div>
 
-                        <div class="noresult text-center" v-if="! australia_courses.length">
+                        <div class=" text-center" v-if="! australia_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
