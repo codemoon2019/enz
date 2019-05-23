@@ -48,11 +48,11 @@
                 
                                 <tr>
                 
-                                    <td class="basic fs15">Enrolled Nurse (DIV2)</td>
+                                    <td class="basic fs15">{{ course.career_opportunities }}</td>
                 
-                                    <td class="basic fs15">58 Weeks</td>
+                                    <td class="basic fs15">{{ course.duration }}</td>
                 
-                                    <td class="basic fs15">Melbourne, Perth, Sydney</td>
+                                    <td class="basic fs15">{{ course.availability }}</td>
                 
                                     <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
                 

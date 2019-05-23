@@ -53,6 +53,9 @@ class Course extends Model implements HasMedia
         'slug',
         'description',
         'status',
+        'career_opportunities',
+        'duration',
+        'availability',
         'order',
     ];
 

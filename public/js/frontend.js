@@ -1160,7 +1160,27 @@ var render = function() {
                 _vm._v(_vm._s(_vm.limit_text(_vm.course.description)))
               ]),
               _vm._v(" "),
-              _vm._m(0)
+              _c("table", { staticClass: "table table-borderless" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("tbody", [
+                  _c("tr", [
+                    _c("td", { staticClass: "basic fs15" }, [
+                      _vm._v(_vm._s(_vm.course.career_opportunities))
+                    ]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "basic fs15" }, [
+                      _vm._v(_vm._s(_vm.course.duration))
+                    ]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "basic fs15" }, [
+                      _vm._v(_vm._s(_vm.course.availability))
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(1)
+                  ])
+                ])
+              ])
             ])
           ])
         ])
@@ -1173,49 +1193,37 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table table-borderless" }, [
-      _c("thead", [
-        _c("tr", [
-          _c("th", { staticClass: "title fs18 text-black" }, [
-            _vm._v("Carrer Opportunities")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticClass: "title fs18 text-black" }, [
-            _vm._v("Duration")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticClass: "title fs18 text-black" }, [
-            _vm._v("Availability")
-          ]),
-          _vm._v(" "),
-          _c("th", { staticClass: "title fs18 text-black" })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tbody", [
-        _c("tr", [
-          _c("td", { staticClass: "basic fs15" }, [
-            _vm._v("Enrolled Nurse (DIV2)")
-          ]),
-          _vm._v(" "),
-          _c("td", { staticClass: "basic fs15" }, [_vm._v("58 Weeks")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "basic fs15" }, [
-            _vm._v("Melbourne, Perth, Sydney")
-          ]),
-          _vm._v(" "),
-          _c("td", { staticClass: "basic fs15" }, [
-            _c(
-              "a",
-              {
-                staticClass: "btn btnread-more text-uppercase",
-                attrs: { href: "#" }
-              },
-              [_vm._v("Inquire now")]
-            )
-          ])
-        ])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "title fs18 text-black" }, [
+          _vm._v("Carrer Opportunities")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "title fs18 text-black" }, [
+          _vm._v("Duration")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "title fs18 text-black" }, [
+          _vm._v("Availability")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "title fs18 text-black" })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "basic fs15" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn btnread-more text-uppercase",
+          attrs: { href: "#" }
+        },
+        [_vm._v("Inquire now")]
+      )
     ])
   }
 ]

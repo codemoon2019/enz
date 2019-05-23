@@ -33,6 +33,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 1,
                 'area_of_study_id' => 1,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
             ],
             [
                 'title' => 'Business , Management & Marketing',
@@ -40,6 +43,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 1,
                 'area_of_study_id' => 2,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
             ],
             [
                 'title' => 'Hospitality and Cookery',
@@ -47,6 +53,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 2,
                 'area_of_study_id' => 3,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -55,6 +64,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 3,
                 'area_of_study_id' => 4,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -63,6 +75,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 4,
                 'area_of_study_id' => 5,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -71,6 +86,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 2,
                 'area_of_study_id' => 6,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -79,6 +97,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 3,
                 'area_of_study_id' => 4,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -87,6 +108,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 1,
                 'area_of_study_id' => 2,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -95,6 +119,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 1,
                 'area_of_study_id' => 2,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
             [
@@ -103,6 +130,9 @@ class CourseTableSeeder extends Seeder
                 'status' => 'enable',
                 'institution_id' => 1,
                 'area_of_study_id' => 2,
+                'career_opportunities' => 'Enrolled Nurse (DIV2)',
+                'duration' => '58 Weeks',
+                'availability' => 'Melbourne, Perth, Sydney',
 
             ],
         ];        
