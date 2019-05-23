@@ -308,7 +308,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.showSuggestions = false;
     },
     hide: function hide() {
-      this.showSuggestions = false; // alert('close');
+      this.showSuggestions = false;
     }
   },
   directives: {
@@ -14199,7 +14199,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   filteredCourse: function filteredCourse(state) {
     if (state.course_name == '' && state.institution_name == null && state.area_name == null) {
-      return state.courses;
+      // return state.courses;
+      return [];
     } else {
       var courses = state.courses.filter(function (course) {
         var course_exist = true;

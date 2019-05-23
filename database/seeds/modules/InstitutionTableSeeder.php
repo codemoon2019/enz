@@ -27,7 +27,7 @@ class InstitutionTableSeeder extends Seeder
         $this->seedToDomainables($page, 'main');
 
         $data = [
-            ['title' => 'ACFE', 'country_id' => 1 , 'order' => 0, 'status' => 'enable'],
+            ['title' => 'Australian Centre of Further Education', 'country_id' => 1 , 'order' => 0, 'status' => 'enable'],
             ['title' => 'Australian Institute of Advanced Studies', 'country_id' => 1 , 'order' => 1, 'status' => 'enable'],
             ['title' => 'Cairns College of English and Business', 'country_id' => 1 , 'order' => 2, 'status' => 'enable'],
             ['title' => 'Central Queensland University', 'country_id' => 1 , 'order' => 3, 'status' => 'enable'],

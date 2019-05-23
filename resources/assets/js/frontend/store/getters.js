@@ -4,7 +4,9 @@ export default {
 
 		if (state.course_name == '' && state.institution_name == null && state.area_name == null)  {
 
-			return state.courses;
+			// return state.courses;
+
+			return [];
 
 		}else{
 

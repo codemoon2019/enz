@@ -148,10 +148,9 @@ export default {
 		},
 	 
 	    hide () {
+	    	
 	    	this.showSuggestions = false;
-	    	// alert('close');
 	    }
-
 
 	},
 
