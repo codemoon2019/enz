@@ -2,7 +2,7 @@
 
     <div v-if="showResult">
         
-        <div class="block content-block search-results mb100" data-aos="zoom-in" v-if="filteredCourse.length">
+        <div class="block content-block search-results mb100" data-aos="zoom-in">
 
             <div class="container-fluid jobs px180 text-center">
                 
@@ -67,6 +67,12 @@
                         <div class="row" v-for="(course, index) in all_courses">
 
                             <course-details :course="course"></course-details>
+
+                        </div>
+
+                        <div class="text-center mt50" v-if="! filteredCourse.length">
+            
+                            <p class="basic text-muted">No result</p>
 
                         </div>
 
@@ -150,11 +156,6 @@
 
         </div>
 
-        <div class="noresult text-center" v-else>
-            
-            <p class="basic text-muted">No result</p>
-
-        </div>
 
     </div>
 

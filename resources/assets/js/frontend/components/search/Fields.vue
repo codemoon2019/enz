@@ -44,7 +44,7 @@
 
 						<ul class="list-unstyled" v-else>
 
-							<li class="not-allowed">Invalid course name</li>
+							<li class="not-allowed">Invalid Course Title</li>
 						
 						</ul>
 						
