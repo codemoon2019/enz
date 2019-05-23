@@ -2,7 +2,7 @@
 
     <div v-if="showResult">
         
-        <div class="block content-block search-results" data-aos="zoom-in" v-if="filteredCourse.length">
+        <div class="block content-block search-results mb100" data-aos="zoom-in" v-if="filteredCourse.length">
 
             <div class="container-fluid jobs px180 text-center">
                 
@@ -62,7 +62,7 @@
 
                 <div class="tab-content">
                     
-                    <div id="all" class="tab-pane fade in active show">
+                    <div id="all" class="mb50 tab-pane fade in active show">
 
                         <div class="row" v-for="(course, index) in all_courses">
 
@@ -70,7 +70,7 @@
 
                         </div>
 
-                        <div class="text-center" v-if="count_all < filteredCourse.length">
+                        <div class="text-center mt50" v-if="count_all < filteredCourse.length">
                                     
                             <button class="btn btnview-more text-uppercase mb30" @click="count_all += 5">View more</button>
 
@@ -78,7 +78,7 @@
 
                     </div>
 
-                    <div id="australia" class="tab-pane fade">
+                    <div id="australia" class="mb50 tab-pane fade">
                     
                         <div class="row" v-for="(course, index) in australia_courses">
 
@@ -86,13 +86,13 @@
 
                         </div>
 
-                        <div class=" text-center" v-if="! australia_courses.length">
+                        <div class="text-center mt50" v-if="! australia_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
                         </div>
 
-                        <div class="text-center" v-if="count_australia < australia.length">
+                        <div class="text-center mt50" v-if="count_australia < australia.length">
                                     
                             <button class="btn btnview-more text-uppercase mb30" @click="count_australia += 5">View more</button>
 
@@ -100,7 +100,7 @@
 
                     </div>
                     
-                    <div id="canada" class="tab-pane fade">
+                    <div id="canada" class="mb50 tab-pane fade">
 
                         <div class="row" v-for="(course, index) in canada_courses">
 
@@ -108,13 +108,13 @@
 
                         </div>
 
-                        <div class="text-center" v-if="! canada_courses.length">
+                        <div class="text-center mt50" v-if="! canada_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
                         </div>
 
-                        <div class="text-center" v-if="count_canada < canada.length">
+                        <div class="text-center mt50" v-if="count_canada < canada.length">
                                     
                             <button class="btn btnview-more text-uppercase mb30" @click="count_canada += 5">View more</button>
 
@@ -122,7 +122,7 @@
 
                     </div>
                     
-                    <div id="new_zealand" class="tab-pane fade">
+                    <div id="new_zealand" class="mb50 tab-pane fade">
 
                         <div class="row" v-for="(course, index) in new_zealand_courses">
 
@@ -130,13 +130,13 @@
 
                         </div>
 
-                        <div class="text-center" v-if="! new_zealand_courses.length">
+                        <div class="text-center mt50" v-if="! new_zealand_courses.length">
             
                             <p class="basic text-muted">No result</p>
 
                         </div>
 
-                        <div class="text-center" v-if="count_new_zealand < new_zealand.length">
+                        <div class="text-center mt50" v-if="count_new_zealand < new_zealand.length">
                                     
                             <button class="btn btnview-more text-uppercase mb30" @click="count_new_zealand += 5">View more</button>
 

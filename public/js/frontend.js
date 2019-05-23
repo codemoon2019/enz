@@ -1285,7 +1285,7 @@ var render = function() {
           ? _c(
               "div",
               {
-                staticClass: "block content-block search-results",
+                staticClass: "block content-block search-results mb100",
                 attrs: { "data-aos": "zoom-in" }
               },
               [
@@ -1396,7 +1396,7 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass: "tab-pane fade in active show",
+                          staticClass: "mb50 tab-pane fade in active show",
                           attrs: { id: "all" }
                         },
                         [
@@ -1414,7 +1414,7 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _vm.count_all < _vm.filteredCourse.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c(
                                   "button",
                                   {
@@ -1437,7 +1437,7 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass: "tab-pane fade",
+                          staticClass: "mb50 tab-pane fade",
                           attrs: { id: "australia" }
                         },
                         [
@@ -1458,7 +1458,7 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.australia_courses.length
-                            ? _c("div", { staticClass: " text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c("p", { staticClass: "basic text-muted" }, [
                                   _vm._v("No result")
                                 ])
@@ -1466,7 +1466,7 @@ var render = function() {
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_australia < _vm.australia.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c(
                                   "button",
                                   {
@@ -1489,7 +1489,7 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass: "tab-pane fade",
+                          staticClass: "mb50 tab-pane fade",
                           attrs: { id: "canada" }
                         },
                         [
@@ -1507,7 +1507,7 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.canada_courses.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c("p", { staticClass: "basic text-muted" }, [
                                   _vm._v("No result")
                                 ])
@@ -1515,7 +1515,7 @@ var render = function() {
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_canada < _vm.canada.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c(
                                   "button",
                                   {
@@ -1538,7 +1538,7 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass: "tab-pane fade",
+                          staticClass: "mb50 tab-pane fade",
                           attrs: { id: "new_zealand" }
                         },
                         [
@@ -1559,7 +1559,7 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           !_vm.new_zealand_courses.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c("p", { staticClass: "basic text-muted" }, [
                                   _vm._v("No result")
                                 ])
@@ -1567,7 +1567,7 @@ var render = function() {
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.count_new_zealand < _vm.new_zealand.length
-                            ? _c("div", { staticClass: "text-center" }, [
+                            ? _c("div", { staticClass: "text-center mt50" }, [
                                 _c(
                                   "button",
                                   {
