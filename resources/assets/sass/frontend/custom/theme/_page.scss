@@ -1,10 +1,13 @@
 // This page will be used for Main pages like "Services", recommended body class will be ".page-$page-name"
 .page-about-company {
+    .banner-block img {
+        transform: rotate(5deg);
+    }
     .content-block {
         margin-top: -17%;
         position: relative;
         padding-bottom: 12%;
-        padding-top: 5%;
+        padding-top: 0;
         background: url(/img/about/our-company-bg.png) no-repeat;
         .container-fluid {
             padding-top: 20% !important;
@@ -12,7 +15,7 @@
         .plane {
             display: none !important;
             position: absolute;
-            top: 20%;
+            top: 15%;
             left: 0;
         }
         p {
@@ -25,6 +28,11 @@
                 color: $white;
                 font-size: 18px;
             }
+        }
+    }
+    .progress-rate {
+        .progress-bar {
+            background-image: linear-gradient(to right, #ff7878, #eb5959);
         }
     }
     .mv-block {
@@ -69,6 +77,14 @@
         padding-bottom: 10%;
         padding-top: 40%;
         background: url(/img/about/aust.png) no-repeat;
+    }
+    .person-modal {
+        opacity: .5;
+        transition: all ease 300ms;
+        &:hover {
+            opacity: 1;
+            transition: all ease 300ms;
+        }
     }
 }
 

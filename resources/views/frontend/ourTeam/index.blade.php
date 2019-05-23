@@ -48,7 +48,7 @@
 
 						<img data-src="{{ $image }}" 
                              
-                             alt="" class="img-fluid mb20 person-modal" 
+                             alt="" class="img-fluid mb20 person-modal cursor-pointer" 
                              
                              data-image="{{ $image }}" 
                              
