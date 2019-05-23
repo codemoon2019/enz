@@ -48,6 +48,8 @@ class LinkagesController extends Controller
      */
     public function index()
     {
+        $model = $this->repository()->makeModel();
+
         $page = $this->pageRepository->indexPage($this->repository()->model());
 
         $country = Country::with('linkages')->get();

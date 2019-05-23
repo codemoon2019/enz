@@ -21,6 +21,11 @@
                    href="{{ route('admin.tourist-visa-inquiries.index') }}"><i class="nav-icon fa fa-envelope"></i>Tourist Visa Inquiries</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/become-our-client-inquiries')) }}"
+                   href="{{ route('admin.become-our-client-inquiries.index') }}"><i class="nav-icon fa fa-envelope"></i>Client Inquiries</a>
+            </li>
+
 
             @if(is_has_any_permission([
                 app(App\Models\Category\Category::class)::permission('index'),

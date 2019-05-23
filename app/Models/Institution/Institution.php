@@ -54,6 +54,8 @@ class Institution extends Model implements HasMedia
         'status',
     ];
 
+    // protected $appends = ['logo'];
+
     /**
      * Return the permissions related to this model.
      *
@@ -146,12 +148,7 @@ class Institution extends Model implements HasMedia
 
     public function registerMediaCollections()
     {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
-
-            $this->addMediaConversion('main')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 120, 100);
+        $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

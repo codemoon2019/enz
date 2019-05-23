@@ -169,6 +169,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['course'],
   methods: {
@@ -189,9 +191,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-click-outside */ "./node_modules/vue-click-outside/index.js");
+/* harmony import */ var vue_click_outside__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_click_outside__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -257,19 +261,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['institutions', 'areas'],
   components: {
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_0___default.a
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
   },
   data: function data() {
     return {
       showSuggestions: true
     };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(['institutionsList', 'areasList', 'suggestions', 'filteredCourse']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])(['institutionsList', 'areasList', 'suggestions', 'filteredCourse']), {
     course_name: {
       get: function get() {
         return this.$store.state.course_name;
@@ -300,7 +306,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     suggestionClick: function suggestionClick(course_name) {
       this.course_name = course_name;
       this.showSuggestions = false;
+    },
+    hide: function hide() {
+      this.showSuggestions = false; // alert('close');
     }
+  },
+  directives: {
+    ClickOutside: vue_click_outside__WEBPACK_IMPORTED_MODULE_3___default.a
   },
   mounted: function mounted() {
     // Remit institutions / courses data in store
@@ -327,6 +339,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -1018,6 +1031,85 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-click-outside/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/vue-click-outside/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function validate(binding) {
+  if (typeof binding.value !== 'function') {
+    console.warn('[Vue-click-outside:] provided expression', binding.expression, 'is not a function.')
+    return false
+  }
+
+  return true
+}
+
+function isPopup(popupItem, elements) {
+  if (!popupItem || !elements)
+    return false
+
+  for (var i = 0, len = elements.length; i < len; i++) {
+    try {
+      if (popupItem.contains(elements[i])) {
+        return true
+      }
+      if (elements[i].contains(popupItem)) {
+        return false
+      }
+    } catch(e) {
+      return false
+    }
+  }
+
+  return false
+}
+
+function isServer(vNode) {
+  return typeof vNode.componentInstance !== 'undefined' && vNode.componentInstance.$isServer
+}
+
+exports = module.exports = {
+  bind: function (el, binding, vNode) {
+    if (!validate(binding)) return
+
+    // Define Handler and cache it on the element
+    function handler(e) {
+      if (!vNode.context) return
+
+      // some components may have related popup item, on which we shall prevent the click outside event handler.
+      var elements = e.path || (e.composedPath && e.composedPath())
+      elements && elements.length > 0 && elements.unshift(e.target)
+      
+      if (el.contains(e.target) || isPopup(vNode.context.popupItem, elements)) return
+
+      el.__vueClickOutside__.callback(e)
+    }
+
+    // add Event Listeners
+    el.__vueClickOutside__ = {
+      handler: handler,
+      callback: binding.value
+    }
+    !isServer(vNode) && document.addEventListener('click', handler)
+  },
+
+  update: function (el, binding) {
+    if (validate(binding)) el.__vueClickOutside__.callback = binding.value
+  },
+  
+  unbind: function (el, binding, vNode) {
+    // Remove Event Listeners
+    !isServer(vNode) && document.removeEventListener('click', el.__vueClickOutside__.handler)
+    delete el.__vueClickOutside__
+  }
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/frontend/components/search/CourseDetails.vue?vue&type=template&id=166d0aee&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/assets/js/frontend/components/search/CourseDetails.vue?vue&type=template&id=166d0aee& ***!
@@ -1046,7 +1138,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "card-body relative" }, [
           _c("div", { staticClass: "row course-info" }, [
-            _c("div", { staticClass: "col-sm-3 for-logo" }),
+            _c(
+              "div",
+              {
+                staticClass: "col-sm-3 for-logo text-center align-self-center"
+              },
+              [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: _vm.course.institution_logo, alt: "" }
+                })
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm-8 for-desc" }, [
               _c("p", { staticClass: "title fs18 text-black" }, [
@@ -1157,28 +1260,6 @@ var render = function() {
           { staticClass: "col-sm-4 mb30" },
           [
             _c("h2", { staticClass: "title text-white fs18" }, [
-              _vm._v("Institution")
-            ]),
-            _vm._v(" "),
-            _c("v-select", {
-              attrs: { options: _vm.institutionsList, label: "title" },
-              model: {
-                value: _vm.institution_name,
-                callback: function($$v) {
-                  _vm.institution_name = $$v
-                },
-                expression: "institution_name"
-              }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-sm-4 mb30" },
-          [
-            _c("h2", { staticClass: "title text-white fs18" }, [
               _vm._v("Area of Study")
             ]),
             _vm._v(" "),
@@ -1196,6 +1277,28 @@ var render = function() {
           1
         ),
         _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-sm-4 mb30" },
+          [
+            _c("h2", { staticClass: "title text-white fs18" }, [
+              _vm._v("Institution")
+            ]),
+            _vm._v(" "),
+            _c("v-select", {
+              attrs: { options: _vm.institutionsList, label: "title" },
+              model: {
+                value: _vm.institution_name,
+                callback: function($$v) {
+                  _vm.institution_name = $$v
+                },
+                expression: "institution_name"
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
         _c("div", { staticClass: "col-sm-4 mb30" }, [
           _c("h2", { staticClass: "title text-white fs18" }, [
             _vm._v("Course Title")
@@ -1203,6 +1306,12 @@ var render = function() {
           _vm._v(" "),
           _c("input", {
             directives: [
+              {
+                name: "click-outside",
+                rawName: "v-click-outside",
+                value: _vm.hide,
+                expression: "hide"
+              },
               {
                 name: "model",
                 rawName: "v-model",
@@ -1247,7 +1356,7 @@ var render = function() {
                     )
                   : _c("ul", { staticClass: "list-unstyled" }, [
                       _c("li", { staticClass: "not-allowed" }, [
-                        _vm._v("Invalid course name")
+                        _vm._v("Invalid Course Title")
                       ])
                     ])
               ])
@@ -1281,333 +1390,296 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.showResult
     ? _c("div", [
-        _vm.filteredCourse.length
-          ? _c(
+        _c(
+          "div",
+          {
+            staticClass: "block content-block search-results mb100",
+            attrs: { "data-aos": "zoom-in" }
+          },
+          [
+            _c(
               "div",
-              {
-                staticClass: "block content-block search-results",
-                attrs: { "data-aos": "zoom-in" }
-              },
+              { staticClass: "container-fluid jobs px180 text-center" },
               [
                 _c(
-                  "div",
-                  { staticClass: "container-fluid jobs px180 text-center" },
-                  [
+                  "h2",
+                  { staticClass: "title text-nblue fs40 mb60 text-center" },
+                  [_vm._v("Search Results")]
+                ),
+                _vm._v(" "),
+                _c("ul", { staticClass: "nav nav-tabs filter mb80" }, [
+                  _c("li", [
                     _c(
-                      "h2",
-                      { staticClass: "title text-nblue fs40 mb60 text-center" },
-                      [_vm._v("Search Results")]
-                    ),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "nav nav-tabs filter mb80" }, [
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn default active show",
-                            attrs: { "data-toggle": "tab", href: "#all" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                        \n                        All\n                        "
-                            ),
-                            _c("br"),
-                            _vm._v(" "),
-                            _c("span", [
-                              _vm._v(
-                                "(" + _vm._s(_vm.filteredCourse.length) + ")"
-                              )
-                            ])
-                          ]
+                      "a",
+                      {
+                        staticClass: "btn default active show",
+                        attrs: { "data-toggle": "tab", href: "#all" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                        \n                        All\n                        "
+                        ),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", [
+                          _vm._v("(" + _vm._s(_vm.filteredCourse.length) + ")")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn",
+                        attrs: { "data-toggle": "tab", href: "#australia" }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "img-fluid mr10",
+                          attrs: { src: "/svg/courses/aussie.svg", alt: "" }
+                        }),
+                        _vm._v(" Australia\n                        "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", [
+                          _vm._v("(" + _vm._s(_vm.australia.length) + ")")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn",
+                        attrs: { "data-toggle": "tab", href: "#canada" }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "img-fluid mr10",
+                          attrs: { src: "/svg/courses/canada.svg", alt: "" }
+                        }),
+                        _vm._v(" Canada\n                        "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", [
+                          _vm._v("(" + _vm._s(_vm.canada.length) + ")")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn",
+                        attrs: { "data-toggle": "tab", href: "#new_zealand" }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "img-fluid mr10",
+                          attrs: { src: "/svg/courses/NZ.svg", alt: "" }
+                        }),
+                        _vm._v(" New Zealand\n                        "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", [
+                          _vm._v("(" + _vm._s(_vm.new_zealand.length) + ")")
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "tab-content" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mb50 tab-pane fade in active show",
+                      attrs: { id: "all" }
+                    },
+                    [
+                      _vm._l(_vm.all_courses, function(course, index) {
+                        return _c(
+                          "div",
+                          { staticClass: "row" },
+                          [_c("course-details", { attrs: { course: course } })],
+                          1
                         )
-                      ]),
+                      }),
                       _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn",
-                            attrs: { "data-toggle": "tab", href: "#australia" }
-                          },
-                          [
-                            _c("img", {
-                              staticClass: "img-fluid mr10",
-                              attrs: { src: "/svg/courses/aussie.svg", alt: "" }
-                            }),
-                            _vm._v(" Australia\n                        "),
-                            _c("br"),
-                            _vm._v(" "),
-                            _c("span", [
-                              _vm._v("(" + _vm._s(_vm.australia.length) + ")")
+                      !_vm.filteredCourse.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c("p", { staticClass: "basic text-muted" }, [
+                              _vm._v("No result")
                             ])
-                          ]
-                        )
-                      ]),
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn",
-                            attrs: { "data-toggle": "tab", href: "#canada" }
-                          },
-                          [
-                            _c("img", {
-                              staticClass: "img-fluid mr10",
-                              attrs: { src: "/svg/courses/canada.svg", alt: "" }
-                            }),
-                            _vm._v(" Canada\n                        "),
-                            _c("br"),
-                            _vm._v(" "),
-                            _c("span", [
-                              _vm._v("(" + _vm._s(_vm.canada.length) + ")")
+                      _vm.count_all < _vm.filteredCourse.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btnview-more text-uppercase mb30",
+                                on: {
+                                  click: function($event) {
+                                    _vm.count_all += 5
+                                  }
+                                }
+                              },
+                              [_vm._v("View more")]
+                            )
+                          ])
+                        : _vm._e()
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mb50 tab-pane fade",
+                      attrs: { id: "australia" }
+                    },
+                    [
+                      _vm._l(_vm.australia_courses, function(course, index) {
+                        return _c(
+                          "div",
+                          { staticClass: "row" },
+                          [_c("course-details", { attrs: { course: course } })],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      !_vm.australia_courses.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c("p", { staticClass: "basic text-muted" }, [
+                              _vm._v("No result")
                             ])
-                          ]
-                        )
-                      ]),
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn",
-                            attrs: {
-                              "data-toggle": "tab",
-                              href: "#new_zealand"
-                            }
-                          },
-                          [
-                            _c("img", {
-                              staticClass: "img-fluid mr10",
-                              attrs: { src: "/svg/courses/NZ.svg", alt: "" }
-                            }),
-                            _vm._v(" New Zealand\n                        "),
-                            _c("br"),
-                            _vm._v(" "),
-                            _c("span", [
-                              _vm._v("(" + _vm._s(_vm.new_zealand.length) + ")")
+                      _vm.count_australia < _vm.australia.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btnview-more text-uppercase mb30",
+                                on: {
+                                  click: function($event) {
+                                    _vm.count_australia += 5
+                                  }
+                                }
+                              },
+                              [_vm._v("View more")]
+                            )
+                          ])
+                        : _vm._e()
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mb50 tab-pane fade",
+                      attrs: { id: "canada" }
+                    },
+                    [
+                      _vm._l(_vm.canada_courses, function(course, index) {
+                        return _c(
+                          "div",
+                          { staticClass: "row" },
+                          [_c("course-details", { attrs: { course: course } })],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      !_vm.canada_courses.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c("p", { staticClass: "basic text-muted" }, [
+                              _vm._v("No result")
                             ])
-                          ]
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.count_canada < _vm.canada.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btnview-more text-uppercase mb30",
+                                on: {
+                                  click: function($event) {
+                                    _vm.count_canada += 5
+                                  }
+                                }
+                              },
+                              [_vm._v("View more")]
+                            )
+                          ])
+                        : _vm._e()
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "mb50 tab-pane fade",
+                      attrs: { id: "new_zealand" }
+                    },
+                    [
+                      _vm._l(_vm.new_zealand_courses, function(course, index) {
+                        return _c(
+                          "div",
+                          { staticClass: "row" },
+                          [_c("course-details", { attrs: { course: course } })],
+                          1
                         )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "tab-content" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "tab-pane fade in active show",
-                          attrs: { id: "all" }
-                        },
-                        [
-                          _vm._l(_vm.all_courses, function(course, index) {
-                            return _c(
-                              "div",
-                              { staticClass: "row" },
-                              [
-                                _c("course-details", {
-                                  attrs: { course: course }
-                                })
-                              ],
-                              1
-                            )
-                          }),
-                          _vm._v(" "),
-                          _vm.count_all < _vm.filteredCourse.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btnview-more text-uppercase mb30",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.count_all += 5
-                                      }
-                                    }
-                                  },
-                                  [_vm._v("View more")]
-                                )
-                              ])
-                            : _vm._e()
-                        ],
-                        2
-                      ),
+                      }),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "tab-pane fade",
-                          attrs: { id: "australia" }
-                        },
-                        [
-                          _vm._l(_vm.australia_courses, function(
-                            course,
-                            index
-                          ) {
-                            return _c(
-                              "div",
-                              { staticClass: "row" },
-                              [
-                                _c("course-details", {
-                                  attrs: { course: course }
-                                })
-                              ],
-                              1
-                            )
-                          }),
-                          _vm._v(" "),
-                          !_vm.australia_courses.length
-                            ? _c(
-                                "div",
-                                { staticClass: "noresult text-center" },
-                                [
-                                  _c("p", { staticClass: "basic text-muted" }, [
-                                    _vm._v("No result")
-                                  ])
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.count_australia < _vm.australia.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btnview-more text-uppercase mb30",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.count_australia += 5
-                                      }
-                                    }
-                                  },
-                                  [_vm._v("View more")]
-                                )
-                              ])
-                            : _vm._e()
-                        ],
-                        2
-                      ),
+                      !_vm.new_zealand_courses.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c("p", { staticClass: "basic text-muted" }, [
+                              _vm._v("No result")
+                            ])
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "tab-pane fade",
-                          attrs: { id: "canada" }
-                        },
-                        [
-                          _vm._l(_vm.canada_courses, function(course, index) {
-                            return _c(
-                              "div",
-                              { staticClass: "row" },
-                              [
-                                _c("course-details", {
-                                  attrs: { course: course }
-                                })
-                              ],
-                              1
+                      _vm.count_new_zealand < _vm.new_zealand.length
+                        ? _c("div", { staticClass: "text-center mt50" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btnview-more text-uppercase mb30",
+                                on: {
+                                  click: function($event) {
+                                    _vm.count_new_zealand += 5
+                                  }
+                                }
+                              },
+                              [_vm._v("View more")]
                             )
-                          }),
-                          _vm._v(" "),
-                          !_vm.canada_courses.length
-                            ? _c(
-                                "div",
-                                { staticClass: "noresult text-center" },
-                                [
-                                  _c("p", { staticClass: "basic text-muted" }, [
-                                    _vm._v("No result")
-                                  ])
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.count_canada < _vm.canada.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btnview-more text-uppercase mb30",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.count_canada += 5
-                                      }
-                                    }
-                                  },
-                                  [_vm._v("View more")]
-                                )
-                              ])
-                            : _vm._e()
-                        ],
-                        2
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "tab-pane fade",
-                          attrs: { id: "new_zealand" }
-                        },
-                        [
-                          _vm._l(_vm.new_zealand_courses, function(
-                            course,
-                            index
-                          ) {
-                            return _c(
-                              "div",
-                              { staticClass: "row" },
-                              [
-                                _c("course-details", {
-                                  attrs: { course: course }
-                                })
-                              ],
-                              1
-                            )
-                          }),
-                          _vm._v(" "),
-                          !_vm.new_zealand_courses.length
-                            ? _c(
-                                "div",
-                                { staticClass: "noresult text-center" },
-                                [
-                                  _c("p", { staticClass: "basic text-muted" }, [
-                                    _vm._v("No result")
-                                  ])
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.count_new_zealand < _vm.new_zealand.length
-                            ? _c("div", { staticClass: "text-center" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "btn btnview-more text-uppercase mb30",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.count_new_zealand += 5
-                                      }
-                                    }
-                                  },
-                                  [_vm._v("View more")]
-                                )
-                              ])
-                            : _vm._e()
-                        ],
-                        2
-                      )
-                    ])
-                  ]
-                )
+                          ])
+                        : _vm._e()
+                    ],
+                    2
+                  )
+                ])
               ]
             )
-          : _c("div", { staticClass: "noresult text-center" }, [
-              _c("p", { staticClass: "basic text-muted" }, [
-                _vm._v("No result")
-              ])
-            ])
+          ]
+        )
       ])
     : _vm._e()
 }
@@ -15047,7 +15119,6 @@ __webpack_require__.r(__webpack_exports__);
           return 0;
         }
       });
-      console.log(courses);
       return courses;
     }
   },

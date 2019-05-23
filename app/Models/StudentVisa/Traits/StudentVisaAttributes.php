@@ -25,7 +25,15 @@ trait StudentVisaAttributes
 				case 'Enrollment': return asset('img/student_visa/Enrollment.svg'); break;
 
 				case 'Visa Application': return asset('img/student_visa/Visa-Application.svg'); break;
-				
+
+				case 'Pre-departure Orientation': return asset('img/student_visa/Pre-departure-Orientation.svg'); break;
+
+				case 'Accommodation': return asset('img/student_visa/Accommodation.svg'); break;
+
+				case 'Airport Pickup': return asset('img/student_visa/Airport-Pickup.svg'); break;
+
+				case 'Showmoney Assistance Program': return asset('img/student_visa/Showmoney.svg'); break;
+
 				default:
 
 			}

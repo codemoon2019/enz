@@ -14,7 +14,9 @@
 
                 <div class="row course-info">
                 
-                    <div class="col-sm-3 for-logo">
+                    <div class="col-sm-3 for-logo text-center align-self-center">
+
+                        <img class="img-fluid" :src="course.institution_logo" alt="">
 
                     </div>
                 

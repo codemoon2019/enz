@@ -26,6 +26,12 @@ class LinkagesTableSeeder extends Seeder
         
         $this->seedToDomainables($page, 'main');
 
+        $page->metaTag()->create([
+                'title' => $page->title,
+                'description' => $page->title,
+                'keywords' => str_replace('-', ',', $page->slug),
+        ]);
+
         $data = [
             [
                 'title' => 'Melbourne',

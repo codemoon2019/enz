@@ -24,7 +24,7 @@ use App\Models\Traits\CustomAttributes;
  * Class AreaOfStudy
  * @package App\Models\AreaOfStudy
  */
-class AreaOfStudy extends Model
+class AreaOfStudy extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
