@@ -23,6 +23,9 @@ class CreateCoursesTable extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
+            $table->text('career_opportunities')->nullable();
+            $table->text('duration')->nullable();
+            $table->text('availability')->nullable();
             $table->enum('status', ['enable', 'disabled'])->default('disabled');
             $table->integer('order')->default(0);
             $table->timestamps();

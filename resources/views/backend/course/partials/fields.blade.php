@@ -83,6 +83,42 @@
         </div>
 
         <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Carrer Opportunities</label>
+    
+            <div class="col-md-10">
+    
+                <textarea name="career_opportunities" id="career_opportunities" class="form-control">{!! isset($model) ? $model->career_opportunities : old('old') !!}</textarea>
+    
+            </div>
+    
+        </div>
+
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Duration</label>
+    
+            <div class="col-md-10">
+    
+                <textarea name="duration" id="duration" class="form-control">{!! isset($model) ? $model->duration : old('old') !!}</textarea>
+    
+            </div>
+    
+        </div>
+
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Availability</label>
+    
+            <div class="col-md-10">
+    
+                <textarea name="availability" id="availability" class="form-control">{!! isset($model) ? $model->availability : old('old') !!}</textarea>
+    
+            </div>
+    
+        </div>
+
+        <div class="form-group row">
 
             <label class="col-md-2 form-control-label">Featured Image<br/></label>
             
