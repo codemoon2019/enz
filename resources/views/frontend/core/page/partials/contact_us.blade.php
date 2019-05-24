@@ -161,43 +161,50 @@
 
 <script>
 
-var map;
-
 function initMap() {
 
-var locations = [
+    var locations = [
 
-    {lat: 18.196012, lng: 120.592667},
+        {lat: 18.196012, lng: 120.592667},
 
-    {lat: 17.558986, lng: 120.403493},
-    
-    {lat: 14.599512, lng: 120.984222},
-    
-    {lat: 9.306840, lng: 123.305450},
-
-];
-
-var map = new google.maps.Map(document.getElementById('map'), {
-
-    zoom: 6, center: {lat: 13.598606, lng: 122.176126}
-
-});
-
-locations.forEach(function(v) {
-
-    var marker = new google.maps.Marker({position: v, map: map});
-
-});
-
-
-
-    // map = new google.maps.Map(document.getElementById('map'), {
-
-    //     center: {lat: -34.397, lng: 150.644},
+        {lat: 17.558986, lng: 120.403493},
         
-    //     zoom: 8
-    
-    // });
+        {lat: 14.599512, lng: 120.984222},
+        
+        {lat: 9.306840, lng: 123.305450},
+
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+
+        zoom: 6, center: {lat: 13.598606, lng: 122.176126}
+
+    });
+
+    var icon = '/svg/maps-and-flags.svg';
+
+    var marker;
+
+    locations.forEach(function(v) {
+
+        marker = new google.maps.Marker({
+            position: v, 
+            map: map,
+            icon: icon,
+            animation: google.maps.Animation.BOUNCE,
+        });
+
+    });
+
+    marker.addListener('click', toggleBounce);
+
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
 
 }
 
