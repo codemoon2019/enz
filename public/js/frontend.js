@@ -1254,11 +1254,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "search-courses" }, [
     _c("div", { staticClass: "container-fluid px180 pt30 mb80 relative" }, [
-      _c("img", {
-        staticClass: "img-fluid img-papers",
-        attrs: { "data-src": "svg/courses/papers.svg", alt: "" }
-      }),
-      _vm._v(" "),
       _c("h1", { staticClass: "title text-white mb30" }, [_vm._v("Courses")]),
       _vm._v(" "),
       _c("img", {

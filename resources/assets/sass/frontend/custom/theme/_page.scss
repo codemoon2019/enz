@@ -273,7 +273,7 @@
         .img-book {
             width: 20%;
             position: absolute;
-            top: -145%;
+            top: -115%;
             right: 10%;
         }
         .intro {
@@ -290,7 +290,7 @@
             position: absolute;
             top: calc(100% - 1px);
             left: 0;
-            z-index: 1000;
+            z-index: 1;
             padding: 5px 0;
             margin: 0;
             width: 100%;
@@ -757,7 +757,7 @@
 }
 .page-contact {
     #main {
-        padding-top: 10%;
+        padding-top: 2%;
     }
     .content-block .for-banner {
         position: relative;
