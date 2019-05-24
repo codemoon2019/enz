@@ -203,12 +203,12 @@
             background: transparent;
             border: none;
             img {
-                border-top-left-radius: 35px;
-                border-top-right-radius: 35px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
             .card-footer {
-                border-bottom-left-radius: 35px !important;
-                border-bottom-right-radius: 35px !important;
+                border-bottom-left-radius: 10px !important;
+                border-bottom-right-radius: 10px !important;
             }
             .card-title {
                 font-family: $Quicksand;
@@ -226,21 +226,21 @@
         resize: none;
     }
     .modal-content {
-        border-radius: 35px;
+        border-radius: 10px;
         .close {
             margin-top: -5px;
         }
         .card {
-            border-radius: 35px;
+            border-radius: 10px;
             border: 1px solid transparent;
         }
         .card-header {
-            border-top-left-radius: 35px;
-            border-top-right-radius: 35px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .card-body {
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 35px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
     }
 }
