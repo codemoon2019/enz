@@ -1,10 +1,13 @@
 // This page will be used for Main pages like "Services", recommended body class will be ".page-$page-name"
 .page-about-company {
+    .banner-block img {
+        transform: rotate(5deg);
+    }
     .content-block {
         margin-top: -17%;
         position: relative;
         padding-bottom: 12%;
-        padding-top: 5%;
+        padding-top: 0;
         background: url(/img/about/our-company-bg.png) no-repeat;
         .container-fluid {
             padding-top: 20% !important;
@@ -12,7 +15,7 @@
         .plane {
             display: none !important;
             position: absolute;
-            top: 20%;
+            top: 15%;
             left: 0;
         }
         p {
@@ -25,6 +28,11 @@
                 color: $white;
                 font-size: 18px;
             }
+        }
+    }
+    .progress-rate {
+        .progress-bar {
+            background-image: linear-gradient(to right, #ff7878, #eb5959);
         }
     }
     .mv-block {
@@ -69,6 +77,14 @@
         padding-bottom: 10%;
         padding-top: 40%;
         background: url(/img/about/aust.png) no-repeat;
+    }
+    .person-modal {
+        opacity: .5;
+        transition: all ease 300ms;
+        &:hover {
+            opacity: 1;
+            transition: all ease 300ms;
+        }
     }
 }
 
@@ -150,6 +166,25 @@
         position: relative;
         padding-top: 30%;
         background: url(/img/services/visa-bg.png) no-repeat;
+    }
+}
+.page-events {
+    .content-block {
+        margin-top: -17.5%;
+        position: relative;
+        padding-top: 30%;
+        background: url(/img/news/bg.png) no-repeat;
+    }
+}
+.page-news {
+    .banner-block {
+        z-index: 1;
+    }
+    .content-block {
+        margin-top: -13%;
+        position: relative;
+        padding-top: 30%;
+        background: url(/img/news/bg.png) no-repeat;
     }
 }
 .tourist-visa {
@@ -293,6 +328,9 @@
         .card {
             border-bottom-left-radius: 35px !important;
             border-bottom-right-radius: 35px !important;
+            .for-logo img {
+                max-height: 120px;
+            }
         }
         .course-info {
             th,td {
@@ -314,9 +352,6 @@
                 padding: 15px 30px;
                 border-radius: 35px;
                 box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
-                &:first-child {
-                    padding: 30px;
-                }
             }
             .btn.active {
                 border: 2px solid $blue;
@@ -326,12 +361,16 @@
                 height: 100%;
                 max-height: 134px;
                 line-height: 42px;
+                padding: 10px 30px;
             }
         }
     }
     .noresult {
         margin-bottom: 50px;
         border-bottom: 1px solid #ddd;
+    }
+    .no-result-image {
+        max-height: 280px;
     }
 }
 
@@ -397,6 +436,11 @@
             border-bottom-right-radius: 35px !important;
             background-color: $white;
             padding: 30px;
+        }
+    }
+    .top-cities {
+        .card {
+            box-shadow:0 10px 20px 0 rgba(0,0,0,0.20);
         }
     }
 }
@@ -565,7 +609,7 @@
         }
     }
     .custom-slider-wrapper {
-        padding-left: 10%;
+        padding-left: 5%;
     }
     .gallery-block {
         .title {
@@ -606,6 +650,20 @@
                 height: 490px;
                 object-fit: cover;
                 border-radius: 35px;
+            }
+        }
+        .overlay {
+            opacity: 0;
+            transition: all ease 300ms;
+            border-radius: 35px;
+            .album-title {
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            &:hover {
+                opacity: 1;
+                transition: all ease 300ms;
             }
         }
     }

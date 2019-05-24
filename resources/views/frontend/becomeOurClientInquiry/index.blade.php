@@ -495,15 +495,15 @@
                             
                             <p class="employment_name">Employer</p>
                           
-                            <input type="text" class="form-control" name="employment_status_name">
+                            <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
                             
                             <p>From</p>
                           
-                            <input type="text" class="form-control" name="employment_status_from">
+                            <input type="text" class="form-control client-field" name="employment_status_from" id="employment_status_from">
                             
                             <p>To</p>
                           
-                            <input type="text" class="form-control" name="employment_status_to">
+                            <input type="text" class="form-control client-field" name="employment_status_to" id="employment_status_to">
 
                         </div>
 
@@ -617,7 +617,7 @@
 
                                 <label class="title fs14 text-black" for="">Score <span class="text-danger">*</span></label>
 
-                                <input type="text" class="form-control" name="score" id="" placeholder="" required>
+                                <input type="text" class="form-control client-field" name="score" id="score" placeholder="" required>
 
                             </div>
 
@@ -675,7 +675,7 @@
 
                             <label class="control control--checkbox">I declare that all the information and supporting documentations provided above are true and correct
 
-                                <input type="checkbox" />
+                                <input type="checkbox" value="" name="declaration_1" id="declaration_1" class="client-field" />
 
                                 <div class="control__indicator"></div>
 
@@ -683,7 +683,7 @@
 
                             <label class="control control--checkbox">I declare that I have received a proper orientation and interview prior to my application
 
-                                <input type="checkbox" />
+                                <input type="checkbox" value="" name="declaration_2" id="declaration_2" class="client-field" />
 
                                 <div class="control__indicator"></div>
 
@@ -691,7 +691,7 @@
 
                             <label class="control control--checkbox">I understand that all the fees and charges associated with my application is non-refundable
 
-                                <input type="checkbox" />
+                                <input type="checkbox" value="" name="declaration_3" id="declaration_3" class="client-field" />
 
                                 <div class="control__indicator"></div>
 
@@ -703,7 +703,7 @@
                                 
                                 application will be based on my GTE and Financial Capacity in undertaking my course in Australia
                                 
-                                <input type="checkbox" />
+                                <input type="checkbox" value="" name="declaration_4" id="declaration_4" class="client-field" />
                                 
                                 <div class="control__indicator"></div>
 
@@ -711,7 +711,7 @@
 
                             <label class="control control--checkbox">I understand that ENZ Education Consultancy Services are not an employment agency
 
-                                <input type="checkbox" />
+                                <input type="checkbox" value="" name="declaration_5" id="declaration_5" class="client-field" />
 
                                 <div class="control__indicator"></div>
 
@@ -739,9 +739,13 @@
 
                                 <label for="">Applicant Signature <span class="text-danger">*</span></label><br />
 
-                                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" />
+                                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" style="display: none;" />
 
-                                <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
+                                <label class="btn btnread-more text-uppercase client-field" id="signature" for="file" style="height: auto"><span>Choose file</span></label>
+
+{{--                                 <br>
+
+                                <span style="">Please upload signature</span> --}}
 
                             </div>
 
@@ -820,7 +824,7 @@
 
     $('input:radio[name="employment_status"]').change(function(){
 
-        $('.employment-status-div').css('display', 'show');
+        $('.employment-status-div').css('display', 'block');
 
         if (this.checked && this.value == 'Unemployed') {
 
@@ -840,7 +844,7 @@
 
     $('.btn-apply').click(function(){
 
-        $('.client-field').css('border', 'unset');
+        $('.client-field').css('border', '1px solid #ced4da');
 
         let fields = [
             'first_name', 
@@ -864,6 +868,40 @@
             'mobile_number',
             'telephone_number',
         ];
+
+
+        let english_test_result = $('[name="english_test_result"]:checked').val();
+        
+        let employment_status = $('[name="employment_status"]:checked').val();
+
+        let declaration_1 = $('[name="declaration_1"]').prop('checked');
+
+        let declaration_2 = $('[name="declaration_2"]').prop('checked');
+        
+        let declaration_3 = $('[name="declaration_3"]').prop('checked');
+        
+        let declaration_4 = $('[name="declaration_4"]').prop('checked');
+        
+        let declaration_5 = $('[name="declaration_5"]').prop('checked');
+
+        let file = $('[name="file"]').val();
+
+
+        if (! declaration_1) { fields.push('declaration_1'); }
+
+        if (! declaration_2) { fields.push('declaration_2'); }
+        
+        if (! declaration_3) { fields.push('declaration_3'); }
+        
+        if (! declaration_4) { fields.push('declaration_4'); }
+        
+        if (! declaration_5) { fields.push('declaration_5'); }
+
+        if (english_test_result != 0) { fields.push('score'); }
+
+        if (file == '') { fields.push('signature'); }
+        
+        if (employment_status != 'Unemployed') { fields.push('employment_status_name', 'employment_status_from', 'employment_status_to'); }
 
         let submit = true;
 

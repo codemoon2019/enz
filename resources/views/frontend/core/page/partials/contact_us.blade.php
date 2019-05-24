@@ -2,6 +2,18 @@
 
 @section('page_class', "page page-contact")
 
+@push('after-styles')
+
+<style>
+    
+    #map{
+        height: 100%;
+    }
+    
+</style>
+
+@endpush
+
 @section('content')
 
     <div class="block content-block" data-aos="zoom-in">
@@ -77,7 +89,13 @@
 
                 </div>
 
-                <div class="col-sm-6 right-content"></div>
+                <div class="col-sm-6 right-content">
+                    
+
+                    <div id="map"></div>
+
+
+                </div>
             
             </div>
 
@@ -136,3 +154,53 @@
     </div>
 
 @endsection
+
+@push('after-scripts')
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNogLgQ7kvuJ50gqrYKJ-k5YaijWGKiGE&callback=initMap"></script>
+
+<script>
+
+var map;
+
+function initMap() {
+
+var locations = [
+
+    {lat: 18.196012, lng: 120.592667},
+
+    {lat: 17.558986, lng: 120.403493},
+    
+    {lat: 14.599512, lng: 120.984222},
+    
+    {lat: 9.306840, lng: 123.305450},
+
+];
+
+var map = new google.maps.Map(document.getElementById('map'), {
+
+    zoom: 6, center: {lat: 13.598606, lng: 122.176126}
+
+});
+
+locations.forEach(function(v) {
+
+    var marker = new google.maps.Marker({position: v, map: map});
+
+});
+
+
+
+    // map = new google.maps.Map(document.getElementById('map'), {
+
+    //     center: {lat: -34.397, lng: 150.644},
+        
+    //     zoom: 8
+    
+    // });
+
+}
+
+</script>
+
+@endpush

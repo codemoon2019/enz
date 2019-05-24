@@ -327,7 +327,7 @@
     .pl10p,
     .pr10p,
     .fixed .user-menu {
-        padding: 0 15px !important;
+        padding: 0 5% !important;
     }
     .wrapper.px83 {
         padding: 0 !important;
@@ -426,7 +426,7 @@
             background-image:linear-gradient(#00bacf, #008db0);
             overflow: hidden;
             .container-fluid {
-                padding: 0 15px !important;
+                padding: 0 5% !important;
             }
         }
     }
@@ -565,6 +565,18 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    .px83,
+    .px180,
+    .pl10p,
+    .pr10p,
+    .px420,
+    .px475 {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    .px83.fixed {
+        padding: 0 !important;
+    }
     .front .banner-block {
         margin-top: -8%;
         .for-text {
@@ -659,6 +671,12 @@
         padding-bottom: 7%;
     }
     .page-about-company {
+
+        .content-block {
+            margin-top: -15%;
+            overflow: hidden;
+            padding-bottom: 0;
+        }
         .mv-block {
             padding-top: 10%;
         }
@@ -708,6 +726,9 @@
             .ph-flag {
                 top: -5%;
                 left: 0%
+            }
+            .title {
+                padding-left: 10%;
             }
         }
         .content-block .for-content {

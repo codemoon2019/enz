@@ -11033,11 +11033,16 @@ html body {
   color: #fff;
 }
 
+.page-about-company .banner-block img {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
 .page-about-company .content-block {
   margin-top: -17%;
   position: relative;
   padding-bottom: 12%;
-  padding-top: 5%;
+  padding-top: 0;
   background: url(/img/about/our-company-bg.png) no-repeat;
 }
 
@@ -11048,7 +11053,7 @@ html body {
 .page-about-company .content-block .plane {
   display: none !important;
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 0;
 }
 
@@ -11064,6 +11069,10 @@ html body {
 .page-about-company .content-block ul li {
   color: #fff;
   font-size: 18px;
+}
+
+.page-about-company .progress-rate .progress-bar {
+  background-image: linear-gradient(to right, #ff7878, #eb5959);
 }
 
 .page-about-company .mv-block {
@@ -11107,6 +11116,16 @@ html body {
   padding-bottom: 10%;
   padding-top: 40%;
   background: url(/img/about/aust.png) no-repeat;
+}
+
+.page-about-team .person-modal {
+  opacity: 0.5;
+  transition: all ease 300ms;
+}
+
+.page-about-team .person-modal:hover {
+  opacity: 1;
+  transition: all ease 300ms;
 }
 
 .page-about-linkages .card {
@@ -11200,6 +11219,24 @@ html body {
   position: relative;
   padding-top: 30%;
   background: url(/img/services/visa-bg.png) no-repeat;
+}
+
+.page-events .content-block {
+  margin-top: -17.5%;
+  position: relative;
+  padding-top: 30%;
+  background: url(/img/news/bg.png) no-repeat;
+}
+
+.page-news .banner-block {
+  z-index: 1;
+}
+
+.page-news .content-block {
+  margin-top: -13%;
+  position: relative;
+  padding-top: 30%;
+  background: url(/img/news/bg.png) no-repeat;
 }
 
 .tourist-visa .content-block {
@@ -11362,6 +11399,10 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
+.page-courses .search-results .card .for-logo img {
+  max-height: 120px;
+}
+
 .page-courses .search-results .course-info th,
 .page-courses .search-results .course-info td {
   vertical-align: middle;
@@ -11386,10 +11427,6 @@ html body {
   box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
 }
 
-.page-courses .search-results .filter .btn:first-child {
-  padding: 30px;
-}
-
 .page-courses .search-results .filter .btn.active {
   border: 2px solid #3fb1e5;
   color: #3fb1e5;
@@ -11399,11 +11436,16 @@ html body {
   height: 100%;
   max-height: 134px;
   line-height: 42px;
+  padding: 10px 30px;
 }
 
 .page-courses .noresult {
   margin-bottom: 50px;
   border-bottom: 1px solid #ddd;
+}
+
+.page-courses .no-result-image {
+  max-height: 280px;
 }
 
 .page-destination .content-block {
@@ -11480,6 +11522,10 @@ html body {
   border-bottom-right-radius: 35px !important;
   background-color: #fff;
   padding: 30px;
+}
+
+.page-destination .top-cities .card {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .be-part-of-our-team .jobs .card-body .btnread-more {
@@ -11659,7 +11705,7 @@ html body {
 }
 
 .page-students .custom-slider-wrapper {
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 .page-students .gallery-block .title {
@@ -11711,6 +11757,23 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+}
+
+.page-students .gallery-block .overlay {
+  opacity: 0;
+  transition: all ease 300ms;
+  border-radius: 35px;
+}
+
+.page-students .gallery-block .overlay .album-title {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.page-students .gallery-block .overlay:hover {
+  opacity: 1;
+  transition: all ease 300ms;
 }
 
 .page-contact #main {
@@ -12325,7 +12388,7 @@ html body {
   .pl10p,
   .pr10p,
   .fixed .user-menu {
-    padding: 0 15px !important;
+    padding: 0 5% !important;
   }
 
   .wrapper.px83 {
@@ -12443,7 +12506,7 @@ html body {
   }
 
   .page-about .content-block .container-fluid {
-    padding: 0 15px !important;
+    padding: 0 5% !important;
   }
 
   .page-about-company .floating {
@@ -12583,6 +12646,20 @@ html body {
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .px83,
+  .px180,
+  .pl10p,
+  .pr10p,
+  .px420,
+  .px475 {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+
+  .px83.fixed {
+    padding: 0 !important;
+  }
+
   .front .banner-block {
     margin-top: -8%;
   }
@@ -12690,6 +12767,12 @@ html body {
     padding-bottom: 7%;
   }
 
+  .page-about-company .content-block {
+    margin-top: -15%;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
   .page-about-company .mv-block {
     padding-top: 10%;
   }
@@ -12734,6 +12817,10 @@ html body {
   .page-contact .content-block .for-banner .ph-flag {
     top: -5%;
     left: 0%;
+  }
+
+  .page-contact .content-block .for-banner .title {
+    padding-left: 10%;
   }
 }
 

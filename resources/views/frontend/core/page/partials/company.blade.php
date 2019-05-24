@@ -68,6 +68,31 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-4" data-aos="fade-right">
+                <h3 class="title text-yellow text-capitalize fs24">Our Success Percentage Rate</h3>
+            </div>
+            <div class="col-sm-8" data-aos="fade-left">
+                <div class="progress-rate">
+                    <label class="text-white text-capitalize fs18">Student visa</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 97.43%" aria-valuenow="97.43" aria-valuemin="0" aria-valuemax="100">97.43%</div>
+                    </div>
+                    <label class="text-white text-capitalize fs18">Dependent visa</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85.7%" aria-valuenow="85.7" aria-valuemin="0" aria-valuemax="100">85.7%</div>
+                    </div>
+                    <label class="text-white text-capitalize fs18">Tourist visa</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 97.36%" aria-valuenow="97.36" aria-valuemin="0" aria-valuemax="100">97.36%</div>
+                    </div>
+                    <label class="text-white text-capitalize fs18">Overall success rate</label>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 96.63%" aria-valuenow="96.63" aria-valuemin="0" aria-valuemax="100">96.63%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="" data-aos="fade-right">
 </div>

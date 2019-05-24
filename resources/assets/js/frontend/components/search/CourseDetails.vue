@@ -32,7 +32,7 @@
                 
                                 <tr>
                 
-                                    <th class="title fs18 text-black">Carrer Opportunities</th>
+                                    <th class="title fs18 text-black">Career Opportunities</th>
                 
                                     <th class="title fs18 text-black">Duration</th>
                 

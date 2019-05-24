@@ -502,6 +502,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1196,7 +1200,7 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", { staticClass: "title fs18 text-black" }, [
-          _vm._v("Carrer Opportunities")
+          _vm._v("Career Opportunities")
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "title fs18 text-black" }, [
@@ -1522,7 +1526,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.filteredCourse.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1567,7 +1576,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.australia_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1612,7 +1626,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.canada_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
@@ -1657,7 +1676,12 @@ var render = function() {
                       _vm._v(" "),
                       !_vm.new_zealand_courses.length
                         ? _c("div", { staticClass: "text-center mt50" }, [
-                            _c("p", { staticClass: "basic text-muted" }, [
+                            _c("img", {
+                              staticClass: "img-fluid no-result-image mb30",
+                              attrs: { src: "svg/no-result.svg", alt: "" }
+                            }),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "title text-nblue fs24" }, [
                               _vm._v("No result")
                             ])
                           ])
