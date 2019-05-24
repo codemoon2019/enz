@@ -4,7 +4,7 @@
 
 		<div class="container-fluid px180 pt30 mb80 relative">
     
-        	<img data-src="svg/courses/papers.svg" class="img-fluid img-papers" alt="">
+        	<!-- <img data-src="svg/courses/papers.svg" class="img-fluid img-papers" alt=""> -->
 	
 			<h1 class="title text-white mb30">Courses</h1>
     

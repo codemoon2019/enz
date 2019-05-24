@@ -11341,7 +11341,7 @@ html body {
 .page-courses .search-courses .img-book {
   width: 20%;
   position: absolute;
-  top: -145%;
+  top: -115%;
   right: 10%;
 }
 
@@ -11360,7 +11360,7 @@ html body {
   position: absolute;
   top: calc(100% - 1px);
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   padding: 5px 0;
   margin: 0;
   width: 100%;
@@ -11883,7 +11883,7 @@ html body {
 }
 
 .page-contact #main {
-  padding-top: 10%;
+  padding-top: 2%;
 }
 
 .page-contact .content-block .for-banner {
@@ -12927,6 +12927,11 @@ html body {
 
   .page-contact .content-block .for-banner .title {
     padding-left: 10%;
+  }
+
+  .page-news .content-block {
+    margin-top: -12%;
+    padding-top: 40%;
   }
 }
 
