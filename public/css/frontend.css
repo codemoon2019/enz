@@ -11599,6 +11599,24 @@ html body {
   box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
 }
 
+.become-our-client .control--radio .control__indicator.validated {
+  border: 2px solid #d27070;
+}
+
+.become-our-client .control--radio .control__indicator.validated:after {
+  left: 5px;
+  top: 5px;
+}
+
+.become-our-client .control--checkbox .control__indicator.validated {
+  border: 2px solid #d27070;
+}
+
+.become-our-client .control--checkbox .control__indicator.validated:after {
+  left: 7px;
+  top: 3px;
+}
+
 .become-our-client .control__indicator {
   position: absolute;
   top: 2px;
