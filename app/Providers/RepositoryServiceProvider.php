@@ -86,6 +86,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\TouristVisaInquiry\TouristVisaInquiryRepository::class, \App\Repositories\TouristVisaInquiry\TouristVisaInquiryRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Location\LocationRepository::class, \App\Repositories\Location\LocationRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\BecomeOurClientInquiry\BecomeOurClientInquiryRepository::class, \App\Repositories\BecomeOurClientInquiry\BecomeOurClientInquiryRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\Gallery\GalleryRepository::class, \App\Repositories\Gallery\GalleryRepositoryEloquent::class);
         //:end-bindings:
     }
 }
