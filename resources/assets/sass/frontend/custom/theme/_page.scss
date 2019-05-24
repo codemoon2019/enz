@@ -805,6 +805,11 @@
             }
         }
     }
+    .for-map .card-body {
+        height: 100%;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
     .loc:before {
         background-image: url(/svg/maps-and-flags.svg);
     }
