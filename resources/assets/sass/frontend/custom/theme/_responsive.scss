@@ -248,6 +248,9 @@
         .ph-flag {
             display: none !important;
         }
+        .for-map .card-body {
+            height: 100vh;
+        }
     }
 
 }
@@ -530,6 +533,14 @@
             margin: 0;
             padding: 0;
             // background-image:linear-gradient(#ff7878, #eb5959);
+        }
+    }
+    .page-contact {
+        .ph-flag {
+            display: none !important;
+        }
+        .for-map .card-body {
+            height: 100vh;
         }
     }
 

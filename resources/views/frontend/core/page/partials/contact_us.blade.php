@@ -60,7 +60,7 @@
 
             <div class="row justify-content-center py80">
 
-                <div class="col-sm-6 left-content">
+                <div class="col-lg-6 col-md-12 left-content">
 
                     @foreach ($locations as $location)
                         
@@ -89,7 +89,7 @@
 
                 </div>
 
-                <div class="col-sm-6 right-content for-map">
+                <div class="col-lg-6 col-md-12 right-content for-map">
                    
                     <div class="card-body">
                   

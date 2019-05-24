@@ -427,6 +427,22 @@
             max-height: 925px;
             object-fit: cover;
         }
+        .carousel-control-prev-icon {
+            background-image: url(/svg/arrow.svg);
+            height: 30px;
+            width: 100%;
+            transform: rotate(180deg);
+        }
+        .carousel-control-next-icon {
+            background-image: url(/svg/arrow.svg);
+            height: 40px;
+            width: 100%;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 1;
+            width: 4%;
+        }
     }
     .more-info {
         background-color: #eff1f5;
@@ -781,8 +797,8 @@
             background: transparent;
             border-color: transparent;
             img {
-                border-top-right-radius: 12px !important;
-                border-top-left-radius: 12px !important;
+                border-top-right-radius: 35px !important;
+                border-top-left-radius: 35px !important;
             }
         }
         .card-footer {
