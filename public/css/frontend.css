@@ -11851,8 +11851,8 @@ html body {
 }
 
 .page-students.gallery .slick-slide img {
-  max-height: 490px;
-  height: 490px;
+  max-height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
@@ -11880,6 +11880,10 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+}
+
+.page-students.gallery .slick-dots li button {
+  display: none;
 }
 
 .page-contact #main {
@@ -12916,6 +12920,11 @@ html body {
     padding: 80px 0;
   }
 
+  .page-students.gallery .slider-for .slick-slide img {
+    max-height: 365px;
+    width: 100%;
+  }
+
   .page-contact .content-block .for-banner {
     min-height: 80vh;
   }
@@ -13040,6 +13049,11 @@ html body {
   .page-courses .search-courses .intro .img-book {
     width: auto;
     top: -260%;
+  }
+
+  .page-students.gallery .slider-for .slick-slide img {
+    max-height: 500px;
+    width: 100%;
   }
 
   .page-contact .content-block .for-banner .title {
