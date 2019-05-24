@@ -37793,13 +37793,14 @@ $('document').ready(function () {
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    dots: false,
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    dots: true,
+    dots: false,
     centerMode: true,
     focusOnSelect: true
   });
