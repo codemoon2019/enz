@@ -266,6 +266,15 @@
                                 </a>
                             </li>
                         @endcan
+
+                        @can(app(App\Models\Gallery\Gallery::class)::permission('index'))
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/galleries*')) }}"
+                                   href="{{ route(app(App\Models\Gallery\Gallery::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Gallery
+                                </a>
+                            </li>
+                        @endcan
       
 {{--                         @can(app(App\Models\MoreLife\MoreLife::class)::permission('index'))
 
