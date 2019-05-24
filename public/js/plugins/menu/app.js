@@ -1024,7 +1024,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/nico/Code/enzeducation/resources/assets/js/backend/menu/app.js */"./resources/assets/js/backend/menu/app.js");
+module.exports = __webpack_require__(/*! /home/janno/Documents/homestead/enzeducation/resources/assets/js/backend/menu/app.js */"./resources/assets/js/backend/menu/app.js");
 
 
 /***/ })

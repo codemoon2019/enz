@@ -81,6 +81,52 @@
                 </div>
 
             </div>
+            
+        </div>
+        <div class="slider-for">
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
+                <div class="overlay cursor-pointer">
+                    <div class="album-title d-flex">
+                        <h2 class="title text-white fs24">Title</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery1.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery2.jpg')}}" class="img-fluid" alt="">
+            </div>
+            <div class="item mx-auto mb30">
+                <img src="{{asset('img/students/samplegallery3.jpg')}}" class="img-fluid" alt="">
+            </div>
         </div>
     </div>
 </div>

@@ -11702,10 +11702,23 @@ html body {
 .page-students .testimonials-block .profile-pic img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+}
+
+.page-students .testimonials-block.videos {
+  padding-top: 0;
+  background: transparent;
+}
+
+.page-students .testimonials-block.videos .item {
+  height: auto;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 0;
 }
 
 .page-students .custom-slider-wrapper {
-  padding-left: 5%;
+  padding-left: 10%;
 }
 
 .page-students .gallery-block .title {
@@ -11774,6 +11787,50 @@ html body {
 .page-students .gallery-block .overlay:hover {
   opacity: 1;
   transition: all ease 300ms;
+}
+
+.page-students.gallery .slick-list {
+  padding: 0 20% 0 0;
+}
+
+.page-students.gallery .slick-slide {
+  padding-left: 55px;
+}
+
+.page-students.gallery .slick-slide:first-child {
+  padding: 0;
+}
+
+.page-students.gallery .slick-slide img {
+  max-height: 490px;
+  height: 490px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 35px;
+}
+
+.page-students.gallery .slider-for .slick-list,
+.page-students.gallery .slider-nav .slick-list {
+  padding: 0;
+}
+
+.page-students.gallery .slider-for .slick-slide,
+.page-students.gallery .slider-nav .slick-slide {
+  padding-left: 0;
+}
+
+.page-students.gallery .slider-for .slick-slide:first-child,
+.page-students.gallery .slider-nav .slick-slide:first-child {
+  padding: 0;
+}
+
+.page-students.gallery .slider-for .slick-slide img,
+.page-students.gallery .slider-nav .slick-slide img {
+  max-height: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 35px;
 }
 
 .page-contact #main {
