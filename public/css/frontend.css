@@ -11921,6 +11921,11 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
+.page-contact .for-content {
+  margin-top: -15%;
+  background: transparent;
+}
+
 .page-contact .for-content li {
   margin-bottom: 10px;
 }
@@ -12190,6 +12195,10 @@ html body {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  #main {
+    padding-top: 20px;
+  }
+
   .for-desktop {
     display: none;
   }
@@ -12461,6 +12470,10 @@ html body {
   .page-apply .content-block {
     margin: 0;
     padding: 0;
+  }
+
+  .page-contact .ph-flag {
+    display: none !important;
   }
 }
 
