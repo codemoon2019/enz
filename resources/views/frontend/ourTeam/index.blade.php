@@ -68,15 +68,20 @@
 
                 <div class="modal fade" id="myModal">
 
-                    <div class="modal-dialog modal-sm">
+                    <div class="modal-dialog">
                     
                         <div class="modal-content">
 
                         <div class="modal-body text-center">
+                            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
                             <img src="" id="person-image" alt="" class="img-fluid mb20">
 
-                            <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" id="person-email"></a></p>
+                            <h2 class="title fs18 text-black">{{ $person->title }}</h2>
+						
+						    <p class="basic fs18 text-black">{{ $person->position }}</p>
+
+                            <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
 
                             <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
 

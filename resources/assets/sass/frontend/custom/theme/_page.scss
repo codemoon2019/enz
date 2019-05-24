@@ -79,11 +79,17 @@
         background: url(/img/about/aust.png) no-repeat;
     }
     .person-modal {
-        opacity: .5;
+        opacity: .8;
         transition: all ease 300ms;
         &:hover {
             opacity: 1;
             transition: all ease 300ms;
+        }
+    }
+    .modal-content {
+        border-radius: 35px;
+        .close {
+            margin-top: -10px;
         }
     }
 }
@@ -218,6 +224,24 @@
     }
     textarea {
         resize: none;
+    }
+    .modal-content {
+        border-radius: 35px;
+        .close {
+            margin-top: -5px;
+        }
+        .card {
+            border-radius: 35px;
+            border: 1px solid transparent;
+        }
+        .card-header {
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+        }
+        .card-body {
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
     }
 }
 
