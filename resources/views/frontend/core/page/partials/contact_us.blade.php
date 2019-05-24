@@ -89,7 +89,7 @@
 
                 </div>
 
-                <div class="col-sm-6 right-content">
+                <div class="col-sm-6 right-content for-map">
                    
                     <div class="card-body">
                   
