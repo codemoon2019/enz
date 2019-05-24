@@ -2,6 +2,9 @@
 
 
 @media (min-width: 320px) and (max-width: 767px) {
+    #main {
+        padding-top: 20px;
+    }
     .for-desktop {
         display: none;
     }
