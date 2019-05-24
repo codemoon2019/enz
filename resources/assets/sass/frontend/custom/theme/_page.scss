@@ -249,11 +249,11 @@
     
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
-        background-position: bottom;
+        background-position: center;
         height: 94vh;
         display: flex;
         align-items: center;
-        padding-top: 15%;
+        padding-top: 2%;
         .form-control,
         .vs__dropdown-toggle {
             height: 56px;
@@ -791,6 +791,8 @@
         }
     }
     .for-content {
+        margin-top: -15%;
+        background: transparent;
         li {
             margin-bottom: 10px;
             &:before {

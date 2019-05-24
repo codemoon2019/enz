@@ -11311,11 +11311,11 @@ html body {
 
 .page-courses .search-courses {
   background: url(/img/courses/bg.png) no-repeat;
-  background-position: bottom;
+  background-position: center;
   height: 94vh;
   display: flex;
   align-items: center;
-  padding-top: 15%;
+  padding-top: 2%;
 }
 
 .page-courses .search-courses .form-control,
@@ -11921,6 +11921,11 @@ html body {
   border-bottom-right-radius: 35px !important;
 }
 
+.page-contact .for-content {
+  margin-top: -15%;
+  background: transparent;
+}
+
 .page-contact .for-content li {
   margin-bottom: 10px;
 }
@@ -12471,6 +12476,10 @@ html body {
   .page-apply .content-block {
     margin: 0;
     padding: 0;
+  }
+
+  .page-contact .ph-flag {
+    display: none !important;
   }
 }
 
