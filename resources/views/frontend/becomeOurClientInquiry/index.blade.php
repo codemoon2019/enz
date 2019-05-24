@@ -675,25 +675,25 @@
 
                             <label class="control control--checkbox">I declare that all the information and supporting documentations provided above are true and correct
 
-                                <input type="checkbox" value="" name="declaration_1" id="declaration_1" class="client-field" />
+                                <input type="checkbox" value="" name="declaration_1" id="declaration_1" />
 
-                                <div class="control__indicator"></div>
+                                <div class="control__indicator client-field" id="div_declaration_1"></div>
 
                             </label><br />
 
                             <label class="control control--checkbox">I declare that I have received a proper orientation and interview prior to my application
 
-                                <input type="checkbox" value="" name="declaration_2" id="declaration_2" class="client-field" />
+                                <input type="checkbox" value="" name="declaration_2" id="declaration_2" />
 
-                                <div class="control__indicator"></div>
+                                <div class="control__indicator client-field" id="div_declaration_2"></div>
 
                             </label><br />
 
                             <label class="control control--checkbox">I understand that all the fees and charges associated with my application is non-refundable
 
-                                <input type="checkbox" value="" name="declaration_3" id="declaration_3" class="client-field" />
+                                <input type="checkbox" value="" name="declaration_3" id="declaration_3" />
 
-                                <div class="control__indicator"></div>
+                                <div class="control__indicator client-field" id="div_declaration_3"></div>
 
                             </label><br />
 
@@ -703,17 +703,17 @@
                                 
                                 application will be based on my GTE and Financial Capacity in undertaking my course in Australia
                                 
-                                <input type="checkbox" value="" name="declaration_4" id="declaration_4" class="client-field" />
+                                <input type="checkbox" value="" name="declaration_4" id="declaration_4" />
                                 
-                                <div class="control__indicator"></div>
+                                <div class="control__indicator client-field" id="div_declaration_4"></div>
 
                             </label><br />
 
                             <label class="control control--checkbox">I understand that ENZ Education Consultancy Services are not an employment agency
 
-                                <input type="checkbox" value="" name="declaration_5" id="declaration_5" class="client-field" />
+                                <input type="checkbox" value="" name="declaration_5" id="declaration_5" />
 
-                                <div class="control__indicator"></div>
+                                <div class="control__indicator client-field" id="div_declaration_5"></div>
 
                             </label><br />
 
@@ -912,6 +912,16 @@
             if (el.val() == null || el.val() == '') {
 
                 el.css('border', '2px solid #d27070');
+
+                if (v == 'declaration_1') { $('#div_declaration_1').css('border', '2px solid #d27070'); }
+
+                if (v == 'declaration_2') { $('#div_declaration_2').css('border', '2px solid #d27070'); }
+                
+                if (v == 'declaration_3') { $('#div_declaration_3').css('border', '2px solid #d27070'); }
+                
+                if (v == 'declaration_4') { $('#div_declaration_4').css('border', '2px solid #d27070'); }
+                
+                if (v == 'declaration_5') { $('#div_declaration_5').css('border', '2px solid #d27070'); }
 
                 submit = false;
 
