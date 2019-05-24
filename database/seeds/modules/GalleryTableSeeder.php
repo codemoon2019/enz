@@ -33,13 +33,46 @@ class GalleryTableSeeder extends Seeder
             ['title' => 'Visa Grantees'],
         ];
 
-            foreach ($variable as $key => $value) {
 
-                $model = Gallery::create($value);
+        $images = [
+            [
+                'samplegallery1.jpg',
+                'australian_expo_9.jpg',
+                'australian_expo_8.jpg',
+                'australian_expo_7.jpg',
+            ],
+            [
+                '1.jpg',
+                '2.jpg',
+                '3.jpg',
+                '4.jpg',
+            ],
+            [
+                '1.jpg',
+                '2.jpg',
+                '3.jpg',
+                '4.jpg',
+            ],
+            [
+                '1 - CEDRIC LEE CORDERO 04OCT2017.jpg',
+                '1 - MAE HARMONY LUTAP 13OCT2017.jpg',
+                '1 - PATRICK JOHN PABUSTAN 13OCT2017.jpg',
+                '2 - ANA LORRAINE BRUNO 18SEPT2017.jpg',
+            ],
+
+        ];
+
+        foreach ($data as $key => $value) {
+
+            $model = Gallery::create($value);
+
+            foreach ($images[$key] as $value1) {
                 
-                $this->seederUploader($model, 'gallery/samplegallery1.jpg', null, 'featured');
-            
+                $this->seederUploader($model, 'gallery/gallery'.($key+1).'/' . $value1, null, 'featured');
+
             }
+        
+        }
 
         $this->enableForeignKeys();
     }

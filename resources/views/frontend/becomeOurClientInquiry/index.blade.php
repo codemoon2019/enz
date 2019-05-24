@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-apply be-part-of-our-team")
+@section('page_class', "page page-apply become-our-client")
 
 @push('after-styles')
 
