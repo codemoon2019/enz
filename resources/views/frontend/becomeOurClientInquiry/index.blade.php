@@ -491,19 +491,19 @@
                         </div>
 
 
-                        <div class="employment-status-div">
-                            
-                            <p class="employment_name">Employer</p>
-                          
-                            <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
-                            
-                            <p>From</p>
-                          
-                            <input type="text" class="form-control client-field" name="employment_status_from" id="employment_status_from">
-                            
-                            <p>To</p>
-                          
-                            <input type="text" class="form-control client-field" name="employment_status_to" id="employment_status_to">
+                        <div class="employment-status-div card-body">
+                            <div class="form-group">
+                                <label class="title fs14 text-black" class="employment_name">Employer <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
+                            </div>
+                            <div class="form-group">
+                                <label class="title fs14 text-black">From <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control client-field" name="employment_status_from" id="employment_status_from">
+                            </div>
+                            <div class="form-group">
+                                <label class="title fs14 text-black">To <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control client-field" name="employment_status_to" id="employment_status_to">
+                            </div>
 
                         </div>
 

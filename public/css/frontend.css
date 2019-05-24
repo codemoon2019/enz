@@ -11119,13 +11119,21 @@ html body {
 }
 
 .page-about-team .person-modal {
-  opacity: 0.5;
+  opacity: 0.8;
   transition: all ease 300ms;
 }
 
 .page-about-team .person-modal:hover {
   opacity: 1;
   transition: all ease 300ms;
+}
+
+.page-about-team .modal-content {
+  border-radius: 35px;
+}
+
+.page-about-team .modal-content .close {
+  margin-top: -10px;
 }
 
 .page-about-linkages .card {
@@ -11276,6 +11284,29 @@ html body {
 
 .tourist-visa textarea {
   resize: none;
+}
+
+.tourist-visa .modal-content {
+  border-radius: 35px;
+}
+
+.tourist-visa .modal-content .close {
+  margin-top: -5px;
+}
+
+.tourist-visa .modal-content .card {
+  border-radius: 35px;
+  border: 1px solid transparent;
+}
+
+.tourist-visa .modal-content .card-header {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+.tourist-visa .modal-content .card-body {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 
 .page-courses .search-courses {
@@ -11566,6 +11597,24 @@ html body {
 
 .become-our-client .control--checkbox .control__indicator {
   box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.become-our-client .control--radio .control__indicator.validated {
+  border: 2px solid #d27070;
+}
+
+.become-our-client .control--radio .control__indicator.validated:after {
+  left: 5px;
+  top: 5px;
+}
+
+.become-our-client .control--checkbox .control__indicator.validated {
+  border: 2px solid #d27070;
+}
+
+.become-our-client .control--checkbox .control__indicator.validated:after {
+  left: 7px;
+  top: 3px;
 }
 
 .become-our-client .control__indicator {
