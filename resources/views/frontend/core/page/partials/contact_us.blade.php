@@ -272,8 +272,6 @@ function initMap() {
 
     var icon = '/svg/maps-and-flags.svg';
 
-    // var marker;
-
     locations.forEach(function(v) {
 
         var marker = new google.maps.Marker({
@@ -285,17 +283,24 @@ function initMap() {
 
         marker.addListener('click', function() {
 
-            var panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('map'), {
-                    position: v,
-                    pov: v.pov
-                }
-            );
+            map.setZoom(8);
+
+            map.setCenter(marker.getPosition());
+
+            setTimeout(function(){ street_view(v); }, 800);
 
         });
 
     });
 
+    function street_view(v){
+        new google.maps.StreetViewPanorama(
+            document.getElementById('map'), {
+                position: v,
+                pov: v.pov
+            }
+        );
+    }
 
 }
 
