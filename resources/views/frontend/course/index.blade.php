@@ -3,7 +3,7 @@
 @section('page_class', "page page-courses")
 
 @section('content')
-
+    
     <fields areas="{{ $areas }}" institutions="{{ $institutions }}"></fields>
     
 	<results></results>
