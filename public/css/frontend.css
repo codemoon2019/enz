@@ -12742,6 +12742,11 @@ html body {
     margin-bottom: 30px;
   }
 
+  .page-courses .search-courses .suggestions ul li,
+  .page-courses .search-courses .vs__dropdown-menu li {
+    white-space: normal;
+  }
+
   .page-destination .for-text {
     position: relative;
     top: 0;
@@ -12965,6 +12970,11 @@ html body {
 
   .page-courses .search-courses .img-book {
     top: -70%;
+  }
+
+  .page-courses .search-courses .suggestions ul li,
+  .page-courses .search-courses .vs__dropdown-menu li {
+    white-space: normal;
   }
 
   .page-destination .for-text {

@@ -181,10 +181,10 @@ $('document').ready(function(){
     })
   }
   // $(window).resize(function() {
-  //  if($(this).width()>=768) {
-  //    $('.course-search').on('click',function(){
+  //  if($(this).width()>=1200) {
+  //    $('input').on('click',function(){
   //    $('html,body').animate({
-  //      scrollTop: 400
+  //      scrollTop: 200
   //      }, 800);
   //    })
   //  }
