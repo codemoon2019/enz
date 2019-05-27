@@ -18,7 +18,7 @@ Breadcrumbs::register($routePath . '.show', function ($breadcrumbs, $model) use 
 });
 
 Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use ($routePath) {
-    $breadcrumbs->parent($routePath . '.show', $model);
+    $breadcrumbs->parent($routePath . '.index');
     $breadcrumbs->push('Edit', route($routePath . '.edit', $model));
 });
 

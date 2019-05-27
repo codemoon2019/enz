@@ -8,21 +8,21 @@
 
     <div class="banner-block banner relative">
 
-            <video width="100%" loop autoplay muted>
+        <video width="100%" loop autoplay muted>
 
-                <source src="{{asset('img/enz.mp4')}}" type="video/mp4">
-            
-                <source src="{{asset('img/enz.mp4')}}" type="video/ogg">
-            
-            </video>
-            
-            <div class="col-sm-4 for-text">
-            
-                {!! findDetails('home-tagline')->description !!}
-            
-                <a href="#" class="btn btnread-more text-uppercase">Read more</a>
-            
-            </div>
+            <source src="{{asset('img/enz.mp4')}}" type="video/mp4">
+        
+            <source src="{{asset('img/enz.mp4')}}" type="video/ogg">
+        
+        </video>
+        
+        <div class="col-sm-4 for-text">
+        
+            {!! findDetails('home-tagline')->description !!}
+        
+            <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+        
+        </div>
 
     </div>
 

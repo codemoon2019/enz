@@ -173,14 +173,14 @@ class SettingTableSeeder extends Seeder
                 'group' => 'social',
                 'label' => 'Facebook Link',
                 'machine_name' => 'social-fb',
-                'value' => 'https://facebook.com',
+                'value' => 'https://www.facebook.com/enzecs',
                 'rules' => 'required|url',
             ],
             [
                 'group' => 'social',
                 'label' => 'Instagram Link',
                 'machine_name' => 'social-instagram',
-                'value' => 'https://instagram.com',
+                'value' => 'http://instagram.com/enzconsultancy',
                 'rules' => 'required|url',
             ],
         ];

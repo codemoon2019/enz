@@ -11479,6 +11479,20 @@ html body {
   max-height: 280px;
 }
 
+.page-courses.inner .banner-block img {
+  min-height: 824px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-courses.inner .content-block {
+  margin-top: -17%;
+  position: relative;
+  padding-bottom: 10%;
+  padding-top: 35%;
+  background: url(/img/courses/bg.png) no-repeat;
+}
+
 .page-destination .content-block {
   margin-top: -14%;
   position: relative;
@@ -12274,6 +12288,7 @@ html body {
   }
 
   .banner-block .for-text h2 {
+    text-align: left;
     font-size: 6vw;
   }
 
@@ -13094,6 +13109,10 @@ html body {
 
   .front .banner-block .for-text p {
     text-align: justify;
+  }
+
+  .front .banner-block .for-text h2 {
+    text-align: left;
   }
 
   .events-block .plant {

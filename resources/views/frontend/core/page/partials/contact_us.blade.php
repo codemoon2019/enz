@@ -109,11 +109,15 @@
 
         <h2 class="title text-black mb40">Connect with us</h2>
 
+        @php
+            $socialMedia = socialMedia();
+        @endphp
+
         <ul class="list-inline">
 
             <li class="list-inline-item">
 
-                <a href="#">
+                <a href="{{ $socialMedia[0]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/facebook.svg')}}" alt="">
 
@@ -123,7 +127,7 @@
 
             <li class="list-inline-item">
 
-                <a href="#">
+                <a href="{{ $socialMedia[3]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/twitter.svg')}}" alt="">
 
@@ -133,7 +137,7 @@
 
             <li class="list-inline-item">
 
-                <a href="#">
+                <a href="{{ $socialMedia[1]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/instagram.svg')}}" alt="">
 
@@ -143,7 +147,7 @@
 
             <li class="list-inline-item">
 
-                <a href="#">
+                <a href="{{ $socialMedia[4]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/skype.svg')}}" alt="">
 
@@ -167,13 +171,13 @@ function initMap() {
 
     var locations = [
 
-        {lat: 18.196012, lng: 120.592667},
+        {lat: 18.1996071, lng: 120.5892454, pov: {heading: 250, pitch: 15}},
 
-        {lat: 17.558986, lng: 120.403493},
+        {lat: 17.5802534, lng: 120.3923394, pov: {heading: 5, pitch: 9}},
         
-        {lat: 14.599512, lng: 120.984222},
+        {lat: 14.5874834, lng: 121.0597013, pov: {heading: 88, pitch: 30}},
         
-        {lat: 9.306840, lng: 123.305450},
+        {lat: 9.3083436, lng: 123.309639, pov: {heading: 257, pitch: 20}},
 
     ];
 
@@ -268,27 +272,34 @@ function initMap() {
 
     var icon = '/svg/maps-and-flags.svg';
 
-    var marker;
-
     locations.forEach(function(v) {
 
-        marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             position: v, 
             map: map,
-            icon: icon,
-            animation: google.maps.Animation.BOUNCE,
+            // icon: icon,
+            // animation: google.maps.Animation.BOUNCE,
+        });
+
+        marker.addListener('click', function() {
+
+            map.setZoom(8);
+
+            map.setCenter(marker.getPosition());
+
+            setTimeout(function(){ street_view(v); }, 800);
+
         });
 
     });
 
-    marker.addListener('click', toggleBounce);
-
-    function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-            marker.setAnimation(null);
-        } else {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
+    function street_view(v){
+        new google.maps.StreetViewPanorama(
+            document.getElementById('map'), {
+                position: v,
+                pov: v.pov
+            }
+        );
     }
 
 }
