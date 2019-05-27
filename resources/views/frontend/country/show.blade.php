@@ -113,127 +113,37 @@
         </div>
 
         <div class="block top-cities">
+            
             <div class="container-fluid px180 py100">
     
                 <h2 class="title text-nblue fs40 text-center mb80">Top 6 Student Cities</h2>
             
                 <div class="row justify-content-center area-of-study">
-            
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-                    <div class="col-lg-3 col-md-6 item text-center mb60">
-            
-                        <div class="card">
-            
-                            <img data-src="" class="img-fluid" alt="">
-            
-                            <div class="card-footer linear-gradient-teal">
-            
-                                <p class="card-title text-uppercase fs18">
-            
-                                    <a href="#" class="btn text-white">test</a>
-            
-                                </p>
-            
-                            </div>
-            
-                        </div>        
-            
-                    </div>
-    
+
+                    @foreach ($model->cities as $city)
+
+                        <div class="col-lg-3 col-md-6 item text-center mb60">
+                
+                            <div class="card">
+                
+                                <img data-src="" class="img-fluid" alt="">
+                
+                                <div class="card-footer linear-gradient-teal">
+                
+                                    <p class="card-title text-uppercase fs18">
+                
+                                        <a href="#" class="btn text-white">{{ $city->title }}</a>
+                
+                                    </p>
+                
+                                </div>
+                
+                            </div>        
+                
+                        </div>
+
+                    @endforeach
+
                 </div>
     
             </div>

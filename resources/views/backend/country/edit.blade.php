@@ -44,6 +44,12 @@
                         'icon' => 'fa fa-cart-arrow-down',
                         'args'     => [ 'model' => $model ]
                     ],
+                    [
+                        'name'     => 'Cities',
+                        'template' => 'backend.country.partials.cities',
+                        'icon' => 'fa fa-cart-arrow-down',
+                        'args'     => [ 'model' => $model ]
+                    ],
                 ]
             ])
 
