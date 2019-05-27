@@ -13,6 +13,23 @@
             </div>
     
         </div>
+
+        <div class="form-group row" style="display: none;">
+    
+            <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+
+                @php
+                    $url = explode('/', url()->current());
+                    $country = findCountry($url[count($url) - 1]);
+                @endphp
+
+                <input type="text" name="country_id" class="form-control" value="{{ $country->id }}">
+    
+            </div>
+    
+        </div>
     
         <div class="form-group row">
 
