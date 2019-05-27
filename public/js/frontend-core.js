@@ -37808,10 +37808,7 @@ $('document').ready(function () {
     });
   }
 
-  ;
-  $('.testimonials-block').scroll(function () {
-    alert('hey!');
-  }); // $('.accordion .card-header').each(function() {
+  ; // $('.accordion .card-header').each(function() {
   //  $(this).on('click',function() {
   //    // $('.img-arrow').removeClass('rotateme')
   //    // $(this).find('.img-arrow').toggleClass('rotateme')
@@ -37838,9 +37835,9 @@ $('document').ready(function () {
   });
 
   if ($(window).width() >= 1200) {
-    $('.course-search').on('click', function () {
+    $('input').on('click', function () {
       $('html,body').animate({
-        scrollTop: 300
+        scrollTop: 200
       }, 800);
     });
   } // $(window).resize(function() {

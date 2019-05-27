@@ -11508,6 +11508,26 @@ html body {
      object-fit: cover;
 }
 
+.page-destination .slider-block .carousel-control-prev-icon {
+  background-image: url(/svg/arrow.svg);
+  height: 30px;
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.page-destination .slider-block .carousel-control-next-icon {
+  background-image: url(/svg/arrow.svg);
+  height: 30px;
+  width: 100%;
+}
+
+.page-destination .slider-block .carousel-control-prev,
+.page-destination .slider-block .carousel-control-next {
+  opacity: 1;
+  width: 4%;
+}
+
 .page-destination .more-info {
   background-color: #eff1f5;
 }
@@ -11912,8 +11932,8 @@ html body {
 }
 
 .page-contact .item .card img {
-  border-top-right-radius: 12px !important;
-  border-top-left-radius: 12px !important;
+  border-top-right-radius: 35px !important;
+  border-top-left-radius: 35px !important;
 }
 
 .page-contact .item .card-footer {
@@ -12479,8 +12499,33 @@ html body {
     padding: 0;
   }
 
+  .page-contact #main {
+    padding: 0;
+  }
+
+  .page-contact .content-block .for-banner {
+    background-image: linear-gradient(#00bacf, #008db0);
+    margin-bottom: 30px;
+  }
+
+  .page-contact .connect-block li {
+    margin: 0;
+  }
+
+  .page-contact .connect-block li img {
+    max-width: 80%;
+  }
+
+  .page-contact .for-content {
+    margin-top: 0;
+  }
+
   .page-contact .ph-flag {
     display: none !important;
+  }
+
+  .page-contact .for-map .card-body {
+    height: 100vh;
   }
 }
 
@@ -12730,6 +12775,14 @@ html body {
     margin: 0;
     padding: 0;
   }
+
+  .page-contact .ph-flag {
+    display: none !important;
+  }
+
+  .page-contact .for-map .card-body {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
@@ -12912,7 +12965,7 @@ html body {
   }
 
   .page-courses .search-courses .img-book {
-    top: -100%;
+    top: -70%;
   }
 
   .page-destination .for-text {
