@@ -695,3 +695,10 @@ if (!function_exists('Location')) {
         return Location::orderBy('order')->get();
     }
 }
+
+if (!function_exists('socialMedia')) {
+    function socialMedia()
+    {
+        return Setting::whereGroup('social')->get();
+    }
+}

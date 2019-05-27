@@ -18,8 +18,7 @@ Breadcrumbs::register($routePath . '.create', function ($breadcrumbs, $model) us
 //     $breadcrumbs->push('Show', route($routePath . '.show', $model));
 // });
 
-Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use ($routePath) {
-
+Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use ($routePath) { 
 
 	$country = App\Models\City\City::whereSlug($model)->first()->country;
 

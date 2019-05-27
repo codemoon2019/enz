@@ -9,9 +9,9 @@ Breadcrumbs::register($routePath . '.index', function ($breadcrumbs) use ($route
 
 Breadcrumbs::register($routePath . '.create', function ($breadcrumbs, $model) use ($routePath) {
 
-	$country = App\Models\Country\Country::whereSlug($model)->first();
-
-    $breadcrumbs->parent('admin.countries.edit', $country->slug);
+	$breadcrumbs->parent('admin.countries.edit', $model);
+    
+    $breadcrumbs->push('Create', route($routePath . '.create', $model));
 
 });
 
@@ -24,7 +24,9 @@ Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use 
 
 	$country = App\Models\CountryDetails\CountryDetails::whereSlug($model)->first()->country;
 
-    $breadcrumbs->parent('admin.countries.edit', $country->slug);
+    $breadcrumbs->parent('admin.countries.edit', $country);
+
+    $breadcrumbs->push('Edit', route($routePath . '.edit', [$model, $country->slug]));
 
 
 });

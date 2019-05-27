@@ -40,6 +40,7 @@
         .for-text {
             text-align: center;
             h2 {
+                text-align:left;
                 font-size: 6vw;
             }
         } 
@@ -818,6 +819,9 @@
             left: 10%;
             p {
                 text-align: justify;
+            }
+            h2{
+                text-align:left;
             }
         }
     }

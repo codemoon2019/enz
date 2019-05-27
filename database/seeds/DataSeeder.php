@@ -155,7 +155,7 @@ class DataSeeder extends Seeder
             'group' => 'social',
             'label' => 'Twitter Link',
             'machine_name' => 'social-twitter',
-            'value' => 'https://youtube.com',
+            'value' => 'http://twitter.com/enzconsultancy',
             'type' => 'text',
             'input_type' => 'text',
         ]);
@@ -164,7 +164,7 @@ class DataSeeder extends Seeder
             'group' => 'social',
             'label' => 'Skype Link',
             'machine_name' => 'social-skype',
-            'value' => 'https://youtube.com',
+            'value' => 'https://www.skype.com',
             'type' => 'text',
             'input_type' => 'text',
         ]);

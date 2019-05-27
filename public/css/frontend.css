@@ -12254,6 +12254,7 @@ html body {
   }
 
   .banner-block .for-text h2 {
+    text-align: left;
     font-size: 6vw;
   }
 
@@ -13031,6 +13032,10 @@ html body {
 
   .front .banner-block .for-text p {
     text-align: justify;
+  }
+
+  .front .banner-block .for-text h2 {
+    text-align: left;
   }
 
   .events-block .plant {
