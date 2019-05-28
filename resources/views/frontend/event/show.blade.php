@@ -18,7 +18,7 @@
             
                 <div class="col-lg-5 pt80">
             
-                    <h1 class="title title-large text-black mb30 text-capitalize">News</h1>
+                    <h1 class="title title-large text-black mb30 text-capitalize">Events</h1>
             
                     <p class="basic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt tempora maiores culpa eaque pariatur debitis minus magni delectus nostrum?</p>
 
