@@ -12,7 +12,7 @@
 
 			<div class="row">
 	
-				<div class="col-sm-4 mb30">
+				<div class="col-lg-4 mb30">
 	
 					<h2 class="title text-white fs18">Area of Study</h2>
 	
@@ -20,7 +20,7 @@
 
 				</div>
 				
-				<div class="col-sm-4 mb30">
+				<div class="col-lg-4 mb30">
 	
 					<h2 class="title text-white fs18">Institution</h2>
 	
@@ -28,7 +28,7 @@
 
 				</div>
 				
-				<div class="col-sm-4 mb30">
+				<div class="col-lg-4 mb30">
 	
 					<h2 class="title text-white fs18">Course Title</h2>
 	

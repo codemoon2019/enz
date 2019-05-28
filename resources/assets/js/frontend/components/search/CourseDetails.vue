@@ -25,42 +25,46 @@
                         <p class="title fs18 text-black">About the course</p>
                 
                         <p class="basic fs15">{{ limit_text(course.description) }}</p>
+
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
                 
-                        <table class="table table-borderless">
+                                <thead>
+                    
+                                    <tr>
+                    
+                                        <th class="title fs18 text-black">Career Opportunities</th>
+                    
+                                        <th class="title fs18 text-black">Duration</th>
+                    
+                                        <th class="title fs18 text-black">Availability</th>
+                    
+                                        <th class="title fs18 text-black"></th>
+                    
+                                    </tr>
+                    
+                                </thead>
+                    
+                                <tbody>
+                    
+                                    <tr>
+                    
+                                        <td class="basic fs15">{{ course.career_opportunities }}</td>
+                    
+                                        <td class="basic fs15">{{ course.duration }}</td>
+                    
+                                        <td class="basic fs15">{{ course.availability }}</td>
+                    
+                                        <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
+                    
+                                    </tr>
+                    
+                                </tbody>
                 
-                            <thead>
+                            </table>
+
+                        </div>
                 
-                                <tr>
-                
-                                    <th class="title fs18 text-black">Career Opportunities</th>
-                
-                                    <th class="title fs18 text-black">Duration</th>
-                
-                                    <th class="title fs18 text-black">Availability</th>
-                
-                                    <th class="title fs18 text-black"></th>
-                
-                                </tr>
-                
-                            </thead>
-                
-                            <tbody>
-                
-                                <tr>
-                
-                                    <td class="basic fs15">{{ course.career_opportunities }}</td>
-                
-                                    <td class="basic fs15">{{ course.duration }}</td>
-                
-                                    <td class="basic fs15">{{ course.availability }}</td>
-                
-                                    <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
-                
-                                </tr>
-                
-                            </tbody>
-                
-                        </table>
                 
                     </div>
                 

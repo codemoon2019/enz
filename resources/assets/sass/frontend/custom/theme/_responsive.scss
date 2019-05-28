@@ -211,6 +211,10 @@
         .search-results {
             padding-top: 30px;
             margin-bottom: 30px;
+            .filter li,
+            .filter .btn {
+                width: 100%;
+            }
         }
     }
 
@@ -522,6 +526,20 @@
         .search-courses .suggestions ul li, 
         .search-courses .vs__dropdown-menu li {
             white-space: normal;
+        }
+        .search-results {
+            .filter .btn,
+            .filter .btn.default {
+                height: auto;
+                min-height: 1px;
+                padding: 0;
+                box-shadow: none;
+                line-height: 1.5;
+                border: 1px solid transparent !important;
+                img {
+                    display: none;
+                }
+            }
         }
     }
 
