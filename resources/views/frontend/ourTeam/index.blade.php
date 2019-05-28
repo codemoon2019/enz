@@ -50,6 +50,8 @@
                              
                              alt="" class="img-fluid mb20 person-modal cursor-pointer" 
                              
+                             data-title="{{ $person->title }}" 
+
                              data-image="{{ $image }}" 
                              
                              data-email="{{ $person->email }}" 
@@ -77,7 +79,7 @@
 
                             <img src="" id="person-image" alt="" class="img-fluid mb20">
 
-                            <h2 class="title fs18 text-black">{{ $person->title }}</h2>
+                            <h2 class="title fs18 text-black" id="person-title">{{ $person->title }}</h2>
 						
 						    <p class="basic fs18 text-black">{{ $person->position }}</p>
 
@@ -112,6 +114,8 @@
         $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
 
         $('#person-contact').html(el.attr('data-contact'));
+
+        $('#person-title').html(el.attr('data-title'));
 
         $('.modal-trigger').trigger('click');
 

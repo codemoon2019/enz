@@ -97,7 +97,7 @@
         </div> --}}
         <div class="clearfix"></div>
         <div class="custom-slider-wrapper">
-            <div class="row slick-slider">
+            <div class="slick-slider">
                 <div class="item">
                     <div class="card">
                         <div class="card-body">
