@@ -11133,6 +11133,10 @@ html body {
   margin-top: -10px;
 }
 
+.page-about-linkages .banner-block {
+  padding-top: 50px;
+}
+
 .page-about-linkages .card {
   border: none;
   border-radius: 0;
@@ -12855,6 +12859,11 @@ html body {
     padding-right: 10% !important;
   }
 
+  .px83.wrapper {
+    padding-left: 83px !important;
+    padding-right: 83px !important;
+  }
+
   .px83.fixed {
     padding: 0 !important;
   }
@@ -12900,7 +12909,7 @@ html body {
   }
 
   .banner-block .row div {
-    padding: 0 5% !important;
+    padding: 0 1% !important;
   }
 
   .courses-block .padded {

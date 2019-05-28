@@ -616,6 +616,10 @@
         padding-left: 10% !important;
         padding-right: 10% !important;
     }
+    .px83.wrapper {
+        padding-left: 83px !important;
+        padding-right: 83px !important; 
+    }
     .px83.fixed {
         padding: 0 !important;
     }
@@ -658,7 +662,7 @@
             max-width: 50%;
         }
         .row div {
-            padding: 0 5% !important;
+            padding: 0 1% !important;
         }
     }
     .courses-block .padded {
