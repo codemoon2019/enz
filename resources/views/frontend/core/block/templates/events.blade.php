@@ -4,7 +4,7 @@
     
         <h2 class="title fs40 text-white mb80">Events</h2>   
     
-        <div class="row">
+        <div class="row justify-content-center">
             
             @foreach ($homeEvents as $key => $event)
 
@@ -21,7 +21,7 @@
                 
                 @endphp
 
-                <div class="col-sm-4 item mb30" data-aos="fade-up">
+                <div class="col-lg-4 col-sm-6 item mb30" data-aos="fade-up">
 
                     <div class="d-flex event-details">
                     

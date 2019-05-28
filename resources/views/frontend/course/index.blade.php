@@ -17,22 +17,26 @@
             @foreach (AreaOfStudy() as $key => $area)
             
                 <div class="col-lg-3 col-md-6 item text-center mb60">
-        
-                    <div class="card">
-        
-                        <img data-src="{{ $area->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
-        
-                        <div class="card-footer linear-gradient-teal">
-        
-                            <p class="card-title text-uppercase fs18">
-        
-                                <a href="{{ route('frontend.area-of-studies.show', $area->slug) }}" class="btn text-white">{{ $area->title }}</a>
-        
-                            </p>
-        
-                        </div>
-        
-                    </div>        
+
+                    <a href="{{ route('frontend.area-of-studies.show', $area->slug) }}">
+            
+                        <div class="card">
+            
+                            <img data-src="{{ $area->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+            
+                            <div class="card-footer linear-gradient-teal">
+            
+                                <p class="card-title text-uppercase fs18">
+
+                                    <span class="btn text-white">{{ $area->title }}</span>
+            
+                                </p>
+            
+                            </div>
+            
+                        </div>        
+                        
+                    </a>
         
                 </div>
 

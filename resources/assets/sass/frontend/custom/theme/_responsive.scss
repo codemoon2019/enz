@@ -613,8 +613,12 @@
     .pr10p,
     .px420,
     .px475 {
-        padding-left: 5% !important;
-        padding-right: 5% !important;
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+    }
+    .px83.wrapper {
+        padding-left: 83px !important;
+        padding-right: 83px !important; 
     }
     .px83.fixed {
         padding: 0 !important;
@@ -658,14 +662,14 @@
             max-width: 50%;
         }
         .row div {
-            padding: 0 5% !important;
+            padding: 0 1% !important;
         }
     }
     .courses-block .padded {
         background-size: 85%;
     }
     .courses-block .align-self-center {
-        padding: 0 5%;
+        padding: 0 5% !important;
     }
     .courses-block .it,
     .courses-block .driller {
@@ -684,7 +688,9 @@
             font-size: 21px;
         }
         .plant {
-            left: 8%;
+            display: block !important;
+            left: 4%;
+            top: 5%;
         }
     } 
     .courses-block {
