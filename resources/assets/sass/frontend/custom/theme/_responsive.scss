@@ -519,6 +519,10 @@
             padding-top: 30px;
             margin-bottom: 30px;
         }
+        .search-courses .suggestions ul li, 
+        .search-courses .vs__dropdown-menu li {
+            white-space: normal;
+        }
     }
 
     .page-destination {
@@ -726,6 +730,11 @@
         }
         .search-courses .img-book {
             top: -70%;
+        }
+
+        .search-courses .suggestions ul li, 
+        .search-courses .vs__dropdown-menu li {
+            white-space: normal;
         }
 
     }

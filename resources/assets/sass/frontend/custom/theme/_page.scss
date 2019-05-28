@@ -397,6 +397,18 @@
         max-height: 280px;
     }
 }
+.page-courses.inner {
+    .banner-block img {
+        object-fit: cover;
+    }
+    .content-block {
+        margin-top: -17%;
+        position: relative;
+        padding-bottom: 10%;
+        padding-top: 35%;
+        background: url(/img/courses/bg.png) no-repeat;
+    }
+}
 
 .page-destination {
     .banner-block {

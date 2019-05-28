@@ -73,6 +73,7 @@
                         <div class="text-center mt50" v-if="! filteredCourse.length">
             
                             <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            
                             <p class="title text-nblue fs24">No result</p>
 
                         </div>

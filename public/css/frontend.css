@@ -11479,6 +11479,19 @@ html body {
   max-height: 280px;
 }
 
+.page-courses.inner .banner-block img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-courses.inner .content-block {
+  margin-top: -17%;
+  position: relative;
+  padding-bottom: 10%;
+  padding-top: 35%;
+  background: url(/img/courses/bg.png) no-repeat;
+}
+
 .page-destination .content-block {
   margin-top: -14%;
   position: relative;
@@ -12743,6 +12756,11 @@ html body {
     margin-bottom: 30px;
   }
 
+  .page-courses .search-courses .suggestions ul li,
+  .page-courses .search-courses .vs__dropdown-menu li {
+    white-space: normal;
+  }
+
   .page-destination .for-text {
     position: relative;
     top: 0;
@@ -12966,6 +12984,11 @@ html body {
 
   .page-courses .search-courses .img-book {
     top: -70%;
+  }
+
+  .page-courses .search-courses .suggestions ul li,
+  .page-courses .search-courses .vs__dropdown-menu li {
+    white-space: normal;
   }
 
   .page-destination .for-text {
