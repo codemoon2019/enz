@@ -16,19 +16,6 @@
 
 @foreach ($country as $key => $country)
 
-@php
-switch ($country->title) {
-    case 'Australia':
-    $country_image = 'australia.svg';
-    break;
-    case 'Canada':
-    $country_image = 'canada.svg';
-    break;
-    default:
-    $country_image = 'newzealand.svg';
-}
-@endphp
-
     <div class="linkages link-{{ $country->title }} relative">
 
         <div class="container-fluid px180 pt10p relative">
@@ -56,66 +43,20 @@ switch ($country->title) {
                             <div class="card-body linear-gradient-grey">
                         
                                 <div class="row">
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/ihna.jpg')}}" class="img-fluid" alt="">
-                        
+    
+                                    @foreach ($linkages->getUploaderImages('featured', 'main') as $image)
+                                        
+                                        <div class="col-sm-3 item mb30 align-self-center">
+                            
+                                            <div class="card-body text-center">
+                            
+                                                <img data-src="{{ $image->source }}" class="img-fluid" alt="">
+                            
+                                            </div>
+                            
                                         </div>
-                        
-                                    </div>
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/acfe.jpg')}}" class="img-fluid" alt="">
-                        
-                                        </div>
-                        
-                                    </div>
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/univ-aus.png')}}" class="img-fluid" alt="">
-                        
-                                        </div>
-                        
-                                    </div>
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/ihm.png')}}" class="img-fluid" alt="">
-                        
-                                        </div>
-                        
-                                    </div>
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/elite.png')}}" class="img-fluid" alt="">
-                        
-                                        </div>
-                        
-                                    </div>
-                        
-                                    <div class="col-sm-3 item mb30">
-                        
-                                        <div class="card-body text-center">
-                        
-                                            <img data-src="{{asset('img/about/kent.png')}}" class="img-fluid" alt="">
-                        
-                                        </div>
-                        
-                                    </div>
+                            
+                                    @endforeach
                         
                                 </div>
                         
@@ -130,9 +71,10 @@ switch ($country->title) {
             </div>
 
         </div>
-        <img data-src="{{asset('svg/about/' . $country_image)}}" class="img-fluid for-image" alt="">
-    </div>
 
+        <img data-src="{{asset('svg/about/' . $country->slug . '.svg')}}" class="img-fluid for-image" alt="">
+
+    </div>
 
 @endforeach
     

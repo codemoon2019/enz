@@ -130,9 +130,131 @@ class LinkagesTableSeeder extends Seeder
             ],
         ];
 
+        $linkages = [
+            [
+                'Academia International.png',
+                'Australian Center of Further Education.jpg',
+                'Central Queensland University.png',
+                'Danford College.png',
+                'Education Training and Employment Australia.png',
+                'Institute of Health and Nursing Australia.png',
+                'Job Training Institute.png',
+                'Kent Institute.png',
+                'Original Campus.png',
+                'PAX Institute.png',
+                'RGIT.png',
+                'TMG College.png',
+                'Ultimate Institute of Australia.png',
+                'Victorian Institute of Technology.jpg',
+            ],
+            [
+                'Australian Institute of Professional Pathways.png',
+                'Australian Skills Management Institute.jpg',
+                'Australian Vocational Learning Centre.jpg',
+                'Australis Institute of Technology and Education.jpg',
+                'Central Queensland University.png',
+                'Envirotech College.jpg',
+                'Institute of Health and Nursing Australia.png',
+                'Kent Institute.png',
+                'Kingsford International Institute.png',
+                'Queensford College.jpg',
+                'Sydney City College of Management.png',
+                'Victorian Institute of Technology.jpg',
+            ],
+            [
+                'Academia International.png',
+                'Australian Skills Management Institute.jpg',
+                'Australian Skills Group.jpg',
+                'Australis Institute of Technology and Education.jpg',
+                'Axis Institute.png',
+                'Central Queensland University.png',
+                'EDUCare College.jpg',
+                'Elite Training Institute Australia.png',
+                'Everthought College of Construction.png',
+                'Imagine Education.jpg',
+                'James Cook University.jpg',
+                'Queensford College.jpg',
+                'Russo Business School.png',
+                'Sarina Russo Institute.png',
+                'Vibe College.png',
+            ],
+            [
+                'Central Queensland University.png',
+                'Everthought College of Construction.png',
+                'Institute of Health and Nursing Australia.png',
+                'Skills Australia Institute.png',
+                'Stanley College.jpg',
+            ],
+            [
+                'Australis Institute of Technology and Education.jpg',
+                'EDUCare College.jpg',
+                'Imagine Education.jpg',
+            ],
+            [
+                'Central Queensland University.png',
+                'Sheffield College.png',
+                'Skills Australia Institute.png',
+            ],
+            [
+                'Niagara College Canada.png',
+                'Lambton College.jpg',
+                'Canadore College.png',
+                'Cambrian College.png',
+            ],
+            [],
+            [
+                'Stenberg College.jpg',
+                'Sprott Shaw College.jpg',
+                'Kwantlen Polytechnic University.jpg',
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                'International College of Auckland.png',
+                'Aspire2 International.png',
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+
+        ];
+
         foreach ($data as $key => $value) {
             
             $model = Linkages::create($value);
+
+            foreach ($linkages[$key] as $key1 => $value1) {
+
+                switch ($value['country_id']) {
+
+                    case 1: $folder = 'australia'; break;
+
+                    case 2: $folder = 'canada'; break;
+                    
+                    default: $folder = 'new_zealand'; break;
+                
+                }
+
+                $this->seederUploader($model, 'country/school_partners/' . $folder. '/' . $value1, null, 'featured');
+
+            }
 
         }
 

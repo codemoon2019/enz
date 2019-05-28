@@ -2,9 +2,9 @@
 
 
 @media (min-width: 320px) and (max-width: 767px) {
-    #main {
-        padding-top: 20px;
-    }
+    // #main {
+    //     padding-top: 20px;
+    // }
     .for-desktop {
         display: none;
     }
@@ -27,9 +27,10 @@
         font-size: 6vw !important;
     }
     p, .basic {
-        font-size: 4vw;
+        font-size: 4vw !important;
     }
     .banner-block {
+        padding-top: 30px;
         margin-bottom: 30px;
         video {
             margin-bottom: 30px;
@@ -180,7 +181,7 @@
             display: none !important;
         }
         .linkages {
-            marigin-bottom: 30px;
+            margin-bottom: 30px;
         }
         .link-Australia {
             padding: 30px 0;
@@ -210,10 +211,17 @@
         }
         .search-results {
             padding-top: 30px;
-            margin-bottom: 30px;
-            .filter li,
-            .filter .btn {
-                width: 100%;
+            .filter .btn,
+            .filter .btn.default {
+                height: auto;
+                min-height: 1px;
+                padding: 0;
+                box-shadow: none;
+                line-height: 1.5;
+                border: 1px solid transparent !important;
+                img {
+                    display: none;
+                }
             }
         }
     }
@@ -241,6 +249,7 @@
 
     .page-apply {
         .banner-block{
+            padding-top: 30px;
             text-align: center;
         }
         .content-block {
@@ -248,6 +257,21 @@
             padding: 0;
             // background-image:linear-gradient(#ff7878, #eb5959);
         }
+    }
+    .page-students {
+        .gallery-block {
+            padding-top: 30px;
+        }
+    }
+    .page-students.testimonials {
+        .content-block {
+            margin-top: 0;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
+    .page-students .testimonials-block.videos {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .page-contact {
         #main {
@@ -373,6 +397,7 @@
         font-size: 2vw;
     }
     .banner-block {
+        padding-top: 30px;
         margin-bottom: 30px;
         video {
             margin-bottom: 30px;
@@ -575,6 +600,16 @@
             padding: 0;
             // background-image:linear-gradient(#ff7878, #eb5959);
         }
+    }
+    .page-students.testimonials {
+        .content-block {
+            margin-top: 0;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
+    .page-students .testimonials-block.videos {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .page-contact {
         .ph-flag {

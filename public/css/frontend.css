@@ -11481,7 +11481,6 @@ html body {
 }
 
 .page-courses.inner .banner-block img {
-  min-height: 824px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -12236,10 +12235,6 @@ html body {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  #main {
-    padding-top: 20px;
-  }
-
   .for-desktop {
     display: none;
   }
@@ -12268,10 +12263,11 @@ html body {
 
   p,
   .basic {
-    font-size: 4vw;
+    font-size: 4vw !important;
   }
 
   .banner-block {
+    padding-top: 30px;
     margin-bottom: 30px;
   }
 
@@ -12447,7 +12443,7 @@ html body {
   }
 
   .page-about-linkages .linkages {
-    marigin-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .page-about-linkages .link-Australia {
@@ -12480,12 +12476,21 @@ html body {
 
   .page-courses .search-results {
     padding-top: 30px;
-    margin-bottom: 30px;
   }
 
-  .page-courses .search-results .filter li,
-  .page-courses .search-results .filter .btn {
-    width: 100%;
+  .page-courses .search-results .filter .btn,
+  .page-courses .search-results .filter .btn.default {
+    height: auto;
+    min-height: 1px;
+    padding: 0;
+    box-shadow: none;
+    line-height: 1.5;
+    border: 1px solid transparent !important;
+  }
+
+  .page-courses .search-results .filter .btn img,
+  .page-courses .search-results .filter .btn.default img {
+    display: none;
   }
 
   .page-destination .for-text {
@@ -12511,12 +12516,27 @@ html body {
   }
 
   .page-apply .banner-block {
+    padding-top: 30px;
     text-align: center;
   }
 
   .page-apply .content-block {
     margin: 0;
     padding: 0;
+  }
+
+  .page-students .gallery-block {
+    padding-top: 30px;
+  }
+
+  .page-students.testimonials .content-block {
+    margin-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .page-students .testimonials-block.videos {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .page-contact #main {
@@ -12600,6 +12620,7 @@ html body {
   }
 
   .banner-block {
+    padding-top: 30px;
     margin-bottom: 30px;
   }
 
@@ -12814,6 +12835,16 @@ html body {
   .page-apply .content-block {
     margin: 0;
     padding: 0;
+  }
+
+  .page-students.testimonials .content-block {
+    margin-top: 0;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
+
+  .page-students .testimonials-block.videos {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .page-contact .ph-flag {

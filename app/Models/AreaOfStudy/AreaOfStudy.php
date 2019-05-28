@@ -152,6 +152,11 @@ class AreaOfStudy extends Model implements HasMedia
                 ->format(Manipulations::FORMAT_JPG)
                 ->fit(Manipulations::FIT_CROP, 364, 245);
 
+            $this->addMediaConversion('inner')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 889, 824);
+
             $this->addMediaConversion('thumbnail')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
