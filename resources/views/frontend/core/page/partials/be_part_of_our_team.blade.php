@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="block content-block" data-aos="zoom-in">
-    <div class="container-fluid jobs py80 px475 text-center">
+    <div class="container-fluid jobs px475 text-center">
   
         @foreach (Career() as $career)
 
@@ -14,7 +14,7 @@
                       <div class="card-header linear-gradient-teal">
                         <h2 class="card-title fs18 text-white mb0">{{ $career->title }}</h2>
                       </div>
-                      <div class="card-body relative">
+                      <div class="card-body linear-gradient-grey relative">
                           <div class="loc mb30">
                               <p class="title fs18 text-black">Locations</p>
                               <p class="basic fs15">{{ $career->location }}</p>

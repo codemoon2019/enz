@@ -136,7 +136,7 @@
 <div class="block values-block"  data-aos="zoom-in">
 
     <div class="container-fluid py80 px475 text-center">
-        <h2 class="title text-yellow text-capitalize fs40 mb30">Our core values</h2>
+        <h2 class="title text-nblue text-capitalize fs40 mb30">Our core values</h2>
 
         <div class="row">
     

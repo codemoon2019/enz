@@ -11038,7 +11038,7 @@ html body {
 .page-about-company .content-block {
   margin-top: -17%;
   position: relative;
-  padding-bottom: 7%;
+  padding-bottom: 23%;
   padding-top: 0;
   background: url(/img/about/our-company-bg.png) no-repeat;
 }
@@ -11183,7 +11183,7 @@ html body {
   background-repeat: no-repeat;
   background-position: top;
   padding-bottom: 20px;
-  padding-top: 10%;
+  padding-top: 10.5%;
 }
 
 .page-about-linkages .linkages .for-image {
@@ -11288,7 +11288,8 @@ html body {
 }
 
 .tourist-visa .modal-content {
-  border-radius: 10px;
+  border-radius: 35px;
+  border: none;
 }
 
 .tourist-visa .modal-content .close {
@@ -11296,18 +11297,18 @@ html body {
 }
 
 .tourist-visa .modal-content .card {
-  border-radius: 10px;
-  border: 1px solid transparent;
+  border-radius: 35px;
+  border: none;
 }
 
 .tourist-visa .modal-content .card-header {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
 }
 
 .tourist-visa .modal-content .card-body {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 
 .page-courses .search-courses {
@@ -11423,7 +11424,6 @@ html body {
 .page-courses .search-results {
   margin-top: -5%;
   margin-bottom: 50px;
-  border-bottom: 1px solid #ddd;
 }
 
 .page-courses .search-results .card {
@@ -11433,6 +11433,12 @@ html body {
 
 .page-courses .search-results .card .for-logo img {
   max-height: 120px;
+}
+
+.page-courses .search-results .card,
+.page-courses .search-results .card-header {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
 }
 
 .page-courses .search-results .course-info th,
@@ -11465,9 +11471,8 @@ html body {
 }
 
 .page-courses .search-results .filter .btn.default {
-  height: 100%;
   max-height: 134px;
-  line-height: 42px;
+  line-height: 50px;
   padding: 10px 30px;
 }
 
@@ -11493,6 +11498,12 @@ html body {
   background: url(/img/courses/bg.png) no-repeat;
 }
 
+.page-courses.inner .card,
+.page-courses.inner .card-header {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
 .page-destination .content-block {
   margin-top: -14%;
   position: relative;
@@ -11511,7 +11522,7 @@ html body {
 
 .page-destination .for-text {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 10%;
 }
 
@@ -11548,6 +11559,7 @@ html body {
 
 .page-destination .more-info .card {
   border: none;
+  border-radius: 0;
   border-top-left-radius: 12px !important;
   border-top-right-radius: 12px !important;
   z-index: 1;
@@ -11790,6 +11802,7 @@ html body {
 
 .page-students .testimonials-block.videos {
   padding-top: 0;
+  padding-bottom: 5%;
   background: transparent;
 }
 
@@ -11918,6 +11931,10 @@ html body {
 
 .page-students.gallery .slick-dots li button {
   display: none;
+}
+
+.page-students.gallery .modal-content {
+  border-radius: 35px;
 }
 
 .page-contact #main {

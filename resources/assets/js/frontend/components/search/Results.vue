@@ -14,9 +14,7 @@
                         
                         <a data-toggle="tab" href="#all" class="btn mb30 default active show">
                             
-                            All
-                            <br>
-                            <span>({{ filteredCourse.length }})</span>
+                            All <span>({{ filteredCourse.length }})</span>
 
                         </a>
                         
@@ -26,9 +24,7 @@
 
                         <a data-toggle="tab" href="#australia" class="btn mb30">
                         
-                            <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt=""> Australia
-                            <br>
-                            <span>({{ australia.length }})</span>
+                            <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt=""> Australia <span>({{ australia.length }})</span>
 
                         </a>
                     
@@ -38,9 +34,7 @@
                     
                         <a data-toggle="tab" href="#canada" class="btn mb30">
                     
-                            <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt=""> Canada
-                            <br>
-                            <span>({{ canada.length }})</span>
+                            <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt=""> Canada <span>({{ canada.length }})</span>
                     
                         </a>
                     
@@ -50,9 +44,7 @@
                     
                         <a data-toggle="tab" href="#new_zealand" class="btn mb30">
                     
-                            <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt=""> New Zealand
-                            <br>
-                            <span>({{ new_zealand.length }})</span>
+                            <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt=""> New Zealand <span>({{ new_zealand.length }})</span>
                     
                         </a>
                     

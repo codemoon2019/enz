@@ -66,7 +66,7 @@
                         
                         <div class="row mb30">
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                             
                                 <h2 class="title text-black fs24">{{ $location->title }} Office</h2>
                             
@@ -78,11 +78,11 @@
                             
                                     <li class="text-black loc">{!! $location->address !!}</li> 
                                 
-                                    @foreach ($location->contacts as $contact)
+                                    @foreach ($location->contacts as $key=> $contact)
     
                                         @if (!$loop->last)
 
-                                            <li class="text-black tel">{{ $contact }}</li>
+                                            <li class="text-black {{ $key == 0 ? 'tel' : ''}}">{{ $contact }}</li>
                                         
                                         @endif
 
