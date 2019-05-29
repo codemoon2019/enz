@@ -1,4 +1,4 @@
-@if ($content->body != null)
+{{-- @if ($content->body != null)
 
 	@php
 		
@@ -39,4 +39,4 @@
 
 	</div>
 
-@endif
+@endif --}}

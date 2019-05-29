@@ -18,8 +18,6 @@ use App\Models\Core\Block\Block;
 
 use App\Models\TemplateProperty;
 
-use App\Models\Property\Property;
-
 class TemplateController extends Controller
 {
     public function add(Request $request)
@@ -36,8 +34,6 @@ class TemplateController extends Controller
 
             case 'Block': $model = Block::find($data['model_id']); break;
 
-            case 'Property': $model = Property::find($data['model_id']); break;
-    		
     		default: break;
     	}
 

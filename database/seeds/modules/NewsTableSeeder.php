@@ -4,6 +4,10 @@ use App\Models\News\News;
 use Illuminate\Database\Seeder;
 use HalcyonLaravel\Base\Database\Traits\SeederHelper;
 
+use App\Models\Content\Content;
+use App\Models\TemplateProperty;
+
+
 /**
  * Class NewsTableSeeder
  */
@@ -65,6 +69,17 @@ class NewsTableSeeder extends Seeder
             $model = News::create($value);
 
             $this->seederUploader($model, 'news/news'.($key+1).'.jpg', null, 'featured');
+
+            $content = $model->contents()->save(new Content([
+                'title'    => 'image', 
+                'template' => 'image', 
+                'body'     => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, quaerat inventore atque iusto ex minima molestias quisquam incidunt, hic blanditiis, corrupti, mollitia sint facilis esse accusamus. Aspernatur ratione sit ut voluptatibus eligendi tempora enim obcaecati consequatur explicabo adipisci nemo similique itaque sapiente repudiandae dignissimos, ducimus quasi. Eos aliquam, neque culpa.</p>',
+                'order'    => 1
+            ]));
+
+            $this->seederUploader($content, 'event/featured.jpg', null, 'images');
+
+            $content->property()->save(new TemplateProperty(['image_align' => 'center']));
 
             $model->metaTag()->create([
 

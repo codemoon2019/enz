@@ -1,48 +1,20 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-events")
+@section('page_class', "page page-news")
 
 @section('content')
+    
+    <div class="container pt50">
 
-    <div class="banner-block banner relative">
-
-        <div class="container-fluid px180 pt50">
+        <h1 class="title fs35">{{ $model->title }}</h1>
         
-            <div class="row">
-        
-                <div class="col-lg-7">
+        <div class="basic text-black text-justify mb30">
             
-                    <img data-src="{{asset('img/services/student-visa.png')}}" class="img-fluid" alt="">
-            
-                </div>
-            
-                <div class="col-lg-5 pt80">
-            
-                    <h1 class="title title-large text-black mb30 text-capitalize">Events</h1>
-            
-                    <p class="basic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt tempora maiores culpa eaque pariatur debitis minus magni delectus nostrum?</p>
-
-                    {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
-
-                </div>
-
-            </div>
+            {!!  $model->description !!}
 
         </div>
 
-    </div>
-
-    <div class="block content-block" data-aos="zoom-in">
-
-        <div class="container-fluid py80 px475 text-center">
-        
-            <div class="row justify-content-center">
-                
-                
-
-            </div>
-
-        </div>
+        @include('frontend.includes.templates.index')
 
     </div>
 

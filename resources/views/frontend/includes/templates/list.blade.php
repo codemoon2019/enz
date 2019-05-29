@@ -1,4 +1,4 @@
-<section id="ml-residentialsub" class="block block--life-residentialsub container d-flex align-items-center">
+{{-- <section id="ml-residentialsub" class="block block--life-residentialsub container d-flex align-items-center">
 
 	<div class="row">
 
@@ -44,4 +44,4 @@
 
 	</div>
 
-</section>
+</section> --}}

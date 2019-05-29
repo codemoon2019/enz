@@ -1,9 +1,5 @@
-<div class="mw-1200">
-
-    <div class="basic">
-
-        {!! $content->body !!}
-
-    </div>
+<div class="basic text-black text-justify mb30">
+    
+    {!! $content->body !!}
 
 </div>
