@@ -36,7 +36,7 @@
             
             @foreach ($models as $event)
                 
-                <div class="row item">
+                <div class="row item mb30">
 
                     <div class="col-sm-4 for-image">
                     

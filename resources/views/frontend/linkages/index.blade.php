@@ -18,7 +18,7 @@
 
     <div class="linkages link-{{ $country->title }} relative">
 
-        <div class="container-fluid px180 pt10p relative">
+        <div class="container-fluid px180 relative">
 
             <h2 class="title text-white fs40">{{ $country->title }}</h2>
             
@@ -72,7 +72,7 @@
 
         </div>
 
-        <img data-src="{{asset('svg/about/' . $country->slug . '.svg')}}" class="img-fluid for-image" alt="">
+        {{-- <img data-src="{{asset('svg/about/' . $country->slug . '.svg')}}" class="img-fluid for-image" alt=""> --}}
 
     </div>
 

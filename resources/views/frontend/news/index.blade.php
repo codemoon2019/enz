@@ -39,7 +39,7 @@
 
 				@foreach ($models as $news)
 	                
-	                <div class="col-lg-3 col-md-6 item mb40">
+	                <div class="col-lg-3 col-md-6 item mb30">
 
 	                    <div class="card">
 
