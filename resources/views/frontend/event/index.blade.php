@@ -14,16 +14,14 @@
             
                     <img data-src="{{asset('img/services/student-visa.png')}}" class="img-fluid" alt="">
                     
-                </div>
-                
+                </div>                
+
                 <div class="col-lg-5 pt80">
-                    
+            
                     <h1 class="title title-large text-black mb30 text-capitalize">Events</h1>
-                    
-                    <p class="basic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt tempora maiores culpa eaque pariatur debitis minus magni delectus nostrum?</p>
-                    
-                    {{-- <a href="#" class="btn btnread-more text-uppercase">Read more</a> --}}
-                    
+            
+                    {!! $page->description !!}
+
                 </div>
                 
             </div>
@@ -36,18 +34,35 @@
         
         <div class="container-fluid py80 px180">
             
-            <div class="row item">
-                <div class="col-sm-4 for-image">
-                    <img data-src="{{asset('img/events/Laoag.jpg')}}" class="img-fluid" alt="">
-                </div>
-                <div class="col-sm-8 for-text">
-                    <h2 class="title fs24">FREE CAREER ORIENTATION IN LAOAG CITY! #StudyAbroadPH</h2>
-                    <p class="basic">22 Jun</p>
-                    <p class="basic">Be ahead of the game and say yes to a brighter future! Gain your world class qualification this year to enhance your opportunities here and abroad! Join us in our free orientation in Laoag City to know more about why Australia, New Zealand or...</p>
-                    <a href="#" class="btn btnread-more text-uppercase">Read more</a>
-                </div>
+            @foreach ($models as $event)
+                
+                <div class="row item">
 
-            </div>
+                    <div class="col-sm-4 for-image">
+                    
+                        <img data-src="{{ $event->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                    
+                    </div>
+                    
+                    <div class="col-sm-8 for-text">
+                    
+                        <h2 class="title fs24">{{ $event->title }}</h2>
+                    
+                        <p class="basic">{{ $event->event_date->format('d M') }}</p>
+                    
+                        <div class="basic">
+                    
+                            {{ $event->description }}
+                    
+                        </div>
+
+                        <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+                    
+                    </div>
+
+                </div>
+           
+            @endforeach
 
         </div>
 

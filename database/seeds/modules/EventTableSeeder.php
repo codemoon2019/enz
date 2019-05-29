@@ -28,6 +28,8 @@ class EventTableSeeder extends Seeder
 
         $page = $this->modelPageSeeder(new Event);
 
+        $page->update(['description' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit explicabo consequatur maxime amet laborum! Magnam neque sapiente in quibusdam excepturi fuga tenetur quam harum magni, tempore aut dolorum dolores dolore reiciendis, tempora laborum esse. Officiis consequatur exercitationem voluptas quisquam nisi ea a soluta sit, ex, incidunt delectus rerum obcaecati veritatis!</p>']);
+
         $this->seedToDomainables($page, 'main');
 
         $data = [
