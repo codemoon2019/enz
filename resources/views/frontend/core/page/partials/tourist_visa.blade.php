@@ -16,7 +16,7 @@
                 
                 {!! $page->description !!}
             
-                <a href="#" class="btn btnread-more text-uppercase"  data-toggle="modal" class="modal-trigger" data-target="#myModal">Sign up now!</a>
+                <a href="#" class="btn btnread-more text-uppercase" data-toggle="modal" class="modal-trigger" data-target="#myModal">Sign up now!</a>
 
             </div>
 
@@ -60,13 +60,14 @@
     </div>
 
 </div>
+
 <div class="modal fade" id="myModal">
 
-        <div class="modal-dialog">
-        
-            <div class="modal-content">
+    <div class="modal-dialog">
+    
+        <div class="modal-content">
 
-            
+        
             <div class="modal-body p0">
                 
                 <div class="block application-block">
@@ -78,80 +79,80 @@
                             <div class="card-header linear-gradient-teal">
                                 
                                 <button type="button" class="close pull-right text-white" data-dismiss="modal">&times;</button>
+                                
                                 <h2 class="card-title fs18 text-white mb0">Sign up now</h2>
                 
-                                </div>
+                            </div>
                 
-                                <div class="card-body relative linear-gradient-grey">
+                            <div class="card-body relative linear-gradient-grey">
+            
+                                <form action="{{ route('frontend.tourist-visa-inquiries.inquiry') }}" method="post" id="tourist-inquiry-form">
+                                    
+                                    {{ csrf_field() }}
+            
+                                    <div class="form-group">
+            
+                                        <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
+            
+                                        <input type="text" class="form-control tourist-inquiry-field" name="first_name" id="tourist_first_name" placeholder="">
+            
+                                    </div>
+            
+                                    <div class="form-group">
+            
+                                        <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
+            
+                                        <input type="text" class="form-control tourist-inquiry-field" name="last_name" id="tourist_last_name" placeholder="">
+            
+                                    </div>
+            
+                                    <div class="form-group">
+            
+                                        <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
+            
+                                        <input type="email" class="form-control tourist-inquiry-field" name="email_address" id="tourist_email_address" placeholder="">
+            
+                                    </div>
+            
+                                    <div class="form-group">
+            
+                                        <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
+            
+                                        <input type="text" class="form-control tourist-inquiry-field" name="mobile_number" id="tourist_mobile_number" placeholder="">
+            
+                                    </div>
+            
+                                    <div class="form-group">
+            
+                                        <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
+            
+                                        <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder="">
+            
+                                    </div>
+            
+        
+                                    <div class="form-group">
+        
+                                        <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
+        
+                                        <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
+        
+                                    </div>
+
                 
-                                    <form action="{{ route('frontend.tourist-visa-inquiries.inquiry') }}" method="post" id="tourist-inquiry-form">
-                                        
-                                        {{ csrf_field() }}
+                                    <div class=" text-center">
                 
-                                        <div class="form-group">
+                                        <a href="javascript:;" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</a>
                 
-                                            <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
+                                    </div>
+            
+                                </form>
                 
-                                            <input type="text" class="form-control tourist-inquiry-field" name="first_name" id="tourist_first_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="last_name" id="tourist_last_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
-                
-                                            <input type="email" class="form-control tourist-inquiry-field" name="email_address" id="tourist_email_address" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="mobile_number" id="tourist_mobile_number" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <div class="form-group">
-                
-                                                <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
-                
-                                                <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
-                
-                                            </div>
-                                        </div>
-                    
-                                        <div class=" text-center">
-                    
-                                            <a href="javascript:;" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</a>
-                    
-                                        </div>
-                
-                                    </form>
-                    
-                                </div>
-                    
                             </div>
                     
                         </div>
+                
+                    </div>
                     
                 </div>
 
@@ -162,8 +163,6 @@
     </div>
 
 </div>
-
-
 
 @push('after-scripts')
 
