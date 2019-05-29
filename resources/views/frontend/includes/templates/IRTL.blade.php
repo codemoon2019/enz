@@ -1,4 +1,4 @@
-@php $image_area = $content->property->image_area; @endphp
+{{-- @php $image_area = $content->property->image_area; @endphp
 
 @if ($image_area == 6)
 
@@ -29,4 +29,4 @@
     
     </div>
 
-@endif
+@endif --}}

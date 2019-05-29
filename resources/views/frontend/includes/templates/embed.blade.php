@@ -1,6 +1,4 @@
-{{-- <iframe src="{{ $content->body }}" frameborder="0" style="width: 100%; min-height: 500px;"></iframe> --}}
-
-@switch($template_type)
+{{-- @switch($template_type)
 
     @case('home')
     
@@ -46,3 +44,4 @@
     @default
 
 @endswitch
+ --}}

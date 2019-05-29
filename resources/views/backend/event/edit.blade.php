@@ -1,35 +1,43 @@
 @extends('backend.layouts.app')
 
+@push('after-styles')
+
+<style>
+
+    .card-title{ display: none; }
+
+    .card-body hr{ display: none;}
+
+</style>
+
+@endpush
+
 @section('content')
 
-    @component('backend.includes.widgets.form')
+    @component('backend.includes.widgets.box-model')
 
-        @slot('url', route($routePath . '.update', $model))
-        @slot('model', $model)
-        @slot('method', 'PATCH')
-        @slot('form_id', 'event-form')
-        @slot('title', 'Edit ' . $model->title )
-        @slot('secondary_title', 'Event Management')
+        @slot('content')
 
-        @slot('fields', $viewPath . '.partials.fields')
-        @slot('link_cancel', route($routePath . '.show', $model))
-
-        @slot('link_submit', 'Save')
-        @slot('link_submit_edit', 'Save & Continue')
-
-        @slot('custom')
-            @include('backend.includes.widgets.tab-actions', [ 
-                'name' => 'More Info',
+            @include('backend.includes.widgets.tabs', [
                 'links' => [
                     [
-                        'name' => 'Meta',
-                        'template' => 'backend.core.meta.form',
-                        'args' => ['meta' => $model->metaTag]
-                    ]
+                        'name' => 'Basic Details',
+                        'template' => 'backend.event.partials.edit',
+                        'icon' => 'fa fa-user',
+                        'args' => [ 'model' => $model ]
+                    ],
+                    [
+                        'name'     => 'Templates',
+                        'template' => 'backend.includes.templates.index',
+                        'icon' => 'fa fa-cart-arrow-down',
+                        'args'     => [ 'model' => $model ]
+                    ],
                 ]
             ])
+
         @endslot
 
     @endcomponent
+
 @endsection
 
