@@ -247,6 +247,17 @@
 
                         @endcan
       
+                        @can(app(App\Models\Award\Award::class)::permission('index'))
+                        
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/awards*')) }}"
+                                   href="{{ route(app(App\Models\Award\Award::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                    <i class="nav-icon fa fa-circle-o"></i> Awards
+                                </a>
+                            </li>
+
+                        @endcan
+      
                         @can(app(App\Models\Details\Details::class)::permission('index'))
                         
                             <li class="nav-item">
