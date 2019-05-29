@@ -12276,7 +12276,12 @@ html body {
   }
 
   .banner-block {
+    text-align: center;
     padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .banner-block img {
     margin-bottom: 30px;
   }
 
@@ -12576,6 +12581,16 @@ html body {
   .page-contact .for-map .card-body {
     height: 100vh;
   }
+
+  .page-courses.inner .search-results {
+    margin-bottom: 0 !important;
+  }
+
+  .page-courses.inner .content-block {
+    margin-top: 0;
+    padding: 15px !important;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+  }
 }
 
 @media (min-width: 640px) {
@@ -12629,7 +12644,12 @@ html body {
   }
 
   .banner-block {
+    text-align: center;
     padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .banner-block img {
     margin-bottom: 30px;
   }
 
@@ -12862,6 +12882,16 @@ html body {
 
   .page-contact .for-map .card-body {
     height: 100vh;
+  }
+
+  .page-courses.inner .search-results {
+    margin-bottom: 0 !important;
+  }
+
+  .page-courses.inner .content-block {
+    margin-top: 0;
+    padding: 15px !important;
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
   }
 }
 
