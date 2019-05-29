@@ -20,7 +20,7 @@
                     
                     <p class="basic">{{ str_limit($why->description, 85) }}</p>
                     
-                    <a href="#" class="btn btnview-more text-uppercase">Read more</a>
+                    <a href="{{ $why->url }}" class="btn btnview-more text-uppercase">Read more</a>
                 
                 </div>
             
@@ -44,7 +44,7 @@
         
                     <p class="basic">{{ str_limit($why->description, 85) }}</p>
         
-                    <a href="#" class="btn btnview-more text-uppercase">Read more</a>
+                    <a href="{{ $why->url }}" class="btn btnview-more text-uppercase">Read more</a>
         
                 </div>
         

@@ -271,7 +271,7 @@ class LinkagesTableSeeder extends Seeder
                 
                 }
 
-                // $this->seederUploader($model, 'country/school_partners/' . $folder. '/' . $value1, null, 'featured');
+                $this->seederUploader($model, 'country/school_partners/' . $folder. '/' . $value1, null, 'featured');
 
             }
 

@@ -42,7 +42,7 @@
     
             <div class="text-center">
     
-                <a href="#" class="btn btnview-more text-uppercase">View more</a>
+                <a href="{{ route('frontend.news.index') }}" class="btn btnview-more text-uppercase">View more</a>
     
             </div>
     

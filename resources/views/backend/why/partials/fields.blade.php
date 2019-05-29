@@ -22,6 +22,18 @@
     
         <div class="form-group row">
     
+            <label class="col-md-2 form-control-label">Url <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="url" class="form-control" value="{{ isset($model) ? $model->url : old('url') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
             <label class="col-md-2 form-control-label">Description</label>
     
             <div class="col-md-10">
