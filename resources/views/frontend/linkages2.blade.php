@@ -16,6 +16,10 @@
                 </div>
             </div>
         </div>
+        {{-- for news --}}
+        <div class="news-img text-center">
+            <img alt="" class="img-fluid" src="http://www.enz.com.ph/sites/default/files/images/Fotolia_114204877_Subscription_Monthly_M.jpg" style="">
+        </div>
     </div>
 </div>
 
