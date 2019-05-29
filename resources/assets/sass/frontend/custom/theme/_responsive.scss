@@ -30,8 +30,12 @@
         font-size: 4vw !important;
     }
     .banner-block {
+        text-align: center;
         padding-top: 30px;
         margin-bottom: 30px;
+        img {
+            margin-bottom: 30px;
+        }
         video {
             margin-bottom: 30px;
             transform: translateX(-28%);
@@ -299,6 +303,16 @@
             height: 100vh;
         }
     }
+    .page-courses.inner {
+        .search-results {
+            margin-bottom: 0 !important;
+        }
+        .content-block {
+            margin-top: 0;
+            padding: 15px !important;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
 
 }
 
@@ -397,8 +411,12 @@
         font-size: 2vw;
     }
     .banner-block {
+        text-align: center;
         padding-top: 30px;
         margin-bottom: 30px;
+        img {
+            margin-bottom: 30px;
+        }
         video {
             margin-bottom: 30px;
             transform: translateX(-15%);
@@ -617,6 +635,16 @@
         }
         .for-map .card-body {
             height: 100vh;
+        }
+    }
+    .page-courses.inner {
+        .search-results {
+            margin-bottom: 0 !important;
+        }
+        .content-block {
+            margin-top: 0;
+            padding: 15px !important;
+            background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
     }
 
