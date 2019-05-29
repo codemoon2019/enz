@@ -36,6 +36,30 @@
 
 		    @break
 
+	    @case('Expertise')
+
+			@section('page_class', "page page-expertise")
+
+			@include('frontend.core.page.partials.expertise')	
+
+		    @break
+
+	    @case('Customer Service')
+
+			@section('page_class', "page page-customer-service")
+
+			@include('frontend.core.page.partials.customer_service')	
+
+		    @break
+
+	    @case('Payment Scheme')
+
+			@section('page_class', "page page-payment-scheme")
+
+			@include('frontend.core.page.partials.payment_scheme')	
+
+		    @break
+
 	    @case('Contact Us')
 
 			@section('page_class', "page page-contact")
