@@ -11231,7 +11231,7 @@ html body {
 }
 
 .page-events .content-block {
-  margin-top: -17.5%;
+  margin-top: -18%;
   position: relative;
   padding-top: 30%;
   background: url(/img/news/bg.png) no-repeat;
@@ -12001,6 +12001,15 @@ html body {
 .page-contact .connect-block img:hover {
   opacity: 1;
   transition: all ease 300ms;
+}
+
+.page-awards .why-choose-block .svg-holder {
+  background: #fff;
+  align-items: center;
+}
+
+.page-awards .why-choose-block .svg-holder img {
+  max-width: 110px;
 }
 
 .footer .btnread-more {
@@ -13106,6 +13115,10 @@ html body {
   .page-students .testimonials-block.videos {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .page-events .content-block {
+    padding-top: 40%;
   }
 }
 

@@ -179,7 +179,7 @@
 }
 .page-events {
     .content-block {
-        margin-top: -17.5%;
+        margin-top: -18%;
         position: relative;
         padding-top: 30%;
         background: url(/img/news/bg.png) no-repeat;
@@ -860,6 +860,16 @@
                 opacity: 1;
                 transition: all ease 300ms;
             }
+        }
+    }
+}
+
+.page-awards {
+    .why-choose-block .svg-holder {
+        background: $white;
+        align-items: center;
+        img {
+            max-width: 110px;
         }
     }
 }
