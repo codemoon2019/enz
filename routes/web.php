@@ -6,9 +6,19 @@
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');
 
-// Route::get('gallery',function(){
-//     return view('frontend.gallery');
-// });
+
+Route::get('linkages2',function(){
+    return view('frontend.linkages2');
+});
+Route::get('linkages3',function(){
+    return view('frontend.linkages3');
+});
+Route::get('linkages4',function(){
+    return view('frontend.linkages4');
+});
+Route::get('linkages5',function(){
+    return view('frontend.linkages5');
+});
 
 /*
  * Frontend Routes

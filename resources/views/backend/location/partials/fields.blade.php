@@ -72,3 +72,15 @@
     </div>
 
 </div>
+
+@push('after-scripts')
+
+    @include('backend.includes.ckeditor')
+
+    <script>
+
+        CKEDITOR.replace('contact', options);
+        
+    </script>
+
+@endpush

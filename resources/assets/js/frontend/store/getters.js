@@ -102,7 +102,15 @@ export default {
 
 	suggestions: (state, getters) => {
 
-		return getters.filteredCourse.slice(0, 10);
+		let suggestions = [];
+
+		getters.filteredCourse.forEach(function(el){
+
+			suggestions.push(el.title);
+
+		});
+
+		return Array.from(new Set(suggestions)).slice(0, 10);
 
 	},
 

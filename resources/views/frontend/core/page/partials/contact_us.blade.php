@@ -77,8 +77,17 @@
                                 <ul class="list-unstyled">
                             
                                     <li class="text-black loc">{!! $location->address !!}</li> 
+                                
+                                    @foreach ($location->contacts as $contact)
+    
+                                        @if (!$loop->last)
 
-                                    <li class="text-black tel">{{ $location->contact }}</li>
+                                            <li class="text-black tel">{{ $contact }}</li>
+                                        
+                                        @endif
+
+                                    @endforeach
+
                                 </ul>
 
                             </div>
@@ -183,9 +192,9 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
 
-        zoom: 5, 
+        zoom: 6, 
 
-        center: {lat: 13.598606, lng: 122.176126},
+        center: {lat: 12.015480, lng: 121.929051},
 
         styles : [
                     {

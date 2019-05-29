@@ -3916,11 +3916,11 @@ var render = function() {
                             staticClass: "cursor-pointer",
                             on: {
                               click: function($event) {
-                                _vm.suggestionClick(suggestion.title)
+                                _vm.suggestionClick(suggestion)
                               }
                             }
                           },
-                          [_vm._v(_vm._s(suggestion.title))]
+                          [_vm._v(_vm._s(suggestion))]
                         )
                       }),
                       0
@@ -20177,7 +20177,11 @@ __webpack_require__.r(__webpack_exports__);
     return areas;
   },
   suggestions: function suggestions(state, getters) {
-    return getters.filteredCourse.slice(0, 10);
+    var suggestions = [];
+    getters.filteredCourse.forEach(function (el) {
+      suggestions.push(el.title);
+    });
+    return Array.from(new Set(suggestions)).slice(0, 10);
   },
   showResult: function showResult(state) {
     return !(state.course_name == '' && state.institution_name == null && state.area_name == null);

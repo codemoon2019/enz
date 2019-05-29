@@ -38,7 +38,7 @@
 
 						<ul class="list-unstyled" v-if="filteredCourse.length">
 
-							<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion.title)">{{ suggestion.title }}</li>
+							<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion)">{{ suggestion }}</li>
 						
 						</ul>
 
@@ -133,7 +133,7 @@ export default {
 	            this.$store.commit('updateAreaName', value)
 
 	        }
-	    }
+	    },
 
 	},
 

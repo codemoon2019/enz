@@ -64,6 +64,16 @@ class LinkagesTableSeeder extends Seeder
                 'order' => 5,
             ],
             [
+                'title' => 'Cairns',
+                'country_id' => 1,
+                'order' => 6,
+            ],
+            [
+                'title' => 'Canberra',
+                'country_id' => 1,
+                'order' => 7,
+            ],
+            [
                 'title' => 'Ontario',
                 'country_id' => 2,
                 'order' => 0,
@@ -196,6 +206,14 @@ class LinkagesTableSeeder extends Seeder
                 'Skills Australia Institute.png',
             ],
             [
+                'Cairns College of English and Business.png',
+                'Central Queensland University.png',
+                'James Cook University.jpg',
+            ],
+            [
+                'Canberra Institute of Technology.jpg',
+            ],
+            [
                 'Niagara College Canada.png',
                 'Lambton College.jpg',
                 'Canadore College.png',
@@ -207,6 +225,7 @@ class LinkagesTableSeeder extends Seeder
                 'Sprott Shaw College.jpg',
                 'Kwantlen Polytechnic University.jpg',
             ],
+
             [],
             [],
             [],
