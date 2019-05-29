@@ -51,7 +51,7 @@ $('document').ready(function(){
       {
         breakpoint: 600,
         settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
         }
       },
@@ -71,7 +71,8 @@ $('document').ready(function(){
     arrows: false,
     fade: true,
     dots: false,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    
   });
   $('.slider-nav').slick({
     slidesToShow: 3,
@@ -79,7 +80,7 @@ $('document').ready(function(){
     asNavFor: '.slider-for',
     dots: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
   });
 
   $('.left.myarrow').click(function(){

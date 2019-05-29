@@ -10,13 +10,13 @@
 
             <div class="row">
 
-                <div class="col-sm-7">
+                <div class="col-lg-7">
 	
 	                <img data-src="{{asset('img/students/banner.png')}}" class="img-fluid" alt="">
     
                 </div>
     
-                <div class="col-sm-5 pt80">
+                <div class="col-lg-5 pt80">
     
                     <h1 class="title title-large text-black mb30 text-capitalize">Student life</h1>
     
@@ -64,13 +64,13 @@
                     
                     <div class="row d-flex item mx-auto mb30">
                     
-                        <div class="col-sm-6 profile-pic text-center text-white">
+                        <div class="col-6 profile-pic text-center text-white">
                     
                             <img data-src="{{ $testimony->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
                     
                         </div>
                     
-                        <div class="col-sm-6 details">
+                        <div class="col-6 details">
                     
                             <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>                    
                     

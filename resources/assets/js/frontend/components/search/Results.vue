@@ -12,7 +12,7 @@
 
                     <li>
                         
-                        <a data-toggle="tab" href="#all" class="btn default active show">
+                        <a data-toggle="tab" href="#all" class="btn mb30 default active show">
                             
                             All
                             <br>
@@ -24,7 +24,7 @@
 
                     <li>
 
-                        <a data-toggle="tab" href="#australia" class="btn">
+                        <a data-toggle="tab" href="#australia" class="btn mb30">
                         
                             <img src="/svg/courses/aussie.svg" class="img-fluid mr10" alt=""> Australia
                             <br>
@@ -36,7 +36,7 @@
 
                     <li>
                     
-                        <a data-toggle="tab" href="#canada" class="btn">
+                        <a data-toggle="tab" href="#canada" class="btn mb30">
                     
                             <img src="/svg/courses/canada.svg" class="img-fluid mr10" alt=""> Canada
                             <br>
@@ -48,7 +48,7 @@
 
                     <li>
                     
-                        <a data-toggle="tab" href="#new_zealand" class="btn">
+                        <a data-toggle="tab" href="#new_zealand" class="btn mb30">
                     
                             <img src="/svg/courses/NZ.svg" class="img-fluid mr10" alt=""> New Zealand
                             <br>

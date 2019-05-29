@@ -220,6 +220,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['course'],
   methods: {
@@ -3728,24 +3732,26 @@ var render = function() {
                 _vm._v(_vm._s(_vm.limit_text(_vm.course.description)))
               ]),
               _vm._v(" "),
-              _c("table", { staticClass: "table table-borderless" }, [
-                _vm._m(0),
-                _vm._v(" "),
-                _c("tbody", [
-                  _c("tr", [
-                    _c("td", { staticClass: "basic fs15" }, [
-                      _vm._v(_vm._s(_vm.course.career_opportunities))
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "basic fs15" }, [
-                      _vm._v(_vm._s(_vm.course.duration))
-                    ]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "basic fs15" }, [
-                      _vm._v(_vm._s(_vm.course.availability))
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(1)
+              _c("div", { staticClass: "table-responsive" }, [
+                _c("table", { staticClass: "table table-borderless" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", { staticClass: "basic fs15" }, [
+                        _vm._v(_vm._s(_vm.course.career_opportunities))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "basic fs15" }, [
+                        _vm._v(_vm._s(_vm.course.duration))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "basic fs15" }, [
+                        _vm._v(_vm._s(_vm.course.availability))
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ])
                   ])
                 ])
               ])
@@ -3828,7 +3834,7 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _c(
           "div",
-          { staticClass: "col-sm-4 mb30" },
+          { staticClass: "col-lg-4 mb30" },
           [
             _c("h2", { staticClass: "title text-white fs18" }, [
               _vm._v("Area of Study")
@@ -3850,7 +3856,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-sm-4 mb30" },
+          { staticClass: "col-lg-4 mb30" },
           [
             _c("h2", { staticClass: "title text-white fs18" }, [
               _vm._v("Institution")
@@ -3870,7 +3876,7 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm-4 mb30" }, [
+        _c("div", { staticClass: "col-lg-4 mb30" }, [
           _c("h2", { staticClass: "title text-white fs18" }, [
             _vm._v("Course Title")
           ]),
@@ -3983,7 +3989,7 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        staticClass: "btn default active show",
+                        staticClass: "btn mb30 default active show",
                         attrs: { "data-toggle": "tab", href: "#all" }
                       },
                       [
@@ -4003,7 +4009,7 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        staticClass: "btn",
+                        staticClass: "btn mb30",
                         attrs: { "data-toggle": "tab", href: "#australia" }
                       },
                       [
@@ -4025,7 +4031,7 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        staticClass: "btn",
+                        staticClass: "btn mb30",
                         attrs: { "data-toggle": "tab", href: "#canada" }
                       },
                       [
@@ -4047,7 +4053,7 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        staticClass: "btn",
+                        staticClass: "btn mb30",
                         attrs: { "data-toggle": "tab", href: "#new_zealand" }
                       },
                       [
