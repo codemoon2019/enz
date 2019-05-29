@@ -11231,7 +11231,7 @@ html body {
 }
 
 .page-events .content-block {
-  margin-top: -17.5%;
+  margin-top: -18%;
   position: relative;
   padding-top: 30%;
   background: url(/img/news/bg.png) no-repeat;
@@ -13115,6 +13115,10 @@ html body {
   .page-students .testimonials-block.videos {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .page-events .content-block {
+    padding-top: 40%;
   }
 }
 
