@@ -12003,6 +12003,15 @@ html body {
   transition: all ease 300ms;
 }
 
+.page-awards .why-choose-block .svg-holder {
+  background: #fff;
+  align-items: center;
+}
+
+.page-awards .why-choose-block .svg-holder img {
+  max-width: 110px;
+}
+
 .footer .btnread-more {
   min-width: 147px;
   width: auto;

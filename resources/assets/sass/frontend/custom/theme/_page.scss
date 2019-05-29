@@ -863,3 +863,13 @@
         }
     }
 }
+
+.page-awards {
+    .why-choose-block .svg-holder {
+        background: $white;
+        align-items: center;
+        img {
+            max-width: 110px;
+        }
+    }
+}
