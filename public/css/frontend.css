@@ -11863,6 +11863,10 @@ html body {
   border-radius: 0;
 }
 
+.page-students .testimonials-block.videos .btn {
+  background-color: #3fb1e5;
+}
+
 .page-students .custom-slider-wrapper {
   padding-left: 10%;
 }
@@ -11977,6 +11981,7 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+  padding: 0 7.5px;
 }
 
 .page-students.gallery .slick-dots li button {

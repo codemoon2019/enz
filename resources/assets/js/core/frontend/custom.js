@@ -83,11 +83,17 @@ $('document').ready(function(){
     focusOnSelect: true,
   });
 
-  $('.left.myarrow').click(function(){
-    $('.slick-slider .slick-prev').trigger('click');
+  $('#default .left.myarrow').click(function(){
+    $('#default .slick-slider .slick-prev').trigger('click');
   });
-  $('.right.myarrow').click(function(){
-      $('.slick-slider .slick-next').trigger('click');
+  $('#default .right.myarrow').click(function(){
+      $('#default .slick-slider .slick-next').trigger('click');
+  });
+  $('#vidtes .left.myarrow').click(function(){
+    $('#vidtes .slick-slider .slick-prev').trigger('click');
+  });
+  $('#vidtes .right.myarrow').click(function(){
+      $('#vidtes .slick-slider .slick-next').trigger('click');
   });
 
   //Lazy load
