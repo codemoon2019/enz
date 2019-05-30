@@ -89,6 +89,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Gallery\GalleryRepository::class, \App\Repositories\Gallery\GalleryRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\City\CityRepository::class, \App\Repositories\City\CityRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Award\AwardRepository::class, \App\Repositories\Award\AwardRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\Subscription\SubscriptionRepository::class, \App\Repositories\Subscription\SubscriptionRepositoryEloquent::class);
         //:end-bindings:
     }
 }

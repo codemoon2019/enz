@@ -148,7 +148,7 @@
    
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
    
-          <form action="" method="post" id="subscription-form">
+          <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
 
             {{ csrf_field() }}
             
@@ -160,7 +160,7 @@
      
                 <span class="input-group-text" id="basic-addon2">
      
-                    <button class="btn btnread-more subscribe-btn">Subscribe</button>
+                    <button type="button" class="btn btnread-more subscribe-btn">Subscribe</button>
      
                 </span>
      
