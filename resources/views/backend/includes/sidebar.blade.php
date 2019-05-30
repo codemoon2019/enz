@@ -26,6 +26,10 @@
                    href="{{ route('admin.become-our-client-inquiries.index') }}"><i class="nav-icon fa fa-envelope"></i>Client Inquiries</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/subscriptions')) }}"
+                   href="{{ route('admin.subscriptions.index') }}"><i class="nav-icon fa fa-envelope"></i>Subscriptions</a>
+            </li>
 
             @if(is_has_any_permission([
                 app(App\Models\Category\Category::class)::permission('index'),
