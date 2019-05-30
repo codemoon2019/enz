@@ -128,7 +128,7 @@
                 
                             <img data-src="{{asset('img/destination/australia/top.jpg')}}" class="img-fluid" alt="">
                 
-                                <div class="card-footer linear-gradient-teal">
+                                <div class="card-footer linear-gradient-{{ $city->color }}">
                 
                                     <p class="card-title text-uppercase fs18">
                 
@@ -156,7 +156,6 @@
             
                 <div class="accordion" id="myAccordion">
     
-
                     @foreach ($model->details as $detail)
 
                         <div class="card mb30">
@@ -192,7 +191,5 @@
         </div>
 
     </section>
-
-    
 
 @endsection

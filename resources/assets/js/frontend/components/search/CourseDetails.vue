@@ -27,6 +27,7 @@
                         <p class="basic fs15">{{ limit_text(course.description) }}</p>
 
                         <div class="table-responsive">
+                            
                             <table class="table table-borderless">
                 
                                 <thead>
@@ -55,7 +56,11 @@
                     
                                         <td class="basic fs15">{{ course.availability }}</td>
                     
-                                        <td class="basic fs15"><a href="#" class="btn btnread-more text-uppercase">Inquire now</a></td>
+                                        <td class="basic fs15">
+
+                                            <a href="#" data-toggle="modal" data-target="#myModal" class="modal-trigger btn btnread-more text-uppercase">Inquire now</a>
+
+                                        </td>
                     
                                     </tr>
                     
@@ -64,7 +69,6 @@
                             </table>
 
                         </div>
-                
                 
                     </div>
                 

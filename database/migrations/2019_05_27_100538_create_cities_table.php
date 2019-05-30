@@ -22,6 +22,7 @@ class CreateCitiesTable extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->integer('order')->default(0);
+            $table->enum('color', ['teal', 'red', 'orange', 'yellow'])->default('teal');
             $table->timestamps();
         });
     }

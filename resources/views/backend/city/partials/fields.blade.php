@@ -14,6 +14,29 @@
     
         </div>
 
+
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Color</label>
+    
+            <div class="col-md-10">
+    
+                <select name="color" class="form-control">
+
+                    <option value="teal" {{ isset($model) ? ($model->color == 'teal' ? 'selected' : '') : '' }}>Teal</option>
+                    
+                    <option value="red" {{ isset($model) ? ($model->color == 'red' ? 'selected' : '') : '' }}>Red</option>
+                    
+                    <option value="orange" {{ isset($model) ? ($model->color == 'orange' ? 'selected' : '') : '' }}>Orange</option>
+                    
+                    <option value="yellow" {{ isset($model) ? ($model->color == 'yellow' ? 'selected' : '') : '' }}>Yellow</option>
+                
+                </select>
+    
+            </div>
+    
+        </div>
+
         <div class="form-group row" style="display: none;">
     
             <label class="col-md-2 form-control-label">Country <i class="text-danger">*</i></label>
