@@ -49,6 +49,7 @@ class City extends Model implements HasMedia
     protected $fillable = [
         'country_id',
         'title',
+        'color',
         'order',
         'slug',
     ];

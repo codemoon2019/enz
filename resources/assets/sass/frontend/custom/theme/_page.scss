@@ -507,8 +507,20 @@
     }
     .top-cities {
         .card {
-            box-shadow:0 10px 20px 0 rgba(0,0,0,0.20);
+            border-top-left-radius: 12px !important;
+            border-top-right-radius: 12px !important;
+            border: 1px solid transparent;
+            background: transparent;
+            img {
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
         }
+        .card-footer {
+            border-bottom-left-radius: 35px !important;
+            border-bottom-right-radius: 35px !important;
+        }
+
     }
 }
 

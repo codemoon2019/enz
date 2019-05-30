@@ -11602,7 +11602,20 @@ html body {
 }
 
 .page-destination .top-cities .card {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.page-destination .top-cities .card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.page-destination .top-cities .card-footer {
+  border-bottom-left-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
 }
 
 .be-part-of-our-team .jobs .card-body .btnread-more {
