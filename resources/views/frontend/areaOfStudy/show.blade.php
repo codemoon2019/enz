@@ -144,6 +144,165 @@
 
 </div>
 
+<<<<<<< HEAD
+<div class="modal fade" id="myModal">
+
+    <div class="modal-dialog modal-lg">
+    
+        <div class="modal-content">
+
+            <div class="modal-body p0">
+                
+                <div class="block">
+                    
+                    <div class="item">
+                        
+                        <div class="card text-left">
+                            
+                            <div class="card-header linear-gradient-teal">
+                                
+                                <button type="button" class="close pull-right text-white" data-dismiss="modal">&times;</button>
+                                
+                                <h2 class="card-title fs18 text-white mb0">Got a Question?</h2>
+                
+                            </div>
+                
+                            <div class="card-body relative linear-gradient-grey">
+            
+                                <form action="{{ route('frontend.contact.send') }}" method="post" id="course-inquiry-form" enctype="multipart/form-data">
+                
+                                    {{ csrf_field() }}
+                            
+                                    <div class="form">
+                            
+                                      <div class="row">
+                            
+                                        <div class="col-sm-6">
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Full Name <span class="text-danger">*</span></label>
+                            
+                                              <input type="text" name="full_name" id="course_full_name" class="form-control inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Profession <span class="text-danger">*</span></label>
+                            
+                                              <input type="text" name="profession" id="course_profession" class="form-control inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Email Address <span class="text-danger">*</span></label>
+                            
+                                              <input type="email" name="email_address" id="course_email_address" class="form-control inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Mobile Number <span class="text-danger">*</span></label>
+                            
+                                              <input type="text" name="mobile_number" id="course_mobile_number" class="form-control inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Location <span class="text-danger">*</span></label>
+                            
+                                              <input type="text" name="location" id="course_location" class="form-control inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                        </div>
+                            
+                                        <div class="col-sm-6">
+                            
+                                          <div class="form-group">
+                            
+                                            <label for="">Inquiry <span class="text-danger">*</span></label>
+                            
+                                            <textarea name="inquiry" id="course_inquiry" cols="30" rows="10" class="form-control inquiry-field"></textarea>
+                            
+                                          </div>
+                            
+                                          <div class="form-group mb30">
+                            
+                                            <label for="">Would you like to book for a free consultation? <span class="text-danger">*</span></label><br />
+                            
+                                            <label class="control control--radio">Yes
+                           
+                                              <input type="radio" name="consultation" checked value="1" />
+                           
+                                              <div class="control__indicator"></div>
+                           
+                                             </label>
+                           
+                                            <label class="control control--radio">No
+                           
+                                              <input type="radio" name="consultation" value="0" />
+                           
+                                              <div class="control__indicator"></div>
+                           
+                                             </label>
+                           
+                                          </div>
+                           
+                                          <div class="form-group">
+                           
+                                            <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
+                           
+                                            <input type="file" name="resume" id="course_file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                           
+                                            <label class="btn btnread-more text-uppercase" for="course_file" style="height: auto"><span>Choose file</span></label>
+                           
+                                          </div>
+                           
+                                          <div class="form-group">
+
+                                            {{-- {!! Captcha::display() !!} --}}
+
+                                          </div>
+                           
+                                        </div>
+                           
+                                      </div>
+                           
+                                      <div class="text-center mt30">
+                          
+                                        <button type="button" class="btn btnview-more text-uppercase course-inquiry-submit">Submit</button>
+                          
+                                      </div>
+                          
+                                    </div>
+                                    
+                                </form>
+
+
+
+                
+                            </div>
+                    
+                        </div>
+                
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+=======
 @include('frontend.course.partials.inquiry')
+>>>>>>> a70f98280bbca61906e6444dcbe8ca113fd43b42
 
 @endsection
