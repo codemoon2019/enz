@@ -747,6 +747,9 @@
             overflow: hidden;
             border-radius: 0;
         }
+        .btn {
+            background-color: $blue;
+        }
     }
     .custom-slider-wrapper {
         padding-left: 10%;
@@ -840,6 +843,7 @@
                 height: auto;
                 object-fit: cover;
                 border-radius: 35px;
+                padding: 0 7.5px;
             }
         }
     }

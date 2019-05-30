@@ -50,7 +50,7 @@
                     
                         <p class="basic">{{ $event->event_date->format('d M') }}</p>
                     
-                        <div class="basic">
+                        <div class="basic mb30">
                     
                             {{ $event->description }}
                     

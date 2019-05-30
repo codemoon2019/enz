@@ -1,4 +1,4 @@
-<div class="block testimonials-block">
+<div class="block testimonials-block" id="vidtes">
     <section class="testimonials">
         <div class="container-fluid px180">
             <h2 class="title fs40 text-blue mb30">Student Testimonials</h2>   

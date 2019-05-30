@@ -64,13 +64,13 @@
                     
                     <div class="row d-flex item mx-auto mb30">
                     
-                        <div class="col-6 profile-pic text-center text-white">
+                        <div class="col-5 profile-pic text-center text-white">
                     
-                            <img data-src="{{ $testimony->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                            <img src="{{ $testimony->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
                     
                         </div>
                     
-                        <div class="col-6 details">
+                        <div class="col-7 details">
                     
                             <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>                    
                     
@@ -86,15 +86,17 @@
         
     </div>
 
-    <section class="block testimonials-block videos">
-        {{-- <div class="pull-right">
-            <button class="btn left myarrow">
-                <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-            </button>
-            <button class="btn right myarrow">
-                <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-            </button>
-        </div> --}}
+    <section class="block testimonials-block videos" id="vidtes">
+        <div class="container-fluid pt0 px180">
+            <div class="pull-right mb30">
+                <button class="btn left myarrow">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                </button>
+                <button class="btn right myarrow">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                </button>
+            </div>
+        </div>
         <div class="clearfix"></div>
         <div class="custom-slider-wrapper">
             <div class="slick-slider">
