@@ -195,6 +195,20 @@
         padding-top: 30%;
         background: url(/img/news/bg.png) no-repeat;
     }
+    .card {
+        border: 1px solid transparent;
+    }
+    .card,
+    .card-header {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+
+    }
+    .card-body {
+        border-bottom-left-radius: 35px !important;
+        border-bottom-right-radius: 35px !important;
+    }
+
 }
 .tourist-visa {
     .content-block {
