@@ -148,21 +148,27 @@
    
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
    
-          <div class="input-group mb-3">
-   
-            <input type="email" class="txtemail form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
-   
-            <div class="input-group-append">
-   
-              <span class="input-group-text" id="basic-addon2">
-   
-                  <button class="btn btnread-more">Subscribe</button>
-   
-              </span>
-   
+          <form action="" method="post" id="subscription-form">
+
+            {{ csrf_field() }}
+            
+            <div class="input-group mb-3">
+     
+              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
+     
+              <div class="input-group-append">
+     
+                <span class="input-group-text" id="basic-addon2">
+     
+                    <button class="btn btnread-more subscribe-btn">Subscribe</button>
+     
+                </span>
+     
+              </div>
+     
             </div>
-   
-          </div>
+            
+          </form>
    
         </div>
    
@@ -327,6 +333,51 @@
 @push('after-scripts')
 
 <script>
+
+    $('.subscribe-btn').click(function(){
+
+        $('.inquiry-field').css('border', 'unset');
+
+        let fields = ['subscribe-email'];
+
+        let submit = true;
+
+        $.each(fields, function(k, v){
+
+            el = $('#' + v);
+
+            if (el.val() == null || el.val() == '') {
+
+                el.css('border', '2px solid #d27070');
+
+                submit = false;
+
+            }
+
+            if (v == 'subscribe-email') {
+
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                if (! re.test(String(el.val()).toLowerCase())) {
+                    
+                    el.css('border', '2px solid #d27070');
+
+                    submit = false;
+
+                }
+
+            }
+
+        });
+
+
+        if (submit) {
+
+            $('#subscription-form').submit();
+            
+        }
+
+    });
 
     $('.inquiry-submit').click(function(){
 
