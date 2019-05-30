@@ -46,4 +46,6 @@
 
     </div>
 
+    @include('frontend.course.partials.inquiry')
+
 @endsection
