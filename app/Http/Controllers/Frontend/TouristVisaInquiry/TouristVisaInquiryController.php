@@ -87,17 +87,17 @@ class TouristVisaInquiryController extends Controller
     {
         $model = TouristVisaInquiry::create([
 
-            'first_name'     => $request['first_name'],
+            'first_name'       => $request['first_name'],
             
-            'last_name'    => $request['last_name'],
+            'last_name'        => $request['last_name'],
             
-            'email_address' => $request['email_address'],
+            'email_address'    => $request['email_address'],
             
-            'mobile_number' => $request['mobile_number'],
+            'mobile_number'    => $request['mobile_number'],
             
-            'country_to_visit'      => $request['country_to_visit'],
+            'country_to_visit' => $request['country_to_visit'],
             
-            'inquiry'       => $request['inquiry'],
+            'inquiry'          => $request['inquiry'],
             
         ]);
 
