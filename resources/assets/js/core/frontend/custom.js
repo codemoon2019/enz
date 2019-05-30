@@ -175,7 +175,7 @@ $('document').ready(function(){
   });
 
   if($(window).width()>=1200) {
-    $('input').on('click',function(){
+    $('.search-courses input').on('click',function(){
     $('html,body').animate({
       scrollTop: 200
       }, 800);
