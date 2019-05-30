@@ -131,9 +131,10 @@
   
             @empty
     
-                <div>
+                <div class="col-sm-12 text-center">
+                    <img src="/svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
 
-                    <p>No available course</p>
+                    <p class="title text-nblue fs24">No available course</p>
                 
                 </div>
 
