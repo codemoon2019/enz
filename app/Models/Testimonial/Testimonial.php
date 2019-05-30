@@ -50,10 +50,12 @@ class Testimonial extends Model implements HasMedia
         'title',
         'slug',
         'description',
+        'youtube_key',
         'position',
         'address',
         'status',
         'order',
+        'type',
     ];
 
     /**

@@ -21,9 +21,11 @@ class CreateTestimonialsTable extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
+            $table->text('youtube_key')->nullable();
             $table->string('position')->nullable();
             $table->text('address')->nullable();
             $table->enum('status', ['enable', 'disabled'])->default('disabled');
+            $table->enum('type', ['text', 'video'])->default('text');
             $table->integer('order')->default(0);
             $table->timestamps();
         });
