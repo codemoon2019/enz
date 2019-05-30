@@ -56,7 +56,7 @@
                     
                         </div>
 
-                        <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+                        <a href="{{ route('frontend.events.show', $event->slug) }}" class="btn btnread-more text-uppercase">Read more</a>
                     
                     </div>
 

@@ -15,6 +15,11 @@
                        'template' => $viewPath . '.partials.overview',
                        'args' => [ 'model' => $model ]
                    ],
+                   [
+                       'name' => 'Inquiries',
+                       'template' => $viewPath . '.partials.inquiries',
+                       'args' => [ 'model' => $model ]
+                   ],
                ]
            ])
         @endslot
