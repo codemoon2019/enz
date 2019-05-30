@@ -11504,6 +11504,28 @@ html body {
   border-top-right-radius: 12px !important;
 }
 
+.page-courses.inner .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.page-courses.inner .modal-content .card {
+  background: transparent;
+  border: none;
+  border-top-left-radius: 35px !important;
+  border-top-right-radius: 35px !important;
+}
+
+.page-courses.inner .modal-content .card-header {
+  border-top-left-radius: 35px !important;
+  border-top-right-radius: 35px !important;
+}
+
+.page-courses.inner .modal-content .card-body {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
 .page-destination .content-block {
   margin-top: -14%;
   position: relative;
@@ -12058,112 +12080,6 @@ html body {
   padding-left: 80px;
 }
 
-.footer .form label {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.footer .form .form-control {
-  font-size: 14px;
-  font-weight: 700;
-  height: 44px;
-  border-radius: 12px;
-  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
-}
-
-.footer .form textarea.form-control {
-  height: 129px;
-  resize: none;
-}
-
-.footer .form .control {
-  display: inline-block;
-  position: relative;
-  padding-left: 30px;
-  margin-right: 15px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.footer .form .control input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.footer .form .control--radio .control__indicator {
-  border-radius: 50%;
-  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
-}
-
-.footer .form .control__indicator {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background: #fff;
-}
-
-.footer .form .control input:checked ~ .control__indicator {
-  background: #3fb1e5;
-}
-
-.footer .form .control input:checked ~ .control__indicator:after {
-  display: block;
-}
-
-.footer .form .control--radio .control__indicator:after {
-  left: 7px;
-  top: 7px;
-  height: 6px;
-  width: 6px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.footer .form .control__indicator:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.footer .form .inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.footer .form .inputfile + label {
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #ffca30;
-  display: inline-block;
-  transition: all ease 300ms;
-}
-
-.footer .form .inputfile:focus + label,
-.footer .form .inputfile + label:hover {
-  background-color: transparent;
-  color: #ffca30;
-  transition: all ease 300ms;
-}
-
-.footer .form .inputfile + label {
-  cursor: pointer;
-  /* "hand" cursor */
-}
-
-.footer .form .btnview-more {
-  position: relative;
-  z-index: 2;
-}
-
 .footer .know-more {
   background: url("/img/footer.png") no-repeat;
   padding-top: 10%;
@@ -12251,6 +12167,112 @@ html body {
 
 .footer .footer-info .tel:before {
   background-image: url("/svg/call-answer.svg");
+}
+
+.form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form .form-control {
+  font-size: 14px;
+  font-weight: 700;
+  height: 44px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.form textarea.form-control {
+  height: 129px;
+  resize: none;
+}
+
+.form .control {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.form .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form .control--radio .control__indicator {
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+}
+
+.form .control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+}
+
+.form .control input:checked ~ .control__indicator {
+  background: #3fb1e5;
+}
+
+.form .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.form .control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.form .control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.form .inputfile + label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ffca30;
+  display: inline-block;
+  transition: all ease 300ms;
+}
+
+.form .inputfile:focus + label,
+.form .inputfile + label:hover {
+  background-color: transparent;
+  color: #ffca30;
+  transition: all ease 300ms;
+}
+
+.form .inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
+.form .btnview-more {
+  position: relative;
+  z-index: 2;
 }
 
 #phplive_btn_1480051776 {

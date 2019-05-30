@@ -180,7 +180,7 @@
                             
                                             <div class="form-group">
                             
-                                              <label for="">Full Name</label>
+                                              <label for="">Full Name <span class="text-danger">*</span></label>
                             
                                               <input type="text" name="full_name" id="course_full_name" class="form-control inquiry-field" placeholder="" />
                             
@@ -188,7 +188,7 @@
                             
                                             <div class="form-group">
                             
-                                              <label for="">Profession</label>
+                                              <label for="">Profession <span class="text-danger">*</span></label>
                             
                                               <input type="text" name="profession" id="course_profession" class="form-control inquiry-field" placeholder="" />
                             
@@ -196,7 +196,7 @@
                             
                                             <div class="form-group">
                             
-                                              <label for="">Email Address</label>
+                                              <label for="">Email Address <span class="text-danger">*</span></label>
                             
                                               <input type="email" name="email_address" id="course_email_address" class="form-control inquiry-field" placeholder="" />
                             
@@ -204,7 +204,7 @@
                             
                                             <div class="form-group">
                             
-                                              <label for="">Mobile Number</label>
+                                              <label for="">Mobile Number <span class="text-danger">*</span></label>
                             
                                               <input type="text" name="mobile_number" id="course_mobile_number" class="form-control inquiry-field" placeholder="" />
                             
@@ -212,7 +212,7 @@
                             
                                             <div class="form-group">
                             
-                                              <label for="">Location</label>
+                                              <label for="">Location <span class="text-danger">*</span></label>
                             
                                               <input type="text" name="location" id="course_location" class="form-control inquiry-field" placeholder="" />
                             
@@ -224,7 +224,7 @@
                             
                                           <div class="form-group">
                             
-                                            <label for="">Inquiry</label>
+                                            <label for="">Inquiry <span class="text-danger">*</span></label>
                             
                                             <textarea name="inquiry" id="course_inquiry" cols="30" rows="10" class="form-control inquiry-field"></textarea>
                             
@@ -232,7 +232,7 @@
                             
                                           <div class="form-group mb30">
                             
-                                            <label for="">Would you like to book for a free consultation?</label><br />
+                                            <label for="">Would you like to book for a free consultation? <span class="text-danger">*</span></label><br />
                             
                                             <label class="control control--radio">Yes
                            
@@ -240,7 +240,7 @@
                            
                                               <div class="control__indicator"></div>
                            
-                                            </label>
+                                             </label>
                            
                                             <label class="control control--radio">No
                            
@@ -248,13 +248,13 @@
                            
                                               <div class="control__indicator"></div>
                            
-                                            </label>
+                                             </label>
                            
                                           </div>
                            
                                           <div class="form-group">
                            
-                                            <label for="">Resume / Curriculum Vitae</label><br />
+                                            <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
                            
                                             <input type="file" name="resume" id="course_file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
