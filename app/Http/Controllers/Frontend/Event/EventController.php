@@ -7,6 +7,8 @@ use App\Repositories\Event\EventRepository;
 use HalcyonLaravel\Base\Controllers\BaseController as Controller;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
+use Illuminate\Http\Request;
+use App\Models\Event\EventInquiry;
 
 /**
  * Class EventController
@@ -79,5 +81,24 @@ class EventController extends Controller
         MetaTag::setEntity($model);
 
         return view("{$this->viewFrontendPath}.show", compact('model', 'page'));
+    }
+
+    public function inquiry(Request $request)
+    {
+
+        $model = EventInquiry::create([
+
+            'event_id'     => $request['event_id'],
+
+            'first_name'     => $request['first_name'],
+            
+            'last_name'    => $request['last_name'],
+            
+            'contact_number' => $request['contact_number'],
+            
+        ]);
+
+        return redirect()->back()->withFlashSuccess('Inquiry Submitted');
+
     }
 }

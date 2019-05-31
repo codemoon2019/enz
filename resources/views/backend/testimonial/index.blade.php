@@ -1,5 +1,13 @@
 @extends('backend.layouts.app')
 
+@push('after-styles')
+<style>
+    .dd{
+        float: unset;
+    }
+</style>
+@endpush
+
 @include('backend.includes.sortable.style')
 
 @section('content')
@@ -32,47 +40,117 @@
 
                 <div class="col-md-12">
 
-                    <div class="dd" id="nestable-testimonial">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                        <li class="nav-item">
                         
-                        <ol class="dd-list">
-
-                            @php
-
-                                $testimonials = Testimonial();
-                            
-                            @endphp
-
-                            @foreach ($testimonials as $key => $item)
-
-                                @php
-
-                                    if (! $key) { $model = class_basename($item); }
+                            <a class="nav-link active" id="text-tab" data-toggle="tab" href="#text" role="tab" aria-controls="text" aria-expanded="true">Text Testimonials</a>
+                        
+                        </li>
+                        
+                        <li class="nav-item">
+                        
+                            <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video">Video Testimonials</a>
+                        
+                        </li>
+                    
+                    </ul>
+                    
+                    <div class="tab-content" id="myTabContent">
+                    
+                        <div class="tab-pane fade show active" id="text" role="tabpanel" aria-labelledby="home-tab">
                                 
-                                @endphp
-                                
-                                @include('backend.includes.sortable.list', [
+                            <div class="dd" id="nestable-text-testimonial">
+                        
+                                <ol class="dd-list">
 
-                                    'item' => $item, 
+                                    @php
 
-                                    'label' => 'title',
+                                        $testimonials = TestimonialText();
                                     
-                                    'edit_route' => route('admin.testimonials.edit', $item->slug),
-                                    
-                                    'delete_route' => route('admin.testimonials.destroy', $item->slug)
+                                    @endphp
+
+                                    @foreach ($testimonials as $key => $item)
+
+                                        @php
+
+                                            if (! $key) { $model = class_basename($item); }
+                                        
+                                        @endphp
+                                        
+                                        @include('backend.includes.sortable.list', [
+
+                                            'item' => $item, 
+
+                                            'label' => 'title',
+                                            
+                                            'edit_route' => route('admin.testimonials.edit', $item->slug),
+                                            
+                                            'delete_route' => route('admin.testimonials.destroy', $item->slug)
+                                        
+                                        ])
+
+                                    @endforeach
+
+                                </ol>
+
+                            </div>
+
+                            @if ($testimonials->count())
+
+                                @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'video-testimonial'])
                                 
-                                ])
+                            @endif
 
-                            @endforeach
+                        </div>
+                    
+                        <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                                
+                            <div class="dd" id="nestable-video-testimonial">
+                        
+                                <ol class="dd-list">
 
-                        </ol>
+                                    @php
 
+                                        $testimonials = TestimonialVideo();
+                                    
+                                    @endphp
+
+                                    @foreach ($testimonials as $key => $item)
+
+                                        @php
+
+                                            if (! $key) { $model = class_basename($item); }
+                                        
+                                        @endphp
+                                        
+                                        @include('backend.includes.sortable.list', [
+
+                                            'item' => $item, 
+
+                                            'label' => 'title',
+                                            
+                                            'edit_route' => route('admin.testimonials.edit', $item->slug),
+                                            
+                                            'delete_route' => route('admin.testimonials.destroy', $item->slug)
+                                        
+                                        ])
+
+                                    @endforeach
+
+                                </ol>
+
+                            </div>
+
+                            @if ($testimonials->count())
+
+                                @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'video-testimonial'])
+                                
+                            @endif
+
+                        </div>
+                    
                     </div>
-
-                    @if ($testimonials->count())
-
-                        @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'testimonial'])
-                        
-                    @endif
 
                 </div>
 
@@ -84,6 +162,8 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'testimonial'])
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'text-testimonial'])
+
+@include('backend.includes.sortable.script', ['depth' => 1, 'id' => 'video-testimonial'])
 
 @endsection

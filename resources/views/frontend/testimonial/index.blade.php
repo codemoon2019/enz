@@ -60,7 +60,7 @@
 
             <div class="slick-slider">
 
-                @foreach (Testimonial() as $key => $testimony)
+                @foreach (TestimonialText() as $key => $testimony)
                     
                     <div class="row d-flex item mx-auto mb30">
                     
@@ -87,68 +87,61 @@
     </div>
 
     <section class="block testimonials-block videos" id="vidtes">
+
         <div class="container-fluid pt0 px180">
+
             <div class="pull-right mb30">
+
                 <button class="btn left myarrow">
+
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+
                 </button>
+
                 <button class="btn right myarrow">
+
                     <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+
                 </button>
+
             </div>
+
         </div>
+
         <div class="clearfix"></div>
+
         <div class="custom-slider-wrapper">
+
             <div class="slick-slider">
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="youtube" data-embed="siIep9LHtNM">
-                                <div class="play-button"></div>
+
+                @foreach (TestimonialVideo() as $testimonial)
+
+                    <div class="item">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <div class="youtube" data-embed="{{ $testimonial->youtube_key }}">
+
+                                    <div class="play-button"></div>
+
+                                </div>
+
                             </div>
+
                         </div>
+
                     </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="youtube" data-embed="b7ffmtnuSGM">
-                                <div class="play-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="youtube" data-embed="_b_YVrex0yI">
-                                <div class="play-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="youtube" data-embed="siIep9LHtNM">
-                                <div class="play-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="youtube" data-embed="siIep9LHtNM">
-                                <div class="play-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+
+                @endforeach
+
             </div>
+
         </div>
+
         <div class="clearfix"></div>
+
     </section>
 
 @endsection

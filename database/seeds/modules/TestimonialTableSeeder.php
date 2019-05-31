@@ -76,11 +76,44 @@ class TestimonialTableSeeder extends Seeder
 
             $this->seederUploader($model, 'testimonial/' . $images[$key], null, 'featured');
 
-            $model->metaTag()->create([
-                'title' => $model->title,
-                'description' => $model->title,
-                'keywords' => str_replace('-', ',', $model->slug),
-            ]);
+            // $model->metaTag()->create([
+            //     'title' => $model->title,
+            //     'description' => $model->title,
+            //     'keywords' => str_replace('-', ',', $model->slug),
+            // ]);
+
+        }
+
+        $data = [
+            [
+                'title' => 'Video 1',
+                'youtube_key' => 'siIep9LHtNM',
+                'status' => 'enable',
+                'type' => 'video',
+            ],
+            [
+                'title' => 'video 2',
+                'youtube_key' => 'b7ffmtnuSGM',
+                'status' => 'enable',
+                'type' => 'video',
+            ],
+            [
+                'title' => 'video 3',
+                'youtube_key' => '_b_YVrex0yI',
+                'status' => 'enable',
+                'type' => 'video',
+            ],
+            [
+                'title' => 'video 4',
+                'youtube_key' => '11rPDIxRz9M',
+                'status' => 'enable',
+                'type' => 'video',
+            ],
+        ];        
+
+        foreach ($data as $key => $value) {
+
+            $model = Testimonial::create($value);
 
         }
 

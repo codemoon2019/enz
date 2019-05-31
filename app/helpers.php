@@ -564,6 +564,20 @@ if (!function_exists('Testimonial')) {
     }
 }
 
+if (!function_exists('TestimonialText')) {
+    function TestimonialText()
+    {
+        return Testimonial::whereType('text')->orderBy('order')->get();
+    }
+}
+
+if (!function_exists('TestimonialVideo')) {
+    function TestimonialVideo()
+    {
+        return Testimonial::whereType('video')->orderBy('order')->get();
+    }
+}
+
 if (!function_exists('findInformation')) {
     function findInformation($key)
     {
