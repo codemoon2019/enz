@@ -39,7 +39,7 @@ class LocationTableSeeder extends Seeder
             ],
             [
                 'title' => 'Vigan', 
-                'address' => 'Level 29 Joy-Nostalg Centre, 17 ADB Avenue Ortigas Center, Pasig City 1600', 
+                'address' => 'Level 3 , Room 4 , P. Square Building, 65 Boquig Bantay, Ilocos Sur  2727', 
                 'contact' => '<p>Telephone: (077) 604 - 5432</p>
                               <p>GLOBE: 0917 - 779- 0145</p>
                               <p>SMART: 0919-973-7722</p>',
@@ -48,7 +48,7 @@ class LocationTableSeeder extends Seeder
             ],
             [
                 'title' => 'Manila', 
-                'address' => 'Level 3 , Room 4 , P. Square Building, 65 Boquig Bantay, Ilocos Sur  2727', 
+                'address' => 'Level 29 Joy-Nostalg Centre, 17 ADB Avenue Ortigas Center, Pasig City 1600', 
                 'contact' => '<p>Telephone: (02) 689 7132</p>
                               <p>GLOBE: 0917- 779 - 0153</p>
                               <p>SMART: 0999 - 983-9670</p>',
