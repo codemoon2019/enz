@@ -1,22 +1,43 @@
 <template>
 
-    <div class="col-sm-12 item mb30" data-aos="fade-up">
+    <div class="item mb30" data-aos="fade-up">
 
-        <div class="card text-left">
+        <div class="svg-holder mx-auto">
+
+            <img class="img-fluid mb30" :src="course.institution_logo" alt="">.
+
+        </div>
+
+        <div class="title-holder">
+
+            <h2 class="card-title fs18 text-black mb30">{{ course.title }}</h2>
+
+        </div>
+
+        <div class="text-center">
+
+            <a href="#" data-toggle="modal" data-target="#myModal" class="modal-trigger btn btnread-more text-uppercase">Inquire now</a>
+
+        </div>
+        
+    </div>
+
+        <!-- <div class="card text-left">
         
             <div class="card-header linear-gradient-teal">
         
-                <h2 class="card-title fs18 text-white mb0">{{ course.title }}</h2>
         
             </div>
         
             <div class="card-body relative">
+                <div class="svg-holder mb20 mx-auto"> -->
+                
 
-                <div class="row course-info">
+
+                <!-- <div class="row course-info">
                 
                     <div class="col-sm-3 for-logo text-center align-self-center">
 
-                        <img class="img-fluid" :src="course.institution_logo" alt="">
 
                     </div>
                 
@@ -58,7 +79,6 @@
                     
                                         <td class="basic fs15">
 
-                                            <a href="#" data-toggle="modal" data-target="#myModal" class="modal-trigger btn btnread-more text-uppercase">Inquire now</a>
 
                                         </td>
                     
@@ -72,7 +92,7 @@
                 
                     </div>
                 
-                </div>
+                </div> -->
 
             </div>
 

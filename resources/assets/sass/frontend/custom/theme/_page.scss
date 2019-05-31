@@ -159,6 +159,31 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         }
     }
+    .filter {
+        justify-content: center;
+        border: none;
+        
+        li {
+            margin: 0 .5%;
+        }
+        .btn {
+            min-height: 80px;
+            color: #989898;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 35px;
+            box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.75);
+        }
+        .btn.active {
+            border: 2px solid $blue;
+            color: $blue;
+        }
+        .btn.default {
+            max-height: 134px;
+            line-height: 50px;
+            padding: 10px 30px;
+        }
+    }
 }
 
 .page-services {
@@ -366,25 +391,40 @@
     .search-results {
         margin-top: -5%;
         margin-bottom: 50px;
-        .card {
-            border-bottom-left-radius: 35px !important;
-            border-bottom-right-radius: 35px !important;
-            .for-logo img {
-                max-height: 120px;
+        .svg-holder {
+            min-height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            img {
+                max-width: 200px;
+                object-fit: contain;
             }
         }
-        .card,
-        .card-header {
-            border-top-left-radius: 12px !important;
-            border-top-right-radius: 12px !important;
+        .title-holder {
+            min-height: 50px;
+            max-height: 50px;
+        }
+        // .card {
+        //     border-bottom-left-radius: 35px !important;
+        //     border-bottom-right-radius: 35px !important;
+        //     .for-logo img {
+                
+        //     }
+        // }
+        // .card,
+        // .card-header {
+        //     border-top-left-radius: 12px !important;
+        //     border-top-right-radius: 12px !important;
 
-        }
-        .course-info {
-            th,td {
-                vertical-align: middle;
-                padding: 0;
-            }
-        }
+        // }
+        // .course-info {
+        //     th,td {
+        //         vertical-align: middle;
+        //         padding: 0;
+        //     }
+        // }
         .filter {
             justify-content: center;
             border: none;
