@@ -56,9 +56,13 @@
                     
                     <div id="all" class="mb50 tab-pane fade in active show">
 
-                        <div class="row" v-for="(course, index) in all_courses">
+                        <div class="row justify-content-center">
 
-                            <course-details :course="course"></course-details>
+                            <div class="col-sm-4" v-for="(course, index) in all_courses">
+
+                                <course-details :course="course"></course-details>
+
+                            </div>
 
                         </div>
 
@@ -80,9 +84,13 @@
 
                     <div id="australia" class="mb50 tab-pane fade">
                     
-                        <div class="row" v-for="(course, index) in australia_courses">
+                        <div class="row justify-content-center">
 
-                            <course-details :course="course"></course-details>
+                            <div class="col-sm-4" v-for="(course, index) in australia_courses">
+
+                                <course-details :course="course"></course-details>
+
+                            </div>
 
                         </div>
 
@@ -103,9 +111,13 @@
                     
                     <div id="canada" class="mb50 tab-pane fade">
 
-                        <div class="row" v-for="(course, index) in canada_courses">
+                        <div class="row justify-content-center">
 
-                            <course-details :course="course"></course-details>
+                            <div class="col-sm-4" v-for="(course, index) in canada_courses">
+
+                                <course-details :course="course"></course-details>
+
+                            </div>
 
                         </div>
 
@@ -126,9 +138,13 @@
                     
                     <div id="new_zealand" class="mb50 tab-pane fade">
 
-                        <div class="row" v-for="(course, index) in new_zealand_courses">
+                        <div class="row justify-content-center">
 
-                            <course-details :course="course"></course-details>
+                            <div class="col-sm-4" v-for="(course, index) in new_zealand_courses">
+
+                                <course-details :course="course"></course-details>
+
+                            </div>
 
                         </div>
 
@@ -172,13 +188,13 @@ export default {
 
         return {
 
-            count_all: 5,
+            count_all: 6,
 
-            count_australia: 5,
+            count_australia: 6,
             
-            count_canada: 5,
+            count_canada: 6,
             
-            count_new_zealand: 5,
+            count_new_zealand: 6,
 
             australia : [],
 

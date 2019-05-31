@@ -20,7 +20,7 @@
 
                 <h1 class="title title-large mb30 text-black text-capitalize">{{ $model->title }}</h1> 
 
-                <p class="basic fs15">
+                <p class="basic">
                 
                     {!! $model->description !!}
                     
