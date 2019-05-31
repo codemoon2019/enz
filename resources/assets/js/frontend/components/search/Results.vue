@@ -76,7 +76,7 @@
 
                         <div class="text-center mt50" v-if="count_all < filteredCourse.length">
                                     
-                            <button class="btn btnview-more text-uppercase mb30" @click="count_all += 5">View more</button>
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_all += 6">View more</button>
 
                         </div>
 
@@ -103,7 +103,7 @@
 
                         <div class="text-center mt50" v-if="count_australia < australia.length">
                                     
-                            <button class="btn btnview-more text-uppercase mb30" @click="count_australia += 5">View more</button>
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_australia += 6">View more</button>
 
                         </div>
 
@@ -130,7 +130,7 @@
 
                         <div class="text-center mt50" v-if="count_canada < canada.length">
                                     
-                            <button class="btn btnview-more text-uppercase mb30" @click="count_canada += 5">View more</button>
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_canada += 6">View more</button>
 
                         </div>
 
@@ -157,7 +157,7 @@
 
                         <div class="text-center mt50" v-if="count_new_zealand < new_zealand.length">
                                     
-                            <button class="btn btnview-more text-uppercase mb30" @click="count_new_zealand += 5">View more</button>
+                            <button class="btn btnview-more text-uppercase mb30" @click="count_new_zealand += 6">View more</button>
 
                         </div>
 
