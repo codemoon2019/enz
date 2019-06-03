@@ -777,6 +777,10 @@
             }
         }
     }
+    // .testimonials-block .slick-slide.slick-current { 
+    //     padding: 0;
+    // }
+    
     .testimonials-block.videos {
         padding-top: 0;
         padding-bottom: 5%;
@@ -787,12 +791,12 @@
             overflow: hidden;
             border-radius: 0;
         }
+        .card {
+            border-radius: 24px;
+        }
         .btn {
             background-color: $blue;
         }
-    }
-    .custom-slider-wrapper {
-        padding-left: 10%;
     }
     .gallery-block {
         .title {

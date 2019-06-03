@@ -11890,12 +11890,12 @@ html body {
   border-radius: 0;
 }
 
-.page-students .testimonials-block.videos .btn {
-  background-color: #3fb1e5;
+.page-students .testimonials-block.videos .card {
+  border-radius: 24px;
 }
 
-.page-students .custom-slider-wrapper {
-  padding-left: 10%;
+.page-students .testimonials-block.videos .btn {
+  background-color: #3fb1e5;
 }
 
 .page-students .gallery-block .title {
@@ -12374,6 +12374,10 @@ html body {
     font-size: 4vw !important;
   }
 
+  .user-menu img {
+    max-width: 200px;
+  }
+
   .banner-block {
     text-align: center;
     padding-top: 30px;
@@ -12472,6 +12476,10 @@ html body {
     background: #eff1f5;
   }
 
+  .testimonials-block .testimonials .btn {
+    width: 35px;
+  }
+
   .news-block {
     margin-top: 0;
     background-image: linear-gradient(to right, #3e99d2, #3e70b1);
@@ -12542,6 +12550,20 @@ html body {
     margin: 0;
   }
 
+  .page-about-company .content-block ul li,
+  .progress-rate .fs18 {
+    font-size: 15px !important;
+  }
+
+  .page-about-company .mv-block {
+    padding-bottom: 120px !important;
+  }
+
+  .page-about-company .mv-block h3.title {
+    font-size: 18px !important;
+    height: 147px;
+  }
+
   .page-about.page-about-team .content-block {
     margin: 0;
     background: #fff;
@@ -12557,21 +12579,8 @@ html body {
 
   .page-about-linkages .linkages {
     margin-bottom: 30px;
-  }
-
-  .page-about-linkages .link-Australia {
     padding: 30px 0;
-    background-image: linear-gradient(#00bacf, #008db0);
-  }
-
-  .page-about-linkages .link-Canada {
-    padding: 30px 0;
-    background-image: linear-gradient(#fadb5d, #f08e28);
-  }
-
-  .page-about-linkages .link-New {
-    padding: 30px 0;
-    background-image: linear-gradient(#ff7878, #eb5959);
+    background-size: contain;
   }
 
   .page-courses .search-courses {
@@ -12628,6 +12637,10 @@ html body {
     padding: 30px 0;
   }
 
+  .page-destination .top-cities {
+    padding-top: 60px;
+  }
+
   .page-apply .banner-block {
     padding-top: 30px;
     text-align: center;
@@ -12647,6 +12660,26 @@ html body {
     background-image: linear-gradient(to right, #3e99d2, #3e70b1);
   }
 
+  .page-students.testimonials .slick-list {
+    padding: 0;
+  }
+
+  .page-students.testimonials .slick-slide {
+    padding: 0 15px;
+  }
+
+  .page-students.gallery .slick-list {
+    padding: 0;
+  }
+
+  .page-students.gallery .slick-slide {
+    padding: 0 15px;
+  }
+
+  .page-students.gallery .slick-slide:first-child {
+    padding: 0 15px !important;
+  }
+
   .page-students .testimonials-block.videos {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -12662,11 +12695,7 @@ html body {
   }
 
   .page-contact .connect-block li {
-    margin: 0;
-  }
-
-  .page-contact .connect-block li img {
-    max-width: 80%;
+    margin: 4%;
   }
 
   .page-contact .for-content {
@@ -13166,6 +13195,10 @@ html body {
     padding-bottom: 7%;
   }
 
+  .services-visa .content-block {
+    padding-top: 40%;
+  }
+
   .page-about-company .content-block {
     margin-top: -15%;
     overflow: hidden;
@@ -13220,6 +13253,10 @@ html body {
 
   .page-students .gallery-block {
     padding: 80px 0;
+  }
+
+  .page-students .custom-slider-wrapper {
+    padding-left: 10%;
   }
 
   .page-students.gallery .slider-for .slick-slide img {
@@ -13364,6 +13401,10 @@ html body {
   .page-courses .search-courses .intro .img-book {
     width: auto;
     top: -260%;
+  }
+
+  .page-students .custom-slider-wrapper {
+    padding-left: 10%;
   }
 
   .page-students.gallery .slider-for .slick-slide img {
