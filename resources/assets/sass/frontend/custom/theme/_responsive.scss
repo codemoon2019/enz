@@ -70,17 +70,22 @@
         }
     } 
     .courses-block {
-        padding: 30px 0;
+        padding-top: 30px;
         text-align: center;
         .title{
             text-align: left;
         }
         .container-fluid > .row > div  {
             margin-bottom: 50px;
+            
             .title{
                 text-align: center;
             }
         }
+        .container-fluid > .row:last-child div:nth-child(2) {
+            margin-bottom: 0;
+        }
+        
         .plane,
         .cook,
         .nurse,
@@ -135,16 +140,22 @@
         > .row {
             margin-bottom: 30px !important;
         }
+        .inputfile {
+            text-align: center;
+        }
+    }
+    .footer .footer-links {
+        text-align: center;
     }
     .scrollTop.scrollTop {
-        bottom: 25%;
+        bottom: 15%;
         right: 2%;
     }
     #phplive_btn_1480051776 {
         height: 60px;
         width: 60px;
         right: 2% !important;
-        bottom: 0 !important;
+        bottom: 5 !important;
     }
 
     //INNER PAGES
@@ -156,6 +167,13 @@
             padding: 30px 0;
             margin: 0;
             background-image:linear-gradient(#fadb5d, #f08e28);
+            .py80 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            .item:last-child {
+                margin: 0 !important;
+            }
         }
     }
 
@@ -182,6 +200,13 @@
         font-size: 15px !important;
     }
     .page-about-company {
+        .content-block {
+            padding: 0;
+            .container-fluid {
+                padding-top: 30px !important;
+                padding-bottom: 30px !important;
+            }
+        } 
         .mv-block {
             padding-bottom: 120px !important;
             h3.title {
@@ -481,11 +506,16 @@
        }
     }
     .courses-block {
-        padding: 30px 0;
+        padding-top: 30px;
         text-align: center;
         .container-fluid > .row > div  {
             margin-bottom: 50px;
+            
         }
+        .container-fluid > .row:last-child > div {
+            margin-bottom: 0;
+        }
+        
         .it,
         .driller {
             right: 0;
