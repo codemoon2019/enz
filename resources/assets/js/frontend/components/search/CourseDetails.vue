@@ -10,7 +10,7 @@
 
         <div class="title-holder">
 
-            <h2 class="card-title fs18 text-black mb30">{{ course.title }}</h2>
+            <h2 class="card-title fs18 text-black text-center mb30">{{ course.title }}</h2>
 
         </div>
 

@@ -3755,9 +3755,11 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "title-holder" }, [
-        _c("h2", { staticClass: "card-title fs18 text-black mb30" }, [
-          _vm._v(_vm._s(_vm.course.title))
-        ])
+        _c(
+          "h2",
+          { staticClass: "card-title fs18 text-black text-center mb30" },
+          [_vm._v(_vm._s(_vm.course.title))]
+        )
       ]),
       _vm._v(" "),
       _vm._m(0)

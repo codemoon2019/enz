@@ -153,10 +153,14 @@
     }
     .item {
         .card-body {
-            padding: 12%;
             background: $white;
             border-radius: 25px !important;
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            display: flex;
+            height: 185px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
     }
     .filter {
