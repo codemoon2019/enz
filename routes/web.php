@@ -19,6 +19,9 @@ Route::get('linkages4',function(){
 Route::get('linkages5',function(){
     return view('frontend.linkages5');
 });
+Route::get('read-more',function(){
+    return view('frontend.read-more');
+});
 
 /*
  * Frontend Routes

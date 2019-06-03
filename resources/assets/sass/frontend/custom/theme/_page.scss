@@ -161,6 +161,10 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            img {
+                max-width: 200px;
+                object-fit: cover;
+            }
         }
     }
     .filter {

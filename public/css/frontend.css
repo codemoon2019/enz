@@ -11219,6 +11219,12 @@ html body {
   overflow: hidden;
 }
 
+.page-about-linkages .item .card-body img {
+  max-width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .page-about-linkages .filter {
   justify-content: center;
   border: none;
