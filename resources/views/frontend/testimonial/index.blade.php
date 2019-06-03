@@ -30,7 +30,7 @@
     
     </div>
     
-    <div class="block content-block testimonials-block" data-aos="zoom-in">
+    <div id="default" class="block content-block testimonials-block" data-aos="zoom-in">
 
         <div class="container-fluid py80 px180">
         

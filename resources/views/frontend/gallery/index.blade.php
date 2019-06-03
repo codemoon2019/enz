@@ -5,7 +5,7 @@
 @section('content')
 <div class="block gallery-block">
     <div class="container-fluid pt50 px180 relative" id="default">
-        <h1 class="title fs40 text-nblue mb80">Gallery</h1>
+        <h1 class="title fs40 text-nblue mb30">Gallery</h1>
         <div class="pull-right">
             <button class="btn left myarrow">
                 <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">

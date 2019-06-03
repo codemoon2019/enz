@@ -114,7 +114,7 @@
 
         <div class="block top-cities">
             
-            <div class="container-fluid px180 py100">
+            <div class="container-fluid px180">
     
                 <h2 class="title text-nblue fs40 text-center mb80">Top 6 Student Cities</h2>
             

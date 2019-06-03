@@ -238,6 +238,8 @@
             img {
                 border-top-left-radius: 14px;
                 border-top-right-radius: 14px;
+                width: 100%;
+                object-fit: cover;
             }
         }
         .card-title {
