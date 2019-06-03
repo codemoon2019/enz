@@ -797,7 +797,7 @@
 
                 </div>
 
-                <div class=" text-center">
+                <div class=" text-center mb30">
 
                     <a href="javascript:;" class="btn btnread-more text-uppercase btn-apply">Apply</a>
 

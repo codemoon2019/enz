@@ -14,7 +14,7 @@
 
 </div>
 
-<ul class="nav nav-tabs filter mt50 mb80">
+<ul class="nav nav-tabs filter mt50 mb30">
 
     <li>
     

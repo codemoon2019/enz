@@ -71,8 +71,14 @@
                                         {!! str_limit($course->description, 400) !!}
                                         
                                     </p>
+                            
+                                    <div class="text-center">
+                            
+                                        <a href="#" data-toggle="modal" data-target="#myModal" class="modal-trigger btn btnread-more text-uppercase">Inquire now</a>
+                            
+                                    </div>
 
-                                    <div class="table-responsive">
+                                    {{-- <div class="table-responsive">
                                         <table class="table table-borderless">
                                   
                                             <thead>
@@ -116,7 +122,7 @@
                                             </tbody>
       
                                         </table>
-                                    </div>
+                                    </div> --}}
                                 
   
                                 </div>
