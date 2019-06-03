@@ -244,6 +244,18 @@
         //     padding: 30px 0;
         //     background-image:linear-gradient(#ff7878, #eb5959);
         // }
+        .filter .btn,
+            .filter .btn.default {
+                height: auto;
+                min-height: 1px;
+                padding: 0;
+                box-shadow: none;
+                line-height: 1.5;
+                border: 1px solid transparent !important;
+                img {
+                    display: none;
+                }
+            }
     } 
 
     .page-courses {

@@ -18,13 +18,13 @@
 
     <li>
     
-        <a data-toggle="tab" href="#all" class="btn mb30 default show btn-country" data-type="all">All</a>
+        <a data-toggle="tab" href="#all" class="btn mb30 default active show btn-country" data-type="all">All</a>
 
     </li> 
     
     <li>
 
-        <a data-toggle="tab" href="#australia" class="btn mb30 active btn-country" data-type="australia"><img src="/svg/courses/aussie.svg" alt="" class="img-fluid mr10"> Australia</a>
+        <a data-toggle="tab" href="#australia" class="btn mb30 btn-country" data-type="australia"><img src="/svg/courses/aussie.svg" alt="" class="img-fluid mr10"> Australia</a>
 
     </li> 
     <li>
