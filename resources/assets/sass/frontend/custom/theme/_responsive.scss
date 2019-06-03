@@ -41,9 +41,9 @@
         }
         video {
             margin-bottom: 30px;
-            transform: translateX(-28%);
-            object-fit: cover;
-            height: 55vh;
+            // transform: translateX(-28%);
+            // object-fit: cover;
+            // height: 55vh;
         }
         .for-text {
             text-align: center;
@@ -888,6 +888,9 @@
     .footer .know-more {
         margin-top: -10%;
         padding-bottom: 7%;
+    }
+    .footer .footer-social img {
+        max-width: 28px;
     }
     .services-visa .content-block {
         padding-top: 40%;

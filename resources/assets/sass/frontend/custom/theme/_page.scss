@@ -144,15 +144,18 @@
     }
     .link-Australia {
         background: url(/img/about/aust.png) no-repeat;
+        background-size: contain;
     }
     .link-Canada {
         background: url(/img/about/canada.png) no-repeat;
+        background-size: contain;
         .for-image {
             top: 6%;
         }
     }
     .link-New {
         background: url(/img/about/new-zea.png) no-repeat;
+        background-size: contain;
     }
     .item {
         .card-body {
