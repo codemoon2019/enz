@@ -40,15 +40,19 @@
 
                             $html = '';
 
+
                             foreach ($childrens as $children) {
+
+                                $child_active = '';
 
                                 if (strpos($url, $children->url) !== false) {
                                    
                                     $active = 'active';
+                                    $child_active = 'active';
                                 
                                 }
 
-                                $html .= '<a class="nav-link dropdown-item" href="'.$children->url.'">'. $children->name.'</a>';
+                                $html .= '<a class="nav-link dropdown-item '.$child_active.'" href="'.$children->url.'">'. $children->name.'</a>';
                             
                             }
 
