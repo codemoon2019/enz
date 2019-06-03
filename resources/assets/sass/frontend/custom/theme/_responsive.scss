@@ -219,12 +219,16 @@
         .content-block {
             margin: 0;
             background: $white;
+            .py80 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
         }
     }
     .page-about-linkages {
         .banner-block {
             padding-top: 30px !important;
-        }
+        }   
         .for-image{
             display: none !important;
         }
