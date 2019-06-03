@@ -15,16 +15,34 @@
 </div>
 
 <ul class="nav nav-tabs filter mt50 mb80">
-    <li><a data-toggle="tab" href="#all" class="btn mb30 default show">
-    All <span>(26)</span></a></li> 
-    <li><a data-toggle="tab" href="#australia" class="btn mb30 active"><img src="/svg/courses/aussie.svg" alt="" class="img-fluid mr10"> Australia <span>(26)</span></a></li> 
-    <li><a data-toggle="tab" href="#canada" class="btn mb30"><img src="/svg/courses/canada.svg" alt="" class="img-fluid mr10"> Canada <span>(0)</span></a></li> 
-    <li><a data-toggle="tab" href="#new_zealand" class="btn mb30"><img src="/svg/courses/NZ.svg" alt="" class="img-fluid mr10"> New Zealand <span>(0)</span></a></li>
+
+    <li>
+    
+        <a data-toggle="tab" href="#all" class="btn mb30 default show btn-country" data-type="all">All</a>
+
+    </li> 
+    
+    <li>
+
+        <a data-toggle="tab" href="#australia" class="btn mb30 active btn-country" data-type="australia"><img src="/svg/courses/aussie.svg" alt="" class="img-fluid mr10"> Australia</a>
+
+    </li> 
+    <li>
+
+        <a data-toggle="tab" href="#canada" class="btn mb30 btn-country" data-type="canada"><img src="/svg/courses/canada.svg" alt="" class="img-fluid mr10"> Canada</a>
+
+    </li> 
+    
+    <li>
+        <a data-toggle="tab" href="#new_zealand" class="btn mb30 btn-country" data-type="new-zealand"><img src="/svg/courses/NZ.svg" alt="" class="img-fluid mr10"> New Zealand</a>
+
+    </li>
+
 </ul>
 
 @foreach ($country as $key => $country)
 
-    <div class="linkages link-{{ $country->title }} relative">
+    <div class="linkages link-{{ $country->title }} relative div-{{ $country->slug }}">
 
         <div class="container-fluid px180 relative">
 
@@ -87,3 +105,30 @@
 @endforeach
     
 @endsection
+
+
+@push('after-scripts')
+
+<script>
+
+    $('.btn-country').click(function(){
+
+        let el = $(this);
+
+        $('.linkages').hide();
+
+        if (el.attr('data-type') == 'all') {
+            
+            $('.linkages').show();
+        
+        }else{
+
+            $('.div-' + el.attr('data-type')).show();
+
+        }
+
+    });
+
+</script>
+
+@endpush

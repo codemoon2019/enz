@@ -29,6 +29,9 @@
     p, .basic {
         font-size: 4vw !important;
     }
+    .user-menu img {
+        max-width: 200px;
+    }
     .banner-block {
         text-align: center;
         padding-top: 30px;
@@ -105,6 +108,9 @@
     }  
     .testimonials-block {
         background: #eff1f5;
+        .testimonials .btn {
+            width: 35px;
+        }
     } 
     .news-block {
         margin-top: 0;
@@ -171,6 +177,19 @@
             margin: 0;
         }
     }
+    .page-about-company .content-block ul li,
+    .progress-rate .fs18 {
+        font-size: 15px !important;
+    }
+    .page-about-company {
+        .mv-block {
+            padding-bottom: 120px !important;
+            h3.title {
+                font-size: 18px !important;
+                height: 147px;
+            }
+        }
+    }
     .page-about.page-about-team {
         .content-block {
             margin: 0;
@@ -186,19 +205,20 @@
         }
         .linkages {
             margin-bottom: 30px;
-        }
-        .link-Australia {
             padding: 30px 0;
-            background-image:linear-gradient(#00bacf, #008db0);
+            background-size: contain;
         }
-        .link-Canada {
-            padding: 30px 0;
-            background-image:linear-gradient(#fadb5d, #f08e28);
-        }
-        .link-New {
-            padding: 30px 0;
-            background-image:linear-gradient(#ff7878, #eb5959);
-        }
+        // .link-Australia {
+        //     background-image:linear-gradient(#00bacf, #008db0);
+        // }
+        // .link-Canada {
+        //     padding: 30px 0;
+        //     background-image:linear-gradient(#fadb5d, #f08e28);
+        // }
+        // .link-New {
+        //     padding: 30px 0;
+        //     background-image:linear-gradient(#ff7878, #eb5959);
+        // }
     } 
 
     .page-courses {
@@ -249,6 +269,9 @@
         .more-info {
             padding: 30px 0;
         }
+        .top-cities {
+            padding-top: 60px;
+        }
     }
 
     .page-apply {
@@ -272,6 +295,23 @@
             margin-top: 0;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
+        .slick-list {
+            padding: 0;
+        }
+        .slick-slide {
+            padding: 0 15px;
+        }
+    }
+    .page-students.gallery {
+        .slick-list {
+            padding: 0;
+        }
+        .slick-slide {
+            &:first-child {
+                padding: 0 15px !important;
+            }
+            padding: 0 15px;
+        }
     }
     .page-students .testimonials-block.videos {
         padding-top: 30px;
@@ -286,10 +326,7 @@
             margin-bottom: 30px;
         }
         .connect-block li {
-            margin: 0;
-            img {
-                max-width: 80%;
-            }
+            margin: 4%;
         }
 
         .for-content {
@@ -799,6 +836,9 @@
         margin-top: -10%;
         padding-bottom: 7%;
     }
+    .services-visa .content-block {
+        padding-top: 40%;
+    }
     .page-about-company {
 
         .content-block {
@@ -860,6 +900,9 @@
         .gallery-block {
             padding: 80px 0;
         }
+    }
+    .page-students .custom-slider-wrapper {
+        padding-left: 10%;
     }
     .page-students.gallery .slider-for .slick-slide img {
         max-height: 365px;
@@ -1012,6 +1055,9 @@
                 }
             }
         }
+    }
+    .page-students .custom-slider-wrapper {
+        padding-left: 10%;
     }
     .page-students.gallery .slider-for .slick-slide img {
         max-height: 500px;

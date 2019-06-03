@@ -20,7 +20,7 @@
         
             {!! findDetails('home-tagline')->description !!}
         
-            <a href="#" class="btn btnread-more text-uppercase">Read more</a>
+            <a href="/read-more" class="btn btnread-more text-uppercase">Read more</a>
         
         </div>
 
