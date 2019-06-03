@@ -6,7 +6,7 @@
     
             <div class="row">
 
-                <div class="col-sm-3 left-content flags">
+                <div class="col-sm-3 left-content flags for-desktop">
                 
                     <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="">
                 

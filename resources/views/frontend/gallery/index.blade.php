@@ -51,6 +51,9 @@
                     <div class="modal-dialog modal-lg">
                     
                         <div class="modal-content">
+                            <div class="modal-header">
+                                    <button type="button" data-dismiss="modal" class="close pull-right">×</button>
+                            </div>
 
                             <div class="modal-body">
                                 
