@@ -275,6 +275,9 @@
             margin: 0 -7.5px;
             > div {
                 padding: 0 7.5px;
+                .nav-link {
+                    padding: 0;
+                }
             }
         }
     }

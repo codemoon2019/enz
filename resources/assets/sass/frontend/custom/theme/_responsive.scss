@@ -132,6 +132,9 @@
             margin-bottom: 30px !important;
         }
     }
+    .footer .flags {
+        display: none;
+    }
     .footer .know-more {
         padding-top: 30px !important;
         background-image:linear-gradient(#00bacf, #008db0);
@@ -553,6 +556,9 @@
     }
     .testimonials-block {
         background: #eff1f5;
+        .slick-slide {
+            padding-left: 15px;
+        }
     } 
     .news-block {
         margin-top: 0;
@@ -611,7 +617,7 @@
             display: none !important;
         }
         .mv-block {
-            padding: 30px 0;
+            padding: 30px 0 120px 0 !important;
             margin: 0;
         }
     }
@@ -631,19 +637,19 @@
             display: none !important;
         }
         .linkages {
-            marigin-bottom: 30px;
+            margin-bottom: 30px;
         }
         .link-Australia {
-            padding: 30px 0;
-            background-image:linear-gradient(#00bacf, #008db0);
+            // padding: 30px 0;
+            // background-image:linear-gradient(#00bacf, #008db0);
         }
         .link-Canada {
-            padding: 30px 0;
-            background-image:linear-gradient(#fadb5d, #f08e28);
+            // padding: 30px 0;
+            // background-image:linear-gradient(#fadb5d, #f08e28);
         }
         .link-New {
-            padding: 30px 0;
-            background-image:linear-gradient(#ff7878, #eb5959);
+            // padding: 30px 0;
+            // background-image:linear-gradient(#ff7878, #eb5959);
         }
     } 
 
@@ -654,6 +660,9 @@
             height: auto;
             padding-bottom: 30px;
             margin-bottom: 30px;
+            .mb80 {
+                margin: 0 !important;
+            }
         }
         .img-papers,
         .img-book {
@@ -704,6 +713,9 @@
         .more-info {
             padding: 30px 0;
         }
+        .top-cities {
+            margin-top: 60px;
+        }
     }
 
     .page-apply {
@@ -749,6 +761,12 @@
             padding-top: 30px !important;
             padding-bottom: 30px !important;
         }
+    }
+    .page-events .content-block,
+    .page-news .content-block {
+        margin-top: 0;
+        padding: 30px 15px !important;
+        background-image:linear-gradient(#fadb5d, #f08e28);
     }
 
 }
