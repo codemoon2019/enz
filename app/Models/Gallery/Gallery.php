@@ -144,12 +144,25 @@ class Gallery extends Model implements HasMedia
 
     public function registerMediaCollections()
     {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
+        $this->addMediaCollection('images')->registerMediaConversions(function (Media $media) {
 
             // $this->addMediaConversion('main')
             //     ->optimize()
             //     ->format(Manipulations::FORMAT_JPG)
             //     ->fit(Manipulations::FIT_CROP, 364, 235);
+
+            $this->addMediaConversion('thumbnail')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 175, 175);
+        });
+
+        $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
+
+            $this->addMediaConversion('main')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 364, 235);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

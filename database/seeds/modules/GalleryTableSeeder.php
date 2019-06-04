@@ -66,9 +66,12 @@ class GalleryTableSeeder extends Seeder
 
             $model = Gallery::create($value);
 
+            $this->seederUploader($model, 'gallery/gallery'.($key+1).'/' . $images[$key][0], null, 'featured');
+
+
             foreach ($images[$key] as $value1) {
                 
-                $this->seederUploader($model, 'gallery/gallery'.($key+1).'/' . $value1, null, 'featured');
+                $this->seederUploader($model, 'gallery/gallery'.($key+1).'/' . $value1, null, 'images');
 
             }
         
