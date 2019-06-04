@@ -116,6 +116,9 @@
         .testimonials .btn {
             width: 35px;
         }
+        .slick-slide {
+            padding-left: 15px;
+        }
     } 
     .news-block {
         margin-top: 0;
@@ -409,6 +412,13 @@
         }
     }
 
+    .page-events .content-block,
+    .page-news .content-block {
+        margin-top: 0;
+        padding: 30px 15px !important;
+        background-image:linear-gradient(#fadb5d, #f08e28);
+    }
+
 }
 
 @media (min-width: 640px){    
@@ -495,6 +505,9 @@
     .pr10p,
     .fixed .user-menu {
         padding: 0 5% !important;
+    }
+    .pt50 {
+        padding-top: 50px !important;
     }
     .wrapper.px83 {
         padding: 0 !important;
@@ -739,6 +752,18 @@
         padding-bottom: 30px;
     }
     .page-contact {
+        .content-block .for-banner {
+            background: transparent;
+            margin-bottom: 30px;
+            min-height: 0;
+            .text-white {
+                margin-top: 30px;
+                color: $black !important;
+            }
+        }
+        .for-content {
+            margin-top: 0;
+        }
         .ph-flag {
             display: none !important;
         }
