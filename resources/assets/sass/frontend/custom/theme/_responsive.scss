@@ -412,6 +412,13 @@
         }
     }
 
+    .page-events .content-block,
+    .page-news .content-block {
+        margin-top: 0;
+        padding: 30px 15px !important;
+        background-image:linear-gradient(#fadb5d, #f08e28);
+    }
+
 }
 
 @media (min-width: 640px){    

@@ -40,7 +40,7 @@
 
                     <div class="col-sm-4 for-image">
                     
-                        <img data-src="{{ $event->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                        <img data-src="{{ $event->getFirstMediaUrl('featured', 'main') }}" class="img-fluid mb10" alt="">
                     
                     </div>
                     
