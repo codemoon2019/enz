@@ -346,7 +346,7 @@
 
                         <div class="card-body relative linear-gradient-grey">
 
-                            <div class="table-responsive">
+                            <div class="table-responsive for-desktop">
 
                                 <table class="table table-stipped">
 
@@ -445,6 +445,109 @@
                                 </table>
 
                             </div>
+                            <div class="for-mobile">
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">Level: Elementary</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">School</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">From</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">To</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">Level: High School</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">School</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">From</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">To</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">Level: Tertiary</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">School</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">From</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+
+                                    <div class="col-sm-12 form-group">
+
+                                        <label class="title fs14 text-black" for="">To</label>
+                                        
+                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+    
+                                    </div>
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -489,19 +592,17 @@
                             </label><br />
 
                             <div class="employment-status-div">
-                                <div class="row">
-                                    <div class="col-sm-4 form-group">
-                                        <label class="title fs14 text-black" class="employment_name">Employer <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
-                                    </div>
-                                    <div class="col-sm-4 form-group">
-                                        <label class="title fs14 text-black">From <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control client-field" name="employment_status_from" id="employment_status_from">
-                                    </div>
-                                    <div class="col-sm-4 form-group">
-                                        <label class="title fs14 text-black">To <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control client-field" name="employment_status_to" id="employment_status_to">
-                                    </div>
+                                <div class="form-group">
+                                    <label class="title fs14 text-black" class="employment_name">Employer <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="title fs14 text-black">From <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control client-field" name="employment_status_from" id="employment_status_from">
+                                </div>
+                                <div class="form-group">
+                                    <label class="title fs14 text-black">To <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control client-field" name="employment_status_to" id="employment_status_to">
                                 </div>
     
                             </div>

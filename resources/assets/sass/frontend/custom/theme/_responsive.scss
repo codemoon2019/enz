@@ -399,6 +399,13 @@
         }
     }
 
+    .page-more {
+        .container-fluid {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    }
+
 }
 
 @media (min-width: 640px){    
@@ -735,6 +742,12 @@
             margin-top: 0;
             padding: 15px !important;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
+    .page-more {
+        .container-fluid {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
         }
     }
 

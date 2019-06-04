@@ -30,10 +30,10 @@ class LocationTableSeeder extends Seeder
 
             [
                 'title' => 'Laoag', 
-                'address' => 'HEAD OFFICE: G/F Natividad Bldg. II, Ablan Ave. cor. P. Lazaro St. Brgy. 4, Laoag City, Ilocos Norte 2900', 
+                'address' => 'HEAD OFFICE: 2B Natividad Bldg. II, Ablan Ave. cor. P. Lazaro St. Brgy. 4, Laoag City, Ilocos Norte 2900', 
                 'contact' => '<p>Telephone: (077) 600 4200</p>
-                              <p>GLOBE: 0917- 779 - 0153</p>
-                              <p>SMART: 0999 - 983-9670</p>',
+                              <p>GLOBE: 0917- 779 - 0152</p>
+                              <p>SMART: 0998 - 853-2428</p>',
                 'color' => 'green',
                 'order' => 0,
             ],

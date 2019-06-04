@@ -40,15 +40,19 @@
 
                             $html = '';
 
+
                             foreach ($childrens as $children) {
+
+                                $child_active = '';
 
                                 if (strpos($url, $children->url) !== false) {
                                    
                                     $active = 'active';
+                                    $child_active = 'active';
                                 
                                 }
 
-                                $html .= '<a class="nav-link dropdown-item" href="'.$children->url.'">'. $children->name.'</a>';
+                                $html .= '<a class="nav-link dropdown-item '.$child_active.'" href="'.$children->url.'">'. $children->name.'</a>';
                             
                             }
 
@@ -60,7 +64,6 @@
                                     href="#" 
                                     role="button" 
                                     id="dropdownMenuLink" 
-                                    data-toggle="dropdown" 
                                     aria-haspopup="true" 
                                     aria-expanded="false">
                                     {{ $node->name }}
@@ -113,7 +116,7 @@
             
                     <li class="nav-item dropdown">
             
-                        <a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button"
+                        <a class="nav-link nav-link" href="#" role="button"
             
                             aria-haspopup="true" aria-expanded="false">
             
@@ -173,14 +176,17 @@
                             $html = '';
 
                             foreach ($childrens as $children) {
-
+                                
+                                $child_active = '';
+                                
                                 if (strpos($url, $children->url) !== false) {
-                                   
+                                    
+                                    $child_active = 'active';
                                     $active = 'active';
                                 
                                 }
 
-                                $html .= '<a class="nav-link dropdown-item" href="'.$children->url.'">'. $children->name.'</a>';
+                                $html .= '<a class="nav-link dropdown-item '.$child_active.'" href="'.$children->url.'">'. $children->name.'</a>';
                             
                             }
 
@@ -192,7 +198,6 @@
                                     href="#" 
                                     role="button" 
                                     id="dropdownMenuLink" 
-                                    data-toggle="dropdown" 
                                     aria-haspopup="true" 
                                     aria-expanded="false">
                                     {{ $node->name }}
@@ -245,7 +250,7 @@
             
                     <li class="nav-item dropdown">
             
-                        <a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button"
+                        <a class="nav-link nav-link" href="#" role="button"
             
                             aria-haspopup="true" aria-expanded="false">
             

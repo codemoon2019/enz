@@ -3,7 +3,7 @@
 @section('page_class', "page page-more")
 
 @section('content')
-<div class="container-fluid intro px180 py50">
+<div class="container-fluid intro px180 py80">
     <h1 class="title text-black fs40 mb30">Welcome to ENZ Education Consultancy Services</h1>
     <div class="basic">
         <p>ENZ Education Consultancy Services, in considering its young age in the business arena, has grown in stature and reputation through its excellent service and high-quality assistance to Genuine International Students. Believing that consultancy services must effectively serve our hopeful and aspiring clienteles, the ENZ Education Consultancy Services with its team invests time and efforts added with the guiding core values towards an effective and goal driven services.</p>
