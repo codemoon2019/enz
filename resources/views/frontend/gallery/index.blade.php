@@ -60,7 +60,7 @@
                                 <div class="slider-for">
 
                                     @php
-                                        $images = $gallery->getUploaderImages('featured');
+                                        $images = $gallery->getUploaderImages('images');
                                     @endphp
                                     
                                     @foreach ($images as $image)
