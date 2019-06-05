@@ -38,9 +38,9 @@
     
                 @foreach (config('data.countries.' . $model->slug ) as $data)
 
-                    <div class="col-md-3 item text-center mx-auto mb30">
+                    <div class="col-md-3 item text-center mb30">
 
-                        <div class="svg-holder">
+                        <div class="svg-holder mx-auto">
 
                             <img alt="" class="img-fluid mb10" data-src="{{ $data[0] }}" style="">
 
