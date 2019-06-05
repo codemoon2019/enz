@@ -38,7 +38,7 @@
     
                 @foreach (config('data.countries.' . $model->slug ) as $data)
 
-                    <div class="col-md-6 item text-center mx-auto mb30">
+                    <div class="col-md-3 item text-center mx-auto mb30">
 
                         <div class="svg-holder">
 
@@ -46,7 +46,7 @@
 
                             <h2 class="title fs24 text-black text-uppercase">{{ $data[1] }}</h2>
 
-                            <p class="basic fs24">{{ $data[2] }}</p>
+                            <p class="basic fs24 mb0">{{ $data[2] }}</p>
 
                         </div>
 
