@@ -38,7 +38,7 @@
     
                 @foreach (config('data.countries.' . $model->slug ) as $data)
 
-                    <div class="col-md-3 item text-center mb30">
+                    <div class="col-lg-3 col-md-6 item text-center mb30">
 
                         <div class="svg-holder mx-auto">
 
