@@ -122,7 +122,7 @@
 
                     @foreach ($model->cities as $city)
 
-                        <div class="col-lg-4 col-md-6 item text-center mb60">
+                        <div class="col-lg-4 col-md-6 item text-center mb30">
                 
                             <div class="card">
                 
