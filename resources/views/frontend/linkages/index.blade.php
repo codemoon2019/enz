@@ -72,7 +72,7 @@
     
                                     @foreach ($linkages->getUploaderImages('featured', 'main') as $image)
                                         
-                                        <div class="col-sm-3 item mb30 align-self-center">
+                                        <div class="col-lg-3 col-sm-6 item mb30 align-self-center">
                             
                                             <div class="card-body text-center">
                             
