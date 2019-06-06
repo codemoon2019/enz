@@ -30,7 +30,7 @@ class UserTableSeeder extends Seeder
         ]);
 
         User::create([
-            'first_name' => 'Filinvest Gaia',
+            'first_name' => 'ENZ Education',
             'last_name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => Hash::make(app()->environment() == 'staging' ? '^2asdsdgA4W63749' : '1234'),

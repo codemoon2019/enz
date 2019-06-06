@@ -55,7 +55,7 @@ class CourseController extends Controller
 
         $models = $this->repository()->get()->load('subCourses');
 
-        $institutions = Institution()->load(['courses', 'country']);
+        $institutions = ActiveInstitution()->load(['activeCourses', 'country']);
 
         $areas = AreaOfStudy();
 

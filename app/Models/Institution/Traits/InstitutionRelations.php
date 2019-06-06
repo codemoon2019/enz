@@ -18,6 +18,11 @@ trait InstitutionRelations
 		return $this->hasMany(Course::class)->orderBy('order');
 	}
 
+	public function activeCourses()
+	{
+		return $this->hasMany(Course::class)->whereStatus('enable')->orderBy('order');
+	}
+
 	public function country()
 	{
 		return $this->belongsTo(Country::class);
