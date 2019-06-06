@@ -870,6 +870,9 @@
         padding: 30px 15px !important;
         background-image:linear-gradient(#fadb5d, #f08e28);
     }
+    .page-students.gallery .slider-nav .slick-slide {
+        padding: 0;
+    }
 
 }
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
