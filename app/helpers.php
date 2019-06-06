@@ -553,7 +553,14 @@ if (!function_exists('News')) {
 if (!function_exists('homeNews')) {
     function homeNews()
     {
-        return News::orderBy('published_at','desc')->limit(4)->get();
+        return News::orderBy('published_at','desc')->whereStatus('enable')->limit(4)->get();
+    }
+}
+
+if (!function_exists('activeNews')) {
+    function activeNews()
+    {
+        return News::orderBy('published_at','desc')->whereStatus('enable')->get();
     }
 }
 
@@ -677,6 +684,14 @@ if (!function_exists('Institution')) {
     function Institution()
     {
         return Institution::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('ActiveInstitution')) {
+    function ActiveInstitution()
+    {
+        return Institution::whereStatus('enable')->orderBy('order')->get();
     }
 }
 

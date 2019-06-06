@@ -110,8 +110,6 @@
 
         </div>
 
-
-
         <div class="video-div testimonial-div">
             
             <div class="form-group row">
@@ -125,6 +123,11 @@
                 </div>
         
             </div>
+    
+            <p>Instruction: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deleniti temporibus alias corporis! Ut tempora nulla eveniet nihil similique error!</p>
+        
+            <img src="{{ asset('img/youtube.png') }}" alt="">
+
 
         </div>
 
@@ -138,7 +141,7 @@
 
     <script>
 
-        CKEDITOR.replace('description', options);
+        // CKEDITOR.replace('description', options);
 
         $('#testimonial-type').change(function(){
 

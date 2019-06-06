@@ -16,7 +16,7 @@
 	
 					<h2 class="title text-white fs18">Area of Study</h2>
 	
-					<v-select class="" :options="areasList" v-model="area_name" label="title"></v-select>
+					<v-select class="" :options="areasList" v-model="area_name" label="title" placeholder="Select area of study"></v-select>
 
 				</div>
 				
@@ -24,7 +24,7 @@
 	
 					<h2 class="title text-white fs18">Institution</h2>
 	
-					<v-select class="" :options="institutionsList" v-model="institution_name" label="title"></v-select>
+					<v-select class="" :options="institutionsList" v-model="institution_name" label="title"  placeholder="Select institution"></v-select>
 
 				</div>
 				
@@ -32,7 +32,7 @@
 	
 					<h2 class="title text-white fs18">Course Title</h2>
 	
-					<input type="text" v-click-outside="hide" class="form-control course-search" v-model="course_name">
+					<input type="text" v-click-outside="hide" class="form-control course-search" v-model="course_name" placeholder="Enter course title">
 
 					<div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
 
