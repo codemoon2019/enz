@@ -96,12 +96,7 @@ $('document').ready(function(){
       $('#vidtes .slick-slider .slick-next').trigger('click');
   });
 
-  //Lazy load
-  $('img').lazy({
-    effect: 'fadeIn',
-    effectTime: 1000,
-    threshold: 200
-  });
+ 
   $( '.inputfile' ).each( function()
   {
     var $input   = $( this ),
@@ -135,7 +130,8 @@ $('document').ready(function(){
     var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/hqdefault.jpg";
 
     var image = new Image();
-    image.src = source;
+    image.setAttribute('data-src', source);
+    // image.src = source;
     image.addEventListener("load", function () {
       youtube[i].appendChild(image);
     }(i));
@@ -196,4 +192,11 @@ $('document').ready(function(){
   //    })
   //  }
   // });
+
+   //Lazy load
+   $('img').lazy({
+    effect: 'fadeIn',
+    effectTime: 1000,
+    threshold: 200
+  });
 });

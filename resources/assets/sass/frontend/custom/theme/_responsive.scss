@@ -16,6 +16,9 @@
             text-align: center;
         }
     }
+    .py80 {
+        padding: 30px 15px !important;
+    }
     .px83,
     .px180,
     .pl10p,
@@ -158,7 +161,7 @@
         text-align: center;
     }
     .scrollTop.scrollTop {
-        bottom: 15%;
+        bottom: 17%;
         right: 2%;
     }
     #phplive_btn_1480051776 {
@@ -170,19 +173,18 @@
 
     //INNER PAGES
     .page-services {
-        .title {
+        .banner-block .title {
             text-align: center;
         }
         .content-block {
             padding: 30px 0;
             margin: 0;
             background-image:linear-gradient(#fadb5d, #f08e28);
-            .py80 {
-                padding-top: 0 !important;
-                padding-bottom: 0 !important;
-            }
             .item:last-child {
                 margin: 0 !important;
+            }
+            .py80 {
+                padding-bottom: 0 !important;
             }
         }
     }
@@ -203,6 +205,11 @@
         .mv-block {
             padding: 30px 0;
             margin: 0;
+        }
+        .values-block {
+            .py80 {
+                padding-bottom: 0 !important;
+            }
         }
     }
     .page-about-company .content-block ul li,
@@ -229,9 +236,9 @@
         .content-block {
             margin: 0;
             background: $white;
+            padding-bottom: 0;
             .py80 {
-                padding-top: 0 !important;
-                padding-bottom: 0 !important;
+                padding: 0 !important;
             }
         }
     }
@@ -328,6 +335,8 @@
         }
         .content-block {
             margin: 0;
+            padding-top: 30px;
+            padding-bottom: 0;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
         .intro-block{
@@ -338,7 +347,10 @@
             padding: 30px 0;
         }
         .top-cities {
-            padding-top: 60px;
+            padding-top: 30px;
+            .title {
+                margin-bottom: 30px !important;
+            }
         }
     }
 
@@ -360,6 +372,7 @@
     }
     .page-students.testimonials {
         .content-block {
+            padding: 30px 0;
             margin-top: 0;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
@@ -421,6 +434,9 @@
             margin-top: 0;
             padding: 15px !important;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+        .course-info {
+            text-align: center;
         }
     }
 
@@ -593,10 +609,14 @@
         }
     } 
     .news-block {
+        padding: 30px 0;
         margin-top: 0;
         background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         .title {
             margin-bottom: 30px !important;
+        }
+        .news {
+            padding-bottom: 0 !important;
         }
     }
     .footer .know-more {
@@ -606,6 +626,9 @@
         padding-bottom: 10% !important;
         padding-top: 15% !important;
     
+    }
+    .footer .questions {
+        padding-top: 30px !important;
     }
     .scrollTop.scrollTop {
         right: 2%;
@@ -623,9 +646,12 @@
             text-align: center;
         }
         .content-block {
-            padding: 30px 0;
+            padding: 30px 15px 0;
             margin: 0;
             background-image:linear-gradient(#fadb5d, #f08e28);
+            .py80 {
+                padding: 0 !important;
+            }
         }
     }
     .page-about {
@@ -639,6 +665,11 @@
             overflow: hidden;
             .container-fluid {
                 padding: 0 5% !important;
+            }
+        }
+        .values-block {
+            .py80 {
+                padding: 30px 15px 0 !important;
             }
         }
     }
@@ -745,6 +776,7 @@
         }
         .content-block {
             margin: 0;
+            padding: 30px 0;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
         .intro-block{
@@ -756,6 +788,9 @@
         }
         .top-cities {
             margin-top: 60px;
+            .title {
+                margin-bottom: 30px !important;
+            }
         }
     }
 
@@ -772,6 +807,7 @@
     .page-students.testimonials {
         .content-block {
             margin-top: 0;
+            padding: 30px 0;
             background-image:linear-gradient(to right, #3e99d2, #3e70b1);
         }
     }
@@ -813,6 +849,9 @@
         .container-fluid {
             padding-top: 30px !important;
             padding-bottom: 30px !important;
+        }
+        .footer .container-fluid {
+            padding-top: 80px !important;
         }
     }
     .page-events .content-block,
@@ -862,6 +901,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    
     .px83,
     .px180,
     .pl10p,
@@ -1233,6 +1273,9 @@
     }
     .footer .know-more {
         padding-bottom: 45% !important;
+    }
+    .scrollTop.scrollTop {
+        bottom: 20%;
     }
     .mag-download p {
         font-size: 12px !important;
