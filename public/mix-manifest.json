@@ -1,14 +1,14 @@
 {
-    "/js/backend.js": "/js/backend.js?id=50f2f1a9585c1b1165e3",
-    "/js/backend-core.js": "/js/backend-core.js?id=57070c4474652eb009e1",
-    "/js/frontend.js": "/js/frontend.js?id=84f1bfd32bcdaaf5776e",
-    "/js/frontend-core.js": "/js/frontend-core.js?id=399a8680a7bc4d487d13",
-    "/css/frontend-core.css": "/css/frontend-core.css?id=81f4716207585879fdf7",
-    "/css/frontend.css": "/css/frontend.css?id=aea3afa51210c76428c6",
+    "/js/backend.js": "/js/backend.js?id=d1838acf016867e5ac23",
+    "/js/backend-core.js": "/js/backend-core.js?id=538a53aa938466d9d14c",
+    "/js/frontend.js": "/js/frontend.js?id=839d05e264a0811213fb",
+    "/js/frontend-core.js": "/js/frontend-core.js?id=e424da532c1f8abcf58f",
+    "/css/frontend-core.css": "/css/frontend-core.css?id=7d4259d14603cd24431f",
+    "/css/frontend.css": "/css/frontend.css?id=1744be628048c928db92",
     "/css/frontend-logged.css": "/css/frontend-logged.css?id=d41d8cd98f00b204e980",
-    "/css/backend-core.css": "/css/backend-core.css?id=6c818cc744287e871eb8",
-    "/css/backend.css": "/css/backend.css?id=2a0b70ccbf37147094ff",
-    "/js/plugins/ckeditor/app.js": "/js/plugins/ckeditor/app.js?id=5bd3e1f75b873b5992cc",
-    "/js/plugins/datatable/app.js": "/js/plugins/datatable/app.js?id=b8383bb89db871c80698",
-    "/js/plugins/menu/app.js": "/js/plugins/menu/app.js?id=c449e6d4a650623c86de"
+    "/css/backend-core.css": "/css/backend-core.css?id=9d3fdc953355d65a47b9",
+    "/css/backend.css": "/css/backend.css?id=0f2aab50175ac2f71255",
+    "/js/plugins/ckeditor/app.js": "/js/plugins/ckeditor/app.js?id=86510b7dbb87047dda7f",
+    "/js/plugins/datatable/app.js": "/js/plugins/datatable/app.js?id=525135c01ae8bfbaac35",
+    "/js/plugins/menu/app.js": "/js/plugins/menu/app.js?id=f25a13596da5d3fd0ba0"
 }
