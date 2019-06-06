@@ -393,6 +393,16 @@
             }
             padding: 0 15px;
         }
+        .slider-for .slick-slide {
+            padding: 0;
+            &:first-child {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    .page-students.gallery .slider-nav .slick-slide {
+        padding: 0;
     }
     .page-students .testimonials-block.videos {
         padding-top: 30px;

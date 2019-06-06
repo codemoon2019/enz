@@ -65,7 +65,7 @@
                                     
                                     @foreach ($images as $image)
 
-                                        <div class="item mx-auto mb30">
+                                        <div class="item mx-auto">
 
                                             <img src="{{ $image->source }}" class="img-fluid" alt="">
                                         
@@ -79,7 +79,7 @@
                 
                                     @foreach ($images as $image)
 
-                                        <div class="item mx-auto mb30">
+                                        <div class="item mx-auto">
                                     
                                             <img src="{{ $image->source}}" class="img-fluid" alt="">
                                     

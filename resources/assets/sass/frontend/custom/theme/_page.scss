@@ -391,7 +391,7 @@
                 border-top-right-radius: 35px;
             }
             .card-footer {
-                min-height: 100px;
+                min-height: 115px;
                 border-bottom-left-radius: 35px !important;
                 border-bottom-right-radius: 35px !important;
                 display: flex;
@@ -402,6 +402,12 @@
                         box-shadow: none;
                     }
                 }
+            }
+            .card-title {
+                margin: 0;
+            }
+            .btn {
+                padding: 0;
             }
         }
     }
@@ -899,8 +905,7 @@
             border-radius: 35px;
         }
     }
-    .slider-for,
-    .slider-nav {
+    .slider-for {
         .slick-list {
             padding: 0;
         }
