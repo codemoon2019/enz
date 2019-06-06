@@ -92,17 +92,17 @@ class DataSeeder extends Seeder
 
         $menuFooter = [
 
-            ['name' => 'Services', 'url' => '/services', 'order' => 1],
+            ['name' => 'Services', 'url' => '/student-visa', 'order' => 1],
 
-            ['name' => 'About', 'url' => '/about', 'order' => 2],
+            ['name' => 'About', 'url' => '/company', 'order' => 2],
 
             ['name' => 'Courses', 'url' => '/courses', 'order' => 3],
 
             ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
             
-            ['name' => 'Career', 'url' => '/apply', 'order' => 5],
+            ['name' => 'Career', 'url' => '/be-part-of-our-team', 'order' => 5],
             
-            ['name' => 'Students', 'url' => '/students', 'order' => 6],
+            ['name' => 'Students', 'url' => '/testimonials', 'order' => 6],
             
         ];
 
