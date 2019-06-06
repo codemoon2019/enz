@@ -98,7 +98,7 @@ class DataSeeder extends Seeder
 
             ['name' => 'Courses', 'url' => '/courses', 'order' => 3],
 
-            ['name' => 'Destinations', 'url' => '/destinations', 'order' => 4],
+            ['name' => 'Destinations', 'url' => '/destination/australia', 'order' => 4],
             
             ['name' => 'Career', 'url' => '/be-part-of-our-team', 'order' => 5],
             
