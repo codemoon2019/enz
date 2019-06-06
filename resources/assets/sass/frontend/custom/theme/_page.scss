@@ -237,16 +237,16 @@
     .card {
         border: 1px solid transparent;
     }
-    .card,
-    .card-header {
-        border-top-left-radius: 12px !important;
-        border-top-right-radius: 12px !important;
+    // .card,
+    // .card-header {
+    //     border-top-left-radius: 12px !important;
+    //     border-top-right-radius: 12px !important;
 
-    }
-    .card-body {
-        border-bottom-left-radius: 35px !important;
-        border-bottom-right-radius: 35px !important;
-    }
+    // }
+    // .card-body {
+    //     border-bottom-left-radius: 35px !important;
+    //     border-bottom-right-radius: 35px !important;
+    // }
 
 }
 .tourist-visa {
@@ -263,8 +263,8 @@
                 border-top-right-radius: 10px;
             }
             .card-footer {
-                border-bottom-left-radius: 10px !important;
-                border-bottom-right-radius: 10px !important;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
             }
             .card-title {
                 font-family: $Quicksand;
@@ -309,7 +309,7 @@
     
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
-        background-position: center;
+        background-size: contain;
         height: 94vh;
         display: flex;
         align-items: center;
@@ -775,7 +775,6 @@
             border-radius: 18px;
             padding: 0px;
             line-height: 16px;
-            opacity: 0.5;
             transition: all ease 300ms;
             &:hover,
             &:focus,
@@ -840,7 +839,6 @@
             border-radius: 18px;
             padding: 0px;
             line-height: 16px;
-            opacity: 0.5;
             transition: all ease 300ms;
             &:hover,
             &:focus,

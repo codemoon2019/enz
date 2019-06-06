@@ -131,8 +131,12 @@
         display: none !important;
     }
     .why-choose-block {
-        .title.nblue {
+
+        .title.text-nblue {
             margin-bottom: 30px !important;
+        }
+        .row:last-child .item:last-child {
+            margin-bottom: 0 !important;
         }
     }
     .footer .flags {
@@ -161,7 +165,7 @@
         height: 60px;
         width: 60px;
         right: 2% !important;
-        bottom: 5 !important;
+        bottom: 5px !important;
     }
 
     //INNER PAGES
@@ -254,17 +258,20 @@
         //     background-image:linear-gradient(#ff7878, #eb5959);
         // }
         .filter .btn,
-            .filter .btn.default {
-                height: auto;
-                min-height: 1px;
-                padding: 0;
-                box-shadow: none;
-                line-height: 1.5;
-                border: 1px solid transparent !important;
-                img {
-                    display: none;
-                }
+        .filter .btn.default {
+            height: auto;
+            min-height: 1px;
+            padding: 0;
+            box-shadow: none;
+            line-height: 1.5;
+            border: 1px solid transparent !important;
+            img {
+                display: none;
             }
+        }
+        .filter li {
+            margin: 0 4%;
+        }
     } 
 
     .page-courses {
@@ -284,6 +291,9 @@
         }
         .search-results {
             padding-top: 30px;
+            .filter {
+                margin-bottom: 30px !important;
+            }
             .filter .btn,
             .filter .btn.default {
                 height: auto;
@@ -295,6 +305,15 @@
                 img {
                     display: none;
                 }
+            }
+            .filter li {
+                margin: 0 2%;
+                a  {
+                    margin-bottom: 10px !important;
+                }
+            }
+            .tab-content .mt50 {
+                margin-top: 0 !important;
             }
         }
     }
@@ -684,6 +703,9 @@
         .search-results {
             padding-top: 30px;
             margin-bottom: 30px;
+            .filter {
+                margin-bottom: 30px !important;
+            }
         }
         .search-courses .suggestions ul li, 
         .search-courses .vs__dropdown-menu li {
@@ -700,6 +722,12 @@
                 border: 1px solid transparent !important;
                 img {
                     display: none;
+                }
+            }
+            .filter li {
+                margin: 0 4%;
+                a {
+                    margin-bottom: 10px !important;
                 }
             }
         }
@@ -1187,6 +1215,15 @@
     }
 }
 
+@media only screen and (max-width: 1600px) {
+    .page-courses .search-courses .img-book {
+        top: -90%;
+    }
+    .page-contact .content-block .for-banner .ph-flag {
+        top: -5%;
+        left: 0%;
+    }
+}
 @media only screen and (max-width: 320px) {
     .user-menu img {
         max-height: 40px;
@@ -1204,5 +1241,9 @@
         select.mr5 {
             margin: 0 !important;
         }
+    }
+    .page-about-linkages .filter li,
+    .page-courses .search-results .filter li {
+        margin: 0 2%;
     }
 }

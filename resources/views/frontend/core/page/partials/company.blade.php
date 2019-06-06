@@ -142,7 +142,7 @@
     
             @foreach (CoreValue() as $key => $core)
 
-                <div class="col-sm-4 item">
+                <div class="col-sm-4 item mb30">
 
                     <div class="circle linear-gradient-{{ $core->color }} mx-auto mb30">
 

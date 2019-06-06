@@ -8,7 +8,7 @@
 	
 			<h1 class="title text-white mb30">Courses</h1>
     
-        	<img data-src="svg/courses/bookshelf.svg" class="img-fluid img-book" alt="">
+        	<!-- <img data-src="svg/courses/bookshelf.svg" class="img-fluid img-book" alt=""> -->
 
 			<div class="row">
 	

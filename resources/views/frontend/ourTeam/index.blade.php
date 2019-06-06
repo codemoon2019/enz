@@ -76,19 +76,21 @@
                     
                         <div class="modal-content">
 
-                        <div class="modal-body text-center">
-                            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                            <div class="modal-body text-center">
+                                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                            <img src="" id="person-image" alt="" class="img-fluid mb20">
+                                <img src="" id="person-image" alt="" class="img-fluid mb20">
 
-                            <h2 class="title fs18 text-black" id="person-title">{{ $person->title }}</h2>
-						
-						    <p class="basic fs18 text-black" id="person-position">{{ $person->position }}</p>
+                                <h2 class="title fs18 text-black" id="person-title">{{ $person->title }}</h2>
+                            
+                                <p class="basic fs18 text-black" id="person-position">{{ $person->position }}</p>
 
-                            <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
+                                <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
 
-                            <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
+                                <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
 
+                            </div>
+                            
                         </div>
 
                     </div>

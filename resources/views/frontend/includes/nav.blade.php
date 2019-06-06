@@ -61,7 +61,7 @@
                         <li class="nav-item px14 {{ $active }}">
                             <div class="dropdown show">
                                 <a class="nav-link"
-                                    href="#" 
+                                 
                                     role="button" 
                                     id="dropdownMenuLink" 
                                     aria-haspopup="true" 
@@ -116,7 +116,7 @@
             
                     <li class="nav-item dropdown">
             
-                        <a class="nav-link nav-link" href="#" role="button"
+                        <a class="nav-link nav-link" role="button"
             
                             aria-haspopup="true" aria-expanded="false">
             
@@ -195,7 +195,7 @@
                         <li class="nav-item px14 {{ $active }}">
                             <div class="dropdown show">
                                 <a class="nav-link"
-                                    href="#" 
+                                 
                                     role="button" 
                                     id="dropdownMenuLink" 
                                     aria-haspopup="true" 
@@ -250,7 +250,7 @@
             
                     <li class="nav-item dropdown">
             
-                        <a class="nav-link nav-link" href="#" role="button"
+                        <a class="nav-link nav-link" role="button"
             
                             aria-haspopup="true" aria-expanded="false">
             

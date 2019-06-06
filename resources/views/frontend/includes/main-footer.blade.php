@@ -7,6 +7,7 @@
             <div class="row">
 
                 <div class="col-sm-3 left-content flags">
+
                 
                     <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="">
                 
@@ -176,13 +177,13 @@
    
       <div class="row">
    
-        <div class="col-lg-2 col-md-4 align-self-center text-center">
+        <div class="col-lg-2 col-md-2 align-self-center text-center">
    
           <img data-src="{{asset('img/footer-logo.png')}}" class="img-fluid" alt="">
    
         </div>
    
-        <div class="col-lg-2 col-md-2 align-self-center footer-links">
+        <div class="col-lg-2 col-md-3 align-self-center footer-links">
    
           <ul class="list-unstyled">
    
@@ -196,7 +197,7 @@
    
         </div>
    
-        <div class="col-lg-2 col-md-6 align-self-center footer-info">
+        <div class="col-lg-2 col-md-7 align-self-center footer-info">
    
           <ul class="list-unstyled">
    
