@@ -93,12 +93,14 @@ class EventController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'event_date' => "required",
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'event_date' => "required",
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',

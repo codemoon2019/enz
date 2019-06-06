@@ -24,7 +24,9 @@ export default {
 
 		state.institutions.forEach(function(element) {
 
-			element.courses.forEach(function(course) {
+			console.log(element);
+
+			element.active_courses.forEach(function(course) {
 
 				course.country = element.country.title;
 			
