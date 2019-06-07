@@ -1,22 +1,22 @@
 @extends('frontend.layouts.app')
 @section('title', 'Dashboard')
 @section('content')
-    <div class="row">
+    <div class="container-fluid px180 py80">
         <h1 class="h3 strong"> {{ __('navs.frontend.user.account') }} </h1>
         <div role="tabpanel">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
-                    <a href="#profile" aria-controls="profile" role="tab"
+                <li role="presentation" class="nav-item active">
+                    <a class="nav-link" href="#profile" aria-controls="profile" role="tab"
                        data-toggle="tab">{{ __('navs.frontend.user.profile') }}</a>
                 </li>
-                <li role="presentation">
-                    <a href="#edit" aria-controls="edit" role="tab"
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="#edit" aria-controls="edit" role="tab"
                        data-toggle="tab">{{ __('labels.frontend.user.profile.update_information') }}</a>
                 </li>
                 @if ($logged_in_user->canChangePassword())
-                    <li role="presentation">
-                        <a href="#password" aria-controls="password" role="tab"
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#password" aria-controls="password" role="tab"
                            data-toggle="tab">{{ __('navs.frontend.user.change_password') }}</a>
                     </li>
                 @endif
