@@ -1282,6 +1282,15 @@
     .page-about-company .content-block {
         padding-bottom: 14%;
     }
+    .page-destination {
+        .for-text {
+            left: 5%;
+        }
+        .content-block {
+            padding-top: 8%;
+            background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+        }
+    }
 }
 @media only screen and (max-width: 320px) {
     .user-menu img {
