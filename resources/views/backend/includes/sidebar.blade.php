@@ -162,7 +162,7 @@
 
                         @endcan
 
-                        @can(app(App\Models\Service\Service::class)::permission('index'))
+                        {{-- @can(app(App\Models\Service\Service::class)::permission('index'))
                         
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/services*')) }}"
@@ -171,7 +171,7 @@
                                 </a>
                             </li>
 
-                        @endcan
+                        @endcan --}}
 
                         @can(app(App\Models\OurTeam\OurTeam::class)::permission('index'))
                         
