@@ -1276,6 +1276,12 @@
         top: -5%;
         left: 0%;
     }
+    .page-about-company .content-block .plane {
+        display: none !important;
+    }
+    .page-about-company .content-block {
+        padding-bottom: 14%;
+    }
 }
 @media only screen and (max-width: 320px) {
     .user-menu img {
