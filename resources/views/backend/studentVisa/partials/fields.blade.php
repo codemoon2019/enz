@@ -38,17 +38,21 @@
 
         </div>
 
-        <div class="form-group row">
+        @if (isset($model))
 
-            <label class="col-md-2 form-control-label"></label>
+            <div class="form-group row">
 
-            <div class="col-md-10 image-div">
+                <label class="col-md-2 form-control-label"></label>
 
-                <img src="{{ $model->featured_icon }}" alt="">
+                <div class="col-md-10 image-div">
+
+                    <img src="{{ $model->featured_icon }}" alt="">
+
+                </div>
 
             </div>
 
-        </div>
+        @endif
 
     </div>
 

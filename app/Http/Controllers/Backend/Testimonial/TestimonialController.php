@@ -86,13 +86,13 @@ class TestimonialController extends CRUDController
                 'title' => "required|max:255|unique:$table",
             ])
             ->storeRuleMessages([
-                'title.required' => 'The title field is required.',
+                'title.required' => 'The name field is required.',
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
             ])
             ->updateRuleMessages([
-                'title.required' => 'The title field is required.',
+                'title.required' => 'The name field is required.',
             ]);
     }
 }

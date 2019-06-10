@@ -98,7 +98,7 @@
 
                             @if ($testimonials->count())
 
-                                @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'video-testimonial'])
+                                @include('backend.includes.sortable.form', ['model' => $model, 'id' => 'text-testimonial'])
                                 
                             @endif
 

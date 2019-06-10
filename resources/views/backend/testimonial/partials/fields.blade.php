@@ -124,7 +124,7 @@
         
             </div>
     
-            <p>Instruction: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deleniti temporibus alias corporis! Ut tempora nulla eveniet nihil similique error!</p>
+            <p>Instruction: Copy the last parameter of the youtube url and paste it to the youtube key field above.</p>
         
             <img src="{{ asset('img/youtube.png') }}" alt="">
 

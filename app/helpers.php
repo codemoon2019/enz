@@ -578,6 +578,13 @@ if (!function_exists('TestimonialText')) {
     }
 }
 
+if (!function_exists('ActiveTestimonialText')) {
+    function ActiveTestimonialText()
+    {
+        return Testimonial::whereType('text')->whereStatus('enable')->orderBy('order')->get();
+    }
+}
+
 if (!function_exists('TestimonialVideo')) {
     function TestimonialVideo()
     {
@@ -677,6 +684,13 @@ if (!function_exists('Career')) {
     function Career()
     {
         return Career::orderBy('order')->get();
+    }
+}
+
+if (!function_exists('CareeActiver')) {
+    function ActiveCareer()
+    {
+        return Career::orderBy('order')->whereStatus('enable')->get();
     }
 }
 

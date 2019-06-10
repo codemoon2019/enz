@@ -31,33 +31,33 @@ class WhyTableSeeder extends Seeder
             [
                 'title' => 'Linkages',
                 'description' => 'We have also established sound connections with our local partners for an ease assistance to our',
-                'status' => 'enable',
+                // 'status' => 'enable',
                 'url' => '/linkages'
             ],
             [
                 'title' => 'Awards',
                 'description' => 'With the outstanding service and assistance being extended to our clients, ENZ Education Consultancy Services is extremely honored and a proud recipient of two major awards.',
-                'status' => 'enable',
+                // 'status' => 'enable',
                 'url' => '/awards'
             ],
             [
                 'title' => 'Expertise',
                 'description' => 'ENZ Education Consultancy Services is committed to provide tailored and unique services in assisting our International Students. What makes our services special is the dedication of the professional and experienced staff to assure quality results.',
-                'status' => 'enable',
+                // 'status' => 'enable',
                 'url' => '/expertise'
 
             ],
             [
                 'title' => 'Customer Service',
                 'description' => 'ENZ Education Consultancy Services gives priority in the development of the best customer service. Our staffs are trained with good communication and marketing skills. We always believe that Customer Service plays a vital role in customer retention and in account growth by developing trust with customers over problem issues.',
-                'status' => 'enable',
+                // 'status' => 'enable',
                 'url' => '/customer-service'
 
             ],
             [
                 'title' => 'Payment Scheme',
                 'description' => 'Different to other firms and agencies, ENZ Education Consultancy Services has its own system of payment. We prefer PAY-AS-YOU-GO to ensure transparency and clearness of financial/monetary transactions.',
-                'status' => 'enable',
+                // 'status' => 'enable',
                 'url' => 'payment-scheme'
 
             ],

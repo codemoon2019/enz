@@ -60,7 +60,7 @@
 
             <div class="slick-slider">
 
-                @foreach (TestimonialText() as $key => $testimony)
+                @foreach (ActiveTestimonialText() as $key => $testimony)
                     
                     <div class="row d-flex item mx-auto mb30">
                     
@@ -72,7 +72,15 @@
                     
                         <div class="col-7 details">
                     
-                            <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>                    
+                            <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>    
+
+                            <div class="profile">
+
+                                <p class="name">{{ $testimony->title }}</p>
+                                
+                                <p class="position">{{ $testimony->position }} | {{ $testimony->address }}</p>
+                            
+                            </div>               
                     
                         </div>
                     

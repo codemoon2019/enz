@@ -14,6 +14,8 @@ use App\Models\Content\Content;
 
 use App\Models\News\News;
 
+use App\Models\Event\Event;
+
 use App\Models\Core\Block\Block;
 
 use App\Models\TemplateProperty;
@@ -31,6 +33,8 @@ class TemplateController extends Controller
             case 'MoreLife': $model = MoreLife::find($data['model_id']); break;
 
             case 'News': $model = News::find($data['model_id']); break;
+
+            case 'Event': $model = Event::find($data['model_id']); break;
 
             case 'Block': $model = Block::find($data['model_id']); break;
 
