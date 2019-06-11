@@ -29,6 +29,7 @@ use App\Models\Institution\Institution;
 use App\Models\Location\Location;
 use App\Models\Gallery\Gallery;
 use App\Models\Award\Award;
+use App\Models\City\City;
 
 /**
  * Class ImageController
@@ -60,6 +61,7 @@ class ImageController extends Controller
         'location'    => Location::class,
         'gallery'     => Gallery::class,
         'award'       => Award::class,
+        'city'       => City::class,
     ];
 
     /**
