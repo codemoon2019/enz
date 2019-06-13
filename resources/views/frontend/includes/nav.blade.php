@@ -67,7 +67,7 @@
                                     aria-haspopup="true" 
                                     aria-expanded="false">
                                     {{ $node->name }}
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g id="Layer_2" data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
                                 </a>
                                 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -121,7 +121,7 @@
                             aria-haspopup="true" aria-expanded="false">
             
                             <span class="d-md-down-none">{{ __('menus.language-picker.language') }} ({{ strtoupper(app()->getLocale()) }})</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g id="Layer_2" data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
             
                         </a>
             
@@ -201,7 +201,7 @@
                                     aria-haspopup="true" 
                                     aria-expanded="false">
                                     {{ $node->name }}
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g id="Layer_2" data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
                                 </a>
                                 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -255,7 +255,7 @@
                             aria-haspopup="true" aria-expanded="false">
             
                             <span class="d-md-down-none">{{ __('menus.language-picker.language') }} ({{ strtoupper(app()->getLocale()) }})</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g id="Layer_2" data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.18 7.09"><g data-name="Layer 2"><polygon class="cls-1" points="5.59 7.09 0 0.66 0.76 0 5.59 5.57 10.42 0 11.18 0.66 5.59 7.09"/></g></svg>
             
                         </a>
             
