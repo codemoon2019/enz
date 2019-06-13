@@ -30,14 +30,14 @@
         @include('frontend.includes.widgets.global-critical')
 
     @stack('before-styles')
-        <link href="{{ mix('/css/frontend-core.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-        <link href="{{ mix('/css/frontend.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+        <link rel="preload" href="{{ mix('/css/frontend-core.css') }}" as="style" onload="this.rel='stylesheet'">
+        <link rel="preload" href="{{ mix('/css/frontend.css') }}" as="style" onload="this.rel='stylesheet'">
         @if($logged_in_user)
-        <link href="{{ mix('/css/frontend-logged.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+        <link rel="preload" href="{{ mix('/css/frontend-logged.css') }}" as="style" onload="this.rel='stylesheet'">
         @endif
         <noscript>
-            <link href="{{ mix('/css/frontend-core.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
-            <link href="{{ mix('/css/frontend.css') }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+            <link rel="preload" href="{{ mix('/css/frontend-core.css') }}" as="style" onload="this.rel='stylesheet'">
+            <link rel="preload" href="{{ mix('/css/frontend.css') }}" as="style" onload="this.rel='stylesheet'">
         </noscript>
         @stack('after-styles')
 
