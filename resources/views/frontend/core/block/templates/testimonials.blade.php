@@ -8,15 +8,17 @@
     
             <div class="pull-right">
     
-                <button class="btn left myarrow">
+                <button class="btn left myarrow" role="button">
+                    <span class="d-none">left</span>
     
-                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="Left Arrow">
     
                 </button>
     
-                <button class="btn right myarrow">
+                <button class="btn right myarrow" role="button">
+                    <span class="d-none">right</span>
     
-                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="Right Arrow">
     
                 </button>
     
