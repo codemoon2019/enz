@@ -1,4 +1,4 @@
-<div class="block news-block">
+<div class="block news-block lazy" data-src="/img/news.png">
 
     <section class="news pb40">
     

@@ -219,7 +219,7 @@ $('document').ready(function(){
   // });
 
    //Lazy load
-   $('img').lazy({
+   $('img, .lazy').lazy({
     effect: 'fadeIn',
     effectTime: 1000,
     threshold: 200

@@ -1,4 +1,4 @@
-<div class="block events-block">
+<div class="block events-block lazy" data-src="/img/events.png">
 
     <div class="container-fluid px180">
     

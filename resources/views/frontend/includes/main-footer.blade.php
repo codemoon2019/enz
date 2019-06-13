@@ -139,7 +139,7 @@
    
     </section>
    
-    <section class="container-fluid know-more px180">
+    <section class="container-fluid know-more px180 lazy" data-src="/img/footer.png">
    
       <div class="row justify-content-center mb80">
    

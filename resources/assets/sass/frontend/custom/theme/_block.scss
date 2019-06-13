@@ -17,7 +17,7 @@
     position: relative;
     padding-bottom: 15%;
     padding-top: 5%;
-    background: url('/img/events.png') no-repeat;
+    background-repeat: no-repeat;
     .btnview-more:hover {
         background-color: $white;
     }
@@ -85,7 +85,7 @@
         background-repeat: no-repeat;
     }
     .comm-service .left-content {
-        background-image: url('/img/cs-bg.webp');
+        // background-image: url('/img/cs-bg.webp');
     }
     .plane {
         position: absolute;
@@ -100,7 +100,7 @@
     }
 
     .bus-service .right-content {
-        background-image: url('/img/bs-bg.webp');
+        
     }
     .bman {
         position: absolute;
@@ -108,7 +108,6 @@
         top: 35%;
     }
     .hosp-service .left-content {
-        background-image: url('/img/hc-bg.webp');
     }
     .cook {
         position: absolute;
@@ -122,7 +121,6 @@
         height: 25%;
     }
     .it-service .right-content {
-        background-image: url('/img/it-bg.webp');
     }
     .it {
         position: absolute;
@@ -130,7 +128,6 @@
         top: 25%;
     }
     .nurse-service .left-content {
-        background-image: url('/img/nurse-bg.webp');
     }
     .stetos {
         position: absolute;
@@ -144,7 +141,6 @@
         left: 0;
     }
     .other-service .right-content {
-        background-image: url('/img/other-bg.webp');
         .plane {
             position: absolute;
             top: 0;
@@ -210,7 +206,7 @@
     }
 }
 .news-block {
-    background: url('/img/news.png') no-repeat;
+    background-repeat: no-repeat;
     padding-top: 14.5%;
     margin-top: -10%;
     position: relative;

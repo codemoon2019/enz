@@ -6,7 +6,7 @@
     
         <div class="row comm-service">
     
-            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
+        <div class="col-sm-6 left-content padded lazy" data-src="/img/cs-bg.webp" data-aos="zoom-in">
     
                 <img class="floating plane" data-src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
     
@@ -28,7 +28,7 @@
     
         <div class="row bus-service">
     
-            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded lazy" data-src="/img/bs-bg.webp" data-aos="zoom-in">
     
                 <img class="floating bman" data-src="{{asset('svg/bman.svg')}}" alt="">
     
@@ -48,7 +48,7 @@
     
         <div class="row hosp-service">
     
-            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 left-content padded lazy" data-src="/img/hc-bg.webp" data-aos="zoom-in">
     
                 <img class="floating-rev cook" data-src="{{asset('svg/HospitalityandCookery.svg')}}" alt="">
     
@@ -70,7 +70,7 @@
     
         <div class="row it-service">
     
-            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded lazy" data-src="/img/it-bg.webp" data-aos="zoom-in">
     
                 <img class="floating it" data-src="{{asset('svg/it.svg')}}" alt="">
     
@@ -91,7 +91,7 @@
      
         <div class="row nurse-service">
      
-            <div class="col-sm-6 left-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 left-content padded lazy" data-src="/img/nurse-bg.webp" data-aos="zoom-in">
      
                 <img class="floating-rev stetos" data-src="{{asset('svg/stethoscope.svg')}}" alt="">
      
@@ -113,7 +113,7 @@
      
         <div class="row other-service">
      
-            <div class="col-sm-6 order-sm-2 right-content padded" data-aos="zoom-in">
+            <div class="col-sm-6 order-sm-2 right-content padded lazy" data-src="/img/other-bg.webp" data-aos="zoom-in">
      
                 <img class="floating plane" data-src="{{asset('svg/CommunityServiceAirplane.svg')}}" alt="">
      
