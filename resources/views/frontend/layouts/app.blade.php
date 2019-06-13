@@ -13,6 +13,7 @@
         <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="prelod" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
         @include('frontend.includes.meta-tags')
 
         <link rel="apple-touch-icon" href="{{ asset(setting('site-fav-icon')) }}">
