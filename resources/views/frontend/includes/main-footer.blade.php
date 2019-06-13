@@ -9,7 +9,7 @@
                 <div class="col-sm-3 left-content flags">
 
                 
-                    <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="">
+                    <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="Flags">
                 
                 </div>
                 
@@ -29,7 +29,7 @@
                 
                                 <div class="form-group">
                 
-                                  <label for="">Full Name <span class="text-danger">*</span></label>
+                                  <label for="full_name">Full Name <span class="text-danger">*</span></label>
                 
                                   <input type="text" name="full_name" id="full_name" class="form-control inquiry-field" placeholder="" />
                 
@@ -37,7 +37,7 @@
                 
                                 <div class="form-group">
                 
-                                  <label for="">Profession <span class="text-danger">*</span></label>
+                                  <label for="profession">Profession <span class="text-danger">*</span></label>
                 
                                   <input type="text" name="profession" id="profession" class="form-control inquiry-field" placeholder="" />
                 
@@ -45,7 +45,7 @@
                 
                                 <div class="form-group">
                 
-                                  <label for="">Email Address <span class="text-danger">*</span></label>
+                                  <label for="email_address">Email Address <span class="text-danger">*</span></label>
                 
                                   <input type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
                 
@@ -53,7 +53,7 @@
                 
                                 <div class="form-group">
                 
-                                  <label for="">Mobile Number <span class="text-danger">*</span></label>
+                                  <label for="mobile_number">Mobile Number <span class="text-danger">*</span></label>
                 
                                   <input type="text" name="mobile_number" id="mobile_number" class="form-control inquiry-field" placeholder="" />
                 
@@ -61,7 +61,7 @@
                 
                                 <div class="form-group">
                 
-                                  <label for="">Location <span class="text-danger">*</span></label>
+                                  <label for="location">Location <span class="text-danger">*</span></label>
                 
                                   <input type="text" name="location" id="location" class="form-control inquiry-field" placeholder="" />
                 
@@ -73,7 +73,7 @@
                 
                               <div class="form-group">
                 
-                                <label for="">Inquiry <span class="text-danger">*</span></label>
+                                <label for="inquiry">Inquiry <span class="text-danger">*</span></label>
                 
                                 <textarea name="inquiry" id="inquiry" cols="30" rows="10" class="form-control inquiry-field"></textarea>
                 
@@ -154,8 +154,8 @@
             {{ csrf_field() }}
             
             <div class="input-group mb-3">
-     
-              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
+              <label for="email" class="d-none"></label>
+              <input type="email" name="email" class="d-none" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
      
               <div class="input-group-append">
      
@@ -179,7 +179,7 @@
    
         <div class="col-lg-2 col-md-2 align-self-center text-center">
    
-          <img data-src="{{asset('img/footer-logo.png')}}" class="img-fluid" alt="">
+          <img data-src="{{asset('img/footer-logo.png')}}" class="img-fluid" alt="Footer Logo">
    
         </div>
    
@@ -233,7 +233,7 @@
    
                         <a href="{{ $social->value }}">
    
-                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
+                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="Facebook">
    
                         </a>
    
@@ -247,7 +247,7 @@
      
                         <a href="{{ $social->value }}">
      
-                            <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="">
+                            <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="Instagram">
      
                         </a>
      
@@ -261,7 +261,7 @@
      
                         <a href="{{ $social->value }}">
      
-                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="">
+                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="Youtube">
      
                         </a>
      
@@ -275,7 +275,7 @@
       
                         <a href="{{ $social->value }}">
       
-                            <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="">
+                            <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="Twitter">
       
                         </a>
       
@@ -289,7 +289,7 @@
       
                         <a href="{{ $social->value }}">
       
-                            <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="">
+                            <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="Skype">
       
                         </a>
       
@@ -309,13 +309,13 @@
       
         <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
       
-          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="">          
+          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="ICEF">          
       
         </div>
       
         <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
       
-          <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="">          
+          <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="PIER">          
       
         </div>
       

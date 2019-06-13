@@ -12,7 +12,7 @@
 
                     <div class="svg-holder mb20 mx-auto">
                     
-                        <img class="img-fluid" data-src="{{ $why->featured_icon }}" alt="">
+                        <img class="img-fluid" data-src="{{ $why->featured_icon }}" alt="{{ $why->title }}">
                     
                     </div>
                     

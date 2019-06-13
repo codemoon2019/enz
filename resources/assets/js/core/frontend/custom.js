@@ -156,6 +156,7 @@ $('document').ready(function(){
 
     var image = new Image();
     image.setAttribute('data-src', source);
+    image.setAttribute('alt', source);
     // image.src = source;
     image.addEventListener("load", function () {
       youtube[i].appendChild(image);

@@ -18,7 +18,7 @@
     
                             <div class="card-header p0">
     
-                                <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="">
+                            <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="{{$news->title}}">
     
                             </div>
     
