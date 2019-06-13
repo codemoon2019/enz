@@ -61,6 +61,7 @@
     "bootstrap-sass": "^3.4.0",
     "daterangepicker": "^3.0.3",
     "fancybox": "^3.0.1",
+    "fg-loadcss": "^2.1.0",
     "fullpage": "^1.4.2",
     "fullpage.js": "^3.0.4",
     "gsap": "^2.1.2",
