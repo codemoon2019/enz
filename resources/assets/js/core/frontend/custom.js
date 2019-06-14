@@ -225,4 +225,6 @@ $('document').ready(function(){
     effectTime: 1000,
     threshold: 200
   });
+
+  window.addEventListener('load', AOS.refresh);
 });

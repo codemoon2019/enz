@@ -155,7 +155,7 @@
             
             <div class="input-group mb-3">
               <label for="email" class="d-none"></label>
-              <input type="email" name="email" class="d-none" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
+              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
      
               <div class="input-group-append">
      
