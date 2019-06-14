@@ -14,7 +14,7 @@
         
         </a>
         
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <button class="navbar-toggler navbar-toggler-right collapsed" role="Button" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         
             <span> </span>
         
@@ -147,7 +147,7 @@
         
         </a>
         
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" onclick="openNav()">
+        <button class="navbar-toggler navbar-toggler-right collapsed" role="Button" aria-label="Open" type="button" onclick="openNav()">
         
             <span> </span>
         
