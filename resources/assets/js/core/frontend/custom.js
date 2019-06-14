@@ -226,5 +226,4 @@ $('document').ready(function(){
     threshold: 200
   });
 
-  window.addEventListener('load', AOS.refresh);
 });
