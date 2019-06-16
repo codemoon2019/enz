@@ -31,7 +31,7 @@ class DetailsTableSeeder extends Seeder
                 'title' => 'Home Tagline',
                 'description' => '<h2>Welcome to ENZ Education Consultancy Services</h2>
                 
-                <p>With the outstanding services and assistance being extended to our clients, ENZ Education Consultancy Services is extremely honored and a proud recipient of two major awards: The National Customers&rsquo; Choice Annual Awards for Business Excellence 2016</p>',
+                <p>ENZ Education Consultancy Services, in considering its young age in the business arena, has grown in stature and reputation through its excellent service and high-quality assistance to Genuine International Students. Believing that consultancy services must effectively serve our hopeful and aspiring clienteles, the ENZ Education Consultancy Services with its team invests time and efforts added with the guiding core values towards an effective and goal driven services.</p>',
             ],
             [
                 'title' => 'Location',

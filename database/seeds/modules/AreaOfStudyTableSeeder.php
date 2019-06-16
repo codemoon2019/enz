@@ -34,32 +34,32 @@ class AreaOfStudyTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Business and Management',
-                'description' => 'Diploma of Business unlocks new opportunities within the fluctuating world of business by acquiring this tailored training qualification. This course will see you discover business fundamentals in project management and human resources to ignite your potential career goals.',
+                'title' => 'Business, Management & Marketing',
+                'description' => 'Prepare yourself in the business world by studying business, management or marketing. Acquiring this tailored training qualification unlocks new opportunities within the fluctuating world of business.',
                 'order' => 0,
 
             ],
             [
                 'title' => 'Hospitality and Cookery',
-                'description' => 'The Certificate IV in Patisserie reflects the role of pastry chefs who have a supervisory or team leading role in the kitchen. They operate independently or with limited guidance from others and use discretion to solve non-routine problems. This qualification provides a pathway to work in various organisations where patisserie products are prepared and served, including patisseries, restaurants, hotels, catering operations, clubs, pubs, cafés, and coffee shops.',
+                'description' => 'Improve your chances for a global career by studying Hospitality & Cookery courses abroad. The hospitality industry is one of the most expansive and diverse industry, which means you’ll never be limited in your job search. It will also give you the chance to see many new places.',
                 'order' => 0,
 
             ],
             [
                 'title' => 'Information Technology & Digital media',
-                'description' => 'Administer and manage information and communications technology (ICT) support in small-to-medium enterprises (SMEs) using a wide range of general ICT technologies. This level will provide a broader rather than specialized ICT support function, applying a wide range of higher level technical skills in ICT areas such as networking, IT support, database development, programming and web development. Career Opportunities: Help Desk Network Support Technician Systems Administrator Assistant IT Manager',
+                'description' => 'Information Technology & Digital media is incredibly diverse, fast-paced industry, which is constantly changing and evolving. One of the top reasons to study these courses is the increase of job opportunities around the world.',
                 'order' => 0,
 
             ],
             [
                 'title' => 'Healthcare',
-                'description' => 'Have your overseas nursing qualification recognised and register with the Australian Health Practitioner Regulation Agency (AHPRA). Learn about the nursing profession in Australia and become part of it! The IRON program is a quality bridging program for nurses entering Australia. This course is designed to provide you with the knowledge, skills and understanding to practice safely and competently in a variety of health care settings. On successful completion of this course, graduates will be eligible to apply to the Australian Health Practitioner Regulation Agency (AHPRA) for registration as a Registered Nurse.',
+                'description' => 'Boost your healthcare career while gaining hands on experience abroad! The advantage of studying abroad is it is recognized throughout the world. As a result, future health practitioners can expect to earn a higher salary globally and achieve better results for patients. Healthcare students who complete their education in Australia, New Zealand or Canada can look forward to more opportunities and higher earnings throughout their future career.',
                 'order' => 0,
 
             ],
             [
                 'title' => 'Creative Arts and Design',
-                'description' => 'This program is designed for international students wanting to gain the qualification required to work in the Dental Technology industry. This qualification reflect the role of a dental technician responsible for construction and repair of dentures and other dental appliances including crowns, bridges, partial dentures, pre- and post-oral and maxillofacial surgical devices and orthodontic appliances.',
+                'description' => 'Studying creative arts and design abroad is the perfect opportunity to develop your creativity and pursue artistic careers. The demand for web designers, app designers, software designers, graphic designers, digital illustrators, multimedia artists, video producers, online publishers, animation artists, game designers and many other digital careers is undergoing unprecedented growth. With this qualification, the range of occupations graduates can enter is vast.',
                 'order' => 0,
 
             ],
@@ -81,7 +81,7 @@ class AreaOfStudyTableSeeder extends Seeder
             ],
             [
                 'title' => 'Other Courses',
-                'description' => '',
+                'description' => 'Explore more courses that suits you best for your studies abroad.',
                 'order' => 0,
 
             ],
