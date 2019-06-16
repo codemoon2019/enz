@@ -16,7 +16,7 @@
 
 @section('content')
 
-    <div class="block content-block" data-aos="zoom-in">
+    <div class="block content-block">
 
         <div class="container-fluid for-banner px180">
 

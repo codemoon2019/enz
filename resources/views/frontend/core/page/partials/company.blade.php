@@ -33,10 +33,10 @@
         @endphp
 
         <div class="row">
-            <div class="col-sm-4" data-aos="zoom-in">
+            <div class="col-sm-4">
                 <h2 class="title text-yellow text-capitalize fs24">Our Company</h2>
             </div>
-            <div class="col-sm-8" data-aos="zoom-in">
+            <div class="col-sm-8">
 
                 <div>
                     
@@ -47,10 +47,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4" data-aos="fade-right">
+            <div class="col-sm-4">
                 <h3 class="title text-yellow text-capitalize fs24">Registration</h3>
             </div>
-            <div class="col-sm-8" data-aos="fade-left">
+            <div class="col-sm-8">
                 <div>
                     
                     {!! $ourCompanyDetails[1]->description !!}
@@ -59,20 +59,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4" data-aos="fade-right">
+            <div class="col-sm-4">
                 <h3 class="title text-yellow text-capitalize fs24">Professional Membership</h3>
             </div>
-            <div class="col-sm-8" data-aos="fade-left">
+            <div class="col-sm-8">
                 <div>
                     {!! $ourCompanyDetails[2]->description !!}
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4" data-aos="fade-right">
+            <div class="col-sm-4">
                 <h3 class="title text-yellow text-capitalize fs24">Our Success Percentage Rate</h3>
             </div>
-            <div class="col-sm-8" data-aos="fade-left">
+            <div class="col-sm-8">
                 <div class="progress-rate">
                     <label class="text-white text-capitalize fs18">Student visa</label>
                     <div class="progress">
@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="" data-aos="fade-right">
+    <img class="plane floating" data-src="{{asset('svg/about/airplane.svg')}}" alt="">
 </div>
 
 <div class="block mv-block">
@@ -133,7 +133,7 @@
 
 </div>
 
-<div class="block values-block"  data-aos="zoom-in">
+<div class="block values-block">
 
     <div class="container-fluid py80 px475 text-center">
         <h2 class="title text-nblue text-capitalize fs40 mb30">Our core values</h2>

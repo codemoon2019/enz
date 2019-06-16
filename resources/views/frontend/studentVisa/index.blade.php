@@ -32,7 +32,7 @@
 
     </div>
 
-    <div class="block content-block" data-aos="zoom-in">
+    <div class="block content-block">
 
         <div class="container-fluid py80 px475 text-center">
         

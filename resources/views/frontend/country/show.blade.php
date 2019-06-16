@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="block content-block" data-aos="zoom-in">
+    <div class="block content-block">
 
         <div class="container-fluid px180">
         
@@ -60,7 +60,7 @@
 
     </div>
 
-    <div class="block intro-block" data-aos="zoom-in">
+    <div class="block intro-block">
     
         <div class="container-fluid px180 py100">
     
@@ -150,7 +150,7 @@
     
         </div>
 
-        <div class="block more-info" data-aos="zoom-in">
+        <div class="block more-info">
 
             <div class="container-fluid px180 py100">
             

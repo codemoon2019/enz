@@ -8,7 +8,7 @@
 
 </div>
 
-<div class="block content-block" data-aos="zoom-in">
+<div class="block content-block">
 
     <div class="container-fluid jobs px475 text-center">
   

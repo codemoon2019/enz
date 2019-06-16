@@ -19,7 +19,7 @@
             <div class="slick-slider">
                 
                 @foreach ($models as $key => $gallery)
-                    <div class="item mx-auto mb30 class gallery-div" data-aos="fade-up">
+                    <div class="item mx-auto mb30 class gallery-div">
                         <img src="{{ $gallery->getFirstMediaUrl('featured') }}" class="img-fluid" alt="">
                         <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
                             <div class="album-title d-flex">

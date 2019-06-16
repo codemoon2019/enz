@@ -26,7 +26,7 @@
     
     </div>
     
-    <div class="block content-block" data-aos="zoom-in">
+    <div class="block content-block">
 
         <form action="{{ route('frontend.become-our-client-inquiries.inquiry') }}" method="post" id="client-form" enctype="multipart/form-data">
 
