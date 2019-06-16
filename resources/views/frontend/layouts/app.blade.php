@@ -8,12 +8,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="prelod" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="prelod" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
         @include('frontend.includes.meta-tags')
 
         <link rel="apple-touch-icon" href="{{ asset(setting('site-fav-icon')) }}">
