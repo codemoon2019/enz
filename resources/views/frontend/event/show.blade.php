@@ -61,6 +61,27 @@
                             <input type="text" name="contact_number" id="contact_number" class="form-control inquiry-field" placeholder="" />
             
                         </div>
+                        <div class="col-lg-6 form-group">
+                
+                            <label for="">Email Address <span class="text-danger">*</span></label>
+            
+                            <input type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
+            
+                        </div>
+                        <div class="col-lg-6 form-group">
+                
+                            <label for="">Address <span class="text-danger">*</span></label>
+            
+                            <textarea type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder=""></textarea>
+            
+                        </div>
+                        <div class="col-lg-6 form-group">
+                
+                            <label for="">Profession / Job Title <span class="text-danger">*</span></label>
+            
+                            <input type="text" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
+            
+                        </div>
                     </div>
 
                     <div class="text-center mt30"><button type="button" class="event-inquiry-submit btn btnview-more text-uppercase">Submit</button></div>

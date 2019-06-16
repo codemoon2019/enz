@@ -6,7 +6,7 @@
     
             <img class="news-svg" data-src="{{asset('svg/news.svg')}}" alt="">
     
-            <h2 class="title fs40 text-white mb80">News</h2>   
+            <h2 class="title fs40 text-white mb80">News and Blogs</h2>   
     
             <div class="row">
 

@@ -356,11 +356,11 @@
 
                                             <th class="title fs14 text-black">Level</th>
 
-                                            <th class="title fs14 text-black">School</th>
+                                            <th class="title fs14 text-black">School <span class="text-danger">*</span></th>
 
-                                            <th class="title fs14 text-black">From</th>
+                                            <th class="title fs14 text-black">From <span class="text-danger">*</span></th>
 
-                                            <th class="title fs14 text-black">To</th>
+                                            <th class="title fs14 text-black">To <span class="text-danger">*</span></th>
 
                                         </tr>
 
@@ -458,7 +458,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">School</label>
+                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -466,7 +466,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">From</label>
+                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -474,7 +474,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">To</label>
+                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -491,7 +491,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">School</label>
+                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -499,7 +499,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">From</label>
+                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -507,7 +507,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">To</label>
+                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -524,7 +524,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">School</label>
+                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -532,7 +532,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">From</label>
+                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
@@ -540,7 +540,7 @@
 
                                     <div class="col-sm-12 form-group">
 
-                                        <label class="title fs14 text-black" for="">To</label>
+                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
                                         
                                         <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
     
