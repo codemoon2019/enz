@@ -776,7 +776,7 @@
 
                         <div class="card-body relative linear-gradient-grey">
 
-                            <label class="control control--checkbox">I declare that all the information and supporting documentations provided above are true and correct
+                            <label class="control control--checkbox">I declare that all the information and supporting documentations provided above are true and correct  <span class="text-danger">*</span>
 
                                 <input type="checkbox" value="" name="declaration_1" id="declaration_1" />
 
@@ -784,7 +784,7 @@
 
                             </label><br />
 
-                            <label class="control control--checkbox">I declare that I have received a proper orientation and interview prior to my application
+                            <label class="control control--checkbox">I declare that I have received a proper orientation and interview prior to my application <span class="text-danger">*</span>
 
                                 <input type="checkbox" value="" name="declaration_2" id="declaration_2" />
 
@@ -792,7 +792,7 @@
 
                             </label><br />
 
-                            <label class="control control--checkbox">I understand that all the fees and charges associated with my application is non-refundable
+                            <label class="control control--checkbox">I understand that all the fees and charges associated with my application is non-refundable <span class="text-danger">*</span>
 
                                 <input type="checkbox" value="" name="declaration_3" id="declaration_3" />
 
@@ -804,7 +804,7 @@
 
                                 I understand that ENZ Education Consultancy Services does not guarantee any result of this application as my visa 
                                 
-                                application will be based on my GTE and Financial Capacity in undertaking my course in Australia
+                                application will be based on my GTE and Financial Capacity in undertaking my course in Australia <span class="text-danger">*</span>
                                 
                                 <input type="checkbox" value="" name="declaration_4" id="declaration_4" />
                                 
@@ -812,7 +812,7 @@
 
                             </label><br />
 
-                            <label class="control control--checkbox">I understand that ENZ Education Consultancy Services are not an employment agency
+                            <label class="control control--checkbox">I understand that ENZ Education Consultancy Services are not an employment agency <span class="text-danger">*</span>
 
                                 <input type="checkbox" value="" name="declaration_5" id="declaration_5" />
 

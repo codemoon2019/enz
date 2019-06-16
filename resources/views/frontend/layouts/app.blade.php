@@ -88,13 +88,13 @@
     {!! script(mix('js/frontend-core.js')) !!}
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script> --}}
     {{-- <script type="text/javascript" src="/libraries/grid/grid.js"></script> --}}
-    <script type="text/javascript" src="/libraries/tweenmax/ScrollMagic.min.js"></script>
+    {{-- <script type="text/javascript" src="/libraries/tweenmax/ScrollMagic.min.js"></script>
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/animation.gsap.min.js"></script>
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/animation.velocity.min.js"></script>
-	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script>
+	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script> --}}
     {!! script(mix('js/frontend.js')) !!}
     @stack('after-scripts')
-    <script type="text/javascript">
+    <script async defer type="text/javascript">
     (function() {
     var phplive_e_1480051776 = document.createElement("script") ;
     phplive_e_1480051776.type = "text/javascript" ;
