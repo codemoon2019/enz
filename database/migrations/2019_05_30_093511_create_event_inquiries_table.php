@@ -19,6 +19,9 @@ class CreateEventInquiriesTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('contact_number');
+            $table->string('email_address');
+            $table->string('address');
+            $table->string('profession');
             $table->timestamps();
         });
     }

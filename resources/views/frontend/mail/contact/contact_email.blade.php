@@ -6,13 +6,17 @@ New Inquiry
 
 Fullname: {{ $model['full_name'] }}
 
-Email: {{ $model['email'] }}
+Profession: {{ $model['profession'] }}
 
-Contact No: {{ $model['contact'] }}
+Email Address: {{ $model['email_address'] }}
 
-Postcode: {{ $model['postcode'] }}
+Mobile No: {{ $model['mobile_number'] }}
 
-Message: {{ $model['message'] }}
+Location: {{ $model['location'] }}
+
+Message: {{ $model['inquiry'] }}
+
+Country: {{ $model['country'] }}
 
 @else
 
@@ -23,4 +27,3 @@ Thank you for Inquiry
 @endif
 
 @endcomponent
-

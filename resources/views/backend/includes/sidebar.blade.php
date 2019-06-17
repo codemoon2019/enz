@@ -31,6 +31,11 @@
                    href="{{ route('admin.subscriptions.index') }}"><i class="nav-icon fa fa-envelope"></i>Subscriptions</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/applications')) }}"
+                   href="{{ route('admin.applications.index') }}"><i class="nav-icon fa fa-envelope"></i>Applications</a>
+            </li>
+
             @if(is_has_any_permission([
                 app(App\Models\Category\Category::class)::permission('index'),
                 app(App\Models\Core\Inquiry::class)::permission('index'),

@@ -4,7 +4,10 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInquiriesTable extends Migration
+/**
+ * Class CreateApplicationsTable
+ */
+class CreateApplicationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +16,16 @@ class CreateInquiriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('inquiries', function (Blueprint $table) {
+        Schema::create('applications', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id')->nullable();
+            $table->unsignedInteger('career_id');
             $table->string('full_name');
             $table->string('slug')->unique();
-            $table->string('profession')->nullable();
-            $table->string('email_address');
             $table->string('mobile_number')->nullable();
-            $table->string('location')->nullable();
-            $table->text('inquiry');
-            $table->integer('consultation')->default(0);
-            $table->string('country')->nullable();
+            $table->string('address')->nullable();
+            $table->string('email_address')->nullable();
+            $table->string('employment_status')->nullable();
+            $table->text('message')->nullable();
             $table->string('resume')->nullable();
             $table->timestamps();
         });
@@ -37,6 +38,6 @@ class CreateInquiriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inquiries');
+        Schema::dropIfExists('applications');
     }
 }

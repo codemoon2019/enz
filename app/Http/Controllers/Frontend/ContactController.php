@@ -77,28 +77,39 @@ class ContactController extends Controller
             
             'consultation'  => $request['consultation'],
             
+            'country'       => $request['country'],
+            
             'resume'        => $filename,
         
         ]);
 
-
         // 0 = User / 1 = Admin
 
-        // foreach ([0, 1] as $value) {
+        foreach ([0, 1] as $value) {
             
-        //     if ($value) {
+            if ($value) {
 
-        //         $details = ['to' => env('ADMIN_EMAIL', 'nico.halcyondigital@gmai.com'), 'subject' => 'New Inquiry for Riviera Villas', 'type' => $value];
+                switch ($model->country) {
+                    
+                    case 'Australia': $email = 'australia@enzconsultancy.com'; break;
 
-        //     }else{
-
-        //         $details = ['to' => $model->email, 'subject' => 'Inquiry for Riviera Villas', 'type' => $value];
+                    case 'Canada': $email = 'canada@enzconsultancy.com'; break;
+                    
+                    default: $email = 'newzealand@enzconsultancy.com'; break;
                 
-        //     }
+                }
 
-        //     Mail::send(new ContactEmail($model, $details));
+                $details = ['to' => $email, 'subject' => 'New Inquiry for ENZ', 'type' => $value];
 
-        // }
+            }else{
+
+                $details = ['to' => $model->email_address, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+                
+            }
+
+            Mail::send(new ContactEmail($model, $details));
+
+        }
             
         return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 

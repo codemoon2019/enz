@@ -374,19 +374,19 @@
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="elementary_school" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="elementary_school" id="elementary_school" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="elementary_from" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="elementary_from" id="elementary_from" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="elementary_to" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="elementary_to" id="elementary_to" placeholder="" required>
 
                                             </td>
 
@@ -398,19 +398,19 @@
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="high_school_school" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="high_school_school" id="high_school_school" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="high_school_from" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="high_school_from" id="high_school_from" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="high_school_to" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="high_school_to" id="high_school_to" placeholder="" required>
 
                                             </td>
 
@@ -422,19 +422,19 @@
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="tertiary_school" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="tertiary_school" id="tertiary_school" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="tertiary_from" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="tertiary_from" id="tertiary_from" placeholder="" required>
 
                                             </td>
 
                                             <td>
 
-                                                <input type="text" class="form-control" name="tertiary_to" id="" placeholder="" required>
+                                                <input type="text" class="form-control client-field" name="tertiary_to" id="tertiary_to" placeholder="" required>
 
                                             </td>
 
@@ -445,7 +445,8 @@
                                 </table>
 
                             </div>
-                            <div class="for-mobile">
+                            
+                            {{-- <div class="for-mobile">
 
                                 <div class="row">
                                     <div class="col-sm-12 form-group">
@@ -547,7 +548,7 @@
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -970,8 +971,16 @@
             'email',
             'mobile_number',
             'telephone_number',
+            'elementary_school',
+            'elementary_from',
+            'elementary_to',
+            'high_school_school',
+            'high_school_from',
+            'high_school_to',
+            'tertiary_school',
+            'tertiary_from',
+            'tertiary_to',
         ];
-
 
         let english_test_result = $('[name="english_test_result"]:checked').val();
         
