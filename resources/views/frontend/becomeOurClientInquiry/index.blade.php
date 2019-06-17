@@ -445,7 +445,7 @@
                                 </table>
 
                             </div>
-                            
+
                             {{-- <div class="for-mobile">
 
                                 <div class="row">
@@ -820,6 +820,48 @@
                                 <div class="control__indicator client-field" id="div_declaration_5"></div>
 
                             </label><br />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="item mb30">
+
+                    <div class="card text-left">
+
+                        <div class="card-header linear-gradient-teal">
+
+                            <h2 class="card-title fs18 text-white mb0">Country</h2>
+
+                        </div>
+
+                        <div class="card-body relative linear-gradient-grey">
+
+                            <label class="control control--radio">Australia
+
+                                <input type="radio" name="country" value="Australia" checked />
+
+                                <div class="control__indicator"></div>
+
+                            </label><br />
+
+                            <label class="control control--radio">New Zealand
+
+                                <input type="radio" name="country" value="New Zealand" />
+
+                                <div class="control__indicator"></div>
+
+                            </label><br />
+
+                            <label class="control control--radio">Canada
+
+                                <input type="radio" name="country" value="Canada" />
+
+                                <div class="control__indicator"></div>
+
+                            </label>
 
                         </div>
 
