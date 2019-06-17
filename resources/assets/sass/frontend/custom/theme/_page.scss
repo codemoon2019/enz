@@ -1,4 +1,9 @@
 // This page will be used for Main pages like "Services", recommended body class will be ".page-$page-name"
+
+iframe{
+    max-width: 100% !important;
+}
+
 .page-about-company {
     .banner-block img {
         transform: rotate(5deg);

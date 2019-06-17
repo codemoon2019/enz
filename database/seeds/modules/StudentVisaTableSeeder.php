@@ -25,8 +25,7 @@ class StudentVisaTableSeeder extends Seeder
         $page = $this->modelPageSeeder(new StudentVisa);
 
         $page->update([
-            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
-                    <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>'
+            'description' => '<p>Studying abroad is life-changing, but it can be a confusing process. But don\'t worry because ENZ is here to help you get to your study destination! Whether you dream of studying in Australia, New Zealand or Canada, our visa experts will guide you step-by-step through the whole application process! Our team aims to help students reach their goal. This is made possible through the expertise of our professionally trained and experienced consultants. We are always committed to give you full assistance & high quality service to make your dreams a reality. Our priority is to help you that\'s why we provide free services to fast track your success!</p>'
         ]);
 
         $this->seedToDomainables($page, 'main');

@@ -9,6 +9,8 @@ use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
 use Illuminate\Http\Request;
 use App\Models\TouristVisaInquiry\TouristVisaInquiry;
+use App\Mail\Frontend\Tourist\TouristMail;
+use Mail;
 
 /**
  * Class TouristVisaInquiryController
@@ -85,6 +87,7 @@ class TouristVisaInquiryController extends Controller
 
     public function inquiry(Request $request)
     {
+
         $model = TouristVisaInquiry::create([
 
             'first_name'       => $request['first_name'],
@@ -101,6 +104,34 @@ class TouristVisaInquiryController extends Controller
             
         ]);
 
+        // 0 = User / 1 = Admin
+
+        // foreach ([0, 1] as $value) {
+            
+        //     if ($value) {
+
+        //         switch ($model->country_to_visit) {
+                    
+        //             case 'Australia': $email = 'australia@enzconsultancy.com'; break;
+
+        //             case 'Canada': $email = 'canada@enzconsultancy.com'; break;
+                    
+        //             default: $email = 'newzealand@enzconsultancy.com'; break;
+                
+        //         }
+
+        //         $details = ['to' => $email, 'subject' => 'New Inquiry for ENZ', 'type' => $value];
+
+        //     }else{
+
+        //         $details = ['to' => $model->email_address, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+                
+        //     }
+
+        //     Mail::send(new TouristMail($model, $details));
+
+        // }
+            
         return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
     }

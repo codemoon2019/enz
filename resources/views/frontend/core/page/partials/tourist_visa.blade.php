@@ -125,8 +125,15 @@
                                     <div class="form-group">
             
                                         <label class="title fs14 text-black" for="">Country to visit <span class="text-danger">*</span></label>
+
+                                        <select name="country_to_visit" id="tourist_country_to_visit" class="form-control tourist-inquiry-field">
+                                            <option selected disabled></option>
+                                            <option>Australia</option>
+                                            <option>New Zealand</option>
+                                            <option>Canada</option>
+                                        </select>
             
-                                        <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder="">
+                                        {{-- <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder=""> --}}
             
                                     </div>
             
