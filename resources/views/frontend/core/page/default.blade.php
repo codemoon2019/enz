@@ -68,7 +68,17 @@
 
 		    @break
 
+	    @case('Read More')
+
+			@section('page_class', "page page-more")
+
+			@include('frontend.core.page.partials.read_more')	
+
+		    @break
+
 	    @default
+
+        	{{-- @include('frontend.includes.templates.index') --}}
 
 	@endswitch
 

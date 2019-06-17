@@ -7,21 +7,21 @@
 Route::get('lang/{lang}', 'LanguageController');
 
 
-Route::get('linkages2',function(){
-    return view('frontend.linkages2');
-});
-Route::get('linkages3',function(){
-    return view('frontend.linkages3');
-});
-Route::get('linkages4',function(){
-    return view('frontend.linkages4');
-});
-Route::get('linkages5',function(){
-    return view('frontend.linkages5');
-});
-Route::get('read-more',function(){
-    return view('frontend.read-more');
-});
+// Route::get('linkages2',function(){
+//     return view('frontend.linkages2');
+// });
+// Route::get('linkages3',function(){
+//     return view('frontend.linkages3');
+// });
+// Route::get('linkages4',function(){
+//     return view('frontend.linkages4');
+// });
+// Route::get('linkages5',function(){
+//     return view('frontend.linkages5');
+// });
+// Route::get('read-more',function(){
+//     return view('frontend.read-more');
+// });
 
 /*
  * Frontend Routes

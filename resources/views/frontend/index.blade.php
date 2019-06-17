@@ -17,8 +17,12 @@
         </video>
         
         <div class="col-sm-4 for-text">
-        
-            {!! findDetails('home-tagline')->description !!}
+
+            {!! str_limit(findDetails('home-tagline')->description, 500) !!}
+            
+            </p>
+
+            {{-- {!! findDetails('home-tagline')->description !!} --}}
         
             <a href="/read-more" class="btn btnread-more text-uppercase">Read more</a>
         
