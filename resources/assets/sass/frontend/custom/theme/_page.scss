@@ -573,6 +573,12 @@
             opacity: 1;
             width: 4%;
         }
+        .carousel-control-prev {
+            padding-left: 30px;
+        }
+        .carousel-control-next {
+            padding-right: 30px;
+        }
     }
     .more-info {
         background-color: #eff1f5;
