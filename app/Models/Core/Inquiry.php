@@ -32,6 +32,7 @@ class Inquiry extends Model
         'consultation',
         'location',
         'inquiry',
+        'country',
         'resume',
     ];
 

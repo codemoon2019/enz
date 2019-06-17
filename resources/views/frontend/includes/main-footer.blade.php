@@ -70,6 +70,22 @@
                             </div>
                 
                             <div class="col-sm-6">
+              
+                              <div class="form-group">
+              
+                                <label for="country">Country <span class="text-danger">*</span></label>
+
+                                <select name="country" id="country" class="form-control inquiry-field">
+                                  <option disabled selected></option>
+                                  <option>Australia</option>
+                                  <option>New Zealand</option>
+                                  <option>Canada</option>
+                                </select>
+              
+                                {{-- <input type="text" name="location" id="location" class="form-control inquiry-field" placeholder="" /> --}}
+              
+                              </div>
+
                 
                               <div class="form-group">
                 
@@ -384,7 +400,7 @@
 
         $('.inquiry-field').css('border', 'unset');
 
-        let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'inquiry'];
+        let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'country', 'inquiry'];
 
         let submit = true;
 

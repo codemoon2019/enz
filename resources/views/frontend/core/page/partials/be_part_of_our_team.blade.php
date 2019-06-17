@@ -44,7 +44,7 @@
 
                           </div>
 
-                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btnread-more text-uppercase">Apply</a>
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btnread-more text-uppercase application-btn" data-id="{{ $career->id }}">Apply</a>
 
                       </div>
 
@@ -60,4 +60,4 @@
 
 </div>
 
-@include('frontend.course.partials.inquiry')
+@include('frontend.includes.partials.application-form')

@@ -72,14 +72,14 @@
                 
                             <label for="">Address <span class="text-danger">*</span></label>
             
-                            <textarea type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder=""></textarea>
+                            <textarea type="text" name="address" id="address" class="form-control inquiry-field" placeholder=""></textarea>
             
                         </div>
                         <div class="col-lg-6 form-group">
                 
                             <label for="">Profession / Job Title <span class="text-danger">*</span></label>
             
-                            <input type="text" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="profession" id="profession" class="form-control inquiry-field" placeholder="" />
             
                         </div>
                     </div>
@@ -104,7 +104,7 @@
 
         $('.inquiry-field').css('border', 'unset');
 
-        let fields = ['first_name', 'last_name', 'contact_number'];
+        let fields = ['first_name', 'last_name', 'contact_number', 'address', 'email_address', 'profession'];
 
         let submit = true;
 
@@ -117,6 +117,20 @@
                 el.css('border', '2px solid #d27070');
 
                 submit = false;
+
+            }
+
+            if (v == 'email_address') {
+
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                if (! re.test(String(el.val()).toLowerCase())) {
+                    
+                    el.css('border', '2px solid #d27070');
+
+                    submit = false;
+
+                }
 
             }
 

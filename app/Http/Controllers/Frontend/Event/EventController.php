@@ -9,6 +9,10 @@ use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
 use Illuminate\Http\Request;
 use App\Models\Event\EventInquiry;
+use Mail;
+
+use App\Mail\Frontend\Event\EventMail;
+
 
 /**
  * Class EventController
@@ -86,17 +90,43 @@ class EventController extends Controller
     public function inquiry(Request $request)
     {
 
+        // dd($request->all());
+
         $model = EventInquiry::create([
-
-            'event_id'     => $request['event_id'],
-
+            
+            'event_id'       => $request['event_id'],
+            
             'first_name'     => $request['first_name'],
             
-            'last_name'    => $request['last_name'],
+            'last_name'      => $request['last_name'],
+            
+            'email_address'  => $request['email_address'],
+            
+            'address'        => $request['address'],
             
             'contact_number' => $request['contact_number'],
             
+            'profession'     => $request['profession'],
+            
         ]);
+
+        // 0 = User / 1 = Admin
+
+        // foreach ([0, 1] as $value) {
+            
+        //     if ($value) {
+
+        //         $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Event Inquiry for ENZ', 'type' => $value];
+
+        //     }else{
+
+        //         $details = ['to' => $model->email_address, 'subject' => 'Event Inquiry for ENZ', 'type' => $value];
+                
+        //     }
+
+        //     Mail::send(new EventMail($model, $details));
+
+        // }
 
         return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 

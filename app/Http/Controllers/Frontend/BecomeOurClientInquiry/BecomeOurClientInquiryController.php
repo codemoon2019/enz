@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 use App\Models\BecomeOurClientInquiry\BecomeOurClientInquiry;
 use Illuminate\Support\Facades\Storage;
 use Uuid;
+
+use Mail;
+use App\Mail\Frontend\Client\BecomeOurClientMail;
+
+
 /**
  * Class BecomeOurClientInquiryController
  *
@@ -110,6 +115,35 @@ class BecomeOurClientInquiryController extends Controller
         $model = BecomeOurClientInquiry::create($data);
 
         $model->otherDetails()->create($data);
+
+        // 0 = User / 1 = Admin
+
+        foreach ([0, 1] as $value) {
+            
+            if ($value) {
+
+                // switch ($model->country) {
+                    
+                //     case 'Australia': $email = 'australia@enzconsultancy.com'; break;
+
+                //     case 'Canada': $email = 'canada@enzconsultancy.com'; break;
+                    
+                //     default: $email = 'newzealand@enzconsultancy.com'; break;
+                
+                // }
+
+                $details = ['to' => 'australia@enzconsultancy.com', 'subject' => 'New Inquiry for ENZ', 'type' => $value];
+
+            }else{
+
+                $details = ['to' => $model->email, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+                
+            }
+
+            Mail::send(new BecomeOurClientMail($data, $details));
+
+        }
+
 
         return redirect()->back()->withFlashSuccess('Submitted Successfully');
 

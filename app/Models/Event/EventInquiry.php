@@ -8,5 +8,5 @@ class EventInquiry extends Model
 {
 	protected $table = 'event_inquiries';
 
-	protected $fillable = ['first_name', 'last_name', 'event_id', 'contact_number'];
+	protected $fillable = ['first_name', 'last_name', 'event_id', 'contact_number', 'email_address', 'address', 'profession'];
 }
