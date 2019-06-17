@@ -872,6 +872,10 @@
             text-align: center;
         }
     }
+    .user-menu {
+        position: fixed;
+        width: 100%;
+    }
     .user-menu .px14 {
         padding: 0 7px !important;
         .nav-link {
@@ -1270,9 +1274,10 @@
     }
     .page-destination {
         .for-text {
-            left: 5%;
+            left: 0;
         }
         .content-block {
+            margin-top: 0;
             padding-top: 8%;
             background-image: linear-gradient(to right, #3e99d2, #3e70b1);
         }
