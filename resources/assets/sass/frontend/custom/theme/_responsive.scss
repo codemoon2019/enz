@@ -1274,9 +1274,10 @@
     }
     .page-destination {
         .for-text {
-            // left: 5%;
+            left: 0;
         }
         .content-block {
+            margin-top: 0;
             padding-top: 8%;
             background-image: linear-gradient(to right, #3e99d2, #3e70b1);
         }
