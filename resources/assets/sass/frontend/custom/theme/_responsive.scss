@@ -872,6 +872,10 @@
             text-align: center;
         }
     }
+    .user-menu {
+        position: fixed;
+        width: 100%;
+    }
     .user-menu .px14 {
         padding: 0 7px !important;
         .nav-link {
@@ -1270,7 +1274,7 @@
     }
     .page-destination {
         .for-text {
-            left: 5%;
+            // left: 5%;
         }
         .content-block {
             padding-top: 8%;
