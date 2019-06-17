@@ -346,7 +346,7 @@
 
                         <div class="card-body relative linear-gradient-grey">
 
-                            <div class="table-responsive for-desktop">
+                            {{-- <div class="table-responsive for-desktop">
 
                                 <table class="table table-stipped">
 
@@ -355,9 +355,6 @@
                                         <tr>
 
                                             <th class="title fs14 text-black">Level</th>
-
-                                            <th class="title fs14 text-black">School <span class="text-danger">*</span></th>
-
                                             <th class="title fs14 text-black">From <span class="text-danger">*</span></th>
 
                                             <th class="title fs14 text-black">To <span class="text-danger">*</span></th>
@@ -444,111 +441,109 @@
 
                                 </table>
 
-                            </div>
-                            
-                            {{-- <div class="for-mobile">
-
-                                <div class="row">
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">Level: Elementary</label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">Level: High School</label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">Level: Tertiary</label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-
-                                    <div class="col-sm-12 form-group">
-
-                                        <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
-                                        
-                                        <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
-    
-                                    </div>
-                                </div>
-
                             </div> --}}
+                            
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="row">
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">Level: Elementary</label>
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="row">
+                                            <div class="col-sm-12 form-group">
+        
+                                                <label class="title fs14 text-black" for="">Level: High School</label>
+                                            </div>
+        
+                                            <div class="col-sm-12 form-group">
+        
+                                                <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
+                                                
+                                                <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+            
+                                            </div>
+        
+                                            <div class="col-sm-12 form-group">
+        
+                                                <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
+                                                
+                                                <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+            
+                                            </div>
+        
+                                            <div class="col-sm-12 form-group">
+        
+                                                <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
+                                                
+                                                <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+            
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="row">
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">Level: Tertiary</label>
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">School <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">From <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+    
+                                        <div class="col-sm-12 form-group">
+    
+                                            <label class="title fs14 text-black" for="">To <span class="text-danger">*</span></label>
+                                            
+                                            <input type="text" class="form-control client-field" name="street_number" id="street_number" placeholder="">
+        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
 
                         </div>
 
