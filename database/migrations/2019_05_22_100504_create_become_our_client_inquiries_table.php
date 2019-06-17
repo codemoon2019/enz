@@ -36,6 +36,7 @@ class CreateBecomeOurClientInquiriesTable extends Migration
             $table->string('email')->nullable();
             $table->string('mobile_number')->nullable();
             $table->string('telephone_number')->nullable();
+            $table->string('country')->nullable();
             $table->string('file')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();

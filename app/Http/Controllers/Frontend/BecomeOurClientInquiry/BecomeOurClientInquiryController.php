@@ -118,31 +118,31 @@ class BecomeOurClientInquiryController extends Controller
 
         // 0 = User / 1 = Admin
 
-        foreach ([0, 1] as $value) {
+        // foreach ([0, 1] as $value) {
             
-            if ($value) {
+        //     if ($value) {
 
-                // switch ($model->country) {
+        //         switch ($model->country) {
                     
-                //     case 'Australia': $email = 'australia@enzconsultancy.com'; break;
+        //             case 'Australia': $email = 'australia@enzconsultancy.com'; break;
 
-                //     case 'Canada': $email = 'canada@enzconsultancy.com'; break;
+        //             case 'Canada': $email = 'canada@enzconsultancy.com'; break;
                     
-                //     default: $email = 'newzealand@enzconsultancy.com'; break;
+        //             default: $email = 'newzealand@enzconsultancy.com'; break;
                 
-                // }
+        //         }
 
-                $details = ['to' => 'australia@enzconsultancy.com', 'subject' => 'New Inquiry for ENZ', 'type' => $value];
+        //         $details = ['to' => $email, 'subject' => 'New Inquiry for ENZ', 'type' => $value];
 
-            }else{
+        //     }else{
 
-                $details = ['to' => $model->email, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+        //         $details = ['to' => $model->email, 'subject' => 'Inquiry for ENZ', 'type' => $value];
                 
-            }
+        //     }
 
-            Mail::send(new BecomeOurClientMail($data, $details));
+        //     Mail::send(new BecomeOurClientMail($data, $details));
 
-        }
+        // }
 
 
         return redirect()->back()->withFlashSuccess('Submitted Successfully');

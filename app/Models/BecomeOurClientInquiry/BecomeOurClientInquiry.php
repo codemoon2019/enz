@@ -57,6 +57,7 @@ class BecomeOurClientInquiry extends Model
         'email',
         'mobile_number',
         'telephone_number',
+        'country',
         'file',
         'slug',
     ];
