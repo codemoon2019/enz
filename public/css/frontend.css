@@ -10936,7 +10936,7 @@ html body {
 
 .news-block .news-svg {
   position: absolute;
-  top: -35%;
+  top: -45%;
   left: -1%;
 }
 
@@ -11110,7 +11110,7 @@ iframe {
   position: relative;
   padding-bottom: 10%;
   padding-top: 40%;
-  background: url(/img/about/aust.png) no-repeat;
+  background: url(/img/about/team.png) no-repeat;
 }
 
 .page-about-team .person-modal {
@@ -11550,6 +11550,7 @@ iframe {
   padding-bottom: 10%;
   padding-top: 35%;
   background: url(/img/courses/bg.png) no-repeat;
+  background-size: contain;
 }
 
 .page-courses.inner .card,
@@ -11638,6 +11639,14 @@ iframe {
 .page-destination .slider-block .carousel-control-next {
   opacity: 1;
   width: 4%;
+}
+
+.page-destination .slider-block .carousel-control-prev {
+  padding-left: 30px;
+}
+
+.page-destination .slider-block .carousel-control-next {
+  padding-right: 30px;
 }
 
 .page-destination .more-info {
@@ -12948,11 +12957,6 @@ iframe {
 
   .banner-block video {
     margin-bottom: 30px;
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 55vh;
   }
 
   .banner-block .for-text {
@@ -12962,7 +12966,7 @@ iframe {
 
   .events-block {
     padding: 30px 0;
-    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1) !important;
   }
 
   .events-block .title {
@@ -13006,7 +13010,7 @@ iframe {
   .news-block {
     padding: 30px 0;
     margin-top: 0;
-    background-image: linear-gradient(to right, #3e99d2, #3e70b1);
+    background-image: linear-gradient(to right, #3e99d2, #3e70b1) !important;
   }
 
   .news-block .title {
@@ -13464,6 +13468,7 @@ iframe {
 
   .page-courses.inner .content-block {
     padding-top: 45%;
+    margin-top: 0;
   }
 
   .page-destination .for-text {

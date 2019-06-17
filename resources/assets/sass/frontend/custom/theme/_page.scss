@@ -84,7 +84,7 @@ iframe{
         position: relative;
         padding-bottom: 10%;
         padding-top: 40%;
-        background: url(/img/about/aust.png) no-repeat;
+        background: url(/img/about/team.png) no-repeat;
     }
     .person-modal {
         opacity: .8;
@@ -498,6 +498,7 @@ iframe{
         padding-bottom: 10%;
         padding-top: 35%;
         background: url(/img/courses/bg.png) no-repeat;
+        background-size: contain;
     }
     .card,
     .card-header {
@@ -577,6 +578,12 @@ iframe{
         .carousel-control-next {
             opacity: 1;
             width: 4%;
+        }
+        .carousel-control-prev {
+            padding-left: 30px;
+        }
+        .carousel-control-next {
+            padding-right: 30px;
         }
     }
     .more-info {

@@ -21,7 +21,7 @@
                 
                 @endphp
 
-                <div class="col-lg-4 col-sm-6 item mb30" data-aos="fade-up">
+                <div class="col-lg-4 col-sm-6 item mb30" data-aos="fade-left">
 
                     <div class="d-flex event-details">
                     
