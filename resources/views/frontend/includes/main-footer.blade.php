@@ -170,7 +170,7 @@
             {{ csrf_field() }}
             
             <div class="input-group mb-3">
-              <label for="subscribe-email" class="d-none"></label>
+              <label for="subscribe-email" class="d-none">Subscribe</label>
               <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
      
               <div class="input-group-append">
