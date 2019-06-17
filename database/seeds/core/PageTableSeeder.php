@@ -65,8 +65,7 @@ class PageTableSeeder extends Seeder
 
         $model = Page::create([
             'title'       => 'Tourist Visa',
-            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
-                <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
+            'description' => '<p>Is Australia, New Zealand or Canada in your bucket list to visit this year? But before you head off to these beautiful countries, you need to have a visitor’s visa. </p><p>ENZ is not only offering student visa, but we also cater tourist visa processing! </p><p>To know more how you can tick off these places from your list, fill up the sign up form below!</p>',
             'template'    => 'default'
         ]);
 
