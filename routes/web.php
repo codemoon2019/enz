@@ -7,9 +7,9 @@
 Route::get('lang/{lang}', 'LanguageController');
 
 
-// Route::get('linkages2',function(){
-//     return view('frontend.linkages2');
-// });
+Route::get('thanks',function(){
+    return view('frontend.thanks');
+});
 // Route::get('linkages3',function(){
 //     return view('frontend.linkages3');
 // });
