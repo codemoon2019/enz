@@ -157,9 +157,9 @@
    
     <section class="container-fluid know-more px180 lazy" data-src="/img/footer.png">
    
-      <div class="row justify-content-center mb80">
+      {{-- <div class="row justify-content-center mb80">
    
-        <div class="col subscribe text-center">
+        <div class="col  text-center">
    
           <h2 class="title fs40 text-white mb10">Want to know more?</h2>
    
@@ -192,7 +192,7 @@
    
         </div>
    
-      </div>
+      </div>--}}
    
       <div class="row">
    
@@ -202,9 +202,9 @@
    
         </div>
    
-        <div class="col-lg-2 col-md-3 align-self-center footer-links">
+        <div class="col-lg-2 col-md-3 align-self-center">
    
-          <ul class="list-unstyled">
+          <ul class="footer-links list-unstyled">
    
             @foreach (Menu('footer-menu')->nodes as $menu)
    
@@ -214,11 +214,7 @@
    
           </ul>
    
-        </div>
-   
-        <div class="col-lg-2 col-md-7 align-self-center footer-info">
-   
-          <ul class="list-unstyled">
+          <ul class="footer-info list-unstyled">
    
             @php
    
@@ -231,10 +227,10 @@
             <li class="text-white tel">{{ $footer_details[1]->description }}</li>
    
           </ul>
-   
         </div>
+  
    
-        <div class="col-lg-2 col-md-4 col-4 align-self-center footer-social text-center">
+        <div class="col-lg-2 col-md-4 col-12 align-self-center footer-social text-center">
    
           <h3 class="basic fs18 text-white">Follow Us</h3>
    
@@ -323,18 +319,21 @@
             @endforeach
 
           </ul>
-      
-        </div>
-      
-        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
-      
-          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="ICEF">          
-      
-        </div>
-      
-        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
-      
+
+          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid mb20" alt="ICEF">          
           <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="PIER">          
+
+      
+        </div>
+
+        
+        <div class="col-lg-6 col-md-12 col-12 align-self-center text-center">
+
+          <div class="grwf2-wrapper wf2-embedded"  id="grwf2_21458301_1dh4h">
+
+              <iframe src="https://app.getresponse.com/site2/enzpromo_2018?u=BPRi5&amp;webforms_id=BZSR5&amp;v=0" title="Subscription" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BZSR5" style="border: none; height: 460px; width: 460px"></iframe>
+
+            </div>
       
         </div>
       

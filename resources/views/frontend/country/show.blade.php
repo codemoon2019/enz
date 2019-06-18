@@ -130,9 +130,9 @@
                 
                                 <div class="card-footer linear-gradient-{{ $city->color }}">
                 
-                                    <p class="card-title text-uppercase fs18">
+                                    <p class="card-title text-uppercase fs18 text-white mb0">
                 
-                                        <a href="#" class="btn text-white">{{ $city->title }}</a>
+                                        {{ $city->title }}
                 
                                     </p>
                 
