@@ -41,6 +41,8 @@ class SendContactRequest extends FormRequest
             
             'location'      => 'required|max:255',
             
+            'country'      => 'required',
+            
             // 'consultaion'   => 'required',
             
             // 'g-recaptcha-response' => 'required|captcha'

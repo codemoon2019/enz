@@ -400,44 +400,67 @@
 
         $('.inquiry-field').css('border', 'unset');
 
-        let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'country', 'inquiry'];
+        $('#inquiry-form').ajaxForm({
 
-        let submit = true;
+            success: function(){
 
-        $.each(fields, function(k, v){
+            }, error: function(data){
 
-            el = $('#' + v);
+                $.each(data.responseJSON['errors'], function(k, v){
 
-            if (el.val() == null || el.val() == '') {
+                    $('#' + k).css('border', '2px solid #d27070');
+                });
 
-                el.css('border', '2px solid #d27070');
-
-                submit = false;
 
             }
 
-            if (v == 'email_address') {
+        }).submit();
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        // $.ajax('#inquiry-form').submit();
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+
+
+
+        // $('.inquiry-field').css('border', 'unset');
+
+        // let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'country', 'inquiry'];
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'email_address') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+        //             el.css('border', '2px solid #d27070');
 
-                    submit = false;
+        //             submit = false;
 
-                }
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
 
 
-        if (submit) {
+        // if (submit) {
 
-            $('#inquiry-form').submit();
+        //     $('#inquiry-form').submit();
             
-        }
+        // }
 
     });
 

@@ -93,6 +93,9 @@
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/animation.velocity.min.js"></script>
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script> --}}
     {!! script(mix('js/frontend.js')) !!}
+
+    <script src="{{ asset('js/jquery.form.min.js') }}"></script>
+
     @stack('after-scripts')
     <script async defer type="text/javascript">
     (function() {
