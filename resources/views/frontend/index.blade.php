@@ -4,6 +4,8 @@
 
 @section('content')
 
+{{-- <iframe src="https://app.getresponse.com/site2/nicohalcyondigital?u=GkCWd&webforms_id=Bn9Cg" frameborder="0" style="width: 100%; height: 900px;"></iframe> --}}
+
     <h1 class="d-none">{{app_name()}}</h1>
 
     <div class="banner-block banner relative">

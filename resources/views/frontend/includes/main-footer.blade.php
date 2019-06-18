@@ -121,15 +121,19 @@
                
                                 <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
                
-                                <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
                
-                                <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
+                                <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
                
                               </div>
                
                               <div class="form-group">
 
-                                {{-- {!! Captcha::display() !!} --}}
+                                <div style="width: max-content;" class="">
+                                    
+                                    {!! Captcha::display() !!}
+                                
+                                </div>
 
                               </div>
                
@@ -353,15 +357,15 @@
 <div class="modal fade" id="subsModal">
     <div class="modal-dialog">
 
-      <div class="modal-content">
+      <div class="modal-content" style="    border-radius: 1.3rem;">
   
         <!-- Modal Header -->
-        <div class="modal-header linear-gradient-teal">
+        <div class="modal-header linear-gradient-teal" style="border-top-left-radius: 1.3rem; border-top-right-radius: 1.3rem;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
   
         <!-- Modal body -->
-        <div class="modal-body linear-gradient-grey">
+        <div class="modal-body linear-gradient-grey" style="border-bottom-left-radius: 1.3rem; border-bottom-right-radius: 1.3rem;">
 
             <div class="grwf2-wrapper wf2-embedded" id="grwf2_21458301_1dh4h"> 
 

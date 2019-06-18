@@ -45,6 +45,10 @@ class ContactController extends Controller
     public function send(SendContactRequest $request)
     {
 
+        // dd($request->all());
+
+
+
         $filename = null;
 
         if ($request['resume'] != null) {
