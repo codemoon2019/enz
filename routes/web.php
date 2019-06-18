@@ -7,7 +7,7 @@
 Route::get('lang/{lang}', 'LanguageController');
 
 
-Route::get('thanks',function(){
+Route::get('thank-you',function(){
     return view('frontend.thanks');
 });
 // Route::get('linkages3',function(){
