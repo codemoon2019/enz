@@ -129,7 +129,7 @@
                
                               <div class="form-group">
 
-                                <div style="width: max-content;" class="">
+                                <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
                                     
                                     {!! Captcha::display() !!}
                                 
@@ -432,17 +432,32 @@
 
     $('.inquiry-submit').click(function(){
 
+        el = $(this);
+
+        el.attr('disabled', true).html('Please wait..');
+
         $('.inquiry-field').css('border', 'unset');
 
         $('#inquiry-form').ajaxForm({
 
             success: function(){
 
+              location.href = '/thank-you';
+
             }, error: function(data){
+
+                el.attr('disabled', false).html('Submit');
 
                 $.each(data.responseJSON['errors'], function(k, v){
 
+                    if (k == 'g-recaptcha-response') {
+                      
+                      $('#' + k + '-div').css('border', '2px solid #d27070');
+
+                    }
+
                     $('#' + k).css('border', '2px solid #d27070');
+
                 });
 
 
