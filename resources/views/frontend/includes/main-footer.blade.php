@@ -157,7 +157,11 @@
    
     <section class="container-fluid know-more px180 lazy" data-src="/img/footer.png">
    
+<<<<<<< HEAD
+      {{-- <div class="row justify-content-center mb80">
+=======
       <div class="row justify-content-center">
+>>>>>>> 3b7e2ed17de1330282d4399591fa7b4d17e4e905
    
         <div class="col  text-center">
    
@@ -165,6 +169,34 @@
    
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
    
+<<<<<<< HEAD
+          <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
+
+            {{ csrf_field() }}
+            
+            <div class="input-group mb-3">
+              <label for="subscribe-email" class="d-none">Subscribe</label>
+              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
+     
+              <div class="input-group-append">
+     
+                <span class="input-group-text" id="basic-addon2">
+     
+                    <button type="button" class="btn btnread-more subscribe-btn">Subscribe</button>
+     
+                </span>
+     
+              </div>
+     
+            </div>
+            
+          </form> 
+          
+   
+        </div>
+   
+      </div>--}}
+=======
         </div>
    
       </div>
@@ -205,6 +237,7 @@
       </div>
 
     </form>
+>>>>>>> 3b7e2ed17de1330282d4399591fa7b4d17e4e905
    
       <div class="row">
    
@@ -214,9 +247,9 @@
    
         </div>
    
-        <div class="col-lg-2 col-md-3 align-self-center footer-links">
+        <div class="col-lg-2 col-md-3 align-self-center">
    
-          <ul class="list-unstyled">
+          <ul class="footer-links list-unstyled">
    
             @foreach (Menu('footer-menu')->nodes as $menu)
    
@@ -226,11 +259,7 @@
    
           </ul>
    
-        </div>
-   
-        <div class="col-lg-2 col-md-7 align-self-center footer-info">
-   
-          <ul class="list-unstyled">
+          <ul class="footer-info list-unstyled">
    
             @php
    
@@ -243,10 +272,10 @@
             <li class="text-white tel">{{ $footer_details[1]->description }}</li>
    
           </ul>
-   
         </div>
+  
    
-        <div class="col-lg-2 col-md-4 col-4 align-self-center footer-social text-center">
+        <div class="col-lg-2 col-md-4 col-12 align-self-center footer-social text-center">
    
           <h3 class="basic fs18 text-white">Follow Us</h3>
    
@@ -335,18 +364,21 @@
             @endforeach
 
           </ul>
-      
-        </div>
-      
-        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
-      
-          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid" alt="ICEF">          
-      
-        </div>
-      
-        <div class="col-lg-2 col-md-4 col-4 align-self-center text-center">
-      
+
+          <img data-src="{{asset('img/ICEF.png')}}" class="img-fluid mb20" alt="ICEF">          
           <img data-src="{{asset('img/PIER.png')}}" class="img-fluid" alt="PIER">          
+
+      
+        </div>
+
+        
+        <div class="col-lg-6 col-md-12 col-12 align-self-center text-center">
+
+          <div class="grwf2-wrapper wf2-embedded"  id="grwf2_21458301_1dh4h">
+
+              <iframe src="https://app.getresponse.com/site2/enzpromo_2018?u=BPRi5&amp;webforms_id=BZSR5&amp;v=0" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BZSR5" style="border: none; height: 460px; width: 460px"></iframe>
+
+            </div>
       
         </div>
       

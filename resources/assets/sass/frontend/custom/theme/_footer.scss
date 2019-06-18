@@ -96,6 +96,10 @@
             background-image: url('/svg/call-answer.svg');
         }
     }
+
+    iframe form {
+        background: transparent;
+    }
 }
 .form {
     label {
