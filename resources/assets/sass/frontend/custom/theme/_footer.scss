@@ -37,6 +37,14 @@
                 z-index: 1;
             }
         }
+        .btnread-more {
+            &:hover,
+            &:focus,
+            &:active {
+                background: #f1a92d;
+                color: $white;
+            }
+        }
         .txtemail {
             border-top-left-radius: 18px;
             border-bottom-left-radius: 18px;
@@ -50,14 +58,7 @@
             padding: 0;
             background: transparent;
             border: none;
-            .btnread-more {
-                &:hover,
-                &:focus,
-                &:active {
-                    background: #f1a92d;
-                    color: $white;
-                }
-            }
+            
         }
     }
     .footer-links {

@@ -165,7 +165,11 @@
    
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
    
-          <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
+          <button type="button" class="btn btnread-more subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</button>
+
+          
+
+          {{-- <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
 
             {{ csrf_field() }}
             
@@ -177,7 +181,6 @@
      
                 <span class="input-group-text" id="basic-addon2">
      
-                    <button type="button" class="btn btnread-more subscribe-btn">Subscribe</button>
      
                 </span>
      
@@ -185,7 +188,7 @@
      
             </div>
             
-          </form>
+          </form> --}}
    
         </div>
    
@@ -346,55 +349,82 @@
     </section>
 
 </footer>
+<!-- The Modal -->
+<div class="modal fade" id="subsModal">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header linear-gradient-teal">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body linear-gradient-grey">
+
+            <div class="grwf2-wrapper wf2-embedded" id="grwf2_21458301_1dh4h"> 
+
+              <iframe src="https://app.getresponse.com/site2/enzpromo_2018?u=BPRi5&amp;webforms_id=BZSR5&amp;v=0" title="Subscription" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BZSR5" style="border: none; height: 460px; width: 460px"></iframe> 
+
+            </div>
+
+        </div>
+  
+      </div>
+
+    </div>
+
+  </div>
 
 @push('after-scripts')
 
 <script>
 
-    $('.subscribe-btn').click(function(){
+    // $('.subscribe-btn').click(function(){
 
-        $('.inquiry-field').css('border', 'unset');
+    //     $('.inquiry-field').css('border', 'unset');
 
-        let fields = ['subscribe-email'];
+    //     let fields = ['subscribe-email'];
 
-        let submit = true;
+    //     let submit = true;
 
-        $.each(fields, function(k, v){
+    //     $.each(fields, function(k, v){
 
-            el = $('#' + v);
+    //         el = $('#' + v);
 
-            if (el.val() == null || el.val() == '') {
+    //         if (el.val() == null || el.val() == '') {
 
-                el.css('border', '2px solid #d27070');
+    //             el.css('border', '2px solid #d27070');
 
-                submit = false;
+    //             submit = false;
 
-            }
+    //         }
 
-            if (v == 'subscribe-email') {
+    //         if (v == 'subscribe-email') {
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+    //             if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+    //                 el.css('border', '2px solid #d27070');
 
-                    submit = false;
+    //                 submit = false;
 
-                }
+    //             }
 
-            }
+    //         }
 
-        });
+    //     });
 
 
-        if (submit) {
+    //     if (submit) {
 
-            $('#subscription-form').submit();
+    //         $('#subscription-form').submit();
             
-        }
+    //     }
 
-    });
+    // });
 
     $('.inquiry-submit').click(function(){
 
