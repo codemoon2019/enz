@@ -23,7 +23,7 @@
 
                 <div class="col-lg-4 col-sm-6 item mb30" data-aos="fade-left">
 
-                    <div class="d-flex event-details">
+                    <div class="d-flex event-details" style="height: 100% !important">
                     
                         <div class="col-lg-4 col-md-6 date text-center py38 text-white {{ $bgColor }}">
                     
