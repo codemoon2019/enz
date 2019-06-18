@@ -157,39 +157,54 @@
    
     <section class="container-fluid know-more px180 lazy" data-src="/img/footer.png">
    
-      <div class="row justify-content-center mb80">
+      <div class="row justify-content-center">
    
-        <div class="col subscribe text-center">
+        <div class="col  text-center">
    
           <h2 class="title fs40 text-white mb10">Want to know more?</h2>
    
           <p class="basic text-white">Subscribe to our newsletter and get an up to date information</p>
    
-          <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
-
-            {{ csrf_field() }}
-            
-            <div class="input-group mb-3">
-              <label for="subscribe-email" class="d-none">Subscribe</label>
-              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
-     
-              <div class="input-group-append">
-     
-                <span class="input-group-text" id="basic-addon2">
-     
-                    <button type="button" class="btn btnread-more subscribe-btn">Subscribe</button>
-     
-                </span>
-     
-              </div>
-     
-            </div>
-            
-          </form>
-   
         </div>
    
       </div>
+
+      <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
+      {{ csrf_field() }}
+      <div class="row subscribe align-items-center mb50">
+          
+        
+        <div class="col-sm-6 col-lg-3 form-group">
+          
+          <label for="subscribe-fname" class="text-white">First Name</label>
+
+          <input type="text" name="subscribe-fname" id="subscribe-fname" class="form-control inquiry-field" placeholder="">
+
+        </div>
+        <div class="col-sm-6 col-lg-3 form-group">
+          
+          <label for="subscribe-lname" class="text-white">Last Name</label>
+
+          <input type="text" name="email" id="subscribe-lname" class="form-control inquiry-field" placeholder="">
+
+        </div>
+        <div class="col-sm-6 col-lg-3 form-group">
+          
+          <label for="subscribe-email" class="text-white">Email</label>
+
+          <input type="email" name="email" id="subscribe-email" class="form-control inquiry-field" placeholder="">
+
+        </div>
+        
+        <div class="col-sm-6 col-lg-3 form-group text-center">
+
+          <button type="button" class="btn btnread-more subscribe-btn mt30 w-100">Subscribe</button>
+
+        </div>
+        
+      </div>
+
+    </form>
    
       <div class="row">
    
