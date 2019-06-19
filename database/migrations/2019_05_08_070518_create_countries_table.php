@@ -18,7 +18,7 @@ class CreateCountriesTable extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->text('description')->nullable();
             $table->string('slug')->unique();
             $table->enum('color', ['teal', 'red', 'orange'])->default('teal');

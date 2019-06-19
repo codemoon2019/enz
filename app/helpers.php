@@ -728,7 +728,7 @@ if (!function_exists('AreaOfStudy')) {
 if (!function_exists('HomeAreaOfStudy')) {
     function HomeAreaOfStudy()
     {
-        return AreaOfStudy::orderBy('order')->limit(6)->get();
+        return AreaOfStudy::orderBy('order')->get();
     }
 }
 

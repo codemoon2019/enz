@@ -26,8 +26,13 @@ class OurTeamTableSeeder extends Seeder
 
         
         $page->update([
-            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
-                    <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>'
+            'description' => '<p>Our firm has proven that teamwork is one of the foundations of excellence and competence.</p>
+<ul>
+    <li>We Do The Right Thing.</li>
+    <li>We Work Together.</li>
+    <li>We keep Our Word.</li>
+</ul>
+<p>Meet the best team ever.</p>'
         ]);
 
         $this->seedToDomainables($page, 'main');

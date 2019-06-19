@@ -28,7 +28,7 @@ class AreaOfStudyTableSeeder extends Seeder
 
                 $data = [
             [
-                'title' => 'Agriculture and Environmental',
+                'title' => 'Creative Arts and Design',
                 'description' => 'This course provides responsibilities involved in engaging children individually and in groups. The Certificate III in Early Childhood Education and Care addresses the skills and knowledge required to provide care for individuals and groups of children, and to plan activities facilitating their leisure and play, enabling them to achieve their developmental outcomes.',
                 'order' => 0,
 
@@ -58,7 +58,7 @@ class AreaOfStudyTableSeeder extends Seeder
 
             ],
             [
-                'title' => 'Creative Arts and Design',
+                'title' => 'Agriculture and Environmental',
                 'description' => 'Studying creative arts and design abroad is the perfect opportunity to develop your creativity and pursue artistic careers. The demand for web designers, app designers, software designers, graphic designers, digital illustrators, multimedia artists, video producers, online publishers, animation artists, game designers and many other digital careers is undergoing unprecedented growth. With this qualification, the range of occupations graduates can enter is vast.',
                 'order' => 0,
 

@@ -61,24 +61,34 @@
             <div class="slick-slider">
 
                 @foreach (ActiveTestimonialText() as $key => $testimony)
-                    
-                    <div class="row d-flex item mx-auto mb30">
+    
+                    @php
+                        $data = [
+                            'image'       => $testimony->getFirstMediaUrl('featured', 'main'),
+                            'description' => $testimony->description,
+                            'title'       => $testimony->title,
+                            'position'    => $testimony->position,
+                            'address'     => $testimony->address,
+                        ];
+                    @endphp
+
+                    <div class="row d-flex item mx-auto mb30 text-modal-trigger" data-image="{{ $data['image'] }}" data-description="{{ $data['description'] }}" data-title="{{ $data['title'] }}" data-position="{{ $data['position'] }}" data-address="{{ $data['address'] }}">
                     
                         <div class="col-5 profile-pic text-center text-white">
                     
-                            <img src="{{ $testimony->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                            <img src="{{ $data['image'] }}" class="img-fluid" alt="">
                     
                         </div>
                     
                         <div class="col-7 details">
                     
-                            <p class="basic fs18">{!! str_limit($testimony->description, 120) !!}</p>    
+                            <p class="basic fs18">{!! str_limit($data['description'], 120) !!}</p>    
 
                             <div class="profile">
 
-                                <p class="name">{{ $testimony->title }}</p>
+                                <p class="name">{{ $data['title'] }}</p>
                                 
-                                <p class="position">{{ $testimony->position }} | {{ $testimony->address }}</p>
+                                <p class="position">{{ $data['position'] }} | {{ $data['address'] }}</p>
                             
                             </div>               
                     
@@ -94,7 +104,49 @@
         
     </div>
 
-    <section class="block testimonials-block videos" id="vidtes">
+    <button data-toggle="modal" class="modal-trigger" data-target="#myModal"></button>
+
+    <div class="modal fade" id="myModal">
+
+        <div class="modal-dialog modal-lg">
+        
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <div class="row d-flex item mx-auto mb30">
+                    
+                        <div class="col-12 profile-pic text-center text-white mb20">
+                    
+                            <img src="" class="img-fluid" alt="" id="modal-image">
+                    
+                        </div>
+                    
+                        <div class="col-12 details">
+                    
+                            <p class="basic fs18 text-justify" id="modal-description"></p>    
+
+                            <div class="profile">
+
+                                <p class="name mb0" id="modal-title"></p>
+                                
+                                <p class="position fs15" id="modal-position"></p>
+                            
+                            </div>               
+                    
+                        </div>
+                    
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="block testimonials-block videos" id="videos">
 
         <div class="container-fluid pt0 px180">
 
@@ -153,3 +205,27 @@
     </section>
 
 @endsection
+
+@push('after-scripts')
+
+<script>
+
+    $('.text-modal-trigger').click(function(){
+
+        el = $(this);
+
+        $('#modal-image').attr('src', el.attr('data-image'));
+
+        $('#modal-description').html(el.attr('data-description'));
+
+        $('#modal-title').html(el.attr('data-title'));
+        
+        $('#modal-position').html(el.attr('data-position') + ' | ' + el.attr('data-address'));
+
+        $('.modal-trigger').trigger('click');
+
+    });
+
+</script>
+
+@endpush

@@ -50,8 +50,8 @@ class PageTableSeeder extends Seeder
 
         $model = Page::create([
             'title'       => 'Company',
-            'description' => '<p>ENZ Education Consultancy Services was established last October 2015. Initially founded in Manila, but due to the need to respond to different inquiries from different regions, the company realized to extend its services to other parts of the country. Our main office is now situated in the heart of Laoag City.</p>
-                    <p>Due to our perseverance and sensitivity to the needs of future students, we were able to connect with vast network of educational institutions and carefully screen genuine students who wish to Study,Work and Live in Australia</p>',
+            'description' => '<p>ENZ Education Consultancy Services is a consultancy firm specializing in Student Visa assistance. We can help you with the best study options that will lead you to a pathway to working visa and permanent residency in Australia, New Zealand or Canada.</p>
+                    <p>We offer assistance from consultation, enrollment and all the way up to submission of your visa applications and even after visa issuance, we are here to guide you all throughout your journey!</p>',
             'template'    => 'default'
         ]);
 

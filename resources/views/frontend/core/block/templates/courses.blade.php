@@ -122,16 +122,16 @@
                 <img class="floating-rev driller" data-src="{{asset('svg/OtherCourses.svg')}}" alt="Driller">
      
             </div> 
+            
             <div class="col-sm-6 order-sm-1 left-content pr10p align-self-center" data-aos="zoom-in">
      
-                <h3 class="title fs40 mb30">{{ $course[5]->title }}</h3>
+                <h3 class="title fs40 mb30">{{ $course[count($course) - 1]->title }}</h3>
      
-                <div class="basic mb30">{!! str_limit($course[5]->description, 250) !!}</div>
+                <div class="basic mb30">{!! str_limit($course[count($course) - 1]->description, 250) !!}</div>
      
-                <a href="{{ route('frontend.area-of-studies.show', $course[5]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
+                <a href="{{ route('frontend.area-of-studies.show', $course[count($course) - 1]->slug) }}" class="btn btnview-more text-uppercase">View more</a>
      
             </div>  
-     
      
         </div> 
     
