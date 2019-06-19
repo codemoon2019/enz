@@ -6,5 +6,6 @@ Route::group([
     'as' => '',
 ], function () {
     Route::post('subscriptions/table', 'SubscriptionTableController')->name('subscriptions.table');
+    Route::get('subscriptions/download/{subscriptions}', 'SubscriptionController@download')->name('subscriptions.download');
     Route::resource('subscriptions', 'SubscriptionController');
 });

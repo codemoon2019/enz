@@ -8,6 +8,10 @@ use HalcyonLaravel\Base\Controllers\Backend\CRUDController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
 use Illuminate\Http\Request;
+use File;
+use Response;
+use App\Models\Subscription\Subscription;
+use Storage;
 
 /**
  * Class SubscriptionController
@@ -94,5 +98,21 @@ class SubscriptionController extends CRUDController
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
             ]);
+    }
+
+    public function download(string $routeKeyName)
+    {
+        $inquiry = Subscription::whereSlug($routeKeyName)->first();
+
+        $resume = json_decode($inquiry->resume);
+
+        $path = storage_path('app/public/course/' . $resume[1]);
+
+        if (!File::exists($path)) {
+            abort(404);
+        }
+
+        return response()->download($path, $resume[0]);
+       
     }
 }

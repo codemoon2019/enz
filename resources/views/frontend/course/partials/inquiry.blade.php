@@ -1,3 +1,5 @@
+<button data-toggle="modal" data-target="#myModal" style="display: none;" id="modal-trigger"></button>
+
 <div class="modal fade" id="myModal">
 
     <div class="modal-dialog modal-lg">
@@ -68,7 +70,7 @@
                             
                                               <label for="">School</label>
                             
-                                              <input type="text" name="school" id="course_school" class="form-control course-inquiry-field" placeholder="" />
+                                              <input type="text" name="school" readonly id="course_school" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -76,7 +78,7 @@
                             
                                               <label for="">Course</label>
                             
-                                              <input type="text" name="course" id="course_course" class="form-control course-inquiry-field" placeholder="" />
+                                              <input type="text" name="course" readonly id="course_course" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -126,9 +128,9 @@
                            
                                             <label for="">Resume / Curriculum Vitae</label><br />
                            
-                                            <input type="file" name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                            <input type="file" name="resume" id="resume_course" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
-                                            <label class="btn btnread-more text-uppercase course-inquiry-field" id="course_resume" for="resume" style="height: auto"><span>Choose file</span></label>
+                                            <label class="btn btnread-more text-uppercase course-inquiry-field" id="course_resume" for="resume_course" style="height: auto"><span>Choose file</span></label>
                            
                                           </div>
         
@@ -176,6 +178,18 @@
 
 <script>
 
+    $(document).on('click', '.btn-course-inquire', function(){
+
+        el = $(this);
+
+        $('#course_school').val(el.attr('data-school'));
+        
+        $('#course_course').val(el.attr('data-course'));
+
+        $('#modal-trigger').trigger('click');
+
+    });
+  
     $('.course-inquiry-submit').click(function(){
 
         el = $(this);
@@ -189,9 +203,6 @@
             success: function(){
 
                 location.reload();
-
-                // alert();
-              // location.href = '/thank-you';
 
             }, error: function(data){
 

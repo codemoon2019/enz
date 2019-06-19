@@ -15,8 +15,10 @@
         </div>
 
         <div class="text-center">
+            
+            <button type="button" class="btn btnread-more text-uppercase btn-course-inquire" :data-school="course.institution.title"  :data-course="course.title">Inquire now</button>
 
-            <a href="#" data-toggle="modal" data-target="#myModal" class="modal-trigger btn btnread-more text-uppercase">Inquire now</a>
+        <!--     <a href="javascript:;" class="modal-trigger btn btnread-more text-uppercase btn-course-inquire" :data-school="course.institution.title"  :data-course="course.title">Inquire now</a> -->
 
         </div>
         

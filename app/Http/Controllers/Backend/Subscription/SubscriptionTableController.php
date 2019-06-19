@@ -44,8 +44,15 @@ class SubscriptionTableController extends BaseController
     public function __invoke(Request $request)
     {
         return DataTables::of($this->repository()->table())
+            ->escapeColumns(['id'])
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));
+            })
+            ->addColumn('actions', function ($model) {
+
+                return $model->action_buttons;
+
+                // return $model->actions('backend');
             })
             // ->addColumn('actions', function ($model) {
             //     return $model->actions('backend', ['show', 'edit', 'destroy']);

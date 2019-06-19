@@ -45,9 +45,7 @@ class SendContactRequest extends FormRequest
             
             'resume'      => 'required',
             
-            // 'consultaion'   => 'required',
-            
-            'g-recaptcha-response' => 'required|captcha'
+            // 'g-recaptcha-response' => 'required|captcha'
         
         ];
         
