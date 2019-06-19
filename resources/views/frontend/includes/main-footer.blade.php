@@ -76,17 +76,19 @@
                                 <label for="country">Country <span class="text-danger">*</span></label>
 
                                 <select name="country" id="country" class="form-control inquiry-field">
+
                                   <option disabled selected></option>
+                                  
                                   <option>Australia</option>
+                                  
                                   <option>New Zealand</option>
+                                  
                                   <option>Canada</option>
+                               
                                 </select>
-              
-                                {{-- <input type="text" name="location" id="location" class="form-control inquiry-field" placeholder="" /> --}}
               
                               </div>
 
-                
                               <div class="form-group">
                 
                                 <label for="inquiry">Inquiry <span class="text-danger">*</span></label>
@@ -117,24 +119,28 @@
                
                               </div>
                
-                              <div class="form-group">
-               
-                                <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
-               
-                                <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
-               
-                                <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
-               
-                              </div>
-               
-                              <div class="form-group">
+                              <div class="form-group row">
 
-                                <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
+                                <div class="col-sm-5">
+
+                                    <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
+                   
+                                    <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
+                   
+                                    <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
                                     
-                                    {!! Captcha::display() !!}
-                                
                                 </div>
+                                
+                                <div class="col-sm-7">
 
+                                    <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
+                                        
+                                        {!! Captcha::display() !!}
+                                    
+                                    </div>
+                                    
+                                </div>
+                                
                               </div>
                
                             </div>
@@ -171,29 +177,6 @@
    
           <button type="button" class="btn btnread-more subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</button>
 
-          
-
-          {{-- <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="subscription-form">
-
-            {{ csrf_field() }}
-            
-            <div class="input-group mb-3">
-              <label for="subscribe-email" class="d-none">Subscribe</label>
-              <input type="email" name="email" id="subscribe-email" class="txtemail form-control inquiry-field" placeholder="Email Address">
-     
-              <div class="input-group-append">
-     
-                <span class="input-group-text" id="basic-addon2">
-     
-     
-                </span>
-     
-              </div>
-     
-            </div>
-            
-          </form> --}}
-   
         </div>
    
       </div>
@@ -385,51 +368,6 @@
 
 <script>
 
-    // $('.subscribe-btn').click(function(){
-
-    //     $('.inquiry-field').css('border', 'unset');
-
-    //     let fields = ['subscribe-email'];
-
-    //     let submit = true;
-
-    //     $.each(fields, function(k, v){
-
-    //         el = $('#' + v);
-
-    //         if (el.val() == null || el.val() == '') {
-
-    //             el.css('border', '2px solid #d27070');
-
-    //             submit = false;
-
-    //         }
-
-    //         if (v == 'subscribe-email') {
-
-    //             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    //             if (! re.test(String(el.val()).toLowerCase())) {
-                    
-    //                 el.css('border', '2px solid #d27070');
-
-    //                 submit = false;
-
-    //             }
-
-    //         }
-
-    //     });
-
-
-    //     if (submit) {
-
-    //         $('#subscription-form').submit();
-            
-    //     }
-
-    // });
-
     $('.inquiry-submit').click(function(){
 
         el = $(this);
@@ -465,54 +403,7 @@
 
         }).submit();
 
-        // $.ajax('#inquiry-form').submit();
-
-
-
-
-        // $('.inquiry-field').css('border', 'unset');
-
-        // let fields = ['full_name', 'profession', 'email_address', 'mobile_number', 'location', 'country', 'inquiry'];
-
-        // let submit = true;
-
-        // $.each(fields, function(k, v){
-
-        //     el = $('#' + v);
-
-        //     if (el.val() == null || el.val() == '') {
-
-        //         el.css('border', '2px solid #d27070');
-
-        //         submit = false;
-
-        //     }
-
-        //     if (v == 'email_address') {
-
-        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        //         if (! re.test(String(el.val()).toLowerCase())) {
-                    
-        //             el.css('border', '2px solid #d27070');
-
-        //             submit = false;
-
-        //         }
-
-        //     }
-
-        // });
-
-
-        // if (submit) {
-
-        //     $('#inquiry-form').submit();
-            
-        // }
-
     });
-
 
 </script>
 
