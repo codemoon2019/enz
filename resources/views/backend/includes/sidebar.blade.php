@@ -28,7 +28,7 @@
 
             <li class="nav-item">
                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/subscriptions')) }}"
-                   href="{{ route('admin.subscriptions.index') }}"><i class="nav-icon fa fa-envelope"></i>Subscriptions</a>
+                   href="{{ route('admin.subscriptions.index') }}"><i class="nav-icon fa fa-envelope"></i>Course Inquiries</a>
             </li>
 
             <li class="nav-item">

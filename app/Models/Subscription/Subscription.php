@@ -38,8 +38,16 @@ class Subscription extends Model
      * Declared Fillables
      */
     protected $fillable = [
-        'email',
         'slug',
+        'full_name',
+        'profession',
+        'email_address',
+        'mobile_number',
+        'location',
+        'message',
+        'school',
+        'course',
+        'resume',
     ];
 
     /**
@@ -74,7 +82,7 @@ class Subscription extends Model
     public function baseable(): array
     {
         return [
-            'source' => 'email'
+            'source' => 'email_address'
         ];
     }
 
@@ -84,7 +92,7 @@ class Subscription extends Model
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
-            ->generateSlugsFrom('email')
+            ->generateSlugsFrom('email_address')
             ->saveSlugsTo('slug')
             ->slugsShouldBeNoLongerThan(is_latest_mysql_version() ? 250 : 191);
     }

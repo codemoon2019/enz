@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Models\Application\Application;
 use Illuminate\Support\Facades\Storage;
 use Uuid;
+use Arcanedev\NoCaptcha\Rules\CaptchaRule;
 
 /**
  * Class ApplicationController
@@ -88,6 +89,28 @@ class ApplicationController extends Controller
     public function inquiry(Request $request)
     {
 
+        $validatedData = $request->validate([
+
+            'full_name'            => 'required',
+            
+            'email_address'        => 'required',
+            
+            'mobile_number'        => 'required',
+            
+            'address'              => 'required',
+            
+            'employment_status'    => 'required',
+            
+            'message'               => 'required',
+            
+            'resume'               => 'required',
+            
+            'g-recaptcha-response' => 'required|captcha',
+        
+        ]);
+
+
+
         $data = $request->all();
 
         if ($request['resume'] != null) {
@@ -108,7 +131,9 @@ class ApplicationController extends Controller
 
         // $model->otherDetails()->create($data);
 
-        return redirect()->back()->withFlashSuccess('Submitted Successfully');
+        session()->flash('flash_success', 'Application Submitted');
+        
+        // return redirect()->back()->withFlashSuccess('Submitted Successfully');
 
     }
 }

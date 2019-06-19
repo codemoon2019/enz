@@ -13,12 +13,24 @@
             @include($viewPath . '.partials.links')
         @endslot
         @slot('headers')
-            <td>Email</td>
+            <td>Fullname</td>
+            <td>Profession</td>
+            <td>Email Address</td>
+            <td>Mobile Number</td>
+            <td>Location</td>
+            <td>School</td>
+            <td>Course</td>
             <td>Date</td>
         @endslot
         @slot('columns', json_encode([
-        	[ 'data' => 'email' ],
-        	[ 'data' => 'updated_at' ],
+            [ 'data' => 'full_name' ],
+            [ 'data' => 'profession' ],
+            [ 'data' => 'email_address' ],
+            [ 'data' => 'mobile_number' ],
+            [ 'data' => 'location' ],
+            [ 'data' => 'school' ],
+            [ 'data' => 'course' ],
+            [ 'data' => 'updated_at' ],
         ]))
         @slot('options', json_encode([
         	'order' => [ [0, 'desc'] ] 

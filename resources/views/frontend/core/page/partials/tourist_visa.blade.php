@@ -145,11 +145,20 @@
                                         <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
         
                                     </div>
+        
+                                    <div class="form-group text-center">
 
-                
+                                        <div style="width: max-content;" class="tourist-inquiry-field" id="tourist_g-recaptcha-response">
+
+                                            {!! Captcha::display() !!}
+
+                                        </div>
+        
+                                    </div>
+
                                     <div class=" text-center">
-                
-                                        <a href="javascript:;" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</a>
+
+                                        <button type="button" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</button>
                 
                                     </div>
             
@@ -177,46 +186,76 @@
     
     $('.tourist-inquiry-submit').click(function(){
 
+        el = $(this);
+
+        el.attr('disabled', true).html('Please wait..');
+
         $('.tourist-inquiry-field').css('border', 'unset');
 
-        let fields = ['tourist_first_name', 'tourist_last_name', 'tourist_email_address', 'tourist_mobile_number', 'tourist_country_to_visit', 'tourist_inquiry'];
+        $('#tourist-inquiry-form').ajaxForm({
 
-        let submit = true;
+            success: function(){
 
-        $.each(fields, function(k, v){
+                location.reload();
 
-            el = $('#' + v);
+                // alert();
+              // location.href = '/thank-you';
 
-            if (el.val() == null || el.val() == '') {
+            }, error: function(data){
 
-                el.css('border', '2px solid #d27070');
+                el.attr('disabled', false).html('Submit');
 
-                submit = false;
+                $.each(data.responseJSON['errors'], function(k, v){
+
+                    $('#tourist_' + k).css('border', '2px solid #d27070');
+
+                });
+
 
             }
 
-            if (v == 'tourist_email_address') {
+        }).submit();
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        // $('.tourist-inquiry-field').css('border', 'unset');
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+        // let fields = ['tourist_first_name', 'tourist_last_name', 'tourist_email_address', 'tourist_mobile_number', 'tourist_country_to_visit', 'tourist_inquiry'];
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'tourist_email_address') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+        //             el.css('border', '2px solid #d27070');
 
-                    submit = false;
+        //             submit = false;
 
-                }
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
 
 
-        if (submit) {
+        // if (submit) {
 
-            $('#tourist-inquiry-form').submit();
+        //     $('#tourist-inquiry-form').submit();
             
-        }
+        // }
 
     });
 

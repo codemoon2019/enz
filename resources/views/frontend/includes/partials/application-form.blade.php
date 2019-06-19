@@ -22,7 +22,7 @@
                 
                             <div class="card-body relative linear-gradient-grey">
             
-                                <form action="{{ route('frontend.applications.inquiry') }}" method="post" id="course-inquiry-form" enctype="multipart/form-data">
+                                <form action="{{ route('frontend.applications.inquiry') }}" method="post" id="application-inquiry-form" enctype="multipart/form-data">
                 
                                     {{ csrf_field() }}
                             
@@ -36,7 +36,7 @@
                             
                                               <label for="">Full Name</label>
                             
-                                              <input type="text" name="full_name" id="application_full_name" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="full_name" id="application_full_name" class="form-control application-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -44,7 +44,7 @@
                             
                                               <label for="">Email Address</label>
                             
-                                              <input type="email" name="email_address" id="application_email_address" class="form-control inquiry-field" placeholder="" />
+                                              <input type="email" name="email_address" id="application_email_address" class="form-control application-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -52,7 +52,7 @@
                             
                                               <label for="">Mobile Number</label>
                             
-                                              <input type="text" name="mobile_number" id="application_mobile_number" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="mobile_number" id="application_mobile_number" class="form-control application-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -60,7 +60,7 @@
                             
                                               <label for="">Address</label>
                             
-                                              <input type="text" name="address" id="application_address" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="address" id="application_address" class="form-control application-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -68,7 +68,7 @@
                             
                                               <label for="">Employment Status</label>
                             
-                                              <input type="text" name="employment_status" id="application_employment_status" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="employment_status" id="application_employment_status" class="form-control application-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -80,7 +80,7 @@
                             
                                             <label for="">Message</label>
                             
-                                            <textarea name="message" id="application_message" cols="30" rows="10" class="form-control inquiry-field"></textarea>
+                                            <textarea name="message" id="application_message" cols="30" rows="10" class="form-control application-inquiry-field"></textarea>
                             
                                           </div>
                            
@@ -88,17 +88,21 @@
                            
                                             <label for="">Resume / Curriculum Vitae</label><br />
                            
-                                            <input type="file" name="resume" id="application_file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                            <input type="file" name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
-                                            <label class="btn btnread-more text-uppercase" for="application_file" style="height: auto"><span>Choose file</span></label>
+                                            <label class="btn btnread-more text-uppercase application-inquiry-field" id="application_resume" for="resume" style="height: auto"><span>Choose file</span></label>
                            
                                           </div>
-                           
-                                          <div class="form-group">
+        
+                                            <div class="form-group text-center">
 
-                                            {{-- {!! Captcha::display() !!} --}}
+                                                <div style="width: max-content;" class="application-inquiry-field" id="application_g-recaptcha-response">
 
-                                          </div>
+                                                    {!! Captcha::display() !!}
+
+                                                </div>
+                
+                                            </div>
                            
                                           <div class="form-group" style="display: none;">
                                     
@@ -119,9 +123,6 @@
                                     </div>
                                     
                                 </form>
-
-
-
                 
                             </div>
                     
@@ -152,45 +153,73 @@
 
     $('.application-inquiry-submit').click(function(){
 
-        $('.inquiry-field').css('border', 'unset');
+        el = $(this);
 
-        let fields = ['application_full_name', 'application_employment_status', 'application_email_address', 'application_mobile_number', 'application_address', 'application_message'];
+        el.attr('disabled', true).html('Please wait..');
 
-        let submit = true;
+        $('.application-inquiry-field').css('border', 'unset');
 
-        $.each(fields, function(k, v){
+        $('#application-inquiry-form').ajaxForm({
 
-            el = $('#' + v);
+            success: function(){
 
-            if (el.val() == null || el.val() == '') {
+                location.reload();
 
-                el.css('border', '2px solid #d27070');
 
-                submit = false;
+            }, error: function(data){
+
+                el.attr('disabled', false).html('Submit');
+
+                $.each(data.responseJSON['errors'], function(k, v){
+
+                    $('#application_' + k).css('border', '2px solid #d27070');
+
+                });
+
 
             }
 
-            if (v == 'application_email_address') {
+        }).submit();
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        // $('.inquiry-field').css('border', 'unset');
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+        // let fields = ['application_full_name', 'application_employment_status', 'application_email_address', 'application_mobile_number', 'application_address', 'application_message'];
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'application_email_address') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+        //             el.css('border', '2px solid #d27070');
 
-                    submit = false;
+        //             submit = false;
 
-                }
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
 
-        if (submit) {
+        // if (submit) {
 
-            $('#course-inquiry-form').submit();
+        //     $('#course-inquiry-form').submit();
             
-        }
+        // }
 
     });
 

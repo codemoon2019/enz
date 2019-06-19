@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use App\Models\TouristVisaInquiry\TouristVisaInquiry;
 use App\Mail\Frontend\Tourist\TouristMail;
 use Mail;
+use Arcanedev\NoCaptcha\Rules\CaptchaRule;
+
 
 /**
  * Class TouristVisaInquiryController
@@ -88,6 +90,24 @@ class TouristVisaInquiryController extends Controller
     public function inquiry(Request $request)
     {
 
+        $validatedData = $request->validate([
+
+            'first_name'       => 'required',
+            
+            'last_name'        => 'required',
+            
+            'email_address'    => 'required',
+            
+            'mobile_number'    => 'required',
+            
+            'country_to_visit' => 'required',
+            
+            'inquiry'          => 'required',
+            
+            'g-recaptcha-response' => 'required|captcha',
+        
+        ]);
+
         $model = TouristVisaInquiry::create([
 
             'first_name'       => $request['first_name'],
@@ -131,8 +151,10 @@ class TouristVisaInquiryController extends Controller
         //     Mail::send(new TouristMail($model, $details));
 
         // }
-            
-        return redirect()->back()->withFlashSuccess('Inquiry Submitted');
+
+        session()->flash('flash_success', 'Inquiry Success');
+
+        // return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
     }
 

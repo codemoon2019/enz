@@ -18,7 +18,15 @@ class CreateSubscriptionsTable extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->unique();
+            $table->string('full_name')->nullable();
+            $table->string('profession')->nullable();
+            $table->string('email_address')->unique();
+            $table->string('mobile_number')->unique();
+            $table->string('location')->nullable();
+            $table->string('message')->nullable();
+            $table->string('school')->nullable();
+            $table->string('course')->nullable();
+            $table->string('resume')->nullable();
             $table->string('slug')->unique();
             $table->timestamps();
         });

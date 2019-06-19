@@ -9,6 +9,8 @@ use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
 use Illuminate\Http\Request;
 use App\Models\Subscription\Subscription;
+use Arcanedev\NoCaptcha\Rules\CaptchaRule;
+use Uuid;
 
 /**
  * Class SubscriptionController
@@ -86,17 +88,49 @@ class SubscriptionController extends Controller
     public function inquiry(Request $request)
     {
 
-        if (! Subscription::whereEmail($request['email'])->count()) {
-            
-            $model = Subscription::create([
+        $validatedData = $request->validate([
 
-                'email'     => $request['email'],
-                
-            ]);
+            'full_name'     => 'required',
+            
+            'email_address' => 'required',
+            
+            'mobile_number' => 'required',
+            
+            'location'      => 'required',
+            
+            'school'        => 'required',
+            
+            'course'        => 'required',
+            
+            'profession'    => 'required',
+            
+            'message'       => 'required',
+            
+            'resume'        => 'required',
+            
+            'g-recaptcha-response' => 'required|captcha',
+        
+        ]);
+
+        $data = $request->all();
+
+        if ($request['resume'] != null) {
+
+            $file = $request['resume'];
+
+            $name = $file->getClientOriginalName();
+
+            $encrypt_name = Uuid::generate(4)->string;
+
+            $file->storeAs('public/course', $encrypt_name);
+
+            $data['resume'] = json_encode([$name, $encrypt_name]);
 
         }
 
-        return redirect()->back()->withFlashSuccess('Subscribed Successfully');
+        $model = Subscription::create($data);
+
+        session()->flash('flash_success', 'Course Inquiry Submitted');
 
     }
 }

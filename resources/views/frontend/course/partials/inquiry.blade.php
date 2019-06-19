@@ -16,13 +16,13 @@
                                 
                                 <button type="button" class="close pull-right text-white" data-dismiss="modal">&times;</button>
                                 
-                                <h2 class="card-title fs18 text-white mb0">Got a Question?</h2>
+                                <h2 class="card-title fs18 text-white mb0">Course Inquiry</h2>
                 
                             </div>
                 
                             <div class="card-body relative linear-gradient-grey">
             
-                                <form action="{{ route('frontend.contact.send') }}" method="post" id="course-inquiry-form" enctype="multipart/form-data">
+                                <form action="{{ route('frontend.subscriptions.inquiry') }}" method="post" id="course-inquiry-form" enctype="multipart/form-data">
                 
                                     {{ csrf_field() }}
                             
@@ -36,15 +36,7 @@
                             
                                               <label for="">Full Name</label>
                             
-                                              <input type="text" name="full_name" id="course_full_name" class="form-control inquiry-field" placeholder="" />
-                            
-                                            </div>
-                            
-                                            <div class="form-group">
-                            
-                                              <label for="">Profession</label>
-                            
-                                              <input type="text" name="profession" id="course_profession" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="full_name" id="course_full_name" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -52,7 +44,7 @@
                             
                                               <label for="">Email Address</label>
                             
-                                              <input type="email" name="email_address" id="course_email_address" class="form-control inquiry-field" placeholder="" />
+                                              <input type="email" name="email_address" id="course_email_address" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -60,7 +52,7 @@
                             
                                               <label for="">Mobile Number</label>
                             
-                                              <input type="text" name="mobile_number" id="course_mobile_number" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="mobile_number" id="course_mobile_number" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -68,7 +60,23 @@
                             
                                               <label for="">Location</label>
                             
-                                              <input type="text" name="location" id="course_location" class="form-control inquiry-field" placeholder="" />
+                                              <input type="text" name="location" id="course_location" class="form-control course-inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">School</label>
+                            
+                                              <input type="text" name="school" id="course_school" class="form-control course-inquiry-field" placeholder="" />
+                            
+                                            </div>
+                            
+                                            <div class="form-group">
+                            
+                                              <label for="">Course</label>
+                            
+                                              <input type="text" name="course" id="course_course" class="form-control course-inquiry-field" placeholder="" />
                             
                                             </div>
                             
@@ -77,10 +85,18 @@
                                         <div class="col-sm-6">
                             
                                           <div class="form-group">
+                          
+                                            <label for="">Profession</label>
+                          
+                                            <input type="text" name="profession" id="course_profession" class="form-control course-inquiry-field" placeholder="" />
+                          
+                                          </div>
                             
-                                            <label for="">Inquiry</label>
+                                          <div class="form-group">
                             
-                                            <textarea name="inquiry" id="course_inquiry" cols="30" rows="10" class="form-control inquiry-field"></textarea>
+                                            <label for="">Message</label>
+                            
+                                            <textarea name="message" id="course_message" cols="30" rows="10" class="form-control course-inquiry-field"></textarea>
                             
                                           </div>
                             
@@ -110,16 +126,20 @@
                            
                                             <label for="">Resume / Curriculum Vitae</label><br />
                            
-                                            <input type="file" name="resume" id="course_file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                            <input type="file" name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
-                                            <label class="btn btnread-more text-uppercase" for="course_file" style="height: auto"><span>Choose file</span></label>
+                                            <label class="btn btnread-more text-uppercase course-inquiry-field" id="course_resume" for="resume" style="height: auto"><span>Choose file</span></label>
                            
                                           </div>
-                           
-                                          <div class="form-group">
+        
+                                          <div class="form-group text-center">
 
-                                            {{-- {!! Captcha::display() !!} --}}
+                                              <div style="width: max-content;" class="course-inquiry-field" id="course_g-recaptcha-response">
 
+                                                  {!! Captcha::display() !!}
+
+                                              </div>
+              
                                           </div>
                            
                                         </div>
@@ -136,9 +156,6 @@
                                     
                                 </form>
 
-
-
-                
                             </div>
                     
                         </div>
@@ -161,45 +178,75 @@
 
     $('.course-inquiry-submit').click(function(){
 
-        $('.inquiry-field').css('border', 'unset');
+        el = $(this);
 
-        let fields = ['course_full_name', 'course_profession', 'course_email_address', 'course_mobile_number', 'course_location', 'course_inquiry'];
+        el.attr('disabled', true).html('Please wait..');
 
-        let submit = true;
+        $('.course-inquiry-field').css('border', 'unset');
 
-        $.each(fields, function(k, v){
+        $('#course-inquiry-form').ajaxForm({
 
-            el = $('#' + v);
+            success: function(){
 
-            if (el.val() == null || el.val() == '') {
+                location.reload();
 
-                el.css('border', '2px solid #d27070');
+                // alert();
+              // location.href = '/thank-you';
 
-                submit = false;
+            }, error: function(data){
+
+                el.attr('disabled', false).html('Submit');
+
+                $.each(data.responseJSON['errors'], function(k, v){
+
+                    $('#course_' + k).css('border', '2px solid #d27070');
+
+                });
 
             }
 
-            if (v == 'course_email_address') {
+        }).submit();
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+        // $('.inquiry-field').css('border', 'unset');
+
+        // let fields = ['course_full_name', 'course_profession', 'course_email_address', 'course_mobile_number', 'course_location', 'course_inquiry'];
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'course_email_address') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+        //             el.css('border', '2px solid #d27070');
 
-                    submit = false;
+        //             submit = false;
 
-                }
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
 
-        if (submit) {
+        // if (submit) {
 
-            $('#course-inquiry-form').submit();
+        //     $('#course-inquiry-form').submit();
             
-        }
+        // }
 
     });
 
