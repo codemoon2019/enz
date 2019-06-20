@@ -1,6 +1,6 @@
 <template>
 
-    <div class="item mb30" data-aos="fade-up">
+    <div class="item mb50" data-aos="fade-up">
 
         <div class="svg-holder mx-auto">
 
