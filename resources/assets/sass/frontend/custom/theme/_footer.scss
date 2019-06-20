@@ -214,3 +214,10 @@
 #phplive_widget_embed_iframe_wrapper textarea#vquestion {
     resize: none;
 }
+#g-recaptcha-response-div,
+#tourist_g-recaptcha-response,
+#course_g-recaptcha-response,
+#application_g-recaptcha-response {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+}

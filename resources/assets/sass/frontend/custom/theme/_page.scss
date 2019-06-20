@@ -541,6 +541,12 @@ iframe{
             border-bottom-right-radius: 35px;
         }
     }
+    .vs--disabled {
+        .vs__search,
+        .vs__actions {
+            display: none;
+        }
+    }
 }
 
 .page-destination {
