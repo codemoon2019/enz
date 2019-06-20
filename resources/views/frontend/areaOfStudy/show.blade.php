@@ -10,13 +10,13 @@
 
         <div class="row">
 
-            <div class="col-lg-7">
+            <div class="col-lg-5">
 
                 <img alt="" class="img-fluid rounded-circle" data-src="{{ $model->getFirstMediaUrl('featured', 'inner') }}">
 
             </div> 
 
-            <div class="col-lg-5 pt80">
+            <div class="col-lg-7 pt80">
 
                 <h1 class="title title-large mb30 text-black text-capitalize">{{ $model->title }}</h1> 
 
