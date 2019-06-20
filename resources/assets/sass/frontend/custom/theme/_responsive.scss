@@ -904,14 +904,16 @@
     }
 }
     
+@media (min-width: 768px){   
+    #submitholder {
+        text-align: left !important;
+    }
+}
 @media (min-width: 1024px){   
     .user-menu {
         box-shadow: none; 
     }
 
-    #submitholder {
-        text-align: left !important;
-    }
     
 }
 
