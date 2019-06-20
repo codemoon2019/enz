@@ -50,7 +50,7 @@ class Kernel extends HttpKernel
         'admin' => [
             'site:main',
             'auth',
-            'password_expires',
+            // 'password_expires',
             'permission:view backend',
         ],
     ];
