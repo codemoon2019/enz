@@ -320,6 +320,10 @@ iframe{
 }
 
 .page-courses {
+    .btnview-more.btnsearch {
+        height: 56px;
+        width: 80px;
+    }
     
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
@@ -338,6 +342,10 @@ iframe{
             svg {
                 margin-right: 15px;
             }
+        }
+        .form-control.course-search {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
         .img-papers {
             position: absolute;

@@ -127,6 +127,15 @@
                 
                                 <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
                                 
+                                <div class="col-sm-7">
+
+                                    <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
+                                        
+                                        {{-- {!! Captcha::display() !!} --}}
+                                    
+                                    </div>
+                                    
+                                </div>
                                 
                               </div>
                
