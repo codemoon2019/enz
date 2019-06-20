@@ -119,27 +119,14 @@
                
                               </div>
                
-                              <div class="form-group row">
+                              <div class="form-group">
 
-                                <div class="col-sm-5">
-
-                                    <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
-                   
-                                    <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
-                   
-                                    <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
-                                    
-                                </div>
+                                <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
+                
+                                <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
+                
+                                <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
                                 
-                                <div class="col-sm-7">
-
-                                    <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
-                                        
-                                        {!! Captcha::display() !!}
-                                    
-                                    </div>
-                                    
-                                </div>
                                 
                               </div>
                
@@ -147,9 +134,19 @@
                
                           </div>
                
-                          <div class="text-center mt30">
+                          <div class="row">
+
+                            <div class="col-md-6 mb30">
+                                <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
+                                        
+                                    {!! Captcha::display() !!}
+                                
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center" id="submitholder">
+                              <button type="button" class="btn btnview-more text-uppercase inquiry-submit">Submit</button>
+                            </div>
               
-                            <button type="button" class="btn btnview-more text-uppercase inquiry-submit">Submit</button>
               
                           </div>
               
