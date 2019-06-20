@@ -34,7 +34,12 @@
 
 </div>
 
-<div class="search-results mb100">
+<fields areas="{{ $areas }}" area="true" institutions="{{ $institutions }}"></fields>
+
+<results></results>
+
+
+{{-- <div class="search-results mb100">
 
     <div class="block content-block px180">
     
@@ -78,7 +83,7 @@
                             
                                     </div>
 
-                                    {{-- <div class="table-responsive">
+                                    <div class="table-responsive">
                                         <table class="table table-borderless">
                                   
                                             <thead>
@@ -122,7 +127,7 @@
                                             </tbody>
       
                                         </table>
-                                    </div> --}}
+                                    </div>
                                 
   
                                 </div>
@@ -149,7 +154,7 @@
         </div>
     </div>
 
-</div>
+</div> --}}
 
 @include('frontend.course.partials.inquiry')
 

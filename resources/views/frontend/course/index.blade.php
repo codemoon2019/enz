@@ -4,7 +4,7 @@
 
 @section('content')
     
-    <fields areas="{{ $areas }}" institutions="{{ $institutions }}"></fields>
+    <fields areas="{{ $areas }}" area="false" institutions="{{ $institutions }}"></fields>
     
 	<results></results>
 

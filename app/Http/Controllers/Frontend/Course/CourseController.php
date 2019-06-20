@@ -41,25 +41,22 @@ class CourseController extends Controller
         $this->viewFrontendPath = $model::VIEW_FRONTEND_PATH;
     }
 
+
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
     public function index()
     {
-        $model = $this->repository()->makeModel();
-
         $page = $this->pageRepository->indexPage($this->repository()->model());
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->get()->load('subCourses');
+        $institutions = ActiveInstitution()->load(['country']);
 
-        $institutions = ActiveInstitution()->load(['activeCourses', 'country']);
+        $areas = AreaOfStudy()->load(['activeCourses']);
 
-        $areas = AreaOfStudy();
-
-        return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'institutions', 'areas'));
+        return view("{$this->viewFrontendPath}.index", compact('page', 'institutions', 'areas'));
     }
 
     /**

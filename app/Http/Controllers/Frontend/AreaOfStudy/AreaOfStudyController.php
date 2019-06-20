@@ -78,6 +78,10 @@ class AreaOfStudyController extends Controller
 
         MetaTag::setEntity($model);
 
-        return view("{$this->viewFrontendPath}.show", compact('model', 'page'));
+        $institutions = ActiveInstitution()->load(['country']);
+
+        $areas = json_encode([$model->load(['activeCourses'])]);
+
+        return view("{$this->viewFrontendPath}.show", compact('model', 'page', 'institutions', 'areas'));
     }
 }

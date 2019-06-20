@@ -15,8 +15,10 @@
 				<div class="col-lg-4 mb30">
 	
 					<h2 class="title text-white fs18">Area of Study</h2>
-	
-					<v-select class="" :options="areasList" v-model="area_name" label="title" placeholder="Select area of study"></v-select>
+
+					<v-select class="" :options="areasList" v-model="area_name" disabled label="title" placeholder="Select area of study" v-if="area == 'true'"></v-select>
+
+					<v-select class="" :options="areasList" v-model="area_name" label="title" placeholder="Select area of study" v-else></v-select>
 
 				</div>
 				
@@ -70,7 +72,7 @@ import { mapGetters } from 'vuex';
 
 export default {
 
-    props: ['institutions', 'areas'],
+    props: ['institutions', 'areas', 'area'],
 
     components:{
 
@@ -167,6 +169,16 @@ export default {
 
         // Remit areas data in store
         this.$store.commit('areas', this.areas);
+
+        if (this.area) {
+
+        	// console.log(JSON.parse(this.areas)[0]);
+
+	        // Remit areas data in store
+	        this.$store.commit('updateAreaName', JSON.parse(this.areas)[0])
+        }
+
+
         
    	},  
 

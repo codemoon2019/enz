@@ -22,23 +22,21 @@ export default {
 
 		state.institutions = Object.values(JSON.parse(institutions));
 
-		state.institutions.forEach(function(element) {
-
-			element.active_courses.forEach(function(course) {
-
-				course.country = element.country.title;
-			
-				state.courses.push(course);
-
-			});
-
-		});
-
 	},
 
 	areas(state, areas) {
 
 		state.areas = Object.values(JSON.parse(areas));
+
+		state.areas.forEach(function(element) {
+
+			element.active_courses.forEach(function(course) {
+
+				state.courses.push(course);
+
+			});
+
+		});
 
 	},
 

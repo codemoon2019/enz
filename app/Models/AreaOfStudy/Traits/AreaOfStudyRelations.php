@@ -14,4 +14,9 @@ trait AreaOfStudyRelations
 		return $this->hasMany(Course::class);
 	}
 
+	public function activeCourses()
+	{
+		return $this->hasMany(Course::class)->whereStatus('enable')->orderBy('order');
+	}
+
 }
