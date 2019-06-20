@@ -18,7 +18,14 @@ export default {
 
 		}
 
-		axios.get('/courses/search/' + area_id + '/' + institution_id).then((response) => {
+		let course_name = 'empty_course_name';
+
+		if (state.course_name) {
+
+			course_name = state.course_name;
+		}
+
+		axios.get('/courses/search/' + area_id + '/' + institution_id + '/' + course_name).then((response) => {
 
 			commit('updateCourse', response.data);
 

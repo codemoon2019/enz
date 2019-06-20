@@ -138,7 +138,7 @@
 
                                               <div style="width: max-content;" class="course-inquiry-field" id="course_g-recaptcha-response">
 
-                                                  {{-- {!! Captcha::display() !!} --}}
+                                                  {!! Captcha::display() !!}
 
                                               </div>
               
