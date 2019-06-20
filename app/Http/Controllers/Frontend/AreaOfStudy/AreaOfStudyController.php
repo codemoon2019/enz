@@ -78,9 +78,9 @@ class AreaOfStudyController extends Controller
 
         MetaTag::setEntity($model);
 
-        $institutions = ActiveInstitution()->load(['country']);
-
         $areas = json_encode([$model->load(['activeCourses'])]);
+
+        $institutions = ActiveInstitution();
 
         return view("{$this->viewFrontendPath}.show", compact('model', 'page', 'institutions', 'areas'));
     }

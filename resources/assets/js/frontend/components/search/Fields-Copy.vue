@@ -36,7 +36,7 @@
 	
 					<input type="text" v-click-outside="hide" class="form-control course-search" v-model="course_name" placeholder="Enter course title">
 
-					<!-- <div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
+					<div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
 
 						<ul class="list-unstyled" v-if="filteredCourse.length">
 
@@ -50,7 +50,7 @@
 						
 						</ul>
 						
-					</div> -->
+					</div>
 
 				</div>
 
@@ -91,7 +91,7 @@ export default {
     },    
     computed: {
         
-        ...mapGetters(['institutionsList', 'areasList', 'courses']),
+        ...mapGetters(['institutionsList', 'areasList', 'suggestions', 'filteredCourse']),
 
 	    course_name: {
 	        
@@ -156,22 +156,6 @@ export default {
 
 	},
 
-	watch: {
-		
-		area_name: function (value) {
-			
-   			this.$store.dispatch('getCourses')
-		
-		},
-		
-		institution_name: function (value) {
-			
-   			this.$store.dispatch('getCourses')
-		
-		}
-
-	},
-
 	directives: {
 	
 		ClickOutside
@@ -186,11 +170,15 @@ export default {
         // Remit areas data in store
         this.$store.commit('areas', this.areas);
 
-        if (this.area == 'true') {
+        if (this.area) {
 
+        	// console.log(JSON.parse(this.areas)[0]);
+
+	        // Remit areas data in store
 	        this.$store.commit('updateAreaName', JSON.parse(this.areas)[0])
-        
         }
+
+
         
    	},  
 

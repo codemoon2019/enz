@@ -28,16 +28,24 @@ export default {
 
 		state.areas = Object.values(JSON.parse(areas));
 
-		state.areas.forEach(function(element) {
+		// state.areas.forEach(function(element) {
 
-			element.active_courses.forEach(function(course) {
+		// 	element.active_courses.forEach(function(course) {
 
-				state.courses.push(course);
+		// 		state.courses.push(course);
 
-			});
+		// 	});
 
-		});
+		// });
 
 	},
+
+	updateCourse(state, courses) {
+
+		// alert();
+
+		state.courses = courses;
+
+	}
 
 }

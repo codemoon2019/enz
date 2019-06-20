@@ -14,7 +14,7 @@
                         
                         <a data-toggle="tab" href="#all" class="btn mb30 default active show">
                             
-                            All <span>({{ courses.length }})</span>
+                            All <span>({{ filteredCourse.length }})</span>
 
                         </a>
                         
@@ -66,7 +66,7 @@
 
                         </div>
 
-                        <div class="text-center mt50" v-if="! courses.length">
+                        <div class="text-center mt50" v-if="! filteredCourse.length">
             
                             <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
                             
@@ -74,7 +74,7 @@
 
                         </div>
 
-                        <div class="text-center mt50" v-if="count_all < courses.length">
+                        <div class="text-center mt50" v-if="count_all < filteredCourse.length">
                                     
                             <button class="btn btnview-more text-uppercase mb30" @click="count_all += 6">View more</button>
 
@@ -208,11 +208,11 @@ export default {
 
     computed: {
         
-        ...mapGetters(['suggestions', 'showResult', 'courses']),
+        ...mapGetters(['suggestions', 'showResult', 'filteredCourse']),
 
         all_courses: function(){
 
-            return this.courses.slice(0, this.count_all);
+            return this.filteredCourse.slice(0, this.count_all);
 
         },
 
@@ -249,7 +249,7 @@ export default {
 
     watch: {
 
-        courses(value){
+        filteredCourse(value){
 
             let australia   = this.australia = [];
             

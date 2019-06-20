@@ -7,6 +7,7 @@ use App\Repositories\Course\CourseRepository;
 use HalcyonLaravel\Base\Controllers\BaseController as Controller;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
+use App\Models\Course\Course;
 
 /**
  * Class CourseController
@@ -52,9 +53,13 @@ class CourseController extends Controller
 
         MetaTag::setEntity($page);
 
-        $institutions = ActiveInstitution()->load(['country']);
+        // $institutions = ActiveInstitution()->load(['country']);
 
-        $areas = AreaOfStudy()->load(['activeCourses']);
+        // $areas = AreaOfStudy()->load(['activeCourses']);
+
+        $institutions = ActiveInstitution();
+
+        $areas = AreaOfStudy();
 
         return view("{$this->viewFrontendPath}.index", compact('page', 'institutions', 'areas'));
     }
@@ -80,5 +85,26 @@ class CourseController extends Controller
         MetaTag::setEntity($model);
 
         return view("{$this->viewFrontendPath}.show", compact('model', 'page'));
+    }
+
+    public function search($area_id, $institution_id)
+    {
+
+        if ($area_id && $institution_id) {
+
+            $courses = Course::where('institution_id', $institution_id)->where('area_of_study_id', $area_id)->get();
+
+        }else if($area_id){
+
+            $courses = Course::where('area_of_study_id', $area_id)->get();
+
+        }else{
+
+            $courses = Course::where('institution_id', $institution_id)->get();
+        
+        }
+
+        return $courses;
+
     }
 }
