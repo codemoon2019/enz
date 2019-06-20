@@ -68,7 +68,7 @@
 
                         <div class="text-center mt50" v-if="! courses.length">
             
-                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <img src="/svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
                             
                             <p class="title text-nblue fs24">No result</p>
 
@@ -96,7 +96,8 @@
 
                         <div class="text-center mt50" v-if="! australia_courses.length">
             
-                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <img src="/svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+
                             <p class="title text-nblue fs24">No result</p>
 
                         </div>
@@ -123,7 +124,8 @@
 
                         <div class="text-center mt50" v-if="! canada_courses.length">
             
-                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <img src="/svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+
                             <p class="title text-nblue fs24">No result</p>
 
                         </div>
@@ -150,7 +152,8 @@
 
                         <div class="text-center mt50" v-if="! new_zealand_courses.length">
             
-                            <img src="svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            <img src="/svg/no-result.svg" class="img-fluid no-result-image mb30" alt="">
+                            
                             <p class="title text-nblue fs24">No result</p>
 
                         </div>
