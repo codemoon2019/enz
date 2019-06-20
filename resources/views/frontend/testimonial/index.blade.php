@@ -72,7 +72,7 @@
                         ];
                     @endphp
 
-                    <div class="row d-flex item mx-auto mb30 text-modal-trigger" data-image="{{ $data['image'] }}" data-description="{{ $data['description'] }}" data-title="{{ $data['title'] }}" data-position="{{ $data['position'] }}" data-address="{{ $data['address'] }}">
+                    <div class="row d-flex item mx-auto mb30 text-modal-trigger cursor-pointer" data-image="{{ $data['image'] }}" data-description="{{ $data['description'] }}" data-title="{{ $data['title'] }}" data-position="{{ $data['position'] }}" data-address="{{ $data['address'] }}">
                     
                         <div class="col-5 profile-pic text-center text-white">
                     
