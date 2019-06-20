@@ -131,7 +131,7 @@
 
                                     <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
                                         
-                                        {{-- {!! Captcha::display() !!} --}}
+                                        {!! Captcha::display() !!}
                                     
                                     </div>
                                     

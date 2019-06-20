@@ -35,8 +35,8 @@
 					<h2 class="title text-white fs18">Course Title</h2>
 
 					<div class="input-group mb-3">
-						<input type="text" v-click-outside="hide" class="form-control course-search" v-model="course_name" placeholder="Enter course title">
-						<div class="input-group-append">
+						<input type="text" v-click-outside="hide" class="form-control course-search" v-model="local_course_name" placeholder="Enter course title">
+						<div class="input-group-append" @click="searchCourseName">
 							<button class="btn btnview-more btnsearch" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> 
 						</div>
 					</div>
@@ -90,7 +90,9 @@ export default {
 
         return {
 
-        	showSuggestions: true
+        	showSuggestions: true,
+
+        	local_course_name: '',
 
         }
     
@@ -154,6 +156,12 @@ export default {
 			this.showSuggestions = false;
 
 		},
+
+		searchCourseName(){
+
+        	this.$store.commit('updateCourseName', this.local_course_name);
+
+		},
 	 
 	    hide () {
 	    	
@@ -174,7 +182,25 @@ export default {
 			
    			this.$store.dispatch('getCourses')
 		
-		}
+		},
+		
+		course_name: function (value) {
+			
+   			this.$store.dispatch('getCourses')
+		
+		},
+		
+		local_course_name: function (value) {
+
+			if (value == '' || value == null) {
+
+        		this.$store.commit('updateCourseName', this.local_course_name);
+
+   				this.$store.dispatch('getCourses')
+				
+			}
+		
+		},
 
 	},
 

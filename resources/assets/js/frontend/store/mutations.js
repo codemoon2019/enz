@@ -2,7 +2,7 @@ export default {
 
 	updateCourseName(state, course_name) {
 
-		state.course_name = course_name;
+		state.course_name = course_name.trim();
 
 	},
 
