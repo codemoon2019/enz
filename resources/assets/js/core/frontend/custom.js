@@ -114,11 +114,11 @@ $('document').ready(function(){
   $('#default .right.myarrow').click(function(){
       $('#default .slick-slider .slick-next').trigger('click');
   });
-  $('#vidtes .left.myarrow').click(function(){
-    $('#vidtes .slick-slider .slick-prev').trigger('click');
+  $('#videos .left.myarrow').click(function(){
+    $('#videos .slick-slider .slick-prev').trigger('click');
   });
-  $('#vidtes .right.myarrow').click(function(){
-      $('#vidtes .slick-slider .slick-next').trigger('click');
+  $('#videos .right.myarrow').click(function(){
+      $('#videos .slick-slider .slick-next').trigger('click');
   });
 
  

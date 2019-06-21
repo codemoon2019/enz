@@ -1,4 +1,4 @@
-<div class="block testimonials-block" id="vidtes">
+<div class="block testimonials-block" id="videos">
 
     <section class="testimonials">
     
