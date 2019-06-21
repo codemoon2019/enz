@@ -7,7 +7,6 @@
             <div class="row">
 
                 <div class="col-sm-3 left-content flags">
-
                 
                     <img class="img-fluid" data-src="{{asset('svg/flags.svg')}}" alt="Flags">
                 
@@ -146,16 +145,20 @@
                           <div class="row">
 
                             <div class="col-md-6 mb30">
+
                                 <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
                                         
                                     {!! Captcha::display() !!}
                                 
                                 </div>
+
                             </div>
+
                             <div class="col-md-6 text-center" id="submitholder">
+
                               <button type="button" class="btn btnview-more text-uppercase inquiry-submit">Submit</button>
+
                             </div>
-              
               
                           </div>
               

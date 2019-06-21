@@ -9,9 +9,9 @@ namespace App\Models\Institution\Traits;
 trait InstitutionAttributes
 {
 
-	// public function getLogoAttribute()
-	// {
-	// 	return $this->getFirstMediaUrl('featured');
-	// }
+	public function getLogoAttribute()
+	{
+		return $this->getFirstMediaUrl('featured');
+	}
 
 }

@@ -12,9 +12,9 @@
                 <div class="card-body relative">
                     {!! __('strings.backend.welcome') !!}
                     <label class="switch switch-3d switch-primary">
-  <input type="checkbox" class="switch-input" checked>
-  <span class="switch-slider"></span>
-</label>
+                      <input type="checkbox" class="switch-input" checked>
+                      <span class="switch-slider"></span>
+                    </label>
                 </div><!--card-block-->
             </div><!--card-->
         </div><!--col-->

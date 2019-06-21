@@ -54,7 +54,7 @@ class Institution extends Model implements HasMedia
         'status',
     ];
 
-    // protected $appends = ['logo'];
+    protected $appends = ['logo'];
 
     /**
      * Return the permissions related to this model.

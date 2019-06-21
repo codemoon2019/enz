@@ -61,15 +61,21 @@ class CourseController extends CRUDController
 
         // return array_merge($request->only($model->getFillable()), $data);
 
-        $data = [
-            'meta' => $request->meta,
-        ];
+        $data = $request->all();
 
-        $model = $this->repository()->makeModel();
+        $data['status'] = $request->status ? 'enable' : 'disabled';
 
-        $request = $request->all();
+        return $data;
 
-        return array_merge($request, $data);
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        // $model = $this->repository()->makeModel();
+
+        // $request = $request->all();
+
+        // return array_merge($request, $data);
     }
 
     /**

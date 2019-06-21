@@ -19,16 +19,25 @@
             <label class="col-md-2 form-control-label">Type <i class="text-danger">*</i></label>
     
             <div class="col-md-10">
-    
-                <select class="form-control" name="type" id="testimonial-type">
-                    
-                    <option value="text">Text</option>
-                    
-                    <option value="video">Video</option>
 
-                </select>
+                @if (isset($model))
+                    <select class="form-control" name="type" id="testimonial-type">
+                        
+                        <option value="text" {{ $model->type =='text' ? 'selected' : '' }}>Text</option>
+                        
+                        <option value="video" {{ $model->type =='video' ? 'selected' : '' }}>Video</option>
 
-    
+                    </select>
+                @else
+                    <select class="form-control" name="type" id="testimonial-type">
+                        
+                        <option value="text">Text</option>
+                        
+                        <option value="video">Video</option>
+
+                    </select>
+                @endif
+
             </div>
     
         </div>
@@ -43,6 +52,24 @@
     
             </div>
     
+        </div>
+        
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label" for="content">Status</label>
+
+            <div class="col-md-10">
+            
+                <label class="switch switch-3d switch-primary">
+
+                    <input type="checkbox" name="status" class="switch-input" value="{{ isset($model) ? 1 : 0 }}" {{ isset($model) ? ($model->status == 'enable' ? 'checked' : ''): '' }}>
+
+                    <span class="switch-slider"></span>
+    
+                </label>
+            
+            </div>
+        
         </div>
 
         <div class="text-div testimonial-div">
@@ -143,11 +170,11 @@
 
         // CKEDITOR.replace('description', options);
 
-        $('#testimonial-type').change(function(){
+        function type() {
 
             $('.testimonial-div').hide();
 
-            if ($(this).val() == 'video') {
+            if ($('#testimonial-type').val() == 'video') {
 
                 $('.video-div').show();
 
@@ -156,6 +183,14 @@
                 $('.text-div').show();
 
             }
+        
+        }
+
+        type();
+
+        $('#testimonial-type').change(function(){
+
+            type();
 
         });
         

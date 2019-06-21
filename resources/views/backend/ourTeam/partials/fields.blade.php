@@ -95,6 +95,24 @@
             </div>
         
         </div>
+        
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label" for="content">Status</label>
+
+            <div class="col-md-10">
+            
+                <label class="switch switch-3d switch-primary">
+
+                    <input type="checkbox" name="status" class="switch-input" value="{{ isset($model) ? 1 : 0 }}" {{ isset($model) ? ($model->status == 'enable' ? 'checked' : ''): '' }}>
+
+                    <span class="switch-slider"></span>
+    
+                </label>
+            
+            </div>
+        
+        </div>
 
     </div>
 

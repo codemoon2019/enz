@@ -51,9 +51,15 @@ class InstitutionController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        $data = $request->all();
+
+        $data['status'] = $request->status ? 'enable' : 'disabled';
+
+        return $data;
 
         $model = $this->repository()->makeModel();
 

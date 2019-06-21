@@ -4,7 +4,7 @@
 
         <div class="svg-holder mx-auto">
 
-            <img class="img-fluid mb30" :src="course.institution_logo" alt="">.
+            <img class="img-fluid mb30" :src="course.institution_logo" alt="">
 
         </div>
 

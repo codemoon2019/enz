@@ -52,21 +52,33 @@ class NewsController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
+        $data = $request->all();
 
-        $model = $this->repository()->makeModel();
+        if ($data['published_at']) {
 
-        $request = $request->only($model->getFillable());
-
-        if ($request['published_at']) {
-
-            $request['published_at'] = Carbon::create($request['published_at']);
+            $data['published_at'] = Carbon::create($data['published_at']);
 
         }
 
-        return array_merge($request, $data);
+        $data['status'] = $request->status ? 'enable' : 'disabled';
+
+        return $data;
+        
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        // $model = $this->repository()->makeModel();
+
+        // $request = $request->only($model->getFillable());
+
+        // if ($request['published_at']) {
+
+        //     $request['published_at'] = Carbon::create($request['published_at']);
+
+        // }
+
+        // return array_merge($request, $data);
     }
 
     /**
