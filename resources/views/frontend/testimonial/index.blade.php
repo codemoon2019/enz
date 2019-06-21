@@ -104,7 +104,7 @@
         
     </div>
 
-    <button data-toggle="modal" class="modal-trigger" data-target="#myModal"></button>
+    <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
 
     <div class="modal fade" id="myModal">
 
