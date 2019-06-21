@@ -52,21 +52,34 @@ class EventController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
 
-        $model = $this->repository()->makeModel();
+        $data = $request->all();
 
-        $request = $request->only($model->getFillable());
+        if ($data['event_date']) {
 
-        if ($request['event_date']) {
-
-            $request['event_date'] = Carbon::create($request['event_date']);
+            $data['event_date'] = Carbon::create($data['event_date']);
 
         }
 
-        return array_merge($request, $data);
+        $data['status'] = $request->status ? 'enable' : 'disabled';
+
+        return $data;
+
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        // $model = $this->repository()->makeModel();
+
+        // $request = $request->only($model->getFillable());
+
+        // if ($request['event_date']) {
+
+        //     $request['event_date'] = Carbon::create($request['event_date']);
+
+        // }
+
+        // return array_merge($request, $data);
     }
 
     /**

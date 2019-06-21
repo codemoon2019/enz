@@ -185,7 +185,7 @@ class PageTableSeeder extends Seeder
             'title'       => 'Read More',
             'description' => '
     <h1>Welcome to ENZ Education Consultancy Services</h1>
-        <p>ENZ Education Consultancy Services, in considering its young age in the business arena, has grown in stature and reputation through its excellent service and high-quality assistance to Genuine International Students. Believing that consultancy services must effectively serve our hopeful and aspiring clienteles, the ENZ Education Consultancy Services with its team invests time and efforts added with the guiding core values towards an effective and goal driven services.</p>
+        <p>ENZ Education Consultancy Services, in considering its young age in the business arena, has grown in stature and reputation through its excellent service and high-quality assistance to Genuine International Students. Believing that consultancy services must effectively serve our hopeful and aspiring clienteles, the ENZ Education Consultancy Services with its team invests time and efforts added with the guiding core values towards an effective and goal driven services.</p><p>&nbsp;</p>
     <h2>At ENZ Education Consultancy Services,</h2>
     <ul>
         <li class="basic">we care for your dreams.</li>
@@ -208,11 +208,6 @@ class PageTableSeeder extends Seeder
         ]);
 
         $model->domains()->sync([1]);
-
-
-
-
-
 
     }
 }
