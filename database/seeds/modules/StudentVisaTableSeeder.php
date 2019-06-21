@@ -42,7 +42,7 @@ class StudentVisaTableSeeder extends Seeder
                 'order' => 0
             ],
             [
-                'title' => 'Assesment',
+                'title' => 'Assessment',
                 'description' => 'ENZ provides FREE assessment to determine the best study options.',
                 'order' => 0
             ],

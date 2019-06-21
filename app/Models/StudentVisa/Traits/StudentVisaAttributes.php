@@ -18,7 +18,7 @@ trait StudentVisaAttributes
 				
 				case 'Consultation': return asset('img/student_visa/Consultation.svg'); break;
 				
-				case 'Assesment': return asset('img/student_visa/Assesment.svg'); break;
+				case 'Assessment': return asset('img/student_visa/Assesment.svg'); break;
 				
 				case 'Admissions': return asset('img/student_visa/Admissions.svg'); break;
 				
