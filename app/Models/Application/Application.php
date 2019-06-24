@@ -49,6 +49,8 @@ class Application extends Model
         'resume',
     ];
 
+    protected $appends = ['position'];
+
     /**
      * Return the permissions related to this model.
      *

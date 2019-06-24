@@ -12,6 +12,11 @@ use App\Models\Subscription\Subscription;
 use Arcanedev\NoCaptcha\Rules\CaptchaRule;
 use Uuid;
 
+
+use App\Mail\Frontend\Course\CourseMail;
+use Mail;
+use Illuminate\Support\Facades\Storage;
+
 /**
  * Class SubscriptionController
  *
@@ -129,6 +134,25 @@ class SubscriptionController extends Controller
         }
 
         $model = Subscription::create($data);
+
+
+        // 0 = User / 1 = Admin
+
+        foreach ([0, 1] as $value) {
+            
+            if ($value) {
+
+                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'Course Inquiry for ENZ', 'type' => $value];
+
+            }else{
+
+                $details = ['to' => $model->email_address, 'subject' => 'Course Inquiry for ENZ', 'type' => $value];
+                
+            }
+
+            Mail::send(new CourseMail($model, $details));
+
+        }
 
         session()->flash('flash_success', 'Course Inquiry Submitted');
 

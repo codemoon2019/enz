@@ -43,6 +43,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'General Manager / Senior Consultant',
                 'email' => 'z.singson@enzconsultancy.com',
                 'contact' => '(02) 689 7132',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -50,6 +51,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Operations Head',
                 'email' => 'edelyn@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -57,6 +59,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Manager / Sr. Consultant',
                 'email' => 'trizzia@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -64,6 +67,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'International Relations Officer',
                 'email' => 'stella@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -71,6 +75,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Social Media & Website Administrator',
                 'email' => 'jhonas@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -78,6 +83,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Social Media Analyst',
                 'email' => 'jerlyn@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -85,6 +91,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Officer / Jr. Consultant',
                 'email' => 'gian@enzconsultancy.com',
                 'contact' => '(077) 604 5432',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -92,6 +99,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Officer / Jr. Consultant',
                 'email' => 'cherylle@enzconsultancy.com',
                 'contact' => '(02) 689 7132',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -99,6 +107,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Officer / Jr. Consultant',
                 'email' => 'mark@enzconsultancy.com',
                 'contact' => '(077) 604 5432',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -106,6 +115,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Officer / Jr. Consultant',
                 'email' => 'hannah@enzconsultancy.com',
                 'contact' => '+63 77 604 5432',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -113,6 +123,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Admin Assistant',
                 'email' => '',
                 'contact' => '',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -120,6 +131,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Admin Assistant',
                 'email' => '',
                 'contact' => '',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -127,6 +139,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Assistant',
                 'email' => '',
                 'contact' => '',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -134,6 +147,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Assistant',
                 'email' => '',
                 'contact' => '',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -141,6 +155,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Student Support Officer - Australia',
                 'email' => 'parungaojeizzel@gmail.com',
                 'contact' => '+61 405 050 409',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
             [
@@ -148,6 +163,7 @@ class OurTeamTableSeeder extends Seeder
                 'position' => 'Marketing Representative - NCR',
                 'email' => 'bless@enzconsultancy.com',
                 'contact' => '077 600 4200',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, necessitatibus! Molestiae natus optio aspernatur minima, impedit ducimus culpa iusto tempora reiciendis maiores itaque fuga? Obcaecati vel illum amet eveniet possimus sint dicta molestias facere asperiores! Impedit cupiditate aspernatur aut totam facere maxime, quasi pariatur, quia, fuga voluptas rem voluptates? Cupiditate.',
                 'status' => 'enable',
             ],
         ];        

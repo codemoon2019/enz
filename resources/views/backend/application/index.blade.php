@@ -15,14 +15,20 @@
         @slot('headers')
             <td>Fullname</td>
             <td>Position</td>
+            <td>Emai Address</td>
+            <td>Address</td>
+            <td>Employment Status</td>
             <td>Last Modified</td>
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
             [ 'data' => 'full_name' ],
         	[ 'data' => 'position' ],
+            [ 'data' => 'email_address' ],
+            [ 'data' => 'address' ],
+            [ 'data' => 'employment_status' ],
         	[ 'data' => 'updated_at' ],
-        	[ 'data' => 'actions', 'type' => 'actions', 'sortable' => false, 'searchable' => false ],
+        	[ 'data' => 'actions' ],
         ]))
         @slot('options', json_encode([
         	'order' => [ [0, 'desc'] ] 

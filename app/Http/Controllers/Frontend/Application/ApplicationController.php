@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Storage;
 use Uuid;
 use Arcanedev\NoCaptcha\Rules\CaptchaRule;
 
+
+use App\Mail\Frontend\Application\ApplicationMail;
+use Mail;
+
 /**
  * Class ApplicationController
  *
@@ -105,11 +109,9 @@ class ApplicationController extends Controller
             
             'resume'               => 'required',
             
-            'g-recaptcha-response' => 'required|captcha',
+            // 'g-recaptcha-response' => 'required|captcha',
         
         ]);
-
-
 
         $data = $request->all();
 
@@ -130,6 +132,27 @@ class ApplicationController extends Controller
         $model = Application::create($data);
 
         // $model->otherDetails()->create($data);
+
+
+
+        // 0 = User / 1 = Admin
+
+        foreach ([0, 1] as $value) {
+            
+            if ($value) {
+
+                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
+
+            }else{
+
+                $details = ['to' => $model->email_address, 'subject' => 'Application Inquiry for ENZ', 'type' => $value];
+                
+            }
+
+            Mail::send(new ApplicationMail($model, $details));
+
+        }
+
 
         session()->flash('flash_success', 'Application Submitted');
         

@@ -8,6 +8,10 @@ use HalcyonLaravel\Base\Controllers\Backend\CRUDController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
 use Illuminate\Http\Request;
+use App\Models\Application\Application;
+use Storage;
+use File;
+use Response;
 
 /**
  * Class ApplicationController
@@ -94,5 +98,21 @@ class ApplicationController extends CRUDController
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
             ]);
+    }
+
+    public function download(string $routeKeyName)
+    {
+        $application = Application::whereSlug($routeKeyName)->first();
+
+        $resume = json_decode($application->resume);
+
+        $path = storage_path('app/public/application/' . $resume[1]);
+
+        if (!File::exists($path)) {
+            abort(404);
+        }
+
+        return response()->download($path, $resume[0]);
+       
     }
 }

@@ -42,7 +42,7 @@
 		              
                         @php
 
-                            $image = $person->getFirstMediaUrl('featured');
+                            $image = $person->getFirstMediaUrl('featured', 'main');
 
                         @endphp
 
@@ -57,6 +57,8 @@
                              data-email="{{ $person->email }}" 
                              
                              data-position="{{ $person->position }}" 
+
+                             data-description="{{ $person->description }}" 
                              
                              data-contact="{{ $person->contact }}">
 						
@@ -77,13 +79,16 @@
                         <div class="modal-content">
 
                             <div class="modal-body text-center">
+
                                 <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
                                 <img src="" id="person-image" alt="" class="img-fluid mb20">
 
-                                <h2 class="title fs18 text-black" id="person-title">{{ $person->title }}</h2>
+                                <h2 class="title fs18 text-black" id="person-title"></h2>
                             
-                                <p class="basic fs18 text-black" id="person-position">{{ $person->position }}</p>
+                                <p class="basic fs18 text-black" id="person-position"></p>
+
+                                <p class="basic fs18 text-black text-justify" id="person-description"></p>
 
                                 <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
 
@@ -122,6 +127,8 @@
         $('#person-position').html(el.attr('data-position'));
 
         $('#person-title').html(el.attr('data-title'));
+
+        $('#person-description').html(el.attr('data-description'));
 
         $('.modal-trigger').trigger('click');
 

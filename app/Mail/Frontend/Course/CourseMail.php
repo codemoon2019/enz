@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail\Frontend\Contact;
+namespace App\Mail\Frontend\Course;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactEmail extends Mailable implements ShouldQueue
+class CourseMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -35,15 +35,15 @@ class ContactEmail extends Mailable implements ShouldQueue
 
             $file = json_decode($this->model['resume']);
 
-            $this->markdown('frontend.mail.contact.contact_email')
+            $this->markdown('frontend.mail.course.course_mail')
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'nico.halcyondigital@gmail.com'), env('APP_NAME'))
-            ->attach(storage_path("app/public/inquiry/" . $file[1]))
+            ->attach(storage_path("app/public/course/" . $file[1]))
             ->to($this->details['to']);
 
         }else{
 
-            $this->markdown('frontend.mail.contact.contact_email')
+            $this->markdown('frontend.mail.course.course_mail')
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'nico.halcyondigital@gmail.com'), env('APP_NAME'))
             ->to($this->details['to']);

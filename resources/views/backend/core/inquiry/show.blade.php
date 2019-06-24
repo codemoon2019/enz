@@ -7,7 +7,11 @@
         @endslot
         @slot('secondary_title', 'Inquiry Management')
         @slot('content')
-            {!! markdown('frontend.mail.contact', ['inquiry' => $model]) !!}
+            @php
+                $details = [];
+                $details['type'] = 1; 
+            @endphp
+            {!! markdown('frontend.mail.contact.contact_email', ['model' => $model, 'details' => $details]) !!}
         @endslot
         @slot('footer')
             <div class="row">

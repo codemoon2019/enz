@@ -2,7 +2,7 @@
 
 @if ($details['type'])
 
-New Inquiry
+New Tourist Visa Inquiry
 
 Fullname: {{ $model['first_name'] . ' ' . $model['last_name'] }}
 

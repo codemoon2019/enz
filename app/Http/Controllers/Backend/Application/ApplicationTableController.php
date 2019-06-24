@@ -44,6 +44,7 @@ class ApplicationTableController extends BaseController
     public function __invoke(Request $request)
     {
         return DataTables::of($this->repository()->table())
+            ->escapeColumns(['id'])
             ->addColumn('position', function ($model) {
                 return $model->career->title;
             })
@@ -51,7 +52,7 @@ class ApplicationTableController extends BaseController
                 return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));
             })
             ->addColumn('actions', function ($model) {
-                return $model->actions('backend', ['show', 'edit', 'destroy']);
+                return $model->action_buttons;
             })
             ->make(true);
     }

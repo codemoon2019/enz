@@ -155,7 +155,7 @@ class OurTeam extends Model implements HasMedia
             $this->addMediaConversion('main')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 550, 370);
+                ->fit(Manipulations::FIT_CROP, 218, 218);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

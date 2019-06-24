@@ -29,21 +29,21 @@ class SendContactRequest extends FormRequest
     {
         $rules = [
 
-            'full_name'     => 'required|max:255',
+            'full_name'            => 'required|max:255',
             
-            'profession'    => 'required|max:255',
+            'profession'           => 'required|max:255',
             
-            'email_address' => 'required|email|max:255',
+            'email_address'        => 'required|email|max:255',
             
-            'mobile_number' => 'required',
+            'mobile_number'        => 'required',
             
-            'inquiry'       => 'required|max:255',
+            'inquiry'              => 'required|max:255',
             
-            'location'      => 'required|max:255',
+            'location'             => 'required|max:255',
             
-            'country'      => 'required',
+            'country'              => 'required',
             
-            'resume'      => 'required',
+            'resume'               => 'required',
             
             'g-recaptcha-response' => 'required|captcha'
         
