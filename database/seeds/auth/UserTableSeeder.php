@@ -24,7 +24,7 @@ class UserTableSeeder extends Seeder
             'first_name' => 'System',
             'last_name' => 'Administrator',
             'email' => 'system@system.com',
-            'password' => Hash::make(app()->environment() == 'staging' ? 'f#$Qsa4GA269' : '1234'),
+            'password' => Hash::make(app()->environment() == 'staging' ? 'f#$Qsa4GA269' : 'enzeducation2019'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),
             'confirmed' => true,
         ]);

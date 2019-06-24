@@ -30,6 +30,7 @@ use App\Models\Location\Location;
 use App\Models\Gallery\Gallery;
 use App\Models\Award\Award;
 use App\Models\City\City;
+use App\Models\AreaOfStudy\AreaOfStudy;
 
 /**
  * Class ImageController
@@ -39,29 +40,30 @@ use App\Models\City\City;
 class ImageController extends Controller
 {
     protected const MODELS = [
-        'slide'       => Slide::class,
-        'page'        => Page::class,
-        'setting'     => Setting::class,
-        'meta'        => MetaTag::class,
-        'blocks'      => Block::class,
-        'content'     => Content::class,
-        'more-life'   => MoreLife::class,
-        'course'      => Course::class,
-        'event'       => Event::class,
-        'news'        => News::class,
-        'our-team'    => OurTeam::class,
-        'service'     => Service::class,
-        'testimonial' => Testimonial::class,
-        'why'         => Why::class,
-        'linkages'    => Linkages::class,
-        'country'     => Country::class,
-        'core-values' => CoreValue::class,
-        'details'     => Details::class,
-        'institution' => Institution::class,
-        'location'    => Location::class,
-        'gallery'     => Gallery::class,
-        'award'       => Award::class,
-        'city'       => City::class,
+        'slide'         => Slide::class,
+        'page'          => Page::class,
+        'setting'       => Setting::class,
+        'meta'          => MetaTag::class,
+        'blocks'        => Block::class,
+        'content'       => Content::class,
+        'more-life'     => MoreLife::class,
+        'course'        => Course::class,
+        'event'         => Event::class,
+        'news'          => News::class,
+        'our-team'      => OurTeam::class,
+        'service'       => Service::class,
+        'testimonial'   => Testimonial::class,
+        'why'           => Why::class,
+        'linkages'      => Linkages::class,
+        'country'       => Country::class,
+        'core-values'   => CoreValue::class,
+        'details'       => Details::class,
+        'institution'   => Institution::class,
+        'location'      => Location::class,
+        'gallery'       => Gallery::class,
+        'award'         => Award::class,
+        'city'          => City::class,
+        'area-of-study' => AreaOfStudy::class,
     ];
 
     /**

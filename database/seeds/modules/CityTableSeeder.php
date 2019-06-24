@@ -141,7 +141,9 @@ class CityTableSeeder extends Seeder
 
         foreach ($data as $key => $value) {
 
-            City::create($value);
+            $model = City::create($value);
+
+            $this->seederUploader($model, 'country/city/featured.jpg', null, 'featured');
 
         }
 

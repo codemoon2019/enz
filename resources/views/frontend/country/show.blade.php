@@ -126,7 +126,7 @@
                 
                             <div class="card">
                 
-                            <img data-src="{{asset('img/destination/australia/top.jpg')}}" class="img-fluid" alt="">
+                            <img data-src="{{ $city->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
                 
                                 <div class="card-footer linear-gradient-{{ $city->color }}">
                 
