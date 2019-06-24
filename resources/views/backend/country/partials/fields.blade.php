@@ -102,6 +102,28 @@
         
         </div>
 
+       {{--  <div class="form-group row">
+
+            <label class="col-md-2 form-control-label">Details<br/></label>
+            
+            <div class="col-md-10">
+            
+                <div class="form-group row">
+                        
+                    <label class="col-md-2 form-control-label">Capital<br/></label>
+
+                    <div class="col-md-10">
+            
+                        <input type="text" placeholder="Description" name="title" class="form-control" value="{{ isset($model) ? $model->title : old('title') }}">
+            
+                    </div>
+
+                </div>
+            
+            </div>
+        
+        </div> --}}
+
     </div>
 
 </div>
