@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125.309" height="88.964" viewBox="0 0 125.309 88.964">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.135" height="27.276" viewBox="0 0 38.135 27.276">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0.166" stop-color="#ff7878"/>
       <stop offset="0.78" stop-color="#eb5959"/>
     </linearGradient>
   </defs>
-  <g id="Group_4351" data-name="Group 4351" transform="translate(-1212.5 -2804.535)">
-    <path id="youtube" d="M98.491,67.393H25.817A25.817,25.817,0,0,0,0,93.21V129.54a25.817,25.817,0,0,0,25.817,25.817H98.491a25.817,25.817,0,0,0,25.817-25.817V93.21A25.817,25.817,0,0,0,98.491,67.393Zm-17.46,45.749L47.039,129.355a1.365,1.365,0,0,1-1.952-1.232V94.685a1.365,1.365,0,0,1,1.981-1.217l33.992,17.225A1.365,1.365,0,0,1,81.031,113.142Z" transform="translate(1213 2737.643)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
+  <g id="Group_4354" data-name="Group 4354" transform="translate(-1318.5 -4131.772)">
+    <g id="Group_4353" data-name="Group 4353" transform="translate(1319 4132.272)">
+      <g id="Group_4350" data-name="Group 4350">
+        <path id="youtube" d="M29.422,67.393H7.712A7.712,7.712,0,0,0,0,75.1V85.957a7.712,7.712,0,0,0,7.712,7.712h21.71a7.712,7.712,0,0,0,7.712-7.712V75.1A7.712,7.712,0,0,0,29.422,67.393ZM24.207,81.059,14.052,85.9a.408.408,0,0,1-.583-.368V75.545a.408.408,0,0,1,.592-.364l10.154,5.145A.408.408,0,0,1,24.207,81.059Z" transform="translate(0 -67.393)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
   </g>
 </svg>
