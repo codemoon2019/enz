@@ -136,6 +136,16 @@
 
             <li class="list-inline-item">
 
+                <a href="{{ $socialMedia[1]->value }}">
+
+                    <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/instagram.svg')}}" alt="">
+
+                </a>
+
+            </li>
+
+            <li class="list-inline-item">
+
                 <a href="{{ $socialMedia[3]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/twitter.svg')}}" alt="">
@@ -146,14 +156,14 @@
 
             <li class="list-inline-item">
 
-                <a href="{{ $socialMedia[1]->value }}">
+                <a href="{{ $socialMedia[4]->value }}">
 
-                    <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/instagram.svg')}}" alt="">
+                    <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/skype.svg')}}" alt="">
 
                 </a>
 
             </li>
-
+            
             <li class="list-inline-item">
 
                 <a href="{{ $socialMedia[4]->value }}">
