@@ -92,31 +92,50 @@ class CourseController extends Controller
 
         if ($area_id && $institution_id && $course_name != 'empty_course_name') {
 
-            $courses = Course::where('institution_id', $institution_id)->where('area_of_study_id', $area_id)->where('title', 'like', '%' . $course_name . '%')->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('institution_id', $institution_id)
+                              ->where('area_of_study_id', $area_id)
+                              ->where('title', 'like', '%' . $course_name . '%')
+                              ->get();
 
         }else if ($area_id && $institution_id) {
 
-            $courses = Course::where('institution_id', $institution_id)->where('area_of_study_id', $area_id)->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('institution_id', $institution_id)
+                              ->where('area_of_study_id', $area_id)
+                              ->get();
 
         }else if ($area_id && $course_name != 'empty_course_name') {
 
-            $courses = Course::where('area_of_study_id', $area_id)->where('title', 'like', '%' . $course_name . '%')->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('area_of_study_id', $area_id)
+                              ->where('title', 'like', '%' . $course_name . '%')
+                              ->get();
 
         }else if ($institution_id && $course_name != 'empty_course_name') {
 
-            $courses = Course::where('institution_id', $institution_id)->where('title', 'like', '%' . $course_name . '%')->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('institution_id', $institution_id)
+                              ->where('title', 'like', '%' . $course_name . '%')
+                              ->get();
 
         }else if ($area_id){
 
-            $courses = Course::where('area_of_study_id', $area_id)->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('area_of_study_id', $area_id)
+                              ->get();
 
         }else if ($institution_id){
 
-            $courses = Course::where('institution_id', $institution_id)->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('institution_id', $institution_id)
+                              ->get();
 
         }else{
 
-            $courses = Course::where('title', 'like', '%' . $course_name . '%')->get();
+            $courses = Course::whereStatus('enable')
+                              ->where('title', 'like', '%' . $course_name . '%')
+                              ->get();
         
         }
 
