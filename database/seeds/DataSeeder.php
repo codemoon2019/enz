@@ -146,7 +146,7 @@ class DataSeeder extends Seeder
             'group' => 'social',
             'label' => 'Youtube Link',
             'machine_name' => 'social-youtube',
-            'value' => '',
+            'value' => 'https://www.youtube.com/',
             'type' => 'text',
             'input_type' => 'text',
         ]);
