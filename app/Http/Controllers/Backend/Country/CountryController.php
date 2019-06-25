@@ -51,13 +51,17 @@ class CountryController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
 
-        $model = $this->repository()->makeModel();
+        // $model = $this->repository()->makeModel();
 
-        return array_merge($request->only($model->getFillable()), $data);
+        // return array_merge($request->only($model->getFillable()), $data);
+        
+        $data = $request->except(['_token', '_method', '_submission']);
+
+        return $data;
     }
 
     /**

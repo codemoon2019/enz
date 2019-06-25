@@ -53,6 +53,10 @@ class Location extends Model implements HasMedia
         'order',
         'color',
         'slug',
+        'long',
+        'lat',
+        'heading',
+        'pitch',
     ];
 
     /**

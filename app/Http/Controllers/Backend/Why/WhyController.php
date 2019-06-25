@@ -51,7 +51,7 @@ class WhyController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-
+        
         $data = $request->except(['_token', '_method', '_submission']);
 
         return $data;

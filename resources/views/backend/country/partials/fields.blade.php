@@ -102,7 +102,7 @@
         
         </div>
 
-       {{--  <div class="form-group row">
+        <div class="form-group row">
 
             <label class="col-md-2 form-control-label">Details<br/></label>
             
@@ -114,7 +114,59 @@
 
                     <div class="col-md-10">
             
-                        <input type="text" placeholder="Description" name="title" class="form-control" value="{{ isset($model) ? $model->title : old('title') }}">
+                        <input type="text" placeholder="Description" name="capital" class="form-control" value="{{ isset($model) ? $model->capital : old('capital') }}">
+                        
+                        <input type="file" name="capital_icon">
+
+                        <img src="{{ $model->capital_icon }}" alt="">
+            
+                    </div>
+
+                </div>
+            
+                <div class="form-group row">
+                        
+                    <label class="col-md-2 form-control-label">Founded<br/></label>
+
+                    <div class="col-md-10">
+            
+                        <input type="text" placeholder="Description" name="founded" class="form-control" value="{{ isset($model) ? $model->founded : old('founded') }}">
+                        
+                        <input type="file" name="founded_icon">
+
+                        <img src="{{ $model->founded_icon }}" alt="">
+            
+                    </div>
+
+                </div>
+            
+                <div class="form-group row">
+                        
+                    <label class="col-md-2 form-control-label">Area<br/></label>
+
+                    <div class="col-md-10">
+            
+                        <input type="text" placeholder="Description" name="area" class="form-control" value="{{ isset($model) ? $model->area : old('area') }}">
+                        
+                        <input type="file" name="area_icon">
+
+                        <img src="{{ $model->area_icon }}" alt="">
+            
+                    </div>
+
+                </div>
+            
+                <div class="form-group row">
+                        
+                    <label class="col-md-2 form-control-label">Population<br/></label>
+
+                    <div class="col-md-10">
+            
+                        <input type="text" placeholder="Description" name="population" class="form-control" value="{{ isset($model) ? $model->population : old('population') }}">
+                        
+                        <input type="file" name="population_icon">
+
+                        <img src="{{ $model->population_icon }}" alt="">
             
                     </div>
 
@@ -122,7 +174,7 @@
             
             </div>
         
-        </div> --}}
+        </div>
 
     </div>
 

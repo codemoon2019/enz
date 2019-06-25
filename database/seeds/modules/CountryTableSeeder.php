@@ -31,16 +31,28 @@ class CountryTableSeeder extends Seeder
                 'title' => 'Australia',
                 'description' => '<p>Did you know Australia has the third highest number of international students in the world behind only the United Kingdom and the United States despite having a population of only 23 million? This isn\'t surprising when you consider Australia has seven of the top 100 universities in the world! In fact, with over 22,000 courses across 1,100 institutions, Australia sits above the likes of Germany, the Netherlands and Japan, ranking eighth in the Universitas 2012 U21 Ranking of National Higher Education Systems.</p>',
                 'color' => 'teal',
+                'capital' => 'Canberra',
+                'founded' => '1788',
+                'area' => '7.69 Million KM',
+                'population' => '25 Million',
             ],
             [
                 'title' => 'Canada',
                 'description' => '',
                 'color' => 'red',
+                'capital' => 'Ottawa',
+                'founded' => '1867',
+                'area' => '9.985 Million KM',
+                'population' => '25 Million',
             ],
             [
                 'title' => 'New Zealand',
                 'description' => '',
                 'color' => 'orange',
+                'capital' => 'Wellington',
+                'founded' => '1856',
+                'area' => '268, 021 Million KM2',
+                'population' => '5.05 Million',
             ],
         ];
 

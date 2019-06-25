@@ -36,7 +36,7 @@
         
             <div class="row">
     
-                @foreach (config('data.countries.' . $model->slug ) as $data)
+{{--                 @foreach (config('data.countries.' . $model->slug ) as $data)
 
                     <div class="col-lg-3 col-md-6 item text-center mb30">
 
@@ -52,7 +52,63 @@
 
                     </div>
 
-                @endforeach
+                @endforeach --}}
+    
+                <div class="col-lg-3 col-md-6 item text-center mb30">
+
+                    <div class="svg-holder mx-auto">
+
+                        <img alt="" class="img-fluid mb10" data-src="{{ $model->capital_icon }}" style="">
+
+                        <h2 class="title fs24 text-black text-uppercase">Capital</h2>
+
+                        <p class="basic fs24 mb0">{{ $model->capital }}</p>
+
+                    </div>
+
+                </div>
+    
+                <div class="col-lg-3 col-md-6 item text-center mb30">
+
+                    <div class="svg-holder mx-auto">
+
+                        <img alt="" class="img-fluid mb10" data-src="{{ $model->founded_icon }}" style="">
+
+                        <h2 class="title fs24 text-black text-uppercase">Founded</h2>
+
+                        <p class="basic fs24 mb0">{{ $model->founded }}</p>
+
+                    </div>
+
+                </div>
+    
+                <div class="col-lg-3 col-md-6 item text-center mb30">
+
+                    <div class="svg-holder mx-auto">
+
+                        <img alt="" class="img-fluid mb10" data-src="{{ $model->area_icon }}" style="">
+
+                        <h2 class="title fs24 text-black text-uppercase">Area</h2>
+
+                        <p class="basic fs24 mb0">{{ $model->area }}</p>
+
+                    </div>
+
+                </div>
+    
+                <div class="col-lg-3 col-md-6 item text-center mb30">
+
+                    <div class="svg-holder mx-auto">
+
+                        <img alt="" class="img-fluid mb10" data-src="{{ $model->population_icon }}" style="">
+
+                        <h2 class="title fs24 text-black text-uppercase">population</h2>
+
+                        <p class="basic fs24 mb0">{{ $model->population }}</p>
+
+                    </div>
+
+                </div>
 
             </div>
 

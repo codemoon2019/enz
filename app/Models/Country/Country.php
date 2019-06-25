@@ -51,6 +51,14 @@ class Country extends Model implements HasMedia
         'description',
         'slug',
         'color',
+        'capital',
+        'founded',
+        'area',
+        'population',
+        'capital_file',
+        'founded_file',
+        'area_file',
+        'population_file',
     ];
 
     /**
