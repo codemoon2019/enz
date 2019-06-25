@@ -85,6 +85,9 @@ iframe{
         padding-bottom: 10%;
         padding-top: 40%;
         background: url(/img/about/team.png) no-repeat;
+        .person-modal {
+            border-radius: 50%;
+        }
     }
     .person-modal {
         opacity: .8;
@@ -98,6 +101,9 @@ iframe{
         border-radius: 35px;
         .close {
             margin-top: -10px;
+        }
+        img {
+            border-radius: 50%;
         }
     }
     .banner-block {
