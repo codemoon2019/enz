@@ -166,7 +166,7 @@
             
             <li class="list-inline-item">
 
-                <a href="{{ $socialMedia[4]->value }}">
+                <a href="{{ $socialMedia[2]->value }}">
 
                     <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/youtube.svg')}}" alt="">
 
