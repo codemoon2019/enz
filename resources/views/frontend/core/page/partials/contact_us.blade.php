@@ -168,7 +168,7 @@
 
                 <a href="{{ $socialMedia[4]->value }}">
 
-                    <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/skype.svg')}}" alt="">
+                    <img class="img-fluid card-img-top" data-src="{{asset('svg/contact/youtube.svg')}}" alt="">
 
                 </a>
 

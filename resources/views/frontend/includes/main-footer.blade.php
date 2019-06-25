@@ -276,7 +276,7 @@
      
                         <a href="{{ $social->value }}">
      
-                            <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="Youtube">
+                            <img data-src="{{asset('svg/youtube.svg')}}" class="img-fluid" alt="Youtube">
      
                         </a>
      
