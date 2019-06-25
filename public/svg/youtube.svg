@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125.309" height="88.964" viewBox="0 0 125.309 88.964">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0.166" stop-color="#ff7878"/>
+      <stop offset="0.78" stop-color="#eb5959"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4351" data-name="Group 4351" transform="translate(-1212.5 -2804.535)">
+    <path id="youtube" d="M98.491,67.393H25.817A25.817,25.817,0,0,0,0,93.21V129.54a25.817,25.817,0,0,0,25.817,25.817H98.491a25.817,25.817,0,0,0,25.817-25.817V93.21A25.817,25.817,0,0,0,98.491,67.393Zm-17.46,45.749L47.039,129.355a1.365,1.365,0,0,1-1.952-1.232V94.685a1.365,1.365,0,0,1,1.981-1.217l33.992,17.225A1.365,1.365,0,0,1,81.031,113.142Z" transform="translate(1213 2737.643)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
