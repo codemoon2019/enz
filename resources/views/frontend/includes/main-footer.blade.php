@@ -246,7 +246,7 @@
 
                       <li class="list-inline-item mb10">
    
-                        <a href="{{ $social->value }}">
+                        <a target="_black" href="{{ $social->value }}">
    
                             <img data-src="{{asset('svg/facebook.svg')}}" class="img-fluid" alt="Facebook">
    
@@ -260,7 +260,7 @@
 
                       <li class="list-inline-item mb10">
      
-                        <a href="{{ $social->value }}">
+                        <a target="_black" href="{{ $social->value }}">
      
                             <img data-src="{{asset('svg/instagram.svg')}}" class="img-fluid" alt="Instagram">
      
@@ -274,7 +274,7 @@
 
                       <li class="list-inline-item mb10">
      
-                        <a href="{{ $social->value }}">
+                        <a target="_black" href="{{ $social->value }}">
      
                             <img data-src="{{asset('svg/youtube.svg')}}" class="img-fluid" alt="Youtube">
      
@@ -288,7 +288,7 @@
 
                       <li class="list-inline-item mb10">
       
-                        <a href="{{ $social->value }}">
+                        <a target="_black" href="{{ $social->value }}">
       
                             <img data-src="{{asset('svg/twitter.svg')}}" class="img-fluid" alt="Twitter">
       
@@ -302,7 +302,7 @@
 
                       <li class="list-inline-item mb10">
       
-                        <a href="{{ $social->value }}">
+                        <a target="_black" href="{{ $social->value }}">
       
                             <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="Skype">
       
