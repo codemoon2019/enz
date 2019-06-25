@@ -46,8 +46,7 @@
 
                         @endphp
 
-						<img style="border-radius: 50%;" 
-
+						<img
                              data-src="{{ $image }}" 
                              
                              alt="" class="img-fluid mb20 person-modal cursor-pointer" 
@@ -84,7 +83,7 @@
 
                                 <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                                <img src="" style="border-radius: 50%;" id="person-image" alt="" class="img-fluid mb20">
+                                <img src="" id="person-image" alt="" class="img-fluid mb20">
 
                                 <h2 class="title fs18 text-black" id="person-title"></h2>
                             
