@@ -536,6 +536,13 @@ if (!function_exists('Events')) {
     }
 }
 
+if (!function_exists('activeEvents')) {
+    function activeEvents()
+    {
+        return Event::orderBy('event_date','desc')->whereStatus('enable')->get();
+    }
+}
+
 if (!function_exists('homeEvents')) {
     function homeEvents()
     {

@@ -59,7 +59,7 @@ class EventController extends Controller
 
         MetaTag::setEntity($page);
 
-        $models = $this->repository()->paginate(12);
+        $models = activeEvents();
 
         return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
     }
