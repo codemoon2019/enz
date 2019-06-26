@@ -141,7 +141,7 @@ class ApplicationController extends Controller
             
             if ($value) {
 
-                $details = ['to' => 'nico.halcyondigital@gmail.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => 'rjtumamao.halcyondigital@gmail.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
                 // $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
 
             }else{
