@@ -34,7 +34,7 @@
         
         <div class="container-fluid py80 px180">
             
-            @foreach ($models as $event)
+            @foreach (activeEvents() as $event)
                 
                 <div class="row item mb30">
 
@@ -48,7 +48,7 @@
                     
                         <h2 class="title fs24">{{ $event->title }}</h2>
                     
-                        <p class="basic">{{ $event->event_date->format('d M') }}</p>
+                        <p class="basic">{{ $event->event_date->format('M d, Y') }}</p>
                     
                         <div class="basic mb30">
                     

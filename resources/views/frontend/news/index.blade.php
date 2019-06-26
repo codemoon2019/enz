@@ -36,7 +36,7 @@
         
             <div class="row news justify-content-center">
 	
-				@foreach (activeEvents() as $news)
+				@foreach (activeNews() as $news)
 	                
 	                <div class="col-lg-3 col-md-6 item mb30">
 

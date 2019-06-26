@@ -53,11 +53,10 @@ class NewsController extends Controller
 
         MetaTag::setEntity($page);
 
-        $models = activeNews();
-
+        // $models = activeNews();
         // $models = $this->repository()->whereStatus('enale')->get();
 
-        return view("{$this->viewFrontendPath}.index", compact('page', 'models', 'Model'));
+        return view("{$this->viewFrontendPath}.index", compact('page', 'Model'));
     }
 
     /**
