@@ -90,6 +90,26 @@ class EventController extends Controller
     public function inquiry(Request $request)
     {
 
+
+
+        $validatedData = $request->validate([
+
+            'first_name'           => 'required',
+            
+            'last_name'            => 'required',
+            
+            'email_address'        => 'required',
+            
+            'contact_number'       => 'required',
+            
+            'address'              => 'required',
+            
+            'profession'           => 'required',
+            
+            'g-recaptcha-response' => 'required|captcha',
+        
+        ]);
+
         // dd($request->all());
 
         $model = EventInquiry::create([
@@ -128,7 +148,9 @@ class EventController extends Controller
 
         }
 
-        return redirect()->back()->withFlashSuccess('Inquiry Submitted');
+        session()->flash('flash_success', 'Event Inquiry Success');
+
+        // return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
     }
 }

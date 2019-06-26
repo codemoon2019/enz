@@ -37,20 +37,20 @@
                 
                             <label for="">First Name <span class="text-danger">*</span></label>
             
-                            <input type="text" name="first_name" id="first_name" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="first_name" id="event_first_name" class="form-control event-inquiry-field" placeholder="" />
             
                         </div>
                         <div class="col-lg-6 form-group">
                 
                             <label for="">Last Name <span class="text-danger">*</span></label>
             
-                            <input type="text" name="last_name" id="last_name" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="last_name" id="event_last_name" class="form-control event-inquiry-field" placeholder="" />
             
                         </div>
 
                         <div class="col-lg-6 form-group" style="display: none;">
                 
-                            <input type="text" name="event_id" id="event_id" value="{{ $model->id }}" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="event_id" id="event_id" value="{{ $model->id }}" class="form-control event-inquiry-field" placeholder="" />
             
                         </div>
 
@@ -58,30 +58,38 @@
                 
                             <label for="">Contact Number <span class="text-danger">*</span></label>
             
-                            <input type="text" name="contact_number" id="contact_number" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="contact_number" id="event_contact_number" class="form-control event-inquiry-field" placeholder="" />
             
                         </div>
                         <div class="col-lg-6 form-group">
                 
                             <label for="">Email Address <span class="text-danger">*</span></label>
             
-                            <input type="email" name="email_address" id="email_address" class="form-control inquiry-field" placeholder="" />
+                            <input type="email" name="email_address" id="event_email_address" class="form-control event-inquiry-field" placeholder="" />
             
                         </div>
                         <div class="col-lg-6 form-group">
                 
                             <label for="">Address <span class="text-danger">*</span></label>
             
-                            <textarea type="text" name="address" id="address" class="form-control inquiry-field" placeholder=""></textarea>
+                            <textarea type="text" name="address" id="event_address" class="form-control event-inquiry-field" placeholder=""></textarea>
             
                         </div>
                         <div class="col-lg-6 form-group">
                 
                             <label for="">Profession / Job Title <span class="text-danger">*</span></label>
             
-                            <input type="text" name="profession" id="profession" class="form-control inquiry-field" placeholder="" />
+                            <input type="text" name="profession" id="event_profession" class="form-control event-inquiry-field" placeholder="" />
+                            <br>
             
+                            <div style="width: max-content;" class="event-inquiry-field" id="event_g-recaptcha-response">
+
+                                {!! Captcha::display() !!}
+
+                            </div>
+
                         </div>
+
                     </div>
 
                     <div class="text-center mt30"><button type="button" class="event-inquiry-submit btn btnview-more text-uppercase">Submit</button></div>
@@ -102,47 +110,77 @@
 
     $('.event-inquiry-submit').click(function(){
 
-        $('.inquiry-field').css('border', 'unset');
+        el = $(this);
 
-        let fields = ['first_name', 'last_name', 'contact_number', 'address', 'email_address', 'profession'];
+        el.attr('disabled', true).html('Please wait..');
 
-        let submit = true;
+        $('.event-inquiry-field').css('border', 'unset');
 
-        $.each(fields, function(k, v){
+        $('#event-inquiry-form').ajaxForm({
 
-            el = $('#' + v);
+            success: function(){
 
-            if (el.val() == null || el.val() == '') {
+                location.reload();
 
-                el.css('border', '2px solid #d27070');
+            }, error: function(data){
 
-                submit = false;
+                el.attr('disabled', false).html('Submit');
 
-            }
+                $.each(data.responseJSON['errors'], function(k, v){
 
-            if (v == 'email_address') {
+                    $('#event_' + k).css('border', '2px solid #d27070');
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-                if (! re.test(String(el.val()).toLowerCase())) {
-                    
-                    el.css('border', '2px solid #d27070');
-
-                    submit = false;
-
-                }
+                });
 
             }
 
-        });
-
-        if (submit) {
-
-            $('#event-inquiry-form').submit();
-            
-        }
+        }).submit();
 
     });
+
+    // $('.event-inquiry-submit').click(function(){
+
+        // $('.inquiry-field').css('border', 'unset');
+
+        // let fields = ['first_name', 'last_name', 'contact_number', 'address', 'email_address', 'profession'];
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'email_address') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
+                    
+        //             el.css('border', '2px solid #d27070');
+
+        //             submit = false;
+
+        //         }
+
+        //     }
+
+        // });
+
+        // if (submit) {
+
+        //     $('#event-inquiry-form').submit();
+            
+        // }
+
+    // });
 
 
 </script>
