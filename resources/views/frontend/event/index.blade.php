@@ -52,7 +52,7 @@
                     
                         <div class="basic mb30">
                     
-                            {{ $event->description }}
+                            {!! str_limit($event->description, 300) !!}
                     
                         </div>
 
