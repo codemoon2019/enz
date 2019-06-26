@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-awards")
+@section('page_class', "page page-awards page-basic")
 
 @section('content')
 

@@ -38,7 +38,7 @@
 
 	    @case('Expertise')
 
-			@section('page_class', "page page-expertise")
+			@section('page_class', "page page-expertise page-basic")
 
 			@include('frontend.core.page.partials.expertise')	
 
@@ -46,7 +46,7 @@
 
 	    @case('Customer Service')
 
-			@section('page_class', "page page-customer-service")
+			@section('page_class', "page page-customer-service page-basic")
 
 			@include('frontend.core.page.partials.customer_service')	
 
@@ -54,7 +54,7 @@
 
 	    @case('Payment Scheme')
 
-			@section('page_class', "page page-payment-scheme")
+			@section('page_class', "page page-payment-scheme page-basic")
 
 			@include('frontend.core.page.partials.payment_scheme')	
 
@@ -70,7 +70,7 @@
 
 	    @case('Read More')
 
-			@section('page_class', "page page-more")
+			@section('page_class', "page page-more page-basic")
 
 			@include('frontend.core.page.partials.read_more')	
 

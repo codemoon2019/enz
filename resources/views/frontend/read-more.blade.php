@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('page_class', "page page-more")
+@section('page_class', "page page-more basic-page")
 
 @section('content')
 <div class="container-fluid intro px180 py80">
