@@ -553,7 +553,7 @@ if (!function_exists('activeEvents')) {
 if (!function_exists('homeEvents')) {
     function homeEvents()
     {
-        return Event::orderBy('id', 'desc')->limit(3)->get();
+        return Event::orderBy('event_date', 'desc')->limit(3)->get();
     }
 }
 
