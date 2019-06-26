@@ -107,7 +107,7 @@ class ApplicationController extends Controller
             
             'message'               => 'required',
             
-            // 'resume'               => 'required',
+            'resume'               => 'required',
             
             // 'g-recaptcha-response' => 'required|captcha',
         
