@@ -112,21 +112,21 @@ class EventController extends Controller
 
         // 0 = User / 1 = Admin
 
-        // foreach ([0, 1] as $value) {
+        foreach ([0, 1] as $value) {
             
-        //     if ($value) {
+            if ($value) {
 
-        //         $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Event Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => env('ADMIN_EMAIL', 'info@enzconsultancy.com'), 'subject' => 'New Event Inquiry for ENZ', 'type' => $value];
 
-        //     }else{
+            }else{
 
-        //         $details = ['to' => $model->email_address, 'subject' => 'Event Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'Event Inquiry for ENZ', 'type' => $value];
                 
-        //     }
+            }
 
-        //     Mail::send(new EventMail($model, $details));
+            Mail::send(new EventMail($model, $details));
 
-        // }
+        }
 
         return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
