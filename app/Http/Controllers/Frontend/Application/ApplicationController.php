@@ -107,7 +107,7 @@ class ApplicationController extends Controller
             
             'message'               => 'required',
             
-            'resume'               => 'required',
+            // 'resume'               => 'required',
             
             // 'g-recaptcha-response' => 'required|captcha',
         
@@ -141,7 +141,8 @@ class ApplicationController extends Controller
             
             if ($value) {
 
-                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => 'rjtumamao.halcyondigital@gmail.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
+                // $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
 
             }else{
 
