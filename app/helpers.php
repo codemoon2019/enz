@@ -529,6 +529,13 @@ if (!function_exists('OurTeam')) {
     }
 }
 
+if (!function_exists('activeOurTeam')) {
+    function activeOurTeam()
+    {
+        return OurTeam::orderBy('order')->whereStatus('enable')->get();
+    }
+}
+
 if (!function_exists('Events')) {
     function Events()
     {

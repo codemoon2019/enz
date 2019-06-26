@@ -36,7 +36,7 @@
 
 			<div class="row justify-content-center">
 
-				@foreach ($models as $key => $person)
+				@foreach (activeOurTeam() as $key => $person)
 				
 					<div class="col-md-4 text-center mb30">
 		              
