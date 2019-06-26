@@ -37,7 +37,7 @@ class ApplicationMail extends Mailable implements ShouldQueue
 
             $this->markdown('frontend.mail.application.application_mail')
             ->subject($this->details['subject'])
-            ->from(env('NOREPLY_EMAIL', 'nico.halcyondigital@gmail.com'), env('APP_NAME'))
+            ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             ->attach(storage_path("app/public/application/" . $file[1]))
             ->to($this->details['to']);
 
@@ -45,7 +45,7 @@ class ApplicationMail extends Mailable implements ShouldQueue
 
             $this->markdown('frontend.mail.application.application_mail')
             ->subject($this->details['subject'])
-            ->from(env('NOREPLY_EMAIL', 'nico.halcyondigital@gmail.com'), env('APP_NAME'))
+            ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             ->to($this->details['to']);
 
         }
