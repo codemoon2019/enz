@@ -180,6 +180,10 @@
 
 @endsection
 
+@php
+    // dd(LocationCoordinates());
+@endphp
+
 @push('after-scripts')
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlgdKHtN3CL_wXabxkaIAmV0MwF2B2VeM&callback=initMap"></script>
@@ -188,138 +192,148 @@
 
 function initMap() {
 
-    var locations = [
-
-        {lat: 18.1996071, lng: 120.5892454, pov: {heading: 250, pitch: 15}},
-
-        {lat: 17.5802534, lng: 120.3923394, pov: {heading: 5, pitch: 9}},
+    $.get("{{ route('frontend.locations.coordinates') }}", function(data){
         
-        {lat: 14.5874834, lng: 121.0597013, pov: {heading: 88, pitch: 30}},
-        
-        {lat: 9.3083436, lng: 123.309639, pov: {heading: 257, pitch: 20}},
+        var locations = [];
 
-    ];
+        data.forEach(function(element){
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-
-        zoom: 6, 
-
-        center: {lat: 12.015480, lng: 121.929051},
-
-        styles : [
-                    {
-                        "featureType": "administrative",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#444444"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "color": "#f2f2f2"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "saturation": -100
-                            },
-                            {
-                                "lightness": 45
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "simplified"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "labels.icon",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "all",
-                        "stylers": [
-                            {
-                                "color": "#46bcec"
-                            },
-                            {
-                                "visibility": "on"
-                            }
-                        ]
-                    }
-                ]
-
-    });
-
-    var icon = '/svg/maps-and-flags.svg';
-
-    locations.forEach(function(v) {
-
-        var marker = new google.maps.Marker({
-            position: v, 
-            map: map,
-            // icon: icon,
-            // animation: google.maps.Animation.BOUNCE,
-        });
-
-        marker.addListener('click', function() {
-
-            map.setZoom(8);
-
-            map.setCenter(marker.getPosition());
-
-            setTimeout(function(){ street_view(v); }, 800);
+            locations.push({lat:parseFloat(element.lat), lng:parseFloat(element.long), pov:{heading:parseFloat(element.heading), pitch:parseFloat(element.pitch)}});
 
         });
 
+        var map = new google.maps.Map(document.getElementById('map'), {
+
+            zoom: 6, 
+
+            center: {lat: 12.015480, lng: 121.929051},
+
+            styles : [
+                        {
+                            "featureType": "administrative",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#444444"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#f2f2f2"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 45
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#46bcec"
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        }
+                    ]
+
+        });
+
+
+        locations.forEach(function(v) {
+
+            var marker = new google.maps.Marker({
+                position: v, 
+                map: map,
+            });
+
+            marker.addListener('click', function() {
+
+                map.setZoom(8);
+
+                map.setCenter(marker.getPosition());
+
+                setTimeout(function(){ street_view(v); }, 800);
+
+            });
+
+        });
+
+        function street_view(v){
+            new google.maps.StreetViewPanorama(
+                document.getElementById('map'), {
+                    position: v,
+                    pov: v.pov
+                }
+            );
+        }
+
     });
 
-    function street_view(v){
-        new google.maps.StreetViewPanorama(
-            document.getElementById('map'), {
-                position: v,
-                pov: v.pov
-            }
-        );
-    }
+
+    // var locations = [
+
+    //     {lat: 18.1996071, lng: 120.5892454, pov: {heading: 250, pitch: 15}},
+
+    //     {lat: 17.5802534, lng: 120.3923394, pov: {heading: 5, pitch: 9}},
+        
+    //     {lat: 14.5874834, lng: 121.0597013, pov: {heading: 88, pitch: 30}},
+        
+    //     {lat: 9.3083436, lng: 123.309639, pov: {heading: 257, pitch: 20}},
+
+    // ];
 
 }
 

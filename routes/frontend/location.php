@@ -9,5 +9,6 @@ Route::group([
     'as' => 'locations.',
 ], function () {
     Route::get('', 'LocationController@index')->name('index');
+    Route::get('/location-coordinates', 'LocationController@locationCoordinates')->name('coordinates');
     Route::get('/{location}', 'LocationController@show')->where('location', '.+')->name('show');
 });

@@ -80,4 +80,10 @@ class LocationController extends Controller
 
         return view("{$this->viewFrontendPath}.show", compact('model', 'page'));
     }
+
+    public function locationCoordinates()
+    {
+        return LocationCoordinates();
+    }
+
 }

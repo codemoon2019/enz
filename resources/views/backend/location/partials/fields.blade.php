@@ -34,6 +34,54 @@
     
         <div class="form-group row">
     
+            <label class="col-md-2 form-control-label">Latitute <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="lat" class="form-control" value="{{ isset($model) ? $model->lat : old('lat') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Longitude <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="long" class="form-control" value="{{ isset($model) ? $model->long : old('long') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Heading <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="heading" class="form-control" value="{{ isset($model) ? $model->heading : old('heading') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Pitch <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="pitch" class="form-control" value="{{ isset($model) ? $model->pitch : old('pitch') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
             <label class="col-md-2 form-control-label">Contact</label>
     
             <div class="col-md-10">

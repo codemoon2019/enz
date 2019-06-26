@@ -735,7 +735,15 @@ if (!function_exists('HomeAreaOfStudy')) {
 if (!function_exists('Location')) {
     function Location()
     {
-        return Location::orderBy('order')->get();
+        return Location::orderBy('order')->get()->flatten();
+    }
+}
+
+if (!function_exists('LocationCoordinates')) {
+    function LocationCoordinates()
+    {
+        return Location::orderBy('order')->select('long', 'lat', 'heading', 'pitch')->get();
+        // return json_encode(Location::orderBy('order')->select('long', 'lat', 'heading', 'pitch')->get());
     }
 }
 

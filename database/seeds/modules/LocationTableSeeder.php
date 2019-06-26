@@ -36,6 +36,10 @@ class LocationTableSeeder extends Seeder
                               <p>SMART: 0998 - 853-2428</p>',
                 'color' => 'green',
                 'order' => 0,
+                'lat' => 18.1996071,
+                'long' => 120.5892454,
+                'heading' => 250,
+                'pitch' => 15,
             ],
             [
                 'title' => 'Vigan', 
@@ -45,6 +49,10 @@ class LocationTableSeeder extends Seeder
                               <p>SMART: 0919-973-7722</p>',
                 'color' => 'orange',
                 'order' => 1,
+                'lat' => 17.5802534,
+                'long' => 120.3923394,
+                'heading' => 5,
+                'pitch' => 9,
             ],
             [
                 'title' => 'Manila', 
@@ -54,6 +62,10 @@ class LocationTableSeeder extends Seeder
                               <p>SMART: 0999 - 983-9670</p>',
                 'color' => 'red',
                 'order' => 2,
+                'lat' => 14.5874834,
+                'long' => 121.0597013,
+                'heading' => 88,
+                'pitch' => 30,
             ],
             [
                 'title' => 'Dumaguete', 
@@ -62,6 +74,10 @@ class LocationTableSeeder extends Seeder
                               <p>GLOBE: 0917-182 -7217</p>',
                 'color' => 'yellow',
                 'order' => 3,
+                'lat' => 9.3083436,
+                'long' => 123.309639,
+                'heading' => 257,
+                'pitch' => 20,
             ],
 
         ];
@@ -79,3 +95,17 @@ class LocationTableSeeder extends Seeder
         $this->enableForeignKeys();
     }
 }
+
+
+
+    // var locations = [
+
+    //     {lat: 18.1996071, lng: 120.5892454, pov: {heading: 250, pitch: 15}},
+
+    //     {lat: 17.5802534, lng: 120.3923394, pov: {heading: 5, pitch: 9}},
+        
+    //     {lat: 14.5874834, lng: 121.0597013, pov: {heading: 88, pitch: 30}},
+        
+    //     {lat: 9.3083436, lng: 123.309639, pov: {heading: 257, pitch: 20}},
+
+    // ];
