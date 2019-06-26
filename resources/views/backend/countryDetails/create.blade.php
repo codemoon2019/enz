@@ -12,7 +12,7 @@
         @slot('link_submit', 'Save')
         @slot('link_submit_edit', 'Save & Edit')
 
-        @slot('custom')
+        {{-- @slot('custom')
             @include('backend.includes.widgets.tab-actions', [ 
                 'name' => 'More Info',
                 'links' => [
@@ -23,7 +23,7 @@
                     ]
                 ]
             ])
-        @endslot
+        @endslot --}}
 
     @endcomponent
 @endsection

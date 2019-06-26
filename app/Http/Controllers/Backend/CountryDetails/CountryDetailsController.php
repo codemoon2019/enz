@@ -89,13 +89,13 @@ class CountryDetailsController extends CRUDController
 
         return BaseableOptions::create()
             ->storeRules([
-                'title' => "required|max:255|unique:$table",
+                'title' => "required",
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
             ])
             ->updateRules([
-                'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'title' => "required",
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
@@ -109,7 +109,7 @@ class CountryDetailsController extends CRUDController
         $data = $this->generateStub($request);
         $model = $this->repository()->create($data);
 
-        return redirect()->route('admin.countries.edit', $model->country->slug)->withFlashSuccess('Success');
+        return redirect()->route('admin.country-details.edit', [$model->slug, $model->country->slug])->withFlashSuccess('Success');
 
 
     }
@@ -123,6 +123,6 @@ class CountryDetailsController extends CRUDController
         $data = $this->generateStub($request, $model);
         $model = $this->repository()->update($data, $model->id);
 
-        return redirect()->route('admin.countries.edit', $model->country->slug)->withFlashSuccess('Success');
+        return redirect()->route('admin.country-details.edit', [$model->slug, $model->country->slug])->withFlashSuccess('Success');
     }
 }
