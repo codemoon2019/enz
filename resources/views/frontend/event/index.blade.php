@@ -52,7 +52,7 @@
                     
                         <div class="basic mb30">
                     
-                            {!! str_limit($event->description, 300) !!}
+                            {!! str_limit($event->description, 200) !!}
                     
                         </div>
 
