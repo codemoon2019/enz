@@ -104,7 +104,7 @@
             
                 <label class="switch switch-3d switch-primary">
 
-                    <input type="checkbox" name="status" class="switch-input" value="{{ isset($model) ? 1 : 0 }}" {{ isset($model) ? ($model->status == 'enable' ? 'checked' : ''): '' }}>
+                    <input type="checkbox" name="status" class="switch-input" value="1" {{ isset($model) ? ($model->status == 'enable' ? 'checked' : ''): '' }}>
 
                     <span class="switch-slider"></span>
     

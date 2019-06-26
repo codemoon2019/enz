@@ -51,13 +51,17 @@ class AreaOfStudyController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
+        $data = $request->all();
 
-        $model = $this->repository()->makeModel();
+        return $data;
+        
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
 
-        return array_merge($request->only($model->getFillable()), $data);
+        // $model = $this->repository()->makeModel();
+
+        // return array_merge($request->only($model->getFillable()), $data);
     }
 
     /**

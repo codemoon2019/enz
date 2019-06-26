@@ -30,6 +30,12 @@ class DetailsObserver extends BaseObserverContract
      */
     public static function stored($model, array $data)
     {
+        if (array_key_exists('image', $data) && $data['image']) {
+         
+            self::uploadImage($model, $data['image'], 'images');
+        
+        }
+
         self::meta('create', $model, $data);
         return $model;
     }

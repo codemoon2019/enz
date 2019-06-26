@@ -51,13 +51,19 @@ class CityController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
-        $data = [
-            'meta' => $request->meta,
-        ];
 
-        $model = $this->repository()->makeModel();
+        $data = $request->all();
 
-        return array_merge($request->only($model->getFillable()), $data);
+        return $data;
+
+
+        // $data = [
+        //     'meta' => $request->meta,
+        // ];
+
+        // $model = $this->repository()->makeModel();
+
+        // return array_merge($request->only($model->getFillable()), $data);
     }
 
     /**

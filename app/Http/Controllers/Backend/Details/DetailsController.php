@@ -51,6 +51,11 @@ class DetailsController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
+
+        $data = $request->all();
+
+        return $data;
+
         $data = [
             'meta' => $request->meta,
         ];
