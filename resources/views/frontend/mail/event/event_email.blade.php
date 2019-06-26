@@ -4,6 +4,8 @@
 
 New Inquiry
 
+Event: {{ $model->event_name }}
+
 Fullname: {{ $model['first_name'] . ' ' . $model['last_name'] }}
 
 Email: {{ $model['email_address'] }}
