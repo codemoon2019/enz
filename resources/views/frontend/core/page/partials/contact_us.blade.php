@@ -180,10 +180,6 @@
 
 @endsection
 
-@php
-    // dd(LocationCoordinates());
-@endphp
-
 @push('after-scripts')
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlgdKHtN3CL_wXabxkaIAmV0MwF2B2VeM&callback=initMap"></script>
