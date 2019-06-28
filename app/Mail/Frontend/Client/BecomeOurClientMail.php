@@ -33,7 +33,7 @@ class BecomeOurClientMail extends Mailable implements ShouldQueue
     {
         return $this->markdown('frontend.mail.become_our_client.client_email')
                     ->subject($this->details['subject'])
-                    ->from(env('NOREPLY_EMAIL', 'nico.halcyondigital@gmail.com'))
+                    ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
                     ->to($this->details['to']);
     }
 }
