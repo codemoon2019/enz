@@ -20,9 +20,10 @@ Message: {{ $model['message'] }}
 
 @else
 
-Hi {{ $model['full_name'] }}!
+Thank you for sending your employment application at ENZ Education Consultancy Services. We appriciate your interest and the time you've invested. We'll thoroughly review your application and will keep you posted as soon as posible.
 
-Thank you for Inquiry
+
+Regards, <br> ENZ Education Consultancy Services
 
 @endif
 

@@ -16,9 +16,14 @@ Message: {{ $model['inquiry'] }}
 
 @else
 
-Hi {{ $model['first_name'] }}!
+Dear {{ $model['first_name'] }},
 
-Thank you for Inquiry
+Thank you for reaching ENZ Education Consultancy Services! One of our consultants shall get back to you with the cost and requirements of tourist visa as soon as possible.
+
+Thank you for your trust in our services.
+
+
+Regards, <br> ENZ Education Consultancy Services
 
 @endif
 

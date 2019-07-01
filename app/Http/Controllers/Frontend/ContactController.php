@@ -98,11 +98,11 @@ class ContactController extends Controller
                 
                 }
 
-                $details = ['to' => $email, 'subject' => 'New Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $email, 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
                 
             }
 

@@ -142,11 +142,11 @@ class ApplicationController extends Controller
             if ($value) {
 
                 // $details = ['to' => 'rjtumamao.halcyondigital@gmail.com', 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
-                $details = ['to' => env('HR_EMAIL', 'hr@enzconsultancy.com') , 'subject' => 'New Application Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => env('HR_EMAIL', 'hr@enzconsultancy.com') , 'subject' => 'ENZ - EMPLOYMENT APPLICATION', 'type' => $value];
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'Application Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'ENZ - EMPLOYMENT APPLICATION', 'type' => $value];
                 
             }
 

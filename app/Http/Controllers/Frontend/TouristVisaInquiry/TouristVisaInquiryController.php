@@ -140,11 +140,11 @@ class TouristVisaInquiryController extends Controller
                 
                 }
 
-                $details = ['to' => $email, 'subject' => 'New Tourist Visa Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $email, 'subject' => 'TOURIST VISA INQUIRY ('.$model->country_to_visit.')', 'type' => $value];
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'Tourist Visa Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'TOURIST VISA INQUIRY ('.$model->country_to_visit.')', 'type' => $value];
                 
             }
 
