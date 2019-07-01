@@ -32,7 +32,7 @@
 
                               <p class="title fs18 text-black">Locations</p>
 
-                              <p class="basic fs15">{{ $career->location }}</p>
+                              {!! $career->location !!}
 
                           </div>
 

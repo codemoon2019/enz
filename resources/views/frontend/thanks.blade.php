@@ -119,7 +119,7 @@
       <div class="row">
         <div class="error-404 col-sm-12">
         {{-- <img src="{{asset('svg/404.svg')}}" class="img-fluid img-404" alt=""> --}}
-                <p class="not-found">Thank you for subscribing!</p>
+                <p class="not-found">Thank you for your inquiry!</p>
                 <a href="{{ route('frontend.index')}}" class="btn btnyellow">Go back to homepage</a>
               </div>
             </div>

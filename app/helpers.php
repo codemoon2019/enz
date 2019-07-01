@@ -767,3 +767,11 @@ if (!function_exists('socialMedia')) {
         return Setting::whereGroup('social')->get();
     }
 }
+
+
+if (!function_exists('homeData')) {
+    function homeData()
+    {
+        return Page::whereSlug('home')->first();
+    }
+}

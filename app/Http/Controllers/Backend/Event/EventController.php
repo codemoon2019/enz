@@ -107,6 +107,8 @@ class EventController extends CRUDController
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
                 'event_date' => "required",
+                'event_time' => "required",
+                'event_location' => "required",
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
@@ -114,6 +116,8 @@ class EventController extends CRUDController
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
                 'event_date' => "required",
+                'event_time' => "required",
+                'event_location' => "required",
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',

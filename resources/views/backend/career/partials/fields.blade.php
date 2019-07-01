@@ -22,11 +22,23 @@
     
         <div class="form-group row">
     
+            <label class="col-md-2 form-control-label">Location</label>
+    
+            <div class="col-md-10">
+    
+                <textarea name="location" id="location" class="form-control">{!! isset($model) ? $model->location : old('location') !!}</textarea>
+    
+            </div>
+    
+        </div>
+        
+        <div class="form-group row">
+    
             <label class="col-md-2 form-control-label">Description</label>
     
             <div class="col-md-10">
     
-                <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('old') !!}</textarea>
+                <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('description') !!}</textarea>
     
             </div>
     
@@ -61,6 +73,7 @@
     <script>
 
         CKEDITOR.replace('description', options);
+        CKEDITOR.replace('location', options);
         
     </script>
 

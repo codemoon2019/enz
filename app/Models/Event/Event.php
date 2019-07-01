@@ -52,6 +52,8 @@ class Event extends Model implements HasMedia
         'description',
         'status',
         'event_date',
+        'event_time',
+        'event_location',
     ];
 
     protected $dates = ['event_date'];

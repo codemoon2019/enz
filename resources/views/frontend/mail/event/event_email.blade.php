@@ -2,9 +2,15 @@
 
 @if ($details['type'])
 
-New Inquiry
+New Event Inquiry
 
 Event: {{ $model->event_name }}
+
+When: {{ $model->date }}
+
+Where: {{ $model->location }}
+
+Time: {{ $model->time }}
 
 Fullname: {{ $model['first_name'] . ' ' . $model['last_name'] }}
 
@@ -20,7 +26,22 @@ Profession: {{ $model['profession'] }}
 
 Hi {{ $model['first_name'] }}!
 
-Thank you for Inquiry
+Thank you for registering for our Free Orientation! We look forward seeing you at the event to help you with your study abroad needs!
+
+
+Event Details: {{ $model->event_name }}<br>
+When: {{ $model->date }}<br>
+Where: {{ $model->location }}<br>
+Time: {{ $model->time }}<br>
+
+You can invite your friends to come and discover what studying abroad can offer! Be sure to save the date on your calendar!
+
+
+Get more updates by following our social media channels!
+
+<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a>
+<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a>
+<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a>
 
 @endif
 

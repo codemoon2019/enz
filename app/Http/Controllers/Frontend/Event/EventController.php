@@ -104,7 +104,7 @@ class EventController extends Controller
             
             'profession'           => 'required',
             
-            'g-recaptcha-response' => 'required|captcha',
+            // 'g-recaptcha-response' => 'required|captcha',
         
         ]);
 

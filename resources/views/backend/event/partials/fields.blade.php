@@ -22,11 +22,35 @@
     
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Event Date</label>
+            <label class="col-md-2 form-control-label">Event Date <i class="text-danger">*</i></label>
         
             <div class="col-md-10">
 
                 <input type="date" name="event_date" class="form-control" value="{{ isset($model) ? $model->event_date->format('Y-m-d') : old('event_date') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+
+            <label class="col-md-2 form-control-label">Event Time <i class="text-danger">*</i></label>
+        
+            <div class="col-md-10">
+
+                <input type="time" name="event_time" class="form-control" value="{{ isset($model) ? $model->event_time : old('event_time') }}">
+    
+            </div>
+    
+        </div>
+    
+        <div class="form-group row">
+    
+            <label class="col-md-2 form-control-label">Event Location <i class="text-danger">*</i></label>
+    
+            <div class="col-md-10">
+    
+                <input type="text" name="event_location" class="form-control" value="{{ isset($model) ? $model->event_location : old('event_location') }}">
     
             </div>
     

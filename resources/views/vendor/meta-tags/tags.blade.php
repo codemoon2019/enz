@@ -10,7 +10,9 @@
                 <link rel="canonical" href="{{ url($tags[$key]) }}"/>
             @endif
             @elseif($key === 'title'){{-- Title page --}}
-            <title>{{ $tags[$key] ?? '' }}{{ ($current_domain->title!=$tags[$key])?' | '.$current_domain->title:'' }}</title>
+            {{-- <title>{{ $tags[$key] ?? '' }}{{ ($current_domain->title!=$tags[$key])?' | '.$current_domain->title:'' }}</title> --}}
+            <title>{{ $tags[$key] ?? '' }}</title>
+            
             @elseif (in_array($key, ['description', 'keywords']))
                 <meta name="{{$key}}" content="{{ $tags[$key] }}"/>
             @elseif($key === 'robots'){{-- Robots --}}

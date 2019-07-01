@@ -42,6 +42,12 @@
 
 			@include('frontend.core.page.partials.expertise')	
 
+			<div class="container-fluid px180">
+
+			    @include('frontend.includes.templates.index')
+
+			</div>
+
 		    @break
 
 	    @case('Customer Service')
@@ -78,7 +84,7 @@
 
 	    @default
 
-        	{{-- @include('frontend.includes.templates.index') --}}
+        	@include('frontend.includes.templates.index')
 
 	@endswitch
 
