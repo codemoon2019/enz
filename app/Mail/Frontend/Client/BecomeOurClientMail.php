@@ -11,17 +11,18 @@ class BecomeOurClientMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $data, $details;
+    public $data, $details, $model;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data, $details)
+    public function __construct($data, $details, $model)
     {
         $this->data = $data;
         $this->details = $details;
+        $this->model = $model;
     }
 
     /**
@@ -31,9 +32,26 @@ class BecomeOurClientMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->markdown('frontend.mail.become_our_client.client_email')
-                    ->subject($this->details['subject'])
-                    ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-                    ->to($this->details['to']);
+
+        if ($this->details['type']) {
+
+            $file = json_decode($this->model['file']);
+
+            return $this->markdown('frontend.mail.become_our_client.client_email')
+                        ->subject($this->details['subject'])
+                        ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
+                        ->attach(storage_path("app/public/client_inquiry/" . $file[1]))
+                        ->to($this->details['to']);
+
+        }else{
+            
+            return $this->markdown('frontend.mail.become_our_client.client_email')
+                        ->subject($this->details['subject'])
+                        ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
+                        ->to($this->details['to']);
+
+
+        }
+
     }
 }

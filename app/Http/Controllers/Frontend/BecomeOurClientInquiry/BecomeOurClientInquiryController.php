@@ -94,6 +94,95 @@ class BecomeOurClientInquiryController extends Controller
 
         $data = $request->all();
 
+        $validation = [
+
+            'first_name'           => 'required',
+            
+            'last_name'            => 'required',
+            
+            'middle_name'          => 'required',
+            
+            'country_birth'        => 'required',
+            
+            'passport_number'      => 'required',
+            
+            'citizenship'          => 'required',
+            
+            'month'                => 'required',
+            
+            'day'                  => 'required',
+            
+            'year'                 => 'required',
+            
+            'expiry_month'         => 'required',
+            
+            'expiry_day'           => 'required',
+            
+            'expiry_year'          => 'required',
+            
+            'street_number'        => 'required',
+            
+            'street_name'          => 'required',
+            
+            'town'                 => 'required',
+            
+            'province'             => 'required',
+            
+            'zip_code'             => 'required',
+            
+            'email'                => 'required',
+            
+            'mobile_number'        => 'required',
+            
+            'telephone_number'     => 'required',
+            
+            'elementary_school'    => 'required',
+            
+            'elementary_from'      => 'required',
+            
+            'elementary_to'        => 'required',
+            
+            'high_school_school'   => 'required',
+            
+            'high_school_from'     => 'required',
+            
+            'high_school_to'       => 'required',
+            
+            'tertiary_school'      => 'required',
+            
+            'tertiary_from'        => 'required',
+            
+            'tertiary_to'          => 'required',
+            
+            'declaration_1'        => 'required',
+            
+            'declaration_2'        => 'required',
+            
+            'declaration_3'        => 'required',
+            
+            'declaration_4'        => 'required',
+            
+            'declaration_5'        => 'required',
+            
+            'file'        => 'required',
+            
+            'g-recaptcha-response' => 'required|captcha',
+        
+        ];
+
+
+        if ($data['employment_status'] != 'Unemployed') {
+
+            $validation['employment_status_name'] = 'required';
+
+            $validation['employment_status_from'] = 'required';
+
+            $validation['employment_status_to'] = 'required';
+
+        }
+
+        $validatedData = $request->validate($validation);
+
         $data['date_of_birth'] = $data['month'] . ' ' .$data['day'] . ', ' . $data['year'];
 
         $data['expiry_date'] = $data['expiry_month'] . ' ' .$data['expiry_day'] . ', ' . $data['expiry_year'];
@@ -116,36 +205,38 @@ class BecomeOurClientInquiryController extends Controller
 
         $model->otherDetails()->create($data);
 
+        session()->flash('flash_success', 'Application Submitted');
+
         // 0 = User / 1 = Admin
 
-        // foreach ([0, 1] as $value) {
+        foreach ([0, 1] as $value) {
             
-        //     if ($value) {
+            if ($value) {
 
-        //         switch ($model->country) {
+                // switch ($model->country) {
                     
-        //             case 'Australia': $email = 'australia@enzconsultancy.com'; break;
+                //     case 'Australia': $email = 'australia@enzconsultancy.com'; break;
 
-        //             case 'Canada': $email = 'canada@enzconsultancy.com'; break;
+                //     case 'Canada': $email = 'canada@enzconsultancy.com'; break;
                     
-        //             default: $email = 'newzealand@enzconsultancy.com'; break;
+                //     default: $email = 'newzealand@enzconsultancy.com'; break;
                 
-        //         }
+                // }
 
-        //         $details = ['to' => $email, 'subject' => 'New Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
 
-        //     }else{
+            }else{
 
-        //         $details = ['to' => $model->email, 'subject' => 'Inquiry for ENZ', 'type' => $value];
+                $details = ['to' => $model->email, 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
                 
-        //     }
+            }
 
-        //     Mail::send(new BecomeOurClientMail($data, $details));
+            Mail::send(new BecomeOurClientMail($data, $details, $model));
 
-        // }
+        }
 
 
-        return redirect()->back()->withFlashSuccess('Submitted Successfully');
+        // return redirect()->back()->withFlashSuccess('Submitted Successfully');
 
     }
 }

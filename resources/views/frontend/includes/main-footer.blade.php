@@ -102,7 +102,7 @@
                 
                                 <label class="control control--radio">Yes
                
-                                  <input type="radio" name="consultation" checked value="1" />
+                                  <input type="radio" name="consultation" checked value="Yes" />
                
                                   <div class="control__indicator"></div>
                
@@ -110,7 +110,7 @@
                
                                 <label class="control control--radio">No
                
-                                  <input type="radio" name="consultation" value="0" />
+                                  <input type="radio" name="consultation" value="No" />
                
                                   <div class="control__indicator"></div>
                

@@ -116,7 +116,7 @@
                
                               <div class="col-sm-12 form-group">
                
-                                <label class="title fs14 text-black" for="">Country of Birth <span class="text-danger">*</span></label>
+                                <label class="title fs14 text-black" for="">Country Birth <span class="text-danger">*</span></label>
                
                                 <input type="text" class="form-control client-field" name="country_birth" id="country_birth" placeholder="">
                
@@ -607,7 +607,7 @@
 
                             <div class="employment-status-div">
                                 <div class="form-group">
-                                    <label class="title fs14 text-black" class="employment_name">Employer <span class="text-danger">*</span></label>
+                                    <label class="title fs14 text-black employment_name">Employer <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control client-field" name="employment_status_name" id="employment_status_name">
                                 </div>
                                 <div class="form-group">
@@ -792,7 +792,7 @@
 
                             <label class="control control--checkbox">I declare that all the information and supporting documentations provided above are true and correct  <span class="text-danger">*</span>
 
-                                <input type="checkbox" value="" name="declaration_1" id="declaration_1" />
+                                <input type="checkbox" value="1" name="declaration_1" id="declaration_1" />
 
                                 <div class="control__indicator client-field" id="div_declaration_1"></div>
 
@@ -800,7 +800,7 @@
 
                             <label class="control control--checkbox">I declare that I have received a proper orientation and interview prior to my application <span class="text-danger">*</span>
 
-                                <input type="checkbox" value="" name="declaration_2" id="declaration_2" />
+                                <input type="checkbox" value="1" name="declaration_2" id="declaration_2" />
 
                                 <div class="control__indicator client-field" id="div_declaration_2"></div>
 
@@ -808,7 +808,7 @@
 
                             <label class="control control--checkbox">I understand that all the fees and charges associated with my application is non-refundable <span class="text-danger">*</span>
 
-                                <input type="checkbox" value="" name="declaration_3" id="declaration_3" />
+                                <input type="checkbox" value="1" name="declaration_3" id="declaration_3" />
 
                                 <div class="control__indicator client-field" id="div_declaration_3"></div>
 
@@ -820,7 +820,7 @@
                                 
                                 application will be based on my GTE and Financial Capacity in undertaking my course in Australia <span class="text-danger">*</span>
                                 
-                                <input type="checkbox" value="" name="declaration_4" id="declaration_4" />
+                                <input type="checkbox" value="1" name="declaration_4" id="declaration_4" />
                                 
                                 <div class="control__indicator client-field" id="div_declaration_4"></div>
 
@@ -828,7 +828,7 @@
 
                             <label class="control control--checkbox">I understand that ENZ Education Consultancy Services are not an employment agency <span class="text-danger">*</span>
 
-                                <input type="checkbox" value="" name="declaration_5" id="declaration_5" />
+                                <input type="checkbox" value="1" name="declaration_5" id="declaration_5" />
 
                                 <div class="control__indicator client-field" id="div_declaration_5"></div>
 
@@ -898,57 +898,21 @@
 
                                 <label for="">Applicant Signature <span class="text-danger">*</span></label><br />
 
-                                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" style="display: none;" />
+                                <input type="file" name="file" id="signature" class="inputfile" data-multiple-caption="{count} files selected" style="display: none;" />
 
-                                <label class="btn btnread-more text-uppercase client-field" id="signature" for="file" style="height: auto"><span>Choose file</span></label>
-
-{{--                                 <br>
-
-                                <span style="">Please upload signature</span> --}}
+                                <label class="btn btnread-more text-uppercase client-field" id="file" for="signature" style="height: auto"><span>Choose file</span></label>
 
                             </div>
 
-                            {{-- <div class="form-group">
+                            <div class="form-group">
 
-                                <label class="fs14 text-black" for="">Date <span class="text-danger">*</span></label><br />
+                                <div style="width: max-content;" class="client-field" id="g-recaptcha-response-client">
+                                        
+                                    {!! Captcha::display() !!}
+                                
+                                </div>
 
-                                <select class="form-control fs14 w-auto mr5 d-inline" id="">
-
-                                    <option selected disabled>Month</option>
-
-                                    <option>2</option>
-
-                                    <option>3</option>
-
-                                    <option>4</option>
-
-                                </select>
-
-                                <select class="form-control fs14 w-auto mr5 d-inline" id="">
-
-                                    <option selected disabled>Date</option>
-
-                                    <option>2</option>
-
-                                    <option>3</option>
-
-                                    <option>4</option>
-
-                                </select>
-
-                                <select class="form-control fs14 w-auto mr5 d-inline" id="">
-
-                                    <option selected disabled>Year</option>
-
-                                    <option>2</option>
-
-                                    <option>3</option>
-
-                                    <option>4</option>
-
-                                </select>
-
-                            </div> --}}
+                            </div>
 
                         </div>
 
@@ -1003,119 +967,162 @@
 
     $('.btn-apply').click(function(){
 
+
+        el = $(this);
+
+        el.attr('disabled', true).html('Please wait..');
+
+        // $('.client-field').css('border', 'unset');
+
         $('.client-field').css('border', '1px solid #ced4da');
 
-        let fields = [
-            'first_name', 
-            'last_name', 
-            'middle_name', 
-            'country_birth', 
-            'passport_number', 
-            'citizenship',
-            'month',
-            'day',
-            'year',
-            'expiry_month',
-            'expiry_day',
-            'expiry_year',
-            'street_number',
-            'street_name',
-            'town',
-            'province',
-            'zip_code',
-            'email',
-            'mobile_number',
-            'telephone_number',
-            'elementary_school',
-            'elementary_from',
-            'elementary_to',
-            'high_school_school',
-            'high_school_from',
-            'high_school_to',
-            'tertiary_school',
-            'tertiary_from',
-            'tertiary_to',
-        ];
+        $('#client-form').ajaxForm({
 
-        let english_test_result = $('[name="english_test_result"]:checked').val();
-        
-        let employment_status = $('[name="employment_status"]:checked').val();
+            success: function(){
 
-        let declaration_1 = $('[name="declaration_1"]').prop('checked');
+                location.reload();
 
-        let declaration_2 = $('[name="declaration_2"]').prop('checked');
-        
-        let declaration_3 = $('[name="declaration_3"]').prop('checked');
-        
-        let declaration_4 = $('[name="declaration_4"]').prop('checked');
-        
-        let declaration_5 = $('[name="declaration_5"]').prop('checked');
+            }, error: function(data){
 
-        let file = $('[name="file"]').val();
+                el.attr('disabled', false).html('Submit');
 
+                $.each(data.responseJSON['errors'], function(k, v){
 
-        if (! declaration_1) { fields.push('declaration_1'); }
+                    if (k == 'g-recaptcha-response') {
+                      
+                      $('#' + k + '-client').css('border', '2px solid #d27070');
 
-        if (! declaration_2) { fields.push('declaration_2'); }
-        
-        if (! declaration_3) { fields.push('declaration_3'); }
-        
-        if (! declaration_4) { fields.push('declaration_4'); }
-        
-        if (! declaration_5) { fields.push('declaration_5'); }
+                    }else if(k.includes('declaration')){
 
-        if (english_test_result != 0) { fields.push('score'); }
+                      $('#div_' + k).css('border', '2px solid #d27070');
 
-        if (file == '') { fields.push('signature'); }
-        
-        if (employment_status != 'Unemployed') { fields.push('employment_status_name', 'employment_status_from', 'employment_status_to'); }
+                    }
 
-        let submit = true;
+                    $('#' + k).css('border', '2px solid #d27070');
 
-        $.each(fields, function(k, v){
-
-            el = $('#' + v);
-
-            if (el.val() == null || el.val() == '') {
-
-                el.css('border', '2px solid #d27070');
-
-                if (v == 'declaration_1') { $('#div_declaration_1').css('border', '2px solid #d27070'); }
-
-                if (v == 'declaration_2') { $('#div_declaration_2').css('border', '2px solid #d27070'); }
-                
-                if (v == 'declaration_3') { $('#div_declaration_3').css('border', '2px solid #d27070'); }
-                
-                if (v == 'declaration_4') { $('#div_declaration_4').css('border', '2px solid #d27070'); }
-                
-                if (v == 'declaration_5') { $('#div_declaration_5').css('border', '2px solid #d27070'); }
-
-                submit = false;
+                });
 
             }
 
-            if (v == 'email') {
+        }).submit();
 
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-                if (! re.test(String(el.val()).toLowerCase())) {
+
+
+
+        // $('.client-field').css('border', '1px solid #ced4da');
+
+        // let fields = [
+        //     'first_name', 
+        //     'last_name', 
+        //     'middle_name', 
+        //     'country_birth', 
+        //     'passport_number', 
+        //     'citizenship',
+        //     'month',
+        //     'day',
+        //     'year',
+        //     'expiry_month',
+        //     'expiry_day',
+        //     'expiry_year',
+        //     'street_number',
+        //     'street_name',
+        //     'town',
+        //     'province',
+        //     'zip_code',
+        //     'email',
+        //     'mobile_number',
+        //     'telephone_number',
+        //     'elementary_school',
+        //     'elementary_from',
+        //     'elementary_to',
+        //     'high_school_school',
+        //     'high_school_from',
+        //     'high_school_to',
+        //     'tertiary_school',
+        //     'tertiary_from',
+        //     'tertiary_to',
+        // ];
+
+        // let english_test_result = $('[name="english_test_result"]:checked').val();
+        
+        // let employment_status = $('[name="employment_status"]:checked').val();
+
+        // let declaration_1 = $('[name="declaration_1"]').prop('checked');
+
+        // let declaration_2 = $('[name="declaration_2"]').prop('checked');
+        
+        // let declaration_3 = $('[name="declaration_3"]').prop('checked');
+        
+        // let declaration_4 = $('[name="declaration_4"]').prop('checked');
+        
+        // let declaration_5 = $('[name="declaration_5"]').prop('checked');
+
+        // let file = $('[name="file"]').val();
+
+
+        // if (! declaration_1) { fields.push('declaration_1'); }
+
+        // if (! declaration_2) { fields.push('declaration_2'); }
+        
+        // if (! declaration_3) { fields.push('declaration_3'); }
+        
+        // if (! declaration_4) { fields.push('declaration_4'); }
+        
+        // if (! declaration_5) { fields.push('declaration_5'); }
+
+        // if (english_test_result != 0) { fields.push('score'); }
+
+        // if (file == '') { fields.push('signature'); }
+        
+        // if (employment_status != 'Unemployed') { fields.push('employment_status_name', 'employment_status_from', 'employment_status_to'); }
+
+        // let submit = true;
+
+        // $.each(fields, function(k, v){
+
+        //     el = $('#' + v);
+
+        //     if (el.val() == null || el.val() == '') {
+
+        //         el.css('border', '2px solid #d27070');
+
+        //         if (v == 'declaration_1') { $('#div_declaration_1').css('border', '2px solid #d27070'); }
+
+        //         if (v == 'declaration_2') { $('#div_declaration_2').css('border', '2px solid #d27070'); }
+                
+        //         if (v == 'declaration_3') { $('#div_declaration_3').css('border', '2px solid #d27070'); }
+                
+        //         if (v == 'declaration_4') { $('#div_declaration_4').css('border', '2px solid #d27070'); }
+                
+        //         if (v == 'declaration_5') { $('#div_declaration_5').css('border', '2px solid #d27070'); }
+
+        //         submit = false;
+
+        //     }
+
+        //     if (v == 'email') {
+
+        //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        //         if (! re.test(String(el.val()).toLowerCase())) {
                     
-                    el.css('border', '2px solid #d27070');
+        //             el.css('border', '2px solid #d27070');
 
-                    submit = false;
+        //             submit = false;
 
-                }
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
 
 
-        if (submit) {
+        // if (submit) {
 
-            $('#client-form').submit();
+        //     $('#client-form').submit();
             
-        }
+        // }
 
     });
 
