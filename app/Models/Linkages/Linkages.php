@@ -43,6 +43,10 @@ class Linkages extends Model implements HasMedia
     public const ROUTE_ADMIN_PATH = 'admin.linkages';
     public const ROUTE_FRONTEND_PATH = 'frontend.linkages';
 
+    public const MEDIA_LIBRARY_CUSTOM_PROPERTIES = [
+       'link',
+    ];
+
     /**
      * Declared Fillables
      */

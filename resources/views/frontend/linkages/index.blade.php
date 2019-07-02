@@ -71,12 +71,17 @@
                                 <div class="row">
     
                                     @foreach ($linkages->getUploaderImages('featured', 'main') as $image)
-                                        
+
                                         <div class="col-lg-3 col-sm-6 item mb30 align-self-center">
                             
                                             <div class="card-body text-center">
+
+                                                <a href="{{ $image->properties->link }}" target="_blank">
+                                                    
+                                                    <img data-src="{{ $image->source }}" class="img-fluid" alt="">
+                                                    
+                                                </a>
                             
-                                                <img data-src="{{ $image->source }}" class="img-fluid" alt="">
                             
                                             </div>
                             
