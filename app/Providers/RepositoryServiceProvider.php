@@ -91,6 +91,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Award\AwardRepository::class, \App\Repositories\Award\AwardRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Subscription\SubscriptionRepository::class, \App\Repositories\Subscription\SubscriptionRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\Application\ApplicationRepository::class, \App\Repositories\Application\ApplicationRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\SuccessPercentage\SuccessPercentageRepository::class, \App\Repositories\SuccessPercentage\SuccessPercentageRepositoryEloquent::class);
         //:end-bindings:
     }
 }

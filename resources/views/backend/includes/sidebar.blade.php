@@ -233,6 +233,13 @@
                             </li>
 
                         @endcan
+
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/career*')) }}"
+                               href="{{ route(app(App\Models\SuccessPercentage\SuccessPercentage::class)::ROUTE_ADMIN_PATH.'.index') }}">
+                                <i class="nav-icon fa fa-circle-o"></i> Success Percentage
+                            </a>
+                        </li>
       
                         @can(app(App\Models\AreaOfStudy\AreaOfStudy::class)::permission('index'))
                         

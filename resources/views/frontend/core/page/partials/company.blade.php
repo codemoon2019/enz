@@ -74,22 +74,35 @@
             </div>
             <div class="col-sm-8">
                 <div class="progress-rate">
-                    <label class="text-white text-capitalize fs18">Student visa</label>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 97.43%" aria-valuenow="97.43" aria-valuemin="0" aria-valuemax="100">97.43%</div>
-                    </div>
-                    <label class="text-white text-capitalize fs18">Dependent visa</label>
+
+                    @foreach (SuccessPercentage() as $data)
+                        
+                        <label class="text-white text-capitalize fs18">{{ $data->title }}</label>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: {{ $data->percentage }}%" aria-valuenow="{{ $data->percentage }}" aria-valuemin="0" aria-valuemax="100">{{ $data->percentage }}%</div>
+                        </div>
+                        
+                    @endforeach
+
+
+                    {{-- <label class="text-white text-capitalize fs18">Dependent visa</label>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 85.7%" aria-valuenow="85.7" aria-valuemin="0" aria-valuemax="100">85.7%</div>
                     </div>
+                    
+
                     <label class="text-white text-capitalize fs18">Tourist visa</label>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 97.36%" aria-valuenow="97.36" aria-valuemin="0" aria-valuemax="100">97.36%</div>
                     </div>
+                    
+
                     <label class="text-white text-capitalize fs18">Overall success rate</label>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 96.63%" aria-valuenow="96.63" aria-valuemin="0" aria-valuemax="100">96.63%</div>
-                    </div>
+                    </div> --}}
+                
+
                 </div>
             </div>
         </div>

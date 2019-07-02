@@ -22,6 +22,7 @@ use App\Models\Career\Career;
 use App\Models\Institution\Institution;
 use App\Models\AreaOfStudy\AreaOfStudy;
 use App\Models\Location\Location;
+use App\Models\SuccessPercentage\SuccessPercentage;
 
 /*
  * Application version name
@@ -773,5 +774,13 @@ if (!function_exists('homeData')) {
     function homeData()
     {
         return Page::whereSlug('home')->first();
+    }
+}
+
+
+if (!function_exists('SuccessPercentage')) {
+    function SuccessPercentage()
+    {
+        return SuccessPercentage::orderBy('order')->get();
     }
 }
