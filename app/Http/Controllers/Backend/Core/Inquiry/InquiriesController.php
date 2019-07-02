@@ -10,6 +10,10 @@ use Response;
 use App\Models\Core\Inquiry;
 use Storage;
 
+use App\Exports\InquiryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 /**
  * Class InquiriesController.
  */
@@ -73,6 +77,11 @@ class InquiriesController extends BaseController
 
         return response()->download($path, $resume[0]);
        
+    }
+
+    public function export()
+    {
+        return Excel::download(new InquiryExport(), 'inquiries.xlsx');
     }
 
 }

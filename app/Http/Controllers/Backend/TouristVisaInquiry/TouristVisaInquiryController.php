@@ -9,6 +9,10 @@ use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
 use Illuminate\Http\Request;
 
+use App\Exports\TouristVisaInquiryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 /**
  * Class TouristVisaInquiryController
  *
@@ -94,5 +98,10 @@ class TouristVisaInquiryController extends CRUDController
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
             ]);
+    }
+
+    public function export()
+    {
+        return Excel::download(new TouristVisaInquiryExport(), 'inquiries.xlsx');
     }
 }

@@ -14,6 +14,65 @@
                     </div>
                     <div class="col-sm-7">
                         <div class="float-right">
+
+                            @switch($title)
+
+                                @case('Inquiry List')
+            
+                                    <a href="{{ route('admin.inquiries.export') }}" target="_blank">
+                                        
+                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        
+                                    </a>
+
+                                    @break
+
+                                @case('Tourist Visa Inquiry List')
+            
+                                    <a href="{{ route('admin.tourist-visa-inquiries.export') }}" target="_blank">
+                                        
+                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        
+                                    </a>
+
+                                    @break
+
+                                @case('Become Our Client Inquiry List')
+            
+                                    <a href="{{ route('admin.become-our-client-inquiries.export') }}" target="_blank">
+                                        
+                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        
+                                    </a>
+
+                                    @break
+                            
+                                @case('Course Inquiries')
+            
+                                    <a href="{{ route('admin.subscriptions.export') }}" target="_blank">
+                                        
+                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        
+                                    </a>
+
+                                    @break
+                            
+                                @case('Application List')
+            
+                                    <a href="{{ route('admin.applications.export') }}" target="_blank">
+                                        
+                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        
+                                    </a>
+
+                                    @break
+                            
+                                @default
+
+                            @endswitch
+                            
+    
+
                             <div class="btn-group mr-2">
                                 {{ $buttons ?? null }}
                             </div>

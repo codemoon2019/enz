@@ -13,6 +13,11 @@ use Response;
 use App\Models\Subscription\Subscription;
 use Storage;
 
+use App\Exports\CourseInquiryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
+
 /**
  * Class SubscriptionController
  *
@@ -114,5 +119,10 @@ class SubscriptionController extends CRUDController
 
         return response()->download($path, $resume[0]);
        
+    }
+
+    public function export()
+    {
+        return Excel::download(new CourseInquiryExport(), 'inquiries.xlsx');
     }
 }

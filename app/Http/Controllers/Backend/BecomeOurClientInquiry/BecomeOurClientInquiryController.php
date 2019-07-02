@@ -14,6 +14,10 @@ use File;
 use Response;
 use Storage;
 
+use App\Exports\BecomeOurClientInquiryExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 /**
  * Class BecomeOurClientInquiryController
  *
@@ -116,4 +120,10 @@ class BecomeOurClientInquiryController extends CRUDController
         return response()->download($path, $file[0]);
        
     }
+
+    public function export()
+    {
+        return Excel::download(new BecomeOurClientInquiryExport(), 'inquiries.xlsx');
+    }
+    
 }

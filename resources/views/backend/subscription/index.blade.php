@@ -6,8 +6,8 @@
         @slot('url', route($routePath . '.table'))
         @slot('form_data', json_encode([  ]))
         @slot('table_name', 'subscription-table')
-        @slot('title', 'Subscription List')
-        @slot('secondary_title', 'Subscription Management')
+        @slot('title', 'Course Inquiries')
+        @slot('secondary_title', 'Course Inquiries')
 
         @slot('links')
             @include($viewPath . '.partials.links')

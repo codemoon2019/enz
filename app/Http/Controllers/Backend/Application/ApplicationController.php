@@ -13,6 +13,10 @@ use Storage;
 use File;
 use Response;
 
+use App\Exports\ApplicationExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 /**
  * Class ApplicationController
  *
@@ -114,5 +118,10 @@ class ApplicationController extends CRUDController
 
         return response()->download($path, $resume[0]);
        
+    }
+
+    public function export()
+    {
+        return Excel::download(new ApplicationExport(), 'inquiries.xlsx');
     }
 }

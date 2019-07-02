@@ -193,6 +193,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         'Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider',
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
 
     ],
