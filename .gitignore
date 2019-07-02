@@ -4,6 +4,7 @@
 /public/upload
 public/assets
 public/sitemap.xml
+public/.htaccess
 /storage/*.key
 /vendor
 /.idea
