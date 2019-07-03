@@ -28,7 +28,6 @@ class Inquiry extends Model
         'profession',
         'email_address',
         'mobile_number',
-        'location',
         'consultation',
         'location',
         'inquiry',

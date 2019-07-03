@@ -13,6 +13,6 @@ class CourseInquiryExport implements FromCollection
     */
     public function collection()
     {
-        return Subscription::all();
+        return Subscription::select('full_name', 'profession', 'email_address', 'mobile_number', 'location', 'message', 'school', 'course', 'created_at')->get();
     }
 }

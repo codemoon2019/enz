@@ -13,6 +13,8 @@ class InquiryExport implements FromCollection
     */
     public function collection()
     {
-        return Inquiry::all();
+        return Inquiry::select('full_name', 'profession', 'email_address', 'mobile_number', 'location', 'consultation', 'inquiry', 'country', 'created_at')->get();
     }
 }
+
+

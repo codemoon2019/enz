@@ -13,6 +13,6 @@ class TouristVisaInquiryExport implements FromCollection
     */
     public function collection()
     {
-        return TouristVisaInquiry::all();
+        return TouristVisaInquiry::select('first_name', 'last_name', 'email_address', 'mobile_number', 'country_to_visit', 'inquiry', 'created_at')->get();
     }
 }
