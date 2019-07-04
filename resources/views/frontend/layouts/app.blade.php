@@ -72,10 +72,49 @@
             <i class="fa fa-chevron-up fs13" style="position: absolute;top: 20px;left: 0;right: 0;"></i>
             Back to top
         </button> --}}
+
+
+
+        <!-- The Modal -->
+          <div class="modal fade" id="downloadModal">
+            <div class="modal-dialog">
+
+              <div class="modal-content" style="    border-radius: 1.3rem;">
+          
+                <!-- Modal Header -->
+                <div class="modal-header linear-gradient-teal" style="border-top-left-radius: 1.3rem; border-top-right-radius: 1.3rem;">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body linear-gradient-grey" style="border-bottom-left-radius: 1.3rem; border-bottom-right-radius: 1.3rem;">
+
+                    <div class="grwf2-wrapper wf2-embedded" id="grwf2_28404401_2bx84">
+                        <iframe src="https://app.getresponse.com/site2/download_prospectus?u=BPRi5&amp;webforms_id=BDCRL&amp;v=0" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BDCRL" style="border: none; height: 460px; width: 460px;"></iframe>
+                    </div>
+
+                    {{-- <div class="grwf2-wrapper wf2-embedded" id="grwf2_21458301_1dh4h"> 
+
+                      <iframe src="https://app.getresponse.com/site2/enzpromo_2018?u=BPRi5&amp;webforms_id=BZSR5&amp;v=0" title="Subscription" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BZSR5" style="border: none; height: 460px; width: 460px"></iframe> 
+
+                    </div> --}}
+
+                </div>
+          
+              </div>
+
+            </div>
+
+          </div>
+        
         <div class="mag-download fixed-bottom text-center">
             <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">ENZ Student Guide</p> 
-            <a href="#" class="btn btnview-more text-uppercase">Download now!</a>
+
+            <button data-toggle="modal" data-target="#downloadModal" class="btn btnview-more text-uppercase">Download now!</button>
+            {{-- <a href="#" class="btn btnview-more text-uppercase">Download now!</a> --}}
         </div>
+
+
         <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"></span>
     </div>
 

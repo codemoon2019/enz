@@ -27,6 +27,50 @@ class PagesController extends BaseController
             // 'status' => 'enable',
         ]);
 
+        switch ($routeKeyName) {
+
+            case 'area-of-study':
+            
+            case 'application':
+            
+            case 'country-details':
+            
+            case 'core-value':
+            
+            case 'event':
+            
+            case 'career':
+            
+            case 'course':
+            
+            case 'institution':
+            
+            case 'subscription':
+            
+            case 'country':
+            
+            case 'tourist-visa-inquiry':
+            
+            case 'become-our-client-inquiry':
+            
+            case 'testimonial':
+            
+            case 'sample-module':
+            
+            case 'award':
+            
+            case 'location':
+            
+            case 'why':
+            
+            case 'success-percentage':
+
+                abort(404);
+
+            break;
+        
+        }
+
         $domainRepository->hasCurrentBaseUrl($page);
 
         MetaTag::setEntity($page);
