@@ -8,6 +8,8 @@ use HalcyonLaravel\Base\Controllers\BaseController as Controller;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
 
+use App\Models\News\News;
+
 /**
  * Class NewsController
  *
@@ -75,7 +77,14 @@ class NewsController extends Controller
      */
     public function show(string $routeKeyName)
     {
-        $page = $model = $this->getModel($routeKeyName, false);
+        // $page = $model = $this->getModel($routeKeyName, false);
+        $page = $model = News::whereslug($routeKeyName)->first();
+
+        if ($page->status == 'disabled') {
+
+            abort(404);
+
+        }
 
         MetaTag::setEntity($model);
 

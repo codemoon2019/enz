@@ -18,7 +18,7 @@
     
                         Locations
     
-                        <a href="{{ route('admin.whies.create') }}">
+                        <a href="{{ route('admin.locations.create') }}">
     
                             <button class="pull-right btn btn-primary" data-toggle="modal" data-target="#modal-create">Add Item</button>
     

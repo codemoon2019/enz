@@ -12,6 +12,7 @@ use App\Models\Event\EventInquiry;
 use Mail;
 
 use App\Mail\Frontend\Event\EventMail;
+use App\Models\Event\Event;
 
 
 /**
@@ -78,7 +79,15 @@ class EventController extends Controller
      */
     public function show(string $routeKeyName)
     {
-        $page = $model = $this->getModel($routeKeyName, false);
+        // $page = $model = $this->getModel($routeKeyName, false);
+
+        $page = $model = Event::whereslug($routeKeyName)->first();
+
+        if ($page->status == 'disabled') {
+
+            abort(404);
+
+        }
 
         MetaTag::setEntity($model);
 

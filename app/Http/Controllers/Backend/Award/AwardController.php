@@ -51,6 +51,8 @@ class AwardController extends CRUDController
      */
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
+        return $request->all();
+
         $data = [
             'meta' => $request->meta,
         ];

@@ -32,14 +32,19 @@
                 <span class="help-block text-danger">{{ $errors->first('password') }}</span>
             </div>
             <div class="row">
-                {{-- @if (config('access.captcha.registration'))
+                {{-- @if (config('access.captcha.registration')) --}}
                 <div class="col-sm-12">
                     <div class="form-group">
-                        {!! no_captcha()->display() !!}
-                        {!! html()->hidden('captcha_status', 'true') !!}
+                        
+                        {!! Captcha::display() !!}
+                        <span class="help-block text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+
+
+                        {{-- {!! no_captcha()->display() !!} --}}
+                        {{-- {!! html()->hidden('captcha_status', 'true') !!} --}}
                     </div>
                 </div>
-                @endif --}}
+                {{-- @endif --}}
             </div>
             <div class="row">
                 <div class="col-sm-{{ config('access.captcha.registration')?'12':'12' }}">

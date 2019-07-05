@@ -64,6 +64,8 @@ class StatusController extends Controller
 
             case 'SampleModule': $model = new SampleModule; break;
 
+            case 'News': $model = new News; break;
+
             default: break;
         }
 

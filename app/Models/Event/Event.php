@@ -150,7 +150,7 @@ class Event extends Model implements HasMedia
 
     public function registerMediaCollections()
     {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
+        $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
 
             $this->addMediaConversion('main')
                 ->optimize()

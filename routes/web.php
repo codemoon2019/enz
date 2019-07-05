@@ -1,4 +1,7 @@
 <?php
+
+use App\Mail\Test\TestEmail;
+
 /**
  * Global Routes
  * Routes that are used between both frontend and backend.
@@ -10,6 +13,29 @@ Route::get('lang/{lang}', 'LanguageController');
 Route::get('thank-you',function(){
     return view('frontend.thanks');
 });
+    
+// Route::get('test-email', function(){
+
+//     $data = [
+//         'nico.halcyondigital@gmail.com',
+//         'kenneth.halcyondigital@gmail.com',
+//         'junel.halcyondigital@gmail.com',
+//         'rjtumamao.halcyondigital@gmail.com',
+//         'jlescote.halcyondigital@gmail.com',
+//         'jtbautista.halcyondigital@gmail.com',
+//         'andrei.halcyondigital@gmail.com',
+//         'mglontoc.halcyondigital@gmail.com',
+//         'mvnino.halcyondigital@gmail.com',
+//     ];
+
+//     foreach ($data as $key => $email) {
+        
+//         Mail::send(new TestEmail($email));
+
+//     }
+
+// });
+
 // Route::get('linkages3',function(){
 //     return view('frontend.linkages3');
 // });

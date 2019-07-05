@@ -44,9 +44,12 @@ class NewsTableController extends BaseController
     public function __invoke(Request $request)
     {
         return DataTables::of($this->repository()->table())
-            ->rawColumns(['status'])
+            ->rawColumns(['status', 'featured'])
             ->editColumn('status', function ($model) {
                 return $model->status_action;
+            })
+            ->editColumn('featured', function ($model) {
+                return $model->featured_action;
             })
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));

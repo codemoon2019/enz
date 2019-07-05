@@ -13,6 +13,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use MetaTag;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Arcanedev\NoCaptcha\Rules\CaptchaRule;
 
 /**
  * Class LoginController.
@@ -186,4 +187,20 @@ class LoginController extends Controller
     {
         return route(home_route());
     }
+
+
+
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
+            'g-recaptcha-response' => ['required_if:captcha_status,true', new CaptchaRule()],
+        ], 
+        [
+            'g-recaptcha-response.required' => 'Please verify that you are not a robot.',
+            'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.'
+        ]);
+    }
+
 }

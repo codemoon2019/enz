@@ -1,4 +1,4 @@
-{{-- @push('after-styles')
+@push('after-styles')
 
     <link rel="stylesheet" href="{{ asset('css/ckeditor-hide-toolbars.css') }}">
 
@@ -82,7 +82,7 @@
     
         </div>
 
-        <div class="form-group row">
+{{--         <div class="form-group row">
     
             <label class="col-md-2 form-control-label">Carrer Opportunities</label>
     
@@ -116,7 +116,7 @@
     
             </div>
     
-        </div>
+        </div> --}}
 
         <div class="form-group row">
 
@@ -176,4 +176,4 @@
         
     </script>
 
-@endpush --}}
+@endpush

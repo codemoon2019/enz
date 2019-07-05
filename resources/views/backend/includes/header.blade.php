@@ -2,7 +2,7 @@
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">☰</button>
 
     <a class="navbar-brand" href="{{ route('frontend.index') }}" target="_blank">
-        <img src="{{ app_logo('nav-backend') }}">
+        <img style="width: 100%;" src="{{ app_logo('nav-backend') }}">
     </a>
 
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">

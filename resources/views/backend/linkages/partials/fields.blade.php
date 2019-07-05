@@ -40,7 +40,7 @@
 
                     <image-uploader
                         :api-mode="true"
-                        :multiple="false"
+                        :multiple="true"
                         :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
                         :upload-url="{{ json_encode(route('webapi.admin.image.upload', ['model' => 'linkages', 'routeKeyValue' => $model->slug, 'collection' => 'featured'])) }}"
                     ></image-uploader>
