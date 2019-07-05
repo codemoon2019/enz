@@ -17,7 +17,7 @@
 @endphp
 {!! MetaTag::render() !!} --}}
 
-{{-- 
+
 
 @php
     
@@ -63,4 +63,4 @@
 
 @endphp
 
-{!! MetaTag::render() !!} --}}
+{!! MetaTag::render() !!}
