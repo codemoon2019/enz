@@ -48,8 +48,8 @@ class EventTableController extends BaseController
             ->editColumn('status', function ($model) {
                 return $model->status_action;
             })
-            ->editColumn('updated_at', function ($model) {
-                return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));
+            ->editColumn('event_date', function ($model) {
+                return $model->event_date->format('F d, Y') . ' - ' . $model->event_time;
             })
             ->addColumn('actions', function ($model) {
                 return $model->actions('backend', ['show', 'edit', 'destroy']);

@@ -15,13 +15,13 @@
         @slot('headers')
             <td>Title</td>
             <td>Status</td>
-            <td>Last Modified</td>
+            <td>Event Date</td>
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
             [ 'data' => 'title' ],
             [ 'data' => 'status' ],
-            [ 'data' => 'updated_at' ],
+            [ 'data' => 'event_date' ],
             [ 'data' => 'actions', 'type' => 'actions', 'sortable' => false, 'searchable' => false ],
         ]))
         @slot('options', json_encode([

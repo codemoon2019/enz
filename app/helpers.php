@@ -554,7 +554,15 @@ if (!function_exists('activeEvents')) {
 if (!function_exists('homeEvents')) {
     function homeEvents()
     {
-        return Event::orderBy('event_date', 'desc')->limit(3)->get();
+        // $date = now();
+
+        // dd($date);
+
+        return Event::where('event_date', '>=', now())->orderBy('event_date')->limit(3)->get();
+
+
+
+        // return Event::orderBy('event_date', 'desc')->limit(3)->get();
     }
 }
 
