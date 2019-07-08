@@ -39,9 +39,11 @@ You can invite your friends to come and discover what studying abroad can offer!
 
 Get more updates by following our social media channels!
 
-<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a>
-<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a>
-<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a>
+<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a><br>
+<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a><br>
+<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a><br>
+
+Thank you and see you there!
 
 @endif
 

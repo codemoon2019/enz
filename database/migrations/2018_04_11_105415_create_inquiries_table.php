@@ -23,7 +23,7 @@ class CreateInquiriesTable extends Migration
             $table->string('mobile_number')->nullable();
             $table->string('location')->nullable();
             $table->text('inquiry');
-            $table->integer('consultation')->default(0);
+            $table->string('consultation')->nullable();
             $table->string('country')->nullable();
             $table->string('resume')->nullable();
             $table->timestamps();

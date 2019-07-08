@@ -109,8 +109,11 @@ class ContactController extends Controller
             Mail::send(new ContactEmail($model, $details));
 
         }
+
+        session()->flash('flash_success', 'Inquiry Submitted');
+        
             
-        return redirect()->back()->withFlashSuccess('Inquiry Submitted');
+        // return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
     }
 }
