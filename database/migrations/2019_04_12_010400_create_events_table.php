@@ -22,7 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->enum('status', ['enable', 'disabled'])->default('disabled');
-            $table->dateTime('event_date')->nullable();
+            $table->string('event_date')->nullable();
             $table->timestamps();
         });
     }

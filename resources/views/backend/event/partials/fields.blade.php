@@ -38,7 +38,7 @@
         
             <div class="col-md-10">
 
-                <input type="time" name="event_time" class="form-control" value="{{ isset($model) ? $model->event_time : old('event_time') }}">
+                <input type="text" name="event_time" class="form-control" value="{{ isset($model) ? $model->event_time : old('event_time') }}">
     
             </div>
     
