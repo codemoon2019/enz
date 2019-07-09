@@ -38,21 +38,21 @@ class EventTableSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
             ],
             [
                 'title' => 'Business , Management & Marketing',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
             ],
             [
                 'title' => 'Hospitality and Cookery',
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
 
             ],
             [
@@ -60,7 +60,7 @@ class EventTableSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
 
             ],
             [
@@ -68,7 +68,7 @@ class EventTableSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
 
             ],
             [
@@ -76,7 +76,7 @@ class EventTableSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi voluptas aspernatur illo quasi exercitationem.',
                 'status' => 'enable',
                 'event_date' => now(),
-                'event_date' => '1:00 PM - 4:00 PM',
+                'event_time' => '1:00 PM - 4:00 PM',
 
             ],
         ];        
