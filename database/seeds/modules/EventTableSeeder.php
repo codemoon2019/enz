@@ -39,7 +39,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
             ],
             [
                 'title' => 'Business , Management & Marketing',
@@ -47,7 +47,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
             ],
             [
                 'title' => 'Hospitality and Cookery',
@@ -55,7 +55,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
 
             ],
             [
@@ -64,7 +64,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
 
             ],
             [
@@ -73,7 +73,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
 
             ],
             [
@@ -82,7 +82,7 @@ class EventTableSeeder extends Seeder
                 'status' => 'enable',
                 'event_date' => now(),
                 'event_time' => '1:00 PM - 4:00 PM',
-                'location' => 'Sample Location',
+                'event_location' => 'Sample Location',
 
             ],
         ];        
