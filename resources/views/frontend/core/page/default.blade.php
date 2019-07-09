@@ -36,7 +36,7 @@
 
 		    @break
 
-	    @case('Expertise')
+{{-- 	    @case('Expertise')
 
 			@section('page_class', "page page-expertise page-basic")
 
@@ -48,7 +48,7 @@
 
 			</div>
 
-		    @break
+		    @break --}}
 
 	    @case('Customer Service')
 
@@ -84,7 +84,14 @@
 
 	    @default
 
+		<div class="container-fluid px180 pt50">
+		    
+		    <h1 class="title title-large text-black text-capitalize text-center mb20">{{ $page->title }}</h1>
+		    
+		    {{-- {!! $page->description !!} --}}
         	@include('frontend.includes.templates.index')
+
+		</div>
 
 	@endswitch
 
