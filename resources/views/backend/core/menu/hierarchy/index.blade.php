@@ -32,7 +32,7 @@
 
                 <div class="col-md-12">
 
-                    <div class="dd" id="nestable3">
+                    <div class="dd" id="nestable-menus">
                         
                         <ol class="dd-list">
 
@@ -65,7 +65,7 @@
                     
                     @isset ($model_name)
                         
-                        @include('backend.includes.sortable.form', ['model' => $model_name])
+                        @include('backend.includes.sortable.form', ['model' => $model_name, 'id' => 'menus'])
                         
                     @endisset
 
@@ -79,6 +79,6 @@
 
 </div>
 
-@include('backend.includes.sortable.script', ['depth' => $model->depth])
+@include('backend.includes.sortable.script', ['depth' => $model->depth, 'id' => 'menus'])
 
 @endsection

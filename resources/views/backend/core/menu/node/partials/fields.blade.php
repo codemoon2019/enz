@@ -19,14 +19,14 @@
             </div>
         </div>
 
-        <div class="form-group row">
+        {{-- <div class="form-group row">
             <label class="col-md-2 form-control-label">Parent</label>
             <div class="col-md-10">
                 <select name="parent_id" id="" class="form-control">
                     <option value="1">Main Menu</option>
 
                 </select>
-                {{-- {!! 
+                {!! 
                     html()->select(
                         'parent_id',
                         menu($menu)->inForm(isset($model) ? $model->id : null, null, false), 
@@ -34,8 +34,8 @@
                     )
                     ->class('form-control ' . ($errors->has('parent_id') ? 'is-invalid' : '' ))
                     ->placeholder('Enter parent')
-                !!} --}}
+                !!}
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
