@@ -39,7 +39,26 @@ class PageTableController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return DataTables::of($this->repo->table($request->except(['_token', '_method'])))
+
+        return DataTables::of($this->repo->table($request->except(['_token', '_method']))->whereNotIn('slug', [
+                'country-details',
+                'service',
+                'details',
+                'city',
+                'career',
+                'sub-courses',
+                'subscription',
+                'tourist-visa-inquiry',
+                'core-value',
+                'application',
+                'sample-module',
+                'more-life',
+                'institution',
+                'country',
+                'location',
+                'why',
+                'area-of-study',
+            ]))
             ->escapeColumns(['id'])
             ->addColumn('domains', function ($model) {
                 return $model->getDomainTitles();
