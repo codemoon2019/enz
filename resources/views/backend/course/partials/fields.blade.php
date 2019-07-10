@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/ckeditor-hide-toolbars.css') }}">
 
-@endpush --}}
+@endpush
 
 <div class="row mt-4 mb-4">
 
