@@ -35,28 +35,11 @@
 					<h2 class="title text-white fs18">Course Title</h2>
 
 					<div class="input-group mb-3">
-						<input type="text" v-click-outside="hide" class="form-control course-search" v-model="local_course_name" placeholder="Enter course title">
+						<input type="text" class="form-control course-search" v-model="local_course_name" placeholder="Enter course title">
 						<div class="input-group-append" @click="searchCourseName">
 							<button class="btn btnview-more btnsearch" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button> 
 						</div>
 					</div>
-	
-
-					<!-- <div class="suggestions bg-white" v-if="course_name != '' && showSuggestions">
-
-						<ul class="list-unstyled" v-if="filteredCourse.length">
-
-							<li class="cursor-pointer" v-for="(suggestion, key) in suggestions" @click="suggestionClick(suggestion)">{{ suggestion }}</li>
-						
-						</ul>
-
-						<ul class="list-unstyled" v-else>
-
-							<li class="not-allowed">Invalid Course Title</li>
-						
-						</ul>
-						
-					</div> -->
 
 				</div>
 
@@ -70,7 +53,7 @@
 
 <script>
 
-import ClickOutside from 'vue-click-outside'
+// import ClickOutside from 'vue-click-outside'
 
 import vSelect from 'vue-select'
 
@@ -89,8 +72,6 @@ export default {
     data() {
 
         return {
-
-        	showSuggestions: true,
 
         	local_course_name: '',
 
@@ -111,8 +92,6 @@ export default {
 	        set (value){
 
 	            this.$store.commit('updateCourseName', value);
-
-	            this.showSuggestions = true;
 
 	        }
 	    },
@@ -153,8 +132,6 @@ export default {
 
 			this.course_name = course_name;
 
-			this.showSuggestions = false;
-
 		},
 
 		searchCourseName(){
@@ -162,11 +139,6 @@ export default {
         	this.$store.commit('updateCourseName', this.local_course_name);
 
 		},
-	 
-	    hide () {
-	    	
-	    	this.showSuggestions = false;
-	    }
 
 	},
 
@@ -204,11 +176,11 @@ export default {
 
 	},
 
-	directives: {
+	// directives: {
 	
-		ClickOutside
+	// 	ClickOutside
 	
-	},
+	// },
 
    	mounted() {
 

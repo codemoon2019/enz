@@ -211,7 +211,7 @@ export default {
 
     computed: {
         
-        ...mapGetters(['suggestions', 'showResult', 'courses']),
+        ...mapGetters(['showResult', 'courses']),
 
         all_courses: function(){
 
