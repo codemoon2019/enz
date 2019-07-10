@@ -11,7 +11,7 @@ trait CourseAttributes
 
 	public function getInstitutionLogoAttribute()
 	{
-		return $this->institution->getFirstMediaUrl('featured');
+		return $this->institution->getFirstMediaUrl('featured', 'main');
 	}
 
 	public function getCountryAttribute()
