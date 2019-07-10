@@ -150,6 +150,11 @@ class Institution extends Model implements HasMedia
     {
         $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
 
+            $this->addMediaConversion('main')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_MAX, 300, 300);
+
             $this->addMediaConversion('thumbnail')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
