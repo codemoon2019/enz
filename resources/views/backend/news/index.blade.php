@@ -15,14 +15,14 @@
         @slot('headers')
             <td>Title</td>
             <td>Status</td>
-            <td>Featured</td>
+            {{-- <td>Featured</td> --}}
             <td>Last Modified</td>
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
             [ 'data' => 'title' ],
             [ 'data' => 'status' ],
-            [ 'data' => 'featured' ],
+            //[ 'data' => 'featured' ],
             [ 'data' => 'updated_at' ],
             [ 'data' => 'actions', 'type' => 'actions', 'sortable' => false, 'searchable' => false ],
         ]))
