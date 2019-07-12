@@ -91,7 +91,9 @@
                                             <input type="file" name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
                                             <label class="btn btnread-more text-uppercase application-inquiry-field" id="application_resume" for="resume" style="height: auto"><span>Choose file</span></label>
-                           
+
+                                            <span class="application-resume fs12" style="color: red;"></span>
+
                                           </div>
         
                                             <div class="form-group text-center">
@@ -157,6 +159,8 @@
 
         el.attr('disabled', true).html('Please wait..');
 
+        $('.application-resume').html('');
+
         $('.application-inquiry-field').css('border', 'unset');
 
         $('#application-inquiry-form').ajaxForm({
@@ -171,6 +175,12 @@
                 el.attr('disabled', false).html('Submit');
 
                 $.each(data.responseJSON['errors'], function(k, v){
+
+                    if(k == 'resume'){
+
+                      $('.application-resume').html(v[0]);
+
+                    }
 
                     $('#application_' + k).css('border', '2px solid #d27070');
 

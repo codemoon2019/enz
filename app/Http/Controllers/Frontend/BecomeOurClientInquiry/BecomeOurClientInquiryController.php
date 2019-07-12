@@ -164,7 +164,7 @@ class BecomeOurClientInquiryController extends Controller
             
             'declaration_5'        => 'required',
             
-            'file'        => 'required',
+            'file'                 => 'required|mimes:doc,pdf,docx,zip',
             
             'g-recaptcha-response' => 'required|captcha',
         

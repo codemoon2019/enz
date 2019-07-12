@@ -131,6 +131,8 @@
                                             <input type="file" name="resume" id="resume_course" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
                                             <label class="btn btnread-more text-uppercase course-inquiry-field" id="course_resume" for="resume_course" style="height: auto"><span>Choose file</span></label>
+
+                                            <span class="course-resume fs12" style="color: red;"></span>
                            
                                           </div>
         
@@ -189,12 +191,14 @@
         $('#modal-trigger').trigger('click');
 
     });
-  
+
     $('.course-inquiry-submit').click(function(){
 
         el = $(this);
 
         el.attr('disabled', true).html('Please wait..');
+
+        $('.course-resume').html('');
 
         $('.course-inquiry-field').css('border', 'unset');
 
@@ -211,6 +215,13 @@
                 $.each(data.responseJSON['errors'], function(k, v){
 
                     $('#course_' + k).css('border', '2px solid #d27070');
+
+                    if(k == 'resume'){
+
+                      $('.course-resume').html(v[0]);
+
+                    }
+
 
                 });
 

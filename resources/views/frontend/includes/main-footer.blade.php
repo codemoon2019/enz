@@ -134,7 +134,7 @@
                 
                                 <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file_resume" style="height: auto"><span>Choose file</span></label>
                                 
-                                {{-- <span class="contact-resume fs12" style="color: red;"></span> --}}
+                                <span class="contact-resume fs12" style="color: red;"></span>
 
                                 {{-- <div class="col-sm-7">
 
@@ -395,7 +395,7 @@
 
         $('.inquiry-field').css('border', 'unset');
 
-        // $('.contact-resume').html('');
+        $('.contact-resume').html('');
 
         $('#inquiry-form').ajaxForm({
 
@@ -419,7 +419,7 @@
 
                     }else if(k == 'resume'){
 
-                      // $('.contact-resume').html(v[0]);
+                      $('.contact-resume').html(v[0]);
 
                     }
 

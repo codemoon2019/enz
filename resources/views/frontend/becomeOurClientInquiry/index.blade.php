@@ -902,6 +902,8 @@
 
                                 <label class="btn btnread-more text-uppercase client-field" id="file" for="signature" style="height: auto"><span>Choose file</span></label>
 
+                                <span class="client-resume fs12" style="color: red;"></span>
+
                             </div>
 
                             <div class="form-group">
@@ -975,6 +977,8 @@
         el.attr('disabled', true).html('Please wait..');
 
         // $('.client-field').css('border', 'unset');
+        
+        $('.client-resume').html('');
 
         $('.client-field').css('border', '1px solid #ced4da');
 
@@ -997,6 +1001,10 @@
                     }else if(k.includes('declaration')){
 
                       $('#div_' + k).css('border', '2px solid #d27070');
+
+                    }else if(k == 'file'){
+
+                      $('.client-resume').html(v[0]);
 
                     }
 

@@ -111,7 +111,7 @@ class SubscriptionController extends Controller
             
             'message'       => 'required',
             
-            'resume'        => 'required',
+            'resume'        => 'required|mimes:doc,pdf,docx,zip',
             
             'g-recaptcha-response' => 'required|captcha',
         
