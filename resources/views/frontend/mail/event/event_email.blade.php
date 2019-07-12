@@ -2,25 +2,25 @@
 
 @if ($details['type'])
 
-New Event Inquiry
+**New Event Inquiry**
 
-Event: {{ $model->event_name }}
+**Event:** {{ $model->event_name }}
 
-When: {{ $model->date }}
+**When:** {{ $model->date }}
 
-Where: {{ $model->location }}
+**Where:** {{ $model->location }}
 
-Time: {{ $model->time }}
+**Time:** {{ $model->time }}
 
-Fullname: {{ $model['first_name'] . ' ' . $model['last_name'] }}
+**Fullname:** {{ $model['first_name'] . ' ' . $model['last_name'] }}
 
-Email: {{ $model['email_address'] }}
+**Email:** {{ $model['email_address'] }}
 
-Contact No: {{ $model['contact_number'] }}
+**Contact No:** {{ $model['contact_number'] }}
 
-Address: {{ $model['address'] }}
+**Address:** {{ $model['address'] }}
 
-Profession: {{ $model['profession'] }}
+**Profession:** {{ $model['profession'] }}
 
 @else
 
@@ -39,9 +39,11 @@ You can invite your friends to come and discover what studying abroad can offer!
 
 Get more updates by following our social media channels!
 
-<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a><br>
-<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a><br>
-<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a><br>
+<ul>
+	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
+	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
+	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+</ul>
 
 Thank you and see you there!
 

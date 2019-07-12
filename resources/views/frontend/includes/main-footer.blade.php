@@ -15,8 +15,16 @@
                 <div class="col-sm-9 right-content px180">
                 
                     <h2 class="title fs40 text-nblue mb30">Got a Question?</h2>
-                
-                    <form action="{{ route('frontend.contact.send') }}" method="post" id="inquiry-form" enctype="multipart/form-data">
+
+                    @if (isset($migration_page))
+
+                      <form action="{{ route('frontend.migration-visas.inquiry') }}" method="post" id="inquiry-form" enctype="multipart/form-data">
+                    
+                    @else
+                    
+                      <form action="{{ route('frontend.contact.send') }}" method="post" id="inquiry-form" enctype="multipart/form-data">
+                    
+                    @endif
                 
                         {{ csrf_field() }}
                 

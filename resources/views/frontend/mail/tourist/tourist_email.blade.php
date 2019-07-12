@@ -2,17 +2,17 @@
 
 @if ($details['type'])
 
-New Tourist Visa Inquiry
+**New Tourist Visa Inquiry**
 
-Fullname: {{ $model['first_name'] . ' ' . $model['last_name'] }}
+**Fullname:** {{ $model['first_name'] . ' ' . $model['last_name'] }}
 
-Email: {{ $model['email_address'] }}
+**Email:** {{ $model['email_address'] }}
 
-Contact No: {{ $model['mobile_number'] }}
+**Contact No:** {{ $model['mobile_number'] }}
 
-Country to visit: {{ $model['country_to_visit'] }}
+**Country to visit:** {{ $model['country_to_visit'] }}
 
-Message: {{ $model['inquiry'] }}
+**Message:** {{ $model['inquiry'] }}
 
 @else
 
@@ -26,9 +26,11 @@ Thank you for your trust in our services.
 Regards, <br> ENZ Education Consultancy Services
 
 Follow us on social media!<br>
-<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a><br>
-<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a><br>
-<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a><br>
+<ul>
+	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
+	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
+	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+</ul>
 
 @endif
 

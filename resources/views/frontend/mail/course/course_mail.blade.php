@@ -2,29 +2,38 @@
 
 @if ($details['type'])
 
-New Course Inquiry
+**New Course Inquiry**
 
-Fullname: {{ $model['full_name'] }}
+**Fullname:** {{ $model['full_name'] }}
 
-Profession: {{ $model['profession'] }}
+**Profession:** {{ $model['profession'] }}
 
-Email Address: {{ $model['email_address'] }}
+**Email Address:** {{ $model['email_address'] }}
 
-Mobile No: {{ $model['mobile_number'] }}
+**Mobile No:** {{ $model['mobile_number'] }}
 
-Location: {{ $model['location'] }}
+**Location:** {{ $model['location'] }}
 
-School: {{ $model['school'] }}
+**School:** {{ $model['school'] }}
 
-Course: {{ $model['course'] }}
+**Course:** {{ $model['course'] }}
 
-Message: {{ $model['message'] }}
+**Message:** {{ $model['message'] }}
 
 @else
 
-Hi {{ $model['full_name'] }}!
+Hi {{ $model['full_name'] }}! Thank you for reaching ENZ Education Consultancy Services! One of our consultants shall get back to you with benefits, cost and requirements of studying abroad as soon as possible.
 
-Thank you for Inquiry
+Thank you for your trust in our services.
+
+Regards, <br> ENZ Education Consultancy Services
+
+Follow us on social media!<br>
+<ul>
+	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
+	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
+	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+</ul>
 
 @endif
 

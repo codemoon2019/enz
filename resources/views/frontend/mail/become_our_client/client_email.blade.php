@@ -2,78 +2,78 @@
 
 @if ($details['type'])
 
-Become Our Client Inquiry
+**Become Our Client Inquiry**
 
-Firstname: {{ $data['first_name'] }}
+**Firstname:** {{ $data['first_name'] }}
 
-Lastname: {{ $data['last_name'] }}
+**Lastname:** {{ $data['last_name'] }}
 
-Middlename: {{ $data['middle_name'] }}
+**Middlename:** {{ $data['middle_name'] }}
 
-Date of Birth: {{ $data['month'] . ' ' .$data['day'] . ', ' . $data['year'] }}
+**Date of Birth:** {{ $data['month'] . ' ' .$data['day'] . ', ' . $data['year'] }}
 
-Country Birth: {{ $data['country_birth'] }}
+**Country Birth:** {{ $data['country_birth'] }}
 
-Passport Number: {{ $data['passport_number'] }}
+**Passport Number:** {{ $data['passport_number'] }}
 
-Citizenship: {{ $data['citizenship'] }}
+**Citizenship:** {{ $data['citizenship'] }}
 
-Civil Status: {{ $data['first_name'] }}
+**Civil Status:** {{ $data['civil_status'] }}
 
-Gender: {{ $data['first_name'] }}
+**Gender:** {{ $data['gender'] }}
 
-Expiry Date: {{ $data['expiry_month'] . ' ' .$data['expiry_day'] . ', ' . $data['expiry_year'] }}
+**Expiry Date:** {{ $data['expiry_month'] . ' ' .$data['expiry_day'] . ', ' . $data['expiry_year'] }}
 
-Street Number: {{ $data['street_number'] }}
+**Street Number:** {{ $data['street_number'] }}
 
-Street Name: {{ $data['street_name'] }}
+**Street Name:** {{ $data['street_name'] }}
 
-Town/City: {{ $data['town'] }}
+**Town/City:** {{ $data['town'] }}
 
-Province: {{ $data['province'] }}
+**Province:** {{ $data['province'] }}
 
-ZIP Code: {{ $data['zip_code'] }}
+**ZIP Code:** {{ $data['zip_code'] }}
 
-Email: {{ $data['email'] }}
+**Email:** {{ $data['email'] }}
 
-Mobile Number: {{ $data['mobile_number'] }}
+**Mobile Number:** {{ $data['mobile_number'] }}
 
-Telephone Number: {{ $data['telephone_number'] }}
+**Telephone Number:** {{ $data['telephone_number'] }}
 
-Elementary: {{ $data['elementary_school'] . ' ' . $data['elementary_from'] . ' - ' . $data['elementary_to'] }}  
+**Elementary:** {{ $data['elementary_school'] . ' ' . $data['elementary_from'] . ' - ' . $data['elementary_to'] }}  
 
-High School: {{ $data['high_school_school'] . ' ' . $data['high_school_from'] . ' - ' . $data['high_school_to'] }}  
+**High School:** {{ $data['high_school_school'] . ' ' . $data['high_school_from'] . ' - ' . $data['high_school_to'] }}  
 
-Tertiary: {{ $data['tertiary_school'] . ' ' . $data['tertiary_from'] . ' - ' . $data['tertiary_to'] }}  
+**Tertiary:** {{ $data['tertiary_school'] . ' ' . $data['tertiary_from'] . ' - ' . $data['tertiary_to'] }}  
 
-Employment Status: {{ $data['first_name'] }} 
+**Employment Status:** {{ $data['employment_status'] }} 
 
 @if ($data['employment_status'] == 'Employed')
 	
-Employer: {{ $data['employment_status_name'] }}
+**Employer:** {{ $data['employment_status_name'] }}
 
-From: {{ $data['employment_status_from'] }}
+**From:** {{ $data['employment_status_from'] }}
 
-To: {{ $data['employment_status_to'] }}
+**To:** {{ $data['employment_status_to'] }}
 
 @elseif ($data['employment_status'] == 'Self Employed')
 
-Business Name: {{ $data['employment_status_name'] }}
+**Business Name:** {{ $data['employment_status_name'] }}
 
-From: {{ $data['employment_status_from'] }}
+**From:** {{ $data['employment_status_from'] }}
 
-To: {{ $data['employment_status_to'] }}
+**To:** {{ $data['employment_status_to'] }}
 
 
 @endif
 
-Interview: {{ $data['interview'] }}
+**Interview:** {{ $data['interview'] }}
 
-English Test Result: {{ $data['english_test_result'] }}
+**English Test Result:** {{ $data['english_test_result'] }}
 
-Would you like to avail our free English Test Review? : {{ $data['avail'] }} 
+**Would you like to avail our free English Test Review? :** {{ $data['avail'] }} 
 
-Country: {{ $data['country'] }}
+**Country:** {{ $data['country'] }}
 
 @else
 
@@ -85,9 +85,11 @@ Thank you for your trust in our services.
 Regards, <br> ENZ Education Consultancy Services
 
 Follow us on social media!<br>
-<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a><br>
-<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a><br>
-<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a><br>
+<ul>
+	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
+	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
+	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+</ul>
 
 @endif
 

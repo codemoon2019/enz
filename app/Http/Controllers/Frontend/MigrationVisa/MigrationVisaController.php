@@ -1,51 +1,50 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Application;
+namespace App\Http\Controllers\Frontend\MigrationVisa;
 
 use App\Repositories\Core\Page\PageRepository;
-use App\Repositories\Application\ApplicationRepository;
+use App\Repositories\MigrationVisa\MigrationVisaRepository;
 use HalcyonLaravel\Base\Controllers\BaseController as Controller;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use MetaTag;
 use Illuminate\Http\Request;
-use App\Models\Application\Application;
+use Mail;
+use App\Models\MigrationVisa\MigrationVisa;
+
+use App\Mail\Frontend\Contact\ContactEmail;
+
 use Illuminate\Support\Facades\Storage;
 use Uuid;
-use Arcanedev\NoCaptcha\Rules\CaptchaRule;
-
-
-use App\Mail\Frontend\Application\ApplicationMail;
-use Mail;
 
 /**
- * Class ApplicationController
+ * Class MigrationVisaController
  *
- * @package App\Http\Controllers\Frontend\Application
+ * @package App\Http\Controllers\Frontend\MigrationVisa
  */
-class ApplicationController extends Controller
+class MigrationVisaController extends Controller
 {
     /**
-     * @var \App\Repositories\Application\ApplicationRepository
+     * @var \App\Repositories\MigrationVisa\MigrationVisaRepository
      */
-    private $applicationsRepository;
+    private $migrationVisasRepository;
 
     private $pageRepository;
     private $viewFrontendPath;
 
     /**
-     * ApplicationController constructor.
+     * MigrationVisaController constructor.
      *
-     * @param \App\Repositories\Application\ApplicationRepository $applicationsRepository
+     * @param \App\Repositories\MigrationVisa\MigrationVisaRepository $migrationVisasRepository
      * @param \App\Repositories\Core\Page\PageRepository                  $pageRepository
      *
      * @throws \Prettus\Repository\Exceptions\RepositoryException
      */
-    public function __construct(ApplicationRepository $applicationsRepository, PageRepository $pageRepository)
+    public function __construct(MigrationVisaRepository $migrationVisasRepository, PageRepository $pageRepository)
     {
-        $model = $applicationsRepository->makeModel();
+        $model = $migrationVisasRepository->makeModel();
         $this->middleware('page_status:' . get_class($model));
 
-        $this->applicationsRepository = $applicationsRepository;
+        $this->migrationVisasRepository = $migrationVisasRepository;
         $this->pageRepository = $pageRepository;
         $this->viewFrontendPath = $model::VIEW_FRONTEND_PATH;
     }
@@ -72,7 +71,7 @@ class ApplicationController extends Controller
      */
     public function repository(): BaseRepository
     {
-        return $this->applicationsRepository;
+        return $this->migrationVisasRepository;
     }
 
     /**
@@ -95,25 +94,28 @@ class ApplicationController extends Controller
 
         $validatedData = $request->validate([
 
-            'full_name'            => 'required',
+            'full_name'            => 'required|max:255',
             
-            'email_address'        => 'required',
+            'profession'           => 'required|max:255',
+            
+            'email_address'        => 'required|email|max:255',
             
             'mobile_number'        => 'required',
             
-            'address'              => 'required',
+            'inquiry'              => 'required|max:255',
             
-            'employment_status'    => 'required',
+            'location'             => 'required|max:255',
             
-            'message'               => 'required',
+            'country'              => 'required',
             
             'resume'               => 'required',
             
-            'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha'
         
         ]);
 
-        $data = $request->all();
+
+        $filename = null;
 
         if ($request['resume'] != null) {
 
@@ -123,13 +125,31 @@ class ApplicationController extends Controller
 
             $encrypt_name = Uuid::generate(4)->string;
 
-            $file->storeAs('public/application', $encrypt_name);
+            $file->storeAs('public/inquiry', $encrypt_name);
 
-            $data['resume'] = json_encode([$name, $encrypt_name]);
+            $filename = json_encode([$name, $encrypt_name]);
 
         }
 
-        $model = Application::create($data);
+        $model = MigrationVisa::create([
+
+            'full_name'     => $request['full_name'],
+            
+            'profession'    => $request['profession'],
+            
+            'email_address' => $request['email_address'],
+            
+            'mobile_number' => $request['mobile_number'],
+            
+            'location'      => $request['location'],
+            
+            'inquiry'       => $request['inquiry'],
+            
+            'country'       => $request['country'],
+            
+            'resume'        => $filename,
+        
+        ]);
 
         // 0 = User / 1 = Admin
 
@@ -137,19 +157,21 @@ class ApplicationController extends Controller
             
             if ($value) {
 
-                $details = ['to' => env('HR_EMAIL', 'hr@enzconsultancy.com') , 'subject' => 'ENZ - EMPLOYMENT APPLICATION ('.$model->position.')', 'type' => $value];
+                $details = ['to' => 'migration@enzconsultancy.com', 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'ENZ - EMPLOYMENT APPLICATION ('.$model->position.')', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
                 
             }
 
-            Mail::send(new ApplicationMail($model, $details));
+            Mail::send(new ContactEmail($model, $details));
 
         }
 
-        session()->flash('flash_success', 'Application Submitted');
+        session()->flash('flash_success', 'Inquiry Submitted');
+
+      
 
     }
 }

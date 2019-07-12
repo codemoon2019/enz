@@ -143,7 +143,7 @@ class EventController extends Controller
             
             if ($value) {
 
-                $details = ['to' => env('ADMIN_EMAIL', 'info@enzconsultancy.com'), 'subject' => 'ENZ - EVENT REGISTRATION', 'type' => $value];
+                $details = ['to' => env('ADMIN_EMAIL', 'info@enzconsultancy.com'), 'subject' => 'ENZ - EVENT REGISTRATION ('.$model->event_name.')', 'type' => $value];
 
             }else{
 

@@ -37,9 +37,9 @@ class InquiryTableController extends Controller
     {
         return DataTables::of($this->inquiryRepository->table())
             ->escapeColumns(['id'])
-            ->editColumn('consultation', function ($model) {
-                return $model->consultation ? 'True' : 'False';
-            })
+            // ->editColumn('consultation', function ($model) {
+            //     return $model->consultation ? 'True' : 'False';
+            // })
             ->addColumn('actions', function ($model) {
 
                 return $model->action_buttons;

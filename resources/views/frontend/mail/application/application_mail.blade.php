@@ -2,21 +2,21 @@
 
 @if ($details['type'])
 
-New Application Inquiry
+**New Application Inquiry**
 
-Fullname: {{ $model['full_name'] }}
+**Fullname:** {{ $model['full_name'] }}
 
-Position: {{ $model['position'] }}
+**Position:** {{ $model['position'] }}
 
-Email Address: {{ $model['email_address'] }}
+**Email Address:** {{ $model['email_address'] }}
 
-Mobile No: {{ $model['mobile_number'] }}
+**Mobile No:** {{ $model['mobile_number'] }}
 
-Address: {{ $model['address'] }}
+**Address:** {{ $model['address'] }}
 
-Employment Status: {{ $model['employment_status'] }}
+**Employment Status:** {{ $model['employment_status'] }}
 
-Message: {{ $model['message'] }}
+**Message:** {{ $model['message'] }}
 
 @else
 

@@ -2,21 +2,21 @@
 
 @if ($details['type'])
 
-New Inquiry
+**New Inquiry**
 
-Fullname: {{ $model['full_name'] }}
+**Fullname:** {{ $model['full_name'] }}
 
-Profession: {{ $model['profession'] }}
+**Profession:** {{ $model['profession'] }}
 
-Email Address: {{ $model['email_address'] }}
+**Email Address:** {{ $model['email_address'] }}
 
-Mobile No: {{ $model['mobile_number'] }}
+**Mobile No:** {{ $model['mobile_number'] }}
 
-Location: {{ $model['location'] }}
+**Location:** {{ $model['location'] }}
 
-Message: {{ $model['inquiry'] }}
+**Message:** {{ $model['inquiry'] }}
 
-Country: {{ $model['country'] }}
+**Country:** {{ $model['country'] }}
 
 @else
 
@@ -28,9 +28,12 @@ Thank you for your trust in our services.
 Regards, <br> ENZ Education Consultancy Services
 
 Follow us on social media!<br>
-<a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a><br>
-<a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a><br>
-<a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a><br>
+
+<ul>
+	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
+	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
+	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+</ul>
 
 @endif
 
