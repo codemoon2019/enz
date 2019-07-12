@@ -130,10 +130,12 @@
 
                                 <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
                 
-                                <input type="file" name="resume" id="file" class="inputfile" data-multiple-caption="{count} files selected"/>
+                                <input type="file" name="resume" id="file_resume" class="inputfile" data-multiple-caption="{count} files selected"/>
                 
-                                <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file" style="height: auto"><span>Choose file</span></label>
+                                <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file_resume" style="height: auto"><span>Choose file</span></label>
                                 
+                                {{-- <span class="contact-resume fs12" style="color: red;"></span> --}}
+
                                 {{-- <div class="col-sm-7">
 
                                     <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
@@ -393,6 +395,8 @@
 
         $('.inquiry-field').css('border', 'unset');
 
+        // $('.contact-resume').html('');
+
         $('#inquiry-form').ajaxForm({
 
             success: function(){
@@ -408,6 +412,14 @@
                     if (k == 'g-recaptcha-response') {
                       
                       $('#' + k + '-div').css('border', '2px solid #d27070');
+
+                    }else if(k == 'mobile_number'){
+
+                      $('[name=mobile_number]').css('border', '2px solid #d27070');
+
+                    }else if(k == 'resume'){
+
+                      // $('.contact-resume').html(v[0]);
 
                     }
 
