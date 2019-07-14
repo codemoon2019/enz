@@ -169,9 +169,10 @@
 
                 location.reload();
 
-
             }, error: function(data){
 
+                grecaptcha.reset();
+                
                 el.attr('disabled', false).html('Submit');
 
                 $.each(data.responseJSON['errors'], function(k, v){

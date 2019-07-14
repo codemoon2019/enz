@@ -28,7 +28,7 @@ Hi {{ $model['first_name'] }}!
 
 Thank you for registering for our Free Orientation! We look forward seeing you at the event to help you with your study abroad needs!
 
-**Event Details:** {{ $model->event_name }}<br>
+**Event Details: {{ $model->event_name }}**<br>
 
 **When:** {{ $model->date }}<br>
 
