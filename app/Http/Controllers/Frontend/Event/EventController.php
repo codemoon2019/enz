@@ -147,7 +147,7 @@ class EventController extends Controller
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'ENZ - EVENT REGISTRATION', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'ENZ - EVENT REGISTRATION ('.$model->event_name.')', 'type' => $value];
                 
             }
 
