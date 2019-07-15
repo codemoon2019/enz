@@ -22,15 +22,9 @@ Thank you for reaching ENZ Education Consultancy Services! One of our consultant
 
 Thank you for your trust in our services.
 
-
 Regards, <br> ENZ Education Consultancy Services
 
-Follow us on social media!<br>
-<ul>
-	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
-	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
-	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
-</ul>
+@include('frontend.mail.links')
 
 @endif
 

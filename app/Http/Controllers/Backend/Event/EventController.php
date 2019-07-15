@@ -9,6 +9,7 @@ use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use MetaTag;
 
 /**
  * Class EventController
@@ -123,4 +124,18 @@ class EventController extends CRUDController
                 'title.required' => 'The title field is required.',
             ]);
     }
+
+    public function inquiries()
+    {
+        MetaTag::setTags([
+            'title' => $this->getModelName() . ' Management',
+        ]);
+
+        $viewPath = $this->viewPath;
+        $routePath = $this->routePath;
+
+        return view("backend.event.inquiries", compact('viewPath', 'routePath'));
+    }
 }
+
+

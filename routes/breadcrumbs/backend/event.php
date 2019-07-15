@@ -22,4 +22,9 @@ Breadcrumbs::register($routePath . '.edit', function ($breadcrumbs, $model) use 
     $breadcrumbs->push('Edit', route($routePath . '.edit', $model));
 });
 
+Breadcrumbs::register($routePath . '.inquiries', function ($breadcrumbs) use ($routePath) {
+    $breadcrumbs->parent($routePath . '.index');
+    $breadcrumbs->push('Inquiries', route($routePath . '.inquiries'));
+});
+
 unset($routePath);

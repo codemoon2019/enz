@@ -41,6 +41,11 @@
                    href="{{ route('admin.migration-visas.index') }}"><i class="nav-icon fa fa-envelope"></i>Migration Visas</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/events-inquiries')) }}"
+                   href="{{ route('admin.events.inquiries') }}"><i class="nav-icon fa fa-envelope"></i>Event Inquiries</a>
+            </li>
+
             @if(is_has_any_permission([
                 app(App\Models\Category\Category::class)::permission('index'),
                 app(App\Models\Core\Inquiry::class)::permission('index'),

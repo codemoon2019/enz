@@ -45,7 +45,7 @@ class SendContactRequest extends FormRequest
             
             'resume'               => 'required|mimes:doc,pdf,docx,zip',
             
-            'g-recaptcha-response' => 'required|captcha'
+            // 'g-recaptcha-response' => 'required|captcha'
         
         ];
         
