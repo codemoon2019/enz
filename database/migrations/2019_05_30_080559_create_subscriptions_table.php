@@ -20,8 +20,8 @@ class CreateSubscriptionsTable extends Migration
             $table->increments('id');
             $table->string('full_name')->nullable();
             $table->string('profession')->nullable();
-            $table->string('email_address')->unique();
-            $table->string('mobile_number')->unique();
+            $table->string('email_address')->nullable();
+            $table->string('mobile_number')->nullable();
             $table->string('location')->nullable();
             $table->string('message')->nullable();
             $table->string('school')->nullable();
