@@ -345,10 +345,11 @@ iframe{
     .search-courses {
         background: url(/img/courses/bg.png) no-repeat;
         background-size: contain;
+        background-position: center;
         height: 94vh;
         display: flex;
         align-items: center;
-        padding-top: 2%;
+        padding-top: 10%;
         .form-control,
         .vs__dropdown-toggle {
             height: 56px;
