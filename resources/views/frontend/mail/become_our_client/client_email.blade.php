@@ -73,6 +73,16 @@
 
 **Would you like to avail our free English Test Review? :** {{ $data['avail'] }} 
 
+**Declaration:**
+
+<ul>
+	<li>I declare that all the information and supporting documentations provided above are true and correct</li>
+	<li>I declare that I have received a proper orientation and interview prior to my application</li>
+	<li>I understand that all the fees and charges associated with my application is non-refundable</li>
+	<li>I understand that ENZ Education Consultancy Services does not guarantee any result of this application as my visa application will be based on my GTE and Financial Capacity in undertaking my course in Australia</li>
+	<li>I understand that ENZ Education Consultancy Services are not an employment agency</li>
+</ul>
+
 **Country:** {{ $data['country'] }}
 
 @else
