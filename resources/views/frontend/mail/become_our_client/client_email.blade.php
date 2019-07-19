@@ -10,7 +10,15 @@
 
 **Middlename:** {{ $data['middle_name'] }}
 
+@if (isset($admin))
+	
+**Date of Birth:** {{ $data['country_birth'] }}
+
+@else
+
 **Date of Birth:** {{ $data['month'] . ' ' .$data['day'] . ', ' . $data['year'] }}
+
+@endif
 
 **Country Birth:** {{ $data['country_birth'] }}
 
@@ -22,7 +30,15 @@
 
 **Gender:** {{ $data['gender'] }}
 
+@if (isset($admin))
+
+**Expiry Date:** {{ $data['expiry_date'] }}
+
+@else
+
 **Expiry Date:** {{ $data['expiry_month'] . ' ' .$data['expiry_day'] . ', ' . $data['expiry_year'] }}
+
+@endif
 
 **Street Number:** {{ $data['street_number'] }}
 
