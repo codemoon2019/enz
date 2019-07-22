@@ -39,7 +39,7 @@ class CourseMail extends Mailable implements ShouldQueue
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             ->attach(storage_path("app/public/course/" . $file[1]))
-            ->cc('nico.halcyondigital@gmail.com')
+            // ->cc('nico.halcyondigital@gmail.com')
             ->to($this->details['to']);
 
         }else{
@@ -47,7 +47,7 @@ class CourseMail extends Mailable implements ShouldQueue
             $this->markdown('frontend.mail.course.course_mail')
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-            ->cc('nico.halcyondigital@gmail.com')
+            // ->cc('nico.halcyondigital@gmail.com')
             ->to($this->details['to']);
 
         }
