@@ -16,7 +16,7 @@
 
         <p class="fs15">Published At: {{ $model->published_at->format('F d, Y') }}</p>
 
-        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
+        <div class="sharethis-inline-share-buttons"></div>
 
 
     	{{-- <div class="block--content d-flex ai-c mb15">
