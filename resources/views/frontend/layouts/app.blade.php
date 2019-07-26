@@ -5,6 +5,9 @@
     <html lang="{{ app()->getLocale() }}">
     @endlangrtl
     <head>
+    
+        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3a734f13b6f000122837f8&product=custom-share-buttons' async='async'></script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
