@@ -39,7 +39,7 @@ class ApplicationMail extends Mailable implements ShouldQueue
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             ->attach(storage_path("app/public/application/" . $file[1]))
-            // ->cc('nico.halcyondigital@gmail.com')
+            ->cc('info@enzconsultancy.com')
             ->to($this->details['to']);
 
         }else{

@@ -13,27 +13,31 @@
                 @foreach ($homeNews as $key => $news)
     
                     <div class="col-lg-3 col-md-6 item mb40">
-    
-                        <div class="card">
-    
-                            <div class="card-header p0">
-    
-                            <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="{{$news->title}}">
-    
+                    
+                        <a href="{{ route('frontend.news.show', $news->slug) }}">
+                            
+                            <div class="card">
+        
+                                <div class="card-header p0">
+        
+                                    <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="{{$news->title}}">
+        
+                                </div>
+        
+                                <div class="card-body news-details">
+        
+                                    <h3 class="card-title">{{ str_limit($news->title, 40) }}</h3>
+        
+                                    <p class="card-text">{{ $news->published_at->format('M d, Y') }}</p>
+        
+                                    <a href="{{ route('frontend.news.show', $news->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
+        
+                                </div>
+        
                             </div>
-    
-                            <div class="card-body news-details">
-    
-                                <h3 class="card-title">{{ str_limit($news->title, 40) }}</h3>
-    
-                                <p class="card-text">{{ $news->published_at->format('M d, Y') }}</p>
-    
-                                <a href="{{ route('frontend.news.show', $news->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
-    
-                            </div>
-    
-                        </div>
-    
+
+                        </a>
+
                     </div>
     
                 @endforeach
