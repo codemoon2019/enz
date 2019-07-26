@@ -14,7 +14,10 @@
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
+
         @include('frontend.includes.meta-tags')
+
+        @stack('meta')
 
         <link rel="apple-touch-icon" href="{{ asset(setting('site-fav-icon')) }}">
         <link rel="icon" type="image/png" href="{{ asset(setting('site-fav-icon')) }}"/>
@@ -28,9 +31,10 @@
         </style>
 
 
-        @can(config('access.users.default_permissions.back_end_view_permission'))
+        {{-- @can(config('access.users.default_permissions.back_end_view_permission'))
         
-        @endcan
+        @endcan --}}
+
         @include('frontend.includes.widgets.global-critical')
 
     @stack('before-styles')
