@@ -20,7 +20,7 @@
                 
                 @foreach ($models as $key => $gallery)
                     <div class="item mx-auto mb30 class gallery-div relative">
-                        <img src="{{ $gallery->getFirstMediaUrl('featured') }}" class="img-fluid" alt="">
+                        <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
                         <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
                             <div class="album-title d-flex">
                                 <h2 class="title text-white fs24">{{ $gallery->title }}</h2>

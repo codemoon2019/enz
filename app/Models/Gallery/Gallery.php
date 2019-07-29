@@ -162,7 +162,7 @@ class Gallery extends Model implements HasMedia
             $this->addMediaConversion('main')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 364, 235);
+                ->fit(Manipulations::FIT_CROP, 560, 300);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()
