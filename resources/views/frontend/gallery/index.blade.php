@@ -61,6 +61,8 @@
 
                                     @php
                                         $images = $gallery->getUploaderImages('images');
+                                        
+                                        $thumbnail_images = $gallery->getUploaderImages('images', 'thumbnail');
                                     @endphp
                                     
                                     @foreach ($images as $image)
@@ -77,7 +79,7 @@
 
                                 <div class="slider-nav">
                 
-                                    @foreach ($images as $image)
+                                    @foreach ($thumbnail_images as $image)
 
                                         <div class="item mx-auto">
                                     
