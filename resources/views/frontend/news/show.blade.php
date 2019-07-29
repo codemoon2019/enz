@@ -19,7 +19,7 @@
         <div class="sharethis-inline-share-buttons"></div>
 
 
-    	{{-- <div class="block--content d-flex ai-c mb15">
+    	<div class="block--content d-flex ai-c mb15">
             <a style="padding: 5px 20px;
 		    background: #0070ab;
 		    color: white;
@@ -30,7 +30,7 @@
 		    color: white;
 		    text-decoration: none;
 		    border-radius: 4px; margin-left: 5px;" class="social-btn button-twitter tc-white" onclick="return ss_plugin_loadpopup_js(this);" rel="external nofollow" href="http://twitter.com/intent/tweet/?text={{url()->current()}}" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
-        </div>  --}}
+        </div> 
 
         
         <div class="basic text-black text-justify mb30">
