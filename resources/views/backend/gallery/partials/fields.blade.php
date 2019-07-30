@@ -74,7 +74,9 @@
 
                 @else
             
-                    <image-uploader></image-uploader>
+                    <image-uploader
+                        :multiple="true"
+                    ></image-uploader>
             
                 @endif
             
