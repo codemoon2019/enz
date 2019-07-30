@@ -142,7 +142,7 @@ class SubscriptionController extends Controller
             
             if ($value) {
 
-                $details = ['to' => env('ADMIN_EMAIL', 'info@enzconsultancy.com'), 'subject' => 'STUDY PATHWAYS INQUIRY ('.$request['school'].' - ' .$request['course']. ')', 'type' => $value];
+                $details = ['to' => env('ADMIN_EMAIL', 'info@enzconsultancy.com'), 'subject' => 'STUDY PATHWAYS INQUIRY ('.$request['school'].' - ' .$request['course']. ') - ' . $request['full_name'], 'type' => $value];
 
             }else{
 

@@ -124,6 +124,8 @@ class TouristVisaInquiryController extends Controller
             
         ]);
 
+        $full_name = $request['first_name'] . ' ' . $request['last_name'];
+
         // 0 = User / 1 = Admin
 
         foreach ([0, 1] as $value) {
@@ -140,7 +142,7 @@ class TouristVisaInquiryController extends Controller
                 
                 }
 
-                $details = ['to' => $email, 'subject' => 'TOURIST VISA INQUIRY ('.$model->country_to_visit.')', 'type' => $value];
+                $details = ['to' => $email, 'subject' => 'TOURIST VISA INQUIRY ('.$model->country_to_visit.' - '.$full_name.')', 'type' => $value];
 
             }else{
 

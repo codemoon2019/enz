@@ -98,7 +98,7 @@ class ContactController extends Controller
                 
                 }
 
-                $details = ['to' => $email, 'subject' => 'STUDY PATHWAYS INQUIRY ('.$model->country.')', 'type' => $value];
+                $details = ['to' => $email, 'subject' => 'STUDY PATHWAYS INQUIRY ('.$model->country.' - '.$request['full_name'].')', 'type' => $value];
 
             }else{
 

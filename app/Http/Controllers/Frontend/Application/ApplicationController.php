@@ -137,7 +137,7 @@ class ApplicationController extends Controller
             
             if ($value) {
 
-                $details = ['to' => env('HR_EMAIL', 'hr@enzconsultancy.com') , 'subject' => 'ENZ - EMPLOYMENT APPLICATION ('.$model->position.')', 'type' => $value];
+                $details = ['to' => env('HR_EMAIL', 'hr@enzconsultancy.com') , 'subject' => 'ENZ - EMPLOYMENT APPLICATION ('.$model->position.' - '.$data['full_name'].')', 'type' => $value];
 
             }else{
 
