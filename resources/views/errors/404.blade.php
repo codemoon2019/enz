@@ -94,7 +94,7 @@
       }
 
       .img-404 {
-          max-height: 600px;
+          max-height: 400px;
           width: 100%;
       }
 

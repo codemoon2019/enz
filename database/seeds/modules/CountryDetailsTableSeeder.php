@@ -46,16 +46,16 @@ class CountryDetailsTableSeeder extends Seeder
 <strong>Sources:&nbsp;</strong></p>
 
 <ol>
-    <li><a href="http://www.oecd.org/education/eag2012.htm">www.oecd.org</a></li>
-    <li><a href="http://cricos.deewr.gov.au/">cricos.deewr.gov.au</a></li>
-    <li><a href="http://www.topuniversities.com/university-rankings">www.topuniversities.com/university-rankings</a></li>
-    <li><a href="http://www.topuniversities.com/city-rankings">www.topuniversities.com/city-rankings</a></li>
-    <li><a href="http://www.universitas21.com">www.universitas21.com</a></li>
-    <li><a href="http://www.australiaawards.gov.au">www.australiaawards.gov.au</a></li>
-    <li><a href="http://www.timeshighereducation.co.uk">www.timeshighereducation.co.uk</a></li>
-    <li><a href="http://www.ieaa.org.au">www.ieaa.org.au</a></li>
-    <li><a href="http://www.smartestinvestment.com.au">www.smartestinvestment.com.au</a></li>
-    <li><a href="http://www.studyinaustralia.gov.au">www.studyinaustralia.gov.au</a></li>
+    <li><a href="http://www.oecd.org/education/eag2012.htm" rel="noopener" target="_blank">www.oecd.org</a></li>
+    <li><a href="http://cricos.deewr.gov.au/" rel="noopener" target="_blank">cricos.deewr.gov.au</a></li>
+    <li><a href="http://www.topuniversities.com/university-rankings" rel="noopener" target="_blank">www.topuniversities.com/university-rankings</a></li>
+    <li><a href="http://www.topuniversities.com/city-rankings" rel="noopener" target="_blank">www.topuniversities.com/city-rankings</a></li>
+    <li><a href="http://www.universitas21.com" rel="noopener" target="_blank">www.universitas21.com</a></li>
+    <li><a href="http://www.australiaawards.gov.au" rel="noopener" target="_blank">www.australiaawards.gov.au</a></li>
+    <li><a href="http://www.timeshighereducation.co.uk" rel="noopener" target="_blank">www.timeshighereducation.co.uk</a></li>
+    <li><a href="http://www.ieaa.org.au" rel="noopener" target="_blank">www.ieaa.org.au</a></li>
+    <li><a href="http://www.smartestinvestment.com.au" rel="noopener" target="_blank">www.smartestinvestment.com.au</a></li>
+    <li><a href="http://www.studyinaustralia.gov.au" rel="noopener" target="_blank">www.studyinaustralia.gov.au</a></li>
 </ol>
 ',
                 'order' => 0,
@@ -87,16 +87,16 @@ The academic requirements (including evidence of English language skills) you ne
 
 <ul>
     <li>Issued an electronic Confirmation of Enrolment (eCoE) certificate.</li>
-    <li>Meet the Genuine Temporary Entrant requirement. Read more about this on the <a href="http://www.immi.gov.au/students/knight/">Department of Immigration and Border Protection</a> website.</li>
+    <li>Meet the Genuine Temporary Entrant requirement. Read more about this on the <a href="http://www.immi.gov.au/students/knight/" rel="noopener" target="_blank">Department of Immigration and Border Protection</a> website.</li>
     <li>Sufficient funds for airfares, course fees and living costs.</li>
     <li>English language proficiency.</li>
     <li>Meet health and character requirements.</li>
     <li>Acceptable Overseas Student Health Cover (OSHC).</li>
 </ul>
 
-<p>Read more about the <a href="http://www.immi.gov.au/allforms/pdf/applying-student.pdf">Student Visa Key Requirements</a></p>
+<p>Read more about the <a href="http://www.immi.gov.au/allforms/pdf/applying-student.pdf" rel="noopener" target="_blank">Student Visa Key Requirements</a></p>
 
-<p>The <a href="http://www.immi.gov.au/">DIBP</a> website provides detailed information on student visas. It also has a <a href="http://www.immi.gov.au/visawizard/">Visa Wizard</a> to help you identify which visa you might be eligible for.</p>
+<p>The <a href="http://www.immi.gov.au/" rel="noopener" target="_blank">DIBP</a> website provides detailed information on student visas. It also has a <a href="http://www.immi.gov.au/visawizard/" rel="noopener" target="_blank">Visa Wizard</a> to help you identify which visa you might be eligible for.</p>
 
 <p><strong>Overseas Student Health Cover</strong><br />
 Australia has a special system of health cover for international students called Overseas Student Health Cover (OSHC). It will help you pay for medical or hospital care you may need while you&#39;re studying in Australia; it will also contribute towards the cost of most prescription medicines and an ambulance in an emergency. When studying in Australia, you will need OSHC for yourself, and any family travelling with you, before you arrive. It is a requirement of your student visa that you maintain OSHC for the duration of your time on a student visa in Australia.</p>
@@ -106,7 +106,7 @@ Australia has a special system of health cover for international students called
 <p><strong>Sources:&nbsp;</strong></p>
 
 <ul>
-    <li><a href="http://www.studyinaustralia.gov.au/global/apply-to-study/entry-requirements/entry-requirements">http://www.studyinaustralia.gov.au</a></li>
+    <li><a href="http://www.studyinaustralia.gov.au/global/apply-to-study/entry-requirements/entry-requirements" rel="noopener" target="_blank">http://www.studyinaustralia.gov.au</a></li>
 </ul>
 ',
                 'order' => 1,
@@ -148,14 +148,14 @@ The Department of Immigration and Border Protection has financial requirements y
     <li><strong>Every other child</strong> - $2,790</li>
 </ul>
 
-<p>All costs are per year in Australian dollars. To convert to your own currency, visit <a href="http://www.xe.com/">http://www.xe.com</a></p>
+<p>All costs are per year in Australian dollars. To convert to your own currency, visit <a href="http://www.xe.com/" rel="noopener" target="_blank">http://www.xe.com</a></p>
 
-<p>The Australian Government provides information and guidance on managing your finances. You can read more at <a href="http://www.moneysmart.gov.au">www.moneysmart.gov.au</a></p>
+<p>The Australian Government provides information and guidance on managing your finances. You can read more at <a href="http://www.moneysmart.gov.au" rel="noopener" target="_blank">www.moneysmart.gov.au</a></p>
 
 <p>If you experience financial trouble while in Australia, talk to your institution&#39;s international student support staff for assistance.</p>
 
 <p><strong>Sources:&nbsp;</strong><br />
-<a href="http://www.studyinaustralia.gov.au/global/live-in-australia/living-costs/living-costs-in-australia">http://www.studyinaustralia.gov.au</a></p>
+<a href="http://www.studyinaustralia.gov.au/global/live-in-australia/living-costs/living-costs-in-australia" rel="noopener" target="_blank">http://www.studyinaustralia.gov.au</a></p>
 ',
                 'order' => 2,
             ],
@@ -185,7 +185,7 @@ Australia has a wide range of industries and many have part time employment oppo
 Paid or unpaid internships can be a great way to get exposure to the professional, financial and creative industries. Learn more about getting an internship on the Internships page in the Education System section of this website.</p>
 
 <p><strong>Volunteering</strong><br />
-There are many charities and non-government organisations (NGOs) in Australia and they always need volunteers to help out. It can be a great way to meet friends, get some hands on work experience and give back to the community. To find out more about volunteering, start your search at: <a href="http://www.govolunteer.com.au/">http://www.govolunteer.com.au</a></p>
+There are many charities and non-government organisations (NGOs) in Australia and they always need volunteers to help out. It can be a great way to meet friends, get some hands on work experience and give back to the community. To find out more about volunteering, start your search at: <a href="http://www.govolunteer.com.au/" rel="noopener" target="_blank">http://www.govolunteer.com.au</a></p>
 
 <p><strong>Your rights</strong><br />
 Everyone working in Australia, including international students or those on working holiday visas, have basic rights at work. These rights protect entitlement to:</p>
@@ -197,9 +197,9 @@ Everyone working in Australia, including international students or those on work
     <li>A healthy and safe work environment.</li>
 </ul>
 
-<p>Most employers in Australia are covered by an &#39;award&#39;, which sets minimum wages and conditions for a given field of work or industry. To find out more about your work rights visit the Australian Government&#39;s <a href="http://www.fairwork.gov.au/internationalstudents">Fair Work</a> website.</p>
+<p>Most employers in Australia are covered by an &#39;award&#39;, which sets minimum wages and conditions for a given field of work or industry. To find out more about your work rights visit the Australian Government&#39;s <a href="http://www.fairwork.gov.au/internationalstudents" rel="noopener" target="_blank">Fair Work</a> website.</p>
 
-<p>You will also need to get a tax file number to work in Australia. Visit the <a href="http://www.ato.gov.au/">Australian Taxation Office</a> website to find out more information on getting a tax file number, as well as information about paying taxes in Australia.</p>
+<p>You will also need to get a tax file number to work in Australia. Visit the <a href="http://www.ato.gov.au/" rel="noopener" target="_blank">Australian Taxation Office</a> website to find out more information on getting a tax file number, as well as information about paying taxes in Australia.</p>
 
 <p><strong>Finding work</strong><br />
 There are plenty of ways to find work that suits you, including:</p>
@@ -214,7 +214,7 @@ There are plenty of ways to find work that suits you, including:</p>
 
 <p><strong>Sources:&nbsp;</strong></p>
 
-<p><a href="http://www.studyinaustralia.gov.au/global/live-in-australia/working/work-while-you-study">http://www.studyinaustralia.gov.au</a><br />
+<p><a href="http://www.studyinaustralia.gov.au/global/live-in-australia/working/work-while-you-study" rel="noopener" target="_blank">http://www.studyinaustralia.gov.au</a><br />
 &nbsp;</p>
 ',
                 'order' => 3,
@@ -235,7 +235,7 @@ There are plenty of ways to find work that suits you, including:</p>
 <p>Why wouldn&#39;t you want to experience the best Australia has to offer?</p>
 
 <p><strong>Sources:&nbsp;</strong><br />
-<a href="http://www.studyinaustralia.gov.au/global/apply-to-study/entry-requirements/entry-requirements">http://www.studyinaustralia.gov.au</a></p>
+<a href="http://www.studyinaustralia.gov.au/global/apply-to-study/entry-requirements/entry-requirements" rel="noopener" target="_blank">http://www.studyinaustralia.gov.au</a></p>
 ',
                 'order' => 4,
             ],
@@ -245,7 +245,7 @@ There are plenty of ways to find work that suits you, including:</p>
                 'description' => '<p>There are several classes of student visas for Australia - the one you need depends on the type of study (eg: English language course, graduate degree, vocational training,higher education, etc.) you are planning to undertake.</p>
 
 <p>Student visa options<br />
-Below is the list of the student visas currently available. For more detail on each visa, visit the <a href="http://www.immi.gov.au/students/students/chooser/">Department of Immigration and Border Protection (DIBP)</a> :</p>
+Below is the list of the student visas currently available. For more detail on each visa, visit the <a href="http://www.immi.gov.au/students/students/chooser/" rel="noopener" target="_blank">Department of Immigration and Border Protection (DIBP)</a> :</p>
 
 <ul>
     <li>Independent ELICOS (Subclass 570).</li>
@@ -280,7 +280,7 @@ Working Holiday Visa (Subclass 417)</p>
     <li>Sufficient funds for airfares and personal support for stay in Australia.</li>
 </ul>
 
-<p>Read more about <a href="http://www.immi.gov.au/visitors/working-holiday/">Working Holiday Visas</a> on the DIBP website.<br />
+<p>Read more about <a href="http://www.immi.gov.au/visitors/working-holiday/" rel="noopener" target="_blank">Working Holiday Visas</a> on the DIBP website.<br />
 Student Guardian (Subclass 580)</p>
 
 <ul>
@@ -292,7 +292,7 @@ Student Guardian (Subclass 580)</p>
     <li>Acceptable health insurance.</li>
 </ul>
 
-<p>Read more about <a href="http://www.immi.gov.au/students/student_guardians/580/">Student Guardian visas</a> on the DIBP website.<br />
+<p>Read more about <a href="http://www.immi.gov.au/students/student_guardians/580/" rel="noopener" target="_blank">Student Guardian visas</a> on the DIBP website.<br />
 Temporary Graduate (Subclass 485)</p>
 
 <ul>
@@ -304,7 +304,7 @@ Temporary Graduate (Subclass 485)</p>
     <li>You must meet the specific requirements of the stream in which you are applying for this visa.</li>
 </ul>
 
-<p>Read more about <a href="http://www.immi.gov.au/Visas/Pages/485">Temporary Graduate visas</a> on the DIBP website.</p>
+<p>Read more about <a href="http://www.immi.gov.au/Visas/Pages/485" rel="noopener" target="_blank">Temporary Graduate visas</a> on the DIBP website.</p>
 
 <p>Visa options and requirements are sometimes subject to change. In order to stay up to date, the best place to get accurate information is on the <a href="http://www.immi.gov.au/">Department of Immigration and Border Protection website</a>. The website provides comprehensive information on the types of visas available for different levels of study in Australia, including people considering bring family members with them (whether guardians, partners/spouses or children). You will also have access to help and advice about your specific visa requirements.</p>
 
@@ -313,7 +313,7 @@ Temporary Graduate (Subclass 485)</p>
 <p>&nbsp;</p>
 
 <p><strong>Sources:&nbsp;</strong><br />
-<a href="http://www.studyinaustralia.gov.au/global/apply-to-study/visas/visa-information">http://www.studyinaustralia.gov.au</a><br />
+<a href="http://www.studyinaustralia.gov.au/global/apply-to-study/visas/visa-information" rel="noopener" target="_blank">http://www.studyinaustralia.gov.au</a><br />
 &nbsp;</p>
 ',
                 'order' => 5,
