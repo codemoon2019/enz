@@ -1097,6 +1097,9 @@
         }
     }
     .page-students {
+        .content-block {
+            padding-top: 29%;
+        }
         .gallery-block {
             padding: 80px 0;
         }
@@ -1114,7 +1117,8 @@
 
             .ph-flag {
                 top: -5%;
-                left: 0%
+                left: 0%;
+                height: 90%;
             }
             .title {
                 padding-left: 10%;
@@ -1226,7 +1230,7 @@
         }
     }
     .courses-block img {
-        height: auto;
+        height: 90%;
     }
     .page-about-company .content-block .plane {
         display: block !important;

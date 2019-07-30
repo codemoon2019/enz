@@ -841,7 +841,7 @@ iframe{
     .content-block {
         margin-top: -17%;
         position: relative;
-        padding-top: 21%;
+        padding-top: 23%;
         background: url(/img/students/bg.png) no-repeat;
     }
     .testimonials-block {
@@ -980,7 +980,7 @@ iframe{
         img {
             max-height: 100%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 35px;
         }
     }
