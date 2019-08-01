@@ -906,16 +906,6 @@
 
                             </div>
 
-                            <div class="form-group">
-
-                                <div style="width: max-content;" class="client-field" id="g-recaptcha-response-client">
-                                        
-                                    {!! Captcha::display() !!}
-                                
-                                </div>
-
-                            </div>
-
                         </div>
 
                     </div>
@@ -923,6 +913,16 @@
                 </div>
 
                 <div class=" text-center mb30">
+
+                        <div class="form-group">
+
+                            <div style="width: max-content;" class="client-field" id="g-recaptcha-response-client">
+                                    
+                                {!! Captcha::display() !!}
+                            
+                            </div>
+
+                        </div>
 
                     <button class="btn btnread-more text-uppercase btn-apply">Submit</button>
 
