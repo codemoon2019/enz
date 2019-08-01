@@ -40,25 +40,29 @@
 	                
 	                <div class="col-lg-3 col-md-6 item mb30">
 
-	                    <div class="card">
+                        <a href="{{ route('frontend.news.show', $news->slug) }}">
 
-	                        <div class="card-header p0">
+    	                    <div class="card">
 
-	                            <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="">
+    	                        <div class="card-header p0">
 
-	                        </div>
+    	                            <img class="img-fluid" data-src="{{ $news->getFirstMediaUrl('featured', 'main') }}" alt="">
 
-	                        <div class="card-body news-details">
+    	                        </div>
 
-	                            <h3 class="card-title">{{ str_limit($news->title, 40) }}</h3>
+    	                        <div class="card-body news-details">
 
-                                <p class="card-text">{{ $news->published_at->format('M d, Y') }}</p>
+    	                            <h3 class="card-title">{{ str_limit($news->title, 40) }}</h3>
 
-	                            <a href="{{ route('frontend.news.show', $news->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
+                                    <p class="card-text">{{ $news->published_at->format('M d, Y') }}</p>
 
-	                        </div>
+    	                            <a href="{{ route('frontend.news.show', $news->slug) }}" class="read-more text-blue text-uppercase">Read more</a>
 
-	                    </div>
+    	                        </div>
+
+    	                    </div>
+                            
+                        </a>
 
 	                </div>
 				

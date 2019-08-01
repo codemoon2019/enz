@@ -10,7 +10,7 @@
         @slot('secondary_title', 'Course Inquiries')
 
         @slot('links')
-            @include($viewPath . '.partials.links')
+            {{-- @include($viewPath . '.partials.links') --}}
         @endslot
         @slot('headers')
             <td>School</td>
