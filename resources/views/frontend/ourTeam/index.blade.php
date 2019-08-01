@@ -44,6 +44,8 @@
 
                             $image = $person->getFirstMediaUrl('featured', 'main');
 
+                            $other = $person->getFirstMediaUrl('other', 'main');
+
                         @endphp
 
 						<img
@@ -54,6 +56,8 @@
                              data-title="{{ $person->title }}" 
 
                              data-image="{{ $image }}" 
+
+                             data-other="{{ $other }}" 
                              
                              data-email="{{ $person->email }}" 
                              
@@ -89,6 +93,8 @@
                             
                                 <p class="basic fs18 text-black" id="person-position"></p>
 
+                                <img src="" style="border-radius:0px;" id="person-other" alt="" class="img-fluid">
+
                                 <p class="basic fs18 text-black text-justify" id="person-description"></p>
 
                                 <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
@@ -120,6 +126,8 @@
         let el = $(this);
 
         $('#person-image').attr('src', el.attr('data-image'));
+
+        $('#person-other').attr('src', el.attr('data-other'));
 
         $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
 
