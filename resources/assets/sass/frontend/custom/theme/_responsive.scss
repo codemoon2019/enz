@@ -1108,6 +1108,7 @@
         padding-left: 10%;
     }
     .page-students.gallery .slider-for .slick-slide img {
+        object-fit: contain;
         max-height: 365px;
         width: 100%;
     }
@@ -1264,7 +1265,7 @@
         padding-left: 10%;
     }
     .page-students.gallery .slider-for .slick-slide img {
-        max-height: 500px;
+        max-height: 600px;
         width: 100%;
     }
     .page-contact {
