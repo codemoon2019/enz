@@ -10,7 +10,7 @@
         @slot('secondary_title', 'Migration Visa Management')
 
         @slot('links')
-            @include($viewPath . '.partials.links')
+            {{-- @include($viewPath . '.partials.links') --}}
         @endslot
         @slot('headers')
             <td>Fullname</td>

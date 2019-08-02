@@ -36,10 +36,14 @@
                    href="{{ route('admin.applications.index') }}"><i class="nav-icon fa fa-envelope"></i>Applications</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/migration-visas')) }}"
-                   href="{{ route('admin.migration-visas.index') }}"><i class="nav-icon fa fa-envelope"></i>Migration Visas</a>
-            </li>
+            @can(app(App\Models\MigrationVisa\MigrationVisa::class)::permission('index'))
+
+                <li class="nav-item">
+                    <a class="nav-link {{ active_class(Active::checkUriPattern('admin/migration-visas')) }}"
+                       href="{{ route('admin.migration-visas.index') }}"><i class="nav-icon fa fa-envelope"></i>Migration Visas</a>
+                </li>
+
+            @endcan
 
             <li class="nav-item">
                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/events-inquiries')) }}"
