@@ -15,6 +15,16 @@
         <h1 class="title fs35">{{ $model->title }}</h1>
 
         <p class="fs15">Published At: {{ $model->published_at->format('F d, Y') }}</p>
+        <div class="share clearfix mb30">
+            <p class="fs15">Share:</p>
+            <div class="row">
+                <div class="col-sm-2 item">
+                    <button type="button" class="btn btn-primary">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+            </div>
+        </div>
 
         {{-- <div class="sharethis-inline-share-buttons"></div> --}}
 
@@ -40,6 +50,12 @@
         </div>
 
         @include('frontend.includes.templates.index')
+
+        <div class="share clearfix mb30">
+            <button type="button" class="btn btn-primary">
+                Notifications 
+            </button>
+        </div>
 
     </div>
 

@@ -147,11 +147,13 @@
     @stack('after-scripts')
     <script async defer type="text/javascript">
     (function() {
-    var phplive_e_1480051776 = document.createElement("script") ;
-    phplive_e_1480051776.type = "text/javascript" ;
-    phplive_e_1480051776.async = true ;
-    phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
-    document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
+        setTimeout(function() {
+            var phplive_e_1480051776 = document.createElement("script") ;
+            phplive_e_1480051776.type = "text/javascript" ;
+            phplive_e_1480051776.async = true ;
+            phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
+            document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
+        },3000)
     })() ;
     </script>
     @include('includes.partials.ga')
