@@ -280,7 +280,8 @@ iframe{
     // }
 
 }
-.tourist-visa {
+.tourist-visa,
+.migration-visa {
     .content-block {
         margin-top: -14.5%;
         position: relative;
@@ -333,6 +334,12 @@ iframe{
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
         }
+    }
+}
+
+.migration-visa {
+    .questions {
+        display: none;
     }
 }
 

@@ -311,9 +311,38 @@
     .btn {
         width: 100%;
         text-align: left;
+        color: #fff;
         .fa {
-            font-size: 18px;
+            font-size: 24px;
             vertical-align: bottom;
+        }
+    }
+    .sh-fb {
+        background-color: #3b5998;
+        border-color:#3b5998;
+        transition: all ease 300ms;
+        &:hover,
+        &:active {
+            background: transparent;
+            color: #3b5998;
+            transition: all ease 300ms;
+        }
+    }
+    .sh-tw {
+        background-color: #00acee;
+        border-color:#00acee;
+        transition: all ease 300ms;
+        &:hover,
+        &:active {
+            background: transparent;
+            color: #00acee;
+            transition: all ease 300ms;
+        }
+    }
+    .row {
+        margin: 0 -7.5px;
+        > div {
+            padding: 0 7.5px;
         }
     }
 }

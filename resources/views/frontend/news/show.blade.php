@@ -16,11 +16,16 @@
 
         <p class="fs15">Published At: {{ $model->published_at->format('F d, Y') }}</p>
         <div class="share clearfix mb30">
-            <p class="fs15">Share:</p>
+            <p class="fs15 mb0">Share:</p>
             <div class="row">
                 <div class="col-sm-2 item">
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn sh-fb">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-sm-2 item">
+                    <button type="button" class="btn sh-tw">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i> 
                     </button>
                 </div>
             </div>
@@ -52,9 +57,19 @@
         @include('frontend.includes.templates.index')
 
         <div class="share clearfix mb30">
-            <button type="button" class="btn btn-primary">
-                Notifications 
-            </button>
+            <p class="fs15 mb0">Share:</p>
+            <div class="row">
+                <div class="col-sm-2 item">
+                    <button type="button" class="btn sh-fb">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-sm-2 item">
+                    <button type="button" class="btn sh-tw">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+            </div>
         </div>
 
     </div>

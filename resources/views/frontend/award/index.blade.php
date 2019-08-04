@@ -31,7 +31,9 @@
                         <img alt="" class="img-fluid" src="{{ $award->getFirstMediaUrl('featured') }}" style="">
 
                     </div>
-                
+                    
+                    <h3 class="title basic text-black">{{ $award->title }}</h3>
+
                     <div class="basic">
                         
                         {!! $award->description !!}
