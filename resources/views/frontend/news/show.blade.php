@@ -18,12 +18,12 @@
         <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
             <div class="row">
-                <div class="col-sm-2 item">
+                <div class="col-2 item">
                     <button type="button" class="btn sh-fb">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i> 
                     </button>
                 </div>
-                <div class="col-sm-2 item">
+                <div class="col-2 item">
                     <button type="button" class="btn sh-tw">
                         <i class="fa fa-twitter-square" aria-hidden="true"></i> 
                     </button>
@@ -59,12 +59,12 @@
         <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
             <div class="row">
-                <div class="col-sm-2 item">
+                <div class="col-2 item">
                     <button type="button" class="btn sh-fb">
                         <i class="fa fa-facebook-square" aria-hidden="true"></i> 
                     </button>
                 </div>
-                <div class="col-sm-2 item">
+                <div class="col-2 item">
                     <button type="button" class="btn sh-tw">
                         <i class="fa fa-twitter-square" aria-hidden="true"></i> 
                     </button>
