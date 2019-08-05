@@ -339,7 +339,7 @@
 
                         @endcan --}}
                         
-                        @can(app(App\Models\Core\Slide\Slide::class)::permission('index'))
+                        {{-- @can(app(App\Models\Core\Slide\Slide::class)::permission('index'))
 
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/slides*')) }}"
@@ -348,7 +348,7 @@
                                 </a>
                             </li>
 
-                        @endcan
+                        @endcan --}}
                         @can(app(App\Models\Core\Menu\Menu::class)::permission('index'))
 
                             <li class="nav-item">
