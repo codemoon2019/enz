@@ -24,8 +24,28 @@
                     </button>
                 </div>
                 <div class="col-2 item">
+                    <button type="button" class="btn sh-pin">
+                        <i class="fa fa-pinterest-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
                     <button type="button" class="btn sh-tw">
                         <i class="fa fa-twitter-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-tum">
+                        <i class="fa fa-tumblr-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-email">
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-cp">
+                        <i class="fa fa-link" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -65,8 +85,28 @@
                     </button>
                 </div>
                 <div class="col-2 item">
+                    <button type="button" class="btn sh-pin">
+                        <i class="fa fa-pinterest-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
                     <button type="button" class="btn sh-tw">
                         <i class="fa fa-twitter-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-tum">
+                        <i class="fa fa-tumblr-square" aria-hidden="true"></i> 
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-email">
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-2 item">
+                    <button type="button" class="btn sh-cp">
+                        <i class="fa fa-link" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
