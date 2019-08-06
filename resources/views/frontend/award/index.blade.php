@@ -9,8 +9,14 @@
     <h1 class="title fs40 text-center">Awards</h1>
 
     <div class="basic text-black text-center">
+
+        @php
         
-        {!! $page->description !!}
+            $why= findWhies('awards');
+
+        @endphp
+        
+        {!! $why->description !!}
 
     </div>
 

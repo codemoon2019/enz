@@ -22,6 +22,7 @@ use App\Models\Career\Career;
 use App\Models\Institution\Institution;
 use App\Models\AreaOfStudy\AreaOfStudy;
 use App\Models\Location\Location;
+use App\Models\Award\Award;
 use App\Models\SuccessPercentage\SuccessPercentage;
 
 /*
@@ -522,6 +523,15 @@ if (!function_exists('Whies')) {
         return Why::orderBy('order')->get();
     }
 }
+
+if (!function_exists('findWhies')) {
+    function findWhies($slug)
+    {
+        return Why::whereSlug($slug)->first();
+    }
+}
+
+
 
 if (!function_exists('OurTeam')) {
     function OurTeam()
