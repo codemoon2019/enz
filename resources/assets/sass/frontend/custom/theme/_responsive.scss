@@ -1273,6 +1273,7 @@
     .page-students.gallery .slider-for .slick-slide img {
         max-height: 600px;
         width: 100%;
+        object-fit: contain;
     }
     .page-contact {
         .content-block .for-banner {
