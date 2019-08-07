@@ -77,7 +77,7 @@
 
                 <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
 
-                <div class="modal fade" id="myModal">
+                <div class="modal fade" id="myModal" tabindex='-1'>
 
                     <div class="modal-dialog">
                     
