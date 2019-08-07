@@ -280,7 +280,8 @@ iframe{
     // }
 
 }
-.tourist-visa {
+.tourist-visa,
+.migration-visa {
     .content-block {
         margin-top: -14.5%;
         position: relative;
@@ -333,6 +334,12 @@ iframe{
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
         }
+    }
+}
+
+.migration-visa {
+    .questions {
+        display: none;
     }
 }
 
@@ -952,7 +959,7 @@ iframe{
             }
         }
         .overlay {
-            opacity: 0;
+            opacity: 1;
             transition: all ease 300ms;
             border-radius: 35px;
             .album-title {
@@ -960,11 +967,10 @@ iframe{
                 align-items: center;
                 height: 100%;
             }
-            &:hover {
-                opacity: 1;
-                transition: all ease 300ms;
-            }
         }
+    }
+    .modal-content {
+        border-radius: 35px;
     }
 }
 
@@ -1006,9 +1012,7 @@ iframe{
     .slick-dots li button {
         display: none;
     }
-    .modal-content {
-        border-radius: 35px;
-    }
+    
 }
 .page-contact {
     #main {

@@ -869,6 +869,12 @@
     .page-students.gallery .slider-nav .slick-slide {
         padding: 0;
     }
+    .migration-visa .footer .know-more {
+        padding-top: 30px !important;
+        background-image: linear-gradient(#00bacf, #008db0) !important;
+        margin-top: 0;
+        padding-bottom: 30% !important;
+    }
 
 }
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
@@ -1267,6 +1273,7 @@
     .page-students.gallery .slider-for .slick-slide img {
         max-height: 600px;
         width: 100%;
+        object-fit: contain;
     }
     .page-contact {
         .content-block .for-banner {
