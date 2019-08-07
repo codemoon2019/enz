@@ -625,6 +625,13 @@ if (!function_exists('TestimonialVideo')) {
     }
 }
 
+if (!function_exists('ActiveTestimonialVideo')) {
+    function ActiveTestimonialVideo()
+    {
+        return Testimonial::whereStatus('enable')->whereType('video')->orderBy('order')->get();
+    }
+}
+
 if (!function_exists('findInformation')) {
     function findInformation($key)
     {

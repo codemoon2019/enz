@@ -174,7 +174,7 @@
 
             <div class="slick-slider">
 
-                @foreach (TestimonialVideo() as $testimonial)
+                @foreach (ActiveTestimonialVideo() as $testimonial)
 
                     <div class="item">
 
