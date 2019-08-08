@@ -35,271 +35,151 @@
     </div>
     
     <div class="block content-block">
-    
-        <div class="container-fluid py80 px180 text-center">
-    
-            <div class="row justify-content-center">
-        
-                @foreach (Country() as $key => $country)
-    
-                    <div class="col-sm-4 item mb30">
-    
-                        <a href="{{ route('frontend.countries.show', $country->slug) }}" class="nav-link">
+
+        <div class="container-fluid px420">
+
+            <h2 class="title text-black text-center">Services Offered</h2>
+
+			<div class="row justify-content-center">
+
+				
+                <div class="col-md-4 text-center mb30">
+                    <div class="svg-holder mb20 mx-auto">
+                        
+                        <img
+                            data-src="https://cdn.runrepeat.com/i/new-balance/17486/new-balance-men-s-vazee-pace-run-shoe-m-black-red-12-d-us-black-red-9d08-main.jpg" 
                             
-                            <div class="card">
-    
-                                <img class="img-fluid card-img-top" data-src="{{ $country->getFirstMediaUrl('featured', 'main') }}" alt="">
-    
-                                <div class="card-footer linear-gradient-{{ $country->color }}">
-    
-                                    <h2 class="card-title text-white text-uppercase mb0 fs24">{{ $country->title }}</h2>
-    
-                                </div>
-    
-                            </div>
-                        </a>
-    
+                            alt="" class="img-fluid mb20 person-modal cursor-pointer" 
+                            
+                            data-title="" 
+
+                            data-image="https://cdn.runrepeat.com/i/new-balance/17486/new-balance-men-s-vazee-pace-run-shoe-m-black-red-12-d-us-black-red-9d08-main.jpg" 
+
+                            data-other="" 
+                            
+                            data-email="" 
+                            
+                            data-position="" 
+
+                            data-description="" 
+                            
+                            data-contact="">
+                        
                     </div>
-    
-                @endforeach
-    
-            </div>
-    
-        </div>
-    
-    </div>
-    
-    <div class="modal fade" id="myModal">
-    
-        <div class="modal-dialog">
-        
-            <div class="modal-content">
-    
-            
-                <div class="modal-body p0">
                     
-                    <div class="block application-block">
-                        
-                        <div class="item">
+                    <h3 class="title fs18 text-black">Service Name</h3>
+                    
+                </div>
+                    
+
+                <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
+
+                <div class="modal fade" id="myModal" tabindex='-1'>
+
+                    <div class="modal-dialog">
+                    
+                        <div class="modal-content">
+
+                            <div class="modal-body text-center">
+
+                                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+
+                                <img src="" id="person-image" alt="" class="img-fluid mb20">
+
+                                <h2 class="title fs18 text-black" id="person-title"></h2>
                             
-                            <div class="card text-left">
-                                
-                                <div class="card-header linear-gradient-teal">
-                                    
-                                    <button type="button" class="close pull-right text-white" data-dismiss="modal">&times;</button>
-                                    
-                                    <h2 class="card-title fs18 text-white mb0">Inquire now</h2>
-                    
-                                </div>
-                    
-                                <div class="card-body relative linear-gradient-grey">
-                
-                                    <form class="form" action="{{ route('frontend.tourist-visa-inquiries.inquiry') }}" method="post" id="tourist-inquiry-form">
-                                        
-                                        {{ csrf_field() }}
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="first_name" id="tourist_first_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="last_name" id="tourist_last_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Profession <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="profession" id="tourist_profession" placeholder="">
-                
-                                        </div>
+                                <p class="basic fs18 text-black" id="person-position"></p>
 
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
-                
-                                            <input type="email" class="form-control tourist-inquiry-field" name="email_address" id="tourist_email_address" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="mobile_number" id="tourist_mobile_number" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Location <span class="text-danger">*</span></label>
-    
-                                            <select name="country_to_visit" id="tourist_country_to_visit" class="form-control tourist-inquiry-field">
-                                                <option selected disabled></option>
-                                                <option>Australia</option>
-                                                <option>New Zealand</option>
-                                                <option>Canada</option>
-                                            </select>
-                
-                                            {{-- <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder=""> --}}
-                
-                                        </div> 
-                
-            
-                                        <div class="form-group">
-            
-                                            <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
-            
-                                            <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
-            
-                                        </div>
+                                <img src="" style="border-radius:0px;" id="person-other" alt="" class="img-fluid">
 
-                                        <div class="form-group">
-            
-                                            <label class="title fs14 text-black" for="">Would you like to book for a formal legal assessment? <span class="text-danger">*</span></label><br />
-            
-                                            <label class="control control--radio">Yes
-                                                <input type="radio" name="consultation" checked="checked" value="Yes"> <div class="control__indicator"></div>
-                                            </label>
-                                            <label class="control control--radio">No
-                                                <input type="radio" name="consultation" checked="checked" value="No"> <div class="control__indicator"></div>
-                                            </label>
-            
-                                        </div>
+                                <p class="basic fs18 text-black text-justify" id="person-description"></p>
 
-                                        <div class="form-group">
-                                            <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label>
-                                            <br> 
-                                            <input type="file" name="resume" id="file_resume" data-multiple-caption="{count} files selected" class="inputfile"> 
-                                            <label id="resume" for="file_resume" class="btn btnread-more text-uppercase inquiry-field" style="height: auto;"><span>Choose file</span></label> 
-                                            <span class="contact-resume fs12" style="color: red;"></span>
-                                        </div>
-            
-                                        <div class="form-group text-center">
-    
-                                            <div style="width: max-content;" class="tourist-inquiry-field" id="tourist_g-recaptcha-response">
-    
-                                                {!! Captcha::display() !!}
-    
-                                            </div>
-            
-                                        </div>
-    
-                                        <div class=" text-center">
-    
-                                            <button type="button" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</button>
-                    
-                                        </div>
-                
-                                    </form>
-                    
-                                </div>
-                        
+                                <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
+
+                                <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
+
                             </div>
-                    
+                            
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
     
-            </div>
-    
+            </div>  
+
         </div>
-    
+
     </div>
+    {{-- @include('frontend.core.block.templates.news')     --}}
+
 @endsection
     
-    @push('after-scripts')
+@push('after-scripts')
+
+<script>
     
-    <script>
-        
-        $('.tourist-inquiry-submit').click(function(){
-    
-            el = $(this);
-    
-            el.attr('disabled', true).html('Please wait..');
-    
-            $('.tourist-inquiry-field').css('border', 'unset');
-    
-            $('#tourist-inquiry-form').ajaxForm({
-    
-                success: function(){
-    
-                    location.reload();
-    
-                    // alert();
-                  // location.href = '/thank-you';
-    
-                }, error: function(data){
-    
-                    grecaptcha.reset();
-                    
-                    el.attr('disabled', false).html('Submit');
-    
-                    $.each(data.responseJSON['errors'], function(k, v){
-    
-                        $('#tourist_' + k).css('border', '2px solid #d27070');
-    
-                    });
-    
-    
-                }
-    
-            }).submit();
-    
-            // $('.tourist-inquiry-field').css('border', 'unset');
-    
-            // let fields = ['tourist_first_name', 'tourist_last_name', 'tourist_email_address', 'tourist_mobile_number', 'tourist_country_to_visit', 'tourist_inquiry'];
-    
-            // let submit = true;
-    
-            // $.each(fields, function(k, v){
-    
-            //     el = $('#' + v);
-    
-            //     if (el.val() == null || el.val() == '') {
-    
-            //         el.css('border', '2px solid #d27070');
-    
-            //         submit = false;
-    
-            //     }
-    
-            //     if (v == 'tourist_email_address') {
-    
-            //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-            //         if (! re.test(String(el.val()).toLowerCase())) {
-                        
-            //             el.css('border', '2px solid #d27070');
-    
-            //             submit = false;
-    
-            //         }
-    
-            //     }
-    
-            // });
-    
-    
-            // if (submit) {
-    
-            //     $('#tourist-inquiry-form').submit();
+    $('.tourist-inquiry-submit').click(function(){
+
+        el = $(this);
+
+        el.attr('disabled', true).html('Please wait..');
+
+        $('.tourist-inquiry-field').css('border', 'unset');
+
+        $('#tourist-inquiry-form').ajaxForm({
+
+            success: function(){
+
+                location.reload();
+
+                // alert();
+                // location.href = '/thank-you';
+
+            }, error: function(data){
+
+                grecaptcha.reset();
                 
-            // }
-    
-        });
-    
-    </script>
-    
-    
-    @endpush
+                el.attr('disabled', false).html('Submit');
+
+                $.each(data.responseJSON['errors'], function(k, v){
+
+                    $('#tourist_' + k).css('border', '2px solid #d27070');
+
+                });
+
+
+            }
+
+        }).submit();
+    });
+
+    $('.person-modal').click(function(){
+
+        let el = $(this);
+
+        $('#person-image').attr('src', el.attr('data-image'));
+
+        $('#person-other').attr('src', el.attr('data-other'));
+
+        $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
+
+        $('#person-contact').html(el.attr('data-contact'));
+
+        $('#person-position').html(el.attr('data-position'));
+
+        $('#person-title').html(el.attr('data-title'));
+
+        $('#person-description').html(el.attr('data-description'));
+
+        $('.modal-trigger').trigger('click');
+
+    });
+
+    var someText="";
+
+    $('.questions .title').html('Consult us');
+    $("<p class='basic text-center'>To discover keme keme</p> <p class='basic text-center'><a href='#' rel='noopener' target='_blank'>ENZ keme keme</a></p>").insertBefore('.questions .title');
+
+</script>
+@endpush

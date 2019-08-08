@@ -88,7 +88,8 @@ iframe{
     }
 }
 
-.page-about-team {
+.page-about-team,
+.migration-visa {
     .content-block {
         margin-top: -17%;
         position: relative;
@@ -280,8 +281,7 @@ iframe{
     // }
 
 }
-.tourist-visa,
-.migration-visa {
+.tourist-visa {
     .content-block {
         margin-top: -14.5%;
         position: relative;
@@ -334,12 +334,6 @@ iframe{
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
         }
-    }
-}
-
-.migration-visa {
-    .questions {
-        display: none;
     }
 }
 
