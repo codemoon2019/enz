@@ -46,56 +46,62 @@ class ContactController extends Controller
     {
         $filename = null;
 
-        if ($request['resume'] != null) {
+        // if ($request['resume'] != null) {
 
-            $file = $request['resume'];
+        //     $file = $request['resume'];
 
-            $name = $file->getClientOriginalName();
+        //     $name = $file->getClientOriginalName();
 
-            $encrypt_name = Uuid::generate(4)->string;
+        //     $encrypt_name = Uuid::generate(4)->string;
 
-            $file->storeAs('public/inquiry', $encrypt_name);
+        //     $file->storeAs('public/inquiry', $encrypt_name);
 
-            $filename = json_encode([$name, $encrypt_name]);
+        //     $filename = json_encode([$name, $encrypt_name]);
 
-        }
+        // }
 
         $model = Inquiry::create([
 
             'full_name'     => $request['full_name'],
-            
+
             'profession'    => $request['profession'],
-            
+
             'email_address' => $request['email_address'],
-            
+
             'mobile_number' => $request['mobile_number'],
-            
+
             'location'      => $request['location'],
-            
+
             'inquiry'       => $request['inquiry'],
-            
+
             'consultation'  => $request['consultation'],
-            
+
             'country'       => $request['country'],
-            
-            'resume'        => $filename,
-        
+
+            // 'resume'        => $filename,
+
         ]);
+
+
+        $model->addMedia($request['resume'])
+        //TODO Find who call $request['resume'] then remove preserving original
+        ->preservingOriginal()
+        ->toMediaCollection("document");
 
         // 0 = User / 1 = Admin
 
         foreach ([0, 1] as $value) {
-            
+
             if ($value) {
 
                 switch ($model->country) {
-                    
+
                     case 'Australia': $email = 'australia@enzconsultancy.com'; break;
 
                     case 'Canada': $email = 'canada@enzconsultancy.com'; break;
-                    
+
                     default: $email = 'newzealand@enzconsultancy.com'; break;
-                
+
                 }
 
                 $details = ['to' => $email, 'subject' => 'STUDY PATHWAYS INQUIRY ('.$model->country.' - '.$request['full_name'].')', 'type' => $value];
@@ -103,7 +109,7 @@ class ContactController extends Controller
             }else{
 
                 $details = ['to' => $model->email_address, 'subject' => 'STUDY PATHWAYS INQUIRY ('.$model->country.')', 'type' => $value];
-                
+
             }
 
             Mail::send(new ContactEmail($model, $details));
@@ -111,8 +117,8 @@ class ContactController extends Controller
         }
 
         session()->flash('flash_success', 'Inquiry Submitted');
-        
-            
+
+
         // return redirect()->back()->withFlashSuccess('Inquiry Submitted');
 
     }

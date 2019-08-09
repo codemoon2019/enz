@@ -2,14 +2,19 @@
 
 namespace App\Models\Core;
 
+use App\Models\Traits\HasImageMediaTrait;
+
 use HalcyonLaravel\Base\Models\Model;
 use HalcyonLaravel\Base\Models\Traits\ModelTraits;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\Models\Media;
 
-class Inquiry extends Model
+class Inquiry extends Model implements HasMedia
 {
     use HasSlug;
+    use HasImageMediaTrait;
     use ModelTraits;
 
     public const MODULE_NAME = 'inquiry';
@@ -116,7 +121,7 @@ class Inquiry extends Model
 
         $action = '<a href="'.route('admin.inquiries.show', $this->slug).'"><i class="fa fa-search btn btn-primary btn-sm"></i></a>';
 
-        if ($this->resume != null) {
+        if ($this->getMedia('document')->count() > 0) {
 
             $action .= '<a target="_blank" href="'.route('admin.inquiries.download', $this->slug).'"><i class="fa fa-download btn btn-primary btn-sm"></i></a>';
 
@@ -124,6 +129,11 @@ class Inquiry extends Model
 
         return $action;
 
+    }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('document')->singleFile();
     }
 
 }

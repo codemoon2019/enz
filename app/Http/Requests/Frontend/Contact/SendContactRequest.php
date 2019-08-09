@@ -30,25 +30,26 @@ class SendContactRequest extends FormRequest
         $rules = [
 
             'full_name'            => 'required|max:255',
-            
+
             'profession'           => 'required|max:255',
-            
+
             'email_address'        => 'required|email|max:255',
-            
+
             'mobile_number'        => 'required',
-            
+
             'inquiry'              => 'required|max:255',
-            
+
             'location'             => 'required|max:255',
-            
+
             'country'              => 'required',
-            
+
             'resume'               => 'required|mimes:doc,pdf,docx,zip',
-            
-            'g-recaptcha-response' => 'required|captcha'
-        
         ];
-        
+
+        if (config('access.captcha.registration')) {
+             $rules['g-recaptcha-response'] = 'required|captcha';
+        }
+
         return $rules;
     }
 

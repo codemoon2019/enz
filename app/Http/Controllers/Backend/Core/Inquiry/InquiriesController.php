@@ -66,22 +66,42 @@ class InquiriesController extends BaseController
     public function download(string $routeKeyName)
     {
         $inquiry = Inquiry::whereSlug($routeKeyName)->first();
+        $media = $inquiry->getFirstMedia('document');
 
-        $resume = json_decode($inquiry->resume);
+        $this->manual($media->getPath(), $media->file_name, $media->mime_type);
 
-        $path = storage_path('app/public/inquiry/' . $resume[1]);
 
-        if (!File::exists($path)) {
-            abort(404);
-        }
+        // $resume = json_decode($inquiry->resume);
 
-        return response()->download($path, $resume[0]);
-       
+        // $path = storage_path('app/public/inquiry/' . $resume[1]);
+
+        // if (!File::exists($path)) {
+        //     abort(404);
+        // }
+
+        // return response()->download($path, $resume[0]);
+
     }
 
     public function export()
     {
         return Excel::download(new InquiryExport(), 'inquiries.xlsx');
+    }
+
+    private function manual(string $path, string $filename, string $mimeType)
+    {
+        header('Content-Type: '.$mimeType);
+        header("Content-Disposition: attachment; filename=\"".$filename."\";");
+        header('Content-Transfer-Encoding: binary');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        if (ob_get_contents()) {
+            ob_end_clean();
+        }
+        flush();
+        readfile($path); //showing the path to the server where the file is to be download
+        exit;
     }
 
 }
