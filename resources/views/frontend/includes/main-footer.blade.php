@@ -312,7 +312,7 @@
 
                       <li class="list-inline-item mb10">
       
-                        <a target="_black" href="{{ $social->value }}">
+                        <a target="_blank" href="{{ $social->value }}">
       
                             <img data-src="{{asset('svg/skype.svg')}}" class="img-fluid" alt="Skype">
       
@@ -363,7 +363,7 @@
   
         <!-- Modal Header -->
         <div class="modal-header linear-gradient-teal" style="border-top-left-radius: 1.3rem; border-top-right-radius: 1.3rem;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="reset" class="close" data-dismiss="modal">&times;</button>
         </div>
   
         <!-- Modal body -->

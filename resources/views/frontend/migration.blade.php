@@ -6,300 +6,244 @@
 
 <div class="banner-block banner relative">
 
-        <div class="container-fluid px180 pt50">
+    <div class="container-fluid px180 pt50">
+    
+        <div class="row">
+    
+            <div class="col-lg-7">
+    
+                <img data-src="{{asset('img/migration/banner.png')}}" class="img-fluid" alt="">
         
-            <div class="row">
+            </div>
         
-                <div class="col-lg-7">
+            <div class="col-lg-5 pt80">
         
-                    <img data-src="{{asset('img/services/banner.png')}}" class="img-fluid" alt="">
-            
-                </div>
-            
-                <div class="col-lg-5 pt80">
-            
-                    <h1 class="title title-large text-black mb30 text-capitalize">Migration Visas Services</h1>
-                    
-                    <p>Is Australia, New Zealand or Canada in your bucket list to visit this year? But before you head off to these beautiful countries, you need to have a visitor’s visa. </p>
-                    <p>ENZ is not only offering student visa, but we also cater tourist visa processing!</p>
-                    <p>To know more how you can tick off these places from your list, fill up the inquiry form below!</p>
+                <h1 class="title title-large text-black mb30 text-capitalize">Migration Visas Services</h1>
                 
-                    <a href="#" class="btn btnread-more text-uppercase" data-toggle="modal" class="modal-trigger" data-target="#myModal">Inquire now!</a>
-    
-                </div>
-    
+                <p>Australia has one of the strongest economies in the world, and after almost two consecutive decades of growth the unemployment rate has fallen to generational lows. As a result of nearly three decades of structural and policy reforms the Australian economy is flexible, resilient and increasingly integrated with global markets.</p>
+                <p>The strength of Australia’s economy has been highlighted in recent years by its ability to withstand a number of internal and external events, including a major drought, recessions in the USA, financial and economic crises in Asia and Latin America, and most recently the Global Financial Crisis.</p>
+                <p>Since 1991, Australia’s real economy has grown by an average of around 3.3 per cent a year, and combined with on-going investment in the economy, the mining boom, and demographic changes related to an aging population, there is a genuine on-going demand for skilled labour within the Australian economy that cannot be met by local supply.</p>
+                
             </div>
-    
+
         </div>
-    
+
     </div>
+</div>
     
-    <div class="block content-block">
     
-        <div class="container-fluid py80 px180 text-center">
-    
-            <div class="row justify-content-center">
+<div class="block content-block">
+    <div class="container-fluid px180">
+        <div class="row">
+            <div class="col-sm-7 left-content align-self-center">
+                <h2 class="title fs40 text-white mb10">
+                    <span class="fs30">Partnership with Migration Lawyer,</span><br />
+                    Nicholas Houston of VisAustralia
+                </h2>
+                <p>Nicholas Houston is a fully qualified Migration Lawyer admitted to practice law in Victoria in 1993. Previously to working at VisAustralia Nicholas Houston worked at the Department of Immigration (DIAC) as a Senior Legal Officer amending the Migration Regulations, the law upon which the Australian visa program is based.</p>
+                <p>Prior to establishing VisAustralia, Nicholas Houston worked as a Senior Legal Officer at the Department of Immigration in Canberra. As a Senior Legal Officer he was involved in transforming the details of Australian Government migration policy into legislation. The work involved comprehending both the policy implication of proposed changes but also the inner workings of the Migration Act 1958, the law upon which the Australian visa program is based.</p>
+            </div>
+            <div class="col-sm-5 left-content">
+                <img data-src="{{asset('img/migration/nic.png')}}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block-services container-fluid px420">
+
+    <h2 class="title text-nblue text-center">Services Offered</h2>
+
+    <div class="row justify-content-center">
+
         
-                @foreach (Country() as $key => $country)
-    
-                    <div class="col-sm-4 item mb30">
-    
-                        <a href="{{ route('frontend.countries.show', $country->slug) }}" class="nav-link">
-                            
-                            <div class="card">
-    
-                                <img class="img-fluid card-img-top" data-src="{{ $country->getFirstMediaUrl('featured', 'main') }}" alt="">
-    
-                                <div class="card-footer linear-gradient-{{ $country->color }}">
-    
-                                    <h2 class="card-title text-white text-uppercase mb0 fs24">{{ $country->title }}</h2>
-    
-                                </div>
-    
-                            </div>
-                        </a>
-    
-                    </div>
-    
-                @endforeach
-    
+        <div class="col-md-4 item text-center mb30">
+            <div class="svg-holder mb20 mx-auto">
+                
+                <img
+                    data-src="{{asset('svg/migration/skilled.svg')}}" 
+                    
+                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    
+                    data-title="" 
+
+                    data-image="{{asset('svg/migration/skilled.svg')}}" 
+
+                    data-other="" 
+                    
+                    data-email="" 
+                    
+                    data-position="" 
+
+                    data-description="" 
+                    
+                    data-contact="">
+                
             </div>
-    
+            
+            <h3 class="title fs18 text-black">Skilled Migration Visa</h3>
+            
         </div>
-    
-    </div>
-    
-    <div class="modal fade" id="myModal">
-    
+        <div class="col-md-4 item text-center mb30">
+            <div class="svg-holder mb20 mx-auto">
+                
+                <img
+                    data-src="{{asset('svg/migration/sponsored.svg')}}" 
+                    
+                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    
+                    data-title="" 
+
+                    data-image="{{asset('svg/migration/skilled.svg')}}" 
+
+                    data-other="" 
+                    
+                    data-email="" 
+                    
+                    data-position="" 
+
+                    data-description="" 
+                    
+                    data-contact="">
+                
+            </div>
+            
+            <h3 class="title fs18 text-black">Employer Sponsored Visa</h3>
+            
+        </div>
+        <div class="col-md-4 item text-center mb30">
+            <div class="svg-holder mb20 mx-auto">
+                
+                <img
+                    data-src="{{asset('svg/migration/study.svg')}}" 
+                    
+                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    
+                    data-title="" 
+
+                    data-image="{{asset('svg/migration/skilled.svg')}}" 
+
+                    data-other="" 
+                    
+                    data-email="" 
+                    
+                    data-position="" 
+
+                    data-description="" 
+                    
+                    data-contact="">
+                
+            </div>
+            
+            <h3 class="title fs18 text-black">Post Study Visa</h3>
+            
+        </div>
+
+    </div>  
+
+</div>
+<button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
+
+    <div class="modal fade" id="myModal" tabindex='-1'>
+
         <div class="modal-dialog">
         
             <div class="modal-content">
-    
-            
-                <div class="modal-body p0">
-                    
-                    <div class="block application-block">
-                        
-                        <div class="item">
-                            
-                            <div class="card text-left">
-                                
-                                <div class="card-header linear-gradient-teal">
-                                    
-                                    <button type="button" class="close pull-right text-white" data-dismiss="modal">&times;</button>
-                                    
-                                    <h2 class="card-title fs18 text-white mb0">Inquire now</h2>
-                    
-                                </div>
-                    
-                                <div class="card-body relative linear-gradient-grey">
-                
-                                    <form class="form" action="{{ route('frontend.tourist-visa-inquiries.inquiry') }}" method="post" id="tourist-inquiry-form">
-                                        
-                                        {{ csrf_field() }}
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">First Name <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="first_name" id="tourist_first_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Last Name <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="last_name" id="tourist_last_name" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Profession <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="profession" id="tourist_profession" placeholder="">
-                
-                                        </div>
 
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Email Address <span class="text-danger">*</span></label>
-                
-                                            <input type="email" class="form-control tourist-inquiry-field" name="email_address" id="tourist_email_address" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Mobile Number <span class="text-danger">*</span></label>
-                
-                                            <input type="text" class="form-control tourist-inquiry-field" name="mobile_number" id="tourist_mobile_number" placeholder="">
-                
-                                        </div>
-                
-                                        <div class="form-group">
-                
-                                            <label class="title fs14 text-black" for="">Location <span class="text-danger">*</span></label>
-    
-                                            <select name="country_to_visit" id="tourist_country_to_visit" class="form-control tourist-inquiry-field">
-                                                <option selected disabled></option>
-                                                <option>Australia</option>
-                                                <option>New Zealand</option>
-                                                <option>Canada</option>
-                                            </select>
-                
-                                            {{-- <input type="text" class="form-control tourist-inquiry-field" name="country_to_visit" id="tourist_country_to_visit" placeholder=""> --}}
-                
-                                        </div> 
-                
-            
-                                        <div class="form-group">
-            
-                                            <label class="title fs14 text-black" for="">Inquiry <span class="text-danger">*</span></label>
-            
-                                            <textarea class="form-control tourist-inquiry-field" name="inquiry" id="tourist_inquiry" rows="3"></textarea>
-            
-                                        </div>
+                <div class="modal-body text-center">
 
-                                        <div class="form-group">
-            
-                                            <label class="title fs14 text-black" for="">Would you like to book for a formal legal assessment? <span class="text-danger">*</span></label><br />
-            
-                                            <label class="control control--radio">Yes
-                                                <input type="radio" name="consultation" checked="checked" value="Yes"> <div class="control__indicator"></div>
-                                            </label>
-                                            <label class="control control--radio">No
-                                                <input type="radio" name="consultation" checked="checked" value="No"> <div class="control__indicator"></div>
-                                            </label>
-            
-                                        </div>
+                    <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                                        <div class="form-group">
-                                            <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label>
-                                            <br> 
-                                            <input type="file" name="resume" id="file_resume" data-multiple-caption="{count} files selected" class="inputfile"> 
-                                            <label id="resume" for="file_resume" class="btn btnread-more text-uppercase inquiry-field" style="height: auto;"><span>Choose file</span></label> 
-                                            <span class="contact-resume fs12" style="color: red;"></span>
-                                        </div>
-            
-                                        <div class="form-group text-center">
-    
-                                            <div style="width: max-content;" class="tourist-inquiry-field" id="tourist_g-recaptcha-response">
-    
-                                                {!! Captcha::display() !!}
-    
-                                            </div>
-            
-                                        </div>
-    
-                                        <div class=" text-center">
-    
-                                            <button type="button" class="btn btnread-more text-uppercase tourist-inquiry-submit">Submit</button>
-                    
-                                        </div>
+                    <img src="" id="person-image" alt="" class="img-fluid mb20">
+
+                    <h2 class="title fs18 text-black" id="person-title"></h2>
                 
-                                    </form>
-                    
-                                </div>
-                        
-                            </div>
-                    
-                        </div>
-                        
-                    </div>
-    
+                    <p class="basic fs18 text-black" id="person-position"></p>
+
+                    <img src="" style="border-radius:0px;" id="person-other" alt="" class="img-fluid">
+
+                    <p class="basic fs18 text-black text-justify" id="person-description"></p>
+
+                    <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
+
+                    <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
+
                 </div>
-    
+                
             </div>
-    
+
         </div>
-    
+
     </div>
+    {{-- @include('frontend.core.block.templates.news')     --}}
+
 @endsection
     
-    @push('after-scripts')
+@push('after-scripts')
+
+<script>
     
-    <script>
-        
-        $('.tourist-inquiry-submit').click(function(){
-    
-            el = $(this);
-    
-            el.attr('disabled', true).html('Please wait..');
-    
-            $('.tourist-inquiry-field').css('border', 'unset');
-    
-            $('#tourist-inquiry-form').ajaxForm({
-    
-                success: function(){
-    
-                    location.reload();
-    
-                    // alert();
-                  // location.href = '/thank-you';
-    
-                }, error: function(data){
-    
-                    grecaptcha.reset();
-                    
-                    el.attr('disabled', false).html('Submit');
-    
-                    $.each(data.responseJSON['errors'], function(k, v){
-    
-                        $('#tourist_' + k).css('border', '2px solid #d27070');
-    
-                    });
-    
-    
-                }
-    
-            }).submit();
-    
-            // $('.tourist-inquiry-field').css('border', 'unset');
-    
-            // let fields = ['tourist_first_name', 'tourist_last_name', 'tourist_email_address', 'tourist_mobile_number', 'tourist_country_to_visit', 'tourist_inquiry'];
-    
-            // let submit = true;
-    
-            // $.each(fields, function(k, v){
-    
-            //     el = $('#' + v);
-    
-            //     if (el.val() == null || el.val() == '') {
-    
-            //         el.css('border', '2px solid #d27070');
-    
-            //         submit = false;
-    
-            //     }
-    
-            //     if (v == 'tourist_email_address') {
-    
-            //         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-            //         if (! re.test(String(el.val()).toLowerCase())) {
-                        
-            //             el.css('border', '2px solid #d27070');
-    
-            //             submit = false;
-    
-            //         }
-    
-            //     }
-    
-            // });
-    
-    
-            // if (submit) {
-    
-            //     $('#tourist-inquiry-form').submit();
+    $('.tourist-inquiry-submit').click(function(){
+
+        el = $(this);
+
+        el.attr('disabled', true).html('Please wait..');
+
+        $('.tourist-inquiry-field').css('border', 'unset');
+
+        $('#tourist-inquiry-form').ajaxForm({
+
+            success: function(){
+
+                location.reload();
+
+                // alert();
+                // location.href = '/thank-you';
+
+            }, error: function(data){
+
+                grecaptcha.reset();
                 
-            // }
-    
-        });
-    
-    </script>
-    
-    
-    @endpush
+                el.attr('disabled', false).html('Submit');
+
+                $.each(data.responseJSON['errors'], function(k, v){
+
+                    $('#tourist_' + k).css('border', '2px solid #d27070');
+
+                });
+
+
+            }
+
+        }).submit();
+    });
+
+    $('.person-modal').click(function(){
+
+        let el = $(this);
+
+        $('#person-image').attr('src', el.attr('data-image'));
+
+        $('#person-other').attr('src', el.attr('data-other'));
+
+        $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
+
+        $('#person-contact').html(el.attr('data-contact'));
+
+        $('#person-position').html(el.attr('data-position'));
+
+        $('#person-title').html(el.attr('data-title'));
+
+        $('#person-description').html(el.attr('data-description'));
+
+        $('.modal-trigger').trigger('click');
+
+    });
+
+    var someText="<div class='px180 mb60'><p class='basic text-center'>To discover whether you are eligible for a Skilled or Student Work visa that will allow you to migrate in Australia, you may email us your updated curriculum vitae at migration@enzconsultancy.com or complete the inquiry box below:</p> <p class='basic text-center'><a href='#' rel='noopener' target='_blank'>ENZ Students get AUD100 discount voucher for consultaion</a></p></div>";
+
+    $('.questions .title').html('Consult us');
+    $(someText).insertBefore('.questions .container-fluid');
+
+</script>
+@endpush
