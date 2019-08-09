@@ -19,17 +19,33 @@
             <div class="slick-slider">
                 
                 @foreach ($models as $key => $gallery)
-                    <div class="item mx-auto mb30 class gallery-div relative">
-                        <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
-                        <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
-                            <div class="album-title d-flex">
-                                <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                    <div class="item mx-auto mb30 class gallery-div">
+                        <div class="holder">
+                            <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                            <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
+                                <div class="album-title d-flex">
+                                    <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
 
 
+            </div>
+            <div class="row">
+                @foreach ($models as $key => $gallery)
+                    <div class="col-sm-4 item mx-auto mb30 class gallery-div">
+                        <div class="holder">
+                            <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                            <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
+                                <div class="album-title d-flex">
+                                    <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
                 @php
                     $ids = '';
@@ -112,6 +128,7 @@
 
 @push('after-scripts')
 <script>
+    $('.slick-slider').slick('unslick');
 
 $("{{ $ids }}").on('shown.bs.modal', function () {
 
