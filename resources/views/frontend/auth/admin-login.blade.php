@@ -32,10 +32,10 @@
                 <span class="help-block text-danger">{{ $errors->first('password') }}</span>
             </div>
             <div class="row">
-                {{-- @if (config('access.captcha.registration')) --}}
+                @if (config('access.captcha.registration'))
                 <div class="col-sm-12">
                     <div class="form-group">
-                        
+
                         {!! Captcha::display() !!}
                         <span class="help-block text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
 
@@ -44,7 +44,7 @@
                         {{-- {!! html()->hidden('captcha_status', 'true') !!} --}}
                     </div>
                 </div>
-                {{-- @endif --}}
+                @endif
             </div>
             <div class="row">
                 <div class="col-sm-{{ config('access.captcha.registration')?'12':'12' }}">
