@@ -4,16 +4,6 @@ iframe{
     max-width: 100% !important;
 }
 
-.page-migration-visa{
-
-    .container-fluid p, .container-fluid li{
-    
-        font-size: 16px;
-
-    }
-
-}
-
 .page-about-company {
     .banner-block img {
         transform: rotate(5deg);
@@ -88,8 +78,7 @@ iframe{
     }
 }
 
-.page-about-team,
-.migration-visa {
+.page-about-team {
     .content-block {
         margin-top: -17%;
         position: relative;
@@ -126,6 +115,58 @@ iframe{
             }
         }
     }
+}
+.migration-visa{
+
+    // .container-fluid p, .container-fluid li{
+    
+    //     font-size: 16px;
+
+    // }
+    .content-block {
+        margin-top: -16.6%;
+        position: relative;
+        padding-bottom: 10%;
+        padding-top: 15%;
+        background: url(/img/migration/bg.png) no-repeat;
+        .person-modal {
+            border-radius: 50%;
+        }
+        p {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    .block-services {
+        padding-bottom: 5%;
+        h2.title {
+            margin-bottom: 60px;
+        }
+        .item {
+            .svg-holder {
+                background-image: linear-gradient(#f2f2f2,#f2f2f2);
+                transition: background-image 0.2s ease-in-out;
+            }
+            h3.title {
+                cursor: pointer;
+                transition: all ease 300ms;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                .svg-holder {
+                    background-image: linear-gradient(#fadb5d, #f08e28);
+                    transition: background-image 0.2s ease-in-out;
+                }
+                h3.title {
+                    color: #00bacf;
+                    text-decoration: underline;
+                    transition: all ease 300ms;
+                }
+            }
+        }
+    }
+
 }
 
 .page-about-linkages {
