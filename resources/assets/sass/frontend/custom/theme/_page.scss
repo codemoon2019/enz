@@ -993,6 +993,13 @@ iframe{
                 border-radius: 35px;
             }
         }
+        .holder { 
+            position: relative; 
+            border-radius: 35px;
+            img {
+                border-radius: 35px;
+            }
+        }
         .overlay {
             opacity: 1;
             transition: all ease 300ms;
