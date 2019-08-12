@@ -63,7 +63,7 @@
                 <img
                     data-src="{{asset('svg/migration/skilled.svg')}}" 
                     
-                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    alt="" class="img-fluid service-modal cursor-pointer" 
                     
                     data-title="" 
 
@@ -81,7 +81,7 @@
                 
             </div>
             
-            <h3 class="person-modal-trigger title fs18 text-black">Skilled Migration Visa</h3>
+            <h3 class="service-modal-trigger title fs18 text-black">Skilled Migration Visa</h3>
             
         </div>
         <div class="col-md-4 item text-center mb30">
@@ -90,7 +90,7 @@
                 <img
                     data-src="{{asset('svg/migration/sponsored.svg')}}" 
                     
-                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    alt="" class="img-fluid service-modal cursor-pointer" 
                     
                     data-title="" 
 
@@ -108,7 +108,7 @@
                 
             </div>
             
-            <h3 class="person-modal-trigger title fs18 text-black">Employer Sponsored Visa</h3>
+            <h3 class="service-modal-trigger title fs18 text-black">Employer Sponsored Visa</h3>
             
         </div>
         <div class="col-md-4 item text-center mb30">
@@ -117,7 +117,7 @@
                 <img
                     data-src="{{asset('svg/migration/study.svg')}}" 
                     
-                    alt="" class="img-fluid person-modal cursor-pointer" 
+                    alt="" class="img-fluid service-modal cursor-pointer" 
                     
                     data-title="" 
 
@@ -135,7 +135,7 @@
                 
             </div>
             
-            <h3 class="person-modal-trigger title fs18 text-black">Post Study Visa</h3>
+            <h3 class="service-modal-trigger title fs18 text-black">Post Study Visa</h3>
             
         </div>
 
@@ -154,15 +154,7 @@
 
                     <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                    <img src="" id="person-image" alt="" class="img-fluid mb20">
-
-                    <h2 class="title fs18 text-black" id="person-title"></h2>
-                
-                    <p class="basic fs18 text-black" id="person-position"></p>
-
-                    <img src="" style="border-radius:0px;" id="person-other" alt="" class="img-fluid">
-
-                    <p class="basic fs18 text-black text-justify" id="person-description"></p>
+                    <img src="" id="service-image" alt="" class="img-fluid mb20">
 
                     <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis. Nihil, atque porro aperiam nobis suscipit praesentium aspernatur esse quidem?</p>
 
@@ -216,21 +208,21 @@
         }).submit();
     });
 
-    $('.person-modal').click(function(){
+    $('.service-modal').click(function(){
 
         let el = $(this);
 
-        $('#person-image').attr('src', el.attr('data-image'));
+        $('#service-image').attr('src', el.attr('data-image'));
 
         $('.modal-trigger').trigger('click');
 
     });
 
-    $('.person-modal-trigger').click(function(){
+    $('.service-modal-trigger').click(function(){
         
         let el = $(this);
 
-        $('#person-image').attr('src', el.parent().find('img').attr('data-image'));
+        $('#service-image').attr('src', el.parent().find('img').attr('data-image'));
         $('.modal-trigger').trigger('click');
     });
 
