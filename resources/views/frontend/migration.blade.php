@@ -65,7 +65,7 @@
                     
                     alt="" class="img-fluid service-modal cursor-pointer" 
                     
-                    data-title="" 
+                    data-title="Skilled Migration Visa" 
 
                     data-image="{{asset('svg/migration/skilled.svg')}}" 
 
@@ -92,7 +92,7 @@
                     
                     alt="" class="img-fluid service-modal cursor-pointer" 
                     
-                    data-title="" 
+                    data-title="Employer Sponsored Visa" 
 
                     data-image="{{asset('svg/migration/sponsored.svg')}}" 
 
@@ -119,7 +119,7 @@
                     
                     alt="" class="img-fluid service-modal cursor-pointer" 
                     
-                    data-title="" 
+                    data-title="Post Study Visa" 
 
                     data-image="{{asset('svg/migration/study.svg')}}" 
 
@@ -146,17 +146,25 @@
 
     <div class="modal fade" id="myModal" tabindex='-1'>
 
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
         
             <div class="modal-content">
 
-                <div class="modal-body text-center">
+                <div class="modal-body">
 
                     <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                    <div class="svg-holder mb20 mx-auto">
 
-                    <img src="" id="service-image" alt="" class="img-fluid mb20">
+                        <img src="" id="service-image" alt="" class="img-fluid mb20">
 
-                    <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis. Nihil, atque porro aperiam nobis suscipit praesentium aspernatur esse quidem?</p>
+                    </div>
+
+                    <h3 class="title fs18 text-center mb30" id="service-title"></h3>
+
+                    <p class="basic fs18 text-black mb0"><b>a. Lorem ipsum dolor sit amet.</b></p>
+                    <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
+                    <p class="basic fs18 text-black mb0"><b>b. Lorem ipsum dolor sit amet.</b></p>
+                    <p class="basic fs18 text-black">Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
 
                 </div>
                 
@@ -223,6 +231,8 @@
         let el = $(this);
 
         $('#service-image').attr('src', el.parent().find('img').attr('data-image'));
+        $('#service-title').html(el.parent().find('img').attr('data-title'));
+
         $('.modal-trigger').trigger('click');
     });
 
