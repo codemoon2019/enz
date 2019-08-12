@@ -221,6 +221,7 @@
         let el = $(this);
 
         $('#service-image').attr('src', el.attr('data-image'));
+        $('#service-title').html(el.attr('data-title'));
 
         $('.modal-trigger').trigger('click');
 
