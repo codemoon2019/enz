@@ -146,24 +146,33 @@ iframe{
             .svg-holder {
                 background-image: linear-gradient(#f2f2f2,#f2f2f2);
                 transition: background-image 0.2s ease-in-out;
+                &:hover,
+                &:focus,
+                &:active {
+                    background-image: linear-gradient(#fadb5d, #f08e28);
+                    transition: background-image 0.2s ease-in-out;
+                }
             }
             h3.title {
                 cursor: pointer;
                 transition: all ease 300ms;
-            }
-            &:hover,
-            &:focus,
-            &:active {
-                .svg-holder {
-                    background-image: linear-gradient(#fadb5d, #f08e28);
-                    transition: background-image 0.2s ease-in-out;
-                }
-                h3.title {
+                &:hover,
+                &:focus,
+                &:active {
                     color: #00bacf;
                     text-decoration: underline;
                     transition: all ease 300ms;
                 }
             }
+        }
+    }
+    .modal-content {
+        border-radius: 35px;
+        .close {
+            margin-top: -10px;
+        }
+        img {
+            // border-radius: 50%;
         }
     }
 

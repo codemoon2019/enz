@@ -81,7 +81,7 @@
                 
             </div>
             
-            <h3 class="title fs18 text-black">Skilled Migration Visa</h3>
+            <h3 class="person-modal-trigger title fs18 text-black">Skilled Migration Visa</h3>
             
         </div>
         <div class="col-md-4 item text-center mb30">
@@ -94,7 +94,7 @@
                     
                     data-title="" 
 
-                    data-image="{{asset('svg/migration/skilled.svg')}}" 
+                    data-image="{{asset('svg/migration/sponsored.svg')}}" 
 
                     data-other="" 
                     
@@ -108,7 +108,7 @@
                 
             </div>
             
-            <h3 class="title fs18 text-black">Employer Sponsored Visa</h3>
+            <h3 class="person-modal-trigger title fs18 text-black">Employer Sponsored Visa</h3>
             
         </div>
         <div class="col-md-4 item text-center mb30">
@@ -121,7 +121,7 @@
                     
                     data-title="" 
 
-                    data-image="{{asset('svg/migration/skilled.svg')}}" 
+                    data-image="{{asset('svg/migration/study.svg')}}" 
 
                     data-other="" 
                     
@@ -135,7 +135,7 @@
                 
             </div>
             
-            <h3 class="title fs18 text-black">Post Study Visa</h3>
+            <h3 class="person-modal-trigger title fs18 text-black">Post Study Visa</h3>
             
         </div>
 
@@ -164,9 +164,7 @@
 
                     <p class="basic fs18 text-black text-justify" id="person-description"></p>
 
-                    <p class="basic fs18 text-black">Email: <br /><a href="mailto:test@test.com" class="basic fs18" id="person-email"></a></p>
-
-                    <p class="basic fs18 text-black">Contact Number: <br /><span id="person-contact"></span></p>
+                    <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis. Nihil, atque porro aperiam nobis suscipit praesentium aspernatur esse quidem?</p>
 
                 </div>
                 
@@ -224,21 +222,18 @@
 
         $('#person-image').attr('src', el.attr('data-image'));
 
-        $('#person-other').attr('src', el.attr('data-other'));
-
-        $('#person-email').html(el.attr('data-email')).attr('href', 'mailto:' + el.attr('data-email'));
-
-        $('#person-contact').html(el.attr('data-contact'));
-
-        $('#person-position').html(el.attr('data-position'));
-
-        $('#person-title').html(el.attr('data-title'));
-
-        $('#person-description').html(el.attr('data-description'));
-
         $('.modal-trigger').trigger('click');
 
     });
+
+    $('.person-modal-trigger').click(function(){
+        
+        let el = $(this);
+
+        $('#person-image').attr('src', el.parent().find('img').attr('data-image'));
+        $('.modal-trigger').trigger('click');
+    });
+
 
     var someText="<div class='px180 mb60'><p class='basic text-center'>To discover whether you are eligible for a Skilled or Student Work visa that will allow you to migrate in Australia, you may email us your updated curriculum vitae at migration@enzconsultancy.com or complete the inquiry box below:</p> <p class='basic text-center'><a href='#' rel='noopener' target='_blank'>ENZ Students get AUD100 discount voucher for consultaion</a></p></div>";
 
