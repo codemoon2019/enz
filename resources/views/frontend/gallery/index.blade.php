@@ -6,120 +6,101 @@
 <div class="block gallery-block">
     <div class="container-fluid pt50 px180 relative" id="default">
         <h1 class="title fs40 text-nblue mb30">Gallery</h1>
-        <div class="pull-right">
-            <button class="btn left myarrow">
-                <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-            </button>
-            <button class="btn right myarrow">
-                <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
-            </button>
-        </div>
+
+        @if ($models->count() > 3)
+            <div class="pull-right">
+                <button class="btn left myarrow">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                </button>
+                <button class="btn right myarrow">
+                    <img class="" data-src="{{asset('svg/arrow.svg')}}" alt="">
+                </button>
+            </div>
+        @endif
+
         <div class="clearfix"></div>
+
         <div class="custom-slider-wrapper p0">
-            <div class="slick-slider">
-                
-                @foreach ($models as $key => $gallery)
-                    <div class="item mx-auto mb30 class gallery-div">
-                        <div class="holder">
-                            <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
-                            <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
-                                <div class="album-title d-flex">
-                                    <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+            @if ($models->count() > 3)
+                <div class="slick-slider">
+                    @foreach ($models as $key => $gallery)
+                        <div class="item mx-auto mb30 class gallery-div">
+                            <div class="holder">
+                                <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                                <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
+                                    <div class="album-title d-flex">
+                                        <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-
-
-            </div>
-            <div class="row">
-                @foreach ($models as $key => $gallery)
-                    <div class="col-sm-4 item mx-auto mb30 class gallery-div">
-                        <div class="holder">
-                            <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
-                            <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
-                                <div class="album-title d-flex">
-                                    <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                    @endforeach
+                </div>
+            @else
+                <div class="row">
+                    @foreach ($models as $key => $gallery)
+                        <div class="col-sm-4 item mx-auto mb30 class gallery-div">
+                            <div class="holder">
+                                <img src="{{ $gallery->getFirstMediaUrl('featured', 'main') }}" class="img-fluid" alt="">
+                                <div class="overlay cursor-pointer" data-toggle="modal" class="modal-trigger" data-target="#myModal-{{ $gallery->id }}">
+                                    <div class="album-title d-flex">
+                                        <h2 class="title text-white fs24">{{ $gallery->title }}</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
-                @php
-                    $ids = '';
-                @endphp
+                    @endforeach
+                </div>
+            @endif
+
+            @php
+                $ids = '';
+            @endphp
 
             @foreach ($models as $key => $gallery)
-
                 @php
                     $ids .= '#myModal-' . $gallery->id;
 
                     if (!$loop->last) {
                         $ids .= ', ';
                     }
-
                 @endphp
 
                 <div class="modal fade" id="myModal-{{ $gallery->id }}">
-
                     <div class="modal-dialog modal-lg">
-                    
                         <div class="modal-content">
                             <div class="modal-header">
-                                    <button type="button" data-dismiss="modal" class="close pull-right">×</button>
+                                <button type="button" data-dismiss="modal" class="close pull-right">×</button>
                             </div>
 
                             <div class="modal-body">
-                                
                                 <div class="slider-for">
-
                                     @php
                                         $images = $gallery->getUploaderImages('images');
-                                        
+
                                         $thumbnail_images = $gallery->getUploaderImages('images', 'thumbnail');
                                     @endphp
-                                    
+
                                     @foreach ($images as $image)
-
                                         <div class="item mx-auto">
-
                                             <img src="{{ $image->source }}" class="img-fluid" alt="">
-                                        
                                         </div>
-                                    
                                     @endforeach
-
                                 </div>
 
                                 <div class="slider-nav">
-                
                                     @foreach ($thumbnail_images as $image)
-
                                         <div class="item mx-auto">
-                                    
                                             <img src="{{ $image->source}}" class="img-fluid" alt="">
-                                    
                                         </div>
-                                    
                                     @endforeach
-
                                 </div>
-
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             @endforeach
-            
         </div>
-
     </div>
 
 </div>
