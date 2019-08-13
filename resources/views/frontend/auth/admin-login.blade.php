@@ -49,9 +49,9 @@
             <div class="row">
                 <div class="col-sm-{{ config('access.captcha.registration')?'12':'12' }}">
                     {!! html()->submit('Login')->class('button btn btnauth w-100 text-uppercase') !!}
-                    <small><a class="btn btn-link" href="{{ route('frontend.auth.password.reset') }}">
+                    {{-- <small><a class="btn btn-link" href="{{ route('frontend.auth.password.reset') }}">
                             {{ __('labels.frontend.passwords.forgot_password') }}
-                        </a></small><br />
+                        </a></small><br /> --}}
                     <small><a href="{{ route('frontend.index') }}" class=" btn btn-link back">
                             <i class="fa fa-angle-left"></i> Back to Homepage
                         </a></small>
