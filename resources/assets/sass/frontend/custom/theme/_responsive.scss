@@ -177,7 +177,6 @@
             text-align: center;
         }
         .content-block {
-            padding: 30px 0;
             margin: 0;
             background-image:linear-gradient(#fadb5d, #f08e28);
             .item:last-child {
@@ -188,6 +187,16 @@
             }
         }
     }
+    .page-services.migration-visa {
+        .content-block {
+            text-align: center;
+            background-image:linear-gradient(#00bacf,#008db0);
+        }
+        .block-services {
+            padding-top: 30px;
+        }
+    }
+
 
     .page-about {
         .banner-block {
@@ -669,6 +678,15 @@
             }
         }
     }
+    .page-services.migration-visa {
+        .content-block {
+            text-align: center;
+            background-image:linear-gradient(#00bacf,#008db0);
+        }
+        .block-services {
+            padding-top: 30px;
+        }
+    }
     .page-about {
         .banner-block {
             text-align: center;
@@ -903,6 +921,9 @@
             padding: 0;
             font-size: 14px;
         }
+    }
+    .user-menu .nav-item .dropdown-menu .nav-link {
+        padding: 4px;
     }
     .banner-block {
         video {
