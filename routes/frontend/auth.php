@@ -70,10 +70,10 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
             'ConfirmAccountController@sendConfirmationEmail')->name('account.confirm.resend');
 
         // Password Reset Routes
-        Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.email');
-        Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email.post');
+        // Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.email');
+        // Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email.post');
 
-        Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset.form');
-        Route::post('password/reset', 'ResetPasswordController@reset')->name('password.reset');
+        // Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset.form');
+        // Route::post('password/reset', 'ResetPasswordController@reset')->name('password.reset');
     });
 });

@@ -38,10 +38,3 @@
     {!! html()->form()->close() !!}
 @endsection
 
-
-@push('after-scripts')
-    @if (config('access.captcha.registration'))
-        {!! Captcha::script() !!}
-    @endif
-@endpush
-

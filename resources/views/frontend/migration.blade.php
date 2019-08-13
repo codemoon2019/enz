@@ -155,7 +155,7 @@
                     <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
                     <div class="svg-holder mb20 mx-auto">
 
-                        <img src="" id="service-image" alt="" class="img-fluid mb20">
+                        <img src="" id="service-image" alt="" class="img-fluid">
 
                     </div>
 
