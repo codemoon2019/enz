@@ -78,7 +78,7 @@
 
                             <div class="col-sm-6">
 
-                              <div class="form-group">
+                              <div class="form-group inq-country">
 
                                 <label for="country">Country <span class="text-danger">*</span></label>
 
@@ -104,9 +104,9 @@
 
                               </div>
 
-                              <div class="form-group mb30">
+                              <div class="form-group book-us mb30">
 
-                                <label for="">Would you like to book for a free consultation? <span class="text-danger">*</span></label><br />
+                                <label for=""><span class="label-title">Would you like to book for a free consultation?</span> <span class="text-danger">*</span></label><br />
 
                                 <label class="control control--radio">Yes
 
@@ -126,7 +126,7 @@
 
                               </div>
 
-                              <div class="form-group">
+                              <div class="form-group upload-cv">
 
                                 <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
 
@@ -154,7 +154,7 @@
 
                           <div class="row">
                             @if (config('access.captcha.registration'))
-                            <div class="col-md-6 mb30">
+                            <div class="col-md-6 mb30 my-recap">
 
                                 <div style="width: max-content;" class="inquiry-field" id="g-recaptcha-response-div">
 
