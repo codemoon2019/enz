@@ -66,20 +66,23 @@ class InquiriesController extends BaseController
     public function download(string $routeKeyName)
     {
         $inquiry = Inquiry::whereSlug($routeKeyName)->first();
-        $media = $inquiry->getFirstMedia('document');
 
-        $this->manual($media->getPath(), $media->file_name, $media->mime_type);
+        if (is_null($inquiry->resume)) {
+            $media = $inquiry->getFirstMedia('document');
 
+            $this->manual($media->getPath(), $media->file_name, $media->mime_type);
+        } else {
+            // This is for the old files that saved in the storage/app/inquiry
+            $resume = json_decode($inquiry->resume);
 
-        // $resume = json_decode($inquiry->resume);
+            $path = storage_path('app/public/inquiry/' . $resume[1]);
 
-        // $path = storage_path('app/public/inquiry/' . $resume[1]);
+            if (!File::exists($path)) {
+                abort(404);
+            }
 
-        // if (!File::exists($path)) {
-        //     abort(404);
-        // }
-
-        // return response()->download($path, $resume[0]);
+            return response()->download($path, $resume[0]);
+        }
 
     }
 

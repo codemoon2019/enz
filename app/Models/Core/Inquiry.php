@@ -121,7 +121,7 @@ class Inquiry extends Model implements HasMedia
 
         $action = '<a href="'.route('admin.inquiries.show', $this->slug).'"><i class="fa fa-search btn btn-primary btn-sm"></i></a>';
 
-        if ($this->getMedia('document')->count() > 0) {
+        if ($this->getMedia('document')->count() > 0 || $this->resume != null) {
 
             $action .= '<a target="_blank" href="'.route('admin.inquiries.download', $this->slug).'"><i class="fa fa-download btn btn-primary btn-sm"></i></a>';
 
