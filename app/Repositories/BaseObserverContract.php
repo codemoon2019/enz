@@ -13,6 +13,7 @@ use HalcyonLaravel\Base\Models\Model as HalcyonBaseModel;
 use HalcyonLaravel\Base\Repository\ObserverContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
 
 abstract class BaseObserverContract extends ObserverContract
 {
@@ -114,14 +115,14 @@ abstract class BaseObserverContract extends ObserverContract
         app('query.cache')->flush();
     }
 
-    protected static function uploadMultipleImage(Model $model, array $images, $collectionName)
+    protected static function uploadMultipleImage(HasMedia $model, array $images, $collectionName)
     {
         foreach ($images as $image) {
             self::uploadImage($model, $image, $collectionName);
         }
     }
 
-    protected static function uploadImage(Model $model, UploadedFile $image, $collectionName)
+    protected static function uploadImage(HasMedia $model, UploadedFile $image, $collectionName)
     {
         $fileName = $image->getClientOriginalName();
 
