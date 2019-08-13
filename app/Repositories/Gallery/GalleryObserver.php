@@ -31,6 +31,10 @@ class GalleryObserver extends BaseObserverContract
     public static function stored($model, array $data)
     {
         self::meta('create', $model, $data);
+
+        self::uploadImage($model, $data['featured_image'], 'featured');
+        self::uploadMultipleImage($model, $data['images'], 'images');
+
         return $model;
     }
 
