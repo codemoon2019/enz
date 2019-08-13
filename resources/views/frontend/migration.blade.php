@@ -43,7 +43,7 @@
                 <p>Nicholas Houston is a fully qualified Migration Lawyer admitted to practice law in Victoria in 1993. Previously to working at VisAustralia Nicholas Houston worked at the Department of Immigration (DIAC) as a Senior Legal Officer amending the Migration Regulations, the law upon which the Australian visa program is based.</p>
                 <p>Prior to establishing VisAustralia, Nicholas Houston worked as a Senior Legal Officer at the Department of Immigration in Canberra. As a Senior Legal Officer he was involved in transforming the details of Australian Government migration policy into legislation. The work involved comprehending both the policy implication of proposed changes but also the inner workings of the Migration Act 1958, the law upon which the Australian visa program is based.</p>
             </div>
-            <div class="col-sm-5 left-content">
+            <div class="col-sm-5 left-content  align-self-center">
                 <img data-src="{{asset('img/migration/nic.png')}}" class="img-fluid" alt="">
             </div>
         </div>
@@ -155,7 +155,7 @@
                     <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
                     <div class="svg-holder mb20 mx-auto">
 
-                        <img src="" id="service-image" alt="" class="img-fluid mb20">
+                        <img src="" id="service-image" alt="" class="img-fluid">
 
                     </div>
 
