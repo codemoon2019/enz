@@ -44,6 +44,5 @@
     font-style: normal;
 }
 /* .page-loader{position:fixed;top:0;left:0;height:100%;width:100%;display:flex;align-items:center;flex-flow:column;justify-content:center;text-align:center;z-index:999;background-color:#fff}.page-loader::before{content:"";width:60px;height:60px;border-radius:50%;border:7px solid #7fc7de;border-left-color:#007DA5;animation:loaderAnim .8s linear infinite forwards;margin-bottom:15px}.page-loaded .page-loader{opacity:0;visibility:hidden;transition:all ease-in-out .8s} */
-.page-loader{position:fixed;top:0;left:0;height:100%;width:100%;display:flex;align-items:center;flex-flow:column;justify-content:center;text-align:center;z-index:999;background-color:#fff}.page-loaded .page-loader{opacity:0;visibility:hidden;transition:all ease-in-out .8s}
-@keyframes  loaderAnim{to{transform:rotate(360deg)}}
+
 </style> 
