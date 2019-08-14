@@ -1,5 +1,21 @@
 @extends('frontend.layouts.app')
 
+@push('after-scripts')
+
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3a734f13b6f000122837f8&product=custom-share-buttons' async='async'></script>
+
+@endpush
+
+@push('after-styles')
+
+<style>
+.sharethis-inline-share-buttons{
+    text-align: left !important;
+}
+</style>
+
+@endpush
+
 @push('meta')
 
 	<meta property="og:image" content="{{ $model->getFirstMediaUrl('featured') }}">
@@ -14,8 +30,8 @@
 
         <h1 class="title fs35">{{ $model->title }}</h1>
 
-        <p class="fs15">Published At: {{ $model->published_at->format('F d, Y') }}</p>
-        <div class="share clearfix mb30">
+        <p class="fs15 mb20">Published At: {{ $model->published_at->format('F d, Y') }}</p>
+{{--         <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
             <div class="row">
                 <div class="col-2 item">
@@ -49,9 +65,9 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
+        <div class="sharethis-inline-share-buttons"></div><br>
 
 
     	{{-- <div class="block--content d-flex ai-c mb15">
@@ -76,7 +92,10 @@
 
         @include('frontend.includes.templates.index')
 
-        <div class="share clearfix mb30">
+        <div class="sharethis-inline-share-buttons"></div><br><br>
+
+
+        {{-- <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
             <div class="row">
                 <div class="col-2 item">
@@ -110,12 +129,8 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
     </div>
 
 @endsection
-
-@push('after-scripts')
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3a734f13b6f000122837f8&product=custom-share-buttons' async='async'></script>
-@endpush
