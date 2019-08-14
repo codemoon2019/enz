@@ -5,7 +5,7 @@
  */
 Route::group([
     'namespace' => 'MigrationVisa',
-    'prefix' => 'migration-visas',
+    'prefix' => 'migration-visa',
     'as' => 'migration-visas.',
 ], function () {
     Route::get('', 'MigrationVisaController@index')->name('index');
