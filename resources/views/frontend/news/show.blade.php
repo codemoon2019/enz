@@ -12,6 +12,9 @@
 .sharethis-inline-share-buttons{
     text-align: left !important;
 }
+.st-total {
+    display: none !important;
+}
 </style>
 
 @endpush
