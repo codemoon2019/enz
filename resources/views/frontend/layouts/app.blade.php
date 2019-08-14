@@ -115,41 +115,7 @@
           </div>
         
         <div class="mag-download fixed-bottom text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.068" height="40.529" viewBox="0 0 31.068 40.529">
-                <defs>
-                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0.106" stop-color="#00bacf"/>
-                    <stop offset="0.809" stop-color="#008db0"/>
-                    </linearGradient>
-                    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0.23" stop-color="#fadb5d"/>
-                    <stop offset="0.97" stop-color="#f08e28"/>
-                    </linearGradient>
-                    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0.166" stop-color="#ff7878"/>
-                    <stop offset="0.78" stop-color="#eb5959"/>
-                    </linearGradient>
-                    <linearGradient id="linear-gradient-4" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#3e569c"/>
-                    <stop offset="1" stop-color="#3fb1e5"/>
-                    </linearGradient>
-                    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                    <stop offset="0.092" stop-color="#ffbd8a"/>
-                    <stop offset="0.844" stop-color="#f09a59"/>
-                    </linearGradient>
-                </defs>
-                <g id="Group_4003" data-name="Group 4003" transform="translate(-10632.5 -11173.443)">
-                    <g id="design" transform="translate(10633 11173.943)">
-                    <path id="Path_4910" data-name="Path 4910" d="M28.405,0H3.991C1.79,0,0,2.116,0,4.717v30.82H30.068V1.966A1.836,1.836,0,0,0,28.405,0Zm0,0" transform="translate(0 0)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
-                    <path id="Path_4912" data-name="Path 4912" d="M158.32,150a6.32,6.32,0,1,0,6.32,6.32A6.327,6.327,0,0,0,158.32,150Zm0,0" transform="translate(-141.889 -137.474)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-2)"/>
-                    <path id="Path_4914" data-name="Path 4914" d="M109.646,111.309h-7.983A1.665,1.665,0,0,1,100,109.646v-7.983A1.665,1.665,0,0,1,101.663,100h7.983a1.665,1.665,0,0,1,1.663,1.663v7.983A1.665,1.665,0,0,1,109.646,111.309Zm0,0" transform="translate(-93.348 -91.067)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-3)"/>
-                    <path id="Path_4916" data-name="Path 4916" d="M29.07,399.983H3.991a3.991,3.991,0,1,1,0-7.983H29.07a1,1,0,0,1,1,1v5.987A1,1,0,0,1,29.07,399.983Zm0,0" transform="translate(0 -360.454)" fill="#d9e7f3" stroke="#000" stroke-width="1"/>
-                    <path id="Path_4917" data-name="Path 4917" d="M338.985,9.978a1,1,0,0,1-.553-.168l-2.44-1.627-2.44,1.627A1,1,0,0,1,332,8.981V1a1,1,0,0,1,1-1h5.322a1.665,1.665,0,0,1,1.663,1.663V8.981a1,1,0,0,1-1,1Zm0,0" transform="translate(-309.914 0)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-4)"/>
-                    <path id="Path_4919" data-name="Path 4919" d="M159.85,156.32v-6.132a6.321,6.321,0,0,0-7.627,7.8h5.964A1.665,1.665,0,0,0,159.85,156.32Zm0,0" transform="translate(-141.889 -137.929)" stroke="#000" stroke-width="1" fill="url(#linear-gradient-5)"/>
-                    </g>
-                </g>
-                </svg>
-                <p class="fs16 text-white book-title">ENZ Student Guide</p> 
+            <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">ENZ Student Guide</p> 
 
             <button data-toggle="modal" data-target="#downloadModal" class="btn btnview-more text-uppercase">Download now!</button>
             {{-- <a href="#" class="btn btnview-more text-uppercase">Download now!</a> --}}
