@@ -56,35 +56,41 @@
 
     <div class="row justify-content-center">
 
-        
-        <div class="col-md-4 item text-center mb30">
-            <div class="svg-holder mb20 mx-auto">
+    
+        @foreach (ServicesOffered() as $element)
+            <div class="col-md-4 item text-center mb30">
+                <div class="svg-holder mb20 mx-auto">
+                        
+                    @php $image = $element->featured_icon; @endphp
+
+                    <img
+                        data-src="{{ $image }}" 
+                        
+                        alt="" class="img-fluid service-modal cursor-pointer" 
+                        
+                        data-title="{{ $element->title }}" 
+
+                        data-image="{{ $image }}" 
+
+                        data-other="" 
+                        
+                        data-email="" 
+                        
+                        data-position="" 
+
+                        data-description="" 
+                        
+                        data-contact="">
+                    
+                </div>
                 
-                <img
-                    data-src="{{asset('svg/migration/skilled.svg')}}" 
-                    
-                    alt="" class="img-fluid service-modal cursor-pointer" 
-                    
-                    data-title="Skilled Migration Visa" 
-
-                    data-image="{{asset('svg/migration/skilled.svg')}}" 
-
-                    data-other="" 
-                    
-                    data-email="" 
-                    
-                    data-position="" 
-
-                    data-description="" 
-                    
-                    data-contact="">
+                <h3 class="service-modal-trigger title fs18 text-black">{{ $element->title }}</h3>
                 
             </div>
-            
-            <h3 class="service-modal-trigger title fs18 text-black">Skilled Migration Visa</h3>
-            
-        </div>
-        <div class="col-md-4 item text-center mb30">
+        @endforeach
+
+        
+{{--         <div class="col-md-4 item text-center mb30">
             <div class="svg-holder mb20 mx-auto">
                 
                 <img
@@ -137,7 +143,7 @@
             
             <h3 class="service-modal-trigger title fs18 text-black">Post Study Visa</h3>
             
-        </div>
+        </div> --}}
 
     </div>  
 

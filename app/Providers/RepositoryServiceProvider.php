@@ -93,6 +93,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Application\ApplicationRepository::class, \App\Repositories\Application\ApplicationRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\SuccessPercentage\SuccessPercentageRepository::class, \App\Repositories\SuccessPercentage\SuccessPercentageRepositoryEloquent::class);
         $this->app->bind(\App\Repositories\MigrationVisa\MigrationVisaRepository::class, \App\Repositories\MigrationVisa\MigrationVisaRepositoryEloquent::class);
+        $this->app->bind(\App\Repositories\ServicesOffered\ServicesOfferedRepository::class, \App\Repositories\ServicesOffered\ServicesOfferedRepositoryEloquent::class);
         //:end-bindings:
     }
 }

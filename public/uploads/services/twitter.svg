@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.703" height="32.744" viewBox="0 0 40.703 32.744">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3ba1e5"/>
+      <stop offset="1" stop-color="#57c2f2"/>
+    </linearGradient>
+  </defs>
+  <g id="twitter-logo-silhouette" transform="translate(0.27 0.516)">
+    <g id="Group_486" data-name="Group 486" transform="translate(0 0)">
+      <path id="Path_2981" data-name="Path 2981" d="M39.062,61.2a16,16,0,0,1-4.6,1.262,8.046,8.046,0,0,0,3.522-4.43,16.154,16.154,0,0,1-5.092,1.945,8.019,8.019,0,0,0-13.654,7.306A22.75,22.75,0,0,1,2.723,58.905,8.022,8.022,0,0,0,5.2,69.6,8.013,8.013,0,0,1,1.573,68.6v.1A8.021,8.021,0,0,0,8,76.553a8.117,8.117,0,0,1-2.111.281,7.691,7.691,0,0,1-1.508-.149,8.017,8.017,0,0,0,7.484,5.565,16.077,16.077,0,0,1-9.951,3.425A17.029,17.029,0,0,1,0,85.565,22.65,22.65,0,0,0,12.283,89.17c14.74,0,22.8-12.209,22.8-22.8l-.027-1.037A16,16,0,0,0,39.062,61.2Z" transform="translate(-0.001 -57.441)" stroke="#000" stroke-width="1" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
