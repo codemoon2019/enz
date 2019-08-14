@@ -200,6 +200,9 @@
     }
 }
 #phplive_btn_1480051776 {
+    display: none;
+    opacity: 0;
+    transition: all ease 300ms;
     img {
         opacity: 0;
     }

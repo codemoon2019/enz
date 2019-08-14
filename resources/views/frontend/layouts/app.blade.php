@@ -6,8 +6,6 @@
     @endlangrtl
     <head>
     
-        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3a734f13b6f000122837f8&product=custom-share-buttons' async='async'></script>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -150,9 +148,9 @@
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script> --}}
     {!! script(mix('js/frontend.js')) !!}
 
-    <script src="{{ asset('js/jquery.form.min.js') }}"></script>
-
+    
     @stack('after-scripts')
+    <script async defer src="{{ asset('js/jquery.form.min.js') }}" type="text/javascript"></script>
     <script async defer type="text/javascript">
     (function() {
         setTimeout(function() {
@@ -162,7 +160,12 @@
             phplive_e_1480051776.rel = "preconnect"
             phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
             document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
-        },3000)
+            $('#phplive_btn_1480051776').css({
+                'display' : 'block',
+                'opacity' : 1,
+                'transition' : 'all ease 300ms'
+                })
+        },5000)
     })() ;
     </script>
     @include('includes.partials.ga')

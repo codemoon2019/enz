@@ -388,7 +388,7 @@
 
 <script>
 
-    $('.inquiry-submit').click(function(){
+  $('.inquiry-submit').click(function(){
 
         el = $(this);
 
@@ -441,7 +441,6 @@
           $(this).attr("src", $(this).data("src"));
       });
   });
-
 </script>
 
 @endpush
