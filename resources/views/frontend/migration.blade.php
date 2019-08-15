@@ -243,7 +243,6 @@
     $('.questions .title').html('Consult us');
     $('.my-recap').removeClass('col-md-6').insertAfter('.upload-cv');
     $('.inq-country').css({'display': 'none'});
-    $('.book-us .label-title').html('Would you like to book for a formal legal assessment?');
     $(someText).insertBefore('.questions .container-fluid');
     $('#submitholder').addClass('col-lg-12');
 
