@@ -241,7 +241,10 @@
     var someText="<div class='px180 mb60'><p class='basic text-center'>To discover whether you are eligible for a Skilled or Student Work visa that will allow you to migrate in Australia, you may email us your updated curriculum vitae at migration@enzconsultancy.com or complete the inquiry box below:</p> <p class='basic text-center'><a href='#' rel='noopener' target='_blank'>ENZ Students get AUD100 discount voucher for consultaion</a></p></div>";
 
     $('.questions .title').html('Consult us');
+    $('.my-recap').removeClass('col-md-6').insertAfter('.upload-cv');
+    $('.inq-country').css({'display': 'none'});
     $(someText).insertBefore('.questions .container-fluid');
+    $('#submitholder').addClass('col-lg-12');
 
 </script>
 @endpush

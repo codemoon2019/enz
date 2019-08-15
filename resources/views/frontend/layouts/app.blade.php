@@ -6,8 +6,6 @@
     @endlangrtl
     <head>
     
-        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5d3a734f13b6f000122837f8&product=custom-share-buttons' async='async'></script>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,6 +15,10 @@
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
+        <link rel="preload" href="http://support.enz.com.ph" crossorigin="anonymous">
+        <link rel="dns-prefetch" href="https://l.sharethis.com" crossorigin="anonymous">
+        <link rel="dns-prefetch" href="https://app.getresponse.com" crossorigin="anonymous">
+        <link rel="dns-prefetch" href="https://www.gstatic.com" crossorigin="anonymous">
 
         @include('frontend.includes.meta-tags')
 
@@ -27,7 +29,7 @@
         <link rel="apple-touch-icon" href="/misc/favicon.ico">
         <link rel="icon" type="image/png" href="/misc/favicon.ico"/>
         <style>
-            @font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-display:swap;font-family:Jelle;src:url(/fonts/Jellee-Roman.otf)}
+            @font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJFQNcOM.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:400;src:local('Quicksand Regular'),local('Quicksand-Regular'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQML_B48.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-display:swap;font-family:Quicksand;font-style:normal;font-weight:700;src:local('Quicksand Bold'),local('Quicksand-Bold'),url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-display:swap;font-family:Jelle;src:url(/fonts/Jellee-Roman.otf)}.page-loader{position:fixed;top:0;left:0;height:100%;width:100%;display:flex;align-items:center;flex-flow:column;justify-content:center;text-align:center;z-index:999;background-color:#fff}.page-loaded .page-loader{opacity:0;visibility:hidden;transition:all ease-in-out .8s}@keyframes  loaderAnim{to{transform:rotate(360deg)}}
         </style>
         <style>
         .ns-message{position:fixed;top:0;left:0;height:100%;width:100%;z-index:9999;display:flex;align-items:center;justify-content:center;padding:15px;color:#3fb1e5;background-color:#fff;text-align:center}.ns-message svg{margin-right:20px}.ns-message path{fill:#3fb1e5;}
@@ -38,7 +40,7 @@
         
         @endcan --}}
 
-        @include('frontend.includes.widgets.global-critical')
+        {{-- @include('frontend.includes.widgets.global-critical') --}}
 
     @stack('before-styles')
         <link rel="preload" href="{{ mix('/css/frontend-core.css') }}" as="style" onload="this.rel='stylesheet'">
@@ -125,7 +127,11 @@
         <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"></span>
     </div>
 
-    <button id="top" class="scrollTop btn" aria-label="Scroll to top"><img class="img-fluid" data-src="{{asset('svg/arrow.svg')}}" alt=""></button>
+    <button id="top" class="scrollTop btn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25.073" height="17.63" viewBox="0 0 25.073 17.63">
+            <path id="up-arrow" d="M16.884,4.939A.889.889,0,1,0,15.62,6.19L22.028,12.6H.885A.88.88,0,0,0,0,13.483a.89.89,0,0,0,.885.9H22.028l-6.407,6.4a.907.907,0,0,0,0,1.264.885.885,0,0,0,1.264,0l7.924-7.924a.87.87,0,0,0,0-1.251Z" transform="translate(0 -4.674)" fill="#fff"/>
+        </svg>
+    </button>
     <!-- PRELOADING CSS -->
 	<script>
         !function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
@@ -142,18 +148,24 @@
 	<script type="text/javascript" src="/libraries/tweenmax/plugins/debug.addIndicators.min.js"></script> --}}
     {!! script(mix('js/frontend.js')) !!}
 
-    <script src="{{ asset('js/jquery.form.min.js') }}"></script>
-
+    
     @stack('after-scripts')
+    <script async defer src="{{ asset('js/jquery.form.min.js') }}" type="text/javascript"></script>
     <script async defer type="text/javascript">
     (function() {
         setTimeout(function() {
             var phplive_e_1480051776 = document.createElement("script") ;
             phplive_e_1480051776.type = "text/javascript" ;
             phplive_e_1480051776.async = true ;
+            phplive_e_1480051776.rel = "preconnect"
             phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
             document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
-        },3000)
+            $('#phplive_btn_1480051776').css({
+                'display' : 'block',
+                'opacity' : 1,
+                'transition' : 'all ease 300ms'
+                })
+        },5000)
     })() ;
     </script>
     @include('includes.partials.ga')
