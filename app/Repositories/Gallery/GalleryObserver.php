@@ -32,8 +32,13 @@ class GalleryObserver extends BaseObserverContract
     {
         self::meta('create', $model, $data);
 
-        self::uploadImage($model, $data['featured_image'], 'featured');
-        self::uploadMultipleImage($model, $data['images'], 'images');
+        if (array_key_exists('featured_image', $data) && $data['featured_image']) {
+            self::uploadImage($model, $data['featured_image'], 'featured');
+        }
+
+        if (array_key_exists('images', $data) && $data['images']) {
+            self::uploadMultipleImage($model, $data['images'], 'images');
+        }
 
         return $model;
     }
