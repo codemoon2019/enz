@@ -2,6 +2,18 @@
 
 @section('page_class', "page page-services migration-visa")
 
+@push('after-styles')
+
+<style>
+
+    #service-description p{
+        font-size: 17px;
+    }
+    
+</style>
+
+@endpush
+
 @section('content')
 
 @php $migration_page = true; @endphp
@@ -78,7 +90,7 @@
                         
                         data-position="" 
 
-                        data-description="" 
+                        data-description="{{ $element->description }}" 
                         
                         data-contact="">
                     
@@ -167,10 +179,7 @@
 
                     <h3 class="title fs18 text-center mb30" id="service-title"></h3>
 
-                    <p class="basic fs18 text-black mb0"><b>a. Lorem ipsum dolor sit amet.</b></p>
-                    <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
-                    <p class="basic fs18 text-black mb0"><b>b. Lorem ipsum dolor sit amet.</b></p>
-                    <p class="basic fs18 text-black">Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
+                    <div id="service-description" style="padding: 5px 20px; text-align: justify;"></div>
 
                 </div>
                 
@@ -228,6 +237,7 @@
 
         $('#service-image').attr('src', el.attr('data-image'));
         $('#service-title').html(el.attr('data-title'));
+        $('#service-description').html(el.parent().find('img').attr('data-description'));
 
         $('.modal-trigger').trigger('click');
 
@@ -239,6 +249,7 @@
 
         $('#service-image').attr('src', el.parent().find('img').attr('data-image'));
         $('#service-title').html(el.parent().find('img').attr('data-title'));
+        $('#service-description').html(el.parent().find('img').attr('data-description'));
 
         $('.modal-trigger').trigger('click');
     });
