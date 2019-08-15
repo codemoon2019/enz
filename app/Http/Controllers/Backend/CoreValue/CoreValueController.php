@@ -53,8 +53,8 @@ class CoreValueController extends CRUDController
     {
         $data = [
             'meta' => $request->meta,
+            'featured' => $request->featured,
         ];
-
         $model = $this->repository()->makeModel();
 
         return array_merge($request->only($model->getFillable()), $data);

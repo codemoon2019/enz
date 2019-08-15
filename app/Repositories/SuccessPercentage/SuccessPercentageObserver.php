@@ -19,6 +19,7 @@ class SuccessPercentageObserver extends BaseObserverContract
      */
     public static function storing(array $data): array
     {
+        // $data['order']=>$this->model()
         return $data;
     }
 

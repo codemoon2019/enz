@@ -63,7 +63,7 @@
 
                 @else
             
-                    <image-uploader></image-uploader>
+                    <image-uploader input-name="featured"></image-uploader>
             
                 @endif
             

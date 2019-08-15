@@ -78,7 +78,7 @@ class PageTableController extends Controller
 ////                    'can' => $can
 //                ];
 //            })
-            ->addColumn('title', function ($model) {
+            ->editColumn('title', function ($model) {
                 return $model->gettrans('title');
             })
             ->addColumn('actions', function ($model) {

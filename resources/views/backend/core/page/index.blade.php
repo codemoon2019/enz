@@ -19,7 +19,7 @@
             <td>{{ __('core_page.fields.action') }}</td>
         @endslot
         @slot('columns', json_encode([
-            [ 'data' => 'title' ],
+            [ 'data' => 'title'],
         	[ 'data' => 'url' ],
         	[ 'data' => 'domains' ],
         	[ 'data' => 'actions', 'type' => 'actions', 'sortable' => false, 'searchable' => false ],
