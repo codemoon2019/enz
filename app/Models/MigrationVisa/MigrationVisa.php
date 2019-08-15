@@ -13,11 +13,15 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
+use App\Models\Traits\HasImageMediaTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+
+
 /**
  * Class MigrationVisa
  * @package App\Models\MigrationVisa
  */
-class MigrationVisa extends Model
+class MigrationVisa extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
@@ -27,6 +31,9 @@ class MigrationVisa extends Model
     use MigrationVisaRelations;
     use MigrationVisaScopes;
     use MigrationVisaStaticFunctions;
+
+    use HasImageMediaTrait;
+
 
     public const MODULE_NAME = 'migration visa';
     public const VIEW_BACKEND_PATH = 'backend.migrationVisa';
@@ -139,4 +146,10 @@ class MigrationVisa extends Model
         ];
         return $links;
     }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('document')->singleFile();
+    }
+
 }

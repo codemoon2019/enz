@@ -13,11 +13,16 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
+
+
+use App\Models\Traits\HasImageMediaTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+
 /**
  * Class Subscription
  * @package App\Models\Subscription
  */
-class Subscription extends Model
+class Subscription extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
@@ -27,6 +32,8 @@ class Subscription extends Model
     use SubscriptionRelations;
     use SubscriptionScopes;
     use SubscriptionStaticFunctions;
+
+    use HasImageMediaTrait;
 
     public const MODULE_NAME = 'subscription';
     public const VIEW_BACKEND_PATH = 'backend.subscription';
@@ -139,4 +146,10 @@ class Subscription extends Model
         ];
         return $links;
     }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('document')->singleFile();
+    }
+    
 }

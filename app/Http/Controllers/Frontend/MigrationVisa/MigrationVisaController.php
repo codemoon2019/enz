@@ -106,7 +106,7 @@ class MigrationVisaController extends Controller
             
             'location'             => 'required|max:255',
             
-            'country'              => 'required',
+            // 'country'              => 'required',
             
             'resume'               => 'required',
             
@@ -145,11 +145,13 @@ class MigrationVisaController extends Controller
             
             'inquiry'       => $request['inquiry'],
             
-            'country'       => $request['country'],
+            // 'country'       => $request['country'],
             
             'resume'        => $filename,
         
         ]);
+
+        // $model->addMedia($request['resume'])->preservingOriginal()->toMediaCollection("document");
 
         // 0 = User / 1 = Admin
 
@@ -168,10 +170,6 @@ class MigrationVisaController extends Controller
             Mail::send(new ContactEmail($model, $details));
 
         }
-
-        session()->flash('flash_success', 'Inquiry Submitted');
-
-      
 
     }
 }
