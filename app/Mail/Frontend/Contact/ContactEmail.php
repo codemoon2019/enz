@@ -31,13 +31,17 @@ class ContactEmail extends Mailable implements ShouldQueue
      */
     public function build()
     {
+
+        $file = json_decode($this->model['resume']);
+
         if ($this->details['type']) {
 
             $this->markdown('frontend.mail.contact.contact_email')
             ->subject($this->details['subject'])
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-            ->attach($this->model->getFirstMedia('document')->getPath())
-            // ->cc('nico.halcyondigital@gmail.com')
+            ->attach(storage_path("app/public/inquiry/" . $file[1]), ['as' => $file[0]])
+            // ->attach($this->model->getFirstMedia('document')->getPath())
+            ->cc('nico.halcyondigital@gmail.com')
             ->to($this->details['to']);
 
         }else{

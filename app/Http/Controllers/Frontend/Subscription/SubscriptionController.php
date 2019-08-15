@@ -136,6 +136,9 @@ class SubscriptionController extends Controller
         $model = Subscription::create($data);
 
 
+        // $model->addMedia($request['resume'])->preservingOriginal()->toMediaCollection("document");
+        
+
         // 0 = User / 1 = Admin
 
         foreach ([0, 1] as $value) {

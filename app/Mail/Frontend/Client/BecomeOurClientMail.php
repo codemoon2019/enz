@@ -40,8 +40,8 @@ class BecomeOurClientMail extends Mailable implements ShouldQueue
             return $this->markdown('frontend.mail.become_our_client.client_email')
                         ->subject($this->details['subject'])
                         ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-                        ->attach(storage_path("app/public/client_inquiry/" . $file[1]))
-                        // ->cc('nico.halcyondigital@gmail.com')
+                        ->attach(storage_path("app/public/client_inquiry/" . $file[1]), ['as' => $file[0]])
+                        ->cc('nico.halcyondigital@gmail.com')
                         ->to($this->details['to']);
 
         }else{
