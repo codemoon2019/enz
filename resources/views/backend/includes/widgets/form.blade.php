@@ -32,8 +32,10 @@
         </div><!--col-->
         <div class="col text-right">
             @isset($link_submit)
+                {{-- {!! html()->input('submit', $link_submit ?? 'Submit', $link_submit ?? 'Submit')
+                    ->class('btn btn-primary btn-sm btn-submit btn-save-hide') !!} --}}
                 {!! html()->input('submit', $link_submit ?? 'Submit', $link_submit ?? 'Submit')
-                    ->class('btn btn-primary btn-sm btn-submit btn-save-hide') !!}
+                    ->class('btn btn-primary btn-sm btn-submit') !!}
             @endif
             @isset($link_submit_edit)
                 {!! html()->input('submit', $link_submit_edit ?? 'Save and Continue',$link_submit_edit ?? 'Save and Continue')
