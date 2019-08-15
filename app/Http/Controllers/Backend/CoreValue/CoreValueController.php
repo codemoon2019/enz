@@ -53,6 +53,7 @@ class CoreValueController extends CRUDController
     {
         $data = [
             'meta' => $request->meta,
+            'image' => $request->image
         ];
 
         $model = $this->repository()->makeModel();

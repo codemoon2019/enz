@@ -55,8 +55,6 @@ class OurTeamController extends CRUDController
         $data = $request->all();
 
         $data['status']         = $request->status ? 'enable' : 'disabled';
-        $data['featured_image'] = $request->featured_image;
-        $data['image']          = $request->image;
 
         return $data;
 

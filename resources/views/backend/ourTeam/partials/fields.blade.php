@@ -115,9 +115,7 @@
 
                 @else
 
-                    <image-uploader
-                         input-name="image"
-                    ></image-uploader>
+                    <image-uploader></image-uploader>
 
                 @endif
 
