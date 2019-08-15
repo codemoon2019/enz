@@ -40,7 +40,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link {{ active_class(Active::checkUriPattern('admin/migration-visas')) }}"
-                       href="{{ route('admin.migration-visas.index') }}"><i class="nav-icon fa fa-envelope"></i>Migration Visas</a>
+                       href="{{ route('admin.migration-visas.index') }}"><i class="nav-icon fa fa-envelope"></i>Migration Inquiries</a>
                 </li>
 
             @endcan
@@ -177,6 +177,15 @@
                                    href="{{ route(app(App\Models\Why\Why::class)::ROUTE_ADMIN_PATH.'.index') }}">
                                     <i class="nav-icon fa fa-circle-o"></i> Why
                                 </a>
+                            </li>
+
+                        @endcan
+
+                        @can(app(App\Models\ServicesOffered\ServicesOffered::class)::permission('index'))
+
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_class(Active::checkUriPattern('admin/services-offereds')) }}"
+                                   href="{{ route('admin.services-offereds.index') }}"><i class="nav-icon fa fa-circle-o"></i>Service Offered</a>
                             </li>
 
                         @endcan

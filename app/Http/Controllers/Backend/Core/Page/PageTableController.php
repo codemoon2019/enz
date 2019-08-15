@@ -58,6 +58,7 @@ class PageTableController extends Controller
                 'location',
                 'why',
                 'area-of-study',
+                'services-offereds',
             ]))
             ->escapeColumns(['id'])
             ->addColumn('domains', function ($model) {

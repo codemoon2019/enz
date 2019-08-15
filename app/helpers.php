@@ -24,6 +24,7 @@ use App\Models\AreaOfStudy\AreaOfStudy;
 use App\Models\Location\Location;
 use App\Models\Award\Award;
 use App\Models\SuccessPercentage\SuccessPercentage;
+use App\Models\ServicesOffered\ServicesOffered;
 
 /*
  * Application version name
@@ -807,5 +808,13 @@ if (!function_exists('SuccessPercentage')) {
     function SuccessPercentage()
     {
         return SuccessPercentage::orderBy('order')->get();
+    }
+}
+
+
+if (!function_exists('ServicesOffered')) {
+    function ServicesOffered()
+    {
+        return ServicesOffered::orderBy('order')->get();
     }
 }
