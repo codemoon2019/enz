@@ -109,7 +109,7 @@
 
 @push('after-scripts')
 <script>
-    $('.slick-slider').slick('unslick');
+    // $('.slick-slider').slick('unslick');
 
 $("{{ $ids }}").on('shown.bs.modal', function () {
 

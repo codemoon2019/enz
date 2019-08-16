@@ -47,7 +47,7 @@
 
                 @else
             
-                    <image-uploader></image-uploader>
+                    <image-uploader input-name="featured_image" :multiple="true"></image-uploader>
             
                 @endif
             

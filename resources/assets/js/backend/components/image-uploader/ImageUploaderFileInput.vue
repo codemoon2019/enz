@@ -1,6 +1,6 @@
 <template>
   <div class="custom-file">
-    <input ref="fileInput" type="file" :name="inputName" class="custom-file-input" @change="onFileChange" :disabled="disabled" :accept="acceptedMimeTypes.join(',')" multiple v-if="multiple">
+    <input ref="fileInput" type="file" :name="inputName+'[]'" class="custom-file-input" @change="onFileChange" :disabled="disabled" :accept="acceptedMimeTypes.join(',')" multiple v-if="multiple">
     <input ref="fileInput" type="file" :name="inputName" class="custom-file-input" @change="onFileChange" :disabled="disabled" :accept="acceptedMimeTypes.join(',')" v-else>
     <label class="custom-file-label" for="customFile">Choose image</label>
   </div>
