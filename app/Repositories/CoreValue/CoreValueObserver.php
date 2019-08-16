@@ -32,8 +32,8 @@ class CoreValueObserver extends BaseObserverContract
     {
         self::meta('create', $model, $data);
 
-        if (array_key_exists('image', $data) && $data['image']) {
-            self::uploadImage($model, $data['image'], 'featured');
+        if (array_key_exists('featured_image', $data) && $data['featured_image']) {
+            self::uploadImage($model, $data['featured_image'], 'featured');
         }
 
         return $model;
