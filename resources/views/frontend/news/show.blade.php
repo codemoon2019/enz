@@ -76,7 +76,7 @@
             
             <input type="hidden" id="current-url" value="{{ url()->current() }}">
 
-            <button onclick="copyUrl()">Copy</button>
+            {{-- <button onclick="copyUrl()">Copy</button> --}}
         
         </div>
 
@@ -92,7 +92,7 @@
 
             <div class="sharethis-inline-share-buttons"></div>
         
-            <button onclick="copyUrl()">Copy</button>
+            {{-- <button onclick="copyUrl()">Copy</button> --}}
 
         </div>
 
