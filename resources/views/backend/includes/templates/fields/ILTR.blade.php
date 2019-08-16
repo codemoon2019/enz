@@ -12,7 +12,7 @@
                         
                     @php $image_area = $content->property->image_area; @endphp
 
-                    <div class="image-area">
+                    <div class="image-area" style="display: none;">
 
                         Image Area: 
                         
