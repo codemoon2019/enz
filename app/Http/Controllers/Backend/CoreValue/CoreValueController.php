@@ -52,8 +52,8 @@ class CoreValueController extends CRUDController
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
         $data = [
-            'meta' => $request->meta,
-            'featured' => $request->featured,
+            'meta'           => $request->meta,
+            'featured_image' => $request->featured_image
         ];
         $model = $this->repository()->makeModel();
 

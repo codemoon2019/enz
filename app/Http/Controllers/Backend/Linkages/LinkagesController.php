@@ -54,8 +54,8 @@ class LinkagesController extends CRUDController
     {
         $data = [
             'meta' => $request->meta,
+            'featured_image' => $request->featured_image
         ];
-
         $model = $this->repository()->makeModel();
 
         $request = $request->all();

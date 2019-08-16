@@ -52,7 +52,9 @@ class GalleryController extends CRUDController
     public function generateStub(Request $request, IlluminateModel $model = null): array
     {
         $data = [
-            'meta' => $request->meta,
+            'meta'           => $request->meta,
+            'featured_image' => $request->featured_image,
+            'images'         => $request->images,
         ];
 
         $model = $this->repository()->makeModel();

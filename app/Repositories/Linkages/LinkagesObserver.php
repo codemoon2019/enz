@@ -31,6 +31,15 @@ class LinkagesObserver extends BaseObserverContract
     public static function stored($model, array $data)
     {
         self::meta('create', $model, $data);
+        if (array_key_exists('featured_image', $data) && $data['featured_image']) {
+            if(is_array($data['featured_image'])){
+                foreach($data['featured_image'] as $image){
+                    self::uploadImage($model, $image, 'featured');
+                }
+            }else{
+                self::uploadImage($model, $data['featured_image'], 'featured');
+            }
+        }
         return $model;
     }
 

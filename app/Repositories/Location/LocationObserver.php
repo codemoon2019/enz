@@ -31,6 +31,11 @@ class LocationObserver extends BaseObserverContract
     public static function stored($model, array $data)
     {
         self::meta('create', $model, $data);
+
+        if (array_key_exists('featured_image', $data) && $data['featured_image']) {
+            self::uploadImage($model, $data['featured_image'], 'featured');
+        }
+
         return $model;
     }
 

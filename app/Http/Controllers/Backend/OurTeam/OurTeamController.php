@@ -54,10 +54,10 @@ class OurTeamController extends CRUDController
 
         $data = $request->all();
 
-        $data['status'] = $request->status ? 'enable' : 'disabled';
+        $data['status']         = $request->status ? 'enable' : 'disabled';
 
         return $data;
-        
+
         // $data = [
         //     'meta' => $request->meta,
         // ];
