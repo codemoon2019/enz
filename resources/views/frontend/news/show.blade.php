@@ -19,12 +19,6 @@
 
 @endpush
 
-@push('meta')
-
-	<meta property="og:image" content="{{ url('/') . $model->getFirstMediaUrl('featured') }}">
-
-@endpush
-
 @section('page_class', "page page-news page-basic")
 
 @section('content')
