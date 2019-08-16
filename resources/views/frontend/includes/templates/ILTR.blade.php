@@ -1,88 +1,26 @@
-@php $image_area = $content->property->image_area; @endphp
+<div class="mw-1200 mx-auto mb50">
 
-@switch($image_area)
-    
-    @case(3)
-    
-    <div class="container-fluid mb150 pr83 text-justify">
+    <div class="container">
 
         <div class="row">
-        
-            <div class="col-sm-4">
-        
-                <img data-src="{{ $content->getFirstMediaUrl('images') }}" class="img-fluid" alt="">
-        
-            </div>
-        
-            <div class="col-sm-8 align-self-center">
-                
-                <div class="basic pl10p">
-
-                    {!! $content->body !!}
-                
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    @break
-    
-    @case(6)
-
-    <div class="container-fluid mb150 pr83 text-justify">
-
-        <div class="row">
-        
+            
             <div class="col-sm-6">
-        
-                <img data-src="{{ $content->getFirstMediaUrl('images') }}" class="img-fluid" alt="">
-        
+            
+                <img data-src="{{ $content->getFirstMediaUrl('images') }}" class="img-fluid w-100" alt="">
+            
             </div>
         
-            <div class="col-sm-6 align-self-center">
-                
-                <div class="basic pl10p">
-
+            <div class="col-sm-6 t" style="padding: 0px 15px 0px 0px;">
+            
+                <div class="basic text-justify">
+                    
                     {!! $content->body !!}
-                
+
                 </div>
-
+            
             </div>
-
+            
         </div>
-
     </div>
 
-
-    @break
-
-    @default
-
-    <div class="container-fluid mb150 pr83 text-justify">
-
-        <div class="row">
-        
-            <div class="col-sm-9">
-        
-                <img data-src="{{ $content->getFirstMediaUrl('images') }}" class="img-fluid" alt="">
-        
-            </div>
-        
-            <div class="col-sm-3 align-self-center">
-                
-                <div class="basic pl10p">
-
-                    {!! $content->body !!}
-                
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-@endswitch
+</div>
