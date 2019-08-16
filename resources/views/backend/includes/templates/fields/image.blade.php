@@ -16,7 +16,7 @@
                     
                     @endphp
 
-                    <div class="image-align">
+                    <div class="image-align" style="display: none;">
                         Image Align: 
                         <input type="radio" name="image-align-{{ $content->id }}" {{ $image_align == 'center' ? 'checked' : '' }} value="center"> Center
                         <input type="radio" name="image-align-{{ $content->id }}" {{ $image_align == 'left' ? 'checked' : '' }} value="left"> Left
