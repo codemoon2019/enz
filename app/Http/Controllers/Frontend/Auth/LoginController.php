@@ -195,7 +195,7 @@ class LoginController extends Controller
         $request->validate([
             'email' => 'required|string',
             'password' => 'required|string',
-            'g-recaptcha-response' => ['required_if:captcha_status,true', new CaptchaRule()],
+            // 'g-recaptcha-response' => ['required_if:captcha_status,true', new CaptchaRule()],
         ], 
         [
             'g-recaptcha-response.required' => 'Please verify that you are not a robot.',

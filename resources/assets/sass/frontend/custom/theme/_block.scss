@@ -311,20 +311,26 @@
 //Share
 .share {
     .btn {
-        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         text-align: left;
         color: #fff;
+        font-size:13px;
+        min-width: 120px;
+        height: 32px;
         transition: all ease 300ms;
-        &:hover,
-        &:active {
-            background: transparent;
-            transition: all ease 300ms;
-        }
+        // &:hover,
+        // &:active {
+        //     background: transparent;
+        //     transition: all ease 300ms;
+        // }
         .fa {
-            font-size: 24px;
-            vertical-align: bottom;
+            font-size: 13px;
+            vertical-align: baseline;
         }
     }
+    .st-btn.custom { padding: 0;}
     .sh-fb {
         background-color: #3b5998;
         border-color:#3b5998;
@@ -368,10 +374,10 @@
     .sh-cp {
         background-color: #0f65ef;
         border-color:#0f65ef;
-        &:hover,
-        &:active {
-            color: #0f65ef;
-        }
+        // &:hover,
+        // &:active {
+        //     color: #0f65ef;
+        // }
     }
     .row {
         margin: 0 -7.5px;

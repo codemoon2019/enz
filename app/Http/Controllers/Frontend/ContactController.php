@@ -46,19 +46,19 @@ class ContactController extends Controller
     {
         $filename = null;
 
-        // if ($request['resume'] != null) {
+        if ($request['resume'] != null) {
 
-        //     $file = $request['resume'];
+            $file = $request['resume'];
 
-        //     $name = $file->getClientOriginalName();
+            $name = $file->getClientOriginalName();
 
-        //     $encrypt_name = Uuid::generate(4)->string;
+            $encrypt_name = Uuid::generate(4)->string;
 
-        //     $file->storeAs('public/inquiry', $encrypt_name);
+            $file->storeAs('public/inquiry', $encrypt_name);
 
-        //     $filename = json_encode([$name, $encrypt_name]);
+            $filename = json_encode([$name, $encrypt_name]);
 
-        // }
+        }
 
         $model = Inquiry::create([
 
@@ -78,15 +78,15 @@ class ContactController extends Controller
 
             'country'       => $request['country'],
 
-            // 'resume'        => $filename,
+            'resume'        => $filename,
 
         ]);
 
 
-        $model->addMedia($request['resume'])
-        //TODO Find who call $request['resume'] then remove preserving original
-        ->preservingOriginal()
-        ->toMediaCollection("document");
+        // $model->addMedia($request['resume'])
+        // //TODO Find who call $request['resume'] then remove preserving original
+        // ->preservingOriginal()
+        // ->toMediaCollection("document");
 
         // 0 = User / 1 = Admin
 

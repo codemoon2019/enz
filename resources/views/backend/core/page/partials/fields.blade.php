@@ -46,13 +46,13 @@
 
         @include('backend.includes.fields.domain')
 
-{{--         <div class="form-group row">
+        <div class="form-group row">
             <label class="col-md-2 form-control-label">Description<br/></label>
             <div class="col-md-10">
                 <textarea name="description" id="description" class="form-control">{{ isset($model) ? $model->description : old('description') }}</textarea>
             </div>
         </div>
- --}}
+
         {{-- <div class="form-group row">
             <label class="col-md-2 form-control-label">Banner<br/></label>
             <div class="col-md-10">

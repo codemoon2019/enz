@@ -7,6 +7,7 @@ use HalcyonLaravel\Base\BaseableOptions;
 use HalcyonLaravel\Base\Controllers\Backend\CRUDController;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 use Illuminate\Database\Eloquent\Model as IlluminateModel;
+use App\Models\SuccessPercentage\SuccessPercentage;
 use Illuminate\Http\Request;
 
 /**
@@ -56,7 +57,8 @@ class SuccessPercentageController extends CRUDController
         ];
 
         $model = $this->repository()->makeModel();
-
+        $order = SuccessPercentage::max('order');
+        $request->request->add(['order'=>$order+1]);
         return array_merge($request->only($model->getFillable()), $data);
     }
 

@@ -109,6 +109,17 @@
       "@php -r \"!file_exists('storage/framework/cache/query-cache-model-repository.json') || unlink('storage/framework/cache/query-cache-model-repository.json');\"",
       "composer dump-autoload --no-interaction --ansi --optimize"
     ],
+    "clear-all71": [
+      "php71 artisan clear-compiled --ansi",
+      "php71 artisan cache:clear --ansi",
+      "php71 artisan permission:cache-reset --ansi",
+      "php71 artisan route:clear --ansi",
+      "php71 artisan view:clear --ansi",
+      "php71 artisan config:clear --ansi",
+      "php71 -r \"!file_exists('storage/framework/cache/repository-cache-keys.json') || unlink('storage/framework/cache/repository-cache-keys.json');\"",
+      "php71 -r \"!file_exists('storage/framework/cache/query-cache-model-repository.json') || unlink('storage/framework/cache/query-cache-model-repository.json');\"",
+      "php71 composer.phar dump-autoload --no-interaction --ansi --optimize"
+    ],
     "cc": [
       "@php artisan cache:clear --ansi",
       "@php artisan permission:cache-reset --ansi",

@@ -55,7 +55,6 @@ class CoreValueController extends CRUDController
             'meta'           => $request->meta,
             'featured_image' => $request->featured_image
         ];
-
         $model = $this->repository()->makeModel();
 
         return array_merge($request->only($model->getFillable()), $data);

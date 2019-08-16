@@ -16,7 +16,11 @@
 
 **Message:** {{ $model['inquiry'] }}
 
+@if ($model['country'] != null)
+	
 **Country:** {{ $model['country'] }}
+
+@endif
 
 @else
 

@@ -70,23 +70,14 @@
             </div>
         </div> --}}
 
-        <div class="sharethis-inline-share-buttons"></div><br>
+        <div class="social-share share mb20">
+            
+            <div class="sharethis-inline-share-buttons"></div>
+            
+            <input type="hidden" id="current-url" value="{{ url()->current() }}">
+    
+        </div>
 
-
-    	{{-- <div class="block--content d-flex ai-c mb15">
-            <a style="padding: 5px 20px;
-		    background: #0070ab;
-		    color: white;
-		    text-decoration: none;
-		    border-radius: 4px;" class="social-btn button-facebook tc-white d-flex ai-c" onclick="return ss_plugin_loadpopup_js(this);" rel="external nofollow" href="http://www.facebook.com/sharer/sharer.php?u={{url()->current()}}" target="_blank"><i style="padding: 3px 5px;" class="fa fa-facebook-square"></i> Share</a>
-		            <a style="padding: 5px 20px;
-		    background: #0070ab;
-		    color: white;
-		    text-decoration: none;
-		    border-radius: 4px; margin-left: 5px;" class="social-btn button-twitter tc-white" onclick="return ss_plugin_loadpopup_js(this);" rel="external nofollow" href="http://twitter.com/intent/tweet/?text={{url()->current()}}" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
-        </div>  --}}
-
-        
         <div class="basic text-black text-justify mb30">
             
             {!!  $model->description !!}
@@ -95,8 +86,11 @@
 
         @include('frontend.includes.templates.index')
 
-        <div class="sharethis-inline-share-buttons"></div><br><br>
+        <div class="social-share share mb20">
 
+            <div class="sharethis-inline-share-buttons"></div>
+
+        </div>
 
         {{-- <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
@@ -137,3 +131,32 @@
     </div>
 
 @endsection
+
+@push('after-scripts')
+
+<script>
+    
+    function copyUrl() {
+
+        var copyText = document.getElementById("current-url");
+        
+        copyText.select();
+        
+        document.execCommand("copy");
+    }
+
+    $(function(){
+        setTimeout(function(){
+            $('.st-btn.st-last').css({'display' : 'none'})
+            $('#st-1').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('#st-3').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('.st-btn.custom').css({'padding' : '0'})
+        },1000)
+        setTimeout(function(){
+        },3000)
+    })
+
+
+</script>
+
+@endpush

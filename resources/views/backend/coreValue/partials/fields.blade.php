@@ -55,7 +55,6 @@
                 @if(isset($model))
 
                     <image-uploader
-                        input-name="featured_image"
                         :api-mode="true"
                         :multiple="false"
                         :uploads="{{ json_encode($model->getUploaderImages('featured', 'thumbnail')) }}"
@@ -63,9 +62,9 @@
                     ></image-uploader>
 
                 @else
-
-                    <image-uploader></image-uploader>
-
+                    <image-uploader
+                        input-name="featured_image"
+                    ></image-uploader>
                 @endif
 
             </div>

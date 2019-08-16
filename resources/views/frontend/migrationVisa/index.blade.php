@@ -2,7 +2,21 @@
 
 @section('page_class', "page page-services migration-visa")
 
+@push('after-styles')
+
+<style>
+
+    #service-description p{
+        font-size: 17px;
+    }
+    
+</style>
+
+@endpush
+
 @section('content')
+
+@php $migration_page = true; @endphp
 
 <div class="banner-block banner relative">
 
@@ -19,11 +33,9 @@
             <div class="col-lg-5 pt80">
         
                 <h1 class="title title-large text-black mb30 text-capitalize">Migration Visas Services</h1>
-                
-                <p>Australia has one of the strongest economies in the world, and after almost two consecutive decades of growth the unemployment rate has fallen to generational lows. As a result of nearly three decades of structural and policy reforms the Australian economy is flexible, resilient and increasingly integrated with global markets.</p>
-                <p>The strength of Australia’s economy has been highlighted in recent years by its ability to withstand a number of internal and external events, including a major drought, recessions in the USA, financial and economic crises in Asia and Latin America, and most recently the Global Financial Crisis.</p>
-                <p>Since 1991, Australia’s real economy has grown by an average of around 3.3 per cent a year, and combined with on-going investment in the economy, the mining boom, and demographic changes related to an aging population, there is a genuine on-going demand for skilled labour within the Australian economy that cannot be met by local supply.</p>
-                
+
+                {!! $page->description !!}
+
             </div>
 
         </div>
@@ -78,7 +90,7 @@
                         
                         data-position="" 
 
-                        data-description="" 
+                        data-description="{{ $element->description }}" 
                         
                         data-contact="">
                     
@@ -167,10 +179,7 @@
 
                     <h3 class="title fs18 text-center mb30" id="service-title"></h3>
 
-                    <p class="basic fs18 text-black mb0"><b>a. Lorem ipsum dolor sit amet.</b></p>
-                    <p class="basic fs18 text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
-                    <p class="basic fs18 text-black mb0"><b>b. Lorem ipsum dolor sit amet.</b></p>
-                    <p class="basic fs18 text-black">Reiciendis libero neque eos quas iure aspernatur veritatis quaerat quibusdam facilis blanditiis.</p>
+                    <div id="service-description" style="padding: 5px 20px; text-align: justify;"></div>
 
                 </div>
                 
@@ -187,40 +196,40 @@
 
 <script>
     
-    $('.tourist-inquiry-submit').click(function(){
+    // $('.tourist-inquiry-submit').click(function(){
 
-        el = $(this);
+    //     el = $(this);
 
-        el.attr('disabled', true).html('Please wait..');
+    //     el.attr('disabled', true).html('Please wait..');
 
-        $('.tourist-inquiry-field').css('border', 'unset');
+    //     $('.tourist-inquiry-field').css('border', 'unset');
 
-        $('#tourist-inquiry-form').ajaxForm({
+    //     $('#tourist-inquiry-form').ajaxForm({
 
-            success: function(){
+    //         success: function(){
 
-                location.reload();
+    //             location.reload();
 
-                // alert();
-                // location.href = '/thank-you';
+    //             // alert();
+    //             // location.href = '/thank-you';
 
-            }, error: function(data){
+    //         }, error: function(data){
 
-                grecaptcha.reset();
+    //             grecaptcha.reset();
                 
-                el.attr('disabled', false).html('Submit');
+    //             el.attr('disabled', false).html('Submit');
 
-                $.each(data.responseJSON['errors'], function(k, v){
+    //             $.each(data.responseJSON['errors'], function(k, v){
 
-                    $('#tourist_' + k).css('border', '2px solid #d27070');
+    //                 $('#tourist_' + k).css('border', '2px solid #d27070');
 
-                });
+    //             });
 
 
-            }
+    //         }
 
-        }).submit();
-    });
+    //     }).submit();
+    // });
 
     $('.service-modal').click(function(){
 
@@ -228,6 +237,7 @@
 
         $('#service-image').attr('src', el.attr('data-image'));
         $('#service-title').html(el.attr('data-title'));
+        $('#service-description').html(el.parent().find('img').attr('data-description'));
 
         $('.modal-trigger').trigger('click');
 
@@ -239,6 +249,7 @@
 
         $('#service-image').attr('src', el.parent().find('img').attr('data-image'));
         $('#service-title').html(el.parent().find('img').attr('data-title'));
+        $('#service-description').html(el.parent().find('img').attr('data-description'));
 
         $('.modal-trigger').trigger('click');
     });
