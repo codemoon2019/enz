@@ -18,7 +18,7 @@
 {!! MetaTag::render() !!} --}}
 
 
-
+{{-- 
 @php
     
     if (! isset($page)) {
@@ -63,4 +63,4 @@
 
 @endphp
 
-{!! MetaTag::render() !!}
+{!! MetaTag::render() !!} --}}
