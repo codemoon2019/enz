@@ -21,7 +21,7 @@
 
 @push('meta')
 
-	<meta property="og:image" content="{{ $model->getFirstMediaUrl('featured') }}">
+	<meta property="og:image" content="{{ url('/') . $model->getFirstMediaUrl('featured') }}">
 
 @endpush
 
