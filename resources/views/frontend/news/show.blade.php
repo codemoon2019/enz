@@ -70,14 +70,12 @@
             </div>
         </div> --}}
 
-        <div class="social-share mb20">
+        <div class="social-share share mb20">
             
             <div class="sharethis-inline-share-buttons"></div>
             
             <input type="hidden" id="current-url" value="{{ url()->current() }}">
-
-            <button onclick="copyUrl()">Copy</button>
-        
+    
         </div>
 
         <div class="basic text-black text-justify mb30">
@@ -88,11 +86,9 @@
 
         @include('frontend.includes.templates.index')
 
-        <div class="social-share mb20">
+        <div class="social-share share mb20">
 
             <div class="sharethis-inline-share-buttons"></div>
-        
-            <button onclick="copyUrl()">Copy</button>
 
         </div>
 
@@ -148,6 +144,18 @@
         
         document.execCommand("copy");
     }
+
+    $(function(){
+        setTimeout(function(){
+            $('.st-btn.st-last').css({'display' : 'none'})
+            $('#st-1').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('#st-3').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('.st-btn.custom').css({'padding' : '0'})
+        },1000)
+        setTimeout(function(){
+        },3000)
+    })
+
 
 </script>
 
