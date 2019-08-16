@@ -70,7 +70,15 @@
             </div>
         </div> --}}
 
-        <div class="sharethis-inline-share-buttons"></div><br>
+        <div class="social-share mb20">
+            
+            <div class="sharethis-inline-share-buttons"></div>
+            
+            <input type="hidden" id="current-url" value="{{ url()->current() }}">
+
+            <button onclick="copyUrl()">Copy</button>
+        
+        </div>
 
         <div class="basic text-black text-justify mb30">
             
@@ -80,8 +88,13 @@
 
         @include('frontend.includes.templates.index')
 
-        <div class="sharethis-inline-share-buttons"></div><br><br>
+        <div class="social-share mb20">
 
+            <div class="sharethis-inline-share-buttons"></div>
+        
+            <button onclick="copyUrl()">Copy</button>
+
+        </div>
 
         {{-- <div class="share clearfix mb30">
             <p class="fs15 mb0">Share:</p>
@@ -122,3 +135,20 @@
     </div>
 
 @endsection
+
+@push('after-scripts')
+
+<script>
+    
+    function copyUrl() {
+
+        var copyText = document.getElementById("current-url");
+        
+        copyText.select();
+        
+        document.execCommand("copy");
+    }
+
+</script>
+
+@endpush
