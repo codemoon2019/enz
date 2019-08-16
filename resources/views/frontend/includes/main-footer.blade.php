@@ -233,9 +233,9 @@
 
             @endphp
 
-            <li class="text-white loc">{!! $footer_details[0]->description !!}</li>
+            <li class="text-white loc">{{ $footer_details[0]->description }}</li>
 
-            <li class="text-white tel">{!! $footer_details[1]->description !!}</li>
+            <li class="text-white tel">{{ $footer_details[1]->description }}</li>
 
           </ul>
 

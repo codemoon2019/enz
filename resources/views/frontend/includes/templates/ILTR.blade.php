@@ -12,7 +12,7 @@
         
             <div class="col-sm-6 t" style="padding: 0px 15px 0px 0px;">
             
-                <div class="basic text-justify">
+                <div class="basic text-justify align-self-center">
                     
                     {!! $content->body !!}
 
