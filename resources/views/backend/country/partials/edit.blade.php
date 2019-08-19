@@ -9,7 +9,6 @@
 
     @slot('fields', $viewPath . '.partials.fields')
     @slot('link_cancel', route($routePath . '.show', $model))
-
     @slot('link_submit', 'Save')
     @slot('link_submit_edit', 'Save & Continue')
 

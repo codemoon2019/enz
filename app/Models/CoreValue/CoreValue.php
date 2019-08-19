@@ -152,6 +152,11 @@ class CoreValue extends Model implements HasMedia
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
                 ->fit(Manipulations::FIT_CROP, 175, 175);
+
+            $this->addMediaConversion('small')
+                ->optimize()
+                ->format(Manipulations::FORMAT_PNG)
+                ->fit(Manipulations::FIT_CROP, 120, 100);
         });
     }
 }

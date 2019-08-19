@@ -21,7 +21,7 @@
 		</thead>
 
 		<tbody>
-
+			{{-- @dd($model->inquiries) --}}
 			@foreach ($model->inquiries as $inquiry)
 
 				<tr>

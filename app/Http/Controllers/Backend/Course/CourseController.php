@@ -62,7 +62,6 @@ class CourseController extends CRUDController
         // return array_merge($request->only($model->getFillable()), $data);
 
         $data = $request->all();
-
         $data['status'] = $request->status ? 'enable' : 'disabled';
 
         return $data;

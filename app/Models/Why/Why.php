@@ -153,7 +153,7 @@ class Why extends Model implements HasMedia
             $this->addMediaConversion('main')
                 ->optimize()
                 ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 120, 100);
+                ->fit(Manipulations::FIT_CROP, 145, 200);
 
             $this->addMediaConversion('thumbnail')
                 ->optimize()

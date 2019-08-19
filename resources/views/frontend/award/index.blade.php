@@ -34,7 +34,7 @@
 
                     <div class="svg-holder mb20 mx-auto">
 
-                        <img alt="" class="img-fluid" src="{{ $award->getFirstMediaUrl('featured') }}" style="">
+                        <img alt="" class="img-fluid" src="{{ $award->getFirstMedia('featured')->getFullUrl('thumbnail') }}" style="">
 
                     </div>
                     

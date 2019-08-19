@@ -30,7 +30,7 @@ trait WhyAttributes
 
 		}
 
-		return asset('uploads/why/' . $this->file);
+		return asset($this->getFirstMedia('featured')->getFullUrl('main'));
 
 	}
 }

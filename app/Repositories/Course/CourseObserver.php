@@ -31,6 +31,9 @@ class CourseObserver extends BaseObserverContract
     public static function stored($model, array $data)
     {
         self::meta('create', $model, $data);
+        if(array_key_exists('image',$data)){
+            self::uploadImage($model, $data['image'], 'featured');
+        }   
         return $model;
     }
 
