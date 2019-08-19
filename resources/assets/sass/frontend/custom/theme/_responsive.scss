@@ -1169,6 +1169,15 @@
             padding-top: 40%;
         }
     }
+    .page-services.migration-visa {
+        .banner-block p {
+            font-size: 16px;
+        }
+        .block-services {
+            padding-top: 5%;
+        }
+    }
+
 }
     
 // @media (min-width: 1200px){   
@@ -1309,6 +1318,10 @@
     }
     .footer .form .btnview-more {
         z-index: 2;
+    }
+    
+    .migration-visa .banner-block .pt80 {
+        padding-top: 0px !important;
     }
 }
 
