@@ -13,6 +13,7 @@
             {{-- @include($viewPath . '.partials.links') --}}
         @endslot
         @slot('headers')
+            <td>ID</td>
             <td>Fullname</td>
             <td>Position</td>
             <td>Emai Address</td>
@@ -22,6 +23,7 @@
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
+            [ 'data' => 'id' ],
             [ 'data' => 'full_name' ],
         	[ 'data' => 'position' ],
             [ 'data' => 'email_address' ],

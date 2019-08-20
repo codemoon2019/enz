@@ -13,11 +13,13 @@
             {{-- @include($viewPath . '.partials.links') --}}
         @endslot
         @slot('headers')
+            <td>ID</td>
             <td>Title</td>
             <td>Last Modified</td>
             <td>Action</td>
         @endslot
         @slot('columns', json_encode([
+            [ 'data' => 'id' ],
         	[ 'data' => 'first_name' ],
         	[ 'data' => 'updated_at' ],
             [ 'data' => 'actions',  'sortable' => false, 'searchable' => false ],

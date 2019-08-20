@@ -44,6 +44,9 @@ class TouristVisaInquiryTableController extends BaseController
     public function __invoke(Request $request)
     {
         return DataTables::of($this->repository()->table())
+            ->editColumn('id', function ($model) {
+                return $model->id;
+            })
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));
             })

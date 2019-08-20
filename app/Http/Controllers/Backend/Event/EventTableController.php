@@ -45,6 +45,9 @@ class EventTableController extends BaseController
     {
         return DataTables::of($this->repository()->table())
             ->rawColumns(['status'])
+            ->editColumn('id', function ($model) {
+                return $model->id;
+            })
             ->editColumn('status', function ($model) {
                 return $model->status_action;
             })
