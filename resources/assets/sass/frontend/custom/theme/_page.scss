@@ -967,8 +967,31 @@ iframe{
         .title {
             display: inline-block;
         }
-        .slick-arrow {
+        .slick-slider .slick-arrow,        
+        .modal-body .slider-nav .slick-arrow {
             display: none !important;
+        }
+        .modal-body .slider-for .slick-prev {
+            background: #3fb1e5;
+            display: block !important;
+            left: 8%;
+            height: 40px;   
+            width: 40px;   
+            z-index: 1;
+            &:before {
+                font-size: 30px;
+            } 
+        }
+        .modal-body .slider-for .slick-next {
+            background: #3fb1e5;
+            display: block !important;
+            right: 8%;
+            height: 40px;   
+            width: 40px; 
+            z-index: 1;
+            &:before {
+                font-size: 30px;
+            }
         }
         .btn.left svg {
             transform: rotate(180deg);
