@@ -91,12 +91,21 @@ class OurTeamController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'position' => "required",
+                'email' => "required|email",
+                'contact' => "required",
+                'featured_image' => "required",
+                'image' => 'required'
             ])
             ->storeRuleMessages([
                 'title.required' => 'The name field is required.',
+                'featured_image.require' => "The featured image is required",
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'position' => "required",
+                'email' => "required|email",
+                'contact' => "required",
             ])
             ->updateRuleMessages([
                 'title.required' => 'The name field is required.',

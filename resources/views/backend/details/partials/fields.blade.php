@@ -33,7 +33,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Images<br/></label>
+            <label class="col-md-2 form-control-label">Images <i class="text-danger">*</i><br/></label>
             
             <div class="col-md-10">
             

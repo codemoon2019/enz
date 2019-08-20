@@ -22,7 +22,7 @@
     
         <div class="form-group row">
     
-            <label class="col-md-2 form-control-label">Published At</label>
+            <label class="col-md-2 form-control-label">Published At<i class="text-danger">*</i></label>
         
             <div class="col-md-10">
 
@@ -46,7 +46,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Featured Image<br/></label>
+            <label class="col-md-2 form-control-label">Featured Image<i class="text-danger">*</i><br/></label>
             
             <div class="col-md-10">
             

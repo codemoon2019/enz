@@ -86,12 +86,14 @@ class SuccessPercentageController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'percentage' => "required|numeric|between:1,100"
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'percentage' => "required|numeric|between:1,100"
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',

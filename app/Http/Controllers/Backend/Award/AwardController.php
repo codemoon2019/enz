@@ -86,9 +86,11 @@ class AwardController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'image' => "required"
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
+                'image.required' => 'The featured image is required'
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,

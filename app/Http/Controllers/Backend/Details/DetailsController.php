@@ -89,6 +89,7 @@ class DetailsController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'image' => 'required'
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',

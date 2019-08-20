@@ -85,15 +85,28 @@ class LocationController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'lat' => 'required',
+                'long' => 'required',
+                'heading' => 'required',
+                'pitch' => 'required',
+                'featured_image' => 'required'
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
+                'lat.required' => 'The latitude field is required.',
+                'long.required' => 'The longitude field is required.',
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'lat' => 'required',
+                'long' => 'required',
+                'heading' => 'required',
+                'pitch' => 'required',
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
+                'lat.required' => 'The latitude field is required.',
+                'long.required' => 'The longitude field is required.',
             ]);
     }
 }

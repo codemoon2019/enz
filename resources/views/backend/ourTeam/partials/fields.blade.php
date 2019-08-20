@@ -22,7 +22,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Position</label>
+            <label class="col-md-2 form-control-label">Position <i class="text-danger">*</i></label>
 
             <div class="col-md-10">
 
@@ -35,7 +35,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Email</label>
+            <label class="col-md-2 form-control-label">Email <i class="text-danger">*</i></label>
 
             <div class="col-md-10">
 
@@ -48,7 +48,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Contact</label>
+            <label class="col-md-2 form-control-label">Contact <i class="text-danger">*</i></label>
 
             <div class="col-md-10">
 
@@ -73,7 +73,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Featured Image<br/></label>
+            <label class="col-md-2 form-control-label">Featured Image <i class="text-danger">*</i><br/></label>
 
             <div class="col-md-10">
 
@@ -100,7 +100,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Image<br/></label>
+            <label class="col-md-2 form-control-label">Image <i class="text-danger">*</i><br/></label>
 
             <div class="col-md-10">
 

@@ -84,9 +84,11 @@ class CoreValueController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'featured_image' => 'required'
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
+                'featured_image.required' => "The featured image is required."
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,

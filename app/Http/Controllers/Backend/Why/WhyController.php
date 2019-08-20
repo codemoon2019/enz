@@ -82,9 +82,12 @@ class WhyController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'url' => "required",
+                'icon' => "required"
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
+                'icon.required' => 'The featured Image is required'
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,

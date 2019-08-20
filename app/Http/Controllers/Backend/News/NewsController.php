@@ -106,9 +106,11 @@ class NewsController extends CRUDController
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
                 'published_at' => "required",
+                'image' => "required"
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
+                'image.required' => 'The featured image is required.'
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,

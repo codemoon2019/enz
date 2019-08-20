@@ -91,12 +91,14 @@ class CareerController extends CRUDController
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
+                'location' => "required",
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'location' => "required",
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',

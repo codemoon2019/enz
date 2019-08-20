@@ -22,7 +22,7 @@
     
         <div class="form-group row">
     
-            <label class="col-md-2 form-control-label">Location</label>
+            <label class="col-md-2 form-control-label">Location <i class="text-danger">*</i></label>
     
             <div class="col-md-10">
     

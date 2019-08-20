@@ -46,7 +46,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Featured Image (svg file)</label>
+            <label class="col-md-2 form-control-label">Featured Image (svg file)<i class="text-danger">*</i></label>
 
             <div class="col-md-10 image-div">
 
