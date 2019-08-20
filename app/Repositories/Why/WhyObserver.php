@@ -32,12 +32,12 @@ class WhyObserver extends BaseObserverContract
     {
         if (array_key_exists('icon', $data) && $data['icon'] != null) {
 
-            // $filename = $data['icon']->getClientOriginalName();
+            $filename = $data['icon']->getClientOriginalName();
 
-            // $data['icon']->move('./uploads/why', $filename);
+            $data['icon']->move('./uploads/why', $filename);
 
-            // $model->update(['file' => $filename]);
-            $model->addMedia($data['icon'])->toMediaCollection('featured');
+            $model->update(['file' => $filename]);
+            // $model->addMedia($data['icon'])->toMediaCollection('featured');
         }
 
         self::meta('create', $model, $data);
@@ -68,18 +68,18 @@ class WhyObserver extends BaseObserverContract
 
         if (array_key_exists('icon', $data) && $data['icon'] != null) {
 
-            // if ($model->file != null) {
+            if ($model->file != null) {
 
-            //     unlink(public_path('uploads/why') . '/' . $model->file);
+                unlink(public_path('uploads/why') . '/' . $model->file);
             
-            // }
+            }
 
-            // $filename = $data['icon']->getClientOriginalName();
+            $filename = $data['icon']->getClientOriginalName();
 
-            // $data['icon']->move('./uploads/why', $filename);
+            $data['icon']->move('./uploads/why', $filename);
 
-            // $model->update(['file' => $filename]);
-            $model->addMedia($data['icon'])->toMediaCollection('featured');
+            $model->update(['file' => $filename]);
+            // $model->addMedia($data['icon'])->toMediaCollection('featured');
 
         }
         

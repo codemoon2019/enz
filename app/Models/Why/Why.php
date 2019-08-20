@@ -24,7 +24,7 @@ use App\Models\Traits\CustomAttributes;
  * Class Why
  * @package App\Models\Why
  */
-class Why extends Model implements HasMedia
+class Why extends Model
 {
     use Metatagable;
     use HasSlug;
@@ -34,8 +34,6 @@ class Why extends Model implements HasMedia
     use WhyRelations;
     use WhyScopes;
     use WhyStaticFunctions;
-    use HasImageMediaTrait;
-    use CustomAttributes;
 
     public const MODULE_NAME = 'why';
     public const VIEW_BACKEND_PATH = 'backend.why';
@@ -146,20 +144,4 @@ class Why extends Model implements HasMedia
         return $links;
     }
 
-    public function registerMediaCollections()
-    {
-        $this->addMediaCollection('featured')->registerMediaConversions(function (Media $media) {
-
-            $this->addMediaConversion('main')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 145, 200);
-
-            $this->addMediaConversion('thumbnail')
-                ->optimize()
-                ->format(Manipulations::FORMAT_JPG)
-                ->fit(Manipulations::FIT_CROP, 175, 175);
-        });
-
-    }
 }

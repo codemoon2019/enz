@@ -30,19 +30,19 @@
 
                         <li class="nav-item">
                        
-                            <a class="nav-link active" id="australia-tab" data-toggle="tab" href="#australia" role="tab" aria-controls="australia" aria-expanded="true">Australia</a>
+                            <a class="nav-link tab-item active" id="australia" data-toggle="tab" href="#tab-australia" role="tab" aria-controls="australia" aria-expanded="true">Australia</a>
                        
                         </li>
                        
                         <li class="nav-item">
                        
-                            <a class="nav-link" id="canada-tab" data-toggle="tab" href="#canada" role="tab" aria-controls="canada">Canada</a>
+                            <a class="nav-link tab-item" id="canada" data-toggle="tab" href="#tab-canada" role="tab" aria-controls="canada">Canada</a>
                        
                         </li>
                        
                         <li class="nav-item">
                        
-                            <a class="nav-link" id="new-zealand-tab" data-toggle="tab" href="#new-zealand" role="tab" aria-controls="new-zealand">New Zealand</a>
+                            <a class="nav-link tab-item" id="new-zealand" data-toggle="tab" href="#tab-new-zealand" role="tab" aria-controls="new-zealand">New Zealand</a>
                        
                         </li>
                     
@@ -52,7 +52,7 @@
         
                         @foreach (Country() as $key => $country)
                         
-                            <div class="tab-pane fade show {{ !$key ? 'active' : '' }}" id="{{ $country->slug }}" role="tabpanel" aria-labelledby="{{ $country->slug }}-tab">
+                            <div class="tab-pane fade show {{ !$key ? 'active' : '' }}" id="{{ 'tab-'.$country->slug }}" role="tabpanel" aria-labelledby="{{ $country->slug }}-tab">
 
                                 <h4 class="card-title mb-0" style="padding-top: 10px;">
         
@@ -125,3 +125,25 @@
 </div>
 
 @endsection
+
+@push('after-scripts')
+<script>
+    $(document).ready(function(){
+        var selectedTab = localStorage['selectedTab'] || null
+        var tabs = $.map($(".tab-item"), function(n, i){
+        return n.id;
+        });
+        if(selectedTab!=null&&tabs.includes(selectedTab)&&window.location.href==localStorage['location']){
+            $('.tab-item').removeClass('active')
+            $('.tab-pane').removeClass('show active')
+            $('#tab-'+selectedTab).addClass('show active')
+            $('#'+selectedTab).addClass('active')
+        }
+        console.log(window.location.href)
+    })
+    $('.tab-item').on('click', function(){
+        localStorage['selectedTab'] = $(this).attr('id')
+        localStorage['location'] = window.location.href
+    })
+</script>
+@endpush
