@@ -32,12 +32,12 @@ class StudentVisaObserver extends BaseObserverContract
     {
         if (array_key_exists('icon', $data) && $data['icon'] != null) {
 
-            $model->addMedia($data['icon'])->toMediaCollection('featured');
-            // $filename = $data['icon']->getClientOriginalName();
+            // $model->addMedia($data['icon'])->toMediaCollection('featured');
+            $filename = $data['icon']->getClientOriginalName();
 
-            // $data['icon']->move('./uploads/student_visa', $filename);
+            $data['icon']->move('./uploads/student_visa', $filename);
 
-            // $model->update(['file' => $filename]);
+            $model->update(['file' => $filename]);
 
         }
 
@@ -68,19 +68,19 @@ class StudentVisaObserver extends BaseObserverContract
 
         if (array_key_exists('icon', $data) && $data['icon'] != null) {
 
-            // if ($model->file != null) {
+            if ($model->file != null) {
 
-            //     unlink(public_path('uploads/student_visa') . '/' . $model->file);
+                unlink(public_path('uploads/student_visa') . '/' . $model->file);
             
-            // }
+            }
 
-            // $filename = $data['icon']->getClientOriginalName();
+            $filename = $data['icon']->getClientOriginalName();
 
-            // $data['icon']->move('./uploads/student_visa', $filename);
+            $data['icon']->move('./uploads/student_visa', $filename);
 
-            // $model->update(['file' => $filename]);
+            $model->update(['file' => $filename]);
 
-            $model->addMedia($data['icon'])->toMediaCollection('featured');
+            // $model->addMedia($data['icon'])->toMediaCollection('featured');
 
         }
         
