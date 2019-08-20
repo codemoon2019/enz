@@ -32,3 +32,22 @@
         ]))
     @endcomponent
 @endsection
+
+@push('after-scripts')
+<script>
+$(document).on("submit", ".delete", function(e){
+    e.preventDefault();
+    var selected = $(this)[0]
+    swal({
+        type: "warning",
+        title: "Warning",
+        text: "Are you sure you want to delete this inquiry?",
+        showCancelButton: true
+    }).then((response)=>{
+        if(response.value){
+            selected.submit();
+        }
+    });
+});
+</script>
+@endpush

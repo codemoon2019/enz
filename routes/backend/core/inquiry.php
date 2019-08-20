@@ -7,5 +7,5 @@ Route::group([
     Route::get('inquiry/download/{inquiry}', 'InquiriesController@download')->name('inquiries.download');
 
     Route::get('inquiry/export', 'InquiriesController@export')->name('inquiries.export');
-    Route::resource('inquiries', 'InquiriesController', ['only' => ['index', 'show']]);
+    Route::resource('inquiries', 'InquiriesController', ['only' => ['index', 'show','destroy']]);
 });

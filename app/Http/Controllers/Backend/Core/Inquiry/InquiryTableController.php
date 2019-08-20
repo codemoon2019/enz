@@ -43,8 +43,6 @@ class InquiryTableController extends Controller
             ->addColumn('actions', function ($model) {
 
                 return $model->action_buttons;
-
-                // return $model->actions('backend');
             })
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at_formatted;

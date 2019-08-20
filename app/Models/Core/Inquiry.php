@@ -55,6 +55,7 @@ class Inquiry extends Model implements HasMedia
         return [
             'index' => self::MODULE_NAME . " index",
             'show' => self::MODULE_NAME . " show",
+            'destroy' => self::MODULE_NAME . " destroy",
         ];
     }
 
@@ -106,6 +107,12 @@ class Inquiry extends Model implements HasMedia
                     'permission' => self::permission('show'),
                     'url' => route(self::ROUTE_ADMIN_PATH . '.show', $this)
                 ],
+                'destroy' => [
+                    'type' => 'destroy',
+                    'permission' => self::permission('destroy'),
+                    'url' => [self::ROUTE_ADMIN_PATH . '.destroy', $this],
+                    'redirect' => [self::ROUTE_ADMIN_PATH . '.index'],
+                ]
             ]
         ];
         return $links;
@@ -118,15 +125,20 @@ class Inquiry extends Model implements HasMedia
 
     public function getActionButtonsAttribute()
     {
-
-        $action = '<a href="'.route('admin.inquiries.show', $this->slug).'"><i class="fa fa-search btn btn-primary btn-sm"></i></a>';
+        $action = '<div class="btn-group" role="group">';
+        $action .= '<a href="'.route('admin.inquiries.show', $this->slug).'"><i class="fa fa-search btn btn-primary btn-sm"></i></a>';
 
         if ($this->resume != null) {
 
             $action .= '<a target="_blank" href="'.route('admin.inquiries.download', $this->slug).'"><i class="fa fa-download btn btn-primary btn-sm"></i></a>';
 
         }
-
+        $action .= '<form class="delete" action="'.route('admin.inquiries.destroy',['inquiry'=>$this->slug]).'" method="post">
+            <button class="btn btn-primary btn-sm" type="submit" style="padding:.15rem .55rem;"><i class="fa fa-trash"></i></button>
+            <input type="hidden" name="_method" value="delete" />'
+            .csrf_field().'
+        </form>';
+        $action .= '</div>';
         return $action;
 
 

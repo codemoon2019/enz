@@ -63,6 +63,15 @@ class InquiriesController extends BaseController
         ]);
     }
 
+    public function destroy(string $routeKeyName)
+    {
+        $inquiry = Inquiry::whereSlug($routeKeyName)->first();
+        $resume = json_decode($inquiry->resume);
+        Storage::delete('public/inquiry/'.$resume[1]);
+        $inquiry->delete();
+        return redirect(route($this->repository()->makeModel()::ROUTE_ADMIN_PATH . '.index'));
+    }
+
     public function download(string $routeKeyName)
     {
         $inquiry = Inquiry::whereSlug($routeKeyName)->first();
