@@ -13,9 +13,9 @@ Route::get('lang/{lang}', 'LanguageController');
 Route::get('thank-you',function(){
     return view('frontend.thanks');
 });
-Route::get('migration',function(){
-    return view('frontend.migration');
-});
+// Route::get('migration',function(){
+//     return view('frontend.migration');
+// });
     
 // Route::get('test-email', function(){
 

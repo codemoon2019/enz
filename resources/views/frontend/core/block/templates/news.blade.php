@@ -43,12 +43,16 @@
                 @endforeach
 
             </div>
-    
-            <div class="text-center">
-    
-                <a href="{{ route('frontend.news.index') }}" class="btn btnview-more text-uppercase">View more</a>
-    
-            </div>
+
+            @if ($button)
+                
+                <div class="text-center">
+        
+                    <a href="{{ route('frontend.news.index') }}" class="btn btnview-more text-uppercase">View more</a>
+        
+                </div>
+            
+            @endif
     
         </div>
     

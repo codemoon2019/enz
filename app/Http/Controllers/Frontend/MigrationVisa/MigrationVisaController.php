@@ -58,7 +58,7 @@ class MigrationVisaController extends Controller
         $model = $this->repository()->makeModel();
         $page = $this->pageRepository->indexPage($this->repository()->model());
         $Model = $model;
-        $homeNews = homeNews();
+        $homeNews = News();
         MetaTag::setEntity($page);
 
         // $models = $this->repository()->paginate(12);
@@ -108,7 +108,7 @@ class MigrationVisaController extends Controller
             
             // 'country'              => 'required',
             
-            'resume'               => 'required',
+            'resume'               => 'required|mimes:doc,pdf,docx,zip',
             
             'g-recaptcha-response' => 'required|captcha'
         

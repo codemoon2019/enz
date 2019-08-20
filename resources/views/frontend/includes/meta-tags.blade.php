@@ -1,26 +1,5 @@
-{{-- @php
-    MetaTag::setDefault([
-        'title' => $current_domain->title,
-        'description' => setting('site-description'),
-        'og_type' => 'website',
-        'og_url' => app('request')->fullUrl(),
-        'og_title' => MetaTag::tag('title') ?: $current_domain->title,
-        'og_description' => MetaTag::tag('description') ?: setting('site-description'),
-        'og_image' => (isset($model) && $model->metaTag->getFirstMedia('images'))? $model->metaTag->getFirstMedia('images')->getFullUrl('og_image') : app_logo('og_image'),
-        'twitter_card' => 'summary_large_image',
-        'twitter_site' => app('request')->fullUrl(),
-        'twitter_url' => app('request')->fullUrl(),
-        'twitter_title' =>  MetaTag::tag('title') ?: $current_domain->title,
-        'twitter_description' => MetaTag::tag('description') ?: setting('site-description'),
-        'twitter_image' =>  app_logo('og_image'),
-    ]);
-@endphp
-{!! MetaTag::render() !!} --}}
-
-
-
 @php
-    
+
     if (! isset($page)) {
 
         $page = homeData();
@@ -31,9 +10,29 @@
 
     $metaTag = $page->metaTag;
 
+    // OG Image will be the page meta
+
     $get_og_image = $page->metaTag->getFirstMediaUrl('images');
 
     $og_image = $get_og_image != '' ? $get_og_image : app_logo('og_image');
+    
+    if (isset($model)) {
+
+        switch (get_class($model)) {
+
+            case 'App\Models\News\News':
+
+                // OG Image will be the news featured image
+
+                $og_image = url('/') . $model->getFirstMediaUrl('featured');
+            
+            break;
+            
+            default: break;
+            
+        }
+
+    }
 
     $meta_title = $metaTag->title;
 

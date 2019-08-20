@@ -70,7 +70,9 @@
 
     
         @foreach (ServicesOffered() as $element)
+
             <div class="col-md-4 item text-center mb30">
+
                 <div class="svg-holder mb20 mx-auto">
                         
                     @php $image = $element->featured_icon; @endphp
@@ -99,96 +101,44 @@
                 <h3 class="service-modal-trigger title fs18 text-black">{{ $element->title }}</h3>
                 
             </div>
+            
         @endforeach
-
-        
-{{--         <div class="col-md-4 item text-center mb30">
-            <div class="svg-holder mb20 mx-auto">
-                
-                <img
-                    data-src="{{asset('svg/migration/sponsored.svg')}}" 
-                    
-                    alt="" class="img-fluid service-modal cursor-pointer" 
-                    
-                    data-title="Employer Sponsored Visa" 
-
-                    data-image="{{asset('svg/migration/sponsored.svg')}}" 
-
-                    data-other="" 
-                    
-                    data-email="" 
-                    
-                    data-position="" 
-
-                    data-description="" 
-                    
-                    data-contact="">
-                
-            </div>
-            
-            <h3 class="service-modal-trigger title fs18 text-black">Employer Sponsored Visa</h3>
-            
-        </div>
-        <div class="col-md-4 item text-center mb30">
-            <div class="svg-holder mb20 mx-auto">
-                
-                <img
-                    data-src="{{asset('svg/migration/study.svg')}}" 
-                    
-                    alt="" class="img-fluid service-modal cursor-pointer" 
-                    
-                    data-title="Post Study Visa" 
-
-                    data-image="{{asset('svg/migration/study.svg')}}" 
-
-                    data-other="" 
-                    
-                    data-email="" 
-                    
-                    data-position="" 
-
-                    data-description="" 
-                    
-                    data-contact="">
-                
-            </div>
-            
-            <h3 class="service-modal-trigger title fs18 text-black">Post Study Visa</h3>
-            
-        </div> --}}
 
     </div>  
 
 </div>
+
+{{-- @include('frontend.core.block.templates.news', ['button' => false])     --}}
+
 <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
 
-    <div class="modal fade" id="myModal" tabindex='-1'>
+<div class="modal fade" id="myModal" tabindex='-1'>
 
-        <div class="modal-dialog modal-lg">
-        
-            <div class="modal-content">
+    <div class="modal-dialog modal-lg">
+    
+        <div class="modal-content">
 
-                <div class="modal-body">
+            <div class="modal-body">
 
-                    <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
-                    <div class="svg-holder mb20 mx-auto">
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                        <img src="" id="service-image" alt="" class="img-fluid">
+                <div class="svg-holder mb20 mx-auto">
 
-                    </div>
-
-                    <h3 class="title fs18 text-center mb30" id="service-title"></h3>
-
-                    <div id="service-description" style="padding: 5px 20px; text-align: justify;"></div>
+                    <img src="" id="service-image" alt="" class="img-fluid">
 
                 </div>
-                
-            </div>
 
+                <h3 class="title fs18 text-center mb30" id="service-title"></h3>
+
+                <div id="service-description" style="padding: 5px 20px; text-align: justify;"></div>
+
+            </div>
+            
         </div>
 
     </div>
-    @include('frontend.core.block.templates.news')    
+
+</div>
 
 @endsection
     
@@ -196,41 +146,6 @@
 
 <script>
     
-    // $('.tourist-inquiry-submit').click(function(){
-
-    //     el = $(this);
-
-    //     el.attr('disabled', true).html('Please wait..');
-
-    //     $('.tourist-inquiry-field').css('border', 'unset');
-
-    //     $('#tourist-inquiry-form').ajaxForm({
-
-    //         success: function(){
-
-    //             location.reload();
-
-    //             // alert();
-    //             // location.href = '/thank-you';
-
-    //         }, error: function(data){
-
-    //             grecaptcha.reset();
-                
-    //             el.attr('disabled', false).html('Submit');
-
-    //             $.each(data.responseJSON['errors'], function(k, v){
-
-    //                 $('#tourist_' + k).css('border', '2px solid #d27070');
-
-    //             });
-
-
-    //         }
-
-    //     }).submit();
-    // });
-
     $('.service-modal').click(function(){
 
         let el = $(this);

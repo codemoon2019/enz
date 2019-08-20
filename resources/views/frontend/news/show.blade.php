@@ -19,12 +19,6 @@
 
 @endpush
 
-@push('meta')
-
-	<meta property="og:image" content="{{ $model->getFirstMediaUrl('featured') }}">
-
-@endpush
-
 @section('page_class', "page page-news page-basic")
 
 @section('content')
@@ -34,47 +28,12 @@
         <h1 class="title fs35">{{ $model->title }}</h1>
 
         <p class="fs15 mb20">Published At: {{ $model->published_at->format('F d, Y') }}</p>
-{{--         <div class="share clearfix mb30">
-            <p class="fs15 mb0">Share:</p>
-            <div class="row">
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-fb">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-pin">
-                        <i class="fa fa-pinterest-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-tw">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-tum">
-                        <i class="fa fa-tumblr-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-email">
-                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-cp">
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </div> --}}
 
         <div class="social-share share mb20">
             
             <div class="sharethis-inline-share-buttons"></div>
             
-            <input type="hidden" id="current-url" value="{{ url()->current() }}">
+            <input type="text" style="opacity: 0;" id="current-url" value="{{ url()->current() }}">
     
         </div>
 
@@ -92,42 +51,6 @@
 
         </div>
 
-        {{-- <div class="share clearfix mb30">
-            <p class="fs15 mb0">Share:</p>
-            <div class="row">
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-fb">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-pin">
-                        <i class="fa fa-pinterest-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-tw">
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-tum">
-                        <i class="fa fa-tumblr-square" aria-hidden="true"></i> 
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-email">
-                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="col-2 item">
-                    <button type="button" class="btn sh-cp">
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </div> --}}
-
     </div>
 
 @endsection
@@ -135,21 +58,22 @@
 @push('after-scripts')
 
 <script>
-    
-    function copyUrl() {
+        
+    $(document).on('click', '.button-copy', function(){
 
         var copyText = document.getElementById("current-url");
         
         copyText.select();
         
         document.execCommand("copy");
-    }
+
+    });
 
     $(function(){
         setTimeout(function(){
             $('.st-btn.st-last').css({'display' : 'none'})
-            $('#st-1').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
-            $('#st-3').append('<div class="st-btn custom"><button onclick="copyUrl()" type="button" class="btn sh-cp"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('#st-1').append('<div class="st-btn custom"><button type="button" class="btn sh-cp button-copy"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
+            $('#st-3').append('<div class="st-btn custom"><button type="button" class="btn sh-cp button-copy"><i class="fa fa-link" aria-hidden="true"></i> <span class="st-label">Copy</span> </button></div>')
             $('.st-btn.custom').css({'padding' : '0'})
         },1000)
         setTimeout(function(){

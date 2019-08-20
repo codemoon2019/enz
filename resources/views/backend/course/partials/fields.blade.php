@@ -118,7 +118,7 @@
     
         </div> --}}
 
-        <div class="form-group row">
+{{--         <div class="form-group row">
 
             <label class="col-md-2 form-control-label">Featured Image<br/></label>
             
@@ -141,7 +141,7 @@
             
             </div>
         
-        </div>
+        </div> --}}
         
         <div class="form-group row">
 
