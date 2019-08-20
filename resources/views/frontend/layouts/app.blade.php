@@ -15,10 +15,10 @@
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYQcL_B48.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L_.woff2" as="font" type="font/woff" crossorigin="anonymous" >
         <link rel="preload" href="/fonts/Jellee-Roman.otf" as="font" type="font/woff" crossorigin="anonymous" >
-        <link rel="dns-prefetch" href="http://support.enz.com.ph" crossorigin="anonymous">
-        <link rel="dns-prefetch" href="https://l.sharethis.com" crossorigin="anonymous">
-        <link rel="dns-prefetch" href="https://app.getresponse.com" crossorigin="anonymous">
-        <link rel="dns-prefetch" href="https://www.gstatic.com" crossorigin="anonymous">
+        <link rel="preconnect" href="http://support.enz.com.ph" crossorigin="anonymous">
+        <link rel="preconnect" href="https://l.sharethis.com" crossorigin="anonymous">
+        <link rel="preconnect" href="https://app.getresponse.com" crossorigin="anonymous">
+        <link rel="preconnect" href="https://www.gstatic.com" crossorigin="anonymous">
 
         @include('frontend.includes.meta-tags')
 
