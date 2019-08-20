@@ -101,13 +101,14 @@
                 <h3 class="service-modal-trigger title fs18 text-black">{{ $element->title }}</h3>
                 
             </div>
+            
         @endforeach
 
     </div>  
 
 </div>
 
-@include('frontend.core.block.templates.news', ['button' => false])    
+{{-- @include('frontend.core.block.templates.news', ['button' => false])     --}}
 
 <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
 
