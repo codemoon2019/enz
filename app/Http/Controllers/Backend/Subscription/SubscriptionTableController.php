@@ -45,6 +45,9 @@ class SubscriptionTableController extends BaseController
     {
         return DataTables::of($this->repository()->table())
             ->escapeColumns(['id'])
+            ->editColumn('id', function ($model) {
+                return $model->id;
+            })
             ->editColumn('updated_at', function ($model) {
                 return $model->updated_at->timezone(get_user_timezone())->format(config('core.setting.formats.datetime_12'));
             })

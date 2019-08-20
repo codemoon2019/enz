@@ -45,6 +45,9 @@ class ApplicationTableController extends BaseController
     {
         return DataTables::of($this->repository()->table())
             ->escapeColumns(['id'])
+            ->editColumn('id', function ($model) {
+                return $model->id;
+            })
             ->addColumn('position', function ($model) {
                 return $model->career->title;
             })

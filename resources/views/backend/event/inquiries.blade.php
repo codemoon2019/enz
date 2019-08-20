@@ -10,6 +10,7 @@
         @slot('secondary_title', 'Event Management')
 
         @slot('headers')
+            <td>ID</td>
             <td>Event Name</td>
             <td>Firstname</td>
             <td>Lastname</td>
@@ -20,6 +21,7 @@
             <td>Date</td>
         @endslot
         @slot('columns', json_encode([
+            [ 'data' => 'id' ],
             [ 'data' => 'event_name' ],
             [ 'data' => 'first_name' ],
             [ 'data' => 'last_name' ],

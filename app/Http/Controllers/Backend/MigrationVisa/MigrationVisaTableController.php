@@ -45,6 +45,9 @@ class MigrationVisaTableController extends BaseController
     {
         return DataTables::of($this->repository()->table())
             ->escapeColumns(['id'])
+            ->editColumn('id', function ($model) {
+                return $model->id;
+            })
             ->addColumn('actions', function ($model) {
 
                 return $model->action_buttons;
