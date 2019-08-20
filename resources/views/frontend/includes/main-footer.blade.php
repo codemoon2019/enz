@@ -14,7 +14,7 @@
 
                 <div class="col-sm-9 right-content px180">
 
-                    <h2 class="title fs40 text-nblue mb30">Got a Question?</h2>
+                    <h2 class="title fs40 text-nblue mb30">Consult us</h2>
 
                     @if (isset($migration_page))
 
