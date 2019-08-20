@@ -476,6 +476,8 @@
         background-image:linear-gradient(#fadb5d, #f08e28);
     }
 
+    .st-btn.custom { margin-top : 10px; }
+
 }
 
 @media (min-width: 640px){    
@@ -894,6 +896,8 @@
         padding-bottom: 30% !important;
     }
 
+    .st-btn.custom { margin-top : 10px; }
+
 }
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
     .for-desktop {
@@ -934,6 +938,8 @@
     .events-block .item .month {
         font-size: 40px;
     }
+    .st-btn.custom { margin-top : 0; }
+
 }
     
 @media (min-width: 768px){   
@@ -1169,6 +1175,15 @@
             padding-top: 40%;
         }
     }
+    .page-services.migration-visa {
+        .banner-block p {
+            font-size: 16px;
+        }
+        .block-services {
+            padding-top: 5%;
+        }
+    }
+
 }
     
 // @media (min-width: 1200px){   
@@ -1309,6 +1324,10 @@
     }
     .footer .form .btnview-more {
         z-index: 2;
+    }
+    
+    .migration-visa .banner-block .pt80 {
+        padding-top: 0px !important;
     }
 }
 

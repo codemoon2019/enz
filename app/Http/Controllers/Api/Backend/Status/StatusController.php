@@ -50,7 +50,12 @@ class StatusController extends Controller
 
             case 'Career': $model = new Career; break;
 
-            case 'Institution': $model = new Institution; break;
+            case 'Institution': $model = new Institution; 
+                $institution = $model::find($id);
+                foreach($institution->courses as $course){
+                    $course->update(['status'=> $request['status']]);
+                }
+            break;
 
             default: break;
         }

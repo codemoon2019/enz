@@ -188,7 +188,7 @@
         </div>
 
     </div>
-    {{-- @include('frontend.core.block.templates.news')     --}}
+    @include('frontend.core.block.templates.news')    
 
 @endsection
     

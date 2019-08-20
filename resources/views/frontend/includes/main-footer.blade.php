@@ -14,7 +14,7 @@
 
                 <div class="col-sm-9 right-content px180">
 
-                    <h2 class="title fs40 text-nblue mb30">Got a Question?</h2>
+                    <h2 class="title fs40 text-nblue mb30">Consult us</h2>
 
                     @if (isset($migration_page))
 
@@ -130,7 +130,7 @@
 
                                 <label for="">Resume / Curriculum Vitae <span class="text-danger">*</span></label><br />
 
-                                <input type="file" name="resume" id="file_resume" class="inputfile" data-multiple-caption="{count} files selected"/>
+                                <input type="file" accept=".doc, .docx,.pdf" name="resume" id="file_resume" class="inputfile" data-multiple-caption="{count} files selected"/>
 
                                 <label class="btn btnread-more text-uppercase inquiry-field" id="resume" for="file_resume" style="height: auto"><span>Choose file</span></label>
 

@@ -159,7 +159,7 @@
 
                     <div class="circle linear-gradient-{{ $core->color }} mx-auto mb30">
 
-                        <img data-src="{{ $core->getFirstMediaUrl('featured') }}" class="img-fluid" alt="">
+                        <img data-src="{{ $core->getFirstMedia('featured')->getFullUrl('small') }}" class="img-fluid" alt="">
 
                     </div>
 

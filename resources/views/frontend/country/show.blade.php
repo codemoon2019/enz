@@ -20,7 +20,7 @@
 
                     <h1 class="title title-large text-black mb30 text-capitalize">{{ $model->title }}</h1>
 
-                    {!! $model->description !!}
+                    {!! substr($model->description,0,800) .'...' !!}
 
                 </div>
 
@@ -249,3 +249,11 @@
     </section>
 
 @endsection
+
+@push('after-scripts')
+    <script>
+        $('.carousel').carousel({
+            pause: "false"
+        });
+    </script>
+@endpush

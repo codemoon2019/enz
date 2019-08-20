@@ -27,7 +27,7 @@ trait CountryAttributes
 
 		}
 
-		return asset('uploads/country/' . $this->capital_file);
+		return asset($this->getFirstMedia('capital_icon')->getFullUrl('main'));
 
 	}
 
@@ -49,7 +49,7 @@ trait CountryAttributes
 
 		}
 
-		return asset('uploads/country/' . $this->founded_file);
+		return asset($this->getFirstMedia('capital_icon')->getFullUrl('main'));
 
 	}
 
@@ -71,7 +71,7 @@ trait CountryAttributes
 
 		}
 
-		return asset('uploads/country/' . $this->area_file);
+		return asset($this->getFirstMedia('capital_icon')->getFullUrl('main'));
 
 	}
 
@@ -93,7 +93,7 @@ trait CountryAttributes
 
 		}
 
-		return asset('uploads/country/' . $this->population_file);
+		return asset($this->getFirstMedia('capital_icon')->getFullUrl('main'));
 
 	}
 

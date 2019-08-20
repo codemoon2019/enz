@@ -13,11 +13,16 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Fomvasss\LaravelMetaTags\Traits\Metatagable;
 
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use App\Models\Traits\HasImageMediaTrait;
+use Spatie\MediaLibrary\Models\Media;
+use Spatie\Image\Manipulations;
 /**
  * Class StudentVisa
  * @package App\Models\StudentVisa
  */
-class StudentVisa extends Model
+class StudentVisa extends Model implements HasMedia
 {
     use Metatagable;
     use HasSlug;
@@ -27,6 +32,7 @@ class StudentVisa extends Model
     use StudentVisaRelations;
     use StudentVisaScopes;
     use StudentVisaStaticFunctions;
+    use HasImageMediaTrait;
 
     public const MODULE_NAME = 'student visa';
     public const VIEW_BACKEND_PATH = 'backend.studentVisa';
@@ -133,5 +139,21 @@ class StudentVisa extends Model
             ]
         ];
         return $links;
+    }
+
+    public function registerMediaCollections()
+    {
+        $this->addMediaCollection('featured')->singleFile()->registerMediaConversions(function (Media $media) {
+
+            $this->addMediaConversion('thumbnail')
+                ->optimize()
+                ->format(Manipulations::FORMAT_JPG)
+                ->fit(Manipulations::FIT_CROP, 175, 175);
+
+            $this->addMediaConversion('small')
+                ->optimize()
+                ->format(Manipulations::FORMAT_PNG)
+                ->fit(Manipulations::FIT_CROP, 150, 150);
+        });
     }
 }

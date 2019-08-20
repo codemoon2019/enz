@@ -31,6 +31,7 @@ use App\Models\Gallery\Gallery;
 use App\Models\Award\Award;
 use App\Models\City\City;
 use App\Models\AreaOfStudy\AreaOfStudy;
+use App\Models\StudentVisa\StudentVisa;
 
 /**
  * Class ImageController
@@ -64,6 +65,7 @@ class ImageController extends Controller
         'award'         => Award::class,
         'city'          => City::class,
         'area-of-study' => AreaOfStudy::class,
+        'student-visa'  => StudentVisa::class
     ];
 
     /**

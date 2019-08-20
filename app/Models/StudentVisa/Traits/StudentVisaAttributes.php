@@ -40,7 +40,7 @@ trait StudentVisaAttributes
 
 		}
 
-		return asset('uploads/student_visa/' . $this->file);
+		return asset($this->getFirstMedia('featured')->getFullUrl('small'));
 
 	}
 }
