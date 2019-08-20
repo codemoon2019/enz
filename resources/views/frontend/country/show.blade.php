@@ -249,3 +249,11 @@
     </section>
 
 @endsection
+
+@push('after-scripts')
+    <script>
+        $('.carousel').carousel({
+            pause: "false"
+        });
+    </script>
+@endpush
