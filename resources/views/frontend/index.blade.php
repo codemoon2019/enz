@@ -36,7 +36,7 @@
 
     @include('frontend.core.block.templates.testimonials') 
        
-    @include('frontend.core.block.templates.news')    
+    @include('frontend.core.block.templates.news', ['button' => true])    
 
     @include('frontend.core.block.templates.choose')    
 

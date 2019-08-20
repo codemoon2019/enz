@@ -223,7 +223,7 @@ class BecomeOurClientInquiryController extends Controller
                 
                 // }
 
-                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
+                $details = ['to' => 'info@enzconsultancy.com', 'subject' => 'STUDY PATHWAYS INQUIRY - ' . $data['first_name'] . ' ' . $data['last_name'], 'type' => $value];
 
             }else{
 
