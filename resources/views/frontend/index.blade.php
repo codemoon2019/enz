@@ -8,11 +8,11 @@
 
     <div class="banner-block banner relative">
 
-        <video width="100%" loop autoplay muted>
+        <video class="banner-video" width="100%" loop autoplay muted>
 
-            <source src="{{asset('img/enz.mp4')}}" type="video/mp4">
+            <source data-src="{{asset('img/enz.mp4')}}" type="video/mp4">
         
-            <source src="{{asset('img/enz.mp4')}}" type="video/ogg">
+            <source data-src="{{asset('img/enz.mp4')}}" type="video/ogg">
         
         </video>
         

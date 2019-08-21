@@ -166,7 +166,16 @@
                 'transition' : 'all ease 300ms'
                 })
         },5000)
-    });
+        setTimeout(function() {
+            $(".banner-video source").each(function(){
+                $(this).attr("src", $(this).data("src"));
+                var video = this.parentElement;
+                video.load();
+                video.play();
+                console.log(this.parentElement);
+            });
+        },3000)
+    })();
     $(".subscribe-btn").click(function(){
         $("iframe").each(function(){
             $(this).attr("src", $(this).data("src"));
