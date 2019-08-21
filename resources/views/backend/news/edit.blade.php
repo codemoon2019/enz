@@ -32,6 +32,15 @@
                         'icon' => 'fa fa-cart-arrow-down',
                         'args'     => [ 'model' => $model ]
                     ],
+                    [
+                        'name'     => 'Preview',
+                        'template' => 'backend.news.partials.preview',
+                        'icon' => 'fa fa-eye',
+                        'args'     => [
+                            'model' => $model,
+                            'page' => $model
+                        ]
+                    ],
                 ]
             ])
 

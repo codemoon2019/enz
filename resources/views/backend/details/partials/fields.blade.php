@@ -24,9 +24,7 @@
             <label class="col-md-2 form-control-label">Description</label>
     
             <div class="col-md-10">
-    
                 <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('old') !!}</textarea>
-    
             </div>
     
         </div>
@@ -66,8 +64,11 @@
 
     <script>
 
-        CKEDITOR.replace('description', options);
-        
+        @if(isset($model))
+            @if($model->title!='Contact'&&$model->title!='Location')
+                CKEDITOR.replace('description', options);
+            @endif
+        @endif
     </script>
 
 @endpush

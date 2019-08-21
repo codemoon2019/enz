@@ -6,7 +6,7 @@
             
             <div class="col-sm-6">
             
-                <img data-src="{{ $content->getFirstMediaUrl('images') }}" class="img-fluid w-100" alt="">
+                <img data-src="{{ asset($content->getFirstMediaUrl('images')) }}" class="img-fluid w-100" alt="">
             
             </div>
         

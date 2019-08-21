@@ -1,6 +1,6 @@
 <div class="text-center mb30">
 
-    <img alt="" class="img-fluid" src="{{ $content->getFirstMediaUrl('images') }}" style="">
+    <img alt="" class="img-fluid" src="{{ asset($content->getFirstMediaUrl('images')) }}" style="">
 
 </div>
 

@@ -6,5 +6,8 @@ Route::group([
     'as' => '',
 ], function () {
     Route::post('services/table', 'ServiceTableController')->name('services.table');
-    Route::resource('services', 'ServiceController');
+    Route::get('services', function(){
+        abort(404);
+    });
+    // Route::resource('services', 'ServiceController');
 });
