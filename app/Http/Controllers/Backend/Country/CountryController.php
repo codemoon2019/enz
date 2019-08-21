@@ -84,7 +84,6 @@ class CountryController extends CRUDController
     public function crudRules(Request $request, IlluminateModel $model = null): BaseableOptions
     {
         $table = $this->repository()->makeModel()->getTable();
-
         return BaseableOptions::create()
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
@@ -94,9 +93,27 @@ class CountryController extends CRUDController
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'population_icon' => [function($attribute,$value,$fail){
+                    $this->isSVG($attribute,$value,$fail);
+                }],
+                'area_icon' => [function($attribute,$value,$fail){
+                    $this->isSVG($attribute,$value,$fail);
+                }],
+                'founded_icon' => [function($attribute,$value,$fail){
+                    $this->isSVG($attribute,$value,$fail);
+                }],
+                'capital_icon' => [function($attribute,$value,$fail){
+                    $this->isSVG($attribute,$value,$fail);
+                }],
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
             ]);
+    }
+
+    private function isSVG($attribute,$value,$fail){
+        if(!($value->getClientMimeType()=='image/svg+xml')){
+            $fail('The '.$attribute.' is not an SVG file.');
+        }
     }
 }

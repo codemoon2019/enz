@@ -83,7 +83,9 @@ class WhyController extends CRUDController
             ->storeRules([
                 'title' => "required|max:255|unique:$table",
                 'url' => "required",
-                'icon' => "required"
+                'icon' => ["required",function($attribute,$value,$fail){
+                            $this->isSVG($attribute,$value,$fail);
+                        }]
             ])
             ->storeRuleMessages([
                 'title.required' => 'The title field is required.',
@@ -91,9 +93,18 @@ class WhyController extends CRUDController
             ])
             ->updateRules([
                 'title' => "required|max:255|unique:$table,title," . optional($model)->id,
+                'icon' => [function($attribute,$value,$fail){
+                                $this->isSVG($attribute,$value,$fail);
+                            }]
             ])
             ->updateRuleMessages([
                 'title.required' => 'The title field is required.',
             ]);
+    }
+
+    private function isSVG($attribute,$value,$fail){
+        if(!($value->getClientMimeType()=='image/svg+xml')){
+            $fail('The '.$attribute.' is not an SVG file.');
+        }
     }
 }

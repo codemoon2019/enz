@@ -111,7 +111,6 @@ class CountryDetailsController extends CRUDController
 
         return redirect()->route('admin.country-details.edit', [$model->slug, $model->country->slug])->withFlashSuccess('Success');
 
-
     }
     public function update(Request $request, String $routeKeyName)
     {
