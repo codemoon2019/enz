@@ -436,11 +436,7 @@
         }).submit();
 
     });
-    $(".subscribe-btn").click(function(){
-      $("iframe").each(function(){
-          $(this).attr("src", $(this).data("src"));
-      });
-  });
+   
 </script>
 
 @endpush
