@@ -174,7 +174,7 @@
                 video.play();
                 console.log(this.parentElement);
             });
-        },3000)
+        },1000)
     })();
     $(".subscribe-btn").click(function(){
         $("iframe").each(function(){
