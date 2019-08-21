@@ -99,7 +99,7 @@
                 <div class="modal-body linear-gradient-grey" style="border-bottom-left-radius: 1.3rem; border-bottom-right-radius: 1.3rem;">
 
                     <div class="grwf2-wrapper wf2-embedded" id="grwf2_28404401_2bx84">
-                        <iframe src="https://app.getresponse.com/site2/download_prospectus?u=BPRi5&amp;webforms_id=BDCRL&amp;v=0" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BDCRL" style="border: none; height: 460px; width: 460px;"></iframe>
+                        <iframe data-src="https://app.getresponse.com/site2/download_prospectus?u=BPRi5&amp;webforms_id=BDCRL&amp;v=0" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BDCRL" style="border: none; height: 460px; width: 460px;"></iframe>
                     </div>
 
                     {{-- <div class="grwf2-wrapper wf2-embedded" id="grwf2_21458301_1dh4h"> 
@@ -119,7 +119,7 @@
         <div class="mag-download fixed-bottom text-center">
             <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">ENZ Student Guide</p> 
 
-            <button data-toggle="modal" data-target="#downloadModal" class="btn btnview-more text-uppercase">Download now!</button>
+            <button id="downloadbtn" data-toggle="modal" data-target="#downloadModal" class="btn btnview-more text-uppercase">Download now!</button>
             {{-- <a href="#" class="btn btnview-more text-uppercase">Download now!</a> --}}
         </div>
 
@@ -166,7 +166,26 @@
                 'transition' : 'all ease 300ms'
                 })
         },5000)
-    })() ;
+        setTimeout(function() {
+            $(".banner-video source").each(function(){
+                $(this).attr("src", $(this).data("src"));
+                var video = this.parentElement;
+                video.load();
+                video.play();
+                console.log(this.parentElement);
+            });
+        },1000)
+    })();
+    $(".subscribe-btn").click(function(){
+        $("iframe").each(function(){
+            $(this).attr("src", $(this).data("src"));
+        });
+    });
+    $("#downloadbtn").click(function(){
+        $("iframe").each(function(){
+            $(this).attr("src", $(this).data("src"));
+        });
+    });
     </script>
     @include('includes.partials.ga')
     </body>
