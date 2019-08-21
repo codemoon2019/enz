@@ -8,9 +8,12 @@ Route::group([
     'prefix' => 'subscriptions',
     'as' => 'subscriptions.',
 ], function () {
-    Route::get('', 'SubscriptionController@index')->name('index');
+    // Route::get('', 'SubscriptionController@index')->name('index');
 
-    Route::post('', 'SubscriptionController@inquiry')->name('inquiry');
+    // Route::post('', 'SubscriptionController@inquiry')->name('inquiry');
     
-    Route::get('/{subscription}', 'SubscriptionController@show')->where('subscription', '.+')->name('show');
+    // Route::get('/{subscription}', 'SubscriptionController@show')->where('subscription', '.+')->name('show');
+    Route::get('/',function(){
+        abort(404);
+    });
 });
