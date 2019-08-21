@@ -167,6 +167,12 @@ iframe{
             }
         }
     }
+    .news-block {
+        background-size: cover;
+        .news-svg {
+            display: none !important;
+        }
+    }
     .modal-content {
         border-radius: 35px;
         .close {
