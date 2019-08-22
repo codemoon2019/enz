@@ -20,7 +20,7 @@
 
                     <h1 class="title title-large text-black mb30 text-capitalize">{{ $model->title }}</h1>
 
-                    {!! substr($model->description,0,800) .'...' !!}
+                    {!! strlen($model->description)>800 ? substr($model->description,0,800) .'...' : $model->description !!}
 
                 </div>
 

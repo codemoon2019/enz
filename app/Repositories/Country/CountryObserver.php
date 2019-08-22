@@ -125,9 +125,6 @@ class CountryObserver extends BaseObserverContract
         }
         
         cache()->flush();
-        
-        return $model;
-
 
         self::meta('update', $model, $data);
         return $model;

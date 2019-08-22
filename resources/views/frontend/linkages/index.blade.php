@@ -76,7 +76,7 @@
                             
                                             <div class="card-body text-center">
 
-                                                <a href="{{ $image->properties->link }}" target="_blank">
+                                                <a {{ $image->properties->link ? 'href='.$image->properties->link.' target="_blank"' : 'href=#' }}>
                                                     
                                                     <img data-src="{{ $image->source }}" class="img-fluid" alt="">
                                                     
