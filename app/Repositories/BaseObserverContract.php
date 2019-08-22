@@ -118,7 +118,7 @@ abstract class BaseObserverContract extends ObserverContract
     protected static function uploadMultipleImage(HasMedia $model, array $images, $collectionName)
     {
         foreach ($images as $image) {
-            self::uploadImage($model, $image, $collectionName);
+            self::uploadImage($model, $image[0], $collectionName);
         }
     }
 
