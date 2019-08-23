@@ -51,6 +51,7 @@ class News extends Model implements HasMedia
         'status',
         'featured',
         'description',
+        'migration',
         'published_at',
         'slug',
     ];
