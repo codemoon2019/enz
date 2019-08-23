@@ -587,7 +587,14 @@ if (!function_exists('News')) {
 if (!function_exists('homeNews')) {
     function homeNews()
     {
-        return News::orderBy('published_at','desc')->whereStatus('enable')->limit(4)->get();
+        return News::orderBy('published_at','desc')->whereStatus('enable')->whereMigration('disabled')->limit(4)->get();
+    }
+}
+
+if (!function_exists('migrationNews')) {
+    function migrationNews()
+    {
+        return News::orderBy('published_at','desc')->whereStatus('enable')->whereMigration('enable')->get();
     }
 }
 

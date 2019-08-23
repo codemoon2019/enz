@@ -76,4 +76,19 @@ class StatusController extends Controller
 
         $model::find($id)->update(['featured' => $request['status']]);
     }
+
+    public function migration(Request $request, $model, $id)
+    {
+        switch ($model) {
+
+            case 'SampleModule': $model = new SampleModule; break;
+
+            case 'News': $model = new News; break;
+
+            default: break;
+        }
+
+        $model::find($id)->update(['migration' => $request['status']]);
+    }
+
 }
