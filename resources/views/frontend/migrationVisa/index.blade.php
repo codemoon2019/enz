@@ -108,7 +108,7 @@
 
 </div>
 
-{{-- @include('frontend.core.block.templates.news', ['button' => false])     --}}
+@include('frontend.core.block.templates.news', ['button' => false])    
 
 <button data-toggle="modal" class="modal-trigger" data-target="#myModal" style="display: none;"></button>
 
