@@ -170,6 +170,13 @@
         right: 2% !important;
         bottom: 5px !important;
     }
+    .mag-download {
+        text-align: left !important;
+        padding: 4px;
+        .btnview-more {
+            width: 135px;
+        }
+    }
 
     //INNER PAGES
     .page-services {
@@ -1369,9 +1376,16 @@
     .scrollTop.scrollTop {
         bottom: 20%;
     }
-    .mag-download p {
-        font-size: 12px !important;
-    }
+    .mag-download {
+        text-align: center !important;
+        p {
+            font-size: 12px !important;
+        }
+        .btnview-more {
+            display: block;
+            margin: 5px auto;
+        }
+    } 
     .become-our-client {
         select.mr5 {
             margin: 0 !important;
