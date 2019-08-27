@@ -10,6 +10,13 @@ use App\Mail\Test\TestEmail;
 Route::get('lang/{lang}', 'LanguageController');
 
 
+Route::get('cache', function(){
+
+    cache()->clear();
+    cache()->flush();
+
+});
+
 Route::get('thank-you',function(){
     return view('frontend.thanks');
 });
