@@ -67,7 +67,7 @@
     <div id="app" class="main-wrapper ">
         {{-- @include('frontend.includes.admin') --}}
         {{-- @include('includes.partials.logged-in-as') --}}
-        @include('frontend.includes.nav')
+        {{-- @include('frontend.includes.nav') --}}
         <div class="banner-wrapper to-load">
             @yield('banner')
         </div>
