@@ -4,6 +4,10 @@ html {
     min-height: 100%;
     body {
       font-family: $Quicksand;
+      .input-group-prepend .btn, 
+      .input-group-append .btn {
+        z-index: 1;
+      }
     }
 }
 

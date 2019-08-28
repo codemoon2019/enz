@@ -275,10 +275,18 @@
 <script>
     function openNav() {
   document.getElementById("mySidenav").style.width = "100%";
+  $('body').addClass('freeze');
+  $('#phplive_btn_1480051776').css({'display' : 'none'});
+  $('.mag-download').css({'display' : 'none'});
+  $('#top').css({'display' : 'none'});
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  $('body').removeClass('freeze');
+  $('#phplive_btn_1480051776').css({'display' : 'block'});
+  $('.mag-download').css({'display' : 'block'});
+  $('#top').css({'display' : 'block'});
 }
 </script>
 @endpush
