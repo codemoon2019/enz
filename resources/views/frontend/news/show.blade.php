@@ -27,7 +27,7 @@
 
         <h1 class="title fs35">{{ $model->title }}</h1>
 
-        <p class="fs15 mb20">Published At:asdasd {{ $model->published_at->format('F d, Y') }}</p>
+        <p class="fs15 mb20">Published At: {{ $model->published_at->format('F d, Y') }}</p>
 
         <div class="social-share share mb20">
             
