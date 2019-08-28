@@ -58,7 +58,9 @@ class MigrationVisaController extends Controller
         $model = $this->repository()->makeModel();
         $page = $this->pageRepository->indexPage($this->repository()->model());
         $Model = $model;
-        $homeNews = News();
+
+        $homeNews = migrationNews();
+        
         MetaTag::setEntity($page);
 
         // $models = $this->repository()->paginate(12);

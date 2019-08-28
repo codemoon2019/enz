@@ -22,3 +22,5 @@ Route::put('sortable/sort/{model}', 'Sortable\SortableController')->name('sortab
 Route::patch('status/update/{model}/{id}', 'Status\StatusController@status')->name('status.update');
 
 Route::patch('featured/update/{model}/{id}', 'Status\StatusController@featured')->name('featured.update');
+
+Route::patch('migration/update/{model}/{id}', 'Status\StatusController@migration')->name('migration.update');
