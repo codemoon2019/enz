@@ -5,6 +5,9 @@
     // #main {
     //     padding-top: 20px;
     // }
+    body.freeze {
+        overflow-y: hidden;
+      }
     .for-desktop {
         display: none;
     }
@@ -169,6 +172,13 @@
         width: 60px;
         right: 2% !important;
         bottom: 5px !important;
+    }
+    .mag-download {
+        text-align: left !important;
+        padding: 4px;
+        .btnview-more {
+            width: 135px;
+        }
     }
 
     //INNER PAGES
@@ -546,7 +556,10 @@
     // } 
 }
     
-@media (min-width: 768px) and (max-width: 1199px){   
+@media (min-width: 768px) and (max-width: 1199px){  
+    body.freeze {
+        overflow-y: hidden;
+      } 
     .for-desktop {
         display: none;
     }
@@ -900,6 +913,9 @@
 
 }
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+    body.freeze {
+        overflow-y: auto;
+      }
     .for-desktop {
         display: block;
     }
@@ -947,12 +963,32 @@
     //     text-align: left !important;
     // }
 }
-@media (min-width: 1024px){   
+@media (min-width: 1024px) and (max-width: 1199px){  
+    body.freeze {
+        overflow-y: hidden;
+      } 
     .user-menu {
-        box-shadow: none; 
-    }
+        display: flex;
+        justify-content: space-between;
+        .navbar-toggler {
+            display: block;
+        }
+        .navbar-nav {
+            flex-direction: column;
+            .dropdown-menu {
+                position: relative;
+            }
+        }
+    }    
+}
 
-    
+@media only screen and (min-width: 1200px) {
+    .user-menu {
+        box-shadow: none;
+    }
+    .freeze #phplive_btn_1480051776 {
+        display: block !important;
+    }
 }
 
 /* Large Devices, Wide Screens */
@@ -1369,9 +1405,16 @@
     .scrollTop.scrollTop {
         bottom: 20%;
     }
-    .mag-download p {
-        font-size: 12px !important;
-    }
+    .mag-download {
+        text-align: center !important;
+        p {
+            font-size: 12px !important;
+        }
+        .btnview-more {
+            display: block;
+            margin: 5px auto;
+        }
+    } 
     .become-our-client {
         select.mr5 {
             margin: 0 !important;
