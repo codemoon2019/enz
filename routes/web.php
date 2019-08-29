@@ -9,6 +9,18 @@ use App\Mail\Test\TestEmail;
 // Switch between the included languages
 Route::get('lang/{lang}', 'LanguageController');
 
+Route::get('asas', function(){
+
+    return 'asdasd';
+
+});
+
+Route::get('cache', function(){
+
+    cache()->clear();
+    cache()->flush();
+
+});
 
 Route::get('thank-you',function(){
     return view('frontend.thanks');

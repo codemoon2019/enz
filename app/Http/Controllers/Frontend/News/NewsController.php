@@ -80,7 +80,7 @@ class NewsController extends Controller
         // $page = $model = $this->getModel($routeKeyName, false);
         $page = $model = News::whereslug($routeKeyName)->first();
 
-        if ($page->status == 'disabled') {
+        if ($page==null || $page->status == 'disabled') {
 
             abort(404);
 
