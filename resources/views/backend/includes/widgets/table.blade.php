@@ -21,7 +21,7 @@
             
                                     <a href="{{ route('admin.inquiries.export') }}" target="_blank">
                                         
-                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        <button class="btn btn-primary"><i class="fa fa-upload"></i> Export</button>
                                         
                                     </a>
 
@@ -31,7 +31,7 @@
             
                                     <a href="{{ route('admin.tourist-visa-inquiries.export') }}" target="_blank">
                                         
-                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        <button class="btn btn-primary"><i class="fa fa-upload"></i> Export</button>
                                         
                                     </a>
 
@@ -41,7 +41,7 @@
             
                                     <a href="{{ route('admin.become-our-client-inquiries.export') }}" target="_blank">
                                         
-                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        <button class="btn btn-primary"><i class="fa fa-upload"></i> Export</button>
                                         
                                     </a>
 
@@ -51,7 +51,7 @@
             
                                     <a href="{{ route('admin.subscriptions.export') }}" target="_blank">
                                         
-                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        <button class="btn btn-primary"><i class="fa fa-upload"></i> Export</button>
                                         
                                     </a>
 
@@ -61,7 +61,7 @@
             
                                     <a href="{{ route('admin.applications.export') }}" target="_blank">
                                         
-                                        <button class="btn btn-primary"><i class="fa fa-download"></i> Export</button>
+                                        <button class="btn btn-primary"><i class="fa fa-upload"></i> Export</button>
                                         
                                     </a>
 

@@ -186,6 +186,9 @@
             $(this).attr("src", $(this).data("src"));
         });
     });
+    $(document).bind("contextmenu",function(e){
+        return false;
+    })
     </script>
     @include('includes.partials.ga')
     </body>
