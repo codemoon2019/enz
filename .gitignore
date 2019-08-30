@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/upload
+/public/uploads
 public/assets
 public/sitemap.xml
 public/.htaccess
