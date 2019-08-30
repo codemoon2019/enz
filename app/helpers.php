@@ -601,7 +601,7 @@ if (!function_exists('migrationNews')) {
 if (!function_exists('activeNews')) {
     function activeNews()
     {
-        return News::orderBy('published_at','desc')->whereStatus('enable')->get();
+        return News::orderBy('order')->whereStatus('enable')->get();
     }
 }
 
