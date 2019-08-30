@@ -390,7 +390,7 @@
                     <div class="card-body relative linear-gradient-grey">
                         <div class="form-group">
                             <label for="">Applicant Signature <span class="text-danger">*</span></label><br />
-                            <input type="file" accept=".doc, .docx,.pdf"  name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                            <input type="file" accept=".png, .jpg,.gif, jpeg"  name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                             <label class="btn btnread-more text-uppercase" for="file" style="height: auto"><span>Choose file</span></label>
                         </div>
                         <div class="form-group">
