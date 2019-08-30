@@ -34,7 +34,7 @@ class TouristMail extends Mailable implements ShouldQueue
         return $this->markdown('frontend.mail.tourist.tourist_email')
                     ->subject($this->details['subject'])
                     ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-                    // ->cc('nico.halcyondigital@gmail.com')
+                    ->cc('qahdmd2@gmail.com ')
                     ->to($this->details['to']);
     }
 }
