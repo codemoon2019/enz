@@ -1,6 +1,8 @@
 <?php
 
 use App\Mail\Test\TestEmail;
+use Illuminate\Support\Facades\Schema;
+
 
 /**
  * Global Routes
@@ -15,7 +17,11 @@ Route::get('asas', function(){
 
 });
 
-Route::get('cache', function(){
+Route::get('sample', function(){
+
+    Schema::table('news', function($table) {
+        $table->integer('order')->after('migration');
+    });
 
     cache()->clear();
     cache()->flush();
