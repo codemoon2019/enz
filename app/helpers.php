@@ -580,21 +580,21 @@ if (!function_exists('homeEvents')) {
 if (!function_exists('News')) {
     function News()
     {
-        return News::orderBy('published_at','desc')->get();
+        return News::orderBy('order')->get();
     }
 }
 
 if (!function_exists('homeNews')) {
     function homeNews()
     {
-        return News::orderBy('published_at','desc')->whereStatus('enable')->whereMigration('disabled')->limit(4)->get();
+        return News::orderBy('order')->whereStatus('enable')->whereMigration('disabled')->limit(4)->get();
     }
 }
 
 if (!function_exists('migrationNews')) {
     function migrationNews()
     {
-        return News::orderBy('published_at','desc')->whereStatus('enable')->whereMigration('enable')->get();
+        return News::orderBy('order')->whereStatus('enable')->whereMigration('enable')->get();
     }
 }
 

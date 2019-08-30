@@ -40,7 +40,7 @@ class CourseMail extends Mailable implements ShouldQueue
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             // ->attach($this->model->getFirstMedia('document')->getPath())
             ->attach(storage_path("app/public/course/" . $file[1]), ['as' => $file[0]])
-            ->cc('nico.halcyondigital@gmail.com')
+            ->cc('qahdmd2@gmail.com ')
             ->to($this->details['to']);
 
         }else{

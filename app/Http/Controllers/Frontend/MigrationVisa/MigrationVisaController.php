@@ -161,11 +161,11 @@ class MigrationVisaController extends Controller
             
             if ($value) {
 
-                $details = ['to' => 'migration@enzconsultancy.com', 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
+                $details = ['to' => 'migration@enzconsultancy.com', 'subject' => 'MIGRATION VISA INQUIRY', 'type' => $value];
 
             }else{
 
-                $details = ['to' => $model->email_address, 'subject' => 'STUDY PATHWAYS INQUIRY', 'type' => $value];
+                $details = ['to' => $model->email_address, 'subject' => 'MIGRATION VISA INQUIRY', 'type' => $value];
                 
             }
 
