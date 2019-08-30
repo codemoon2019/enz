@@ -172,6 +172,13 @@ td > .btn-group-sm{
     margin-top: -20px;
 }
 
+
+.other-status-div{
+    position: absolute;
+    right: 400px;
+    margin-top: -20px;
+}
+
 .btn-save-hide{
     display: none;
 }

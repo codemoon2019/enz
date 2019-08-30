@@ -54,6 +54,7 @@ class News extends Model implements HasMedia
         'migration',
         'published_at',
         'slug',
+        'order',
     ];
 
     protected $dates = ['published_at'];

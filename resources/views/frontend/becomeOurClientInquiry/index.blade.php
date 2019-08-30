@@ -898,7 +898,7 @@
 
                                 <label for="">Applicant Signature <span class="text-danger">*</span></label><br />
 
-                                <input type="file" name="file" id="signature" class="inputfile" data-multiple-caption="{count} files selected" style="display: none;" />
+                                <input type="file" accept=".png, .jpg,.gif, jpeg"  name="file" id="signature" class="inputfile" data-multiple-caption="{count} files selected" style="display: none;" />
 
                                 <label class="btn btnread-more text-uppercase client-field" id="file" for="signature" style="height: auto"><span>Choose file</span></label>
 

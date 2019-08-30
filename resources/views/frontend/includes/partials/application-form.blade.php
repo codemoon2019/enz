@@ -88,7 +88,7 @@
                            
                                             <label for="">Resume / Curriculum Vitae</label><br />
                            
-                                            <input type="file" name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                            <input type="file" accept=".doc, .docx,.pdf"  name="resume" id="resume" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                            
                                             <label class="btn btnread-more text-uppercase application-inquiry-field" id="application_resume" for="resume" style="height: auto"><span>Choose file</span></label>
 

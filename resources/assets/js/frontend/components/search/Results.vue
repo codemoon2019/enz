@@ -2,7 +2,7 @@
 
     <div v-if="showResult">
         
-        <div class="block content-block search-results mb100" data-aos="zoom-in">
+        <div class="block search-results mb100" data-aos="zoom-in">
 
             <div class="container-fluid jobs px180 text-center">
                 

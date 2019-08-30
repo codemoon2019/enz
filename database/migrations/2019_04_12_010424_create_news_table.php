@@ -25,6 +25,7 @@ class CreateNewsTable extends Migration
             $table->enum('featured', ['enable', 'disabled'])->default('disabled');
             $table->enum('migration', ['enable', 'disabled'])->default('disabled');
             $table->dateTime('published_at')->nullable();
+            $table->integer('order')->default(0);
             $table->timestamps();
         });
     }
