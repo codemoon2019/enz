@@ -2,7 +2,7 @@
 
     <li class="dd-item dd3-item" data-id="{{ $item->id }}">
 
-        <div class="dd-handle dd3-handle">Drag</div><div class="dd3-content" data-id="{{ $item->id }}">{{ $item->{$label} }}
+        <div class="dd-handle dd3-handle"></div><div class="dd3-content" data-id="{{ $item->id }}">{{ $item->{$label} }}
     
             @if ($item->status)
 
@@ -13,7 +13,16 @@
                 </div>
             
             @endif
+        
+            @isset ($other_status)
+            
+                <div class="other-status-div">
 
+                    {!! $item->migration_action !!}
+                
+                </div>
+                
+            @endisset
         
             <div class="input-group-btn project-actions">
         
@@ -63,7 +72,7 @@
 
                     <li class="dd-item dd3-item" data-id="{{ $children->id }}">
 
-                        <div class="dd-handle dd3-handle">Drag</div><div class="dd3-content" data-id="{{ $children->id }}">{{ $children->{$label} }}
+                        <div class="dd-handle dd3-handle"></div><div class="dd3-content" data-id="{{ $children->id }}">{{ $children->{$label} }}
                         
                             <div class="input-group-btn project-actions">
                         
