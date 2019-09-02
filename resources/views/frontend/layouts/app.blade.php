@@ -167,12 +167,12 @@
                 })
         },5000)
         setTimeout(function() {
-            $(".banner-video source").each(function(){
+            $(".banner-video").each(function(){
                 $(this).attr("src", $(this).data("src"));
-                var video = this.parentElement;
-                video.load();
-                video.play();
-                console.log(this.parentElement);
+                // var video = this.parentElement;
+                // $(this).load();
+                // $(this).play();
+                // console.log(this.parentElement);
             });
         },1000)
     })();
