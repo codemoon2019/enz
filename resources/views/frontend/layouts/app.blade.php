@@ -120,7 +120,7 @@
             <img class="img-fluid mr10" data-src="{{asset('svg/book.svg')}}" alt=""> <p class="fs16 text-white book-title">ENZ Student Guide</p> 
 
             <button id="downloadbtn" data-toggle="modal" data-target="#downloadModal" class="btn btnview-more text-uppercase">Download now!</button>
-            {{-- <a href="#" class="btn btnview-more text-uppercase">Download now!</a> --}}
+            {{-- <a href="{{ url('download/student-guide') }}" class="btn btnview-more text-uppercase">Download now!</a> --}}
         </div>
 
 
