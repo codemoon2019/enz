@@ -31,6 +31,21 @@ Route::get('sample', function(){
 Route::get('thank-you',function(){
     return view('frontend.thanks');
 });
+
+Route::get('download/student-guide',function(){
+
+    $path = storage_path('app/public/user_guide');
+
+    if (!File::exists($path)) {
+
+        abort(404);
+    
+    }
+
+    return response()->download($path . '/' . 'userguide.txt');
+
+});
+
 // Route::get('migration',function(){
 //     return view('frontend.migration');
 // });
