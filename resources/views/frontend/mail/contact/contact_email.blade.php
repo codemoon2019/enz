@@ -24,12 +24,25 @@
 
 @else
 
+@if ($details['subject'] == 'MIGRATION VISA INQUIRY')
+
+Hi {{ $model['full_name'] }},
+
+We have received your migration inquiry. One of our consultants will get in touch with you shortly. If you have booked a formal legal assessment, please wait for the booking confirmation.
+
+
+Regards, <br> ENZ Education Consultancy Services
+
+@else
+
 Thank you for reaching ENZ Education Consultancy Services! One of our consultants shall get back to you with benefits, cost and requirements of studying abroad as soon as possible.
 
 Thank you for your trust in our services.
 
 
 Regards, <br> ENZ Education Consultancy Services
+
+@endif
 
 @include('frontend.mail.links')
 
