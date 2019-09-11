@@ -42,7 +42,7 @@ Route::get('download/student-guide',function(){
     
     }
 
-    return response()->download($path . '/' . 'userguide.txt');
+    return response()->download($path . '/' . 'Student-Guide.pdf');
 
 });
 

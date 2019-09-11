@@ -2,6 +2,17 @@
 
 $routePath = app(App\Models\StudentVisa\StudentVisa::class)::ROUTE_ADMIN_PATH;
 
+
+// Student Guide
+
+Breadcrumbs::register('admin.student-guide.index', function ($breadcrumbs) {
+    
+    $breadcrumbs->parent('admin.dashboard');
+
+    $breadcrumbs->push('Student Guide', route('admin.student-guide.index'));
+});
+
+
 Breadcrumbs::register($routePath . '.index', function ($breadcrumbs) use ($routePath) {
     $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Student Visa', route($routePath . '.index'));

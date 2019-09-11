@@ -369,6 +369,14 @@
 
                         @endcan
 
+                        <li class="nav-item">
+                            <a class="nav-link {{ active_class(Active::checkUriPattern('admin/student-guide*')) }}"
+                               href="{{ route(app(App\Models\Core\Menu\Menu::class)::ROUTE_ADMIN_PATH.'.index') }}?domain-name=main">
+                                <i class="nav-icon fa fa-circle-o"></i> Student Guide
+                            </a>
+                        </li>
+
+
                         {{-- @can(config('access.users.default_permissions.media_permission'))
 
                             <li class="nav-item">
