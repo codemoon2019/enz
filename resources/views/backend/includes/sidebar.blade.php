@@ -371,7 +371,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link {{ active_class(Active::checkUriPattern('admin/student-guide*')) }}"
-                               href="{{ route(app(App\Models\Core\Menu\Menu::class)::ROUTE_ADMIN_PATH.'.index') }}?domain-name=main">
+                               href="{{ route('admin.student-guide.index') }}">
                                 <i class="nav-icon fa fa-circle-o"></i> Student Guide
                             </a>
                         </li>
