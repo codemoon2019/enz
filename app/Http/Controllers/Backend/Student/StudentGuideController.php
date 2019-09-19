@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 
 use Storage;
 
+use Artisan;
+
 class StudentGuideController extends Controller
 {
 
@@ -20,7 +22,7 @@ class StudentGuideController extends Controller
 	{
 
 		Storage::delete('public/user_guide/Student-Guide.pdf');
-		
+
 		$file = $request['guide'];
 
 		if ($file != null) {
