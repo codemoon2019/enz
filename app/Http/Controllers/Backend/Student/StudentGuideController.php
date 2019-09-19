@@ -18,6 +18,9 @@ class StudentGuideController extends Controller
 
 	public function store(Request $request)
 	{
+
+		Storage::delete('public/user_guide/Student-Guide.pdf');
+		
 		$file = $request['guide'];
 
 		if ($file != null) {
@@ -25,10 +28,6 @@ class StudentGuideController extends Controller
             $file->storeAs('public/user_guide', 'Student-Guide.pdf');
 
         }
-
-        cache()->clear();
-        
-        cache()->flush();
 
         return redirect()->back()->withFlashSuccess('Saved');
 
