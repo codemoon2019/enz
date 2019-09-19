@@ -29,6 +29,10 @@ class StudentGuideController extends Controller
 
         }
 
+        cache()->clear();
+        
+        cache()->flush();
+
         return redirect()->back()->withFlashSuccess('Saved');
 
 	}
