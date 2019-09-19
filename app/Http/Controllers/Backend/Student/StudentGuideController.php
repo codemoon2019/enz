@@ -36,4 +36,14 @@ class StudentGuideController extends Controller
 		return response()->file(Storage::path('public/user_guide/Student-Guide.pdf'));
 	}
 
+
+	public function destroy($guide)
+	{
+
+		Storage::delete('public/user_guide/Student-Guide.pdf');
+
+		return redirect()->back()->withFlashSuccess('Deleted!');
+
+	}
+
 }

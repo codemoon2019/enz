@@ -31,9 +31,24 @@
                         {{ csrf_field() }}
                         
                         <input type="file" name="guide">
-                        
-                        <p style="margin-top: 15px;"><a href="{{ route('admin.student-guide.show', 'Student-Guide.pdf') }}" target="_blank">Student-Guide.pdf</a></p>
 
+                        @if (Storage::exists('public/user_guide/Student-Guide.pdf'))
+
+                            <p style="margin-top: 15px;">
+                            
+                                <a href="{{ route('admin.student-guide.show', 'Student-Guide.pdf') }}" target="_blank">Student-Guide.pdf</a> 
+
+                                <a data-slug="data" 
+                                   name="btn-delete" 
+                                   data-action="delete" 
+                                   href="{{ route('admin.student-guide.destroy', 'Student-Guide.pdf') }}" class="dropdown-item dropdown-item-custom btn-action">
+                                    <i class="fa fa-trash"></i> Delete
+                                </a>
+
+                            </p>
+
+                        @endif
+                        
                         <hr>
 
                         <button class="btn btn-primary pull-right">Save</button>

@@ -44,6 +44,7 @@ Get more updates by following our social media channels!
 	<li><a href="https://www.facebook.com/enzecs/">https://www.facebook.com/enzecs/</a></li>
 	<li><a href="https://instagram.com/enzconsultancy">https://instagram.com/enzconsultancy</a></li>
 	<li><a href="http://twitter.com/enzconsultancy">http://twitter.com/enzconsultancy</a></li>
+	<li><a href="https://www.youtube.com/channel/UCUtB21CGUfJShRJJUYJ4RnQ">Youtube</a></li>
 </ul>
 
 Thank you and see you there!

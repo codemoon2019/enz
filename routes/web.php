@@ -29,20 +29,22 @@ Route::get('sample', function(){
 });
 
 Route::get('thank-you',function(){
+
     return view('frontend.thanks');
+
 });
 
 Route::get('download/student-guide',function(){
 
-    $path = storage_path('app/public/user_guide');
+    $file = 'public/user_guide/Student-Guide.pdf';
 
-    if (!File::exists($path)) {
+    if (Storage::exists($file)) {
+        
+        $path = storage_path('app/public/user_guide');
+        
+        return response()->download($path . '/' . 'Student-Guide.pdf');
 
-        abort(404);
-    
     }
-
-    return response()->download($path . '/' . 'Student-Guide.pdf');
 
 });
 
