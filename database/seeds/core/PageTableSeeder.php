@@ -115,6 +115,20 @@ class PageTableSeeder extends Seeder
 
 
 
+        $model = Page::create([
+            'title'       => 'Home',
+        ]);
+
+        $model->metaTag()->create([
+            'title' => 'Home',
+            'description' => 'Home',
+            'keywords' => 'Home',
+        ]);
+
+        $model->domains()->sync([1]);
+
+
+
 
 
 
