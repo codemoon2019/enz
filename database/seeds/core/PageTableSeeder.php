@@ -125,7 +125,7 @@ class PageTableSeeder extends Seeder
             'keywords' => 'Home',
         ]);
 
-        $model->domains()->sync([1]);
+        // $model->domains()->sync([1]);
 
 
 
