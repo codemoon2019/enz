@@ -23,7 +23,7 @@
 			
 			@foreach ($body as $key => $element)
 			
-				<div class="col-sm-{{ $division }} item">
+				<div class="col-sm-{{ $division }} item" style="padding: 0px 15px 0px 0px;">
 				
 					{!! $element !!}
 				
