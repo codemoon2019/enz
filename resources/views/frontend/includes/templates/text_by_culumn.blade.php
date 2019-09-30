@@ -17,26 +17,22 @@
 
 	@endphp
 	
-	<div class="container-fluid pl83 benefits">
+	<div class="container-fluid">
 		
-		<div class="benefits-list mw1200">
-
-			<div class="row">
-				
-				@foreach ($body as $key => $element)
-				
-					<div class="col-sm-{{ $division }} item">
-					
-						{!! $element !!}
-					
-					</div>
-
-				@endforeach
+		<div class="row">
 			
-			</div>
+			@foreach ($body as $key => $element)
 			
+				<div class="col-sm-{{ $division }} item">
+				
+					{!! $element !!}
+				
+				</div>
+
+			@endforeach
+		
 		</div>
-
+		
 	</div>
 
 @endif
