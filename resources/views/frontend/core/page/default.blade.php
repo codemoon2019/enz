@@ -136,7 +136,8 @@
 		    
 		    <h1 class="title title-large text-black text-capitalize text-center mb20">{{ $page->title }}</h1>
 		    
-		    {{-- {!! $page->description !!} --}}
+		    {!! $page->description !!}
+		    
         	@include('frontend.includes.templates.index')
 
 		</div>
