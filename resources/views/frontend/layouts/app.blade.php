@@ -23,9 +23,13 @@
         @include('frontend.includes.meta-tags')
 
         @stack('meta')
+    
+        @php
+            $favicon = asset(setting('site-fav-icon'));
+        @endphp
 
-        <link rel="apple-touch-icon" href="{{ asset(setting('site-fav-icon')) }}">
-        <link rel="icon" type="image/png" href="{{ asset(setting('site-fav-icon')) }}"/>
+        <link rel="apple-touch-icon" href="{{ $favicon }}">
+        <link rel="icon" type="image/png" href="{{ $favicon }}"/>
         <link rel="apple-touch-icon" href="/misc/favicon.ico">
         <link rel="icon" type="image/png" href="/misc/favicon.ico"/>
         <style>
@@ -56,12 +60,12 @@
 
     </head>
 
-    <body class="processing-page-load @yield('page_class')  @can(config('access.users.default_permissions.back_end_view_permission')) logged-in @endcan @cannot(config('access.users.default_permissions.back_end_view_permission')) not-logged-in @endcannot">
+    <body class="processing-page-load @yield('page_class')">
         <noscript class="ns-message">
             <svg width="100" height="100" enable-background="new 0 0 42.163 42.163" version="1.1" viewBox="0 0 42.163 42.163" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                 <path d="m37.364 15.082c-0.993 0-1.229-0.569-0.526-1.271l1.271-1.273c1.173-1.171 1.173-3.068 0-4.241l-4.241-4.242c-1.172-1.172-3.07-1.173-4.243 1e-3 0 0-0.568 0.569-1.271 1.271-0.701 0.702-1.271 0.466-1.271-0.527v-1.8c1e-3 -1.657-1.34-2.997-2.998-3l-6.001 1e-3c-1.659 0-3.002 1.343-3.002 3v1.797c0 0.991-0.569 1.226-1.271 0.525l-1.27-1.27c-1.172-1.171-3.067-1.171-4.242-1e-3l-4.242 4.243c-1.171 1.173-1.173 3.069 1e-3 4.245 0 0 0.569 0.569 1.271 1.272 0.702 0.702 0.466 1.271-0.529 1.271h-1.8c-1.657 0-3 1.343-3 3v6c0 1.657 1.343 3 3 3h1.799c0.993 0 1.229 0.569 0.527 1.271l-1.271 1.271c-1.172 1.172-1.172 3.07 0 4.243l4.242 4.243c1.173 1.171 3.071 1.172 4.244 0 0 0 0.569-0.568 1.27-1.271 0.701-0.701 1.271-0.466 1.271 0.526v1.796c0 1.451 1.029 2.66 2.397 2.939 0.195 0.039 0.399 0.062 0.607 0.062h5.998c1.658-1e-3 3-1.344 3.002-3.001v-1.798s0.569-1.229 1.271-0.527l1.271 1.271c1.173 1.174 3.071 1.174 4.245 2e-3l4.241-4.242c1.172-1.172 1.172-3.072 0-4.245 0 0-0.568-0.567-1.271-1.271-0.701-0.701-0.467-1.271 0.524-1.271h1.795c1.657 0 3-1.343 3-3v-6c0-1.657-1.343-3-3-3 0 1e-3 -0.805 1e-3 -1.798 1e-3zm-16.284 15.834c-5.432 0-9.835-4.402-9.835-9.834s4.403-9.835 9.835-9.835 9.835 4.403 9.835 9.835-4.403 9.834-9.835 9.834z" fill="#4AA498"/>
             </svg>
-            {{app_name()}} works best with Javascript enabled. Please turn on your javascript and reload the page.
+            {{-- {{app_name()}} works best with Javascript enabled. Please turn on your javascript and reload the page. --}}
         </noscript>
     @include('includes.partials.loader')
     <div id="app" class="main-wrapper ">
@@ -186,6 +190,6 @@
         return false;
     })
     </script>
-    @include('includes.partials.ga')
+    {{-- @include('includes.partials.ga') --}}
     </body>
     </html>
