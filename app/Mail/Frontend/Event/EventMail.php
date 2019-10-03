@@ -33,8 +33,8 @@ class EventMail extends Mailable implements ShouldQueue
         return $this->markdown('frontend.mail.event.event_email')
                     ->subject($this->details['subject'])
                     ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
-                    ->cc('qahdmd2@gmail.com')
-                    ->cc('nico.halcyondigital@gmail.com')
+                    // ->cc('qahdmd2@gmail.com')
+                    // ->cc('nico.halcyondigital@gmail.com')
                     ->to($this->details['to']);
     }
 }

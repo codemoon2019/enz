@@ -41,8 +41,8 @@ class ContactEmail extends Mailable implements ShouldQueue
             ->from(env('NOREPLY_EMAIL', 'noreply@enz.com.ph'), env('APP_NAME'))
             ->attach(storage_path("app/public/inquiry/" . $file[1]), ['as' => $file[0]])
             // ->attach($this->model->getFirstMedia('document')->getPath())
-            ->cc('qahdmd2@gmail.com')
-            ->cc('nico.halcyondigital@gmail.com')
+            // ->cc('qahdmd2@gmail.com')
+            // ->cc('nico.halcyondigital@gmail.com')
             ->to($this->details['to']);
 
         }else{
