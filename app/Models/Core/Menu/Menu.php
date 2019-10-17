@@ -152,18 +152,18 @@ class Menu extends Model implements ModelStatusContract
                 //     'permission' => self::permission('show'),
                 //     'url' => route(self::ROUTE_ADMIN_PATH . '.show', $this)
                 // ],
-                'edit' => [
-                    'type' => 'edit',
-                    'permission' => self::permission('edit'),
-                    'url' => route(self::ROUTE_ADMIN_PATH . '.edit', $this)
-                ],
-                'destroy' => [
-                    'type' => 'destroy',
-                    'permission' => self::permission('destroy'),
-                    'url' => route(self::ROUTE_ADMIN_PATH . '.destroy', $this),
-                    'group' => 'more',
-                    'redirect' => route(self::ROUTE_ADMIN_PATH . '.index')
-                ],
+                // 'edit' => [
+                //     'type' => 'edit',
+                //     'permission' => self::permission('edit'),
+                //     'url' => route(self::ROUTE_ADMIN_PATH . '.edit', $this)
+                // ],
+                // 'destroy' => [
+                //     'type' => 'destroy',
+                //     'permission' => self::permission('destroy'),
+                //     'url' => route(self::ROUTE_ADMIN_PATH . '.destroy', $this),
+                //     'group' => 'more',
+                //     'redirect' => route(self::ROUTE_ADMIN_PATH . '.index')
+                // ],
             ]
         ];
         return $links;

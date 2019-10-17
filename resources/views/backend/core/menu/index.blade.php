@@ -8,7 +8,7 @@
         @slot('table_name', 'menu-table')
         @slot('title', 'Menu List')
         @slot('secondary_title', 'Menu Management')
-        @slot('links')
+{{--         @slot('links')
             @can($MODEL->permission('index'))
                 <li class="dropdown-item">
                     <a href="{{ route('admin.menus.index') }}"><i class="fa fa-list"></i> Menus</a>
@@ -19,18 +19,8 @@
                     <a href="{{ route('admin.menus.create') }}" class="text-success"><i class="fa fa-plus"></i> Add Menu</a>
                 </li>
             @endcan
-  {{--           @can($MODEL->permission('change-status'))
-                <li class="dropdown-item">
-                    <a href="{{ route('admin.menus.status', 'enable') }}"><i class="fa fa-check"></i> Enabled Menus</a>
-                </li>
-            @endcan
-            @can($MODEL->permission('change-status'))
-                <li class="dropdown-item">
-                    <a href="{{ route('admin.menus.status', 'disable') }}" class="text-danger"><i class="fa fa-ban"></i>
-                        Disable Menus</a>
-                </li>
-            @endcan --}}
-        @endslot
+
+        @endslot --}}
         @slot('headers')
             <td>Name</td>
             {{-- <td>Slug</td> --}}

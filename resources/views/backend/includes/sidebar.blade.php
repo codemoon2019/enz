@@ -387,7 +387,7 @@
                             </li>
 
                         @endcan --}}
-                        @can(config('access.users.default_permissions.site_map_permission'))
+{{--                         @can(config('access.users.default_permissions.site_map_permission'))
 
                             <li class="nav-item">
                                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/sitemap*')) }}"
@@ -396,7 +396,7 @@
                                 </a>
                             </li>
 
-                        @endcan
+                        @endcan --}}
                         @can(config('access.users.default_permissions.setting_permission'))
 
                             <li class="nav-item">
@@ -410,7 +410,7 @@
                 </li>
             @endif
 
-            @if ($isCanAccessManagement)
+{{--             @if ($isCanAccessManagement)
                 <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/auth*'), 'open') }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="nav-icon icon-user"></i> {{ __('menus.backend.access.title') }}
@@ -439,9 +439,9 @@
                         </li>
                     </ul>
                 </li>
-            @endif
+            @endif --}}
 
-            @if($isCanLogView)
+{{--             @if($isCanLogView)
                 <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/debug-log-viewer*'), 'open') }}">
                     <a class="nav-link nav-dropdown-toggle" href="#">
                         <i class="nav-icon icon-list"></i> {{ __('menus.backend.log-viewer.main') }}
@@ -462,7 +462,7 @@
                         </li>
                     </ul>
                 </li>
-            @endif
+            @endif --}}
 
             {{-- @php
                 $isDocs = $logged_in_user->isSystem();
