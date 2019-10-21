@@ -95,7 +95,7 @@ class OurTeamController extends CRUDController
                 'email' => "required|email",
                 'contact' => "required",
                 'featured_image' => "required",
-                'image' => 'required'
+                // 'image' => 'required'
             ])
             ->storeRuleMessages([
                 'title.required' => 'The name field is required.',

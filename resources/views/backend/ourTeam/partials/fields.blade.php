@@ -26,7 +26,7 @@
 
             <div class="col-md-10">
 
-                <input type="text" name="position" id="position" class="form-control" value="{{ isset($model) ? $model->position : old('old') }}">
+                <input type="text" name="position" id="position" class="form-control" value="{{ isset($model) ? $model->position : old('position') }}">
 
             </div>
 
@@ -39,7 +39,7 @@
 
             <div class="col-md-10">
 
-                <input type="text" name="email" id="email" class="form-control" value="{{ isset($model) ? $model->email : old('old') }}">
+                <input type="text" name="email" id="email" class="form-control" value="{{ isset($model) ? $model->email : old('email') }}">
 
             </div>
 
@@ -52,7 +52,7 @@
 
             <div class="col-md-10">
 
-                <input type="text" name="contact" id="contact" class="form-control" value="{{ isset($model) ? $model->contact : old('old') }}">
+                <input type="text" name="contact" id="contact" class="form-control" value="{{ isset($model) ? $model->contact : old('contact') }}">
 
             </div>
 
@@ -65,7 +65,7 @@
 
             <div class="col-md-10">
 
-                <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('old') !!}</textarea>
+                <textarea name="description" id="description" class="form-control">{!! isset($model) ? $model->description : old('description') !!}</textarea>
 
             </div>
 
@@ -100,7 +100,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Image <i class="text-danger">*</i><br/></label>
+            <label class="col-md-2 form-control-label">Image</label>
 
             <div class="col-md-10">
 

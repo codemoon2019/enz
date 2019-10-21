@@ -1,5 +1,19 @@
 @extends('frontend.layouts.app')
 
+@push('after-styles')
+
+<style>
+    
+    #person-description p{
+    
+        font-size: 18px !important;
+
+    }
+
+</style>
+
+@endpush
+
 @section('page_class', "page page-about page-about-team")
 
 @section('content')
