@@ -100,7 +100,7 @@
 
         <div class="form-group row">
 
-            <label class="col-md-2 form-control-label">Image</label>
+            <label class="col-md-2 form-control-label">Badge</label>
 
             <div class="col-md-10">
 
