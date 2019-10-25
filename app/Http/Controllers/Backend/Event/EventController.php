@@ -155,6 +155,9 @@ class EventController extends CRUDController
 
         Session::put('event_id', $id);
 
+
+        return $event->title;
+
         // dd(new EventInquiryExport());
 
         // dd(collect($event->inquiries->toArray()));
