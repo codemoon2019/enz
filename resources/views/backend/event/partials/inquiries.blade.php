@@ -1,5 +1,17 @@
 <div class="col">
 
+	<div class="float-right">
+		<a href="{{ route('admin.events.export', $model->id) }}" target="_blank">
+			<button class="btn btn-primary">
+				<i class="fa fa-upload"></i> Export
+			</button>
+		</a> 
+	</div>
+
+	<br>
+	<br>
+
+
 	<table class="table table-hoved table-striped">
 
 		<thead>

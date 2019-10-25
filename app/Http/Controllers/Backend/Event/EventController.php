@@ -11,6 +11,14 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use MetaTag;
 
+
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
+use App\Models\Event\Event;
+use App\Exports\EventInquiryExport;
+use Session;
+
 /**
  * Class EventController
  *
@@ -138,6 +146,27 @@ class EventController extends CRUDController
 
         return view("backend.event.inquiries", compact('viewPath', 'routePath'));
     }
+
+
+    public function export($id)
+    {
+
+        // $event = Event::find($id);
+
+        Session::put('event_id', $id);
+
+        // dd(new EventInquiryExport());
+
+        // dd(collect($event->inquiries->toArray()));
+
+        // return Excel::download(collect($event->inquiries->toArray()),  $event->slug. '.xlsx');
+
+        return Excel::download(new EventInquiryExport(), 'inquiries.xlsx');
+
+
+
+    }
+
 }
 
 
