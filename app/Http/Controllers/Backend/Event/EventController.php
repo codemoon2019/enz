@@ -151,7 +151,7 @@ class EventController extends CRUDController
     public function export($id)
     {
 
-        // $event = Event::find($id);
+        $event = Event::find($id);
 
         Session::put('event_id', $id);
 
@@ -161,7 +161,7 @@ class EventController extends CRUDController
 
         // return Excel::download(collect($event->inquiries->toArray()),  $event->slug. '.xlsx');
 
-        return Excel::download(new EventInquiryExport(), 'inquiries.xlsx');
+        return Excel::download(new EventInquiryExport(), $event->title.'.xlsx');
 
 
 
