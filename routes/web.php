@@ -19,12 +19,18 @@ Route::get('asas', function(){
 
 Route::get('sample', function(){
 
-    Schema::table('news', function($table) {
-        $table->integer('order')->after('migration');
-    });
+    // return now();
 
-    cache()->clear();
-    cache()->flush();
+        return  date('Ymd') . '-' . 'Web-' . strtotime(now());
+    return strtotime(now());
+
+ // return sprintf('%04d', 45644);
+    // Schema::table('news', function($table) {
+    //     $table->integer('order')->after('migration');
+    // });
+
+    // cache()->clear();
+    // cache()->flush();
 
 });
 
