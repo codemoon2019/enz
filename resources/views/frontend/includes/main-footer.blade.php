@@ -106,7 +106,9 @@
 
                               <div class="form-group book-us mb30">
 
-                                <label for=""><span class="label-title">Would you like to book for a formal legal assessment?</span> <span class="text-danger">*</span></label><br />
+
+                                <label for=""><span class="label-title">Would you like to book for a FREE Consultation?</span> <span class="text-danger">*</span></label><br />
+                                {{-- <label for=""><span class="label-title">Would you like to book for a formal legal assessment?</span> <span class="text-danger">*</span></label><br /> --}}
 
                                 <label class="control control--radio">Yes
 
