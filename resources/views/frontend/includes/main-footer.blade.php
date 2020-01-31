@@ -358,33 +358,6 @@
     </section>
 
 </footer>
-<!-- The Modal -->
-<div class="modal fade" id="subsModal">
-    <div class="modal-dialog">
-
-      <div class="modal-content" style="    border-radius: 1.3rem;">
-
-        <!-- Modal Header -->
-        <div class="modal-header linear-gradient-teal" style="border-top-left-radius: 1.3rem; border-top-right-radius: 1.3rem;">
-          <button type="reset" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body linear-gradient-grey" style="border-bottom-left-radius: 1.3rem; border-bottom-right-radius: 1.3rem;">
-
-            <div class="grwf2-wrapper wf2-embedded" id="grwf2_21458301_1dh4h">
-
-              <iframe data-src="https://app.getresponse.com/site2/enzpromo_2018?u=BPRi5&amp;webforms_id=BZSR5&amp;v=0" title="Subscription" width="460" height="460" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-top-navigation" scrolling="no" allowtransparency="true" name="webform_BZSR5" style="border: none; height: 460px; width: 460px"></iframe>
-
-            </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
 @push('after-scripts')
 
