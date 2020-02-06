@@ -87,20 +87,41 @@
                                 <div class="dropdown-menu dropdown-menu-right" 
                                      x-placement="bottom-end" 
                                      style="position: absolute; transform: translate3d(79px, 35px, 0px); top: 0px; left: 0px; will-change: transform;">
+
+                                     @if (isset($menu))
                         
-                                    <a class="dropdown-item dropdown-item-custom edit-trigger" href=""> 
-                        
-                                        <i class="fa fa-pencil"></i> Edit
-                        
-                                    </a>
-                        
-                                    <a class="dropdown-item dropdown-item-custom btn-action" 
-                                       data-slug="{{ $children->slug }}" 
-                                       name="btn-delete" 
-                                       data-action="delete" 
-                                       href=""> 
-                                        <i class="fa fa-trash"></i> Delete
-                                    </a>
+                                        <a class="dropdown-item dropdown-item-custom edit-trigger" href="{{ route('admin.menus.node.edit', [$model->slug, $children->slug]) }}"> 
+                            
+                                            <i class="fa fa-pencil"></i> Edit
+                            
+                                        </a>
+                            
+                                        <a class="dropdown-item dropdown-item-custom btn-action" 
+                                           data-slug="{{ $children->slug }}" 
+                                           name="btn-delete" 
+                                           data-action="delete" 
+                                           href="{{ route('admin.menus.node.destroy', [$model->slug, $children->slug]) }}"> 
+                                            <i class="fa fa-trash"></i> Delete
+                                        </a>
+
+                                     @else
+
+                                        <a class="dropdown-item dropdown-item-custom edit-trigger" href=""> 
+                            
+                                            <i class="fa fa-pencil"></i> Edit
+                            
+                                        </a>
+                            
+                                        <a class="dropdown-item dropdown-item-custom btn-action" 
+                                           data-slug="{{ $children->slug }}" 
+                                           name="btn-delete" 
+                                           data-action="delete" 
+                                           href=""> 
+                                            <i class="fa fa-trash"></i> Delete
+                                        </a>
+                            
+
+                                     @endif
                         
                                 </div>
                         

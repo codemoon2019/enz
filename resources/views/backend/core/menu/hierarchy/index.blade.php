@@ -53,7 +53,9 @@
                                     
                                     'edit_route' => route('admin.menus.node.edit', [$model->slug, $item->slug]),
                                     
-                                    'delete_route' => route('admin.menus.node.destroy', [$model->slug, $item->slug])
+                                    'delete_route' => route('admin.menus.node.destroy', [$model->slug, $item->slug]),
+
+                                    'menu' => true
                                 
                                 ])
 
