@@ -303,7 +303,7 @@ if (!function_exists('findDetails')) {
 if (!function_exists('ourCompanyDetails')) {
     function ourCompanyDetails()
     {
-        return Details::whereIn('slug', ['our-company', 'registration', 'professional-membership'])->get();
+        return Details::whereIn('slug', ['our-company', 'registration', 'professional-memberships'])->get();
     }
 }
 
