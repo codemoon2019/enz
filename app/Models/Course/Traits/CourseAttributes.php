@@ -11,12 +11,24 @@ trait CourseAttributes
 
 	public function getInstitutionLogoAttribute()
 	{
-		return $this->institution->getFirstMediaUrl('featured', 'main');
+		$institution = $this->institution;
+
+		if ($institution) {
+
+			return $institution->getFirstMediaUrl('featured', 'main');
+		}
+
 	}
 
 	public function getCountryAttribute()
 	{
-		return $this->institution->country->title;
+		$institution = $this->institution;
+
+		if ($institution) {
+
+			return $institution->country->title;
+		}
+		
 	}
 
 }
