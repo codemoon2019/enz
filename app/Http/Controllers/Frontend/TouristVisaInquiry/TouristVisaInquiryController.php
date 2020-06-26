@@ -141,6 +141,8 @@ class TouristVisaInquiryController extends Controller
                     default: $email = 'newzealand@enzconsultancy.com'; break;
                 
                 }
+                
+                $email = 'hello@enzconsultancy.com';
 
                 $details = ['to' => $email, 'subject' => 'TOURIST VISA INQUIRY ('.$model->country_to_visit.' - '.$full_name.')', 'type' => $value];
 

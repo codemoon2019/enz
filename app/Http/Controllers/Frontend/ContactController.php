@@ -104,6 +104,8 @@ class ContactController extends Controller
 
                 }
 
+                $email = 'hello@enzconsultancy.com';
+
                 $details = ['to' => $email, 'subject' => 'STUDY PATHWAYS INQUIRY ('.$model->country.' - '.$request['full_name'].')', 'type' => $value];
 
             }else{
