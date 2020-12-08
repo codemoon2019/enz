@@ -43,7 +43,7 @@ class SendContactRequest extends FormRequest
 
             'country'              => 'required',
 
-            'resume'               => 'required|mimes:doc,pdf,docx,zip',
+            'resume'               => 'required|mimes:doc,pdf,docx',
         ];
 
         if (config('access.captcha.registration')) {
