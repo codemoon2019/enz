@@ -37,6 +37,9 @@
         </style>
         <style>
         .ns-message{position:fixed;top:0;left:0;height:100%;width:100%;z-index:9999;display:flex;align-items:center;justify-content:center;padding:15px;color:#3fb1e5;background-color:#fff;text-align:center}.ns-message svg{margin-right:20px}.ns-message path{fill:#3fb1e5;}
+        .fb_dialog_content iframe {
+            right: 110px !important;
+        }
         </style>
 
 
