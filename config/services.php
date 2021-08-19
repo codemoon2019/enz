@@ -116,4 +116,9 @@ return [
         'scopes' => [],
         'with' => [],
     ],
+    'facebook_chat_plugin' => [
+        'page_id' => env('FACEBOOK_CHAT_PAGE_ID')
+    ],
+
+
 ];
