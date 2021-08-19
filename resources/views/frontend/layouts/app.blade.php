@@ -37,9 +37,9 @@
         </style>
         <style>
         .ns-message{position:fixed;top:0;left:0;height:100%;width:100%;z-index:9999;display:flex;align-items:center;justify-content:center;padding:15px;color:#3fb1e5;background-color:#fff;text-align:center}.ns-message svg{margin-right:20px}.ns-message path{fill:#3fb1e5;}
-        .fb_dialog_content iframe {
+        /* .fb_dialog_content iframe {
             right: 110px !important;
-        }
+        } */
         </style>
 
 
@@ -124,7 +124,7 @@
         </div>
 
 
-        <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"></span>
+        {{-- <span style="color: #0000FF; text-decoration: underline; cursor: pointer; position: fixed; bottom: 0px; right: 0px; z-index: 1000000;" id="phplive_btn_1480051776" onclick="phplive_launch_chat_0(0)"></span> --}}
     </div>
 
     <button id="top" class="scrollTop btn" aria-label="Scroll to top">
@@ -174,19 +174,19 @@
     <script async defer src="{{ asset('js/jquery.form.min.js') }}" type="text/javascript"></script>
     <script async defer type="text/javascript">
     (function() {
-        setTimeout(function() {
-            var phplive_e_1480051776 = document.createElement("script") ;
-            phplive_e_1480051776.type = "text/javascript" ;
-            phplive_e_1480051776.async = true ;
-            phplive_e_1480051776.rel = "preconnect"
-            phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
-            document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
-            $('#phplive_btn_1480051776').css({
-                'display' : 'block',
-                'opacity' : 1,
-                'transition' : 'all ease 300ms'
-                })
-        },5000)
+        // setTimeout(function() {
+        //     var phplive_e_1480051776 = document.createElement("script") ;
+        //     phplive_e_1480051776.type = "text/javascript" ;
+        //     phplive_e_1480051776.async = true ;
+        //     phplive_e_1480051776.rel = "preconnect"
+        //     phplive_e_1480051776.src = "//support.enz.com.ph/js/phplive_v2.js.php?v=0|1480051776|0|" ;
+        //     document.getElementById("phplive_btn_1480051776").appendChild( phplive_e_1480051776 ) ;
+        //     $('#phplive_btn_1480051776').css({
+        //         'display' : 'block',
+        //         'opacity' : 1,
+        //         'transition' : 'all ease 300ms'
+        //         })
+        // },5000)
         setTimeout(function() {
             $(".banner-video").each(function(){
                 $(this).attr("src", $(this).data("src"));
