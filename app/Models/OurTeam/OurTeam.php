@@ -56,6 +56,7 @@ class OurTeam extends Model implements HasMedia
         'address',
         'status',
         'order',
+        'image'
     ];
 
     /**

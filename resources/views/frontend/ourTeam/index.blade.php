@@ -9,6 +9,27 @@
         font-size: 18px !important;
 
     }
+    .image-box{
+        
+        height: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #image-box{
+        
+        height: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
 </style>
 
@@ -63,7 +84,7 @@
                         @endphp
 
 						<img
-                             data-src="{{ $image }}" 
+                             data-src="{{ $image  }}" 
                              
                              alt="" class="img-fluid mb20 person-modal cursor-pointer" 
                              
@@ -79,7 +100,8 @@
 
                              data-description="{{ $person->description }}" 
                              
-                             data-contact="{{ $person->contact }}">
+                             data-contact="{{ $person->contact }}"
+                             id="image-box">
 						
 						<h2 class="title fs18 text-black">{{ $person->title }}</h2>
 						
@@ -101,7 +123,7 @@
 
                                 <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
 
-                                <img src="" id="person-image" alt="" class="img-fluid mb20">
+                                <img src="" id="person-image" alt="" class="img-fluid mb20 image-box">
 
                                 <h2 class="title fs18 text-black" id="person-title"></h2>
                             

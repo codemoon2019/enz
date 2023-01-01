@@ -5,6 +5,7 @@ namespace App\Repositories\Gallery;
 use App\Models\Gallery\Gallery;
 use HalcyonLaravel\Base\Repository\BaseRepository;
 
+
 /**
  * Class GalleryRepositoryEloquent
  *
