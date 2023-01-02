@@ -11,15 +11,15 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:halcyonlaravel/base.git"
+      "url": "git@bitbucket.org:enz_education/base.git"
     },
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:halcyonlaravel/module.git"
+      "url": "git@bitbucket.org:enz_education/module.git"
     },
     {
       "type": "vcs",
-      "url": "git@bitbucket.org:halcyonlaravel/history.git"
+      "url": "git@bitbucket.org:enz_education/history.git"
     }
   ],
   "require": {
